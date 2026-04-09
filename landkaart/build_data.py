@@ -2,6 +2,7 @@
 Preprocessor: leest alle CSV-bestanden uit output/ en genereert data.json
 met schone ATC5-codes, tijdvelden, afgeleide status en KPI-data.
 """
+from __future__ import annotations
 
 import json
 import re
@@ -13,6 +14,7 @@ import pandas as pd
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
 DATA_FILE = Path(__file__).resolve().parent / "data.json"
+EMS_FILE = Path(__file__).resolve().parent.parent / "LijstenEMS" / "Achtergrondlijst 2025-Tabel 1.csv"
 
 ATC_COLUMNS = ["atc_code", "atc_level1", "Atc Code"]
 ATC5_RE = re.compile(r"^[A-Z]\d{2}[A-Z]{2}\d{2}$")
@@ -112,6 +114,28 @@ def derive_status(raw_status: str, shortage_start: str | None,
         return "resolved"
 
     return "active"
+
+
+def load_ems_rood_atcs() -> list[str]:
+    """Lees EMS Achtergrondlijst en retourneer ATC-codes met beoordeling 'rood'."""
+    if not EMS_FILE.exists():
+        print(f"EMS-bestand niet gevonden: {EMS_FILE}")
+        return []
+
+    df = pd.read_csv(EMS_FILE, sep=";", skiprows=1, encoding="utf-8",
+                     on_bad_lines="skip", low_memory=False)
+
+    if "Atc" not in df.columns or "Uiteindelijke beoordeling" not in df.columns:
+        print("EMS-bestand mist verwachte kolommen (Atc / Uiteindelijke beoordeling)")
+        return []
+
+    rood = df[df["Uiteindelijke beoordeling"].str.strip().str.lower() == "rood"]
+    atc_codes = set()
+    for raw in rood["Atc"].dropna():
+        code = str(raw).strip().upper()
+        if ATC5_RE.match(code):
+            atc_codes.add(code)
+    return sorted(atc_codes)
 
 
 def build():
@@ -218,12 +242,18 @@ def build():
         atc_country_count[r["atc"]].add(r["cc"])
     atc_country_count = {k: len(v) for k, v in atc_country_count.items()}
 
+    # EMS kritieke ATC-codes (rood)
+    ems_rood = load_ems_rood_atcs()
+    if ems_rood:
+        print(f"  EMS kritieke ATC5-codes (rood): {len(ems_rood)}")
+
     result = {
         "generated": today,
         "monitored_countries": all_countries,
         "total_atc": len(all_atcs),
         "total_countries": len(all_countries),
         "atc_country_count": atc_country_count,
+        "ems_rood_atcs": ems_rood,
         "records": records,
     }
 

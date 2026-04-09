@@ -109,6 +109,11 @@
         .filter-btn:hover { background: rgba(11,187,239,0.15); }
         .filter-btn.active { background: var(--lcg-cyan); color: white; }
 
+        .ems-toggle-bar { display: flex; align-items: center; padding: 4px 12px; gap: 6px; border-bottom: 1px solid var(--border); }
+        .ems-toggle-bar label { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text-secondary); cursor: pointer; user-select: none; }
+        .ems-toggle-bar input[type="checkbox"] { accent-color: var(--status-active); width: 13px; height: 13px; cursor: pointer; }
+        .ems-toggle-bar label:hover { color: var(--text-primary); }
+
         .sort-bar { display: flex; padding: 4px 12px; gap: 4px; border-bottom: 1px solid var(--border); align-items: center; }
         .sort-bar label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
         .sort-btn { padding: 2px 6px; border-radius: 3px; font-size: 10px; cursor: pointer; background: transparent; color: var(--text-secondary); border: 1px solid var(--border); }
@@ -355,6 +360,9 @@
             <button class="filter-btn" data-filter="S">S</button>
             <button class="filter-btn" data-filter="V">V</button>
         </div>
+        <div class="ems-toggle-bar">
+            <label><input type="checkbox" id="ems-rood-toggle"> Alleen kritiek (EMS rood)</label>
+        </div>
         <div class="sort-bar">
             <label>Sorteer:</label>
             <button class="sort-btn active" data-sort="countries-desc">Landen &darr;</button>
@@ -471,10 +479,12 @@ const S = {
     sidebarFilter: "all",
     sidebarSort: "countries-desc",
     detailTab: "active",
+    emsRoodOnly: false,
 };
 
 let RAW = null;
 let D = null; // derived
+let emsRoodSet = new Set();
 
 // ═══════════════════════════════════════
 // MAP
@@ -574,6 +584,7 @@ fetch("data.json")
     .then(r => r.json())
     .then(data => {
         RAW = data;
+        emsRoodSet = new Set(data.ems_rood_atcs || []);
         document.getElementById("footer").innerHTML = `<span style="color:#5a7faa">Landelijk Co\u00f6rdinatiecentrum Geneesmiddelen \u00b7 ${data.generated} \u00b7 ${data.total_atc} ATC-codes \u00b7 ${data.total_countries} bronlanden \u00b7 ${data.records.length.toLocaleString("nl-NL")} meldingen</span><span class="footer-right"><span class="footer-kbd"><kbd>Esc</kbd> terug &middot; <kbd>/</kbd> zoeken</span></span>`;
         loadHash();
         recompute();
@@ -839,6 +850,9 @@ function renderSidebar() {
     else if (S.kpiFilter === "critical") { const cs = new Set(D.kpis.criticalAtcs); list = list.filter(a => cs.has(a.atc)); }
     else if (S.kpiFilter === "resolved") list = list.filter(a => a.rN > 0);
     else if (S.kpiFilter === "countries") list = list.filter(a => a.aN > 0);
+
+    // EMS rood filter
+    if (S.emsRoodOnly) list = list.filter(a => emsRoodSet.has(a.atc));
 
     // Country filter
     if (S.selectedCountry) list = list.filter(a => a.countries.includes(S.selectedCountry));
@@ -1262,6 +1276,12 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
         S.sidebarFilter = btn.dataset.filter;
         renderSidebar();
     });
+});
+
+// EMS rood toggle
+document.getElementById("ems-rood-toggle").addEventListener("change", (e) => {
+    S.emsRoodOnly = e.target.checked;
+    renderSidebar();
 });
 
 // Sort buttons
