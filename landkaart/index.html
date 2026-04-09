@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
+        #pw-gate{position:fixed;inset:0;z-index:99999;background:#00428b;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;font-family:'Inter',sans-serif;color:#fff}
+        #pw-gate input{padding:10px 16px;font-size:16px;border:2px solid rgba(255,255,255,0.3);border-radius:8px;background:rgba(255,255,255,0.1);color:#fff;outline:none;width:260px;text-align:center}
+        #pw-gate input::placeholder{color:rgba(255,255,255,0.5)}
+        #pw-gate input:focus{border-color:#0bbbef}
+        #pw-gate button{padding:10px 32px;font-size:15px;font-weight:600;border:none;border-radius:8px;background:#0bbbef;color:#fff;cursor:pointer}
+        #pw-gate .pw-err{color:#ef4444;font-size:14px;min-height:20px}
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --lcg-dark: #00428b;
@@ -1397,6 +1403,24 @@ document.getElementById("search").addEventListener("keydown", e => {
         e.target.value = ""; S.searchQuery = ""; S.selectedAtc = null; S.selectedCountry = null; render();
     }
 });
+</script>
+<div id="pw-gate">
+    <h2>LCG Dashboard</h2>
+    <p>Voer het wachtwoord in om verder te gaan</p>
+    <input type="password" id="pw-input" placeholder="Wachtwoord" autofocus>
+    <button onclick="checkPw()">Inloggen</button>
+    <div class="pw-err" id="pw-err"></div>
+</div>
+<script>
+(function(){
+    if(sessionStorage.getItem('lcg-auth')==='1'){var g=document.getElementById('pw-gate');if(g)g.remove();}
+    document.getElementById('pw-input').addEventListener('keydown',function(e){if(e.key==='Enter')checkPw();});
+})();
+function checkPw(){
+    var v=document.getElementById('pw-input').value;
+    if(v==='Kernteam'){sessionStorage.setItem('lcg-auth','1');document.getElementById('pw-gate').remove();}
+    else{document.getElementById('pw-err').textContent='Onjuist wachtwoord';}
+}
 </script>
 </body>
 </html>
