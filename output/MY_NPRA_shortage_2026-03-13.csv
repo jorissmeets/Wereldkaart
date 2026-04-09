@@ -1,0 +1,202 @@
+﻿country_code,country_name,source,medicine_name,active_substance,strength,package_size,dosage_form,registration_number,atc_code,company_name,manufacturer,disruption_type,status,reason,shortage_start,estimated_end,mitigation_prh,mitigation_npra,alternatives,scraped_at
+MY,Malaysia,NPRA,Apo-Trifluoperazine Tablet 5mg,Trifluoperazine Hydrochloride,5mg,,Tablet,MAL19984755ARZ,N05AB06,Pharmaforte (M) Sdn Bhd,Apotex Inc.,Discontinuation,Current,Business decision,2027-08-01,,PRH is in the process of identifying a new manufacturer whose product dossier fully complies with local regulatory requirements for product registration.,Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.927660
+MY,Malaysia,NPRA,Abrilada Solution for Injection in Pre-filled Pen 40mg/0.8mL,ADALIMUMAB ,40mg/0.8ml,,Solution for injection,MAL22026001ACRZ,L04AB04,Pfizer (Malaysia) Sdn Bhd,"Catalent Indiana, LLC, Indiana, USA",Discontinuation,Current,Voluntary withdrawal ,2025-08-28,,PRH has not proposed any mitigation plan.,Registered alternative products are available,Adalimumab 251022.pdf,2026-03-13T16:06:57.928664
+MY,Malaysia,NPRA,FLUVIR 30 (Oseltamivir Phosphate Capsules 30mg),OSELTAMIVIR PHOSPHATE,30 mg,,Capsules,MAL23046009AZ,J05AH02,"CAMBER LABORATORIES SDN. BHD. 
+","Hetero Labs Limited, India",Shortage,Current,Demand increases drastically,2025-10-22,,"09 March 2026 update: 
+Next incoming stock: Mac & April 2026",Registered alternative products are available,Oseltamivir shortage_1st_251027.pdf,2026-03-13T16:06:57.929660
+MY,Malaysia,NPRA,BETACIN EYE/EAR DROPS ,"1) Neomycin Sulphate 
+
+2) Betamethasone Sodium Phosphate 
+","1) 0.5 %w/v
+
+2) 0.1 %w/v",,Eye/Ear Drops ,MAL10110024AZ,S01CA06,DUOPHARMA (M) SENDIRIAN BERHAD,DUOPHARMA (M) SENDIRIAN BERHAD,Shortage,Current,API Shortage,2025-10-13,,The PRH is in the process of identifying and assessing alternative API suppliers,No registered alternative product is available for this productâs active ingredient combination. Doctors and pharmacists are advised to ensure patients receive suitable alternative treatment based on their clinical judgement.,,2026-03-13T16:06:57.929660
+MY,Malaysia,NPRA,ZELDOX CAPSULE 60MG,Ziprasidone Hydrochloride Monohydrate,60mg,,Capsule,MAL20032624ACRZ,N05AE04 ,Viatris Sdn. Bhd.,"Pfizer Ireland Pharmaceuticals, Little Connell, Newbridge, Co. Kildare, Ireland",Discontinuation,Current,Volutnary withdrawal,2025-10-27,,PRH has not proposed any mitigation plan.,"Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement
+
+NPRA notes: The registration of this product has been terminated.",,2026-03-13T16:06:57.930660
+MY,Malaysia,NPRA,NUTRINEAL PD-4 Peritoneal Dialysis Solution with 1.1% Amino Acids,"1) L-Valine USP
+2) L-Arginine USP
+3) L-Leucine USP
+4) L-Alanine USP
+5) L-Isoleucine USP
+6) L-Methionine USP
+7) L-Lysine HCI USP
+8) L-Histidine USP
+9) L-Threonine USP
+10) L-Proline USP
+11) L-Phenylalanine USP
+12) Glycine, USP
+13) L-Serine USP
+14) L-Tyrosine USP
+15) L-Tryptophan USP
+16) Sodium Chloride, USP
+17) Sodium Lactate
+18) Calcium Chloride Dihydrate USP
+19) Magnesium Chloride Hexahydrate USP 
+","1) 1.393g/1000ml
+2) 1.071g/1000ml
+3) 1.020g/1000ml
+4) 0.951g/1000ml
+5) 0.850g/1000ml
+6) 0.850g/1000ml
+7) 0.955g/1000ml
+8) 0.714g/1000ml
+9) 0.646g/1000ml
+10) 0.595g/1000ml
+11) 0.570g/1000ml
+12) 0.510g/1000ml
+13) 0.510g/1000ml
+14) 0.300g/1000ml
+15) 0.270g/1000ml
+16) 5.38g/1000ml
+17) 4.48g/1000ml
+18) 0.184g/1000ml
+19) 0.051g/1000ml 
+",,Peritoneal Dialysis Solution,MAL06121040AZ,B05BA10,Baxter Healthcare (Malaysia) Sdn Bhd ,"Baxter Healthcare SA, Singapore Branch",Discontinuation,Current,Voluntary withdrawal,2025-10-27,,,"Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement  
+
+NPRA notes: The registration of this product has been terminated.",,2026-03-13T16:06:57.931022
+MY,Malaysia,NPRA,"B. Braun Sterile Potassium Chloride 100mg/ml Concentrate Solution for InfusionCon 
+",Potassium Chloride,100 mg/ml,,Solution for Infusion,MAL17065001AZ,B05XA01 ,B. Braun Medical Industries Sdn. Bhd.,B. Braun Medical Industries Sdn. Bhd.,Discontinuation,Current,Voluntary withdrawal,2025-10-27,,PRH has not proposed any mitigation plan.,Registered alternative products are available,Potassium Chloride Alternative responses and publish 251114.pdf,2026-03-13T16:06:57.931022
+MY,Malaysia,NPRA,BINOZYT 500MG FILM COATED TABLETS,AZITHROMYCIN ,500MG,,TABLET,MAL10100127AZ,J01FA10,SANDOZ PRODUCTS MALAYSIA SDN. BHD.,SANDOZ S.R.L.,Discontinuation,Current,Business decision,2025-11-04,,PRH has not proposed any mitigation plan.,Registered alternative products are available,Azithromycin Alternative responses and publish 251121xlsx.pdf,2026-03-13T16:06:57.931022
+MY,Malaysia,NPRA,GANATON TABLET 50MG,Itopride Hydrochloride,50mg,,TABLET,MAL20051433ACZ,A03FA07,Abbott Laboratories (M) Sdn Bhd,"Katsuyama Pharmaceuticals K.K., Katsuyama Plant, Japan 
+",Shortage,Current,API Shortage,2026-02-01,2026-10-31,"Application to Product & Cosmetic Regulatory Coordination Section, NPRA is in progress",Registered alternative products are available,Itopride Alternatives 251219,2026-03-13T16:06:57.932059
+MY,Malaysia,NPRA,Ursosan 250 mg Hard Capsules,URSODEOXYCHOLIC ACID,250MG,,Hard Capsule,MAL20116011ARZ,A05AA02,PE PHARMA SDN. BHD.,"PRO.MED.CS Praha a.s., Czech Republic",Shortage,Current,Increased Demand,2025-11-23,,"i. Shipment Arrangement 
+
+ii. Forecast for Subsequent Shipments (Earlier)",Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.932059
+MY,Malaysia,NPRA,DBLÂ® Irinotecan Injection Concentrate 20mg/ml,Irinotecan Hydrochloride ,20mg/ml,,Concentrate for solution for injection,MAL06100574ARZ,L01XX19,Hospira (Malaysia) Sdn. Bhd.,"Zydus Hospira Oncology Private Limited (ZHOPL),",Discontinuation,Current,"The licence is withdrawn due to a change in the Product Registration Holder (PRH), as Hospira (Malaysia) Sdn. Bhd. will be ceasing operations.  
+",2025-12-09,,"The new PRH, Pfizer (Malaysia) Sdn. Bhd., already has a registered product containing the same active ingredient.",Registered alternative products are available,Irinotecan Alternatives,2026-03-13T16:06:57.933059
+MY,Malaysia,NPRA,URSOFALK CAPSULE 250MG,URSODEOXYCHOLIC ACID,250mg,,Capsule,MAL19990011ACRZ,A05AA02,DCH AURIGA (M) SDN BHD,LOSAN PHARMA GMBH,Shortage,Current,Increased Demand,2025-12-22,2026-02-28,To facilitate a more accurate forecast,Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement.,,2026-03-13T16:06:57.933059
+MY,Malaysia,NPRA,OxyContin Controlled-Release Tablets 10mg,Oxycodone Hydrochloride,10mg,,Controlled- Release Tablets,MAL14125150ACRZ,N02AA05,DKSH MALAYSIA SDN. BHD.,"Purdue Pharmaceuticals L.P., United States",Shortage,Current,Adminstrative related ,2026-01-22,2026-06-30,"i) Proactively monitor backlog orders and review in scheduled meetings. 
+
+ii) Campaign batch
+
+iii) Applied for additional OxyNorm capsules series quota (same PRH)",Registered alternative products are available,Oxycodone HCl shortage_1st 260102.pdf,2026-03-13T16:06:57.933059
+MY,Malaysia,NPRA,OxyContin Controlled-Release Tablets 20mg,Oxycodone Hydrochloride,20mg,,Controlled- Release Tablets,MAL14125148ACRZ,N02AA05,DKSH MALAYSIA SDN. BHD.,"Purdue Pharmaceuticals L.P., United States",Shortage,Current,Adminstrative related ,2026-01-31,2026-06-30,"i) Proactively monitor backlog orders and review in scheduled meetings. 
+
+ii) Campaign batch
+
+iii) Applied for additional OxyNorm capsules series quota (same PRH)",Registered alternative products are available,Oxycodone HCl shortage_1st 260102.pdf,2026-03-13T16:06:57.934061
+MY,Malaysia,NPRA,ONGLYZA TABLET 5MG,SAXAGLIPTIN HYDROCHLORIDE,5mg,,Tablet,MAL20102020ARZ,A10BH03 ,ASTRAZENECA SDN. BHD. (69730X),AstraZeneca Pharmaceuticals LP.,Discontinuation,Current,Voluntary withdrawal- commercial reasons  ,2026-01-22,,"PRH only mentions other products containing combination saxagliptin, namely Kombiglyze XR Tablet 5/1000 mg containing (saxagliptin/ metformin;MAL11115004AZ) and Qtern 5 mg/10 mg Film-Coated Tablets containing (saxagliptin/ dapagliflozin; MAL19016095ARZ), remain available in Malaysia.",No registered alternative product is available for this productâs single active ingredient. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement.,,2026-03-13T16:06:57.934061
+MY,Malaysia,NPRA,Genessa 250mg Film Coated Tablets,Gefitinib,250mg,,Tablet,MAL23086018AZ,L01EB01,Novugen Oncology Sdn Bhd,Novugen Oncology Sdn Bhd,Shortage,Current,Batch intended for delivery was rejected due to quality,2025-12-01,2026-03-15,"PRH mentions immediate corrective actions have been taken. Production of a new batch is commenced & will be started in Mar-2026 to make supply from Mar-2026 on-wards, with all necessary precautions taken to maintain stable and uninterrupted supplies in the future.",Registered alternative products are available,Gefitinib Alternatives,2026-03-13T16:06:57.934061
+MY,Malaysia,NPRA,Panadol Cold+Flu-D Caplet,"1) Chlorpheniramine Maleate 
+  
+2) Paracetamol 
+
+3) Phenylephrine HCl 
+","1) 2mg
+
+2) 500mg 
+
+3) 5mg",,Tablet,MAL11080002ARZ,N02BE51,Haleon Malaysia Sdn Bhd,Sterling Drug (Malaya) Sdn. Bhd.,Discontinuation,Current,Voluntary withdrawal - no longer in Malaysian market,2025-11-12,,PRH has not proposed any mitigation plan.,"Registered alternative products are available 
+
+NPRA notes: The registration of this product has been terminated.","CPM, PCM, PE_1st 3 Feb 2026.pdf",2026-03-13T16:06:57.934061
+MY,Malaysia,NPRA,Velsone 800mg Film Coated Tablets,Sevelamer carbonate,800mg ,,Tablet,MAL23046030AZ,V03AE02,Novugen Pharma Sdn Bhd,Novugen Pharma Sdn Bhd,Shortage,Current,Increased Demand,2026-01-12,2026-04-01,"1. Expedite production to clear backorders 
+
+2. To build buffer stock at the warehouses",Registered alternative products are available,Sevelamer carbonate shortage_1st 260212.pdf,2026-03-13T16:06:57.935022
+MY,Malaysia,NPRA,MINIRIN NASAL SPRAY 0.1MG/ML (RTS),Desmopressin Acetate,0.1mg/ml,,Spray,MAL19984346ARZ,H01B A02,Ferring Sdn. Bhd,FERRING GMBH,Discontinuation,Current,Voluntary withdrawal ,2026-02-05,,"Alternative medicines are available proposed by PRH: 
+1. Minirin Oral Lyophilisate for sublingual 60mcg [MAL17107075ACRZ]
+2. Minirin Oral Lyophilisate for sublingual 120mcg [MAL17107076ACRZ]
+3. Minirin Injection 4mcg/ml [MAL19890565ARZ]
+4. Minirin Tablet 0.1mg [MAL19950096ARZ]",Registered alternative products are available,Desmopressin Alternatives,2026-03-13T16:06:57.935022
+MY,Malaysia,NPRA,Urispas 200 Tablet,Flavoxate Hydrochloride,200 mg,,Tablet,MAL20033669AZ,G04BD02,DCH AURIGA (MALAYSIA) SDN BHD,Recordati,Discontinuation,Current,Voluntary withdrawal ,2026-02-20,,,Registered alternative products are available,Flavoxate Alternatives,2026-03-13T16:06:57.935022
+MY,Malaysia,NPRA,Praluent 75 mg solution for injection in pre-filled pen,Alirocumab,75mg,,Pre Filled Pen,MAL17065009AZ,C10AX14,Sanofi-Aventis (Malaysia) Sdn. Bhd.,Sanofi Winthrop Industrie,Discontinuation,Current,Voluntary withdrawal ,2026-02-23,,PRH proposed other LDL lowering treatments such as statins and ezetimibe and other PCSK9 inhibitors,No registered alternative product is available for this productâs active ingredient. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement.,,2026-03-13T16:06:57.935022
+MY,Malaysia,NPRA,TULIP 40 MG FILM-COATED TABLET,ATORVASTATIN CALCIUM,40MG,,TABLET,MAL09072769ACZ,C10AA05,SANDOZ PRODUCTS MALAYSIA SDN BHD,NOVARTIS PHARMACEUTICAL MANUFACTURING LLC,Discontinuation,Current,Business decision,2026-02-20,,Alternative is available proposed by PRH [i.e. Rotaqor Film Coated Tablet 40mg (MAL24096053AZ)],Registered alternative products are available,Atorvastatin Alternatives,2026-03-13T16:06:57.936057
+MY,Malaysia,NPRA,Gastrografin Aqueous Solution,"1.Amidotrizoic acid 
+
+2.Meglumine","1) amidotrizoic acid 597.3mg/ml (as Meglumine Amidotrizoate 660mg/ml); 
+
+2) Meglumine 159.24mg/ml (as Sodium Amidotrizoate 100mg/ml)  
+",,Liquid,MAL20001254ACRZ,V08AA01,Bayer Co (Malaysia Sdn Bhd),"BERLIMED S.A,MADRID SPAIN",Shortage,Current,The PRH has initiated a precautionary voluntary recall due to quality concern of a nitrosamine impurity in certain tested batches.,2026-02-26,,PRH proposed to submit variation of revise formulation to overcome quality concern.,No registered alternative product is available for this productâs active ingredient. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement.,,2026-03-13T16:06:57.936057
+MY,Malaysia,NPRA,Minox 2% Topical Solution (Regular Strength),Minoxidil,2% w/v,,Liquid,MAL16025038AZ,D11AX01,KOTRA PHARMA (M) SDN. BHD.,KOTRA PHARMA (M) SDN. BHD.,Discontinuation,Current,Reduced demand,2026-02-26,,"There is another product containing the same active ingredient but with a different strength, Minox 5% Topical Solution (Extra Strength) (MAL16025045AZ), remains available in the market.",Registered alternative products are available,Minoxidil Alternatives,2026-03-13T16:06:57.936057
+MY,Malaysia,NPRA,Voltaren Emulgel 1%,DICLOFENAC DIETHYLAMINE,1.16% (w/w),,Topical,MAL05032552ARSZ,M02AA15,Haleon Malaysia Sdn Bhd,Haleon CH SARL,Discontinuation,Current,"The product was discontinued in year 2022 due to low demand. And nitrosamine issue came in year 2023,  thus variation was done to reduce shelf-life as mitigation to nitrosamine issue and approved on 10-Dec-2024, though the product is not marketed.",2025-12-31,,PRH still supplying Voltaren 12 Hours Emulgel 2% Gel.,Registered alternative products are available,Diclofenac Topical Alternatives,2026-03-13T16:06:57.937055
+MY,Malaysia,NPRA,Singulair 4mg Oral Granules,Montelukast Sodium,4mg,,Oral Granules,MAL14075049ACRZ,R03DC03,ORGANON MALAYSIA SDN. BHD.,Patheon Manufacturing Services LLC. ,Discontinuation,Anticipated,Business decision,2026-06-30,,,Registered alternative products are available,Montelukast Alternatives 251219,2026-03-13T16:06:57.937055
+MY,Malaysia,NPRA,AXCEL CHLOROQUINE TABLET,CHLOROQUINE PHOSPHATE,250mg,,Tablet,MAL19972909AZ,P01BA01,KOTRA PHARMA (M) SDN. BHD.,KOTRA PHARMA (M) SDN. BHD.,Discontinuation,Anticipated,Reduced demand,2027-10-01,,"No mitigation actions were undertaken, as there has been no demand from both the private and government markets.",Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.937055
+MY,Malaysia,NPRA,SUBOXONE FILM 2MG/0.5 MG,"1) Naloxone Hydrochloride 
+
+2) Buprenorphine Hydrochloride  ","1) 2 mg (as hydrochloride) 
+
+2) 0.5 mg (as hydrochloride dihydrate)",,Sublingual Buccal / Oromucosal,MAL13075057ACRZ,N07BC51,Zuellig Pharma Sdn. Bhd.,"Aquestive Therapeutics Inc., 6560 Melton Road, Portage, Indiana, United States.",Discontinuation,Anticipated,Business Decision / voluntary market withdrawal,2026-08-01,,"Switch patients from Suboxone Film to a locally available product, start at the same dose and monitor closely for withdrawal or underdosing, adjusting as necessary.",Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.937055
+MY,Malaysia,NPRA,SUBOXONE FILM 8MG/2MG,"1) Naloxone Hydrochloride 
+
+2) Buprenorphine Hydrochloride  ","1) 8 mg (as hydrochloride) 
+
+2) 2 mg (as hydrochloride dihydrate) 
+",,Sublingual Buccal / Oromucosal,MAL13075058ACRZ,N07BC51,Zuellig Pharma Sdn. Bhd.,"Aquestive Therapeutics Inc., 6560 Melton Road, Portage, Indiana, United States.",Discontinuation,Anticipated,Business Decision / voluntary market withdrawal,2026-08-01,,"Switch patients from Suboxone Film to a locally available product, start at the same dose and monitor closely for withdrawal or underdosing, adjusting as necessary.",Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.938019
+MY,Malaysia,NPRA,SUBOXONE 2MG SUBLINGUAL TABLETS,"1) Naloxone Hydrochloride 
+
+2) Buprenorphine Hydrochloride  ","1) 2 mg (as hydrochloride) 
+
+2) 0.5 mg (as hydrochloride dihydrate)",,Sublingual Buccal / Oromucosal,MAL20061581ACRZ,N07BC51,Zuellig Pharma Sdn. Bhd.,"Reckitt Benckiser Healthcare (UK) Limited, Dansom Lane, United Kingdom.",Discontinuation,Anticipated,Business Decision / voluntary market withdrawal,2028-04-01,,Switch to locally available equivalent product,Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.938019
+MY,Malaysia,NPRA,SUBOXONE 8MG SUBLINGUAL TABLETS,"1) Naloxone Hydrochloride 
+
+2) Buprenorphine Hydrochloride  ","1) 8 mg (as hydrochloride) 
+
+2) 2 mg (as hydrochloride dihydrate)",,Sublingual Buccal / Oromucosal,MAL20061582ACRZ,N07BC51,Zuellig Pharma Sdn. Bhd.,"Reckitt Benckiser Healthcare (UK) Limited, Dansom Lane, United Kingdom.",Discontinuation,Anticipated,Business Decision / voluntary market withdrawal,2028-04-01,,Switch to locally available equivalent product,Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.938019
+MY,Malaysia,NPRA,Suboxone Film 2mg/0.5mg,"1) Naloxone Hydrochloride 
+
+2) Buprenorphine Hydrochloride  ","1) 2 mg (as hydrochloride) 
+
+2) 0.5 mg (as hydrochloride dihydrate)",,Sublingual Buccal / Oromucosal,MAL23026005ACRSZ,N07BC51,Zuellig Pharma Sdn. Bhd.,"Aquestive Therapeutics Inc., 6465 Ameriplex Drive, United States.",Discontinuation,Anticipated,Business Decision / voluntary market withdrawal,2026-08-01,,"Switch patients from Suboxone Film to a locally available product, start at the same dose and monitor closely for withdrawal or underdosing, adjusting as necessary.",Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.938019
+MY,Malaysia,NPRA,Suboxone Film 8mg/2mg,"1) Naloxone Hydrochloride 
+
+2) Buprenorphine Hydrochloride  ","1) 8 mg (as hydrochloride) 
+
+2) 2 mg (as hydrochloride dihydrate)",,Sublingual Buccal / Oromucosal,MAL23026006ACRSZ,N07BC51,Zuellig Pharma Sdn. Bhd.,"Aquestive Therapeutics Inc., 6465 Ameriplex Drive, United States.",Discontinuation,Anticipated,Business Decision / voluntary market withdrawal,2026-08-01,,"Switch patients from Suboxone Film to a locally available product, start at the same dose and monitor closely for withdrawal or underdosing, adjusting as necessary.",Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.939054
+MY,Malaysia,NPRA,Kaletra Oral Solution,Lopinavir/Ritonavir,80 mg/20 mg per mL,,Oral solution,MAL20020996AZ,J05AR10,AbbVie Sdn Bhd,AbbVie Inc,Discontinuation,Anticipated,Business decision,2026-12-31,,PRH has not proposed any mitigation plan.,Registered alternative products are available,Lopinavir + Ritonavir shortage 2nd ver. 260309.pdf,2026-03-13T16:06:57.939054
+MY,Malaysia,NPRA,Norvir Tablet 100mg,Ritonavir,100mg ,,Tablet,MAL13015040ARZ,J05AE03,AbbVie Sdn Bhd,Abbvie Deutschland GmbH & Co.KG,Discontinuation,Anticipated,Business decision,2026-12-31,,"Alternative medicine proposed by PRH: 
+
+RITOVIR (Ritonavir Tablets 100 mg) (MAL17085058AZ)",Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement,,2026-03-13T16:06:57.939054
+MY,Malaysia,NPRA,Kaletra 100mg/25mg Film-Coated Tablet,Lopinavir/Ritonavir,100mg/25mg,,Tablet,MAL10063000AZ,J05AR10,AbbVie Sdn Bhd,Abbvie Deutschland GmbH & Co.KG,Discontinuation,Anticipated,Business decision,2026-12-31,,"Alternative medicine proposed by PRH: 
+
+HIVUS - LR 100/25 [Lopinavir 100mg and Ritonavir 25mg Film Coated Tablets USP] (MAL23076008AZ)",Registered alternative products are available,Lopinavir + Ritonavir shortage 2nd ver. 260309.pdf,2026-03-13T16:06:57.939054
+MY,Malaysia,NPRA,Dapiga 10mg Film Coated Tablets,Dapagliflozin,10mg,,Film Coated Tablets,MAL22126055AZ,A10BK01,NOVUGEN PHARMA SDN. BHD.,NOVUGEN PHARMA SDN. BHD. (MALAYSIA),Shortage,Resolved,Increased Demand,2025-10-24,2025-12-12,Initiated production to meet the revised demand.,"Registered alternative products are available 
+
+26 December 2025 update:
+The justification has been reviewed and deemed satisfactory. This notification will remain published for an additional period of three (3) months, until 27 March 2026.",,2026-03-13T16:06:57.939054
+MY,Malaysia,NPRA,FLUVIR 75 (Oseltamivir Phosphate Capsules 75mg),OSELTAMIVIR PHOSPHATE,75 mg,,Capsule,MAL23046011AZ,J05AH02,CAMBER LABORATORIES SDN. BHD.,"Hetero Labs Limited, India",Shortage,Resolved,Demand increases drastically,2025-10-22,2025-11-08,PRH is in the process of bring in new stock.,"Registered alternative products are available 
+
+20 Januari 2026 update:
+The justification has been reviewed and deemed satisfactory. This notification will remain published for an additional period of three (3) months, until 21 April 2026.",,2026-03-13T16:06:57.940020
+MY,Malaysia,NPRA,Starflu-75 (Oseltamivir Capsule 75mg),OSELTAMIVIR PHOSPHATE,75mg,,CAPSULE,MAL09111816AZ,J05AH02,GERMAX SDN. BHD.,"Strides Pharma Science Limited, India",Shortage,Resolved,Demand increases drastically,2025-10-14,2026-02-01,PRH has implemented stock rationing measures to ensure continued supply to prescribers.,"Registered alternative products are available 
+
+20 Januari 2026 update:
+The justification has been reviewed and deemed satisfactory. This notification will remain published for an additional period of three (3) months, until 21 April 2026.",,2026-03-13T16:06:57.940020
+MY,Malaysia,NPRA,COBRA ANTIVENIN (PURIFIED) STERILE POWDER FOR INJECTION,CRUDE PLASMA OF COBRA ANTIVENIN,49 ML,,"INJECTION, POWDER",MAL20091909AZ,J06AA03,IDAMAN PHARMA SDN. BHD.,"QUEEN SAOVABHA MEMORIAL INSTITUTE, THE THAI RED CROSS SOCIETY",Shortage,Resolved,Increased Demand,2025-09-13,2026-01-28,"i. PRH will align order quantities with demand by maintaining a one-month buffer stock.
+
+ii. The manufacturer will be provided with a usage forecast based on historical data and usage trends from the past year.","Registered alternative product is not available. Doctors are advised to ensure patients receive suitable alternative treatment based on their clinical judgement
+
+28 Januari 2026 update:
+The justification has been reviewed and deemed satisfactory. This notification will remain published for an additional period of three (3) months, until 29 April 2026.",,2026-03-13T16:06:57.940020
+MY,Malaysia,NPRA,Omiflu Capsule 75mg,OSELTAMIVIR PHOSPHATE,75mg,,Capsule,MAL07090926AZ,J05AH02,DUOPHARMA (M) SENDIRIAN BERHAD,DUOPHARMA (M) SENDIRIAN BERHAD,Shortage,Resolved,Demand increases drastically,2025-10-17,2026-02-28,PRH are currently planning the production of the next batch.,Registered alternative products are available,,2026-03-13T16:06:57.940020
+MY,Malaysia,NPRA,Osmivir Capsule 75mg,Oseltamivir Phosphate,75mg,,Capsule,MAL06100581AZ,J05AH02 ,Royce Pharma Manufacturing Sdn. Bhd.,Royce Pharma Manufacturing Sdn. Bhd.,Shortage,Resolved,Demand increases drastically,2025-10-15,,Increase the production of Osmivir Capsule 75mg and ensure the buffer stock available.,"Registered alternative products are available 
+
+06 March 2026 update:
+The justification has been reviewed and deemed satisfactory. This notification will remain published for an additional period of three (3) months, until 5 June 2026.",,2026-03-13T16:06:57.941019
+MY,Malaysia,NPRA,FENOLIP CAPSULE 300MG,FENOFIBRATE,300MG,,CAPSULE,MAL19992757AZ,C10AB05,PAHANG PHARMACY SDN. BHD.,Noripharma Sdn. Bhd.,Discontinuation,Resolved,"Low in demand for 300mg, and the holder has an alternative 200mg strength 
+",2023-03-31,,"The product registration status is maintained, and local marketing may be resumed if there is future demand.","No medicine shortage is anticipated. 
+
+10 March 2026 update: 
+As the discontinuation report was submitted on 12 Januari 2026, this notification will remain published until 30 June 2026.",,2026-03-13T16:06:57.941019
+MY,Malaysia,NPRA,MINIRIN TABLET 0.2MG,Desmopressin Acetate,0.2mg,,Tablet,MAL19950097ARZ,H01B A02,Ferring Sdn. Bhd.,Ferring International Center SA,Discontinuation,Resolved,Reduced demand,2024-01-12,,"The product registration status is maintained, and local marketing may be resumed if there is future demand. Alternate medicines are available proposed by PRH: 
+1. Minirin Oral Lyophilisate for sublingual 60mcg [MAL17107075ACRZ]
+2. Minirin Oral Lyophilisate for sublingual 120mcg [MAL17107076ACRZ]
+3. Minirin Injection 4mcg/ml [MAL19890565ARZ]
+4. Minirin Tablet 0.1mg [MAL19950096ARZ]","Registered alternative products are available 
+
+06 Januari 2026 update:
+The justification has been reviewed and deemed satisfactory. This notification will remain published for an additional period of three (3) months, until 7 April 2026.",Desmopressin Alternatives,2026-03-13T16:06:57.941019
+MY,Malaysia,NPRA,Panadol Cold+Flu-ND Caplet,"1. Paracetamol 
+
+2. Phenylephrine HCL","1. 500mg 
+
+2. 5mg",,TABLET,MAL09062126ACRZ,N02BE51 ,Haleon Malaysia Sdn Bhd,Aspen Pharma Pty Ltd,Discontinuation,Resolved,Reduced demand,2024-12-31,,"The product registration status is maintained, and local marketing may be resumed if there is future demand.","No medicine shortage is anticipated. 
+
+10 March 2026 Notes: 
+As the discontinuation report was submitted on 10 March 2026, this notification will remain published until 31 December 2026.",,2026-03-13T16:06:57.941019
+MY,Malaysia,NPRA,Panadol C Tablet ,"1. Paracetamol
+
+2. Pseudoephedrine hydrochloride","1. 500mg 
+2. 30mg",,Tablet,MAL19950231AZ,V03AX ,Haleon Malaysia Sdn Bhd,Sterling Drug (Malaya) Sdn. Bhd.,Discontinuation,Resolved,Reduced demand,2018-12-31,,"The product registration status is maintained, and local marketing may be resumed if there is future demand.","No medicine shortage is anticipated. 
+
+10 March 2026 Notes: 
+As the discontinuation report was submitted on 10 March 2026, this notification will remain published until 31 December 2026.",,2026-03-13T16:06:57.942018
+MY,Malaysia,NPRA,13/03/2026 23:06:20,,,,,,,Data published as of,,,,,,,,,,2026-03-13T16:06:57.942018

@@ -1,0 +1,44 @@
+﻿country_code,country_name,source,medicine_name,active_substance,strength,package_size,atc_code,product_no,shortage_start,estimated_end,status,decision_reference,scraped_at
+NL,Netherlands,IGJ,Lithiumcarbonaat,,"Tabletten, 200 mg, 300 mg en 400 mg",,N05AN01,RVG 52076RVG 55991RVG 55992,2026-02-04,,shortage,"Staatscourant 2026, 3853 | Overheid.nl > Officiële bekendmakingen",2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Promethazine,,"Tabletten, 25 mg",,R06AD02,RVG 50250,2026-02-04,,shortage,"Staatscourant 2026, 3853 | Overheid.nl > Officiële bekendmakingen",2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Bendamustine Accord,,"Poeder voor concentraat voor oplossing voor infusie, 2,5 mg/ml",,L01AA09,RVG 117843,2026-01-29,2026-04-24,shortage,Besluit met kenmerk 2026-3154790/IT2111571,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Depakine Chronosphere,,"Granulaat met gereguleerde afgifte, 500 mg",,,RVG 30761,2026-01-15,2026-04-10,shortage,Besluit met kenmerk 2026-3152713/IT2111518,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Depakine Chronosphere,,"Granulaat met gereguleerde afgifte, 1000 mg",,,RVG 30763,2026-02-13,2026-05-08,shortage,Besluit met kenmerk 2026-3158194/IT2111800,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Dipyridamol,,"Capsules met gereguleerde afgifte, 200 mg",,B01AC07,RVG 113461,2025-11-14,2026-04-12,shortage,Besluit met kenmerk 2026-3161878/IT2110743,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Doxycycline Addimed,,"Oplossing voor injectie,  100 mg/5 ml",,J01AA02,RVG 133868/06396,2025-10-01,2026-04-17,shortage,Besluit met kenmerk 2026-3154975/IT2110126,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Fenobarbital,,"Tabletten, 50 mg",,N03AA02,RVG 52101,2026-01-12,2026-05-31,shortage,Besluit met kenmerk 2026-3151893/IT2111414,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Holoxan,,"poeder voor oplossing voor infusie, 500 mg, 1 gr en 2 gr",,,RVG 07622,2026-02-12,2026-05-06,shortage,Besluit met kenmerk 2026-3157559/IT2111768,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Isoniazide Costero,,"Tabletten, 200 mg",,J04AC01,RVG 52072,2025-09-09,2026-03-31,shortage,Besluit met kenmerk 2025-3138995/IT2098038,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Kenacort-A 10,,"Suspensie voor injectie, 10 mg/ml",,,RVG 01591,2025-09-11,2026-05-22,shortage,Besluit met kenmerk 2026-3159389/IT2109923,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Labetalol HCl Mylan,,"Tabletten, 100 mg",,C07AG01,RVG 11106,2025-09-09,2026-05-22,shortage,Besluit met kenmerk 2026-3157075/IT2092558,2026-03-12T16:50:50.376095
+NL,Netherlands,IGJ,Labetalol HCl Mylan,,"Tabletten, 200 mg en 400 mg",,C07AG01,RVG 11107 en RVG 11108,2025-09-23,2026-05-22,shortage,Besluit met kenmerk 2026-3157075/IT2092558,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Levobupivacaïne Fresenius Kabi,,"Oplossing voor injectie/infusie, 1,25 mg/ml, 2,5 mg/ml, 5 mg/ml, 7,5 mg/ml",,N01BB10,RVG 113447RVG 113448RVG 113449RVG 113450,2026-02-27,2026-04-10,shortage,Besluit met kenmerk 2026-3160007/IT2111907,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Levosimendan Kalceks,,"Concentraat voor oplossing voor infusie, 2,5 mg/ml",,C01CX08,RVG 127812,2025-09-09,2026-04-01,shortage,Besluit met kenmerk 2026-3155564/IT2097108,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,L-Methyldopa,,"Tabletten, 125 mg, 250 mg en 500 mg",,C02AB01,RVG 10647RVG 10648RVG 10649,2025-09-09,2026-06-23,shortage,Besluit met kenmerk 2025-3138999/IT2109827,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Nifedipine,,"Tabletten met gereguleerde afgifte, 30 mg",,C08CA05,RVG 28944,2025-12-23,2026-05-06,shortage,Besluit met kenmerk 2026-3160556/IT2111289,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Nifedipine,,"Tabletten met gereguleerde afgifte, 60 mg",,C08CA05,RVG 28945,2026-02-12,2026-05-06,shortage,Besluit met kenmerk 2025-3157393/IT2111703,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Oxybutynine,,"Tabletten, 2,5 en 5 mg",,G04BD04,RVG 24081RVG 22822RVG 23879RVG 22823RVG 23950,2026-02-23,2026-04-03,shortage,Besluit met kenmerk 2026-3158991/IT2111788,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Oxytocine Eureco-Pharma,,"Oplossing voor injectie/infusie, 5 IE/ml",,H01BB02,RVG 126825/117498,2025-09-30,2026-03-31,shortage,Besluit met kenmerk 2025-3131283/IT2110127,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Quetiapine,,"50 mg, tabletten met verlengde afgifte",,N05AH04,RVG 112014RVG 128088RVG 108482RVG 117554RVG 34625,2026-02-27,2026-04-19,shortage,Besluit met kenmerk 2026-3160667/IT2111963,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Quetiapine,,"150 mg, tabletten met verlengde afgifte",,N05AH04,RVG 102408RVG 111319RVG 117555RVG 117395RVG 128090,2025-12-12,2026-04-19,shortage,Besluit met kenmerk 2025-3147024/IT2111145,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Quetiapine,,"300 mg, tabletten met verlengde afgifte",,N05AH04,RVG 34627RVG 108502RVG 106812RVG 117557RVG 128092,2025-12-12,2026-04-19,shortage,Besluit met kenmerk 2025-3147043/IT2111147,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Quetiapine,,"400 mg, tabletten met verlengde afgifte",,N05AH04,RVG 34628RVG 108503RVG 106813RVG 117558RVG 128093,2025-12-12,2026-04-19,shortage,Besluit met kenmerk 2025-3147028/IT2111149,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Salbutamol,,"Aerosol, 100 microgram/dosis",,R03AC02,"RVG 21440RVG 18353RVG 26971RVG 34424,RVG 26833",2025-09-09,2026-05-29,shortage,Besluit met kenmerk 2026-3158847/IT2092641,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Sotalol HCL Hyloris,,"Oplossing voor injectie, 40 mg/4 ml",,C07AA07,RVG 117148,2025-09-09,2026-04-24,shortage,Besluit met kenmerk 2026-3151519/IT2081154,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,Triamtereen/Hydrochloorthiazide Accord,,"Tabletten, 50/25 mg",,C03EA01,RVG 55610,2025-09-09,2026-03-31,shortage,Besluit met kenmerk 2025-3139041/IT2046813,2026-03-12T16:50:50.378101
+NL,Netherlands,IGJ,"Ventolin 2,5 Nebules",,"Verneveloplossing,  1 mg/ml",,,RVG 12587,2025-09-09,2026-03-31,shortage,Besluit met kenmerk 2026-3152017/IT2090197,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Depakine Chronosphere,,"Granulaat met gereguleerde afgifte, 250 mg",,,RVG 30760,2026-01-06,2026-02-20,shortage,Besluit met kenmerk 2025-3150691/IT211206,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Desuric,,"Tabletten, 100 mg",,,RVG 06334,2025-09-09,2026-01-31,shortage,Besluit met kenmerk 2025-3136763/IT2065347,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Kenacort-A 40,,"Suspensie voor injectie, 40 mg/ml",,,RVG 112133/05341,2025-10-16,2026-02-23,shortage,Besluit met kenmerk 2025-3148786/IT2110343,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Quetiapine,,"50 mg, tabletten met verlengde afgifte",,N05AH04,RVG 112014RVG  128088RVG 108482RVG 117554RVG 34625,2025-12-08,2026-02-01,shortage,Besluit met kenmerk 2025-3145685/IT2111042,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Quetiapine,,"200 mg, tabletten met verlengde afgifte",,N05AH04,RVG 34626RVG 108501RVG 106811RVG 117556RVG 128091,2025-12-12,2026-02-01,shortage,Besluit met kenmerk 2025-3147038/IT2111146,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Sirdalud,,"Capsules met gereguleerde afgifte, 6 mg",,,RVG 12983,2025-09-09,2026-01-31,shortage,Besluit met kenmerk 2025-3125738/ IT2109836,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Tambocor,,Injectievloeistof 10 mg/ml,,,RVG 10099,2025-09-09,2026-01-16,shortage,Besluit met kenmerk 2025-3141398/IT2094597,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Xylocaine,,"Spray, 100 mg/ml",,,RVG 07831,2025-10-27,2026-01-23,shortage,Besluit met kenmerk 2025-3136692/IT2110402,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Dalacin C,,"Granulaat voor orale suspensie, 75 mg/5 ml",,,RVG 06354,2025-09-09,2025-10-17,shortage,Besluit met kenmerk 2025-3124733/IT2092657,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Burinex,,"Oplossing voor injectie, 0,5 mg/ml",,,RVG 12412,2025-09-09,2025-10-27,shortage,Besluit met kenmerk 2025-3126532/IT2109874,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Gonasi,,"Poeder en oplosmiddel voor oplossing voor injectie, 5000 IE",,,RVG 125838,2025-09-09,2025-11-17,shortage,Besluit met kenmerk2025-3132622/ IT2109835,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,"Ventolin  5,0 Nebules",,"Verneveloplossing,   2 mg/ml",,,RVG 14590,2025-09-09,2025-11-07,shortage,Besluit met kenmerk 2025-3124805/IT2090197,2026-03-12T16:50:50.380108
+NL,Netherlands,IGJ,Salamol Steri-Neb,,"Verneveloplossing, 5 mg/2,5ml",,,RVG 100333,2025-09-09,2025-11-07,shortage,Besluit met kenmerk 2025-3124805/IT2090197,2026-03-12T16:50:50.382115
+NL,Netherlands,IGJ,Haloperidol,,"Tabletten, 5 mg",,N05AD01,RVG 55601,,2025-11-23,shortage,Besluit met kenmerk 2025-3125657/IT2109820,2026-03-12T16:50:50.382115
+NL,Netherlands,IGJ,Zypadhera,,"Poeder en oplosmiddel voor suspensie voor injectie, met verlengde afgifte 210 mg, 300 mg en 405 mg",,,EU/1/08/479,2025-09-09,2025-12-02,shortage,Besluit met kenmerk 2025-3124885/IT2097844,2026-03-12T16:50:50.382115

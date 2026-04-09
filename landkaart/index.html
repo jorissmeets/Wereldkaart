@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCG – Geneesmiddeltekorten Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --lcg-dark: #00428b;
+            --lcg-mid: #1e5198;
+            --lcg-cyan: #0bbbef;
+            --lcg-green: #a8c04d;
+            --lcg-light: #daf5fd;
+            --bg-base: #daf5fd;
+            --bg-surface: #ffffff;
+            --bg-elevated: #eaf8fd;
+            --border: rgba(0,66,139,0.10);
+            --border-light: rgba(0,66,139,0.06);
+            --text-primary: #00428b;
+            --text-secondary: #1e5198;
+            --text-muted: #5a7faa;
+            --accent-blue: #0bbbef;
+            --accent-blue-dim: rgba(11,187,239,0.08);
+            --status-active: #ef4444;
+            --status-active-soft: #e05555;
+            --status-active-bg: rgba(239,68,68,0.08);
+            --status-upcoming: #e8860c;
+            --status-upcoming-soft: #c47a10;
+            --status-upcoming-bg: rgba(232,134,12,0.08);
+            --status-resolved: #a8c04d;
+            --status-resolved-bg: rgba(168,192,77,0.10);
+            --status-nodata: #c8dfe8;
+            --status-ok: #0bbbef;
+        }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg-base); color: var(--text-primary); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+        /* ── Header ── */
+        .header { background: linear-gradient(135deg, #00428b 0%, #0bbbef 100%); border-bottom: none; padding: 9px 20px; display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+        .header-brand { display: flex; align-items: center; gap: 10px; }
+        .header-logo { width: 26px; height: 26px; flex-shrink: 0; }
+        .header-logo svg { width: 100%; height: 100%; }
+        .header h1 { font-size: 15px; font-weight: 600; white-space: nowrap; color: #ffffff; }
+        .header h1 span { font-weight: 400; color: rgba(255,255,255,0.6); font-size: 13px; margin-left: 6px; }
+        .header-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+        .period-filter { display: flex; background: rgba(255,255,255,0.15); border-radius: 7px; border: 1px solid rgba(255,255,255,0.2); overflow: hidden; }
+        .period-btn { padding: 5px 12px; font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.6); background: transparent; border: none; cursor: pointer; transition: all 0.15s; }
+        .period-btn:hover { color: #ffffff; background: rgba(255,255,255,0.1); }
+        .period-btn.active { color: #00428b; background: #ffffff; font-weight: 600; }
+
+        /* ── KPI Bar ── */
+        .kpi-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 10px 20px; background: var(--bg-base); border-bottom: none; flex-shrink: 0; }
+        .kpi-card { background: #ffffff; border: none; border-radius: 10px; padding: 12px 14px 8px; cursor: pointer; transition: all 0.15s; position: relative; overflow: hidden; }
+        .kpi-card:hover { box-shadow: -4px 4px 20px -4px rgba(0,0,0,0.06); }
+        .kpi-card.active { box-shadow: 0 0 0 2px var(--lcg-cyan); }
+        .kpi-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+        .kpi-label .info-icon { font-size: 11px; opacity: 0.5; cursor: help; }
+        .kpi-row { display: flex; align-items: baseline; gap: 8px; }
+        .kpi-value { font-size: 26px; font-weight: 700; color: var(--text-primary); line-height: 1.1; }
+        .kpi-sub { font-size: 11px; color: var(--text-muted); }
+        .kpi-delta { font-size: 11px; font-weight: 600; margin-top: 3px; }
+        .kpi-delta.up { color: #ef4444; }
+        .kpi-delta.down { color: var(--lcg-green); }
+        .kpi-delta.neutral { color: var(--text-muted); }
+        .kpi-sparkline-wrap { margin-top: 6px; height: 22px; }
+        .kpi-sparkline-wrap svg { width: 100%; height: 22px; }
+        /* Mini bar chart for countries */
+        .kpi-minibar { display: flex; gap: 2px; margin-top: 6px; height: 6px; border-radius: 3px; overflow: hidden; }
+        .kpi-minibar-seg { height: 100%; flex: 1; border-radius: 2px; }
+
+        /* ── Context Bar ── */
+        .context-bar { display: flex; align-items: center; gap: 6px; padding: 6px 20px; background: var(--bg-base); border-bottom: none; flex-shrink: 0; min-height: 32px; flex-wrap: wrap; }
+        .context-chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: #ffffff; border-radius: 12px; font-size: 11px; color: var(--text-secondary); white-space: nowrap; }
+        .context-chip .chip-label { color: var(--text-muted); }
+        .context-chip .chip-value { color: var(--text-primary); font-weight: 600; }
+        .context-chip .chip-remove { color: var(--text-muted); cursor: pointer; font-size: 13px; margin-left: 2px; line-height: 1; padding: 0 2px; border: none; background: none; }
+        .context-chip .chip-remove:hover { color: var(--text-primary); }
+        .context-chip.static { opacity: 0.6; }
+        .context-sep { color: var(--border-light); font-size: 10px; }
+        .context-clear { margin-left: auto; font-size: 11px; color: var(--text-muted); background: #ffffff; border: none; border-radius: 6px; padding: 2px 10px; cursor: pointer; display: none; }
+        .context-clear.visible { display: inline-flex; }
+        .context-clear:hover { color: var(--text-primary); background: var(--lcg-light); }
+
+        /* ── Main Layout ── */
+        .main { display: flex; flex: 1; overflow: hidden; }
+
+        /* ── Sidebar ── */
+        .sidebar { width: 340px; background: #ffffff; border-right: none; display: flex; flex-direction: column; flex-shrink: 0; transition: width 0.2s ease, min-width 0.2s ease; border-radius: 0 10px 10px 0; }
+        .sidebar.collapsed { width: 0; min-width: 0; overflow: hidden; border-right: none; }
+        .sidebar-toggle { position: absolute; top: 8px; left: 8px; z-index: 1001; background: #ffffff; border: none; border-radius: 6px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-secondary); font-size: 14px; transition: all 0.15s; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+        .sidebar-toggle:hover { background: #ffffff; color: var(--text-primary); }
+        .search-box { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+        .search-box input { width: 100%; padding: 8px 10px; background: var(--lcg-light); border: none; border-radius: 6px; color: var(--text-primary); font-size: 12px; outline: none; }
+        .search-box input:focus { box-shadow: 0 0 0 2px rgba(11,187,239,0.25); }
+        .search-box input::placeholder { color: var(--text-muted); }
+
+        .filter-bar { display: flex; flex-wrap: wrap; padding: 5px 12px; gap: 3px; border-bottom: 1px solid var(--border); }
+        .filter-btn { padding: 3px 7px; border-radius: 4px; font-size: 10px; cursor: pointer; background: var(--lcg-light); color: var(--text-secondary); border: none; transition: all 0.12s; }
+        .filter-btn:hover { background: rgba(11,187,239,0.15); }
+        .filter-btn.active { background: var(--lcg-cyan); color: white; }
+
+        .sort-bar { display: flex; padding: 4px 12px; gap: 4px; border-bottom: 1px solid var(--border); align-items: center; }
+        .sort-bar label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
+        .sort-btn { padding: 2px 6px; border-radius: 3px; font-size: 10px; cursor: pointer; background: transparent; color: var(--text-secondary); border: 1px solid var(--border); }
+        .sort-btn.active { background: var(--lcg-light); color: var(--text-primary); }
+
+        .sidebar-count { padding: 3px 12px; font-size: 10px; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+
+        .atc-list { flex: 1; overflow-y: auto; }
+        .atc-list::-webkit-scrollbar { width: 5px; }
+        .atc-list::-webkit-scrollbar-track { background: transparent; }
+        .atc-list::-webkit-scrollbar-thumb { background: rgba(0,66,139,0.12); border-radius: 3px; }
+
+        .atc-item { padding: 9px 14px; cursor: pointer; border-left: 3px solid transparent; transition: background 0.12s; }
+        .atc-item:hover { background: rgba(11,187,239,0.05); }
+        .atc-item.selected { background: var(--accent-blue-dim); border-left-color: var(--lcg-cyan); }
+        .atc-row1 { display: flex; align-items: center; gap: 7px; }
+        .atc-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .atc-dot.st-active { background: var(--status-active); }
+        .atc-dot.st-upcoming { background: var(--status-upcoming); }
+        .atc-dot.st-resolved { background: var(--status-resolved); }
+        .atc-code { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 13px; font-weight: 600; }
+        .atc-lnd { margin-left: auto; font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+        .atc-substance { margin-top: 1px; padding-left: 15px; font-size: 10px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .atc-row2 { margin-top: 2px; padding-left: 15px; font-size: 11px; color: var(--text-muted); display: flex; gap: 6px; align-items: center; }
+        .atc-flags { margin-left: auto; font-size: 11px; letter-spacing: -2px; flex-shrink: 0; }
+        .atc-row2 .st-active { color: var(--status-active-soft); }
+        .atc-row2 .st-upcoming { color: var(--status-upcoming-soft); }
+        .atc-row2 .st-resolved { color: var(--status-resolved); opacity: 0.7; }
+
+        /* ── Map ── */
+        .map-area { flex: 1; position: relative; min-width: 0; }
+        #map { width: 100%; height: 100%; background: #daf5fd !important; }
+        .leaflet-tile-pane { visibility: hidden !important; height: 0 !important; overflow: hidden !important; }
+
+        .map-legend { position: absolute; bottom: 14px; left: 10px; z-index: 1000; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border: none; border-radius: 10px; padding: 8px 12px; }
+        .legend-title { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600; }
+        .legend-row { display: flex; align-items: center; gap: 7px; font-size: 10px; color: var(--text-secondary); margin-bottom: 2px; }
+        .legend-dot { width: 12px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+        /* ── Detail Panel (fixed column) ── */
+        .detail-panel { width: 320px; background: #ffffff; border-left: none; display: flex; flex-direction: column; flex-shrink: 0; border-radius: 10px 0 0 10px; }
+        .detail-body { scroll-behavior: smooth; }
+
+        .detail-header { padding: 12px 14px; border-bottom: 1px solid var(--border); }
+        .detail-back { font-size: 11px; color: var(--text-muted); background: none; border: none; cursor: pointer; margin-bottom: 4px; display: none; padding: 0; }
+        .detail-back:hover { color: var(--text-primary); }
+        .detail-back.visible { display: block; }
+        .detail-title-row { display: flex; align-items: center; gap: 8px; }
+        .detail-title { font-size: 18px; font-weight: 700; font-family: 'Cascadia Code', 'Fira Code', monospace; color: var(--lcg-cyan); flex: 1; }
+        .detail-title.text-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; color: var(--text-primary); }
+        .detail-subtitle { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+
+        /* Summary mini-KPIs above tabs */
+        .detail-summary { display: flex; gap: 8px; padding: 8px 14px; border-bottom: 1px solid var(--border); }
+        .detail-summary-item { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; }
+        .detail-summary-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+        .detail-tabs { display: flex; border-bottom: 1px solid var(--border); }
+        .detail-tab { flex: 1; padding: 7px; font-size: 10px; font-weight: 600; text-align: center; color: var(--text-muted); background: transparent; border: none; cursor: pointer; border-bottom: 2px solid transparent; text-transform: uppercase; letter-spacing: 0.3px; transition: all 0.12s; }
+        .detail-tab:hover { color: var(--text-secondary); }
+        .detail-tab.active { color: var(--text-primary); border-bottom-color: var(--lcg-cyan); }
+        .detail-tab.dimmed { opacity: 0.4; }
+        .detail-tab .tab-count { font-size: 9px; background: var(--lcg-light); padding: 1px 5px; border-radius: 8px; margin-left: 3px; }
+
+        .detail-body { flex: 1; overflow-y: auto; padding: 6px 0; }
+        .detail-body::-webkit-scrollbar { width: 5px; }
+        .detail-body::-webkit-scrollbar-thumb { background: rgba(0,66,139,0.12); border-radius: 3px; }
+
+        /* Detail default state sections */
+        .detail-section { padding: 8px 14px; }
+        .detail-section-title { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; font-weight: 600; margin-bottom: 6px; }
+
+        .detail-top-item { display: flex; align-items: center; gap: 6px; padding: 5px 0; cursor: pointer; border-radius: 4px; }
+        .detail-top-item:hover { background: rgba(11,187,239,0.05); margin: 0 -4px; padding: 5px 4px; }
+        .detail-top-rank { font-size: 10px; color: var(--text-muted); min-width: 14px; }
+        .detail-top-code { font-family: monospace; font-size: 12px; font-weight: 600; }
+        .detail-top-info { margin-left: auto; font-size: 11px; color: var(--text-muted); }
+
+        .detail-resolved-item { display: flex; align-items: flex-start; gap: 6px; padding: 4px 0; }
+        .detail-resolved-check { color: var(--lcg-green); font-size: 12px; margin-top: 1px; }
+        .detail-resolved-text { font-size: 11px; color: var(--text-secondary); }
+        .detail-resolved-date { font-size: 10px; color: var(--text-muted); }
+
+        .detail-country-row { display: flex; align-items: center; gap: 6px; padding: 4px 0; font-size: 11px; cursor: pointer; border-radius: 4px; }
+        .detail-country-row:hover { background: rgba(11,187,239,0.05); margin: 0 -4px; padding: 4px 4px; }
+        .detail-country-flag { font-size: 14px; }
+        .detail-country-name { color: var(--text-secondary); flex: 1; }
+        .detail-country-stat { color: var(--text-muted); font-size: 10px; }
+        .detail-country-stat .act { color: var(--status-active-soft); }
+        .detail-country-stat .upc { color: var(--status-upcoming-soft); }
+
+        /* Country/ATC sections in drilldown */
+        .section-header { display: flex; align-items: center; gap: 6px; padding: 8px 14px 4px; }
+        .section-flag { font-size: 15px; }
+        .section-name { font-size: 12px; font-weight: 600; }
+        .section-count { font-size: 10px; color: var(--text-muted); margin-left: auto; }
+        .section-name.mono { font-family: monospace; }
+
+        .med-card { background: var(--lcg-light); border: none; border-radius: 8px; padding: 8px 10px; margin: 0 14px 5px; }
+        .med-name { font-size: 11px; font-weight: 600; color: var(--text-primary); }
+        .med-substance { font-size: 10px; color: var(--text-muted); margin-top: 1px; }
+        .med-meta { display: flex; gap: 6px; margin-top: 3px; flex-wrap: wrap; }
+        .med-tag { font-size: 9px; padding: 1px 5px; border-radius: 3px; font-weight: 600; }
+        .med-tag.active { background: var(--status-active-bg); color: var(--status-active); }
+        .med-tag.upcoming { background: var(--status-upcoming-bg); color: var(--status-upcoming); }
+        .med-tag.resolved { background: var(--status-resolved-bg); color: var(--status-resolved); }
+        .med-tag.date { background: rgba(0,66,139,0.06); color: var(--text-secondary); font-weight: 400; }
+        .med-country-link { font-size: 10px; color: var(--lcg-cyan); cursor: pointer; margin-left: auto; }
+        .med-country-link:hover { text-decoration: underline; }
+
+        .no-results { padding: 24px 14px; text-align: center; color: var(--text-muted); font-size: 12px; }
+        .no-results .suggestion { font-size: 11px; margin-top: 4px; opacity: 0.7; }
+
+        /* New badge */
+        .badge-new { font-size: 8px; font-weight: 700; background: var(--lcg-green); color: white; padding: 1px 4px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.3px; margin-left: 4px; vertical-align: middle; }
+
+        /* Loading animation */
+        @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+        .loading-text { animation: pulse 1.5s ease-in-out infinite; }
+
+        /* ── Tooltip override ── */
+        .leaflet-tooltip { background: #ffffff !important; color: #00428b !important; border: none !important; border-radius: 8px !important; font-family: 'Inter', system-ui, sans-serif !important; font-size: 11px !important; padding: 6px 10px !important; box-shadow: 0 2px 12px rgba(0,66,139,0.10) !important; line-height: 1.5 !important; }
+        .leaflet-tooltip-top:before { border-top-color: #ffffff !important; }
+        .leaflet-tooltip-bottom:before { border-bottom-color: #ffffff !important; }
+
+        /* ── Footer ── */
+        .footer { padding: 4px 20px; font-size: 10px; color: var(--text-muted); background: #ffffff; border-top: none; flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; }
+        .footer-right { display: flex; gap: 12px; align-items: center; }
+        .footer-kbd { font-size: 9px; color: var(--text-muted); }
+        .footer-kbd kbd { background: var(--lcg-light); padding: 1px 4px; border-radius: 3px; font-family: monospace; font-size: 9px; border: none; color: var(--text-secondary); }
+
+        /* ── Responsive ── */
+        @media (max-width: 1200px) {
+            .sidebar { width: 300px; }
+            .detail-panel { width: 280px; }
+        }
+        @media (max-width: 900px) {
+            .main { flex-direction: column; }
+            .sidebar { width: 100%; height: 35vh; }
+            .detail-panel { width: 100%; max-height: 40vh; }
+            .kpi-bar { grid-template-columns: repeat(2, 1fr); gap: 6px; padding: 8px 12px; }
+            .sidebar-toggle { display: none; }
+        }
+        @media (max-width: 600px) {
+            .header { padding: 6px 12px; gap: 8px; }
+            .header h1 { font-size: 13px; }
+            .period-btn { padding: 4px 8px; font-size: 10px; }
+            .kpi-bar { grid-template-columns: repeat(2, 1fr); gap: 4px; padding: 6px 10px; }
+            .kpi-card { padding: 8px 10px 6px; }
+            .kpi-value { font-size: 20px; }
+            .kpi-sparkline-wrap { display: none; }
+            .context-bar { padding: 4px 10px; }
+            .sidebar { height: 30vh; }
+            .detail-panel { max-height: 35vh; }
+            .filter-bar { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="header-brand">
+        <div class="header-logo"><svg viewBox="0 0 156 158" fill="rgba(255,255,255,0.9)"><path d="M.47,55.36l18.05-31.47c.98-1.68,3.09-2.24,4.77-1.26l16.51,9.45c10.33,5.99,13.93,19.17,8,29.55-5.99,10.33-19.17,13.89-29.55,7.95L1.74,60.09c-1.64-.94-2.24-3.04-1.26-4.72Z"/><path d="M47.93,96.42c5.99,10.33,2.48,23.57-7.81,29.55l-16.46,9.59c-1.68.98-3.83.42-4.77-1.26L.66,102.92c-.98-1.68-.37-3.79,1.26-4.77l16.46-9.54c10.33-5.99,23.57-2.48,29.55,7.81Z"/><path d="M99.6,78.93c0,11.97-9.68,21.65-21.6,21.65s-21.6-9.68-21.6-21.65,9.68-21.6,21.6-21.6,21.6,9.68,21.6,21.6Z"/><path d="M99.6,3.46v19.08c0,11.92-9.68,21.6-21.6,21.6s-21.6-9.68-21.6-21.6V3.46c0-1.92,1.54-3.46,3.46-3.46h36.28c1.92,0,3.46,1.54,3.46,3.46Z"/><path d="M99.6,135.37v19.03c0,1.96-1.54,3.51-3.46,3.51h-36.28c-1.92,0-3.46-1.54-3.46-3.51v-19.03c0-11.92,9.68-21.6,21.6-21.6s21.6,9.68,21.6,21.6Z"/><path d="M155.43,102.54l-18.05,31.47c-.98,1.68-3.09,2.24-4.77,1.26l-16.51-9.45c-10.33-5.99-13.93-19.17-8-29.55,5.99-10.33,19.17-13.93,29.55-7.95l16.51,9.49c1.64.94,2.24,3.04,1.26,4.72Z"/><path d="M108.16,61.49c-6.03-10.33-2.52-23.57,7.81-29.55l16.46-9.59c1.68-.98,3.79-.42,4.77,1.26l18.24,31.38c.93,1.64.37,3.79-1.26,4.77l-16.46,9.54c-10.33,5.99-23.57,2.48-29.55-7.81Z"/></svg></div>
+        <h1>Geneesmiddeltekorten <span>Dashboard</span></h1>
+    </div>
+    <div class="header-right">
+        <div class="period-filter" role="radiogroup" aria-label="Periode">
+            <button class="period-btn" data-period="7">7d</button>
+            <button class="period-btn active" data-period="30">30d</button>
+            <button class="period-btn" data-period="90">90d</button>
+            <button class="period-btn" data-period="365">12m</button>
+            <button class="period-btn" data-period="0">Alles</button>
+        </div>
+    </div>
+</div>
+
+<!-- KPI Bar -->
+<div class="kpi-bar">
+    <div class="kpi-card" data-kpi="active" role="status" tabindex="0">
+        <div class="kpi-label">Actieve tekorten</div>
+        <div class="kpi-row">
+            <div class="kpi-value" id="kpi-active">–</div>
+            <div class="kpi-sub" id="kpi-active-sub"></div>
+        </div>
+        <div class="kpi-delta neutral" id="kpi-active-delta"></div>
+        <div class="kpi-sparkline-wrap"><svg id="spark-active" viewBox="0 0 120 22" preserveAspectRatio="none"></svg></div>
+    </div>
+    <div class="kpi-card" data-kpi="countries" role="status" tabindex="0">
+        <div class="kpi-label">Landen geraakt</div>
+        <div class="kpi-row">
+            <div class="kpi-value" id="kpi-countries">–</div>
+        </div>
+        <div class="kpi-delta neutral" id="kpi-countries-delta"></div>
+        <div class="kpi-minibar" id="kpi-countries-bar"></div>
+    </div>
+    <div class="kpi-card" data-kpi="critical" role="status" tabindex="0">
+        <div class="kpi-label">Meerlandentekorten <span class="info-icon" title="ATC-codes met actief tekort in 3 of meer landen">?</span></div>
+        <div class="kpi-row">
+            <div class="kpi-value" id="kpi-critical">–</div>
+            <div class="kpi-sub">in &ge;3 landen</div>
+        </div>
+        <div class="kpi-delta neutral" id="kpi-critical-delta"></div>
+        <div class="kpi-sparkline-wrap"><svg id="spark-critical" viewBox="0 0 120 22" preserveAspectRatio="none"></svg></div>
+    </div>
+    <div class="kpi-card" data-kpi="resolved" role="status" tabindex="0">
+        <div class="kpi-label">Opgelost <span id="kpi-resolved-period">(30d)</span></div>
+        <div class="kpi-row">
+            <div class="kpi-value" id="kpi-resolved">–</div>
+        </div>
+        <div class="kpi-delta neutral" id="kpi-resolved-delta"></div>
+        <div class="kpi-sparkline-wrap"><svg id="spark-resolved" viewBox="0 0 120 22" preserveAspectRatio="none"></svg></div>
+    </div>
+</div>
+
+<!-- Context Bar -->
+<div class="context-bar" id="context-bar" role="status" aria-live="polite">
+    <!-- Chips rendered dynamically -->
+</div>
+
+<!-- Main -->
+<div class="main">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Zoek ATC-code, stof of geneesmiddel..." autocomplete="off" aria-label="Zoek ATC-code of stofnaam" />
+        </div>
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Alle</button>
+            <button class="filter-btn" data-filter="multi">&ge;2</button>
+            <button class="filter-btn" data-filter="critical">&ge;3</button>
+            <button class="filter-btn" data-filter="A">A</button>
+            <button class="filter-btn" data-filter="B">B</button>
+            <button class="filter-btn" data-filter="C">C</button>
+            <button class="filter-btn" data-filter="D">D</button>
+            <button class="filter-btn" data-filter="G">G</button>
+            <button class="filter-btn" data-filter="H">H</button>
+            <button class="filter-btn" data-filter="J">J</button>
+            <button class="filter-btn" data-filter="L">L</button>
+            <button class="filter-btn" data-filter="M">M</button>
+            <button class="filter-btn" data-filter="N">N</button>
+            <button class="filter-btn" data-filter="P">P</button>
+            <button class="filter-btn" data-filter="R">R</button>
+            <button class="filter-btn" data-filter="S">S</button>
+            <button class="filter-btn" data-filter="V">V</button>
+        </div>
+        <div class="sort-bar">
+            <label>Sorteer:</label>
+            <button class="sort-btn active" data-sort="countries-desc">Landen &darr;</button>
+            <button class="sort-btn" data-sort="active-desc">Actief &darr;</button>
+            <button class="sort-btn" data-sort="code-asc">A&rarr;Z</button>
+        </div>
+        <div class="sidebar-count" id="sidebar-count"></div>
+        <div class="atc-list" id="atc-list">
+            <div class="no-results loading-text">Data laden...</div>
+        </div>
+    </div>
+
+    <!-- Map -->
+    <div class="map-area">
+        <button class="sidebar-toggle" id="sidebar-toggle" title="Sidebar in-/uitklappen">&#9776;</button>
+        <div id="map"></div>
+        <div class="map-legend">
+            <div class="legend-title">Status</div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--status-active-soft)"></div> Actief tekort</div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--status-upcoming-soft)"></div> Aankomend</div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--lcg-green);opacity:0.5"></div> Opgelost</div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--lcg-cyan);opacity:0.3"></div> Geen tekort</div>
+            <div class="legend-row"><div class="legend-dot" style="background:#1a2744"></div> Geen data</div>
+        </div>
+    </div>
+
+    <!-- Detail Panel (always visible) -->
+    <div class="detail-panel" id="detail-panel">
+        <div class="detail-header">
+            <button class="detail-back" id="detail-back">&larr; Terug naar overzicht</button>
+            <div class="detail-title-row">
+                <div class="detail-title" id="detail-title">Dashboard overzicht</div>
+            </div>
+            <div class="detail-subtitle" id="detail-subtitle"></div>
+        </div>
+        <div class="detail-summary" id="detail-summary" style="display:none"></div>
+        <div class="detail-tabs" id="detail-tabs" style="display:none">
+            <button class="detail-tab active" data-tab="active">Actief <span class="tab-count" id="tab-count-active">0</span></button>
+            <button class="detail-tab" data-tab="upcoming">Aankomend <span class="tab-count" id="tab-count-upcoming">0</span></button>
+            <button class="detail-tab" data-tab="resolved">Opgelost <span class="tab-count" id="tab-count-resolved">0</span></button>
+        </div>
+        <div class="detail-body" id="detail-body"></div>
+    </div>
+</div>
+
+<div class="footer" id="footer"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script>
+// ═══════════════════════════════════════
+// COUNTRIES
+// ═══════════════════════════════════════
+const CC = {
+    AR: { name: "Argentinië", lat: -38.42, lng: -63.62, flag: "\u{1F1E6}\u{1F1F7}" },
+    AT: { name: "Oostenrijk", lat: 47.52, lng: 14.55, flag: "\u{1F1E6}\u{1F1F9}" },
+    AU: { name: "Australië", lat: -25.27, lng: 133.78, flag: "\u{1F1E6}\u{1F1FA}" },
+    BE: { name: "België", lat: 50.85, lng: 4.35, flag: "\u{1F1E7}\u{1F1EA}" },
+    BR: { name: "Brazilië", lat: -14.24, lng: -51.93, flag: "\u{1F1E7}\u{1F1F7}" },
+    CA: { name: "Canada", lat: 56.13, lng: -106.35, flag: "\u{1F1E8}\u{1F1E6}" },
+    CH: { name: "Zwitserland", lat: 46.95, lng: 7.45, flag: "\u{1F1E8}\u{1F1ED}" },
+    CL: { name: "Chili", lat: -35.68, lng: -71.54, flag: "\u{1F1E8}\u{1F1F1}" },
+    CO: { name: "Colombia", lat: 4.57, lng: -74.30, flag: "\u{1F1E8}\u{1F1F4}" },
+    CZ: { name: "Tsjechië", lat: 49.82, lng: 15.47, flag: "\u{1F1E8}\u{1F1FF}" },
+    DE: { name: "Duitsland", lat: 51.17, lng: 10.45, flag: "\u{1F1E9}\u{1F1EA}" },
+    DK: { name: "Denemarken", lat: 56.26, lng: 9.50, flag: "\u{1F1E9}\u{1F1F0}" },
+    EE: { name: "Estland", lat: 58.60, lng: 25.01, flag: "\u{1F1EA}\u{1F1EA}" },
+    EG: { name: "Egypte", lat: 26.82, lng: 30.80, flag: "\u{1F1EA}\u{1F1EC}" },
+    ES: { name: "Spanje", lat: 40.46, lng: -3.75, flag: "\u{1F1EA}\u{1F1F8}" },
+    EU: { name: "EU (EMA)", lat: 52.37, lng: 4.90, flag: "\u{1F1EA}\u{1F1FA}" },
+    FI: { name: "Finland", lat: 61.92, lng: 25.75, flag: "\u{1F1EB}\u{1F1EE}" },
+    FR: { name: "Frankrijk", lat: 46.23, lng: 2.21, flag: "\u{1F1EB}\u{1F1F7}" },
+    GR: { name: "Griekenland", lat: 39.07, lng: 21.82, flag: "\u{1F1EC}\u{1F1F7}" },
+    HR: { name: "Kroatië", lat: 45.10, lng: 15.20, flag: "\u{1F1ED}\u{1F1F7}" },
+    HU: { name: "Hongarije", lat: 47.16, lng: 19.50, flag: "\u{1F1ED}\u{1F1FA}" },
+    IE: { name: "Ierland", lat: 53.14, lng: -7.69, flag: "\u{1F1EE}\u{1F1EA}" },
+    IL: { name: "Israël", lat: 31.05, lng: 34.85, flag: "\u{1F1EE}\u{1F1F1}" },
+    IN: { name: "India", lat: 20.59, lng: 78.96, flag: "\u{1F1EE}\u{1F1F3}" },
+    IS: { name: "IJsland", lat: 64.96, lng: -19.02, flag: "\u{1F1EE}\u{1F1F8}" },
+    IT: { name: "Italië", lat: 41.87, lng: 12.57, flag: "\u{1F1EE}\u{1F1F9}" },
+    JP: { name: "Japan", lat: 36.20, lng: 138.25, flag: "\u{1F1EF}\u{1F1F5}" },
+    KR: { name: "Zuid-Korea", lat: 35.91, lng: 127.77, flag: "\u{1F1F0}\u{1F1F7}" },
+    LT: { name: "Litouwen", lat: 55.17, lng: 23.88, flag: "\u{1F1F1}\u{1F1F9}" },
+    LV: { name: "Letland", lat: 56.95, lng: 24.11, flag: "\u{1F1F1}\u{1F1FB}" },
+    MX: { name: "Mexico", lat: 23.63, lng: -102.55, flag: "\u{1F1F2}\u{1F1FD}" },
+    MY: { name: "Maleisië", lat: 4.21, lng: 101.98, flag: "\u{1F1F2}\u{1F1FE}" },
+    NL: { name: "Nederland", lat: 52.13, lng: 5.29, flag: "\u{1F1F3}\u{1F1F1}" },
+    NO: { name: "Noorwegen", lat: 60.47, lng: 8.47, flag: "\u{1F1F3}\u{1F1F4}" },
+    PE: { name: "Peru", lat: -9.19, lng: -75.02, flag: "\u{1F1F5}\u{1F1EA}" },
+    PH: { name: "Filipijnen", lat: 12.88, lng: 121.77, flag: "\u{1F1F5}\u{1F1ED}" },
+    PK: { name: "Pakistan", lat: 30.38, lng: 69.35, flag: "\u{1F1F5}\u{1F1F0}" },
+    PT: { name: "Portugal", lat: 39.40, lng: -8.22, flag: "\u{1F1F5}\u{1F1F9}" },
+    RO: { name: "Roemenië", lat: 45.94, lng: 24.97, flag: "\u{1F1F7}\u{1F1F4}" },
+    SA: { name: "Saoedi-Arabië", lat: 23.89, lng: 45.08, flag: "\u{1F1F8}\u{1F1E6}" },
+    SE: { name: "Zweden", lat: 60.13, lng: 18.64, flag: "\u{1F1F8}\u{1F1EA}" },
+    SG: { name: "Singapore", lat: 1.35, lng: 103.82, flag: "\u{1F1F8}\u{1F1EC}" },
+    SI: { name: "Slovenië", lat: 46.15, lng: 14.99, flag: "\u{1F1F8}\u{1F1EE}" },
+    SK: { name: "Slowakije", lat: 48.67, lng: 19.70, flag: "\u{1F1F8}\u{1F1F0}" },
+    TR: { name: "Turkije", lat: 38.96, lng: 35.24, flag: "\u{1F1F9}\u{1F1F7}" },
+    TW: { name: "Taiwan", lat: 23.70, lng: 120.96, flag: "\u{1F1F9}\u{1F1FC}" },
+    US: { name: "VS", lat: 37.09, lng: -95.71, flag: "\u{1F1FA}\u{1F1F8}" },
+    ZA: { name: "Zuid-Afrika", lat: -30.56, lng: 22.94, flag: "\u{1F1FF}\u{1F1E6}" },
+};
+
+// ═══════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════
+const S = {
+    period: 30,
+    selectedAtc: null,
+    selectedCountry: null,
+    kpiFilter: null,
+    searchQuery: "",
+    sidebarFilter: "all",
+    sidebarSort: "countries-desc",
+    detailTab: "active",
+};
+
+let RAW = null;
+let D = null; // derived
+
+// ═══════════════════════════════════════
+// MAP
+// ═══════════════════════════════════════
+const map = L.map("map", {
+    center: [48, 15], zoom: 4, zoomControl: true,
+    minZoom: 2, maxZoom: 8,
+    zoomSnap: 1, zoomDelta: 1,
+    maxBounds: [[-60, -180], [75, 180]],
+    maxBoundsViscosity: 0.8
+});
+// Geen tile layer — egale achtergrondkleur via CSS, landen via GeoJSON
+let markers = [];
+let geoLayer = null;
+let GEO = null; // country GeoJSON features
+
+// ISO 3166-1 numeric → alpha-2 for our countries
+const NUM2A2 = {
+    "040":"AT","036":"AU","056":"BE","076":"BR","124":"CA","152":"CL",
+    "756":"CH","170":"CO","203":"CZ","276":"DE","208":"DK","818":"EG",
+    "233":"EE","724":"ES","246":"FI","250":"FR","300":"GR","191":"HR",
+    "348":"HU","356":"IN","372":"IE","376":"IL","352":"IS","380":"IT",
+    "392":"JP","410":"KR","440":"LT","428":"LV","458":"MY","484":"MX",
+    "528":"NL","578":"NO","586":"PK","604":"PE","608":"PH","620":"PT",
+    "642":"RO","682":"SA","702":"SG","752":"SE","705":"SI","703":"SK",
+    "158":"TW","792":"TR","840":"US","710":"ZA","032":"AR"
+};
+
+// Load world boundaries (10m = high resolution for smooth borders)
+fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-10m.json")
+    .then(r => r.json())
+    .then(topo => {
+        GEO = topojson.feature(topo, topo.objects.countries);
+
+        // Fix antimeridian: split rings at ±180° jumps into separate polygons
+        function splitRingAtAM(ring) {
+            // Find jump indices (where consecutive points jump >170° lon)
+            const jumps = [];
+            for (let i = 1; i < ring.length; i++) {
+                if (Math.abs(ring[i][0] - ring[i-1][0]) > 170) jumps.push(i);
+            }
+            if (jumps.length === 0) return [ring]; // no fix needed
+
+            // Split ring into segments between jumps
+            const segments = [];
+            let start = 0;
+            for (const j of jumps) {
+                if (j > start) segments.push(ring.slice(start, j));
+                start = j;
+            }
+            if (start < ring.length) segments.push(ring.slice(start));
+
+            // Close each segment as its own ring and return only segments with >3 pts
+            return segments
+                .filter(s => s.length > 2)
+                .map(s => { s.push(s[0]); return s; });
+        }
+
+        // Process all features: split AM-crossing rings into separate polygons
+        const newFeatures = [];
+        GEO.features.forEach(f => {
+            f.properties.a2 = NUM2A2[f.id] || null;
+            const g = f.geometry;
+            if (g.type === "MultiPolygon") {
+                const newPolys = [];
+                for (const poly of g.coordinates) {
+                    const outerRings = splitRingAtAM(poly[0]);
+                    // Each split outer ring becomes its own polygon (ignore holes for split rings)
+                    for (const ring of outerRings) {
+                        newPolys.push([ring]);
+                    }
+                    // Keep non-split holes as-is (rare edge case)
+                }
+                g.coordinates = newPolys.filter(p => p[0] && p[0].length > 3);
+            } else if (g.type === "Polygon") {
+                const outerRings = splitRingAtAM(g.coordinates[0]);
+                if (outerRings.length === 1) {
+                    g.coordinates = [outerRings[0], ...g.coordinates.slice(1)];
+                } else {
+                    // Convert to MultiPolygon
+                    g.type = "MultiPolygon";
+                    g.coordinates = outerRings.filter(r => r.length > 3).map(r => [r]);
+                }
+            }
+        });
+        GEO.features = GEO.features.filter(f => {
+            const c = f.geometry.coordinates;
+            return c && c.length > 0;
+        });
+        if (D) renderMap();
+    });
+
+// ═══════════════════════════════════════
+// LOAD
+// ═══════════════════════════════════════
+fetch("data.json")
+    .then(r => r.json())
+    .then(data => {
+        RAW = data;
+        document.getElementById("footer").innerHTML = `<span style="color:#5a7faa">Landelijk Co\u00f6rdinatiecentrum Geneesmiddelen \u00b7 ${data.generated} \u00b7 ${data.total_atc} ATC-codes \u00b7 ${data.total_countries} bronlanden \u00b7 ${data.records.length.toLocaleString("nl-NL")} meldingen</span><span class="footer-right"><span class="footer-kbd"><kbd>Esc</kbd> terug &middot; <kbd>/</kbd> zoeken</span></span>`;
+        loadHash();
+        recompute();
+        render();
+    })
+    .catch(() => {
+        document.getElementById("atc-list").innerHTML = '<div class="no-results">Fout bij laden. Draai eerst build_data.py.</div>';
+    });
+
+// ═══════════════════════════════════════
+// COMPUTE
+// ═══════════════════════════════════════
+function isoToday() { return new Date().toISOString().slice(0, 10); }
+function addDays(iso, days) { const d = new Date(iso); d.setDate(d.getDate() + days); return d.toISOString().slice(0, 10); }
+
+function recompute() {
+    const today = isoToday();
+    const pStart = S.period > 0 ? addDays(today, -S.period) : null;
+    const ppStart = S.period > 0 ? addDays(today, -S.period * 2) : null;
+
+    const inPeriod = RAW.records.filter(r => {
+        if (!pStart) return true;
+        const start = r.ss || r.sa || today;
+        const end = r.rd || r.ee || null;
+        if (r.st === "upcoming") return true;
+        if (end && end < pStart) return false;
+        return start <= today;
+    });
+
+    const inPrev = ppStart ? RAW.records.filter(r => {
+        const start = r.ss || r.sa || today;
+        const end = r.rd || r.ee || null;
+        if (end && end < ppStart) return false;
+        if (start > pStart) return false;
+        return true;
+    }) : [];
+
+    const activeRecs = inPeriod.filter(r => r.st === "active");
+    const upcomingRecs = inPeriod.filter(r => r.st === "upcoming");
+    const resolvedRecs = inPeriod.filter(r => r.st === "resolved");
+    const prevActive = inPrev.filter(r => r.st === "active");
+
+    // Countries with active shortages
+    const countriesActiveSet = new Set(activeRecs.map(r => r.cc));
+
+    // Multi-country ATCs (>=3)
+    const atcCcMap = {};
+    activeRecs.forEach(r => { (atcCcMap[r.atc] ||= new Set()).add(r.cc); });
+    const criticalAtcs = Object.entries(atcCcMap).filter(([, s]) => s.size >= 3).map(([a]) => a);
+
+    const prevAtcCcMap = {};
+    prevActive.forEach(r => { (prevAtcCcMap[r.atc] ||= new Set()).add(r.cc); });
+    const prevCritN = Object.entries(prevAtcCcMap).filter(([, s]) => s.size >= 3).length;
+
+    const resolvedInPeriod = pStart
+        ? RAW.records.filter(r => r.st === "resolved" && r.rd && r.rd >= pStart && r.rd <= today).length
+        : resolvedRecs.length;
+    const prevResolved = ppStart && pStart
+        ? RAW.records.filter(r => r.st === "resolved" && r.rd && r.rd >= ppStart && r.rd < pStart).length
+        : 0;
+
+    // ATC index
+    const atcIndex = {};
+    inPeriod.forEach(r => { (atcIndex[r.atc] ||= []).push(r); });
+
+    const atcSummary = Object.entries(atcIndex).map(([atc, recs]) => {
+        const countries = [...new Set(recs.map(r => r.cc))];
+        const aN = recs.filter(r => r.st === "active").length;
+        const uN = recs.filter(r => r.st === "upcoming").length;
+        const rN = recs.filter(r => r.st === "resolved").length;
+        const worst = aN > 0 ? "active" : uN > 0 ? "upcoming" : "resolved";
+        // Find most common substance for this ATC
+        const subCounts = {};
+        recs.forEach(r => { if (r.sub) (subCounts[r.sub] = (subCounts[r.sub] || 0) + 1); });
+        const substance = Object.entries(subCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "";
+        // Check if any record was scraped/added in last 48h
+        const recentCutoff = addDays(isoToday(), -2);
+        const isNew = recs.some(r => (r.sa || "") >= recentCutoff);
+        // Collect searchable text
+        const searchText = [atc, substance, ...recs.map(r => r.mn || "")].join(" ").toUpperCase();
+        return { atc, countries, countryCount: countries.length, aN, uN, rN, worst, substance, searchText, isNew };
+    });
+
+    // Country index
+    const countryIndex = {};
+    inPeriod.forEach(r => { (countryIndex[r.cc] ||= []).push(r); });
+
+    // Country summary for detail default
+    const countrySummary = Object.entries(countryIndex).map(([cc, recs]) => ({
+        cc, active: recs.filter(r => r.st === "active").length,
+        upcoming: recs.filter(r => r.st === "upcoming").length,
+    })).sort((a, b) => b.active - a.active);
+
+    // Top 5
+    const top5 = [...atcSummary].filter(a => a.aN > 0).sort((a, b) => b.countryCount - a.countryCount || b.aN - a.aN).slice(0, 5);
+
+    // Recent resolved
+    const recentResolved = RAW.records
+        .filter(r => r.st === "resolved" && r.rd && r.rd >= addDays(today, -7))
+        .sort((a, b) => (b.rd || "").localeCompare(a.rd || ""))
+        .slice(0, 5);
+
+    // Sparklines
+    const spark = computeSparklines(RAW.records, S.period);
+
+    D = {
+        inPeriod, activeRecs, upcomingRecs, resolvedRecs,
+        kpis: {
+            active: activeRecs.length,
+            activeDelta: activeRecs.length - prevActive.length,
+            activePercent: inPeriod.length > 0 ? Math.round(activeRecs.length / inPeriod.length * 100) : 0,
+            countries: countriesActiveSet.size,
+            countriesSet: countriesActiveSet,
+            totalCountries: RAW.monitored_countries.length,
+            critical: criticalAtcs.length,
+            criticalDelta: criticalAtcs.length - prevCritN,
+            criticalAtcs,
+            resolved: resolvedInPeriod,
+            resolvedDelta: resolvedInPeriod - prevResolved,
+        },
+        atcIndex, atcSummary, countryIndex, countrySummary,
+        top5, recentResolved, spark,
+    };
+}
+
+function computeSparklines(records, periodDays) {
+    if (periodDays === 0) return { active: [], critical: [], resolved: [] };
+    const today = isoToday();
+    const buckets = Math.min(periodDays <= 30 ? Math.ceil(periodDays / 2) : Math.ceil(periodDays / 14), 12);
+    const bSize = Math.ceil(periodDays / buckets);
+
+    const active = [], critical = [], resolved = [];
+    for (let i = buckets - 1; i >= 0; i--) {
+        const bEnd = addDays(today, -i * bSize);
+        const bStart = addDays(bEnd, -bSize);
+
+        const activeAtDate = records.filter(r => {
+            if (r.st === "discontinued") return false;
+            const s = r.ss || r.sa || bEnd;
+            const e = r.rd || r.ee || null;
+            return s <= bEnd && (!e || e >= bStart) && (r.st === "active" || r.st === "upcoming");
+        });
+
+        // Critical: unique ATC with >=3 countries
+        const atcCc = {};
+        activeAtDate.filter(r => r.st === "active").forEach(r => { (atcCc[r.atc] ||= new Set()).add(r.cc); });
+        const critN = Object.values(atcCc).filter(s => s.size >= 3).length;
+
+        active.push(activeAtDate.length);
+        critical.push(critN);
+        resolved.push(records.filter(r => r.st === "resolved" && r.rd && r.rd >= bStart && r.rd <= bEnd).length);
+    }
+    return { active, critical, resolved };
+}
+
+// ═══════════════════════════════════════
+// SPARKLINE SVG
+// ═══════════════════════════════════════
+function renderSparkline(svgId, data, color) {
+    const svg = document.getElementById(svgId);
+    if (!svg || !data || data.length < 2) { if (svg) svg.innerHTML = ""; return; }
+    const w = 120, h = 22, p = 2;
+    const max = Math.max(...data, 1), min = Math.min(...data, 0), range = max - min || 1;
+    const pts = data.map((v, i) => {
+        const x = p + (i / (data.length - 1)) * (w - p * 2);
+        const y = p + (1 - (v - min) / range) * (h - p * 2);
+        return `${x},${y}`;
+    }).join(" ");
+    // Area fill
+    const first = `${p},${h - p}`;
+    const last = `${p + ((data.length - 1) / (data.length - 1)) * (w - p * 2)},${h - p}`;
+    svg.innerHTML = `<polygon points="${first} ${pts} ${last}" fill="${color}" opacity="0.08"/>` +
+        `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>`;
+}
+
+// ═══════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════
+function render() {
+    renderKpis();
+    renderContextBar();
+    renderSidebar();
+    renderMap();
+    renderDetail();
+    saveHash();
+}
+
+// ── KPIs ──
+function renderKpis() {
+    const k = D.kpis;
+    document.getElementById("kpi-active").textContent = k.active.toLocaleString("nl-NL");
+    document.getElementById("kpi-active-sub").textContent = `${k.activePercent}% van totaal`;
+    document.getElementById("kpi-countries").innerHTML = `${k.countries}<span class="kpi-sub" style="margin-left:4px">/ ${k.totalCountries}</span>`;
+    document.getElementById("kpi-critical").textContent = k.critical.toLocaleString("nl-NL");
+    document.getElementById("kpi-resolved").textContent = k.resolved.toLocaleString("nl-NL");
+    document.getElementById("kpi-resolved-period").textContent = `(${S.period === 0 ? "alles" : S.period === 365 ? "12m" : S.period + "d"})`;
+
+    setDelta("kpi-active-delta", k.activeDelta, true);
+    setDelta("kpi-critical-delta", k.criticalDelta, true);
+    setDelta("kpi-resolved-delta", k.resolvedDelta, false);
+    document.getElementById("kpi-countries-delta").textContent = "";
+
+    // Mini bar for countries
+    const bar = document.getElementById("kpi-countries-bar");
+    bar.innerHTML = RAW.monitored_countries.map(cc => {
+        const hasActive = k.countriesSet.has(cc);
+        const color = hasActive ? "var(--status-active-soft)" : "var(--bg-elevated)";
+        const ci = CC[cc];
+        return `<div class="kpi-minibar-seg" style="background:${color}" title="${ci ? ci.name : cc}"></div>`;
+    }).join("");
+
+    renderSparkline("spark-active", D.spark.active, "#ef4444");
+    renderSparkline("spark-critical", D.spark.critical, "#f59e0b");
+    renderSparkline("spark-resolved", D.spark.resolved, "#a8c04d");
+
+    document.querySelectorAll(".kpi-card").forEach(c =>
+        c.classList.toggle("active", S.kpiFilter === c.dataset.kpi)
+    );
+}
+
+function setDelta(id, delta, invert) {
+    const el = document.getElementById(id);
+    if (delta === 0) { el.textContent = "= gelijk"; el.className = "kpi-delta neutral"; return; }
+    const arrow = delta > 0 ? "\u25B2" : "\u25BC";
+    el.textContent = `${arrow} ${delta > 0 ? "+" : ""}${delta} vs vorige periode`;
+    el.className = `kpi-delta ${invert ? (delta > 0 ? "up" : "down") : (delta > 0 ? "down" : "up")}`;
+}
+
+// ── Context Bar ──
+function renderContextBar() {
+    const bar = document.getElementById("context-bar");
+    const chips = [];
+    const periodLabel = S.period === 0 ? "Alles" : S.period === 365 ? "12 maanden" : `${S.period} dagen`;
+    chips.push(`<span class="context-chip static"><span class="chip-label">Periode:</span> <span class="chip-value">${periodLabel}</span></span>`);
+
+    const hasFilters = S.kpiFilter || S.selectedCountry || S.selectedAtc || S.searchQuery;
+
+    if (S.kpiFilter) {
+        const labels = { active: "Actieve tekorten", countries: "Landen geraakt", critical: "Meerlandentekorten", resolved: "Opgelost" };
+        chips.push(`<span class="context-sep">\u00b7</span><span class="context-chip"><span class="chip-label">Filter:</span> <span class="chip-value">${labels[S.kpiFilter]}</span><button class="chip-remove" data-remove="kpi">\u00d7</button></span>`);
+    }
+    if (S.selectedCountry) {
+        const ci = CC[S.selectedCountry] || { flag: "", name: S.selectedCountry };
+        chips.push(`<span class="context-sep">\u00b7</span><span class="context-chip"><span class="chip-label">Land:</span> <span class="chip-value">${ci.flag} ${ci.name}</span><button class="chip-remove" data-remove="country">\u00d7</button></span>`);
+    }
+    if (S.selectedAtc) {
+        chips.push(`<span class="context-sep">\u00b7</span><span class="context-chip"><span class="chip-label">ATC:</span> <span class="chip-value">${S.selectedAtc}</span><button class="chip-remove" data-remove="atc">\u00d7</button></span>`);
+    }
+    if (S.searchQuery) {
+        chips.push(`<span class="context-sep">\u00b7</span><span class="context-chip"><span class="chip-label">Zoek:</span> <span class="chip-value">"${escHtml(S.searchQuery)}"</span><button class="chip-remove" data-remove="search">\u00d7</button></span>`);
+    }
+
+    chips.push(`<button class="context-clear ${hasFilters ? "visible" : ""}" id="context-clear">Wis alles</button>`);
+    bar.innerHTML = chips.join("");
+}
+
+// ── Sidebar ──
+function renderSidebar() {
+    let list = [...D.atcSummary];
+
+    // KPI filter
+    if (S.kpiFilter === "active") list = list.filter(a => a.aN > 0);
+    else if (S.kpiFilter === "critical") { const cs = new Set(D.kpis.criticalAtcs); list = list.filter(a => cs.has(a.atc)); }
+    else if (S.kpiFilter === "resolved") list = list.filter(a => a.rN > 0);
+    else if (S.kpiFilter === "countries") list = list.filter(a => a.aN > 0);
+
+    // Country filter
+    if (S.selectedCountry) list = list.filter(a => a.countries.includes(S.selectedCountry));
+
+    // Search (ATC code, substance, medicine name)
+    if (S.searchQuery) { const q = S.searchQuery.toUpperCase(); list = list.filter(a => a.searchText.includes(q)); }
+
+    // Letter / threshold
+    if (S.sidebarFilter === "multi") list = list.filter(a => a.countryCount >= 2);
+    else if (S.sidebarFilter === "critical") list = list.filter(a => a.countryCount >= 3);
+    else if (S.sidebarFilter.length === 1 && S.sidebarFilter >= "A") list = list.filter(a => a.atc[0] === S.sidebarFilter);
+
+    // Smart sort based on KPI filter
+    let sort = S.sidebarSort;
+    if (S.kpiFilter === "critical" && sort === "countries-desc") sort = "countries-desc";
+    else if (S.kpiFilter === "active" && sort === "countries-desc") sort = "active-desc";
+
+    if (sort === "countries-desc") list.sort((a, b) => b.countryCount - a.countryCount || b.aN - a.aN || a.atc.localeCompare(b.atc));
+    else if (sort === "active-desc") list.sort((a, b) => b.aN - a.aN || b.countryCount - a.countryCount);
+    else if (sort === "code-asc") list.sort((a, b) => a.atc.localeCompare(b.atc));
+
+    document.getElementById("sidebar-count").textContent = `${list.length} ATC-codes`;
+
+    const show = list.slice(0, 500);
+    const container = document.getElementById("atc-list");
+
+    if (show.length === 0) {
+        container.innerHTML = '<div class="no-results">Geen ATC-codes gevonden<div class="suggestion">Pas filters of zoekterm aan</div></div>';
+        return;
+    }
+
+    const prevScroll = container.scrollTop;
+    container.innerHTML = show.map(a => {
+        const sel = S.selectedAtc === a.atc ? " selected" : "";
+        // Second row: status counts
+        const parts = [];
+        if (a.aN > 0) parts.push(`<span class="st-active">${a.aN} actief</span>`);
+        if (a.uN > 0) parts.push(`<span class="st-upcoming">${a.uN} aankomend</span>`);
+        if (a.rN > 0) parts.push(`<span class="st-resolved">${a.rN} opgelost</span>`);
+        const flags = a.countries.slice(0, 6).map(cc => CC[cc]?.flag || "").join("");
+        const moreFlags = a.countries.length > 6 ? `<span style="font-size:9px;letter-spacing:0">+${a.countries.length - 6}</span>` : "";
+        const row2 = parts.length > 0 ? `<div class="atc-row2">${parts.join('<span style="color:var(--border-light)"> \u00b7 </span>')}<span class="atc-flags">${flags}${moreFlags}</span></div>` : "";
+
+        return `<div class="atc-item${sel}" data-atc="${a.atc}">
+            <div class="atc-row1">
+                <div class="atc-dot st-${a.worst}"></div>
+                <span class="atc-code">${a.atc}</span>${a.isNew ? '<span class="badge-new">nieuw</span>' : ''}
+                <span class="atc-lnd">${a.countryCount} ${a.countryCount === 1 ? "land" : "landen"}</span>
+            </div>
+            ${a.substance ? `<div class="atc-substance">${escHtml(a.substance)}</div>` : ""}
+            ${row2}
+        </div>`;
+    }).join("") + (list.length > 500 ? `<div class="no-results">${list.length - 500} meer \u2014 verfijn zoekopdracht</div>` : "");
+
+    // Preserve scroll position, or scroll selected item into view
+    const selEl = container.querySelector(".atc-item.selected");
+    if (selEl) {
+        selEl.scrollIntoView({ block: "nearest" });
+    } else {
+        container.scrollTop = prevScroll;
+    }
+}
+
+// ── Map ──
+function countryStyle(cc) {
+    const monitored = new Set(RAW.monitored_countries);
+    const isMon = monitored.has(cc);
+    const hasSelection = S.selectedAtc || S.selectedCountry;
+    let recs = D.countryIndex[cc] || [];
+    if (S.selectedAtc) recs = recs.filter(r => r.atc === S.selectedAtc);
+
+    const aN = recs.filter(r => r.st === "active").length;
+    const uN = recs.filter(r => r.st === "upcoming").length;
+    const rN = recs.filter(r => r.st === "resolved").length;
+
+    let fill, opacity;
+    if (!CC[cc]) { fill = "#c0d4e0"; opacity = 0.7; }
+    else if (!isMon) { fill = "#9abcd0"; opacity = 0.6; }
+    else if (aN > 0) { fill = "#e85050"; opacity = 0.6 + Math.min(aN * 0.015, 0.25); }
+    else if (uN > 0) { fill = "#f0a020"; opacity = 0.65; }
+    else if (rN > 0) { fill = "#a8c04d"; opacity = 0.6; }
+    else { fill = "#60ccf0"; opacity = 0.5; }
+
+    const isSel = S.selectedCountry === cc;
+    if (hasSelection && !isSel && S.selectedCountry) opacity *= 0.45;
+    if (isSel) opacity = Math.min(opacity * 1.3, 0.9);
+
+    let borderColor, weight;
+    if (isSel) { borderColor = "#00428b"; weight = 2; }
+    else if (CC[cc]) { borderColor = "rgba(255,255,255,0.45)"; weight = 0.3; }
+    else { borderColor = "rgba(0,66,139,0.08)"; weight = 0.3; }
+
+    return { fillColor: fill, fillOpacity: opacity, color: borderColor, weight, data: { cc, aN, uN, rN, isMon } };
+}
+
+function renderMap() {
+    // Clean up old overlays (EU marker)
+    markers.forEach(m => map.removeLayer(m));
+    markers = [];
+
+    if (!GEO) return; // GeoJSON not loaded yet
+
+    // Remove old layer
+    if (geoLayer) { map.removeLayer(geoLayer); geoLayer = null; }
+
+    geoLayer = L.geoJSON(GEO, {
+        style: feature => {
+            const cc = feature.properties.a2;
+            return countryStyle(cc);
+        },
+        onEachFeature: (feature, layer) => {
+            const cc = feature.properties.a2;
+            if (!cc || !CC[cc]) return;
+
+            const info = CC[cc];
+            const st = countryStyle(cc).data;
+
+            // Tooltip
+            const lines = [`<b>${info.flag} ${info.name}</b>`];
+            if (st.aN) { const atcCount = new Set((D.countryIndex[cc]||[]).filter(r => r.st === "active").map(r => r.atc)).size; lines.push(`${st.aN} actief (${atcCount} ATC)`); }
+            if (st.uN) lines.push(`${st.uN} aankomend`);
+            if (st.rN) lines.push(`${st.rN} opgelost`);
+            if (!st.isMon) lines.push("<i>geen data</i>");
+            else if (!st.aN && !st.uN && !st.rN) lines.push("geen tekort");
+            layer.bindTooltip(lines.join("<br>"), { sticky: true });
+
+            // Click
+            layer.on("click", () => {
+                const wasSelected = S.selectedCountry === cc;
+                S.selectedCountry = wasSelected ? null : cc;
+                if (!wasSelected) map.flyTo([info.lat, info.lng], Math.max(map.getZoom(), 4), { duration: 0.5 });
+                render();
+            });
+
+            // Hover highlight
+            layer.on("mouseover", () => { layer.setStyle({ weight: 1.5, color: "rgba(255,255,255,0.8)" }); });
+            layer.on("mouseout", () => { const s = countryStyle(cc); layer.setStyle({ weight: s.weight, color: s.color }); });
+        }
+    }).addTo(map);
+
+    // EU (EMA) as special circle marker — it's not a country polygon
+    const euInfo = CC["EU"];
+    if (euInfo) {
+        const euRecs = D.countryIndex["EU"] || [];
+        const euAN = euRecs.filter(r => r.st === "active").length;
+        const euUN = euRecs.filter(r => r.st === "upcoming").length;
+        const euRN = euRecs.filter(r => r.st === "resolved").length;
+
+        let fill, opacity;
+        if (euAN > 0) { fill = "#e85050"; opacity = 0.85; }
+        else if (euUN > 0) { fill = "#f0a020"; opacity = 0.7; }
+        else if (euRN > 0) { fill = "#a8c04d"; opacity = 0.65; }
+        else { fill = "#60ccf0"; opacity = 0.55; }
+
+        const isSel = S.selectedCountry === "EU";
+        if (S.selectedCountry && !isSel) opacity *= 0.4;
+
+        const euMarker = L.circleMarker([euInfo.lat, euInfo.lng], {
+            radius: 8, fillColor: fill, fillOpacity: opacity,
+            color: isSel ? "#00428b" : "rgba(255,255,255,0.5)", weight: isSel ? 2 : 1,
+        }).addTo(map);
+
+        const lines = [`<b>${euInfo.flag} ${euInfo.name}</b>`];
+        if (euAN) lines.push(`${euAN} actief`);
+        if (euUN) lines.push(`${euUN} aankomend`);
+        if (euRN) lines.push(`${euRN} opgelost`);
+        euMarker.bindTooltip(lines.join("<br>"), { direction: "top", offset: [0, -8] });
+        euMarker.on("click", () => {
+            S.selectedCountry = S.selectedCountry === "EU" ? null : "EU";
+            render();
+        });
+        markers.push(euMarker);
+    }
+}
+
+// ── Detail ──
+function renderDetail() {
+    const panel = document.getElementById("detail-panel");
+    const tabs = document.getElementById("detail-tabs");
+    const summary = document.getElementById("detail-summary");
+    const back = document.getElementById("detail-back");
+    const hasSelection = S.selectedAtc || S.selectedCountry;
+
+    // Scroll detail body to top on any render
+    document.getElementById("detail-body").scrollTop = 0;
+
+    if (!hasSelection) {
+        renderDetailDefault();
+        return;
+    }
+
+    // Selection mode
+    back.classList.add("visible");
+    tabs.style.display = "";
+    summary.style.display = "";
+
+    let recs = D.inPeriod;
+    let title = "", subtitle = "";
+
+    if (S.selectedAtc && S.selectedCountry) {
+        recs = recs.filter(r => r.atc === S.selectedAtc && r.cc === S.selectedCountry);
+        title = S.selectedAtc;
+        const ci = CC[S.selectedCountry];
+        subtitle = `${ci?.flag || ""} ${ci?.name || S.selectedCountry}`;
+    } else if (S.selectedAtc) {
+        recs = recs.filter(r => r.atc === S.selectedAtc);
+        title = S.selectedAtc;
+        subtitle = `${new Set(recs.map(r => r.cc)).size} landen`;
+    } else {
+        const ci = CC[S.selectedCountry];
+        recs = recs.filter(r => r.cc === S.selectedCountry);
+        title = `${ci?.flag || ""} ${ci?.name || S.selectedCountry}`;
+        subtitle = `${new Set(recs.map(r => r.atc)).size} ATC-codes`;
+    }
+
+    document.getElementById("detail-title").textContent = title;
+    document.getElementById("detail-title").className = S.selectedCountry && !S.selectedAtc ? "detail-title text-title" : "detail-title";
+    document.getElementById("detail-subtitle").textContent = subtitle;
+
+    const aRecs = recs.filter(r => r.st === "active");
+    const uRecs = recs.filter(r => r.st === "upcoming");
+    const rRecs = recs.filter(r => r.st === "resolved");
+
+    // Summary mini KPIs
+    summary.innerHTML = `
+        <div class="detail-summary-item"><div class="detail-summary-dot" style="background:var(--status-active)"></div>${aRecs.length} actief</div>
+        <div class="detail-summary-item"><div class="detail-summary-dot" style="background:var(--status-upcoming)"></div>${uRecs.length} aankomend</div>
+        <div class="detail-summary-item"><div class="detail-summary-dot" style="background:var(--status-resolved)"></div>${rRecs.length} opgelost</div>
+    `;
+
+    // Tab counts + dimming
+    document.getElementById("tab-count-active").textContent = aRecs.length;
+    document.getElementById("tab-count-upcoming").textContent = uRecs.length;
+    document.getElementById("tab-count-resolved").textContent = rRecs.length;
+    document.querySelectorAll(".detail-tab").forEach(t => {
+        const count = t.dataset.tab === "active" ? aRecs.length : t.dataset.tab === "upcoming" ? uRecs.length : rRecs.length;
+        t.classList.toggle("dimmed", count === 0);
+    });
+
+    // Auto-switch to first non-empty tab if current tab is empty
+    const currentCount = S.detailTab === "active" ? aRecs.length : S.detailTab === "upcoming" ? uRecs.length : rRecs.length;
+    if (currentCount === 0) {
+        if (aRecs.length > 0) S.detailTab = "active";
+        else if (uRecs.length > 0) S.detailTab = "upcoming";
+        else if (rRecs.length > 0) S.detailTab = "resolved";
+    }
+    document.querySelectorAll(".detail-tab").forEach(t => t.classList.toggle("active", t.dataset.tab === S.detailTab));
+
+    let tabRecs;
+    if (S.detailTab === "active") tabRecs = aRecs;
+    else if (S.detailTab === "upcoming") tabRecs = uRecs;
+    else tabRecs = rRecs;
+
+    const body = document.getElementById("detail-body");
+    if (tabRecs.length === 0) {
+        const label = S.detailTab === "active" ? "actieve" : S.detailTab === "upcoming" ? "aankomende" : "opgeloste";
+        body.innerHTML = `<div class="no-results">Geen ${label} meldingen<div class="suggestion">Probeer een langere periode</div></div>`;
+        return;
+    }
+
+    // Group by country or ATC
+    if (S.selectedAtc) {
+        const groups = {};
+        tabRecs.forEach(r => { (groups[r.cc] ||= []).push(r); });
+        body.innerHTML = Object.entries(groups).sort(([, a], [, b]) => b.length - a.length).map(([cc, recs]) => {
+            const ci = CC[cc] || { flag: "", name: cc };
+            return `<div class="section-header">
+                    <span class="section-flag">${ci.flag}</span>
+                    <span class="section-name">${ci.name}</span>
+                    <span class="section-count">${recs.length}</span>
+                </div>
+                ${recs.slice(0, 20).map(r => medCard(r, "country")).join("")}`;
+        }).join("");
+    } else {
+        const groups = {};
+        tabRecs.forEach(r => { (groups[r.atc] ||= []).push(r); });
+        body.innerHTML = Object.entries(groups).sort(([, a], [, b]) => b.length - a.length).map(([atc, recs]) => {
+            return `<div class="section-header">
+                    <span class="section-name mono">${atc}</span>
+                    <span class="section-count">${recs.length}</span>
+                </div>
+                ${recs.slice(0, 10).map(r => medCard(r, "atc")).join("")}`;
+        }).join("");
+    }
+}
+
+function renderDetailDefault() {
+    const back = document.getElementById("detail-back");
+    back.classList.remove("visible");
+    document.getElementById("detail-tabs").style.display = "none";
+    document.getElementById("detail-summary").style.display = "none";
+    document.getElementById("detail-title").textContent = "Dashboard overzicht";
+    document.getElementById("detail-title").className = "detail-title text-title";
+    document.getElementById("detail-subtitle").textContent = `Data van ${RAW.generated}`;
+
+    const body = document.getElementById("detail-body");
+    let html = "";
+
+    // Top 5
+    html += `<div class="detail-section"><div class="detail-section-title">Top tekorten (meeste landen)</div>`;
+    D.top5.forEach((a, i) => {
+        html += `<div class="detail-top-item" data-select-atc="${a.atc}">
+            <span class="detail-top-rank">${i + 1}.</span>
+            <span class="atc-dot st-${a.worst}" style="width:6px;height:6px"></span>
+            <span class="detail-top-code">${a.atc}</span>
+            <span class="detail-top-info">${a.countryCount} landen \u00b7 ${a.aN} actief</span>
+        </div>`;
+    });
+    html += `</div>`;
+
+    // Recent resolved
+    if (D.recentResolved.length > 0) {
+        html += `<div class="detail-section"><div class="detail-section-title">Recent opgelost (7d)</div>`;
+        D.recentResolved.forEach(r => {
+            const ci = CC[r.cc] || { flag: "", name: r.cc };
+            html += `<div class="detail-resolved-item">
+                <span class="detail-resolved-check">\u2713</span>
+                <div>
+                    <div class="detail-resolved-text">${escHtml(r.mn || r.sub || r.atc)} \u2014 ${ci.flag} ${ci.name}</div>
+                    <div class="detail-resolved-date">${r.rd || ""}</div>
+                </div>
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    // Country overview
+    html += `<div class="detail-section"><div class="detail-section-title">Per land</div>`;
+    D.countrySummary.forEach(c => {
+        const ci = CC[c.cc] || { flag: "", name: c.cc };
+        const stats = [];
+        if (c.active) stats.push(`<span class="act">${c.active} actief</span>`);
+        if (c.upcoming) stats.push(`<span class="upc">${c.upcoming} aankomend</span>`);
+        html += `<div class="detail-country-row" data-select-country="${c.cc}">
+            <span class="detail-country-flag">${ci.flag}</span>
+            <span class="detail-country-name">${ci.name}</span>
+            <span class="detail-country-stat">${stats.join(" \u00b7 ")}</span>
+        </div>`;
+    });
+    html += `</div>`;
+
+    body.innerHTML = html;
+}
+
+function medCard(r, groupBy) {
+    const name = r.mn || r.sub || "Onbekend middel";
+    const substance = r.sub && r.mn ? r.sub : "";
+    const stLabel = r.st === "active" ? "actief" : r.st === "upcoming" ? "aankomend" : "opgelost";
+
+    let dates = "";
+    if (r.ss) dates += `<span class="med-tag date">start ${r.ss}</span>`;
+    if (r.ee) dates += `<span class="med-tag date">verw. ${r.ee}</span>`;
+    if (r.rd && r.st === "resolved") dates += `<span class="med-tag date">opgelost ${r.rd}</span>`;
+
+    // Bidirectional link
+    let link = "";
+    if (groupBy === "atc" && r.cc) {
+        const ci = CC[r.cc];
+        if (ci) link = `<span class="med-country-link" data-select-country="${r.cc}">${ci.flag} ${ci.name}</span>`;
+    } else if (groupBy === "country" && r.atc) {
+        link = `<span class="med-country-link" data-select-atc="${r.atc}">${r.atc}</span>`;
+    }
+
+    return `<div class="med-card">
+        <div class="med-name">${escHtml(name)}</div>
+        ${substance ? `<div class="med-substance">${escHtml(substance)}</div>` : ""}
+        <div class="med-meta">
+            <span class="med-tag ${r.st}">${stLabel}</span>
+            ${dates}
+            ${link}
+        </div>
+    </div>`;
+}
+
+function escHtml(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+// ═══════════════════════════════════════
+// EVENTS
+// ═══════════════════════════════════════
+
+// Period
+document.querySelectorAll(".period-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".period-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        S.period = parseInt(btn.dataset.period);
+        recompute(); render();
+    });
+});
+
+// KPI cards
+document.querySelectorAll(".kpi-card").forEach(card => {
+    const handler = () => {
+        const kpi = card.dataset.kpi;
+        S.kpiFilter = S.kpiFilter === kpi ? null : kpi;
+        S.selectedAtc = null;
+        S.selectedCountry = null;
+        render();
+    };
+    card.addEventListener("click", handler);
+    card.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); handler(); }
+    });
+});
+
+// Search (debounced)
+let _searchTimer;
+document.getElementById("search").addEventListener("input", e => {
+    clearTimeout(_searchTimer);
+    _searchTimer = setTimeout(() => {
+        S.searchQuery = e.target.value;
+        renderSidebar(); renderContextBar();
+    }, 150);
+});
+
+// Filter buttons
+document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        S.sidebarFilter = btn.dataset.filter;
+        renderSidebar();
+    });
+});
+
+// Sort buttons
+document.querySelectorAll(".sort-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".sort-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        S.sidebarSort = btn.dataset.sort;
+        renderSidebar();
+    });
+});
+
+// ATC list click
+document.getElementById("atc-list").addEventListener("click", e => {
+    const item = e.target.closest(".atc-item");
+    if (!item) return;
+    const atc = item.dataset.atc;
+    S.selectedAtc = S.selectedAtc === atc ? null : atc;
+    S.detailTab = "active";
+    render();
+});
+
+// Detail tabs
+document.addEventListener("click", e => {
+    const tab = e.target.closest(".detail-tab");
+    if (tab) {
+        document.querySelectorAll(".detail-tab").forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        S.detailTab = tab.dataset.tab;
+        renderDetail();
+        return;
+    }
+
+    // Detail back button
+    if (e.target.closest("#detail-back")) {
+        S.selectedAtc = null;
+        S.selectedCountry = null;
+        render();
+        return;
+    }
+
+    // Context bar chip remove
+    const chipRemove = e.target.closest(".chip-remove");
+    if (chipRemove) {
+        const what = chipRemove.dataset.remove;
+        if (what === "kpi") S.kpiFilter = null;
+        else if (what === "country") S.selectedCountry = null;
+        else if (what === "atc") S.selectedAtc = null;
+        else if (what === "search") { S.searchQuery = ""; document.getElementById("search").value = ""; }
+        render();
+        return;
+    }
+
+    // Context clear all
+    if (e.target.closest("#context-clear")) {
+        S.selectedAtc = null; S.selectedCountry = null; S.kpiFilter = null; S.searchQuery = "";
+        document.getElementById("search").value = "";
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        document.querySelector('.filter-btn[data-filter="all"]').classList.add("active");
+        S.sidebarFilter = "all";
+        render();
+        return;
+    }
+
+    // Detail default: click on top ATC item
+    const selAtc = e.target.closest("[data-select-atc]");
+    if (selAtc) {
+        S.selectedAtc = selAtc.dataset.selectAtc;
+        S.detailTab = "active";
+        render();
+        return;
+    }
+
+    // Detail default: click on country row
+    const selCountry = e.target.closest("[data-select-country]");
+    if (selCountry) {
+        const cc = selCountry.dataset.selectCountry;
+        S.selectedCountry = cc;
+        const ci = CC[cc];
+        if (ci) map.flyTo([ci.lat, ci.lng], Math.max(map.getZoom(), 4), { duration: 0.5 });
+        render();
+        return;
+    }
+});
+
+// URL hash state
+function saveHash() {
+    const parts = [];
+    if (S.period !== 30) parts.push(`p=${S.period}`);
+    if (S.selectedAtc) parts.push(`atc=${S.selectedAtc}`);
+    if (S.selectedCountry) parts.push(`cc=${S.selectedCountry}`);
+    if (S.kpiFilter) parts.push(`kpi=${S.kpiFilter}`);
+    if (S.sidebarFilter !== "all") parts.push(`f=${S.sidebarFilter}`);
+    history.replaceState(null, "", parts.length ? `#${parts.join("&")}` : location.pathname);
+}
+function loadHash() {
+    const h = location.hash.slice(1);
+    if (!h) return;
+    h.split("&").forEach(part => {
+        const [k, v] = part.split("=");
+        if (k === "p") { S.period = parseInt(v) || 30; document.querySelectorAll(".period-btn").forEach(b => b.classList.toggle("active", parseInt(b.dataset.period) === S.period)); }
+        if (k === "atc") S.selectedAtc = v;
+        if (k === "cc") S.selectedCountry = v;
+        if (k === "kpi") S.kpiFilter = v;
+        if (k === "f") { S.sidebarFilter = v; document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === v)); }
+    });
+}
+
+// Sidebar toggle
+document.getElementById("sidebar-toggle").addEventListener("click", () => {
+    const sb = document.querySelector(".sidebar");
+    sb.classList.toggle("collapsed");
+    setTimeout(() => map.invalidateSize(), 250);
+});
+
+// Global Escape key & "/" to focus search
+document.addEventListener("keydown", e => {
+    if (e.key === "/" && !["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) {
+        e.preventDefault();
+        document.getElementById("search").focus();
+        return;
+    }
+    if (e.key === "Escape" && (S.selectedAtc || S.selectedCountry || S.kpiFilter)) {
+        // Step back: first clear ATC, then country, then KPI filter
+        if (S.selectedAtc) S.selectedAtc = null;
+        else if (S.selectedCountry) S.selectedCountry = null;
+        else S.kpiFilter = null;
+        render();
+    }
+});
+
+// Keyboard
+document.getElementById("search").addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+        const items = document.querySelectorAll(".atc-item");
+        if (items.length > 0) { S.selectedAtc = items[0].dataset.atc; S.detailTab = "active"; render(); }
+    }
+    if (e.key === "Escape") {
+        e.target.value = ""; S.searchQuery = ""; S.selectedAtc = null; S.selectedCountry = null; render();
+    }
+});
+</script>
+</body>
+</html>

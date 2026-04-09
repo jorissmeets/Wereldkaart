@@ -1,0 +1,21 @@
+﻿country_code,country_name,source,medicine_name,active_substance,strength,package_size,atc_code,product_no,pharmaceutical_form,shortage_start,estimated_end,last_updated,status,scraped_at
+EU,EU (EMA),EMA,Ifosfamide,ifosfamide,,,L01AA06,,Powder for concentrate for solution for infusion,,,2026-03-03,ongoing,2026-03-12T15:54:04.575522
+EU,EU (EMA),EMA,Cyclophosphamide,cyclophosphamide,,,L01AA01,,Powder for solution for injection or infusion,,,2026-03-03,ongoing,2026-03-12T15:54:04.575522
+EU,EU (EMA),EMA,Natpar,parathyroid hormone,100 micrograms/dose; 75 micrograms/dose; 50 micrograms/dose; 25 micrograms/dose,,H05AA03,,Powder and solvent for solution for injection,,,2026-02-23,ongoing,2026-03-12T15:54:04.575522
+EU,EU (EMA),EMA,Fludarabine,fludarabine,25 mg/ml,,L01BB05,,Concentrate for solution for injection/infusion,,,2026-01-22,ongoing,2026-03-12T15:54:04.575522
+EU,EU (EMA),EMA,Fiasp PumpCart (insulin aspart),insulin aspart,100 units/mL,,A10AB05,,Solution for injection in a cartridge,,,2025-12-18,ongoing,2026-03-12T15:54:04.575522
+EU,EU (EMA),EMA,NovoRapid PumpCart (insulin aspart),insulin aspart,100 units/mL,,A10AB05,,Solution for injection in a cartridge,,,2025-12-18,ongoing,2026-03-12T15:54:04.575522
+EU,EU (EMA),EMA,Insulin lispro Sanofi,insulin lispro,100 units/ml solution for injection in cartridges; 100 units/ml solution for injection in pre-filled pen,,A10AB04,,Solution for injection in a cartridge; Solution for injection in pre-filled pen,,,2025-12-08,ongoing,2026-03-12T15:54:04.575522
+EU,EU (EMA),EMA,Dynastat,parecoxib,40 mg,,M01AH04,,Powder and solvent for solution for injection; Powder for solution for injection,,,2025-12-04,ongoing,2026-03-12T15:54:04.576522
+EU,EU (EMA),EMA,ADHD medicines,atomoxetine; methylphenidate; lisdexamfetamine,,,,,Various presentations in various strengths,,,2025-11-20,ongoing,2026-03-12T15:54:04.576522
+EU,EU (EMA),EMA,Risperidone,risperidone,,,N05AX08,,Prolonged-release suspension for injection,,,2025-11-19,ongoing,2026-03-12T15:54:04.576522
+EU,EU (EMA),EMA,Trulicity,dulaglutide,0.75 mg; 1.5 mg; 3 mg; 4.5 mg,,A10BJ05,,Solution for injection in pre-filled pen,,,2026-02-17,resolved,2026-03-12T15:54:13.457527
+EU,EU (EMA),EMA,Norditropin FlexPro / Norditropin NordiFlex,somatropin,5 mg; 10 mg; 15 mg,,H01AC01,,Solution for injection in pre-filled pen,,,2026-02-11,resolved,2026-03-12T15:54:13.457527
+EU,EU (EMA),EMA,Tresiba,insulin degludec,100 units/ml; 200 units/ml,,A10AE06,,Pre-filled pen,,,2026-02-09,resolved,2026-03-12T15:54:13.457527
+EU,EU (EMA),EMA,Ozempic,semaglutide,1 mg; 0.5 mg; 0.25 mg,,A10BJ06,,Pre-filled pen,,,2026-01-13,resolved,2026-03-12T15:54:13.457527
+EU,EU (EMA),EMA,Cyanokit,hydroxocobalamin,,,B03BA03,,Powder for solution for infusion,,,2025-10-30,resolved,2026-03-12T15:54:13.457527
+EU,EU (EMA),EMA,Pazenir,paclitaxel,5 mg/ml,,L01CD01,,Powder for dispersion for infusion,,,2025-10-20,resolved,2026-03-12T15:54:13.463398
+EU,EU (EMA),EMA,Fasturtec,rasburicase,7.5 mg / 5 ml,,V03AF07,,Powder and solvent for concentrate for solution for infusion,,,2025-10-16,resolved,2026-03-12T15:54:13.463398
+EU,EU (EMA),EMA,Ixiaro,"Japanese encephalitis vaccine (inactivated, adsorbed)",6AU,,J07BA02,,Suspension for injection,,,2025-10-16,resolved,2026-03-12T15:54:13.463398
+EU,EU (EMA),EMA,Emend,aprepitant,80 mg; 125 mg,,A04AD12,,Powder for oral suspension,,,2025-10-14,resolved,2026-03-12T15:54:13.463398
+EU,EU (EMA),EMA,Ecalta,anidulafungin,100 mg,,J02AX06,,Powder for concentrate for solution for infusion,,,2025-09-25,resolved,2026-03-12T15:54:13.463398

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.xlsx
+*.htm
+*.csv
+!output/*.csv
+clients/
+landkaart/data.json
+output/*.pptx
+output/*.docx
+output/*.py

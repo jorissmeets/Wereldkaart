@@ -1,0 +1,18 @@
+﻿country_code,country_name,source,medicine_name,active_substance,strength,package_size,atc_code,dosage_form,manufacturer,registration_no,reason,status,shortage_start,estimated_end,source_url,scraped_at
+PE,Peru,DIGEMID,Trece establecimientos cerrados y siete detenidos por vender medicamentos y dispositivos médicos vencidos,,,,,,,,,shortage,2026-02-16,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,COMUNICADO N° 003-2026,,,,,,,,,shortage,2026-02-16,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,COMUNICADO N° 002-2026,,,,,,,,,shortage,2026-02-03,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,COMUNICADO N° 001-2026,,,,,,,,,shortage,2026-01-13,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,COMUNICADO N° 040-2025,,,,,,,,,shortage,2025-12-24,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,COMUNICADO N° 039-2025,,,,,,,,,shortage,2025-12-17,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,COMUNICADO N° 038-2025,,,,,,,,,shortage,2025-12-12,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,ALERTA DIGEMID Nº 27-2026,,,,,,,,,shortage,2026-02-26,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,ALERTA DIGEMID Nº 26-2026,,,,,,,,,shortage,2026-02-26,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,ALERTA DIGEMID Nº 25-2026,,,,,,,,,shortage,2026-02-26,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,ALERTA DIGEMID Nº 24-2026,,,,,,,,,shortage,2026-02-26,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.608703
+PE,Peru,DIGEMID,ALERTA DIGEMID Nº 23-2026,,,,,,,,,shortage,2026-02-26,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.613784
+PE,Peru,DIGEMID,ALERTA DIGEMID Nº 22-2026,,,,,,,,,shortage,2026-02-24,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.613784
+PE,Peru,DIGEMID,Resolución Ministerial N° 899-2025/MINSA,,,,,,,,,shortage,2025-12-06,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.613784
+PE,Peru,DIGEMID,Resolución Ministerial N° 793-2025/MINSA,,,,,,,,,shortage,2025-12-03,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.613784
+PE,Peru,DIGEMID,Resolución Ministerial N° 734-2025/MINSA,,,,,,,,,shortage,2025-10-31,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.613784
+PE,Peru,DIGEMID,Resolución Ministerial N° 727-2025/MINSA,,,,,,,,,shortage,2025-10-29,,https://www.digemid.minsa.gob.pe/webDigemid/?q=alertas,2026-03-19T14:45:24.613784

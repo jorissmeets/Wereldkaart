@@ -1,0 +1,675 @@
+﻿country_code,country_name,source,medicine_name,active_substance,strength,package_size,atc_code,dosage_form,pharma_code,act_reference,ium_code,status,scraped_at
+CO,Colombia,INVIMA,ABACAVIR,,20mg/mL,,J05AF06,Solución oral,4.1.3.0.N10,Acta No. 04 de 2022 SEM,,vital_unavailable,2026-03-13T16:31:24.856723
+CO,Colombia,INVIMA,ABACAVIR + LAMIVUDINA + ZIDOVUDINA (AZT),,300mg + 150mg + 300mg,,J05AF06,Tableta,4.1.3.0.N30,Acta No. 04 de 2023 SEM Tercera parte,,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ABACAVIR + LAMIVUDINA + ZIDOVUDINA (AZT),,60mg + 30mg + 60mg,,J05AF06,Tableta,4.1.3.0.N30,Acta No. 04 de 2023 SEM Tercera parte,,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ÁCIDO 5-AMINOLEVULÍNICO HCl,,30mg/1mL,,,Solución oral,19.18.0.0.N120,Acta No. 02 de 2010,1A102496,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ÁCIDO CÓLICO,,50mg/1U,,,Cápsula,8.2.7.0.N180,Acta No. 11 de 2019 SEM,1C100447,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ÁCIDO CÓLICO,,250mg/1U,,,Cápsula,8.2.7.0.N180,Acta No. 11 de 2019 SEM,1C100452,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ÁCIDO ETILENDIAMINOTETRAACÉTICO EDTA,,"0,01/1mL",,,Solución inyectable,20.0.0.0.N10,Acta No. 03 de 2006,1E102497,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ÁCIDO QUENODESOXICÓLICO,,250mg/1U,,,Cápsula,8.2.7.0.N210,Acta No. 13 de 2019 SEMNNIMB,1Q101465,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ACIDO TRANSRETINOICO,,10mg/1U,,,Cápsula,6.0.0.0.N10,Acta No. 12 de 2019 SEM,1T101438,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ACITRETINA,,10mg,,D05BB02,Cápsula dura,13.1.14.0.N10,Acta No. 01 de 2024 SEM Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ACTH (ADRENOCORTICOTROPINA),,25UI/1mL,,,Solución inyectable,9.1.5.0.N10,Acta No. 27 de 2005,1C101202,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,ALCOHOL ETILICO,,0.99,,,Solución inyectable,20.0.0.0.N10,Acta No. 02 de 2021,,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,AMILO NITRITO,,5mg/1ml,,,Solución para inhalar,7.1.0.0.N10,Acta No. 10 de 2004,1A102337,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,AMIODARONA CLORHIDRATO,,200mg/1 U,,C01BD01,Tableta,7.2.0.0.N10,Acta No. 04 de 2019 SEM,1A102798,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,AMIODARONA CLORHIDRATO,,150mg / Ampolla (3mL),,C01BD01,Solución inyectable,7.2.0.0.N10,Acta No. 10 de 2021 SEM,1A102798,vital_unavailable,2026-03-13T16:31:24.857702
+CO,Colombia,INVIMA,AMIODARONA CLORHIDRATO,,50mg/ mL,,C01BD01,Solución inyectable,7.2.0.0.N10,Acta No. 10 de 2021 SEM,1A102798,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,ANTICUERPOS ANTIDIGOXINA,,80mg/1U,,C01AA05,Polvo para reconstituir,20.0.0.0.N10,Acta No. 37 de 2004,1A102338,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,ANTITOXINA BOTULÍNICA,,,,,,18.1.2.0.N10,Acta No. 37 de 2004,,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,ASFOTASA ALFA,,40mg/1mL,,,Solución inyectable,8.2.7.0.N180,"Acta No. 09 de 2018 SEM
+Acta No. 03 de 2018 SEMNNIMB",1A100010,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,ASFOTASA ALFA,,100mg/1mL,,,Solución inyectable,8.2.7.0.N180,"Acta No. 09 de 2018 SEM
+Acta No. 03 de 2018 SEMNNIMB",1A100011,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,ASPARAGINASA ERWINIANA (asparginasa de Erwinia chrysanthemi),,10000U/1U,,,Liofilizado para solución inyectable,6.0.0.0.N10,Acta No. 04 de 2016,1A100555,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,ATOMOXETINA,,25mg,,,Cápsula,19.18.0.0.N90,Acta No.12 de 2025 SEMPB Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,ATOMOXETINA,,40mg,,,Cápsula,19.18.0.0.N90,Acta No.12 de 2025 SEMPB Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,ATOMOXETINA,,60mg,,,Cápsula,19.18.0.0.N90,Acta No.12 de 2025 SEMPB Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,AZUL DE METILENO,,1% (10 mg / mL),,,Solución inyectable,20.0.0.0.N10,Acta No. 01 de 2024 SEM Décima parte,,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,BACLOFENO,,60µg/1mL,,M03BX01,Solución inyectable,15.2.0.0.N10,Acta No. 13 de 2010,1B102399,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,BEDAQUILINA,,100mg/1U,,,Tableta,4.1.1.4.N10.,Acta No. 03 de 2017 Segunda Parte,1B101391,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,BENZNIDAZOL,,100mg/1U,,,Tableta,4.2.6.0.N10,Acta No. 25 de 2012,1B101272,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,BETANECOL,,5mg/1U,,,Tableta,19.18.0.0.N140,Acta No. 25 de 2005,1B102341,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,BETANECOL,,10mg/1U,,,Tableta,19.18.0.0.N140,Acta No. 25 de 2005,1B101406,vital_unavailable,2026-03-13T16:31:24.858703
+CO,Colombia,INVIMA,BETANECOL,,25mg/1U,,,Tableta,19.18.0.0.N140,Acta No. 25 de 2005,1B100110,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BETANECOL,,50mg/1U,,,Tableta,19.18.0.0.N140,Acta No. 25 de 2005,1B102340,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BICARBONATO DE SODIO,,1Meq/mL,,,Solución,10.3.0.0.N10,Acta No. 22 de 2019 SEM,1S101587,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,Bothrops SP - VENENO DESHIDRATADO 780 DL50 + Crotalus SP VENENO DESHIDRATADO 220 DL50 + Lachessis SP VENENO DESHIDRATADO 200 DL50 (FAB (F(AB)2 FAB) AL 85% COMPONENTES DE BAJO PESO MOLECULAR AL 15%),,30 mg + 15 mg + 7 mg / Vial (20 mL),,,Polvo Liofilizado para reconstituir a solución inyectable,18.1.2.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,Bothrops atrox + Lachesis muta + Bothrops asper + Crotalus durissus - INMUNOGLOBULINAS DE ORIGEN EQUINO (IGG) CAPACES DE NEUTRALIZAR COMO MÍNIMO,,25 mg + 10 mg + 25 mg + 5 mg / Vial,,,Polvo Liofilizado para reconstituir a solución inyectable,18.1.2.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BRETILIO TOSILATO,,2mg/1ml,,,Solución inyectable,7.2.0.0.N10,Acta No. 10 de 2004,1T102342,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BRETILIO TOSILATO,,4mg/1ml,,,Solución inyectable,7.2.0.0.N10,Acta No. 10 de 2004,1T102343,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BROMOCRIPTINA,,"2,5mg/1U",,,Tableta,"9.2.3.0.N10
+19.13.0.0.N10",Acta No. 14 de 2019 SEM,1B103024,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BROMOCRIPTINA,,"5,0mg/1U",,,Tableta,"9.2.3.0.N10
+19.13.0.0.N10",Acta No. 14 de 2019 SEM,1B103025,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BUPIVACAINA (L) CLORHIDRATO ANHIDRA + GLUCOSA ANHIDRA,,"7,5mg + 72,7mg/1mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,2B102505,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BUPIVACAINA CLORHIDRATO + EPINEFRINA,,5mg + 5μg/1mL,,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,2B102506,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BUPIVACAINA CLORHIDRATO + EPINEFRINA,,"7,5mg + 5μg/1mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,2B102507,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BUPIVACAINA CLORHIDRATO + EPINEFRINA BITARTRATO,,"500mg + 0,5 mg/100 mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,2B102506,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BUPIVACAINA CLORHIDRATO + GLUCOSA,,5mg + 80mg/1mL,,,Solución inyectable,19.6.0.0.N20,Acta No. 22  de 2018 SEM,2B102444,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BUPIVACAINA CLORHIDRATO ANHIDRA + DEXTROSA MONOHIDRATO,,5mg + 80mg/1mL,,,Solución inyectable,19.6.0.0.N20,Acta No. 22  de 2018 SEM,2B102428,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BUPIVACAINA CLORHIDRATO MONOHIDRATO,,"2,5mg /1mL (0,25%)",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Tercera Parte,1B102508,vital_unavailable,2026-03-13T16:31:24.859702
+CO,Colombia,INVIMA,BUPIVACAINA CLORHIDRATO MONOHIDRATO,,"5mg/mL (0,5%)",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Tercera Parte,1B102450,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,BUPIVACAINA CLORHIDRATO MONOHIDRATO,,"7,5mg/mL 0,75%",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Tercera Parte,1B102474,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,BUPIVACAÍNA LEVÓGIRA CLORHIDRATO ANHIDRA + EPINEFRINA BITARTRATO,,"0,75% + 5μg / 1mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,2B102507,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,BUSULFAN,,2mg/1U,,L01AB01,Tableta,6.0.0.0.N10,Acta No. 52 de 2012,1B102344,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CALCIO CLORURO,,100mg/1ml,,,Solución inyectable,10.3.0.0.N10,Acta No. 03 de 2011,1C102345,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CAPREOMICINA,,1g/1U,,,Polvo para reconstituir a solución inyectable,4.1.1.4.N10,"Acta No. 03 de 2008
+Acta No. 11 de 2013",1C101210,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CARBON ACTIVADO,,20g/100 mL,,,Suspensión oral,20.0.0.0.N10,Acta No. 01 de 2024 SEM Décima parte,,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CERLIPONASA,,30mg/1mL,,,Solución para infusión,8.2.7.0.N210,Acta No. 14 de 2019 SEM,1C101987,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CICLOSERINA,,250mg,,,Cápsula,4.1.1.4.N10.,Acta No. 01 de 2024 SEM Séptima parte,,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CITARABINA,,500mg/ vial (10mL),,,Polvo Liofilizado para reconstituir a solución inyectable,6.0.0.0.N10,Acta No. 10 de 2021 SEM,1C1004121000,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CITARABINA,,100mg/ 5mL,,,Solución inyectable,6.0.0.0.N10,Acta No. 10 de 2021 SEM,1C1004121000,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CITARABINA,,100mg/ vial (10mL),,,Polvo Liofilizado para reconstituir a solución inyectable,6.0.0.0.N10,Acta No. 3 de 2022 SEM,1C1004121000,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CITARABINA,,500mg/ 5mL,,,Solución inyectable,6.0.0.0.N10,Acta No. 10 de 2021 SEM,1C1004121000,vital_unavailable,2026-03-13T16:31:24.860702
+CO,Colombia,INVIMA,CITARABINA,,500mg/ 10mL,,,Solución inyectable,6.0.0.0.N10,Acta No. 10 de 2021 SEM,1C1004121000,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CITARABINA,,1000mg/ 10mL,,,Solución inyectable,6.0.0.0.N10,Acta No. 10 de 2021 SEM,1C1004121000,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CITARABINA,,1000mg/ 20mL,,,Solución inyectable,6.0.0.0.N10,Acta No. 10 de 2021 SEM,1C1004121000,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CITARABINA,,1g/ vial (20mL),,,Polvo Liofilizado para reconstituir a solución inyectable,6.0.0.0.N10,Acta No. 3 de 2022 SEM,1C1004121000,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CITRATO DE CLOMIFENO,,50mg,,,Tableta,9.1.6.0.N10,Acta No. 04 de 2023 SEM Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLADRIBINA,,2mg/ml,,,Solución inyectable,6.0.0.0.N10,Acta No. 04 de 2023 SEM Octava Parte,,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLEMASTINA,,2 mg / Ampolla (2 mL),,,Solución inyectable,3.0.0.0.N10,Acta No. 10 de 2025 SEM Tercera parte,,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLOBAZAM,,10mg,,N05BA09,Tableta,19.9.0.0.N10,Acta No. 01 de 2024 SEM Séptima parte,,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLOBAZAM,,20mg,,N05BA09,Tableta,19.9.0.0.N10,Acta No. 01 de 2024 SEM Octava parte,,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLOFAZIMINA,,100mg/1U,,,Cápsula,"4.1.1.3.N10
+4.1.1.4.N10",Acta No. 07 de 2017,1C100287,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLORAMBUCILO,,2mg/1U,,,Tableta,10.3.0.0.N10,Acta No. 52 de 2012 SEMPB Primera parte,1C102347,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLORMETINA,,160µg/g,,,Gel,6.0.0.0.N10.,Acta No. 09 de 2022 SEM,1C1029821000,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLOROQUINA,,100mg/1U,,,Tableta,"4.2.1.0.N10
+4.2.3.0.N10",Acta No. 04 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLOROQUINA,,150mg/1U,,,Tableta,"4.2.1.0.N10
+4.2.3.0.N10
+5.2.0.0.N10",Acta No. 04 de 2020 SEM,1C104358,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLORURO DE POTASIO,,"0,1meq / mL",,,Solución inyectable,10.3.0.0.N10,Acta No. 19 de 2021 SEM,1P101218,vital_unavailable,2026-03-13T16:31:24.861704
+CO,Colombia,INVIMA,CLORURO DE POTASIO,,"0,2meq/ mL",,,Solución inyectable,10.3.0.0.N10,Acta No. 19 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,CLORURO DE POTASIO,,"0,3meq/ mL",,,Solución inyectable,10.3.0.0.N10,Acta No. 19 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,CLORURO DE POTASIO,,"0,4meq/ mL",,,Solución inyectable,10.3.0.0.N10,Acta No. 19 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,CLORURO DE POTASIO,,2meq/ mL,,,Solución inyectable,10.3.0.0.N10,Acta No. 19 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,CLORURO DE POTASIO,,"10% (1,341 meq/
+mL)",,,Solución inyectable,10.3.0.0.N10,Acta No. 19 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,COBRE SULFATO,,"0,05mg/1ml",,,Solución,21.2.2.0.N10,Acta No. 03 de 2008,1C102349,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,Crotalus - INMUNOGLOBULINAS ESPECIFICAS NEUTRALIZANTES DEL VENENO DEL GENERO (MINIMO) + Bothrops - INMUNOGLOBULINAS ESPECIFICAS NEUTRALIZANTES DEL VENENO DEL GENERO MINIMO),,10 mg + 70 mg / Vial (10 mL),,,Solución inyectable,18.1.2.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,Crotalus + Bothrops INMUNOGLOBULINA DE ORIGEN EQUINO QUE NEUTRALIZA EL VENENO DE LA SERPIENTES DE LOS GENEROS: (SUERO ANTIOFÍDICO POLIVALENTE),,100 mg + 700 mg / 100 mL,,,Solución inyectable,18.1.2.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,DANTROLENO SÓDICO,,20mg/1U,,,Polvo para reconstituir,15.2.0.0.N10,Acta No. 10 de 2004,1D102350,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,DANTROLENO SÓDICO,,50mg/1U,,,Cápsula,15.2.0.0.N10,Acta No. 10 de 2004,1D102351,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,DAUNORUBICINA LIPOSOMAL,,50mg / Vial,,L01DB02,Solución inyectable,6.0.0.0.N10,Acta No. 09 de 2022 SEM,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,DESMOPRESINA,,120mcg,,,Tableta orodispersable,9.1.13.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,DESMOPRESINA,,"0,1mg / mL - 10μg / Inhalación",,,Solución nasal,9.1.13.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,DESMOPRESINA,,"0,1mg/ml equivalente a 89μg/ml",,,Solución nasal,9.1.13.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.862713
+CO,Colombia,INVIMA,DESMOPRESINA,,"0,4mg",,,Solución sublingual,9.1.13.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,DIETIL ESTIL BESTROL,,1mg/1U,,,Tableta,6.0.0.0.N10,Acta No. 39 de 2010,1D100009,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,DIFENHIDRAMINA,,50mg/1mL,,,Solución inyectable,3.0.0.0.N10,Acta No. 16 de 2012,1D102352,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,DIFENHIDRAMINA,,10mg/1mL,,,Solución inyectable,3.0.0.0.N10,Acta No. 10 de 2025 SEM Tercera parte,,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,DIMERCAPROL,,100mg/1ml,,,Solución inyectable,20.0.0.0.N10,Acta No. 37 de 2004,1D102353,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,DIMETILSULFÓXIDO,,50mL/1U,,,Solución preservación de órganos,10.7.0.0.N30,Acta No. 55 de 2012,1D102354,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,EDROFONIO CLORURO,,10mg/1mL,,,Solución inyectable,1.2.0.0.N20,Acta No. 06 de 2006,1C102348,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,EPINEFRINA,,"1,0mg/1mL",,,"Solución inyectable
+(Autoinyectable)",7.7.0.0.N10,Acta No. 22 de 2016,1E100568,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,EPINEFRINA,,"0,5mg/1mL",,,"Solución inyectable
+(Autoinyectable)",7.7.0.0.N10,Acta No. 22 de 2016,1E102355,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,EPINEFRINA,,1mg/1mL,,,Solución inyectable,"16.2.0.0.N10, 7.4.0.0.N10 y 7.7.0.0.N10",Acta No. 13  de 2018 SEM,1E100568,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,EPINEFRINA,,1.10mg/1mL,,,Solución inyectable,"16.2.0.0.N10, 7.4.0.0.N10 y 7.7.0.0.N10",Acta No. 13  de 2018 SEM,1E102621,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,EPINEFRINA,,0.55mg/1mL,,,Solución inyectable,"16.2.0.0.N10, 7.4.0.0.N10 y 7.7.0.0.N10",Acta No. 13  de 2018 SEM,1E102622,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,ERGOMETRINA (ERGONOVINA),,0.2 mg/1 mL Ampolla x 1 mL,,,Solución inyectable,12.1.0.0.N10,Acta No. 11 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.863705
+CO,Colombia,INVIMA,ETOMIDATO,,2mg/mL,,,Solución inyectable,19.17.1.0.N10,Acta No. 01 de 2024 SEM Décima parte,,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,ETOMIDATO,,20mg / Ampolla (10 mL),,,Emulsión inyectable,19.17.1.0.N10,Acta No. 01 de 2024 SEM Décima parte,,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,ETOSUXIMIDA,,250mg/1U,,,Cápsula,19.9.0.0.N10,Acta No. 16 de 2012,1E100160,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,ETOSUXIMIDA,,50mg/mL,,,Jarabe,19.9.0.0.N10,Acta No. 02 de 2021,1E103240,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,EXTRACTOS ALERGÉNICOS (Alérgenos),,,,,,18.5.0.0.N20,Acta No. 12 de 2009,,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FACTOR DE CRECIMIENTO EPIDÉRMICO HUMANO RECOMBINANTE + SULFADIAZINA DE PLATA,,1mg/1U + 1g/1U,,,Crema,13.1.17.0.N10,Acta No. 16 de 2012,2F101989,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FACTOR XIII,,250UI/1U,,B02BD07,Polvo liofilizado para reconstituir a solución inyectable,17.5.0.0.N10,Acta No. 29 de 2010,1F102356,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,(FAMPRIDINA) 4-AMINOPIRIDINA,,10mg,,,Tableta de liberación prolongada,19.18.0.0.N100,Acta No.12 de 2025 SEMPB Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FELBAMATO,,400mg/1U,,,Tableta,19.9.0.0.N10,Acta No. 25 de 2005,1F102357,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FELBAMATO,,600mg/1U,,,Tableta,19.9.0.0.N10,Acta No. 25 de 2005,1F100169,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FENELZINA SULFATO,,15mg/1U,,,Tableta,19.10.0.0.N10,Acta No. 07 de 2010,1F100159,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FENILACETATO,,100mg/1mL,,,Solución inyectable,21.4.1.0.N30,Acta No. 25 de 2006,1F102409,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FENILBUTIRATO,,500mg/1U,,,Comprimido,21.4.1.0.N30,Acta No. 25 de 2006,,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FENILBUTIRATO,,"0,94mg/1mg",,,Granulos,21.4.1.0.N30,Acta No. 25 de 2006,,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FENILBUTIRATO DE GLICEROL,,1100mg/1mL,,,Solución oral,8.2.7.0.N50,Acta No. 04 de 2020 SEMNNIMB,,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FENILBUTIRATO DE SODIO,,"0,483mg/1mg",,,Granulos,8.2.7.0.N50,Acta No. 04 de 2020 SEMNNIMB,,vital_unavailable,2026-03-13T16:31:24.864704
+CO,Colombia,INVIMA,FENITOINA,,25mg/ml,,,Suspensión oral,19.9.0.0.N10,Acta No. 01 de 2024 SEM Séptima parte,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FENITOINA SÓDICA,,100mg,,,Tableta,19.9.0.0.N10,Acta No. 01 de 2024 SEM Octava parte,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FENITOINA SÓDICA,,100mg,,,Cápsula dura,19.9.0.0.N10,Acta No. 01 de 2024 SEM Octava parte,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FENTOLAMINA MESILATO PW,,40mg/1U,,,Tableta,1.2.0.0.N20,Acta No. 37 de 2004,1F102359,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FENTOLAMINA MESILATO PW,,0.5mg/1U,,,Tableta,1.2.0.0.N20,Acta No. 37 de 2004,1F102358,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FIBRINÓGENO HUMANO,,1.5g/100mL,,,Polvo para reconstituir a solución inyectable,17.5.0.0.N10,Acta No. 02 de 2019 SEM,1F100264,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FISOSTIGMINA,,"0,4mg/1 mL",,,Solución inyectable,20.0.0.0.N10,Acta No. 37 de 2004,1F102360,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FLUMAZENILO,,"0,5 mg / Ampolla (5mL)",,V03AB25,Solución inyectable,20.0.0.0.N10,Acta No. 10 de 2025 SEM Tercera parte,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FLUOROURACILO,,25mg/1mL,,L01BC02,Solución inyectable,6.0.0.0.N10,Acta No. 33 de 2018 SEM,1F101721,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FABOTERÁPICO POLIVALENTE ANTIOFÍDICO MODIFICADO POR DIGESTIÓN ENZIMÁTICA Y LIBRE DE ALBÚMINA CON UNA CAPACIDAD NEUTRALIZANTE DE 780 DL50 DE VENENO DESHIDRATADO DE BOTHROPS SP + FABOTERÁPICO POLIVALENTE ANTIOFÍDICO MODIFICADO POR DIGESTIÓN ENZIMÁTICA Y LIBRE DE ALBÚMINA CON UNA CAPACIDAD NEUTRALIZANTE DE 220 DL50 DE VENENO DESHIDRATADO DE CROTALUS SP + FABOTERÁPICO POLIVALENTE ANTIOFÍDICO MODIFICADO POR DIGESTIÓN ENZIMÁTICA Y LIBRE DE ALBÚMINA CON UNA CAPACIDAD NEUTRALIZANTE DE 200 DL50 DE VENENO DESHIDRATADO DE LACHESIS SP,,(30 mg + 15 mg + 15 mg)/10mL,,B05AA01,Polvo liofilizado para reconstituir a solución inyectable,18.1.2.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,FÓSFORO P-32,,3 mCi - 15 mCi,,,Solución inyectable,14.0.0.0.N10,Acta No. 32 de 2007,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,GALACTOSIDASA BETA,,35mg/7 mL,,,Polvo para reconstituir,8.2.7.0.N150,Acta No. 37 de 2004,1G102364,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,GLOBULINAS NEUTRALIZANTES DE LOS GÉNEROS Bothrops + Botriechis y Porthidium,,700 mg / 100 mL,,,Solución inyectable,18.1.2.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,GLUCONATO DE CALCIO AL 10%,,600mg,,,Solución inyectable,20.0.0.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,GLUCONATO DE CALCIO AL 10%,,520mg,,,Solución inyectable,20.0.0.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,GLUCONATO DE CALCIO AL 10%,,940mg,,,Solución inyectable,20.0.0.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.865702
+CO,Colombia,INVIMA,GLUCONATO DE CALCIO AL 10%,,"0,95g",,,Solución inyectable,20.0.0.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,GLUCONATO DE CALCIO AL 10%,,"0,94g",,,Solución inyectable,20.0.0.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,GLUCONATO DE POTASIO (glucona delta lactona + hidróxido de potasio),,"31,2g",,,Solución oral,10.3.0.0.N10,Acta No. 21 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,GONADORELINA ACETATO,,100µg/1mL,,H01CA01,Solución inyectable,9.1.6.0.N10,Acta No. 48 de 2009,1G101952,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,GONADOTROFINA CORIONICA HUMANA,,10000 UI/Ampolla,,,Polvo liofilizado para reconstituir a solución inyectable,9.1.8.0.N10,Acta No.12 de 2025 SEMPB Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,GONADOTROFINA CORIONICA HUMANA,,5000 UI/Ampolla,,,Polvo liofilizado para reconstituir a solución inyectable,9.1.8.0.N10,Acta No.12 de 2025 SEMPB Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HEMINA HUMANA,,25mg/1mL,,B06AB01,Solución inyectable,17.5.0.0.N10,Acta No. 02 de 2017 SEM Segunda Parte,1H102008,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HEPATITIS B –VIRUS INACTIVADO- ANTÍGENO DE SUPERFICIE DEL VIRUS DE LA HEPATITIS B (HBsAg),,3µg / mL,,,Suspensión Inyectable,18.1.1.0.N10,Acta No. 14 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HEPATITIS B –VIRUS INACTIVADO- ANTÍGENO DE SUPERFICIE DEL VIRUS DE LA HEPATITIS B (HBsAg),,"10µg /dosis (0,5 mL)",,,Suspensión Inyectable,18.1.1.0.N10,Acta No. 14 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HEPATITIS B –VIRUS INACTIVADO- ANTÍGENO DE SUPERFICIE DEL VIRUS DE LA HEPATITIS B (HBsAg),,40µg / dosis (1 mL),,,Suspensión Inyectable,18.1.1.0.N10,Acta No. 14 de 2021 SEM,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HIALURONIDASA,,150 UI / Vial (1 mL),,,Polvo liofilizado para reconstituir a solución inyectable,11.3.8.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HIDRALAZINA,,20mg/1mL,,,Solución inyectable,7.3.0.0.N10,Acta No. 40 de 2013,1H100029,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HIDROXICARBAMIDA (HIDROXIUREA),,500mg,,,Cápsula,17.9.0.0.N50,Acta No. 01 de 2024 SEM Novena parte,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HIDROXICLOROQUINA,,200mg/1U,,,Tableta,5.2.0.0.N10,Acta No. 04 de 2020 SEM,1H101424,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HIDROXICLOROQUINA,,400mg/1U,,,Tableta,5.2.0.0.N10,Acta No. 04 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HORMONA LIBERADORA DE CORTICOTROPINA (CRH),,100µg/1mL,,,Polvo liofilizado para reconstituir,1.2.0.0.N20,Acta No. 02 de 2010,1C102400,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HORMONA LIBERADORA DE GONADOTROPINAS HIPOFISIARIAS HUMANAS LHRH,,100μg/1mL,,,Polvo liofilizado para reconstituir,9.1.6.0.N10,Acta No. 16 de 2012,1G102401,vital_unavailable,2026-03-13T16:31:24.866702
+CO,Colombia,INVIMA,HORMONA PARATIROIDEA (ADNr),,25µg/1U,,,Polvo liofilizado para reconstituir a solución inyectable,8.2.6.0.N10,Acta No. 01 de 2018 SEMNNIMB Segunda Parte,1H102510,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,HORMONA PARATIROIDEA (ADNr),,50µg/1U,,,Polvo liofilizado para reconstituir a solución inyectable,8.2.6.0.N10,Acta No. 01 de 2018 SEMNNIMB Segunda Parte,1H100714,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,HORMONA PARATIROIDEA (ADNr),,75µg/1U,,,Polvo liofilizado para reconstituir a solución inyectable,8.2.6.0.N10,Acta No. 01 de 2018 SEMNNIMB Segunda Parte,1H102315,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,HORMONA PARATIROIDEA (ADNr),,100µg/1U,,,Polvo liofilizado para reconstituir a solución inyectable,8.2.6.0.N10,Acta No. 01 de 2018 SEMNNIMB Segunda Parte,1H102511,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INHIBIDOR C1 ESTERASA,,500UI/1U,,,Polvo liofilizado para reconstituir a solución inyectable,7.9.0.0.N100,Acta No. 05 de 2020 SEM,1I100012,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,"INMUNOGLOBULINAS ESPECÍFICAS NEUTRALIZANTES DEL VENENO DE LAS ESPECIES MICRURUS DUMERILII, MICRURUS MIPARTITUS, MICRURUS ISOZONUS Y MICRURUS SURINAMENSIS.",,2mg / 10 mL,,,Solución inyectable,18.1.2.0.N10,Acta No. 04 de 2022 SEM,,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINAS ESPECIFICAS NEUTRALIZANTES DEL VENENO DE SERPIENTES DE LOS GENEROS CROTALUS Y BOTHROPS,,(10 mg + 70 mg)/ 10 mL,,,Solución inyectable,18.1.2.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINAS DE ORIGEN EQUINO (IGG) CAPACES DE NEUTRALIZAR COMO MÍNIMO: VENENO DE Bothrops atrox+ VENENO DE Bothrops asper + VENENO DE Lachesis muta + VENENO DE Crotalus durissus,,25mg + 25mg + 10mg + 10mg / Vial,,,Polvo liofilizado para reconstituir a solución inyectable,18.1.2.0.N10,Acta No. 04 de 2023 SEM Segunda parte  / Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINAS DE ORIGEN EQUINO (IGG) CAPACES DE NEUTRALIZAR COMO MÍNIMO: VENENO DE Bothrops atrox+ VENENO DE Bothrops asper + VENENO DE Lachesis muta + VENENO DE Crotalus durissus,,25 mg + 25 mg + 5 mg + 10 mg / Vial,,,Polvo liofilizado para reconstituir a solución inyectable,18.1.2.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA ANTIVARICELA ZOSTER,,25UI/1mL,,,Solución inyectable,18.2.0.0.N10,Acta No. 07 de 2014,1I100100,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA G,,1500mg/1U,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,10mg/1mL,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,50mg/1ml,,,Solución inyectable,18.2.0.0.N10,Acta No. 04 de 2022 SEM,1T103099,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,50mg/1ml,,,Polvo para reconstituir a solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,1T103099,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,100mg/1mL,,,Solución inyectable para perfusión,18.2.0.0.N10,Acta No. 06 de 2020 SEM,1I103375,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,100mg/1mL,,,Solución inyectable para infusión,18.2.0.0.N10,Acta No. 06 de 2020 SEM,1I103375,vital_unavailable,2026-03-13T16:31:24.867705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,1000mg/1U,,,Polvo liofilizado para reconstituir a solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,10000mg/1U,,,Polvo liofilizado para reconstituir a solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,12000mg/1U,,,Polvo para reconstituir a solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,160mg/1mL,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,165mg/1mL,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,1T103380,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,180mg/1mL,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,200mg/1mL,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,1T103336,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,2500mg/1U,,,Polvo para reconstituir a solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,3000mg/1U,,,Polvo liofilizado para reconstituir a solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,40mg/1mL,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,500mg/1U,,,Polvo liofilizado para reconstituir a solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,5000mg/1U,,,Polvo liofilizado para reconstituir a solución inyectable para perfusión,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,6000mg/1U,,,Polvo liofilizado para reconstituir a solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,750mg/1U,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL (INMUNOGLOBULINA G (IGG) >98%),,20000mg/1U,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA NORMAL HUMANA,,250mg/1mL,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA NORMAL HUMANA,,60mg/1mL,,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.868705
+CO,Colombia,INVIMA,INMUNOGLOBULINA HUMANA NORMAL,,"0,1mg/1U",,,Solución inyectable,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INOTERSEN SODICO**,,200mg/mL,,,Solución inyectable,8.2.7.0.N260,Acta No. 07 de 2022 SEM,,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INSULINA HUMANA ISÓFANA,,100UI/1mL,,,Suspensión inyectable,8.2.3.0.N10,Acta No. 01 de 2024 SEM Novena parte,,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INSULINA HUMANA SOLUBLE NEUTRA (REGULAR),,100 UI/1mL,,,Solución inyectable,8.2.3.0.N10,Acta No. 01 de 2024 SEM Novena parte,,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INTERFERÓN α-2B,,5MUI/1 mL,,,Polvo liofilizado para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1I102757,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INTERFERÓN α-2B,,18MUI/1mL,,,Polvo liofilizado para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1I102758,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INTERFERÓN α-2B,,25MUI/1mL,,,Polvo liofilizado para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1I102759,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INTERFERÓN α-2B,,6MUI/1mL,,,Solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1I102760,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INTERFERÓN α-2B,,10MUI/1mL,,,Solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1I102761,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INTERFERÓN α-2B,,15MUI/1mL,,,Solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1I102762,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INTERFERÓN α-2B,,30MUI/1mL,,,Solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1I102763,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INTERFERÓN α-2B,,60MUI/1mL,,,Solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1I102764,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,INTERFERÓN HUMANO RECOMBINANTE GAMMA-1-b,,"0,1mg / Vial (0,5 mL) (2.000.000 UI).",,,Solución inyectable,18.5.0.0.N40,Acta No. 4 de 2023 SEM Quinta Parte,,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,ISONIAZIDA,,100mg/5 mL,,J04AC01,Jarabe,4.1.1.4.N10,Acta No. 04 de 2023 SEM Octava parte,,vital_unavailable,2026-03-13T16:31:24.869705
+CO,Colombia,INVIMA,ISONIAZIDA,,500mg,,J04AC01,Polvo para solución para perfusión,4.1.1.4.N10,Acta No. 06 de 2025 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,ISOPROTERENOL CLORHIODRATO,,"0,2mg/1mL",,D05AA,Solución inyectable,7.4.0.0.N10,Acta No. 06 de 2018 SEM,1I100713,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,LAMIVUDINA + NEVIRAPINA + ZIDOVUDINA,,150mg + 200 mg + 300 mg,,,Tableta dispersable,4.1.3.0.N30,Acta No. 04 de 2023 SEM Tercera parte,,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,LARONIDASA,,100 U/1mL,,,Solución inyectable,8.2.7.0.N80,Acta No. 16 de 2012,,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,L- ASPARAGINASA (AISLADA DE E COLI),,10.000UI / Vial,,,Polvo liofilizado para reconstituir a solución inyectable,6.0.0.0.N10,Acta No. 08 de 2021,,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,L-BUPIVACAINA CLORHIDRATO ANHIDRA + EPINEFRINA BITARTRATO,,"7,5mg + 5μg/1 mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,2B102507,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,L-CARNITINA,,330mg/1U,,,Tableta,8.2.7.0.N10,"Acta No. 23 de 2010
+Acta No. 11 de  2013",1C102369,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,L-CARNITINA,,500mg/1U,,,Tableta,8.2.7.0.N10,"Acta No. 23 de 2010
+Acta No. 11  de  2013",1C102370,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,L-CARNITINA,,1g/1U,,,Tableta,8.2.7.0.N10,"Acta No. 23 de 2010
+Acta No. 11  de  2013",1C102368,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO,,20mg/1mL,,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM tercera Parte,1L101803,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO,,20mg/1mL,,,Solución inyectable para infusión,19.6.0.0.N20,Acta No. 02 de 2018 SEM primera Parte,1L101803,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO,,10mg/mL (1%),,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM primera Parte,1L100565,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO,,"4mg/1mL (0,4%)",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,1L102520,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO,,50mg/1mL (5%),,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,1L102521,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO + ADRENALINA,,"36mg + 0,18 mg/ 1mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,2E102523,vital_unavailable,2026-03-13T16:31:24.870707
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO + DEXTROSA SOLUCIÓN INYECTABLE,,"5% + 7,5% /1mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Segunda Parte,2D102524,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,LIDOCAÍNA AL 1% CON EPINEFRINA SIN PRESERVATIVOS,,10mg + 5μg/1mL,,,Solución inyectable,19.6.0.0.N20,Acta No. 23 de 2015,2E102406,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO + EPINEFRINA,,10mg + 5µg /mL,,,Solución inyectable,19.6.0.0.N20,Acta No. 4 de 2023 SEM Quinta Parte,,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO + EPINEFRINA,,100mg + 50µg / Ampolla (10 mL),,,Solución inyectable,19.6.0.0.N20,Acta No. 4 de 2023 SEM Quinta Parte,,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO + EPINEFRINA,,20mg + 5 µg /mL,,,Solución inyectable,19.6.0.0.N20,Acta No. 4 de 2023 SEM Quinta Parte,,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO + EPINEFRINA,,200mg + 50µg / Ampolla (10 mL),,,Solución inyectable,19.6.0.0.N20,Acta No. 4 de 2023 SEM Quinta Parte,,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO + EPINEFRINA BASE,,"20mg + 0,0125mg /mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 4 de 2023 SEM Quinta Parte,,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO + EPINEFRINA BASE,,"20mg + 0,02mg /mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 4 de 2023 SEM Quinta Parte,,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,LIDOCAINA CLORHIDRATO + EPINEFRINA BASE,,"20mg + 0,01mg /mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 4 de 2023 SEM Quinta Parte,,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,MECASERMINA,,10mg/ml,,H01AC03,Solución inyectable,9.2.3.0.N10,Acta No. 09 de 2022 SEM,,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,MEDROXIPROGESTERONA ACETATO + CIPIONATO DE ESTRADIOL,,50 mg +  10mg/1mL,,G03DA04,Suspensión inyectable,9.1.2.0.N10,Acta No. 21 de 2019 SEM,2E102829,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,MEGESTROL ACETATO,,40mg/1mL,,L02AB01,Suspensión Oral,6.0.0.0.N10 y 9.1.11.0.N10,Acta No. 22  de 2018 SEM,1M102620,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,MELFALAN,,2mg/1ml,,L01AA03,Tableta,6.0.0.0.N10,Acta No. 52 de 2012,1M102372,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,MELFALAN,,10mg/1 mL,,L01AA03,Solución inyectable,6.0.0.0.N10,Acta No. 52 de 2012,1M102527,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,MEPIVACAINA CLORHIDRATO,,10mg/1mL (1%),,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Tercera parte,1M102529,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,MEPIVACAINA CLORHIDRATO,,20mg/1 mL (2%),,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Tercera parte,1M102528,vital_unavailable,2026-03-13T16:31:24.871706
+CO,Colombia,INVIMA,MEPIVACAINA CLORHIDRATO,,30mg/1 mL (3%),,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Tercera parte,1M102418,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MERCAPTOPURINA,,50mg/1U,,,Tableta,6.0.0.0.N10,Acta No. 52 de 2012,1M102374,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,METADOXINA,,300 mg / Ampolla (5 mL),,,Solución inyectable,8.2.7.0.N40,Acta No. 10 de 2025 SEM Tercera parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,METILERGOMETRINA,,0.2 mg/mL,,,Solución inyectable,12.1.0.0.N10,Acta No. 08 de 2025 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,METIRAPONA,,250mg/1U,,,Cápsula,"9.2.3.0.N10 
+1.2.0.0.N20",Acta No. 12  de 2019 SEM,1M101846,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,METOPROLOL TARTRATO,,1mg/1 mL,,C07AB02,Solución inyectable,7.3.0.0.N10,Acta No. 03 de 2018 SEM,1M102533,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,METOTREXATO,,"2,5mg/1U",,,Tableta,6.0.0.0.N10,Acta No. 24 de 2020 SEM,1M101722,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,METRELEPTIN,,11.3mg/1U,,A16AA07,Polvo para reconstituir a solución inyectable,8.2.7.0.N240,Acta No. 13 de 2019 SEMNNIMB,1M100083,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MIDAZOLAM,,15mg / Ml,,N05CD08,Solución inyectable,19.17.1.0.N10,Acta No. 01 de 2024 SEM Quinta parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MIDAZOLAM,,15mg / Ampolla (3 mL),,N05CD08,Solución inyectable,19.17.1.0.N10,Acta No. 01 de 2024 SEM Quinta parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MIDAZOLAM,,"7,5mg / mL",,N05CD08,Solución inyectable,19.17.1.0.N10,Acta No. 01 de 2024 SEM Quinta parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MIDAZOLAM,,5mg / Ampolla (1 mL),,N05CD08,Solución inyectable,19.17.1.0.N10,Acta No. 01 de 2024 SEM Quinta parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MIDAZOLAM,,1mg / mL (Vial),,N05CD08,Solución inyectable,19.17.1.0.N10,Acta No. 01 de 2024 SEM Quinta parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MIDAZOLAM,,5mg / Ampolla (5 mL),,N05CD08,Solución inyectable,19.17.1.0.N10,Acta No. 01 de 2024 SEM Quinta parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MIDAZOLAM,,50mg / Ampolla (10 mL),,N05CD08,Solución inyectable,19.17.1.0.N10,Acta No. 01 de 2024 SEM Quinta parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MITOTANE,,500mg/1U,,L01XX23,Tableta,6.0.0.0.N10,Acta No. 02 de 2010,1M100034,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MORFINA SULFATO,,2%- 2g / 100 mL,,,Solución oral,19.2.0.0.N10,Acta No. 08 de 2025 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.872705
+CO,Colombia,INVIMA,MORFINA CLORHIDRATO,,3%- 3g / 100 mL,,,Solución oral,19.2.0.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,MTC OIL TRIGLICERIDOS DE CADENA MEDIA,,500mL/1U,,,Solución oral,21.4.2.3.N20,Acta No. 03 de 2007,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,N-ACETILCISTEÍNA,,300 mg / Ampolla (3 mL),,,Solución inyectable,16.5.0.0.N10,Acta No. 10 de 2025 SEM Tercera parte,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NEVIPARINA,,50mg/5 mL,,,Solución oral,4.1.3.0.N10,Acta 01 2024 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NICOTINA,,"0,83mg/cm2",,B05XC,Parche transdermico,20.0.0.0.N10,Acta No. 22  de 2018 SEM,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NICOTINA,,36mg/cm2,,B05XC,Parche transdérmico,20.0.0.0.N10,Acta No. 22  de 2018 SEM,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NICOTINA,,78mg /15cm2,,B05XC,Parche transdérmico,20.0.0.0.N10,Acta No. 22  de 2018 SEM,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NICOTINA,,114mg/22 cm2 (libera 2 mg cada 24 horas),,B05XC,Parche transdérmico,20.0.0.0.N10,Acta No. 22 de 2018 SEM,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NICOTINA,,"39,37mg de nicotina con una liberación nominal de 25 mg / 16 horas",,B05XC,Parche transdérmico,20.0.0.0.N10,Acta No. 22  de 2018 SEM,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NICOTINA,,"23,62mg de nicotina con una liberación nominal de 15 mg / 16 horas",,B05XC,Parche transdérmico,20.0.0.0.N10,Acta No. 22  de 2018 SEM,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NICOTINA,,"15,75mg de nicotina con una liberación nominal de 10 mg / 16 horas",,B05XC,Parche transdérmico,20.0.0.0.N10,Acta No. 22 de 2018 SEM,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NIFEDIPINO,,10mg,,,Tableta,7.3.0.0.N10,Acta No. 08 de 2020 SEM - Acta No. 04 de 2023 SEM Octava parte,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NIFEDIPINO,,10mg,,,Cápsula dura,7.3.0.0.N10,Acta No. 04 de 2023 SEM Octava parte,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NIFEDIPINO,,10mg,,,Cápsula blanda,7.3.0.0.N10,Acta No. 04 de 2023 SEM Octava parte,,vital_unavailable,2026-03-13T16:31:24.873707
+CO,Colombia,INVIMA,NITROGLICERINA,,400µg/ 1mL,,,Solución inyectable para infusión,7.1.0.0.N10,Acta No. 05 de 2017 SEM,1T102412,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,NITROGLICERINA,,"0,1mg/1mL",,,Solución inyectable,7.1.0.0.N10,Acta No. 05 de 2017 SEM Primera Parte,1T102410,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,NITROGLICERINA,,100μg /1mL,,,Solución inyectable para infusión,7.1.0.0.N10,Acta No. 05 de 2017 SEM Primera Parte,1T102410,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,NITROGLICERINA,,"0,2mg/1mL",,,Solución inyectable,7.1.0.0.N10,Acta No. 05 de 2017 SEM Primera Parte,1T102411,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,NITROGLICERINA,,"0,2mg/1mL",,,Solución inyectable para infusión,7.1.0.0.N10,Acta No. 05 de 2017 SEM Primera Parte,1T102411,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,NITROGLICERINA,,"0,4mg/1mL",,,Solución inyectable,7.1.0.0.N10,Acta No. 05 de 2017 SEM Primera Parte,1T102412,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,NITROGLICERINA,,"0,4mg/1mL",,,Solución inyectable para infusión,7.1.0.0.N10,Acta No. 05 de 2017 SEM Primera Parte,1T102412,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,NITROGLICERINA,,"0,08mg /1 mL",,,Solución inyectable para infusión,7.1.0.0.N10,Acta No. 05 de 2017 SEM Primera Parte,1T102414,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,NITROGLICERINA,,5mg/1mL,,,Solución inyectable para infusión,7.1.0.0.N10,Acta No. 05 de 2017 SEM Primera Parte,1T102415,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,NOREPINEFRINA,,1mg/1mL,,,Solución inyectable,7.7.0.0.N10,Acta No. 16  de 2018 SEM,1N102587,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,OCRIPLASMINA,,2.5mg/1 mL,,S01XA22,Solución inyectable concentrada,11.3.14.0.N10,Acta No. 03 de 2014,1O101069,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,OXIGENO,,99% en volumen-99%/ m3,,,Gas,16.7.0.0.N20,Acta No. 03 de 2025 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,OXIGENO,,93% V/V,,,Gas,16.7.0.0.N20,Acta No. 03 de 2025 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,OXITOCINA,,5UI/1mL,,,Solución inyectable,12.1.0.0.N10,Acta No. 31 de 2018 SEM,1O102714,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,PAPAVERINA HCL,,3mg/1 mL,,,Solución inyectable,7.6.0.0.N10,Acta No. 37 de 2004,1P102375,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,4mg/1mL",,L03AB10,Solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102765,vital_unavailable,2026-03-13T16:31:24.874707
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,6mg/1mL",,L03AB10,Solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102766,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"1,2mg/1mL",,L03AB10,Solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102767,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,1mg/1mL",,L03AB10,Polvo para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102768,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,16mg/1mL",,L03AB10,Polvo para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102769,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,2mg/1mL",,L03AB10,Polvo para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102770,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,24mg/1mL",,L03AB10,Polvo para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102771,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,3mg/1mL",,L03AB10,Polvo para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102772,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,4mg/1mL",,L03AB10,Polvo para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102765,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,6mg /1mL",,L03AB10,Polvo para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102766,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"1,2mg/ 1mL",,L03AB10,Polvo para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102767,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,2mg/1mL",,L03AB10,Polvo liofilizado para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102770,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGINTERFERÓN ALFA 2B,,"0,3mg/1mL",,L03AB10,Polvo liofilizado para reconstituir a solución inyectable,"6.0.0.0.N10 
+4.1.3.0.N10",Acta No. 02 de 2019 SEMNNIMB,1P102772,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PEGVISOMANT,,20mg/1mL,,H01AX01,Solución inyectable,9.2.3.0.N10,Acta No. 43 de 2007,1P102377,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PENTOBARBITAL,,50mg/1mL,,N05CA01,Solución inyectable,19.17.1.0.N10,Acta No. 03 de 2006,1P102378,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PIRIDOXINA,,150mg/1 mL,,,Solución inyectable,21.1.0.0.N10,Acta No. 37 de 2004,1P102379,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PIRIMETAMINA,,25mg,,,Cápsula dura,"4.2.3.0.N10, 4.2.5.0.N10",Acta No. 16 de 2018 SEM,1P102626,vital_unavailable,2026-03-13T16:31:24.875705
+CO,Colombia,INVIMA,PIRIMETAMINA,,25mg,,,Tableta,"4.2.3.0.N10, 4.2.5.0.N10",Acta No. 16 de 2018 SEM,1P100283,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,PRILOCAINA CLORHIDRATO + FELIPRESINA,,"30mg + 0,03UI / 1 mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Tercera Parte,2F102715,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,PRILOCAINA CLORHIDRATO + FELIPRESINA,,"16,6mg + 0,3μg /1 mL",,,Solución inyectable,19.6.0.0.N20,Acta No. 02 de 2018 SEM Tercera Parte,2F102534,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,PRIMIDONA,,250mg/1U,,N03AA03,Tableta,19.9.0.0.N10,Acta No. 25 de 2005,1P100768,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,PROTEINA DE PLASMA HUMANO,,50mg/1mL,,B02AB02,Solución inyectable para infusión,18.2.0.0.N10,Acta No. 06 de 2020 SEM,,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,PROTIRELINA (Hormona liberadora de tirotropina TRH),,"0,2mg/1mL",,,Solución inyectable,9.2.3.0.N10,Acta No. 20 de 2005,1P102405,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,QUETIAPINA,,50mg,,,Tableta de liberación prolongada,19.16.0.0.N10,Acta No. 02 de 2025 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,QUETIAPINA,,150mg,,,Tableta de liberación prolongada,19.16.0.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,QUETIAPINA,,200mg,,,Tableta de liberación prolongada,19.16.0.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,QUETIAPINA,,300mg,,,Tableta de liberación prolongada,19.16.0.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,QUETIAPINA,,400mg,,,Tableta de liberación prolongada,19.16.0.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,QUININA DICLORHIDRATO,,300mg/1mL,,,Solución inyectable,4.2.3.0.N10,Acta No. 09 de 2007,1Q102380,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,QUININA SULFATO,,300mg /1mL,,,Tableta,4.2.3.0.N10,Acta No. 09 de 2007,1Q102381,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,REMIFENTANIL CLORHIDRATO,,1mg / Vial,,N01AH06,Polvo liofilizado para reconstituir a solución inyectable,19.2.0.0.N10,Acta No. 01 de 2024 SEM Séptima parte,,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,REMIFENTANIL CLORHIDRATO,,2mg / Vial,,N01AH06,Polvo liofilizado para reconstituir a solución inyectable,19.2.0.0.N10,Acta No. 01 de 2024 SEM Séptima parte,,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,REMIFENTANIL CLORHIDRATO,,5mg / Vial,,N01AH06,Polvo liofilizado para reconstituir a solución inyectable,19.2.0.0.N10,Acta No. 01 de 2024 SEM Séptima parte,,vital_unavailable,2026-03-13T16:31:24.876705
+CO,Colombia,INVIMA,RIBAVIRINA,,200mg/1unidad,,J05AP01,Cápsula,4.1.3.0.N10,Acta No. 06 de 2018 SEM,1R102535,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,RIBAVIRINA,,200mg/1unidad,,J05AP01,Tableta,4.1.3.0.N10,Acta No. 06 de 2018 SEM,1R102536,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,RIBAVIRINA,,400mg/1unidad,,J05AP01,Tableta,4.1.3.0.N10,Acta No. 06 de 2018 SEM,1R102537,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,RIBAVIRINA,,600mg/1U,,J05AP01,Tableta,4.1.3.0.N10,Acta No. 06 de 2018 SEM,1R102538,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,RITONAVIR + LOPINAVIR,,20 mg + 80 mg / ml,,J05AE03,Solución oral,4.1.3.0.N30,Acta No. 04 de 2022 SEM,,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,"SALES DE REHIDRATACIÓN (Cloruro de Sodio, Cloruro de Potasio, Citrato trisódico, dihidrato, Glucosa Anhidra)",,"2,6 g + 1,5 g + 2,9 g + 13,5 g",,,Polvo para reconstituir en solución oral,10.3.0.0.N50,Acta No. 07 de 2025 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,SEBELIPASA,,2mg/1mL,,,Solución inyectable,8.2.7.0.N170,Acta No. 09 de 2018 SEM,1S100073,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,SODIO BENZOATO,,5mg/5ml,,,Otras soluciones,21.4.1.0.N30,Acta No. 25 de  2006,1B102387,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,SODIO BENZOATO,,20mg/1ml,,,Otras soluciones,21.4.1.0.N30,Acta No. 25 de  2006,1B102383,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,SODIO BENZOATO,,200mg/1ml,,,Otras soluciones,21.4.1.0.N30,Acta No. 25 de  2006,1B101268,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,SODIO BENZOATO,,250mg/1U,,,Cápsula de liberación no modificada,21.4.1.0.N30,Acta No. 25 de  2006,1B102384,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,SODIO BENZOATO,,25mg/5ml,,,Otras soluciones,21.4.1.0.N30,Acta No. 25 de  2006,1B102385,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,SODIO BENZOATO,,500mg/5ml,,,Otras soluciones,21.4.1.0.N30,Acta No. 25 de  2006,1B102386,vital_unavailable,2026-03-13T16:31:24.877707
+CO,Colombia,INVIMA,SODIO BENZOATO,,1g/5ml,,,Otras soluciones,21.4.1.0.N30,Acta No. 25 de  2006,1B102382,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SODIO NITRITO,,30mg/1mL,,,Solución inyectable,20.0.0.0.N10,Acta No. 39 de 2011,1S102388,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SODIO TIOSULFATO,,250mg/1 mL,,,Solución inyectable,20.0.0.0.N10.,Acta No. 19 de 2015,1S102389,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SODIO TIOSULFATO,,500mg/1 mL,,,Solución inyectable,20.0.0.0.N10.,Acta No. 19 de 2015,1S102390,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SOMATROPINA,,"5,3 mg / Cárpula (1 mL) equivalente a 16 UI / Cárpula (1 mL)",,H01AC01,Polvo liofilizado para reconstituir a solución inyectable,9.1.9.0.N10,Acta No. 01 de 2024 SEM Sexta parte,,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SOMATROPINA,,12 mg / Vial equivalente a 36 UI / Vial,,H01AC01,Polvo liofilizado para reconstituir a solución inyectable,9.1.9.0.N10,Acta No. 01 de 2024 SEM Sexta parte,,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SOMATROPINA,,"5 mg / 1,5 mL equivalente a 15 UI / 1,5 mL",,H01AC01,Solución inyectable,9.1.9.0.N10,Acta No. 01 de 2024 SEM Sexta parte,,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SOMATROPINA,,"10 mg / 1,5 mL equivalente a 30 UI / 1,5 mL",,H01AC01,Solución inyectable,9.1.9.0.N10,Acta No. 01 de 2024 SEM Sexta parte,,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SOMATROPINA,,"15 mg / 1,5 mL equivalente a 45 UI / 1,5 mL",,H01AC01,Solución inyectable,9.1.9.0.N10,Acta No. 01 de 2024 SEM Sexta parte,,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SOMATROPINA,,"6mg (5,83 mg/ mL)",,H01AC01,Solución inyectable,9.1.9.0.N10,Acta No. 01 de 2024 SEM Sexta parte,,vital_unavailable,2026-03-13T16:31:24.878706
+CO,Colombia,INVIMA,SOMATROPINA,,"20mg (8,0 mg/ mL)",,H01AC01,Solución inyectable,9.1.9.0.N10,Acta No. 01 de 2024 SEM Sexta parte,,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SUCCIMER,,100mg/1U,,,Tableta,20.0.0.0.N10,Acta No. 16 de 2012,1S102391,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SUCCIMER,,200mg/1U,,,Tableta,20.0.0.0.N10,Acta No. 16 de 2012,1S102392,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SUERO ANTIARÁCNIDO,,,,,Solución inyectable,18.1.2.0.N10,Acta No. 16 de 2006,,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SUERO ANTIELAPÍDICO,,,,,Solución inyectable,18.1.2.0.N10,Acta No. 16 de 2006,,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SUERO ANTIESCORPIÓN,,"1,8mg/1U",,,Solución inyectable,18.1.2.0.N10,Acta No. 16 de 2006,1S101161,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SUERO ANTILONÓMICO,,,,,Solución inyectable,18.1.2.0.N10,Acta No. 16 de 2006,,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,"SUERO ANTIOFÍDICO ANTICORAL INYECTABLE
+(M. surinamensis, M. spixii y M. lemniscatus)",,,,,Inyectable,18.1.2.0.N10,"Acta No. 11  de 2014 SEM Primera Parte 
+Acta No. 12 de 2019 SEMNNIMB",,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SULFACETAMIDA SÓDICA,,100mg/1mL - (10%),,,Solución Oftálmica,11.3.3.0.N10,Acta No. 13 de 2018 SEM,1S102630,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SULFACETAMIDA SÓDICA,,150mg/1mL,,,Solución Oftálmica,11.3.3.0.N10,Acta No. 13 de 2018 SEM,1S102631,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SULFACETAMIDA SÓDICA,,300mg/1mL (30%),,,Solución Oftálmica,11.3.3.0.N10,Acta No. 13 de 2018 SEM,1S102632,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SULFATO DE MAGNESIO,,0.1,,,Solución inyectable,19.9.0.0.N10,Acta No. 06 de 2020 SEM,1M103337,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SULFATO DE MAGNESIO,,0.2,,,Solución inyectable,19.9.0.0.N10,Acta No. 06 de 2020 SEM,1M101585,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,SULFATO DE MAGNESIO,,0.25,,,Solución inyectable,19.9.0.0.N10,Acta No. 06 de 2020 SEM,1M103337,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,TALIDOMIDA,,100mg,,,Tableta cuebierta con película,4.1.1.3.N20,Acta No. 04 de 2023 SEM Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,TESTOSTERONA ENANTATO,,100mg/1mL,,G03BA03,Solución inyectable,9.1.1.0.N10,Acta No. 04 de 2019 SEM,1T102799,vital_unavailable,2026-03-13T16:31:24.879707
+CO,Colombia,INVIMA,TESTOSTERONA ENANTATO,,250mg/1mL,,G03BA03,Solución inyectable,9.1.1.0.N10,Acta No. 04 de 2019 SEM,1T102800,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,TETRACOSACTIDA ACETATO,,"0,25mg/1mL",,,Solución inyectable,9.1.5.0.N10,Acta No. 20 de 2005,1T101805,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,TETRACOSACTIDA HEXAACETATO,,1mg/1mL,,,Solución inyectable,9.1.5.0.N10,Acta No. 04 de 2019 SEM,1T102802,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,TIERRA DE FULLER,,,,,Todas las presentaciones,20.0.0.0.N10,Acta No. 14 de 2015,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,TIOGUANINA,,40mg/1U,,,Comprimido (Tableta),6.0.0.0.N10,Acta No. 52 de 2012,1T102394,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,TRIAMCINOLONA,,10 mg/mL,,D07AB09,Suspensión inyectable,9.1.3.0.N10,Acta No.12 de 2025 SEMPB Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,TRIAMCINOLONA,,40 mg/Ampolla (1 mL),,D07AB09,Suspensión inyectable,9.1.3.0.N10,Acta No.12 de 2025 SEMPB Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,TRIMETILGLICINA (BETAHÍNA ANHIDRA),,180 g,,,Polvo,8.2.7.0.N30,Acta No. 16 de 2012,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,TOBRAMICINA,,300mg/4ml,,,Solución para nebulización,16.7.0.0.N10,Acta 01 2024 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,TOBRAMICINA,,300mg/5mL,,,Solución para nebulización,16.7.0.0.N10,Acta 01 2024 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,VARENICLINA,,"0,5 mg",,,Tableta recuebierta,20.0.0.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,VARENICLINA,,"1,0 mg",,,Tableta recuebierta,20.0.0.0.N10,Acta No. 04 de 2025 SEM Segunda parte,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,VASOPRESINA,,20 UI/mL,,,Solución inyectable,9.1.13.0.N10,Acta No. 08 de 2025 SEM Primera parte,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,VINBLASTINA,,1mg/1mL,,,Solución inyectable,6.0.0.0.N10,Acta No. 01 de 2016,1V101639,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,"VITAMINAS HIDROSOLUBLES (Mononitrato de Tiamina (equivalente a 2,5 mg de Vitamina B1) 3,1 mg,Riboflavina fosfato sódico (equivalente a 3,6 mg de Vitamina B2) 4,9 mg,Nicotinamida 40,0 mg, Clorhidrato de Piridoxina (equivalente a 4,0 mg de Vitamina B6) 4,9 mg, Pantotenato de sodio (equivalente a 15,0 mg de Ácido Pantoténico) 16,5 mg, Ascorbato de sodio (equivalente a 100 mg Vitamina C) 113,0 mg, Biotina 60,0 mcg, Ácido Fólico 0,40 mg, Cianocobalamina (Vitamina B12) 5,0 mcg)",,"3.1 mg, 4.9 mg, 40.0 mg, 4.9 mg, 16.5 mg, 113.0 mg, 60.0 mcg, 0.40mg, 5.0 mcg",,A11HA05,Polvo liofilizado para reconstituir a solución inyectable,21.4.2.2.N20,Acta No.12 de 2025 SEMPB Cuarta parte,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,MEDICAMENTO,,,,,ACTA,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,"Aire Medicinal (Nitrógeno + Oxigeno). Gas 19,5% + 23,5%",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,Albumina serica humana nanocoloide  Polvo liofilizado para reconstituir a solución inyectable x 1mg/1U,,,,B05AA01,Excluido del listado. Acta 11 de 2018 SEM,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,"Albumina serica humana nanocoloide  Solución inyectable x 0,5 mg/1 U",,,,B05AA01,Excluido del listado. Acta 29 de 2018 SEM,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,"Alcohol etílico. Gel 0,63",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,"Alcohol etílico. Gel 0,65",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,"Alcohol etílico. Solución 0,7",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,Alcohol etílico (70%) + Glicerina. Solución Tópica 96% + 4%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,Alcohol etílico + Alcohol isopropilico. Gel 63g + C.S.P 100 mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,"Alcohol etílico + clorhexidina gluconato. Solución Tópica 76, mL + 0,45 mL/ 100 mL",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.880705
+CO,Colombia,INVIMA,Alcohol etílico + clorhexidina gluconato . Solución Tópica 70% + 1% (P/ V),,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,Alcohol etílico + clorhexidina gluconato. Solución Tópica 70% + 2%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Alcohol etílico + mentol. Loción 70% + 0,5%",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Alcohol etílico + mentol. Loción  70% + 0,39%",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Alcohol etílico 96° g.l. Solución Tópica  72,9mL/100 mL",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,Alcohol isopropilico al 99%. Solución Tópica 63g /100 mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Alcohol isopropílico + yodopovidona. Loción 72% + 7,5%",,,,S01XA20,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,Alprostadil Solución Inyectable 500mcg/ml,,,,G04BE01,Excluido del listado.  Acta No. 04 de 2025 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Anfotericina B Liposomal. Polvo para reconstituir a suspensión inyectable  1,7 mg/1mL",,,,,Excluido del listado. Acta 26 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Anfotericina B Liposomal . Polvo liofilizado para solución para infusión. 2,5 mg/1mL",,,,,Excluido del listado. Acta 26 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Anfotericina B Liposomal. Polvo liofilizado para solución para infusión.  1,7 mg/1mL",,,,,Excluido del listado. Acta 26 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,Anfotericina B Liposomal. Suspensión inyectable.  1mg/1mL,,,,,Excluido del listado. Acta 26 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Anfotericina B (En complejo con Desoxicolato de Sodio) Polvo Liofilizado para Reconstituir a Solución Inyectable 3,3 mg/1mL",,,,,Excluido del listado. Acta 01 de 2024 Tercera parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Articaina clorhidrato + epinefrina bitartrato Solución inyectable 40 mg + 0,01 mg / 1mL",,,,,Excluido del listado.  Acta 12 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,"Articaina clorhidrato + epinefrina bitartrato equivalente a epinefrina  Solución inyectable 40 mg + 0,005 mg / 1mL",,,,,Excluido del listado.  Acta 12 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,Asparaginasa (L Asparaginasa aislada de E coli)) Polvo liofilizado para reconstituir a solución inyectable 1000 UI/1mL,,,,,Excluido del listado.  Acta 02 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,Asparaginasa Pegilada x 3750 UI,,,,,Excluido del listado. Acta 01 de 2018 SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,Atracurio Besilato. Solución inyectable 10mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.882209
+CO,Colombia,INVIMA,Atropina Sulfato. Solución inyectable 1mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Azul de Metileno (10 mg / mL) - 50mg / Ampolla (5 mL) solución inyectable,,,,,Excluido del listado. Acta 10 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,"Bacillus Calmette Guerin Polvo Liofilizado para Reconstituir a Suspensión para Instilación Intravesical 5,0 x 10^8 UFC /1U",,,,,Excluido del listado. Acta 01 de 2024 Tercera parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bacillus Calmette Guerin Polvo y solvente para suspensión de uso intravesical 2 x 10^8 a 3 x 10^9 /1U,,,,,Excluido del listado. Acta 01 de 2024 Tercera parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,"Bacillus Calmette Guerin Polvo Liofilizado para Reconstituir a Suspensión inyectable 27mg (Peso seco) o 0,6 a 6,4 x 10^8 UFC/Vial",,,,,Excluido del listado. Acta 01 de 2024 Tercera parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,"Baclofeno 50 µg/mL, 10 mg/5mL y 
+10mg/20 Ml",,,,M03BX01,Excluido del listado  Acta 03 de 2017 Segunda Parte,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bemiparina. Solución inyectable 2500 UI /1 mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bemiparina. Solución inyectable 3500 UI / 1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bemiparina. Solución inyectable 5000 UI / 1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bemiparina. Solución inyectable 7500 UI / 1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bemiparina. Solución inyectable 10000 UI / 1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bemiparina. Solución inyectable 37500 UI / 1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bemiparina. Solución inyectable 50000 UI / 1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,"Betiatida (Mertiatida) Mercaptoacetiltriglicina (MAG3) Tecnecio (99MTC) Polvo para reconstituir a solución inyectable 0,1 mg/1 ml",,,,,Excluido del listado  Acta 09 de 2018 SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bromotrimetilfenilcarbamoilmetiliminodiacetico (Mebrofenin) Polvo para reconstituir 10 mg/1U,,,,,Excluido del listado  Acta 23 de 2018  SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Bromotrimetilfenilcarbamoilmetiliminodiacetico (Mebrofenin)Polvo para reconstituir 45 mg/1U,,,,,Excluido del listado  Acta 23 de 2018  SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Busulfán 6 mg/1ml solución inyectable,,,,L01AB01,Excluido del listado. Acta 10 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Carmustina  Polvo para reconstituir a solución inyectable 100mg/1U,,,,,Excluido del listado. Acta 09 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.883213
+CO,Colombia,INVIMA,Cisatracurio Besilato. Solución inyectable 10mg/5mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,Cisatracurio Besilato. Solución inyectable 5mg/2.5mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,Cisatracurio Besilato. Solución inyectable 5mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,Cisteamina 50 y 150 mg,,,,,Excluido del listado.  Acta 15 de 2016 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,Cisteamina Clorhidrato Solución oftálmica 3.8mg/1mL,,,,,Excluido del listado.  Acta 12 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,"Clorhexidina gluconato. Solución Tópica 0,0007",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,"Clorhexidina gluconato. Solución Tópica 0,0008",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,"Clorhexidina gluconato. Solución Tópica 0,0045",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,"Clorhexidina gluconato. Solución Tópica 0,02",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,"Clorhexidina gluconato. Solución Tópica 0,01",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,Clorhexidina gluconato + alcohol isopropílico. Solución Tópica 2% + 70%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,Clorhexidina gluconato + alcohol isopropílico. Solución Tópica 4% + 70%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,Dalteparina Sódica (Anti-Factor Xa). Solución inyectable 10000 UI / 1 mL,,,,B02BD04,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,Dalteparina Sódica (Anti-Factor Xa). Solución inyectable 2500 UI / 1 mL,,,,B02BD04,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,Dalteparina Sódica (Anti-Factor Xa). Solución inyectable 5000 UI / 1 mL,,,,B02BD04,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,"Dalteparina Sódica (Anti-Factor Xa). Solución inyectable 7,500 UI / 0,3 mL",,,,B02BD04,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,"Dalteparina Sódica (Anti-Factor Xa). Solución inyectable 10,000 UI / 0,4 mL",,,,B02BD04,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.884213
+CO,Colombia,INVIMA,"Dalteparina Sódica (Anti-Factor Xa). Solución inyectable 2500 UI / 0,2 mL",,,,B02BD04,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Dapsona Tableta 50mg/1U,,,,J04BA02,Excluido del listado.  Acta 18 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Dapsona Tableta 100mg/1U,,,,J04BA02,Excluido del listado.  Acta 18 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,"Dexmedetomidina Clorhidrato. Solución inyectable 0,004 mg/1mL",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,"Dexmedetomidina Clorhidrato. Solución inyectable 0,008 mg/1mL",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,"Dexmedetomidina Clorhidrato. Solución inyectable 0,01 mg/1mL",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,"Dexmedetomidina Clorhidrato. Solución inyectable 0,1 mg/1mL",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Diazepam. Solución inyectable 5mg/1mL,,,,N05BA01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Diazóxido.  Suspensión oral. 50 mg /1mL,,,,,Excluido del listado. Acta 26 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Dieta baja en Galactosa,,,,,Excluido del listado  Acta 08 de 2019  SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Dieta libre de Aminoácidos no esenciales,,,,,Excluido del listado  Acta 08 de 2019  SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Dieta libre de Aminoácidos ramificados,,,,,Excluido del listado  Acta 08 de 2019  SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,"Dieta libre de isoleucina, metionina, treonina, valina",,,,,Excluido del listado  Acta 08 de 2019  SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Dieta libre de fenilalanina,,,,,Excluido del listado  Acta 08 de 2019  SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Dieta libre de fenilalanina y tiroxina,,,,,Excluido del listado  Acta 08 de 2019  SEM,,,,vital_unavailable,2026-03-13T16:31:24.885215
+CO,Colombia,INVIMA,Dieta libre de glicina,,,,,Excluido del listado  Acta 08 de 2019  SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dieta libre de leucina,,,,,Excluido del listado.  Acta 48 de 2013 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dieta libre de lisina y triptófano,,,,,Excluido del listado.  Acta 48 de 2013 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dieta libre de metionina,,,,,Excluido del listado.  Acta 48 de 2013 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dieta libre de fenilalanina,,,,,Excluido del listado.  Acta 48 de 2013 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dieta libre de fenilalanina y tiroxina,,,,,Excluido del listado.  Acta 48 de 2013 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dieta libre de glicina,,,,,Excluido del listado.  Acta 48 de 2013 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,"Dióxido De Carbono. Gas 0,99",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,"Dióxido De Carbono + Oxigeno. Gas 0,5% a 79% diluido en O2 al 21%",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dopamina Clorhidrato. Solución inyectable 0.32mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dopamina Clorhidrato. Solución inyectable 40mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dopamina Clorhidrato. Solución inyectable 0.8mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Dopamina Clorhidrato. Solución inyectable 1.6mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Enoxaparina Sódica. Solución inyectable 100 mg / mL,,,,B01AB05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,"Enoxaparina Sódica. Solución inyectable 20 mg / 0,2 mL",,,,B01AB05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Enoxaparina Sódica. Solución inyectable 200 mg / Vial,,,,B01AB05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Enoxaparina Sódica. Solución inyectable 300 mg / 3 mL,,,,B01AB05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,"Enoxaparina Sódica. Solución inyectable n0 mg / 0,4 mL",,,,B01AB05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.886215
+CO,Colombia,INVIMA,Enoxaparina Sódica. Solución inyectable 500 mg / Vial,,,,B01AB05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,"Enoxaparina Sódica. Solución inyectable 60 mg / 0,6 mL",,,,B01AB05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,"Enoxaparina Sódica. Solución inyectable 80 mg / 0,8 mL",,,,B01AB05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Elosulfasa alfa  5 mg/5 mL   (1 mg/mL),,,,,Excluido del listado.  Acta 8 de 2017 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Epinefrina. Solución inyectable 1mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Epinefrina. Solución inyectable 1.10mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Epinefrina. Solución inyectable 0.55mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Etambutol Tabletas 400mg,,,,,Excluido del listado.  Acta 10 de 2025 Tercera parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Etomidato. Solución inyectable 2mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Etomidato Emulsión. Solución inyectable 2mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Fibrinógeno coagulable Polvo liofilizado reconstituir a solución inyectable 1 G,,,,,Excluido del listado.  Acta 12 de 2017 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Fibrinógeno coagulable Polvo liofilizado para reconstituir a solución inyectable1g/vial.,,,,,Excluido del listado.  Acta 1 de 2024 Séptima parte SEM / Acta 1 de 2025 Séptima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Fenilefrina 10 mg/mL (1%),,,,,Excluido del listado.  Acta 19 de 2014 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Fentanil Citrato. Solución inyectable 0.05mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Fentanil Citrato. Solución inyectable 0.025mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,Flucitosina capsulas 500mg/1ml,,,,,Excluido del listado. Acta 09 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,5- Fluorouracilo. Solución inyectable.  50 mg/1mL,,,,L01BC02,Excluido del listado. Acta 24 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.887214
+CO,Colombia,INVIMA,"Fondaparinux Sódico. Solución inyectable 2,5 mg / 0,5 mL Jeringa prellenada",,,,B01AX05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,"Fondaparinux Sódico. Solución inyectable 5 mg / 0,4 mL Jeringa prellenada",,,,B01AX05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,"Fondaparinux Sódico. Solución inyectable 7,5 mg / 0,6 mL Jeringa prellenada",,,,B01AX05,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Folinato de Calcio. Solución inyectable. 10 mg/1mL,,,,,Excluido del listado. Acta 24 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Folinato de Calcio. Polvo liofilizado para reconstituir a solución inyectable. 50 mg/1mL,,,,,Excluido del listado. Acta 24 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Folinato de Calcio. Polvo liofilizado para reconstituir a solución inyectable. 350 mg/1mL,,,,,Excluido del listado. Acta 24 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Fórmula especial para dieta cetogénica a base de grasas con relación 4:1,,,,A07CA,Excluido del listado.  Acta 02 de 2014 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Foscarnet Sódico 24 mg/1ml solución inyectable.,,,,J05AD01,Excluido del listado.  Acta 10 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Fosfato de sodio y potasio equivalentes a fosforo,,,,,Excluido del listado.  Acta 21 de 2016 Segunda parte SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Fosfato ácido de potasio,,,,,Excluido del listado.  Acta 21 de 2016 Segunda parte SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Hemina solución inyectable 313 mg/vial,,,,B06AB01,Excluido del listado.  Acta 37 de 2013 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Haloperidol. Solución inyectable 5mg/1U,,,,N05AD01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Haloperidol. Solución inyectable 50mg/1U,,,,N05AD01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Haloperidol. Solución inyectable 150mg/1mL,,,,N05AD01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Heparina Sódica. Solución inyectable 1000 UI / mL,,,,B01AB01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Heparina Sódica. Solución inyectable 5000 UI / mL,,,,B01AB01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Heparina Sódica. Solución inyectable 2500 UI / mL,,,,B01AB01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Heparina Sódica. Solución inyectable 5000 UI / mL,,,,B01AB01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.888212
+CO,Colombia,INVIMA,Heparina Sódica. Solución inyectable 25000 UI / 5 mL,,,,B01AB01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,"Hepatitis B -Virus inactivado - Antígeno de superficie del virus de la Hepatitis B (HBsAg) Suspensión inyectable 0,003 mg/1mL",,,,,Excluido del listado.  Acta 02 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,"Hepatitis B -Virus inactivado - Antígeno de superficie del virus de la Hepatitis B (HBsAg) Suspensión inyectable 0,02 mg/1mL",,,,,Excluido del listado.  Acta 02 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,"Hepatitis B -Virus inactivado - Antígeno de superficie del virus de la Hepatitis B  (HBsAg) Suspensión inyectable 0,04 mg/1mL",,,,,Excluido del listado.  Acta 02 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Hepatitis B - Virus Inactivado - Antígeno de Superficie del Virus de la Hepatitis B (HBSAG) 20 μg / dosis (1 ml) Solución Inyectable,,,,,Excluido del listado.  Acta 4 de 2023 Octava parte SEM / Acta No.12 de 2025 SEMPB Cuarta parte,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Herpes Zoster-Varicella Zoster Virus (Oka Strain) Polvo Liofilizado-MIN19400 PFU/Vial,,,,,Excluido del listado.  Acta 01 de 2024 Décima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Hidrocortisona x 5 mg,,,,H02AB10,Excluido del listado.  Acta07 de 2014 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Hidrocortisona x 10 mg,,,,H02AB10,Excluido del listado.  Acta 07 de 2014 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Hidrocortisona x 20 mg,,,,H02AB10,Excluido del listado.  Acta 07 de 2014 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,"Indometacina Solución inyectable  0,5mg/1ml",,,,M01AB01,Excluido del listado.  Acta 18 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,"Indometacina Polvo liofilizado para reconstituir a solución inyectable  0,5mg/1ml",,,,M01AB01,Excluido del listado.  Acta 18 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Inmunoglobulina humana anti D-RH Solución inyectable  Mayor o igual a 1500 I.U. (300mcg),,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Inmunoglobulina humana anti D-RH Polvo liofilizado para reconstituir a solución inyectable  100 UI / 1 mL,,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Inmunoglobulina humana anti D-RH Polvo liofilizado para reconstituir a solución inyectable 1250 UI / 1Vial,,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Inmunoglobulina humana anti D-RH Polvo liofilizado para reconstituir a solución inyectable 1500 UI / 1Vial,,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Inmunoglobulina humana anti D-RH Solución inyectable 250 UI / 1Vial,,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Inmunoglobulina humana anti D-RH Solución inyectable 1640 UI / 1Vial,,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Inmunoglobulina humana anti D-RH Solución inyectable 625 UI / 1Vial,,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.889212
+CO,Colombia,INVIMA,Inmunoglobulina humana anti D-RH Solución inyectable 750 UI / 1Vial,,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,Inmunoglobulina humana normal 50mg/1ml,,,,,Excluido del listado.  Acta 21 de 2021 SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,Isofluorane. Líquido para inhalar 100%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,"Isoproterenol Clorhidrato Solución inyectable 0,2 mg/mL  - 1 mg/5 mL",,,,D05AA,Excluido del listado  Acta 03 de 2017 Segunda parte,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,Ketamina Clorhidrato. Solución inyectable 50mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,Ketamina Clorhidrato. Solución inyectable 10mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,Larotrectinib Sulfato Solución Oral 20 mg/ml,,,,L01EX12,Excluido del listado.  Acta 4 de 2023 Octava parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,Larotrectinib Sulfato Cápsula 25 mg,,,,L01EX12,Excluido del listado.  Acta 01 de 2024 Décima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,Larotrectinib Sulfato Cápsula 100 mg,,,,L01EX12,Excluido del listado.  Acta 4 de 2023 Octava parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,Levomepromazina. Solución inyectable 25 mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Octava parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,L-Carnitina Solución oral 100 mg/ mL  (10%),,,,,Excluido del listado  Acta 17 de 2018  SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,"Lidocaina clorhidrato + adrenalina Solución inyectable 36 mg + 22,5 μg / 1,8 mL",,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,"Lidocaina clorhidrato + adrenalina Solución inyectable 36 mg + 18 μg / 1,8 mL",,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.890213
+CO,Colombia,INVIMA,Lidocaina clorhidrato + epinefrina Solución inyectable 10 mg + 5 μg / 1 mL,,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,"Lidocaina clorhidrato + epinefrina Solución inyectable  20 mg + 0,0125 mg /1 mL",,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,"Lidocaina clorhidrato + epinefrina  Solución inyectable 20 mg + 0,02 mg / 1 mL",,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,"Lidocaina clorhidrato + epinefrina  Solución inyectable 20 mg + 0,01 mg/1mL",,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,Lidocaina clorhidrato + epinefrina  Solución inyectable 20 mg + 0.005 mg / 1 mL,,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,"Lormetazepam. Tableta 0,5 mg",,,,N05CD06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,Lutecio -  177,,,,,Excluido del listado.  Acta 21 de 2021 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,Melfalan 50 mg/1U Polvo para reconstituir,,,,L01AA03,Excluido del listado.  Acta 4 de 2023 Primera parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,Mepivacaina clorhidrato  + adrenalina  Solución inyectable  20 mg + 10 μg / 1 Ml,,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,Mepivacaina clorhidrato  + adrenalina  Solución inyectable 20 mg + 10 μg / 1 mL,,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,"Mepivacaina clorhidrato  + adrenalina  Solución inyectable 20,56 mg + 12,22 μg / 1 mL",,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,"Mepivacaina clorhidrato  + adrenalina  Solución inyectable 20 mg + 0,01 mg / 1mL",,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,"Mepivacaina clorhidrato  + adrenalina  Solución inyectable 20 mg + 12,5 μg / 1 mL",,,,,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,"Metrotexato x 2,5 mg",,,,,Excluido del listado.  Acta 02 de 2017 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,Metrotexato Solución inyectable. 25 mg / 1mL,,,,,Excluido del listado. Acta 24 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,Metrotexato Solución inyectable.  50mg/1mL,,,,,Excluido del listado. Acta 24 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,Metotrexato 100mg/1mL Solución inyectable,,,,,Excluido del listado. Acta 11 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.891214
+CO,Colombia,INVIMA,Metotrexato Sódico 500mg/1U Polvo liofilizado para reconstituir a solución inyectable,,,,,Excluido del listado. Acta 11 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,"Metotrexato Sodico equivalente a Metotrexato  5mg/1mL, 2,5mg/1mL Solución inyectable",,,,,Excluido del listado. Acta 11 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,Midazolam Clorhidrato. Solución inyectable estéril 1mg/1mL,,,,N05CD08,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,Midazolam Clorhidrato. Solución inyectable estéril 1mg/1U,,,,N05CD08,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,Midazolam Clorhidrato. Solución inyectable estéril 5mg/1mL,,,,N05CD08,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,Midazolam Clorhidrato. Solución inyectable estéril 7.5mg/1mL,,,,N05CD08,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,Midazolam Clorhidrato. Solución inyectable estéril 15mg/1mL,,,,N05CD08,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,"Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 1900 UI anti- AXA/ 0,2 mL Jeringa prellenada",,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,"Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 2850 UI anti- AXA/ 0,3 mL (Jeringa prellenada)",,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,"Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 3800 UI anti-Xa / 0,4mL (Jeringa prellenada)",,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,"Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 5700 UI anti-Xa / 0,6mL (Jeringa prellenada)",,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,"Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 7600 UI anti-Xa / 0,8 (Jeringa prellenada)",,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 5000 UI anti-Xa/ Jeringa prellenada,,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 10000 UI anti-Xa / Jeringa prellenada,,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 11400 UI anti-Xa / Jeringa prellenada,,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.892216
+CO,Colombia,INVIMA,Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 15200 UI anti-Xa / Jeringa prellenada,,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 19000 UI anti-Xa / Jeringa prellenada,,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,Nadroparina Cálcica (Heparina Glicosaminoglicano Equivalente A Actividad De Antifactor Xa). Solución inyectable 20000 UI anti-Xa / Jeringa prellenada,,,,B01AB06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,"Nitisinona cápsula 2mg, 5mg, 10mg",,,,A16AX04,Excluido del listado. Acta 09 y 10 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,Norepinefrina. Solución inyectable 1mg/1mL***,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,Nusinersen. Solución inyectable. 2.4 mg/1 mL,,,,M09AX07,Excluido del listado. Acta 24 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,Omeprazol Sodico Equivalente Omeprazol. Polvo Liofilizado para Reconstituir a Solución inyectable 40 mg / Vial,,,,A02BC01,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,"Óxido Nitrico. Gas 0,0008",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,"Óxido Nitrico. Gas 0,0008",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,"Óxido Nitrico.Gas 0,001",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,"Óxido Nitroso. Gas 0,99",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,"Oxigeno. Gas 0,93",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,"Oxigeno. Gas 0,99",,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,Oxigeno + Helio. Gas 21% + 79%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,Oxigeno + Helio. Gas 30% + 70%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,Oxigeno + Helio Gas 40% + 60%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.893215
+CO,Colombia,INVIMA,Oxitocina ampolla 10 UI/1mL,,,,,Excluido del listado. Acta 09 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Oxitocina ampolla 10 UI/1mL Solución inyectable,,,,,Excluido del listado. Acta 01 de 2024 Tercera parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Pegvisomant solución inyectable 10 mg/1mL,,,,H01AX01,Excluido del listado.  Acta 21 de 2021 SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Pentosan Polisulfato. Cápsula. 100 mg/1U,,,,G04BX15,Excluido del listado. Acta 26 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Pipotiazina Solución inyectable 25mg/1ml,,,,,Excluido del listado Acta 01 de 2025 Tercera parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Polimixina E (Colistina) 100 mg,,,,J01XB01,Excluido del listado.  Acta 48 de 2013 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Polimixina E (Colistina) 150 mg,,,,J01XB01,Excluido del listado.  Acta 48 de 2013 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Polimixina B 500.00 UI,,,,,Excluido del listado.  Acta 03 de 2014 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Propofol. Emulsión inyectable 10 mg / 1 mL (Ampollas 20 mL- 10 mL),,,,N01AX10,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM / Acta 01 de 2024 Décima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,"Propofol. Emulsión inyectable 1% - 0,2 g / Vial (20 mL))",,,,N01AX10,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM / Acta 01 de 2024 Décima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Propofol. Emulsión inyectable 2%,,,,N01AX10,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM / Acta 01 de 2024 Décima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Protamina Sulfato Solución Inyectable 50 mg/5mL,,,,,Excluido del listado.  Acta 4 de 2023 Séptima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Protamina Sulfato Solución Inyectable 5000 UI/5ml,,,,,Excluido del listado.  Acta 4 de 2023 Séptima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Protamina Clorhidrato Solución inyectable 71.5 mg /1mL,,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Protamina Clorhidrato Solución inyectable 1000UI/1ml,,,,,Excluido del listado.  Acta 07 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Protamina Clorhidrato Solución inyectable 5000UI/5mL,,,,,Excluido del listado.  Acta 4 de 2023 Séptima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.894215
+CO,Colombia,INVIMA,Regorafenib 40 mg Comprimido recubierto,,,,L01EX05,Excluido del listado.  Acta 4 de 2023 Septima parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Remifentanilo Clorhidrato. Polvo liofilizado para reconstituir a solución inyectable 1mg/1U,,,,N01AH06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Remifentanilo Clorhidrato. Polvo liofilizado para reconstituir a solución inyectable 2mg/1U,,,,N01AH06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Remifentanilo Clorhidrato. Polvo liofilizado para reconstituir a solución inyectable 5mg/1U,,,,N01AH06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Remifentanilo Clorhidrato. Polvo liofilizado para reconstituir a solución inyectable o perfusión 1mg/1U,,,,N01AH06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Remifentanilo Clorhidrato. Polvo liofilizado para reconstituir a solución inyectable o perfusión 2mg/1U,,,,N01AH06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Remifentanilo Clorhidrato. Polvo liofilizado para reconstituir a solución inyectable o perfusión 5mg/1U,,,,N01AH06,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Rocuronio Bromuro. Solución inyectable 1mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Rocuronio Bromuro. Solución inyectable 10mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Sevoflurane. Líquido para inhalación 100%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Sofosbuvir 400 mg/Ledipasvir 90 mg,,,,J05AP55,Excluido del listado.  Acta 11 de 2018 SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Solución para preservación de pulmón,,,,,Excluido del listado.  Acta 24 de 2016 primera parte SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Succinil Colina  cloruro solución inyectable 50 mg / 1mL,,,,,Excluido del listado.  Acta 06 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Succinil Colina  cloruro solución inyectable 4 mg / 1mL,,,,,Excluido del listado.  Acta 06 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Succinil Colina  cloruro Polvo liofilizado para reconstituir a solución inyectable  100 mg /1mL,,,,,Excluido del listado.  Acta 06 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Succinil Colina  cloruro solución inyectable 100 mg /1 mL,,,,,Excluido del listado.  Acta 06 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Succinil Colina  cloruro solución inyectable   20 mg/1mL(Suxametonio cloruro),,,,,Excluido del listado.  Acta 06 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Succinilcolina. Solución inyectable 100mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.895215
+CO,Colombia,INVIMA,Succinilcolina Cloruro. Solución inyectable 4mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Succinilcolina Cloruro. Solución inyectable 10mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Succinilcolina Cloruro. Solución inyectable 50mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Succinilcolina Cloruro. Solución inyectable 100mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Succinilcolina Cloruro. Polvo liofilizado para reconstituir a solución inyectable 100mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Suero Antiofidico Polivalente Solución Inyectable,,,,,Excluido del listado.  Acta 13 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Sulfadiazina,,,,,Excluido del listado.  Acta 21 de 2016 Segunda parte SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Sulfato De Magnesio. Solución inyectable 10%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Sulfato De Magnesio. Solución inyectable 20%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Sulfato De Magnesio. Solución inyectable 25%,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Suxametonios (Succinilcolina). Solución inyectable 20mg/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.896213
+CO,Colombia,INVIMA,Tesosterona undecanoato Solución inyectable 250mg/1mL,,,,,Excluido del listado.  Acta 18 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Tiotepa Polvo concentrado para solución para infusión 100mg/1U,,,,,Excluido del listado.  Acta 09 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Tiotepa Polvo para reconstituir a solución inyectable 15mg/1U,,,,,Excluido del listado.  Acta 09 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Tiopental Sodico. Polvo para reconstituir a solución inyectable 1000mg/1U,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Tiopental Sodico. Polvo para reconstituir a solución inyectable 500mg/1U,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Trientina Clorhidrato cápsulas 250mg,,,,,Excluido del listado.  Acta 4 de 2022 SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Trimetilglicina (Betahina anhidra) x 1 G,,,,,Excluido del listado.  Acta15 de 2016 y acta 03 Primera parte de 2018 SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Trióxido de Arsénico Solución Inyectable 10mg / 10ml,,,,,Excluido del listado.  Acta 14 de 2021 SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Tuberculina PPD para uso humano,,,,V04CF01,Excluido del listado.  Acta 13 de 2020 SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Yodo povidona complejo equivalente  a Yodo elemental Solución Oftálmica 50 mg / 1 mL,,,,S01XA20,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Yodo povidona complejo equivalente  a Yodo elemental  Solución Oftálmica 25 mg /1 mL,,,,S01XA20,Excluido del listado.  Acta 11 de 2019 SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Vasopresina 20 u/Ml,,,,,Excluido del listado.  Acta 03 de 2014 SEMPB,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Vasopresina. Solución inyectable 20UI/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Vasopresina Tanato. Suspensión inyectable 5UI/1mL,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Vecuronio Bromuro. Polvo para reconstituir a solución inyectable 4mg/1U,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Vecuronio Bromuro. Polvo para reconstituir a solución inyectable 10mg/1U,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Vecuronio Bromuro. Solución inyectable. 4mg/1U,,,,,Excluido del listado.  Acta 4 de 2023 Segunda parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.897215
+CO,Colombia,INVIMA,Vigabatrina Tabletas 500 mg,,,,N03AG04,Excluido del listado.  Acta 1 de 2024 Cuarta parte SEM,,,,vital_unavailable,2026-03-13T16:31:24.898213
