@@ -72,10 +72,10 @@
         .kpi-delta.up { color: #ef4444; }
         .kpi-delta.down { color: var(--lcg-green); }
         .kpi-delta.neutral { color: var(--text-muted); }
-        .kpi-sparkline-wrap { margin-top: 6px; height: 22px; }
+        .kpi-sparkline-wrap { display: none; }
         .kpi-sparkline-wrap svg { width: 100%; height: 22px; }
         /* Mini bar chart for countries */
-        .kpi-minibar { display: flex; gap: 2px; margin-top: 6px; height: 6px; border-radius: 3px; overflow: hidden; }
+        .kpi-minibar { display: none; }
         .kpi-minibar-seg { height: 100%; flex: 1; border-radius: 2px; }
 
         /* ── Context Bar ── */
@@ -137,6 +137,7 @@
         .atc-code { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 13px; font-weight: 600; }
         .atc-lnd { margin-left: auto; font-size: 11px; color: var(--text-muted); white-space: nowrap; }
         .atc-substance { margin-top: 1px; padding-left: 15px; font-size: 10px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .atc-ems-tv { margin-top: 1px; padding-left: 15px; font-size: 9px; color: var(--status-active); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
         .atc-row2 { margin-top: 2px; padding-left: 15px; font-size: 11px; color: var(--text-muted); display: flex; gap: 6px; align-items: center; }
         .atc-flags { margin-left: auto; font-size: 11px; letter-spacing: -2px; flex-shrink: 0; }
         .atc-row2 .st-active { color: var(--status-active-soft); }
@@ -485,6 +486,7 @@ const S = {
 let RAW = null;
 let D = null; // derived
 let emsRoodSet = new Set();
+let emsRoodDetail = {};
 
 // ═══════════════════════════════════════
 // MAP
@@ -585,6 +587,7 @@ fetch("data.json")
     .then(data => {
         RAW = data;
         emsRoodSet = new Set(data.ems_rood_atcs || []);
+        emsRoodDetail = data.ems_rood_detail || {};
         document.getElementById("footer").innerHTML = `<span style="color:#5a7faa">Landelijk Co\u00f6rdinatiecentrum Geneesmiddelen \u00b7 ${data.generated} \u00b7 ${data.total_atc} ATC-codes \u00b7 ${data.total_countries} bronlanden \u00b7 ${data.records.length.toLocaleString("nl-NL")} meldingen</span><span class="footer-right"><span class="footer-kbd"><kbd>Esc</kbd> terug &middot; <kbd>/</kbd> zoeken</span></span>`;
         loadHash();
         recompute();
@@ -606,6 +609,7 @@ function recompute() {
     const ppStart = S.period > 0 ? addDays(today, -S.period * 2) : null;
 
     const inPeriod = RAW.records.filter(r => {
+        if (r.st === "inactive") return false;  // verouderd (>1 jaar geen update)
         if (!pStart) return true;
         const start = r.ss || r.sa || today;
         const end = r.rd || r.ee || null;
@@ -777,7 +781,17 @@ function renderKpis() {
     const k = D.kpis;
     document.getElementById("kpi-active").textContent = k.active.toLocaleString("nl-NL");
     document.getElementById("kpi-active-sub").textContent = `${k.activePercent}% van totaal`;
-    document.getElementById("kpi-countries").innerHTML = `${k.countries}<span class="kpi-sub" style="margin-left:4px">/ ${k.totalCountries}</span>`;
+
+    // Landen geraakt: reactief op geselecteerde ATC (anders globaal)
+    let countriesSet = k.countriesSet;
+    if (S.selectedAtc) {
+        const atcRecs = D.inPeriod.filter(r => r.atc === S.selectedAtc && r.st === "active");
+        countriesSet = new Set(atcRecs.map(r => r.cc));
+    }
+    const countriesCount = countriesSet.size;
+    document.getElementById("kpi-countries").innerHTML =
+        `${countriesCount}<span class="kpi-sub" style="margin-left:4px">/ ${k.totalCountries}</span>`;
+
     document.getElementById("kpi-critical").textContent = k.critical.toLocaleString("nl-NL");
     document.getElementById("kpi-resolved").textContent = k.resolved.toLocaleString("nl-NL");
     document.getElementById("kpi-resolved-period").textContent = `(${S.period === 0 ? "alles" : S.period === 365 ? "12m" : S.period + "d"})`;
@@ -785,20 +799,16 @@ function renderKpis() {
     setDelta("kpi-active-delta", k.activeDelta, true);
     setDelta("kpi-critical-delta", k.criticalDelta, true);
     setDelta("kpi-resolved-delta", k.resolvedDelta, false);
-    document.getElementById("kpi-countries-delta").textContent = "";
+    document.getElementById("kpi-countries-delta").textContent = S.selectedAtc ? `voor ${S.selectedAtc}` : "";
 
-    // Mini bar for countries
+    // Mini bar for countries — reflecteert dezelfde set (globaal of per ATC)
     const bar = document.getElementById("kpi-countries-bar");
     bar.innerHTML = RAW.monitored_countries.map(cc => {
-        const hasActive = k.countriesSet.has(cc);
+        const hasActive = countriesSet.has(cc);
         const color = hasActive ? "var(--status-active-soft)" : "var(--bg-elevated)";
         const ci = CC[cc];
         return `<div class="kpi-minibar-seg" style="background:${color}" title="${ci ? ci.name : cc}"></div>`;
     }).join("");
-
-    renderSparkline("spark-active", D.spark.active, "#ef4444");
-    renderSparkline("spark-critical", D.spark.critical, "#f59e0b");
-    renderSparkline("spark-resolved", D.spark.resolved, "#a8c04d");
 
     document.querySelectorAll(".kpi-card").forEach(c =>
         c.classList.toggle("active", S.kpiFilter === c.dataset.kpi)
@@ -903,6 +913,7 @@ function renderSidebar() {
                 <span class="atc-lnd">${a.countryCount} ${a.countryCount === 1 ? "land" : "landen"}</span>
             </div>
             ${a.substance ? `<div class="atc-substance">${escHtml(a.substance)}</div>` : ""}
+            ${emsRoodDetail[a.atc] ? `<div class="atc-ems-tv">${emsRoodDetail[a.atc].join(" \u00b7 ")}</div>` : ""}
             ${row2}
         </div>`;
     }).join("") + (list.length > 500 ? `<div class="no-results">${list.length - 500} meer \u2014 verfijn zoekopdracht</div>` : "");
@@ -1219,8 +1230,10 @@ function medCard(r, groupBy) {
     return `<div class="med-card">
         <div class="med-name">${escHtml(name)}</div>
         ${substance ? `<div class="med-substance">${escHtml(substance)}</div>` : ""}
+        ${r.tv || r.df ? `<div class="med-substance" style="font-style:italic">${escHtml(r.tv || r.df)}${r.tv_src === "atc" ? ' <span style="font-style:normal;color:var(--text-muted);font-size:10px">(via ATC)</span>' : ''}</div>` : ""}
         <div class="med-meta">
             <span class="med-tag ${r.st}">${stLabel}</span>
+            ${r.tv && emsRoodDetail[r.atc] && emsRoodDetail[r.atc].includes(r.tv) ? '<span class="med-tag" style="background:var(--status-active);color:white">EMS kritiek</span>' : ''}
             ${dates}
             ${link}
         </div>
