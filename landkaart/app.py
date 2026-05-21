@@ -26,7 +26,7 @@ ISO2_TO_ISO3 = {
 ATC_COLUMNS = ["atc_code", "atc_level1", "Atc Code"]
 COUNTRY_CODE_COL = "country_code"
 COUNTRY_NAME_COL = "country_name"
-
+ 
 
 def load_all_shortage_data() -> pd.DataFrame:
     """Leest alle *_shortage_*.csv uit output en combineert rijen met ATC + land."""

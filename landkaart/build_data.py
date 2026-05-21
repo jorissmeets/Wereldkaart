@@ -15,9 +15,46 @@ import pandas as pd
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
 DATA_FILE = Path(__file__).resolve().parent / "data.json"
 EMS_FILE = Path(__file__).resolve().parent.parent / "LijstenEMS" / "Achtergrondlijst 2025-Tabel 1.csv"
+CAUSE_MAPPING_FILE = Path(__file__).resolve().parent.parent / "output" / "cause_mapping_v2.csv"
+JP_ATC_MAP_FILE = Path(__file__).resolve().parent / "jp_substance_atc.json"
 
 ATC_COLUMNS = ["atc_code", "atc_level1", "Atc Code"]
 ATC5_RE = re.compile(r"^[A-Z]\d{2}[A-Z]{2}\d{2}$")
+
+# ── Reden van tekort: per land welke kolom uit de scraper-CSV bevat de reden? ──
+# Zie ook output/cause_mapping_v2.csv voor de waarde-mapping.
+PER_COUNTRY_REASON_COL: dict[str, str] = {
+    "BE": "reason",
+    "RO": "reason",
+    "JP": "shortage_reason",
+    "DE": "reason",
+    "IT": "reason",
+    "ES": "reason",
+}
+
+# Categorieën die we tonen, met kleur-hint voor de frontend. De ordening bepaalt
+# ook welke kleur in de legenda bovenaan staat.
+REASON_CATEGORY_LABELS: dict[str, str] = {
+    "production_delay": "Productieprobleem",
+    "release_delay": "Vrijgave eindproduct",
+    "raw_material": "Grondstofprobleem",
+    "excipient": "Hulpstof",
+    "quality": "Kwaliteitsprobleem",
+    "increased_demand": "Toegenomen vraag",
+    "logistics": "Logistiek",
+    "commercial": "Commercieel",
+    "discontinuation": "Uit de handel",
+    "temporary_discontinuation": "Tijdelijk uit de handel",
+    "regulatory": "Regelgevend",
+    "recall": "Terugroeping",
+    "force_majeure": "Overmacht",
+    "patent": "Octrooi",
+    "supply_problem": "Leveringsprobleem",
+    "limited_supply": "Beperkte beschikbaarheid",
+    "unknown_code": "Onbekend",
+    "other": "Andere reden",
+    "none": "Niet opgegeven",
+}
 
 # Statussen die als "resolved" gelden
 RESOLVED_STATUSES = {
@@ -278,6 +315,41 @@ def load_ems_data() -> tuple[list[str], dict[str, list[str]], dict[str, str]]:
     )
 
 
+def load_jp_atc_map() -> dict[str, str]:
+    """Lees jp_substance_atc.json → dict {japanse_stofnaam: atc5}.
+
+    Wordt gebruikt om JP-scraper-records (jp_mhlw.py) te verrijken die geen
+    eigen ATC-code leveren maar wel een active_substance in het Japans.
+    """
+    if not JP_ATC_MAP_FILE.exists():
+        return {}
+    try:
+        raw = json.loads(JP_ATC_MAP_FILE.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"  JP ATC map kon niet geladen worden: {e}")
+        return {}
+    mapping = {k: v for k, v in raw.items() if not k.startswith("_")}
+    print(f"  JP ATC map geladen: {len(mapping)} stof→ATC entries")
+    return mapping
+
+
+def load_cause_mapping() -> dict[tuple[str, str], str]:
+    """Lees cause_mapping_v2.csv → dict {(country_code, raw_value_normalized): category}."""
+    if not CAUSE_MAPPING_FILE.exists():
+        print(f"  Cause-mapping niet gevonden: {CAUSE_MAPPING_FILE}")
+        return {}
+    df = pd.read_csv(CAUSE_MAPPING_FILE, encoding="utf-8")
+    lookup: dict[tuple[str, str], str] = {}
+    for _, row in df.iterrows():
+        cc = safe_str(row.get("source_country")).upper()
+        raw = safe_str(row.get("source_value")).strip().lower()
+        cat = safe_str(row.get("normalized_category"))
+        if cc and raw and cat:
+            lookup[(cc, raw)] = cat
+    print(f"  Cause-mapping geladen: {len(lookup)} entries voor {len({k[0] for k in lookup})} landen")
+    return lookup
+
+
 def build():
     if not OUTPUT_DIR.exists():
         print(f"Output-map niet gevonden: {OUTPUT_DIR}")
@@ -287,6 +359,13 @@ def build():
     ems_rood, ems_rood_detail, atc_tv_map = load_ems_data()
     if atc_tv_map:
         print(f"  EMS ATC→toedieningsvorm lookup: {len(atc_tv_map)} unambiguous ATC5-codes")
+
+    # Reden-mapping
+    cause_lookup = load_cause_mapping()
+
+    # JP substance → ATC mapping (voor JP-records zonder eigen ATC)
+    jp_atc_map = load_jp_atc_map()
+    jp_enriched = 0
 
     records: list[dict] = []
 
@@ -309,6 +388,18 @@ def build():
 
         for _, row in df.iterrows():
             atc5 = extract_atc5(row.get(atc_col, ""))
+
+            # Fallback voor JP: active_substance (Japans) → ATC via handcurated map
+            if not atc5:
+                cc_check = safe_str(row.get("country_code")).upper()
+                if cc_check == "JP" and jp_atc_map:
+                    sub_jp = safe_str(row.get("active_substance"))
+                    if sub_jp and sub_jp in jp_atc_map:
+                        candidate = jp_atc_map[sub_jp]
+                        if ATC5_RE.match(candidate):
+                            atc5 = candidate
+                            jp_enriched += 1
+
             if not atc5:
                 continue
 
@@ -352,6 +443,19 @@ def build():
             if substance:
                 rec["sub"] = substance
 
+            # Reden van tekort: per land lezen we een specifieke kolom en mappen die
+            # via cause_mapping_v2.csv naar een genormaliseerde categorie. Rc="none"
+            # (geen reden opgegeven, dominant bij JP) slaan we over om de chip niet
+            # leeg/zinloos te tonen.
+            reason_col = PER_COUNTRY_REASON_COL.get(cc)
+            if reason_col and reason_col in df.columns:
+                reason_raw = safe_str(row.get(reason_col))
+                if reason_raw:
+                    cat = cause_lookup.get((cc, reason_raw.strip().lower()))
+                    if cat and cat != "none":
+                        rec["rc"] = cat
+                        rec["rt"] = reason_raw[:160]
+
             # Toedieningsvorm bepalen:
             #   1. uit dosage_form via keyword-mapping
             #   2. fallback: via ATC-code als EMS maar 1 unieke tv heeft
@@ -388,6 +492,8 @@ def build():
             filled += 1
     if filled:
         print(f"  Active substance aangevuld via ATC-lookup: {filled} records")
+    if jp_enriched:
+        print(f"  JP records verrijkt met ATC via stof-map: {jp_enriched}")
 
     # Bouw indices en KPI-data
     today = date.today().isoformat()
@@ -405,6 +511,18 @@ def build():
     if ems_rood:
         print(f"  EMS kritieke ATC5-codes (rood): {len(ems_rood)}")
 
+    # Reden-statistieken: hoeveel records hebben een gemapt category?
+    reason_counts: dict[str, int] = {}
+    for r in records:
+        cat = r.get("rc")
+        if cat:
+            reason_counts[cat] = reason_counts.get(cat, 0) + 1
+    if reason_counts:
+        top = sorted(reason_counts.items(), key=lambda x: -x[1])[:6]
+        print("  Reden van tekort (top 6 categorieën): " +
+              ", ".join(f"{k}={v}" for k, v in top))
+        print(f"  Records met reden: {sum(reason_counts.values())}/{len(records)}")
+
     result = {
         "generated": today,
         "monitored_countries": all_countries,
@@ -413,6 +531,7 @@ def build():
         "atc_country_count": atc_country_count,
         "ems_rood_atcs": ems_rood,
         "ems_rood_detail": ems_rood_detail,
+        "reason_labels": REASON_CATEGORY_LABELS,
         "records": records,
     }
 

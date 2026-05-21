@@ -222,6 +222,34 @@
         .med-tag.upcoming { background: var(--status-upcoming-bg); color: var(--status-upcoming); }
         .med-tag.resolved { background: var(--status-resolved-bg); color: var(--status-resolved); }
         .med-tag.date { background: rgba(0,66,139,0.06); color: var(--text-secondary); font-weight: 400; }
+        .med-tag.reason { background: rgba(11,187,239,0.10); color: var(--lcg-dark); font-weight: 500; border: 1px solid rgba(11,187,239,0.25); }
+        .med-tag.reason.cat-production_delay { background: rgba(232,134,12,0.12); color: var(--status-upcoming-soft); border-color: rgba(232,134,12,0.30); }
+        .med-tag.reason.cat-quality { background: rgba(239,68,68,0.10); color: var(--status-active-soft); border-color: rgba(239,68,68,0.28); }
+        .med-tag.reason.cat-raw_material { background: rgba(232,134,12,0.12); color: var(--status-upcoming-soft); border-color: rgba(232,134,12,0.30); }
+        .med-tag.reason.cat-excipient { background: rgba(232,134,12,0.10); color: var(--status-upcoming-soft); border-color: rgba(232,134,12,0.25); }
+        .med-tag.reason.cat-increased_demand { background: rgba(168,192,77,0.18); color: #4d6b16; border-color: rgba(168,192,77,0.40); }
+        .med-tag.reason.cat-logistics { background: rgba(11,187,239,0.10); color: var(--lcg-dark); border-color: rgba(11,187,239,0.25); }
+        .med-tag.reason.cat-commercial { background: rgba(94,94,94,0.10); color: #555; border-color: rgba(94,94,94,0.25); }
+        .med-tag.reason.cat-discontinuation { background: rgba(94,94,94,0.12); color: #444; border-color: rgba(94,94,94,0.30); }
+        .med-tag.reason.cat-temporary_discontinuation { background: rgba(94,94,94,0.08); color: #555; border-color: rgba(94,94,94,0.22); }
+        .med-tag.reason.cat-regulatory { background: rgba(94,94,94,0.10); color: #555; border-color: rgba(94,94,94,0.25); }
+        .med-tag.reason.cat-recall { background: rgba(239,68,68,0.12); color: var(--status-active-soft); border-color: rgba(239,68,68,0.30); }
+        .med-tag.reason.cat-other { background: rgba(0,66,139,0.06); color: var(--text-muted); border-color: rgba(0,66,139,0.12); }
+        .med-tag.reason.cat-unknown_code { background: rgba(0,66,139,0.06); color: var(--text-muted); border-color: rgba(0,66,139,0.12); }
+
+        /* Reden-filter bar in sidebar */
+        .reason-filter-bar { padding: 4px 14px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; border-bottom: 1px solid var(--border-light); background: var(--bg-base); }
+        .reason-filter-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; margin-right: 4px; }
+        .reason-chip { padding: 2px 7px; border-radius: 10px; font-size: 10px; cursor: pointer; background: rgba(0,66,139,0.06); color: var(--text-secondary); border: 1px solid transparent; font-weight: 500; line-height: 1.3; }
+        .reason-chip:hover { background: rgba(11,187,239,0.15); }
+        .reason-chip.active { background: var(--lcg-cyan); color: white; border-color: var(--lcg-cyan); }
+        .reason-chip-count { opacity: 0.65; margin-left: 3px; font-weight: 400; }
+
+        /* Reden-legenda in map-area */
+        .map-legend-reason { position: absolute; bottom: 14px; right: 10px; z-index: 1000; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-radius: 10px; padding: 8px 12px; max-width: 200px; }
+        .map-legend-reason .legend-title { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600; }
+        .map-legend-reason .legend-reason-row { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--text-secondary); margin-bottom: 2px; }
+        .map-legend-reason .legend-reason-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
         .med-country-link { font-size: 10px; color: var(--lcg-cyan); cursor: pointer; margin-left: auto; }
         .med-country-link:hover { text-decoration: underline; }
 
@@ -364,6 +392,11 @@
         <div class="ems-toggle-bar">
             <label><input type="checkbox" id="ems-rood-toggle"> Alleen kritiek (EMS rood)</label>
         </div>
+        <div class="reason-filter-bar" id="reason-filter-bar">
+            <span class="reason-filter-label">Reden:</span>
+            <button class="reason-chip active" data-reason="all">Alle</button>
+            <!-- Andere chips worden dynamisch ingevuld vanuit data.reason_labels -->
+        </div>
         <div class="sort-bar">
             <label>Sorteer:</label>
             <button class="sort-btn active" data-sort="countries-desc">Landen &darr;</button>
@@ -387,6 +420,10 @@
             <div class="legend-row"><div class="legend-dot" style="background:var(--lcg-green);opacity:0.5"></div> Opgelost</div>
             <div class="legend-row"><div class="legend-dot" style="background:var(--lcg-cyan);opacity:0.3"></div> Geen tekort</div>
             <div class="legend-row"><div class="legend-dot" style="background:#1a2744"></div> Geen data</div>
+        </div>
+        <div class="map-legend-reason" id="map-legend-reason" style="display:none">
+            <div class="legend-title">Reden tekort</div>
+            <!-- Rijen worden dynamisch gevuld -->
         </div>
     </div>
 
@@ -478,6 +515,7 @@ const S = {
     kpiFilter: null,
     searchQuery: "",
     sidebarFilter: "all",
+    reasonFilter: "all",
     sidebarSort: "countries-desc",
     detailTab: "active",
     emsRoodOnly: false,
@@ -487,6 +525,67 @@ let RAW = null;
 let D = null; // derived
 let emsRoodSet = new Set();
 let emsRoodDetail = {};
+let reasonLabels = {};
+
+// Reden-categorie volgorde + bouwers van filter-chips en legenda
+const REASON_ORDER = [
+    "production_delay", "raw_material", "quality", "increased_demand",
+    "commercial", "discontinuation", "temporary_discontinuation",
+    "supply_problem", "release_delay", "excipient", "logistics",
+    "regulatory", "recall", "force_majeure", "patent", "limited_supply",
+    "unknown_code", "other"
+];
+
+function buildReasonFilterBar(records, labels) {
+    const bar = document.getElementById("reason-filter-bar");
+    if (!bar) return;
+    // Tellingen per categorie (over alle records)
+    const counts = {};
+    records.forEach(r => { if (r.rc) counts[r.rc] = (counts[r.rc] || 0) + 1; });
+    // "Alle" knop bestaat al; voeg de overige toe in REASON_ORDER waar count > 0
+    REASON_ORDER.forEach(cat => {
+        if (!counts[cat]) return;
+        const btn = document.createElement("button");
+        btn.className = "reason-chip cat-" + cat;
+        btn.dataset.reason = cat;
+        btn.innerHTML = escHtml(labels[cat] || cat) +
+            `<span class="reason-chip-count">${counts[cat].toLocaleString("nl-NL")}</span>`;
+        bar.appendChild(btn);
+    });
+    // Click-handlers
+    bar.querySelectorAll(".reason-chip").forEach(btn => {
+        btn.addEventListener("click", () => {
+            bar.querySelectorAll(".reason-chip").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            S.reasonFilter = btn.dataset.reason;
+            const legendEl = document.getElementById("map-legend-reason");
+            if (legendEl) legendEl.style.display = (S.reasonFilter === "all") ? "none" : "block";
+            recompute(); render();
+        });
+    });
+}
+
+function buildReasonLegend(labels) {
+    const el = document.getElementById("map-legend-reason");
+    if (!el) return;
+    // Pak voor elke categorie een achtergrondkleur uit de bestaande CSS (computed)
+    REASON_ORDER.forEach(cat => {
+        if (!labels[cat]) return;
+        const row = document.createElement("div");
+        row.className = "legend-reason-row";
+        // Kleurpunt afgeleid van bestaande .med-tag.reason.cat-* styling
+        const dot = document.createElement("span");
+        dot.className = "legend-reason-dot med-tag reason cat-" + cat;
+        dot.style.padding = "0";
+        dot.style.fontSize = "0";
+        dot.style.width = "10px";
+        dot.style.height = "10px";
+        dot.style.borderRadius = "50%";
+        row.appendChild(dot);
+        row.appendChild(document.createTextNode(" " + (labels[cat] || cat)));
+        el.appendChild(row);
+    });
+}
 
 // ═══════════════════════════════════════
 // MAP
@@ -588,6 +687,9 @@ fetch("data.json")
         RAW = data;
         emsRoodSet = new Set(data.ems_rood_atcs || []);
         emsRoodDetail = data.ems_rood_detail || {};
+        reasonLabels = data.reason_labels || {};
+        buildReasonFilterBar(data.records, reasonLabels);
+        buildReasonLegend(reasonLabels);
         document.getElementById("footer").innerHTML = `<span style="color:#5a7faa">Landelijk Co\u00f6rdinatiecentrum Geneesmiddelen \u00b7 ${data.generated} \u00b7 ${data.total_atc} ATC-codes \u00b7 ${data.total_countries} bronlanden \u00b7 ${data.records.length.toLocaleString("nl-NL")} meldingen</span><span class="footer-right"><span class="footer-kbd"><kbd>Esc</kbd> terug &middot; <kbd>/</kbd> zoeken</span></span>`;
         loadHash();
         recompute();
@@ -610,6 +712,7 @@ function recompute() {
 
     const inPeriod = RAW.records.filter(r => {
         if (r.st === "inactive") return false;  // verouderd (>1 jaar geen update)
+        if (S.reasonFilter && S.reasonFilter !== "all" && r.rc !== S.reasonFilter) return false;
         if (!pStart) return true;
         const start = r.ss || r.sa || today;
         const end = r.rd || r.ee || null;
@@ -1234,6 +1337,7 @@ function medCard(r, groupBy) {
         <div class="med-meta">
             <span class="med-tag ${r.st}">${stLabel}</span>
             ${r.tv && emsRoodDetail[r.atc] && emsRoodDetail[r.atc].includes(r.tv) ? '<span class="med-tag" style="background:var(--status-active);color:white">EMS kritiek</span>' : ''}
+            ${r.rc ? `<span class="med-tag reason cat-${r.rc}" title="${escHtml(r.rt || reasonLabels[r.rc] || r.rc)}">${escHtml(reasonLabels[r.rc] || r.rc)}</span>` : ''}
             ${dates}
             ${link}
         </div>

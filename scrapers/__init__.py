@@ -3,6 +3,7 @@ from scrapers.lv_zva import LvZvaScraper
 from scrapers.es_aemps import EsAempsScraper
 from scrapers.it_aifa import ItAifaScraper
 from scrapers.de_bfarm import DeBfarmScraper
+from scrapers.de_pei import DePeiScraper
 from scrapers.fr_ansm import FrAnsmScraper
 from scrapers.no_dmp import NoDmpScraper
 from scrapers.cz_sukl import CzSuklScraper
@@ -46,3 +47,6 @@ from scrapers.mx_cofepris import MxCofeprisScraper
 from scrapers.tw_tfda import TwTfdaScraper
 from scrapers.eg_eda import EgEdaScraper
 from scrapers.za_sahpra import ZaSahpraScraper
+from scrapers.pl_mz import PlMzScraper
+from scrapers.gb_mhra import GbMhraScraper
+from scrapers.nz_pharmac import NzPharmacScraper
