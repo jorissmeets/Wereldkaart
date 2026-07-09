@@ -134,8 +134,10 @@
         .atc-dot.st-active { background: var(--status-active); }
         .atc-dot.st-upcoming { background: var(--status-upcoming); }
         .atc-dot.st-resolved { background: var(--status-resolved); }
-        .atc-code { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 13px; font-weight: 600; }
-        .atc-lnd { margin-left: auto; font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+        .atc-name { font-size: 13px; font-weight: 600; min-width: 0; flex: 0 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .atc-code-line { margin-top: 1px; padding-left: 15px; }
+        .atc-code { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 10px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.2px; }
+        .atc-lnd { margin-left: auto; font-size: 11px; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
         .atc-substance { margin-top: 1px; padding-left: 15px; font-size: 10px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .atc-ems-tv { margin-top: 1px; padding-left: 15px; font-size: 9px; color: var(--status-active); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
         .atc-row2 { margin-top: 2px; padding-left: 15px; font-size: 11px; color: var(--text-muted); display: flex; gap: 6px; align-items: center; }
@@ -190,7 +192,7 @@
         .detail-top-item { display: flex; align-items: center; gap: 6px; padding: 5px 0; cursor: pointer; border-radius: 4px; }
         .detail-top-item:hover { background: rgba(11,187,239,0.05); margin: 0 -4px; padding: 5px 4px; }
         .detail-top-rank { font-size: 10px; color: var(--text-muted); min-width: 14px; }
-        .detail-top-code { font-family: monospace; font-size: 12px; font-weight: 600; }
+        .detail-top-code { font-size: 12px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .detail-top-info { margin-left: auto; font-size: 11px; color: var(--text-muted); }
 
         .detail-resolved-item { display: flex; align-items: flex-start; gap: 6px; padding: 4px 0; }
@@ -212,6 +214,7 @@
         .section-name { font-size: 12px; font-weight: 600; }
         .section-count { font-size: 10px; color: var(--text-muted); margin-left: auto; }
         .section-name.mono { font-family: monospace; }
+        .section-atc { font-family: monospace; font-size: 10px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.2px; }
 
         .med-card { background: var(--lcg-light); border: none; border-radius: 8px; padding: 8px 10px; margin: 0 14px 5px; }
         .med-name { font-size: 11px; font-weight: 600; color: var(--text-primary); }
@@ -704,6 +707,13 @@ fetch("data.json")
 // ═══════════════════════════════════════
 function isoToday() { return new Date().toISOString().slice(0, 10); }
 function addDays(iso, days) { const d = new Date(iso); d.setDate(d.getDate() + days); return d.toISOString().slice(0, 10); }
+// Nette weergavenaam: laat codes (met cijfers) met rust, zet ALL-CAPS stofnamen om naar Title Case
+function prettyName(s) {
+    s = (s || "").trim();
+    if (!s || /\d/.test(s)) return s;
+    if (s === s.toUpperCase()) return s.toLowerCase().replace(/(^|[\s\-/(+])(\p{L})/gu, (m, sep, ch) => sep + ch.toUpperCase());
+    return s;
+}
 
 function recompute() {
     const today = isoToday();
@@ -767,12 +777,18 @@ function recompute() {
         const subCounts = {};
         recs.forEach(r => { if (r.sub) (subCounts[r.sub] = (subCounts[r.sub] || 0) + 1); });
         const substance = Object.entries(subCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "";
+        // Meest voorkomende geneesmiddelnaam (fallback als stofnaam ontbreekt, bv. landen zonder ATC)
+        const mnCounts = {};
+        recs.forEach(r => { if (r.mn) (mnCounts[r.mn] = (mnCounts[r.mn] || 0) + 1); });
+        const medName = Object.entries(mnCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "";
+        // Weergavenaam: stof > geneesmiddel > ATC-code
+        const name = prettyName(substance || medName || atc);
         // Check if any record was scraped/added in last 48h
         const recentCutoff = addDays(isoToday(), -2);
         const isNew = recs.some(r => (r.sa || "") >= recentCutoff);
         // Collect searchable text
         const searchText = [atc, substance, ...recs.map(r => r.mn || "")].join(" ").toUpperCase();
-        return { atc, countries, countryCount: countries.length, aN, uN, rN, worst, substance, searchText, isNew };
+        return { atc, countries, countryCount: countries.length, aN, uN, rN, worst, substance, medName, name, searchText, isNew };
     });
 
     // Country index
@@ -1012,10 +1028,10 @@ function renderSidebar() {
         return `<div class="atc-item${sel}" data-atc="${a.atc}">
             <div class="atc-row1">
                 <div class="atc-dot st-${a.worst}"></div>
-                <span class="atc-code">${a.atc}</span>${a.isNew ? '<span class="badge-new">nieuw</span>' : ''}
+                <span class="atc-name">${escHtml(a.name)}</span>${a.isNew ? '<span class="badge-new">nieuw</span>' : ''}
                 <span class="atc-lnd">${a.countryCount} ${a.countryCount === 1 ? "land" : "landen"}</span>
             </div>
-            ${a.substance ? `<div class="atc-substance">${escHtml(a.substance)}</div>` : ""}
+            ${a.name !== a.atc ? `<div class="atc-code-line"><span class="atc-code">${a.atc}</span></div>` : ""}
             ${emsRoodDetail[a.atc] ? `<div class="atc-ems-tv">${emsRoodDetail[a.atc].join(" \u00b7 ")}</div>` : ""}
             ${row2}
         </div>`;
@@ -1244,8 +1260,9 @@ function renderDetail() {
         const groups = {};
         tabRecs.forEach(r => { (groups[r.atc] ||= []).push(r); });
         body.innerHTML = Object.entries(groups).sort(([, a], [, b]) => b.length - a.length).map(([atc, recs]) => {
+            const nm = prettyName(recs.find(r => r.sub)?.sub || recs.find(r => r.mn)?.mn || atc);
             return `<div class="section-header">
-                    <span class="section-name mono">${atc}</span>
+                    <span class="section-name">${escHtml(nm)}${nm !== atc ? ` <span class="section-atc mono">${atc}</span>` : ""}</span>
                     <span class="section-count">${recs.length}</span>
                 </div>
                 ${recs.slice(0, 10).map(r => medCard(r, "atc")).join("")}`;
@@ -1271,8 +1288,8 @@ function renderDetailDefault() {
         html += `<div class="detail-top-item" data-select-atc="${a.atc}">
             <span class="detail-top-rank">${i + 1}.</span>
             <span class="atc-dot st-${a.worst}" style="width:6px;height:6px"></span>
-            <span class="detail-top-code">${a.atc}</span>
-            <span class="detail-top-info">${a.countryCount} landen \u00b7 ${a.aN} actief</span>
+            <span class="detail-top-code">${escHtml(a.name)}</span>
+            <span class="detail-top-info">${a.atc} \u00b7 ${a.countryCount} landen \u00b7 ${a.aN} actief</span>
         </div>`;
     });
     html += `</div>`;
