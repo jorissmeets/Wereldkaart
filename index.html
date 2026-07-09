@@ -529,6 +529,7 @@ let D = null; // derived
 let emsRoodSet = new Set();
 let emsRoodDetail = {};
 let reasonLabels = {};
+let ATC_NL = {}; // ATC-code -> Nederlandse naam uit G-standaard
 
 // Reden-categorie volgorde + bouwers van filter-chips en legenda
 const REASON_ORDER = [
@@ -684,9 +685,12 @@ fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-10m.json")
 // ═══════════════════════════════════════
 // LOAD
 // ═══════════════════════════════════════
-fetch("data.json")
-    .then(r => r.json())
-    .then(data => {
+Promise.all([
+    fetch("data.json").then(r => r.json()),
+    fetch("atc_nl.json").then(r => r.json()).catch(() => ({})),
+])
+    .then(([data, atcNl]) => {
+        ATC_NL = atcNl || {};
         RAW = data;
         emsRoodSet = new Set(data.ems_rood_atcs || []);
         emsRoodDetail = data.ems_rood_detail || {};
@@ -781,8 +785,8 @@ function recompute() {
         const mnCounts = {};
         recs.forEach(r => { if (r.mn) (mnCounts[r.mn] = (mnCounts[r.mn] || 0) + 1); });
         const medName = Object.entries(mnCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "";
-        // Weergavenaam: stof > geneesmiddel > ATC-code
-        const name = prettyName(substance || medName || atc);
+        // Weergavenaam: G-standaard NL-naam > buitenlandse stof > geneesmiddel > ATC-code
+        const name = prettyName(ATC_NL[atc] || substance || medName || atc);
         // Check if any record was scraped/added in last 48h
         const recentCutoff = addDays(isoToday(), -2);
         const isNew = recs.some(r => (r.sa || "") >= recentCutoff);
@@ -1260,7 +1264,7 @@ function renderDetail() {
         const groups = {};
         tabRecs.forEach(r => { (groups[r.atc] ||= []).push(r); });
         body.innerHTML = Object.entries(groups).sort(([, a], [, b]) => b.length - a.length).map(([atc, recs]) => {
-            const nm = prettyName(recs.find(r => r.sub)?.sub || recs.find(r => r.mn)?.mn || atc);
+            const nm = prettyName(ATC_NL[atc] || recs.find(r => r.sub)?.sub || recs.find(r => r.mn)?.mn || atc);
             return `<div class="section-header">
                     <span class="section-name">${escHtml(nm)}${nm !== atc ? ` <span class="section-atc mono">${atc}</span>` : ""}</span>
                     <span class="section-count">${recs.length}</span>
