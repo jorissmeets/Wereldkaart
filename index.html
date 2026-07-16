@@ -761,6 +761,10 @@ function recompute() {
     const activePairs = new Set(activeRecs.map(pairKey));
     const prevActivePairs = new Set(prevActive.map(pairKey));
     const totalPairs = new Set(inPeriod.map(pairKey));
+    // Zelfde telling beperkt tot EMS-kritieke (rood) ATC's — voor "Alleen kritiek"
+    const emsActivePairs = new Set(activeRecs.filter(r => emsRoodSet.has(r.atc)).map(pairKey));
+    const emsPrevActivePairs = new Set(prevActive.filter(r => emsRoodSet.has(r.atc)).map(pairKey));
+    const emsTotalPairs = new Set(inPeriod.filter(r => emsRoodSet.has(r.atc)).map(pairKey));
 
     // Multi-country ATCs (>=3)
     const atcCcMap = {};
@@ -834,6 +838,9 @@ function recompute() {
             active: activePairs.size,
             activeDelta: activePairs.size - prevActivePairs.size,
             activePercent: totalPairs.size > 0 ? Math.round(activePairs.size / totalPairs.size * 100) : 0,
+            activeEms: emsActivePairs.size,
+            activeEmsDelta: emsActivePairs.size - emsPrevActivePairs.size,
+            activeEmsPercent: emsTotalPairs.size > 0 ? Math.round(emsActivePairs.size / emsTotalPairs.size * 100) : 0,
             countries: countriesActiveSet.size,
             countriesSet: countriesActiveSet,
             totalCountries: RAW.monitored_countries.length,
@@ -913,8 +920,12 @@ function render() {
 // ── KPIs ──
 function renderKpis() {
     const k = D.kpis;
-    document.getElementById("kpi-active").textContent = k.active.toLocaleString("nl-NL");
-    document.getElementById("kpi-active-sub").textContent = `${k.activePercent}% van totaal`;
+    // Actieve-KPI beweegt mee met "Alleen kritiek (EMS rood)"
+    const active = S.emsRoodOnly ? k.activeEms : k.active;
+    const activePercent = S.emsRoodOnly ? k.activeEmsPercent : k.activePercent;
+    const activeDelta = S.emsRoodOnly ? k.activeEmsDelta : k.activeDelta;
+    document.getElementById("kpi-active").textContent = active.toLocaleString("nl-NL");
+    document.getElementById("kpi-active-sub").textContent = `${activePercent}% van totaal`;
 
     // Landen geraakt: reactief op geselecteerde ATC (anders globaal)
     let countriesSet = k.countriesSet;
@@ -930,7 +941,7 @@ function renderKpis() {
     document.getElementById("kpi-resolved").textContent = k.resolved.toLocaleString("nl-NL");
     document.getElementById("kpi-resolved-period").textContent = `(${S.period === 0 ? "alles" : S.period === 365 ? "12m" : S.period + "d"})`;
 
-    setDelta("kpi-active-delta", k.activeDelta, true);
+    setDelta("kpi-active-delta", activeDelta, true);
     setDelta("kpi-critical-delta", k.criticalDelta, true);
     setDelta("kpi-resolved-delta", k.resolvedDelta, false);
     document.getElementById("kpi-countries-delta").textContent = S.selectedAtc ? `voor ${S.selectedAtc}` : "";
@@ -1433,6 +1444,7 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
 document.getElementById("ems-rood-toggle").addEventListener("change", (e) => {
     S.emsRoodOnly = e.target.checked;
     renderSidebar();
+    renderKpis();
 });
 
 // Sort buttons
