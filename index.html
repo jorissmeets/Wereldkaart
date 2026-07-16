@@ -204,6 +204,14 @@
         .detail-resolved-check { color: var(--lcg-green); font-size: 12px; margin-top: 1px; }
         .detail-resolved-text { font-size: 11px; color: var(--text-secondary); }
         .detail-resolved-date { font-size: 10px; color: var(--text-muted); }
+        /* Redenen-figuur (horizontale magnitude-balken, één hue) */
+        .reason-cap { font-weight: 400; color: var(--text-muted); text-transform: none; letter-spacing: 0; }
+        .reason-bar-row { display: grid; grid-template-columns: 104px 1fr 30px; align-items: center; gap: 8px; padding: 3px 0; }
+        .reason-bar-label { font-size: 10px; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .reason-bar-track { height: 8px; background: rgba(0,66,139,0.07); border-radius: 4px; overflow: hidden; }
+        .reason-bar-fill { height: 100%; background: var(--lcg-cyan); border-radius: 4px; min-width: 2px; }
+        .reason-bar-pct { font-size: 10px; color: var(--text-muted); text-align: right; font-variant-numeric: tabular-nums; }
+        .reason-empty { font-size: 10px; color: var(--text-muted); font-style: italic; padding: 1px 0 3px; }
 
         .detail-country-row { display: flex; align-items: center; gap: 6px; padding: 4px 0; font-size: 11px; cursor: pointer; border-radius: 4px; }
         .detail-country-row:hover { background: rgba(11,187,239,0.05); margin: 0 -4px; padding: 4px 4px; }
@@ -331,15 +339,6 @@
 
 <!-- KPI Bar -->
 <div class="kpi-bar">
-    <div class="kpi-card" data-kpi="active" role="status" tabindex="0">
-        <div class="kpi-label">Actieve tekorten</div>
-        <div class="kpi-row">
-            <div class="kpi-value" id="kpi-active">–</div>
-            <div class="kpi-sub" id="kpi-active-sub"></div>
-        </div>
-        <div class="kpi-delta neutral" id="kpi-active-delta"></div>
-        <div class="kpi-sparkline-wrap"><svg id="spark-active" viewBox="0 0 120 22" preserveAspectRatio="none"></svg></div>
-    </div>
     <div class="kpi-card" data-kpi="countries" role="status" tabindex="0">
         <div class="kpi-label">Landen geraakt</div>
         <div class="kpi-row">
@@ -348,22 +347,16 @@
         <div class="kpi-delta neutral" id="kpi-countries-delta"></div>
         <div class="kpi-minibar" id="kpi-countries-bar"></div>
     </div>
-    <div class="kpi-card" data-kpi="critical" role="status" tabindex="0">
-        <div class="kpi-label">Meerlandentekorten <span class="info-icon" title="ATC-codes met actief tekort in 3 of meer landen">?</span></div>
+    <div class="kpi-card" role="status" tabindex="0">
+        <div class="kpi-label">Aantal geneesmiddelen <span class="info-icon" title="Unieke geneesmiddelen (ATC-codes) met een tekort in 3 of meer landen">?</span></div>
         <div class="kpi-row">
-            <div class="kpi-value" id="kpi-critical">–</div>
+            <div class="kpi-value" id="kpi-medicines">–</div>
             <div class="kpi-sub">in &ge;3 landen</div>
         </div>
-        <div class="kpi-delta neutral" id="kpi-critical-delta"></div>
-        <div class="kpi-sparkline-wrap"><svg id="spark-critical" viewBox="0 0 120 22" preserveAspectRatio="none"></svg></div>
     </div>
-    <div class="kpi-card" data-kpi="resolved" role="status" tabindex="0">
-        <div class="kpi-label">Opgelost <span id="kpi-resolved-period">(30d)</span></div>
-        <div class="kpi-row">
-            <div class="kpi-value" id="kpi-resolved">–</div>
-        </div>
-        <div class="kpi-delta neutral" id="kpi-resolved-delta"></div>
-        <div class="kpi-sparkline-wrap"><svg id="spark-resolved" viewBox="0 0 120 22" preserveAspectRatio="none"></svg></div>
+    <div class="kpi-card kpi-reasons-card" role="status" style="grid-column: span 2; cursor: default">
+        <div class="kpi-label">Redenen <span class="reason-cap" id="kpi-reasons-cap"></span></div>
+        <div id="kpi-reasons"></div>
     </div>
 </div>
 
@@ -401,11 +394,6 @@
         <div class="ems-toggle-bar">
             <label><input type="checkbox" id="ems-rood-toggle"> Alleen kritiek (EMS rood)</label>
         </div>
-        <div class="reason-filter-bar" id="reason-filter-bar">
-            <span class="reason-filter-label">Reden:</span>
-            <button class="reason-chip active" data-reason="all">Alle</button>
-            <!-- Andere chips worden dynamisch ingevuld vanuit data.reason_labels -->
-        </div>
         <div class="sort-bar">
             <label>Sorteer:</label>
             <button class="sort-btn active" data-sort="countries-desc">Landen &darr;</button>
@@ -426,10 +414,8 @@
             <div class="legend-title">Status</div>
             <div class="legend-row"><div class="legend-dot" style="background:var(--status-active-soft)"></div> Actief tekort</div>
             <div class="legend-row"><div class="legend-dot" style="background:var(--status-upcoming-soft)"></div> Aankomend</div>
-            <div class="legend-row"><div class="legend-dot" style="background:var(--status-undated)"></div> Geen start/einddatum</div>
-            <div class="legend-row"><div class="legend-dot" style="background:var(--lcg-green);opacity:0.5"></div> Opgelost</div>
             <div class="legend-row"><div class="legend-dot" style="background:var(--lcg-cyan);opacity:0.3"></div> Geen tekort</div>
-            <div class="legend-row"><div class="legend-dot" style="background:#1a2744"></div> Geen data</div>
+            <div class="legend-row"><div class="legend-dot" style="background:#9abcd0"></div> Geen data</div>
         </div>
         <div class="map-legend-reason" id="map-legend-reason" style="display:none">
             <div class="legend-title">Reden tekort</div>
@@ -450,7 +436,6 @@
         <div class="detail-tabs" id="detail-tabs" style="display:none">
             <button class="detail-tab active" data-tab="active">Actief <span class="tab-count" id="tab-count-active">0</span></button>
             <button class="detail-tab" data-tab="upcoming">Aankomend <span class="tab-count" id="tab-count-upcoming">0</span></button>
-            <button class="detail-tab" data-tab="resolved">Opgelost <span class="tab-count" id="tab-count-resolved">0</span></button>
         </div>
         <div class="detail-body" id="detail-body"></div>
     </div>
@@ -699,8 +684,6 @@ fetch("data.json")
         emsRoodSet = new Set(data.ems_rood_atcs || []);
         emsRoodDetail = data.ems_rood_detail || {};
         reasonLabels = data.reason_labels || {};
-        buildReasonFilterBar(data.records, reasonLabels);
-        buildReasonLegend(reasonLabels);
         document.getElementById("footer").innerHTML = `<span style="color:#5a7faa">Landelijk Co\u00f6rdinatiecentrum Geneesmiddelen \u00b7 ${data.generated} \u00b7 ${data.total_atc} ATC-codes \u00b7 ${data.total_countries} bronlanden \u00b7 ${data.records.length.toLocaleString("nl-NL")} meldingen</span><span class="footer-right"><span class="footer-kbd"><kbd>Esc</kbd> terug &middot; <kbd>/</kbd> zoeken</span></span>`;
         loadHash();
         recompute();
@@ -738,7 +721,7 @@ function recompute() {
 
     const inPeriod = RAW.records.filter(r => {
         if (r.st === "inactive") return false;  // verouderd (>1 jaar geen update)
-        if (S.reasonFilter && S.reasonFilter !== "all" && r.rc !== S.reasonFilter) return false;
+        if (r.st === "resolved") return false;  // opgelost tonen we niet meer
         if (!pStart) return true;
         const start = r.ss || r.sa || today;
         const end = r.rd || r.ee || null;
@@ -849,6 +832,7 @@ function recompute() {
             activeEms: emsActivePairs.size,
             activeEmsDelta: emsActivePairs.size - emsPrevActivePairs.size,
             activeEmsPercent: emsTotalPairs.size > 0 ? Math.round(emsActivePairs.size / emsTotalPairs.size * 100) : 0,
+            medicines: (() => { const m = {}; inPeriod.filter(r => r.st === "active" || r.st === "upcoming").forEach(r => { (m[r.atc] ||= new Set()).add(r.cc); }); return Object.values(m).filter(s => s.size >= 3).length; })(),
             countries: countriesActiveSet.size,
             countriesSet: countriesActiveSet,
             totalCountries: RAW.monitored_countries.length,
@@ -928,12 +912,6 @@ function render() {
 // ── KPIs ──
 function renderKpis() {
     const k = D.kpis;
-    // Actieve-KPI beweegt mee met "Alleen kritiek (EMS rood)"
-    const active = S.emsRoodOnly ? k.activeEms : k.active;
-    const activePercent = S.emsRoodOnly ? k.activeEmsPercent : k.activePercent;
-    const activeDelta = S.emsRoodOnly ? k.activeEmsDelta : k.activeDelta;
-    document.getElementById("kpi-active").textContent = active.toLocaleString("nl-NL");
-    document.getElementById("kpi-active-sub").textContent = `${activePercent}% van totaal`;
 
     // Landen geraakt: reactief op geselecteerde ATC (anders globaal)
     let countriesSet = k.countriesSet;
@@ -945,13 +923,8 @@ function renderKpis() {
     document.getElementById("kpi-countries").innerHTML =
         `${countriesCount}<span class="kpi-sub" style="margin-left:4px">/ ${k.totalCountries}</span>`;
 
-    document.getElementById("kpi-critical").textContent = k.critical.toLocaleString("nl-NL");
-    document.getElementById("kpi-resolved").textContent = k.resolved.toLocaleString("nl-NL");
-    document.getElementById("kpi-resolved-period").textContent = `(${S.period === 0 ? "alles" : S.period === 365 ? "12m" : S.period + "d"})`;
+    document.getElementById("kpi-medicines").textContent = k.medicines.toLocaleString("nl-NL");
 
-    setDelta("kpi-active-delta", activeDelta, true);
-    setDelta("kpi-critical-delta", k.criticalDelta, true);
-    setDelta("kpi-resolved-delta", k.resolvedDelta, false);
     document.getElementById("kpi-countries-delta").textContent = S.selectedAtc ? `voor ${S.selectedAtc}` : "";
 
     // Mini bar for countries — reflecteert dezelfde set (globaal of per ATC)
@@ -962,6 +935,15 @@ function renderKpis() {
         const ci = CC[cc];
         return `<div class="kpi-minibar-seg" style="background:${color}" title="${ci ? ci.name : cc}"></div>`;
     }).join("");
+
+    // Redenen-figuur — beweegt mee met de selectie (middel/land), anders globaal
+    let reasonRecords = D.inPeriod;
+    if (S.selectedAtc && S.selectedCountry) reasonRecords = D.inPeriod.filter(r => r.atc === S.selectedAtc && r.cc === S.selectedCountry);
+    else if (S.selectedAtc) reasonRecords = D.inPeriod.filter(r => r.atc === S.selectedAtc);
+    else if (S.selectedCountry) reasonRecords = D.inPeriod.filter(r => r.cc === S.selectedCountry);
+    const rb = reasonBars(reasonRecords, 4);
+    document.getElementById("kpi-reasons-cap").textContent = rb.caption;
+    document.getElementById("kpi-reasons").innerHTML = rb.barsHtml;
 
     document.querySelectorAll(".kpi-card").forEach(c =>
         c.classList.toggle("active", S.kpiFilter === c.dataset.kpi)
@@ -1194,6 +1176,30 @@ function renderMap() {
 }
 
 // ── Detail ──
+// Reden-balken (één hue) uit een set records -> {caption, barsHtml}.
+// Beweegt mee met de selectie; altijd zichtbaar (nette leeg-melding bij 0).
+function reasonBars(records, limit = 6) {
+    const view = records.filter(r => r.st === "active" || r.st === "upcoming");
+    const reasonRecs = view.filter(r => r.rc && r.rc !== "none");
+    const total = reasonRecs.length;
+    if (total === 0) return { caption: "", barsHtml: `<div class="reason-empty">Geen reden opgegeven in de bron</div>` };
+    const cov = view.length ? Math.round(100 * total / view.length) : 0;
+    const rcCounts = {};
+    reasonRecs.forEach(r => { rcCounts[r.rc] = (rcCounts[r.rc] || 0) + 1; });
+    const top = Object.entries(rcCounts).sort((a, b) => b[1] - a[1]).slice(0, limit);
+    const maxN = top[0][1];
+    const barsHtml = top.map(([code, n]) => {
+        const pct = Math.round(100 * n / total);
+        const w = Math.round(100 * n / maxN);
+        return `<div class="reason-bar-row" title="${escHtml(reasonLabels[code] || code)}: ${n.toLocaleString("nl-NL")} meldingen">
+            <div class="reason-bar-label">${escHtml(reasonLabels[code] || code)}</div>
+            <div class="reason-bar-track"><div class="reason-bar-fill" style="width:${w}%"></div></div>
+            <div class="reason-bar-pct">${pct}%</div>
+        </div>`;
+    }).join("");
+    return { caption: `· ${total.toLocaleString("nl-NL")} met opgave (${cov}%)`, barsHtml };
+}
+
 function renderDetail() {
     const panel = document.getElementById("detail-panel");
     const tabs = document.getElementById("detail-tabs");
@@ -1239,21 +1245,17 @@ function renderDetail() {
 
     const aRecs = recs.filter(r => r.st === "active");
     const uRecs = recs.filter(r => r.st === "upcoming");
-    const dRecs = recs.filter(r => r.st === "undated");
     const rRecs = recs.filter(r => r.st === "resolved");
 
     // Summary mini KPIs
     summary.innerHTML = `
         <div class="detail-summary-item"><div class="detail-summary-dot" style="background:var(--status-active)"></div>${aRecs.length} actief</div>
         <div class="detail-summary-item"><div class="detail-summary-dot" style="background:var(--status-upcoming)"></div>${uRecs.length} aankomend</div>
-        ${dRecs.length ? `<div class="detail-summary-item"><div class="detail-summary-dot" style="background:var(--status-undated)"></div>${dRecs.length} geen start/einddatum</div>` : ""}
-        <div class="detail-summary-item"><div class="detail-summary-dot" style="background:var(--status-resolved)"></div>${rRecs.length} opgelost</div>
     `;
 
     // Tab counts + dimming
     document.getElementById("tab-count-active").textContent = aRecs.length;
     document.getElementById("tab-count-upcoming").textContent = uRecs.length;
-    document.getElementById("tab-count-resolved").textContent = rRecs.length;
     document.querySelectorAll(".detail-tab").forEach(t => {
         const count = t.dataset.tab === "active" ? aRecs.length : t.dataset.tab === "upcoming" ? uRecs.length : rRecs.length;
         t.classList.toggle("dimmed", count === 0);
@@ -1333,22 +1335,6 @@ function renderDetailDefault() {
     });
     html += `</div>`;
 
-    // Recent resolved
-    if (D.recentResolved.length > 0) {
-        html += `<div class="detail-section"><div class="detail-section-title">Recent opgelost (7d)</div>`;
-        D.recentResolved.forEach(r => {
-            const ci = CC[r.cc] || { flag: "", name: r.cc };
-            html += `<div class="detail-resolved-item">
-                <span class="detail-resolved-check">\u2713</span>
-                <div>
-                    <div class="detail-resolved-text">${escHtml(r.mn || r.sub || r.atc)} \u2014 ${ci.flag} ${ci.name}</div>
-                    <div class="detail-resolved-date">${r.rd || ""}</div>
-                </div>
-            </div>`;
-        });
-        html += `</div>`;
-    }
-
     // Country overview
     html += `<div class="detail-section"><div class="detail-section-title">Per land</div>`;
     D.countrySummary.forEach(c => {
@@ -1418,6 +1404,7 @@ document.querySelectorAll(".period-btn").forEach(btn => {
 
 // KPI cards
 document.querySelectorAll(".kpi-card").forEach(card => {
+    if (!card.dataset.kpi) return;  // reden-kaart is niet interactief
     const handler = () => {
         const kpi = card.dataset.kpi;
         S.kpiFilter = S.kpiFilter === kpi ? null : kpi;

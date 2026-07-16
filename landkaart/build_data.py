@@ -161,10 +161,6 @@ def derive_status(raw_status: str, shortage_start: str | None,
     if last_known and last_known < cutoff_1yr:
         return "inactive"
 
-    # Geen start- én einddatum bekend -> aparte categorie i.p.v. aannemen dat het actief is
-    if not shortage_start and not estimated_end and not actual_end:
-        return "undated"
-
     return "active"
 
 
@@ -424,6 +420,9 @@ def build():
             actual_end = parse_date(row.get("actual_end"))
             last_updated = parse_date(row.get("last_updated"))
             scraped_at = parse_date(row.get("scraped_at"))
+            # Scrapedatum als fallback-startdatum wanneer de bron geen startdatum geeft
+            if not shortage_start:
+                shortage_start = scraped_at
 
             # Bereken resolved_date
             resolved_date = None
