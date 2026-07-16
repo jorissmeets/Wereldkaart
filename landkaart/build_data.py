@@ -161,6 +161,10 @@ def derive_status(raw_status: str, shortage_start: str | None,
     if last_known and last_known < cutoff_1yr:
         return "inactive"
 
+    # Geen start- én einddatum bekend -> aparte categorie i.p.v. aannemen dat het actief is
+    if not shortage_start and not estimated_end and not actual_end:
+        return "undated"
+
     return "active"
 
 
