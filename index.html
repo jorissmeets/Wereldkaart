@@ -226,6 +226,11 @@
         .section-flag { font-size: 15px; }
         .section-name { font-size: 12px; font-weight: 600; }
         .section-count { font-size: 10px; color: var(--text-muted); margin-left: auto; }
+        .section-rank { font-size: 11px; font-weight: 700; color: var(--lcg-dark); min-width: 16px; }
+        .section-date { font-size: 10px; color: var(--status-active-soft); font-variant-numeric: tabular-nums; margin-left: auto; }
+        .country-sort-bar { padding: 6px 14px 2px; }
+        .country-sort-bar label { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-secondary); cursor: pointer; }
+        .country-sort-bar input { accent-color: var(--lcg-cyan); width: 13px; height: 13px; cursor: pointer; }
         .section-name.mono { font-family: monospace; }
         .section-atc { font-family: monospace; font-size: 10px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.2px; }
 
@@ -514,6 +519,7 @@ const S = {
     sidebarSort: "countries-desc",
     detailTab: "active",
     emsRoodOnly: false,
+    countrySortByDate: false,
 };
 
 let RAW = null;
@@ -1286,15 +1292,27 @@ function renderDetail() {
     if (S.selectedAtc) {
         const groups = {};
         tabRecs.forEach(r => { (groups[r.cc] ||= []).push(r); });
-        body.innerHTML = Object.entries(groups).sort(([, a], [, b]) => b.length - a.length).map(([cc, recs]) => {
-            const ci = CC[cc] || { flag: "", name: cc };
+        // Vroegste startdatum per land — voor de "eerste tekort"-volgorde (1, 2, 3…)
+        const entries = Object.entries(groups).map(([cc, recs]) => ({
+            cc, recs, first: recs.map(r => r.ss).filter(Boolean).sort()[0] || null,
+        }));
+        if (S.countrySortByDate) entries.sort((a, b) => (a.first || "9999-99-99").localeCompare(b.first || "9999-99-99") || b.recs.length - a.recs.length);
+        else entries.sort((a, b) => b.recs.length - a.recs.length);
+        const toggle = `<div class="country-sort-bar"><label><input type="checkbox" id="country-sort-date"${S.countrySortByDate ? " checked" : ""}> Volgorde van eerste tekort (1, 2, 3…)</label></div>`;
+        body.innerHTML = toggle + entries.map((e, i) => {
+            const ci = CC[e.cc] || { flag: "", name: e.cc };
+            const rank = S.countrySortByDate ? `<span class="section-rank">${i + 1}.</span>` : "";
+            const date = S.countrySortByDate && e.first ? `<span class="section-date">${e.first}</span>` : "";
             return `<div class="section-header">
-                    <span class="section-flag">${ci.flag}</span>
+                    ${rank}<span class="section-flag">${ci.flag}</span>
                     <span class="section-name">${ci.name}</span>
-                    <span class="section-count">${recs.length}</span>
+                    ${date}
+                    <span class="section-count">${e.recs.length}</span>
                 </div>
-                ${recs.slice(0, 20).map(r => medCard(r, "country")).join("")}`;
+                ${e.recs.slice(0, 20).map(r => medCard(r, "country")).join("")}`;
         }).join("");
+        const cb = document.getElementById("country-sort-date");
+        if (cb) cb.addEventListener("change", ev => { S.countrySortByDate = ev.target.checked; renderDetail(); });
     } else {
         const groups = {};
         tabRecs.forEach(r => { (groups[r.atc] ||= []).push(r); });
