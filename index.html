@@ -756,6 +756,12 @@ function recompute() {
     // Countries with active shortages
     const countriesActiveSet = new Set(activeRecs.map(r => r.cc));
 
+    // Distinct (ATC × land)-combinaties: elk land telt een ATC max 1x als tekort
+    const pairKey = r => r.atc + "|" + r.cc;
+    const activePairs = new Set(activeRecs.map(pairKey));
+    const prevActivePairs = new Set(prevActive.map(pairKey));
+    const totalPairs = new Set(inPeriod.map(pairKey));
+
     // Multi-country ATCs (>=3)
     const atcCcMap = {};
     activeRecs.forEach(r => { (atcCcMap[r.atc] ||= new Set()).add(r.cc); });
@@ -825,9 +831,9 @@ function recompute() {
     D = {
         inPeriod, activeRecs, upcomingRecs, resolvedRecs,
         kpis: {
-            active: activeRecs.length,
-            activeDelta: activeRecs.length - prevActive.length,
-            activePercent: inPeriod.length > 0 ? Math.round(activeRecs.length / inPeriod.length * 100) : 0,
+            active: activePairs.size,
+            activeDelta: activePairs.size - prevActivePairs.size,
+            activePercent: totalPairs.size > 0 ? Math.round(activePairs.size / totalPairs.size * 100) : 0,
             countries: countriesActiveSet.size,
             countriesSet: countriesActiveSet,
             totalCountries: RAW.monitored_countries.length,
