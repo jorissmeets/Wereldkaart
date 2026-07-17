@@ -231,6 +231,7 @@
         .country-sort-bar { padding: 6px 14px 2px; }
         .country-sort-bar label { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-secondary); cursor: pointer; }
         .country-sort-bar input { accent-color: var(--lcg-cyan); width: 13px; height: 13px; cursor: pointer; }
+        .rank-map-marker { display: flex !important; align-items: center; justify-content: center; background: #00428b; color: #fff; border: 2px solid #fff; border-radius: 50%; font-size: 11px; font-weight: 700; box-shadow: 0 1px 4px rgba(0,0,0,0.4); }
         .section-name.mono { font-family: monospace; }
         .section-atc { font-family: monospace; font-size: 10px; font-weight: 400; color: var(--text-muted); letter-spacing: 0.2px; }
 
@@ -344,6 +345,13 @@
 
 <!-- KPI Bar -->
 <div class="kpi-bar">
+    <div class="kpi-card" role="status" tabindex="0">
+        <div class="kpi-label">Aantal tekorten <span class="info-icon" title="Geneesmiddelen (ATC-codes) met een tekort in 3 of meer landen">?</span></div>
+        <div class="kpi-row">
+            <div class="kpi-value" id="kpi-medicines">–</div>
+            <div class="kpi-sub">in &ge;3 landen</div>
+        </div>
+    </div>
     <div class="kpi-card" data-kpi="countries" role="status" tabindex="0">
         <div class="kpi-label">Landen geraakt</div>
         <div class="kpi-row">
@@ -351,13 +359,6 @@
         </div>
         <div class="kpi-delta neutral" id="kpi-countries-delta"></div>
         <div class="kpi-minibar" id="kpi-countries-bar"></div>
-    </div>
-    <div class="kpi-card" role="status" tabindex="0">
-        <div class="kpi-label">Aantal geneesmiddelen <span class="info-icon" title="Unieke geneesmiddelen (ATC-codes) met een tekort in 3 of meer landen">?</span></div>
-        <div class="kpi-row">
-            <div class="kpi-value" id="kpi-medicines">–</div>
-            <div class="kpi-sub">in &ge;3 landen</div>
-        </div>
     </div>
     <div class="kpi-card kpi-reasons-card" role="status" style="grid-column: span 2; cursor: default">
         <div class="kpi-label">Redenen <span class="reason-cap" id="kpi-reasons-cap"></span></div>
@@ -1101,6 +1102,17 @@ function countryStyle(cc) {
     return { fillColor: fill, fillOpacity: opacity, color: borderColor, weight, data: { cc, aN, uN, rN, isMon } };
 }
 
+// Landen met actief tekort voor een middel, gerangschikt op vroegste startdatum -> Map cc -> {rank, first}
+function firstShortageRanking(atc) {
+    const g = {};
+    D.inPeriod.filter(r => r.atc === atc && r.st === "active").forEach(r => { (g[r.cc] ||= []).push(r.ss); });
+    const entries = Object.entries(g).map(([cc, ss]) => ({ cc, first: ss.filter(Boolean).sort()[0] || null }));
+    entries.sort((a, b) => (a.first || "9999-99-99").localeCompare(b.first || "9999-99-99"));
+    const rmap = new Map();
+    entries.forEach((e, i) => rmap.set(e.cc, { rank: i + 1, first: e.first }));
+    return rmap;
+}
+
 function renderMap() {
     // Clean up old overlays (EU marker)
     markers.forEach(m => map.removeLayer(m));
@@ -1145,6 +1157,19 @@ function renderMap() {
             layer.on("mouseout", () => { const s = countryStyle(cc); layer.setStyle({ weight: s.weight, color: s.color }); });
         }
     }).addTo(map);
+
+    // Rangnummers (1, 2, 3…) op de kaart bij "eerste tekort"-volgorde voor een geselecteerd middel
+    if (S.selectedAtc && S.countrySortByDate) {
+        firstShortageRanking(S.selectedAtc).forEach((v, cc) => {
+            const info = CC[cc];
+            if (!info || info.lat == null) return;
+            const m = L.marker([info.lat, info.lng], {
+                icon: L.divIcon({ className: "rank-map-marker", html: String(v.rank), iconSize: [22, 22], iconAnchor: [11, 11] }),
+                interactive: false, keyboard: false,
+            }).addTo(map);
+            markers.push(m);
+        });
+    }
 
     // EU (EMA) as special circle marker — it's not a country polygon
     const euInfo = CC["EU"];
