@@ -60,6 +60,10 @@
         .period-btn { padding: 5px 12px; font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.6); background: transparent; border: none; cursor: pointer; transition: all 0.15s; }
         .period-btn:hover { color: #ffffff; background: rgba(255,255,255,0.1); }
         .period-btn.active { color: #00428b; background: #ffffff; font-weight: 600; }
+        .header-right { display: flex; align-items: center; gap: 8px; }
+        .lang-filter { display: flex; background: rgba(255,255,255,0.15); border-radius: 7px; border: 1px solid rgba(255,255,255,0.2); overflow: hidden; }
+        .lang-btn { padding: 5px 11px; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.6); background: transparent; border: none; cursor: pointer; transition: all 0.15s; }
+        .lang-btn.active { color: #00428b; background: #ffffff; }
 
         /* ── KPI Bar ── */
         .kpi-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 10px 20px; background: var(--bg-base); border-bottom: none; flex-shrink: 0; }
@@ -333,12 +337,16 @@
         <h1>Geneesmiddeltekorten <span>Dashboard</span></h1>
     </div>
     <div class="header-right">
+        <div class="lang-filter" role="radiogroup" aria-label="Taal / Language">
+            <button class="lang-btn active" data-lang="nl">NL</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
         <div class="period-filter" role="radiogroup" aria-label="Periode">
             <button class="period-btn" data-period="7">7d</button>
             <button class="period-btn active" data-period="30">30d</button>
             <button class="period-btn" data-period="90">90d</button>
             <button class="period-btn" data-period="365">12m</button>
-            <button class="period-btn" data-period="0">Alles</button>
+            <button class="period-btn" data-period="0" data-i18n="period_all">Alles</button>
         </div>
     </div>
 </div>
@@ -346,14 +354,14 @@
 <!-- KPI Bar -->
 <div class="kpi-bar">
     <div class="kpi-card" role="status" tabindex="0">
-        <div class="kpi-label">Aantal tekorten <span class="info-icon" title="Geneesmiddelen (ATC-codes) met een tekort in 3 of meer landen">?</span></div>
+        <div class="kpi-label"><span data-i18n="kpi_shortages">Aantal tekorten</span> <span class="info-icon" data-i18n-title="kpi_shortages_tip" title="Geneesmiddelen (ATC-codes) met een tekort in 3 of meer landen">?</span></div>
         <div class="kpi-row">
             <div class="kpi-value" id="kpi-medicines">–</div>
-            <div class="kpi-sub">in &ge;3 landen</div>
+            <div class="kpi-sub" data-i18n="sub_3countries">in &ge;3 landen</div>
         </div>
     </div>
     <div class="kpi-card" data-kpi="countries" role="status" tabindex="0">
-        <div class="kpi-label">Landen geraakt</div>
+        <div class="kpi-label" data-i18n="kpi_countries">Landen geraakt</div>
         <div class="kpi-row">
             <div class="kpi-value" id="kpi-countries">–</div>
         </div>
@@ -361,7 +369,7 @@
         <div class="kpi-minibar" id="kpi-countries-bar"></div>
     </div>
     <div class="kpi-card kpi-reasons-card" role="status" style="grid-column: span 2; cursor: default">
-        <div class="kpi-label">Redenen <span class="reason-cap" id="kpi-reasons-cap"></span></div>
+        <div class="kpi-label"><span data-i18n="kpi_reasons">Redenen</span> <span class="reason-cap" id="kpi-reasons-cap"></span></div>
         <div id="kpi-reasons"></div>
     </div>
 </div>
@@ -376,10 +384,10 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="search-box">
-            <input type="text" id="search" placeholder="Zoek ATC-code, stof of geneesmiddel..." autocomplete="off" aria-label="Zoek ATC-code of stofnaam" />
+            <input type="text" id="search" data-i18n-ph="search_ph" placeholder="Zoek ATC-code, stof of geneesmiddel..." autocomplete="off" aria-label="Zoek ATC-code of stofnaam" />
         </div>
         <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">Alle</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Alle</button>
             <button class="filter-btn" data-filter="multi">&ge;2</button>
             <button class="filter-btn" data-filter="critical">&ge;3</button>
             <button class="filter-btn" data-filter="A">A</button>
@@ -398,12 +406,12 @@
             <button class="filter-btn" data-filter="V">V</button>
         </div>
         <div class="ems-toggle-bar">
-            <label><input type="checkbox" id="ems-rood-toggle"> Alleen kritiek (EMS rood)</label>
+            <label><input type="checkbox" id="ems-rood-toggle"> <span data-i18n="ems_toggle">Alleen kritiek (EMS rood)</span></label>
         </div>
         <div class="sort-bar">
-            <label>Sorteer:</label>
-            <button class="sort-btn active" data-sort="countries-desc">Landen &darr;</button>
-            <button class="sort-btn" data-sort="active-desc">Actief &darr;</button>
+            <label data-i18n="sort_label">Sorteer:</label>
+            <button class="sort-btn active" data-sort="countries-desc"><span data-i18n="sort_countries">Landen</span> &darr;</button>
+            <button class="sort-btn" data-sort="active-desc"><span data-i18n="sort_active">Actief</span> &darr;</button>
             <button class="sort-btn" data-sort="code-asc">A&rarr;Z</button>
         </div>
         <div class="sidebar-count" id="sidebar-count"></div>
@@ -417,11 +425,11 @@
         <button class="sidebar-toggle" id="sidebar-toggle" title="Sidebar in-/uitklappen">&#9776;</button>
         <div id="map"></div>
         <div class="map-legend">
-            <div class="legend-title">Status</div>
-            <div class="legend-row"><div class="legend-dot" style="background:var(--status-active-soft)"></div> Actief tekort</div>
-            <div class="legend-row"><div class="legend-dot" style="background:var(--status-upcoming-soft)"></div> Aankomend</div>
-            <div class="legend-row"><div class="legend-dot" style="background:var(--lcg-cyan);opacity:0.3"></div> Geen tekort</div>
-            <div class="legend-row"><div class="legend-dot" style="background:#9abcd0"></div> Geen data</div>
+            <div class="legend-title" data-i18n="legend_status">Status</div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--status-active-soft)"></div> <span data-i18n="legend_active">Actief tekort</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--status-upcoming-soft)"></div> <span data-i18n="legend_upcoming">Aankomend</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:var(--lcg-cyan);opacity:0.3"></div> <span data-i18n="legend_noshortage">Geen tekort</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:#9abcd0"></div> <span data-i18n="legend_nodata">Geen data</span></div>
         </div>
         <div class="map-legend-reason" id="map-legend-reason" style="display:none">
             <div class="legend-title">Reden tekort</div>
@@ -440,8 +448,8 @@
         </div>
         <div class="detail-summary" id="detail-summary" style="display:none"></div>
         <div class="detail-tabs" id="detail-tabs" style="display:none">
-            <button class="detail-tab active" data-tab="active">Actief <span class="tab-count" id="tab-count-active">0</span></button>
-            <button class="detail-tab" data-tab="upcoming">Aankomend <span class="tab-count" id="tab-count-upcoming">0</span></button>
+            <button class="detail-tab active" data-tab="active"><span data-i18n="tab_active">Actief</span> <span class="tab-count" id="tab-count-active">0</span></button>
+            <button class="detail-tab" data-tab="upcoming"><span data-i18n="tab_upcoming">Aankomend</span> <span class="tab-count" id="tab-count-upcoming">0</span></button>
         </div>
         <div class="detail-body" id="detail-body"></div>
     </div>
@@ -521,7 +529,74 @@ const S = {
     detailTab: "active",
     emsRoodOnly: false,
     countrySortByDate: false,
+    lang: "nl",
 };
+
+// ── i18n (NL/EN) ─────────────────────────────────────────────
+const T = {
+    nl: {
+        period_all: "Alles", kpi_shortages: "Aantal tekorten",
+        kpi_shortages_tip: "Geneesmiddelen (ATC-codes) met een tekort in 3 of meer landen",
+        sub_3countries: "in ≥3 landen", kpi_countries: "Landen geraakt", kpi_reasons: "Redenen",
+        search_ph: "Zoek ATC-code, stof of geneesmiddel...", filter_all: "Alle",
+        ems_toggle: "Alleen kritiek (EMS rood)", sort_label: "Sorteer:", sort_countries: "Landen", sort_active: "Actief",
+        tab_active: "Actief", tab_upcoming: "Aankomend", legend_status: "Status",
+        legend_active: "Actief tekort", legend_upcoming: "Aankomend", legend_noshortage: "Geen tekort", legend_nodata: "Geen data",
+        overview_title: "Dashboard overzicht", data_as_of: "Data van", top_shortages: "Top tekorten (meeste landen)",
+        by_country: "Per land", countries: "landen", active: "actief", atc_codes: "ATC-codes",
+        reported: "met opgave", reason_empty: "Geen reden opgegeven in de bron",
+        country_sort_toggle: "Volgorde van eerste tekort (1, 2, 3…)",
+        st_active: "actief", st_upcoming: "aankomend", st_resolved: "opgelost",
+        med_start: "start", med_est: "verw.", med_resolved: "opgelost", ems_critical: "EMS kritiek",
+        delta_same: "= gelijk", delta_vs: "vs vorige periode", no_atc: "Geen ATC-codes gevonden",
+        refine: "Pas filters of zoekterm aan", more_refine: "meer — verfijn zoekopdracht",
+        no_notifications: "meldingen", try_longer: "Probeer een langere periode",
+        footer_org: "Landelijk Coördinatiecentrum Geneesmiddelen", footer_atc: "ATC-codes",
+        footer_sources: "bronlanden", footer_notif: "meldingen", footer_back: "terug", footer_search: "zoeken",
+        load_error: "Fout bij laden. Draai eerst build_data.py.", for_atc: "voor",
+    },
+    en: {
+        period_all: "All", kpi_shortages: "Number of shortages",
+        kpi_shortages_tip: "Medicines (ATC codes) with a shortage in 3 or more countries",
+        sub_3countries: "in ≥3 countries", kpi_countries: "Countries affected", kpi_reasons: "Reasons",
+        search_ph: "Search ATC code, substance or medicine...", filter_all: "All",
+        ems_toggle: "Critical only (EMS red)", sort_label: "Sort:", sort_countries: "Countries", sort_active: "Active",
+        tab_active: "Active", tab_upcoming: "Upcoming", legend_status: "Status",
+        legend_active: "Active shortage", legend_upcoming: "Upcoming", legend_noshortage: "No shortage", legend_nodata: "No data",
+        overview_title: "Dashboard overview", data_as_of: "Data as of", top_shortages: "Top shortages (most countries)",
+        by_country: "By country", countries: "countries", active: "active", atc_codes: "ATC codes",
+        reported: "reported", reason_empty: "No reason reported in the source",
+        country_sort_toggle: "Order of first shortage (1, 2, 3…)",
+        st_active: "active", st_upcoming: "upcoming", st_resolved: "resolved",
+        med_start: "start", med_est: "est.", med_resolved: "resolved", ems_critical: "EMS critical",
+        delta_same: "= same", delta_vs: "vs previous period", no_atc: "No ATC codes found",
+        refine: "Adjust filters or search term", more_refine: "more — refine search",
+        no_notifications: "notifications", try_longer: "Try a longer period",
+        footer_org: "National Medicines Coordination Centre", footer_atc: "ATC codes",
+        footer_sources: "source countries", footer_notif: "notifications", footer_back: "back", footer_search: "search",
+        load_error: "Loading error. Run build_data.py first.", for_atc: "for",
+    },
+};
+const REASON_EN = {
+    production_delay: "Production problem", release_delay: "Final product release", raw_material: "Raw material problem",
+    excipient: "Excipient", quality: "Quality problem", increased_demand: "Increased demand", logistics: "Logistics",
+    commercial: "Commercial", discontinuation: "Withdrawn", temporary_discontinuation: "Temporarily withdrawn",
+    regulatory: "Regulatory", recall: "Recall", force_majeure: "Force majeure", patent: "Patent",
+    supply_problem: "Supply problem", limited_supply: "Limited availability", unknown_code: "Unknown",
+    other: "Other reason", none: "Not reported",
+};
+function t(key) { return (T[S.lang] && T[S.lang][key]) || T.nl[key] || key; }
+function reasonLabel(code) { return S.lang === "en" ? (REASON_EN[code] || reasonLabels[code] || code) : (reasonLabels[code] || code); }
+function applyStaticI18n() {
+    document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
+    document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+    document.querySelectorAll("[data-i18n-title]").forEach(el => { el.title = t(el.dataset.i18nTitle); });
+    document.documentElement.lang = S.lang;
+}
+function renderFooter() {
+    if (!RAW) return;
+    document.getElementById("footer").innerHTML = `<span style="color:#5a7faa">${t("footer_org")} · ${RAW.generated} · ${RAW.total_atc} ${t("footer_atc")} · ${RAW.total_countries} ${t("footer_sources")} · ${RAW.records.length.toLocaleString("nl-NL")} ${t("footer_notif")}</span><span class="footer-right"><span class="footer-kbd"><kbd>Esc</kbd> ${t("footer_back")} &middot; <kbd>/</kbd> ${t("footer_search")}</span></span>`;
+}
 
 let RAW = null;
 let D = null; // derived
@@ -691,7 +766,7 @@ fetch("data.json")
         emsRoodSet = new Set(data.ems_rood_atcs || []);
         emsRoodDetail = data.ems_rood_detail || {};
         reasonLabels = data.reason_labels || {};
-        document.getElementById("footer").innerHTML = `<span style="color:#5a7faa">Landelijk Co\u00f6rdinatiecentrum Geneesmiddelen \u00b7 ${data.generated} \u00b7 ${data.total_atc} ATC-codes \u00b7 ${data.total_countries} bronlanden \u00b7 ${data.records.length.toLocaleString("nl-NL")} meldingen</span><span class="footer-right"><span class="footer-kbd"><kbd>Esc</kbd> terug &middot; <kbd>/</kbd> zoeken</span></span>`;
+        renderFooter();
         loadHash();
         recompute();
         render();
@@ -959,9 +1034,9 @@ function renderKpis() {
 
 function setDelta(id, delta, invert) {
     const el = document.getElementById(id);
-    if (delta === 0) { el.textContent = "= gelijk"; el.className = "kpi-delta neutral"; return; }
+    if (delta === 0) { el.textContent = t("delta_same"); el.className = "kpi-delta neutral"; return; }
     const arrow = delta > 0 ? "\u25B2" : "\u25BC";
-    el.textContent = `${arrow} ${delta > 0 ? "+" : ""}${delta} vs vorige periode`;
+    el.textContent = `${arrow} ${delta > 0 ? "+" : ""}${delta} ${t("delta_vs")}`;
     el.className = `kpi-delta ${invert ? (delta > 0 ? "up" : "down") : (delta > 0 ? "down" : "up")}`;
 }
 
@@ -1026,13 +1101,13 @@ function renderSidebar() {
     else if (sort === "active-desc") list.sort((a, b) => b.aN - a.aN || b.countryCount - a.countryCount);
     else if (sort === "code-asc") list.sort((a, b) => a.atc.localeCompare(b.atc));
 
-    document.getElementById("sidebar-count").textContent = `${list.length} ATC-codes`;
+    document.getElementById("sidebar-count").textContent = `${list.length} ${t("atc_codes")}`;
 
     const show = list.slice(0, 500);
     const container = document.getElementById("atc-list");
 
     if (show.length === 0) {
-        container.innerHTML = '<div class="no-results">Geen ATC-codes gevonden<div class="suggestion">Pas filters of zoekterm aan</div></div>';
+        container.innerHTML = `<div class="no-results">${t("no_atc")}<div class="suggestion">${t("refine")}</div></div>`;
         return;
     }
 
@@ -1041,10 +1116,10 @@ function renderSidebar() {
         const sel = S.selectedAtc === a.atc ? " selected" : "";
         // Second row: status counts
         const parts = [];
-        if (a.aN > 0) parts.push(`<span class="st-active">${a.aN} actief</span>`);
-        if (a.uN > 0) parts.push(`<span class="st-upcoming">${a.uN} aankomend</span>`);
+        if (a.aN > 0) parts.push(`<span class="st-active">${a.aN} ${t("active")}</span>`);
+        if (a.uN > 0) parts.push(`<span class="st-upcoming">${a.uN} ${t("st_upcoming")}</span>`);
         if (a.dN > 0) parts.push(`<span class="st-undated">${a.dN} geen datum</span>`);
-        if (a.rN > 0) parts.push(`<span class="st-resolved">${a.rN} opgelost</span>`);
+        if (a.rN > 0) parts.push(`<span class="st-resolved">${a.rN} ${t("st_resolved")}</span>`);
         const flags = a.countries.slice(0, 6).map(cc => CC[cc]?.flag || "").join("");
         const moreFlags = a.countries.length > 6 ? `<span style="font-size:9px;letter-spacing:0">+${a.countries.length - 6}</span>` : "";
         const row2 = parts.length > 0 ? `<div class="atc-row2">${parts.join('<span style="color:var(--border-light)"> \u00b7 </span>')}<span class="atc-flags">${flags}${moreFlags}</span></div>` : "";
@@ -1053,13 +1128,13 @@ function renderSidebar() {
             <div class="atc-row1">
                 <div class="atc-dot st-${a.worst}"></div>
                 <span class="atc-name">${escHtml(a.name)}</span>${a.isNew ? '<span class="badge-new">nieuw</span>' : ''}
-                <span class="atc-lnd">${a.countryCount} ${a.countryCount === 1 ? "land" : "landen"}</span>
+                <span class="atc-lnd">${a.countryCount} ${a.countryCount === 1 ? (S.lang === "en" ? "country" : "land") : t("countries")}</span>
             </div>
             ${a.name !== a.atc ? `<div class="atc-code-line"><span class="atc-code">${a.atc}</span></div>` : ""}
             ${emsRoodDetail[a.atc] ? `<div class="atc-ems-tv">${emsRoodDetail[a.atc].join(" \u00b7 ")}</div>` : ""}
             ${row2}
         </div>`;
-    }).join("") + (list.length > 500 ? `<div class="no-results">${list.length - 500} meer \u2014 verfijn zoekopdracht</div>` : "");
+    }).join("") + (list.length > 500 ? `<div class="no-results">${list.length - 500} ${t("more_refine")}</div>` : "");
 
     // Preserve scroll position, or scroll selected item into view
     const selEl = container.querySelector(".atc-item.selected");
@@ -1137,11 +1212,11 @@ function renderMap() {
 
             // Tooltip
             const lines = [`<b>${info.flag} ${info.name}</b>`];
-            if (st.aN) { const atcCount = new Set((D.countryIndex[cc]||[]).filter(r => r.st === "active").map(r => r.atc)).size; lines.push(`${st.aN} actief (${atcCount} ATC)`); }
-            if (st.uN) lines.push(`${st.uN} aankomend`);
-            if (st.rN) lines.push(`${st.rN} opgelost`);
-            if (!st.isMon) lines.push("<i>geen data</i>");
-            else if (!st.aN && !st.uN && !st.rN) lines.push("geen tekort");
+            if (st.aN) { const atcCount = new Set((D.countryIndex[cc]||[]).filter(r => r.st === "active").map(r => r.atc)).size; lines.push(`${st.aN} ${t("active")} (${atcCount} ATC)`); }
+            if (st.uN) lines.push(`${st.uN} ${t("st_upcoming")}`);
+            if (st.rN) lines.push(`${st.rN} ${t("st_resolved")}`);
+            if (!st.isMon) lines.push(`<i>${t("legend_nodata")}</i>`);
+            else if (!st.aN && !st.uN && !st.rN) lines.push(t("legend_noshortage"));
             layer.bindTooltip(lines.join("<br>"), { sticky: true });
 
             // Click
@@ -1213,7 +1288,7 @@ function reasonBars(records, limit = 6) {
     const view = records.filter(r => r.st === "active" || r.st === "upcoming");
     const reasonRecs = view.filter(r => r.rc && r.rc !== "none");
     const total = reasonRecs.length;
-    if (total === 0) return { caption: "", barsHtml: `<div class="reason-empty">Geen reden opgegeven in de bron</div>` };
+    if (total === 0) return { caption: "", barsHtml: `<div class="reason-empty">${t("reason_empty")}</div>` };
     const cov = view.length ? Math.round(100 * total / view.length) : 0;
     const rcCounts = {};
     reasonRecs.forEach(r => { rcCounts[r.rc] = (rcCounts[r.rc] || 0) + 1; });
@@ -1222,13 +1297,13 @@ function reasonBars(records, limit = 6) {
     const barsHtml = top.map(([code, n]) => {
         const pct = Math.round(100 * n / total);
         const w = Math.round(100 * n / maxN);
-        return `<div class="reason-bar-row" title="${escHtml(reasonLabels[code] || code)}: ${n.toLocaleString("nl-NL")} meldingen">
-            <div class="reason-bar-label">${escHtml(reasonLabels[code] || code)}</div>
+        return `<div class="reason-bar-row" title="${escHtml(reasonLabel(code))}: ${n.toLocaleString("nl-NL")} ${t("no_notifications")}">
+            <div class="reason-bar-label">${escHtml(reasonLabel(code))}</div>
             <div class="reason-bar-track"><div class="reason-bar-fill" style="width:${w}%"></div></div>
             <div class="reason-bar-pct">${pct}%</div>
         </div>`;
     }).join("");
-    return { caption: `· ${total.toLocaleString("nl-NL")} met opgave (${cov}%)`, barsHtml };
+    return { caption: `· ${total.toLocaleString("nl-NL")} ${t("reported")} (${cov}%)`, barsHtml };
 }
 
 function renderDetail() {
@@ -1262,12 +1337,12 @@ function renderDetail() {
     } else if (S.selectedAtc) {
         recs = recs.filter(r => r.atc === S.selectedAtc);
         title = S.selectedAtc;
-        subtitle = `${new Set(recs.map(r => r.cc)).size} landen`;
+        subtitle = `${new Set(recs.map(r => r.cc)).size} ${t("countries")}`;
     } else {
         const ci = CC[S.selectedCountry];
         recs = recs.filter(r => r.cc === S.selectedCountry);
         title = `${ci?.flag || ""} ${ci?.name || S.selectedCountry}`;
-        subtitle = `${new Set(recs.map(r => r.atc)).size} ATC-codes`;
+        subtitle = `${new Set(recs.map(r => r.atc)).size} ${t("atc_codes")}`;
     }
 
     document.getElementById("detail-title").textContent = title;
@@ -1308,8 +1383,7 @@ function renderDetail() {
 
     const body = document.getElementById("detail-body");
     if (tabRecs.length === 0) {
-        const label = S.detailTab === "active" ? "actieve" : S.detailTab === "upcoming" ? "aankomende" : "opgeloste";
-        body.innerHTML = `<div class="no-results">Geen ${label} meldingen<div class="suggestion">Probeer een langere periode</div></div>`;
+        body.innerHTML = `<div class="no-results">${S.lang === "en" ? "No notifications in this category" : "Geen meldingen in deze categorie"}<div class="suggestion">${t("try_longer")}</div></div>`;
         return;
     }
 
@@ -1323,7 +1397,7 @@ function renderDetail() {
         }));
         if (S.countrySortByDate) entries.sort((a, b) => (a.first || "9999-99-99").localeCompare(b.first || "9999-99-99") || b.recs.length - a.recs.length);
         else entries.sort((a, b) => b.recs.length - a.recs.length);
-        const toggle = `<div class="country-sort-bar"><label><input type="checkbox" id="country-sort-date"${S.countrySortByDate ? " checked" : ""}> Volgorde van eerste tekort (1, 2, 3…)</label></div>`;
+        const toggle = `<div class="country-sort-bar"><label><input type="checkbox" id="country-sort-date"${S.countrySortByDate ? " checked" : ""}> ${t("country_sort_toggle")}</label></div>`;
         body.innerHTML = toggle + entries.map((e, i) => {
             const ci = CC[e.cc] || { flag: "", name: e.cc };
             const rank = S.countrySortByDate ? `<span class="section-rank">${i + 1}.</span>` : "";
@@ -1359,32 +1433,32 @@ function renderDetailDefault() {
     back.classList.remove("visible");
     document.getElementById("detail-tabs").style.display = "none";
     document.getElementById("detail-summary").style.display = "none";
-    document.getElementById("detail-title").textContent = "Dashboard overzicht";
+    document.getElementById("detail-title").textContent = t("overview_title");
     document.getElementById("detail-title").className = "detail-title text-title";
-    document.getElementById("detail-subtitle").textContent = `Data van ${RAW.generated}`;
+    document.getElementById("detail-subtitle").textContent = `${t("data_as_of")} ${RAW.generated}`;
 
     const body = document.getElementById("detail-body");
     let html = "";
 
     // Top 5
-    html += `<div class="detail-section"><div class="detail-section-title">Top tekorten (meeste landen)</div>`;
+    html += `<div class="detail-section"><div class="detail-section-title">${t("top_shortages")}</div>`;
     D.top5.forEach((a, i) => {
         html += `<div class="detail-top-item" data-select-atc="${a.atc}">
             <span class="detail-top-rank">${i + 1}.</span>
             <span class="atc-dot st-${a.worst}" style="width:6px;height:6px"></span>
             <span class="detail-top-code">${escHtml(a.name)}</span>
-            <span class="detail-top-info">${a.atc} \u00b7 ${a.countryCount} landen \u00b7 ${a.aN} actief</span>
+            <span class="detail-top-info">${a.atc} \u00b7 ${a.countryCount} ${t("countries")} \u00b7 ${a.aN} ${t("active")}</span>
         </div>`;
     });
     html += `</div>`;
 
     // Country overview
-    html += `<div class="detail-section"><div class="detail-section-title">Per land</div>`;
+    html += `<div class="detail-section"><div class="detail-section-title">${t("by_country")}</div>`;
     D.countrySummary.forEach(c => {
         const ci = CC[c.cc] || { flag: "", name: c.cc };
         const stats = [];
-        if (c.active) stats.push(`<span class="act">${c.active} actief</span>`);
-        if (c.upcoming) stats.push(`<span class="upc">${c.upcoming} aankomend</span>`);
+        if (c.active) stats.push(`<span class="act">${c.active} ${t("active")}</span>`);
+        if (c.upcoming) stats.push(`<span class="upc">${c.upcoming} ${t("st_upcoming")}</span>`);
         html += `<div class="detail-country-row" data-select-country="${c.cc}">
             <span class="detail-country-flag">${ci.flag}</span>
             <span class="detail-country-name">${ci.name}</span>
@@ -1399,12 +1473,12 @@ function renderDetailDefault() {
 function medCard(r, groupBy) {
     const name = r.mn || r.sub || "Onbekend middel";
     const substance = r.sub && r.mn ? r.sub : "";
-    const stLabel = r.st === "active" ? "actief" : r.st === "upcoming" ? "aankomend" : r.st === "undated" ? "geen start/einddatum" : "opgelost";
+    const stLabel = r.st === "active" ? t("st_active") : r.st === "upcoming" ? t("st_upcoming") : t("st_resolved");
 
     let dates = "";
-    if (r.ss) dates += `<span class="med-tag date">start ${r.ss}</span>`;
-    if (r.ee) dates += `<span class="med-tag date">verw. ${r.ee}</span>`;
-    if (r.rd && r.st === "resolved") dates += `<span class="med-tag date">opgelost ${r.rd}</span>`;
+    if (r.ss) dates += `<span class="med-tag date">${t("med_start")} ${r.ss}</span>`;
+    if (r.ee) dates += `<span class="med-tag date">${t("med_est")} ${r.ee}</span>`;
+    if (r.rd && r.st === "resolved") dates += `<span class="med-tag date">${t("med_resolved")} ${r.rd}</span>`;
 
     // Bidirectional link
     let link = "";
@@ -1421,8 +1495,8 @@ function medCard(r, groupBy) {
         ${r.tv || r.df ? `<div class="med-substance" style="font-style:italic">${escHtml(r.tv || r.df)}${r.tv_src === "atc" ? ' <span style="font-style:normal;color:var(--text-muted);font-size:10px">(via ATC)</span>' : ''}</div>` : ""}
         <div class="med-meta">
             <span class="med-tag ${r.st}">${stLabel}</span>
-            ${r.tv && emsRoodDetail[r.atc] && emsRoodDetail[r.atc].includes(r.tv) ? '<span class="med-tag" style="background:var(--status-active);color:white">EMS kritiek</span>' : ''}
-            ${r.rc ? `<span class="med-tag reason cat-${r.rc}" title="${escHtml(r.rt || reasonLabels[r.rc] || r.rc)}">${escHtml(reasonLabels[r.rc] || r.rc)}</span>` : ''}
+            ${r.tv && emsRoodDetail[r.atc] && emsRoodDetail[r.atc].includes(r.tv) ? `<span class="med-tag" style="background:var(--status-active);color:white">${t("ems_critical")}</span>` : ''}
+            ${r.rc ? `<span class="med-tag reason cat-${r.rc}" title="${escHtml(r.rt || reasonLabel(r.rc))}">${escHtml(reasonLabel(r.rc))}</span>` : ''}
             ${dates}
             ${link}
         </div>
@@ -1486,6 +1560,17 @@ document.getElementById("ems-rood-toggle").addEventListener("change", (e) => {
     S.emsRoodOnly = e.target.checked;
     renderSidebar();
     renderKpis();
+});
+
+// Taalschakelaar NL/EN
+document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        S.lang = btn.dataset.lang;
+        document.querySelectorAll(".lang-btn").forEach(b => b.classList.toggle("active", b.dataset.lang === S.lang));
+        applyStaticI18n();
+        renderFooter();
+        if (D) render();
+    });
 });
 
 // Sort buttons
