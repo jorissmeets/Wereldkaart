@@ -46,7 +46,23 @@
             --status-nodata: #c8dfe8;
             --status-ok: #0bbbef;
         }
-        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg-base); color: var(--text-primary); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg-base); color: var(--text-primary); min-height: 100vh; overflow-y: auto; }
+        #app-screen { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+        .bottom-panels { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; padding: 20px; background: var(--bg-base); }
+        .bp-card { background: #fff; border-radius: 12px; padding: 16px 18px; box-shadow: 0 1px 3px rgba(0,66,139,0.06); }
+        .bp-title { font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+        .bp-sub { font-size: 10px; font-weight: 400; color: var(--text-muted); }
+        .trend-svg { width: 100%; height: auto; display: block; overflow: visible; }
+        .trend-axis { font-size: 9px; fill: var(--text-muted); }
+        .watch-scroll { max-height: 260px; overflow-y: auto; }
+        .watch-row { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 10px; padding: 6px 0; border-top: 1px solid var(--border-light); }
+        .watch-row:first-child { border-top: none; }
+        .watch-name { font-size: 12px; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .watch-atc { font-size: 9px; color: var(--text-muted); font-family: monospace; margin-left: 5px; }
+        .watch-flags { font-size: 13px; white-space: nowrap; }
+        .watch-date { font-size: 11px; color: var(--status-active-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .watch-empty { font-size: 11px; color: var(--text-muted); font-style: italic; }
+        @media (max-width: 900px) { .bottom-panels { grid-template-columns: 1fr; } }
 
         /* ── Header ── */
         .header { background: linear-gradient(135deg, #00428b 0%, #0bbbef 100%); border-bottom: none; padding: 9px 20px; display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
@@ -329,6 +345,7 @@
     </style>
 </head>
 <body>
+<div id="app-screen">
 
 <!-- Header -->
 <div class="header">
@@ -456,6 +473,18 @@
 </div>
 
 <div class="footer" id="footer"></div>
+</div><!-- /#app-screen -->
+
+<div class="bottom-panels">
+    <section class="bp-card" id="trend-panel">
+        <div class="bp-title"><span data-i18n="trend_title">Trend: actieve tekorten over tijd</span> <span class="bp-sub" id="trend-sub"></span></div>
+        <div id="trend-chart"></div>
+    </section>
+    <section class="bp-card" id="watchlist-panel">
+        <div class="bp-title"><span data-i18n="watch_title">Vroegsignaal-watchlist</span> <span class="bp-sub" data-i18n="watch_sub">nieuw in 1–2 landen · bron-startdatum · laatste 120 dagen</span></div>
+        <div class="watch-scroll" id="watchlist-body"></div>
+    </section>
+</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
@@ -554,6 +583,8 @@ const T = {
         footer_org: "Landelijk Coördinatiecentrum Geneesmiddelen", footer_atc: "ATC-codes",
         footer_sources: "bronlanden", footer_notif: "meldingen", footer_back: "terug", footer_search: "zoeken",
         load_error: "Fout bij laden. Draai eerst build_data.py.", for_atc: "voor",
+        trend_title: "Trend: actieve tekorten over tijd", watch_title: "Vroegsignaal-watchlist",
+        watch_sub: "nieuw in 1–2 landen · bron-startdatum · laatste 120 dagen", watch_none: "Geen recente vroegsignalen",
     },
     en: {
         period_all: "All", kpi_shortages: "Number of shortages",
@@ -575,6 +606,8 @@ const T = {
         footer_org: "National Medicines Coordination Centre", footer_atc: "ATC codes",
         footer_sources: "source countries", footer_notif: "notifications", footer_back: "back", footer_search: "search",
         load_error: "Loading error. Run build_data.py first.", for_atc: "for",
+        trend_title: "Trend: active shortages over time", watch_title: "Early-signal watchlist",
+        watch_sub: "new in 1–2 countries · source start date · last 120 days", watch_none: "No recent early signals",
     },
 };
 const REASON_EN = {
@@ -1006,6 +1039,8 @@ function render() {
     renderSidebar();
     renderMap();
     renderDetail();
+    renderTrend();
+    renderWatchlist();
     saveHash();
 }
 
@@ -1311,7 +1346,8 @@ function reasonBars(records, limit = 6) {
     const cov = view.length ? Math.round(100 * total / view.length) : 0;
     const rcCounts = {};
     reasonRecs.forEach(r => { rcCounts[r.rc] = (rcCounts[r.rc] || 0) + 1; });
-    const top = Object.entries(rcCounts).sort((a, b) => b[1] - a[1]).slice(0, limit);
+    const cats = Object.entries(rcCounts).sort((a, b) => b[1] - a[1]);
+    const top = cats.slice(0, limit);
     const maxN = top[0][1];
     const barsHtml = top.map(([code, n]) => {
         const pct = Math.round(100 * n / total);
@@ -1322,7 +1358,8 @@ function reasonBars(records, limit = 6) {
             <div class="reason-bar-pct">${pct}%</div>
         </div>`;
     }).join("");
-    return { caption: `· ${total.toLocaleString("nl-NL")} ${t("reported")} (${cov}%)`, barsHtml };
+    const more = cats.length > limit ? ` · top ${limit}` : "";
+    return { caption: `· ${total.toLocaleString("nl-NL")} ${t("reported")} (${cov}%)${more}`, barsHtml };
 }
 
 function renderDetail() {
@@ -1445,6 +1482,73 @@ function renderDetail() {
                 ${recs.slice(0, 10).map(r => medCard(r, "atc")).join("")}`;
         }).join("");
     }
+}
+
+// Trend: actieve ATC×land-tekorten per maand (laatste 24 mnd), o.b.v. écht bron-startdatum (ss !== sa)
+function renderTrend() {
+    const host = document.getElementById("trend-chart");
+    if (!host || !RAW) return;
+    const recs = RAW.records.filter(r => r.ss && r.ss !== r.sa && r.st !== "discontinued");
+    const N = 24;
+    const months = [];
+    let [y, m] = isoToday().slice(0, 7).split("-").map(Number);
+    for (let i = 0; i < N; i++) { months.unshift(`${y}-${String(m).padStart(2, "0")}`); m--; if (m < 1) { m = 12; y--; } }
+    const counts = months.map(mk => {
+        const start = mk + "-01", end = mk + "-31", set = new Set();
+        for (const r of recs) {
+            if (r.ss > end) continue;
+            const e = r.rd || r.ee || null;
+            if (e && e < start) continue;
+            set.add(r.atc + "|" + r.cc);
+        }
+        return set.size;
+    });
+    const maxV = Math.max(...counts, 1);
+    const W = 600, H = 150, pad = 4;
+    const px = i => pad + (i / (N - 1)) * (W - pad * 2);
+    const py = v => H - pad - (v / maxV) * (H - pad * 2 - 12);
+    const line = counts.map((v, i) => `${px(i).toFixed(1)},${py(v).toFixed(1)}`).join(" ");
+    const area = `${px(0)},${H - pad} ${line} ${px(N - 1)},${H - pad}`;
+    const labels = months.map((mk, i) => (i % 4 === 0 || i === N - 1) ? `<text class="trend-axis" x="${px(i).toFixed(1)}" y="${H + 10}" text-anchor="middle">${mk.slice(2)}</text>` : "").join("");
+    host.innerHTML = `<svg class="trend-svg" viewBox="0 0 ${W} ${H + 14}">
+        <polygon points="${area}" fill="var(--lcg-cyan)" opacity="0.12"/>
+        <polyline points="${line}" fill="none" stroke="var(--lcg-cyan)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        <text class="trend-axis" x="${pad}" y="9">${maxV}</text>${labels}
+    </svg>`;
+    const sub = document.getElementById("trend-sub");
+    if (sub) sub.textContent = S.lang === "en"
+        ? `· ${recs.length.toLocaleString("en")} shortages with a source start date · last 24 months`
+        : `· ${recs.length.toLocaleString("nl-NL")} tekorten met bron-startdatum · laatste 24 maanden`;
+}
+
+// Vroegsignaal-watchlist: actieve middelen in ≤2 landen met een échte, recente bron-startdatum (<120 dagen)
+function renderWatchlist() {
+    const host = document.getElementById("watchlist-body");
+    if (!host || !RAW) return;
+    const cutoff = addDays(isoToday(), -120);
+    const byAtc = {};
+    RAW.records.forEach(r => {
+        if (r.st !== "active") return;
+        const g = (byAtc[r.atc] ||= { ccs: new Set(), first: null, sub: "", mn: "" });
+        g.ccs.add(r.cc);
+        if (!g.sub && r.sub) g.sub = r.sub;
+        if (!g.mn && r.mn) g.mn = r.mn;
+        if (r.ss && r.ss !== r.sa && (!g.first || r.ss < g.first)) g.first = r.ss;
+    });
+    const rows = Object.entries(byAtc)
+        .filter(([, g]) => g.ccs.size <= 2 && g.first && g.first >= cutoff)
+        .sort((a, b) => b[1].first.localeCompare(a[1].first))
+        .slice(0, 30);
+    if (!rows.length) { host.innerHTML = `<div class="watch-empty">${t("watch_none")}</div>`; return; }
+    host.innerHTML = rows.map(([atc, g]) => {
+        const name = medNameByLang(atc, g.sub, g.mn);
+        const flags = [...g.ccs].map(cc => CC[cc] ? CC[cc].flag : "").join(" ");
+        return `<div class="watch-row" title="${escHtml(name)} · ${g.first}">
+            <div class="watch-name">${escHtml(name)}<span class="watch-atc">${atc}</span></div>
+            <div class="watch-flags">${flags}</div>
+            <div class="watch-date">${g.first}</div>
+        </div>`;
+    }).join("");
 }
 
 function renderDetailDefault() {
