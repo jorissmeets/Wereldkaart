@@ -37,9 +37,16 @@ class ItAifaScraper(BaseScraper):
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
 
-        response = requests.get(self.CSV_URL, timeout=30,
-                                headers={"User-Agent": "Mozilla/5.0"})
-        response.raise_for_status()
+        hdrs = {"User-Agent": "Mozilla/5.0"}
+        try:
+            response = requests.get(self.CSV_URL, timeout=30, headers=hdrs)
+            response.raise_for_status()
+        except requests.exceptions.SSLError:
+            # AIFA-cert wordt niet door certifi vertrouwd (curl wél); val terug op no-verify
+            import urllib3
+            urllib3.disable_warnings()
+            response = requests.get(self.CSV_URL, timeout=30, headers=hdrs, verify=False)
+            response.raise_for_status()
 
         # CSV uses semicolons as separator, first 2 lines are header text
         lines = response.text.split("\n")

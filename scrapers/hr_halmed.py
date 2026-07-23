@@ -59,8 +59,13 @@ class HrHalmedScraper(BaseScraper):
 
         print(f"  Downloaded {len(resp.content) / 1024:.0f} KB PDF")
 
-        import tabula
-        dfs = tabula.read_pdf(tmp_path, pages="all", lattice=True)
+        import pdfplumber
+        dfs = []
+        with pdfplumber.open(tmp_path) as pdf:
+            for page in pdf.pages:
+                for tbl in page.extract_tables():
+                    if tbl:
+                        dfs.append(pd.DataFrame(tbl))
         print(f"  Found {len(dfs)} table(s) across pages")
 
         all_rows = []
