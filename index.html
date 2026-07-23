@@ -968,7 +968,7 @@ function recompute() {
             medicines: (() => { const m = {}; inPeriod.filter(r => r.st === "active" || r.st === "upcoming").forEach(r => { (m[r.atc] ||= new Set()).add(r.cc); }); return Object.values(m).filter(s => s.size >= 3).length; })(),
             countries: countriesActiveSet.size,
             countriesSet: countriesActiveSet,
-            totalCountries: RAW.monitored_countries.length,
+            totalCountries: countriesActiveSet.size,
             critical: criticalAtcs.length,
             criticalDelta: criticalAtcs.length - prevCritN,
             criticalAtcs,
@@ -1064,10 +1064,9 @@ function renderKpis() {
 
     // Mini bar for countries — reflecteert dezelfde set (globaal of per ATC)
     const bar = document.getElementById("kpi-countries-bar");
-    bar.innerHTML = RAW.monitored_countries.map(cc => {
+    bar.innerHTML = [...k.countriesSet].sort().map(cc => {
         const hasActive = countriesSet.has(cc);
         const color = hasActive ? "var(--status-active-soft)" : "var(--bg-elevated)";
-        const ci = CC[cc];
         return `<div class="kpi-minibar-seg" style="background:${color}" title="${countryName(cc)}"></div>`;
     }).join("");
 
