@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LCG Dossierstatus</title>
+<style>
+    :root {
+        --lcg-blue: #00428b; --lcg-cyan: #0bbbef; --lcg-green: #a8c04d;
+        --lcg-light: #daf5fd; --bg-base: #f2f7fb; --bg-card: #ffffff;
+        --bg-elevated: #eaf8fd; --border: #dbe6f0; --border-light: #eef3f8;
+        --text-primary: #17324d; --text-secondary: #4a6a88; --text-muted: #8aa0b4;
+        --status-active: #e05555; --status-active-soft: #e85050;
+        --status-upcoming: #f0a020; --status-resolved: #a8c04d;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: var(--bg-base); color: var(--text-primary); font-size: 13px; line-height: 1.5; }
+    a { color: var(--lcg-blue); }
+
+    .page { max-width: 1180px; margin: 0 auto; padding: 20px 20px 60px; }
+
+    /* Header */
+    .top { display: flex; align-items: center; gap: 14px; padding: 6px 0 18px; flex-wrap: wrap; }
+    .top-logo { width: 34px; height: 34px; flex-shrink: 0; }
+    .top-logo svg { width: 100%; height: 100%; }
+    .top h1 { font-size: 20px; font-weight: 800; color: var(--lcg-blue); letter-spacing: -0.3px; }
+    .top .sub { font-size: 12px; color: var(--text-muted); }
+    .top-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .top-link { font-size: 12px; text-decoration: none; padding: 6px 12px; border-radius: 6px; background: var(--bg-card); border: 1px solid var(--border); color: var(--lcg-blue); font-weight: 600; }
+    .top-link:hover { background: var(--lcg-light); }
+
+    /* KPI strip */
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+    .kpi { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+    .kpi .n { font-size: 24px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; }
+    .kpi .l { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
+
+    /* Controls */
+    .controls { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+    .phase-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+    .chip { font-size: 11px; padding: 5px 11px; border-radius: 20px; border: 1px solid var(--border); background: var(--bg-card); cursor: pointer; color: var(--text-secondary); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+    .chip:hover { border-color: var(--lcg-cyan); }
+    .chip.active { background: var(--lcg-blue); color: #fff; border-color: var(--lcg-blue); }
+    .chip .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .chip .cnt { font-size: 10px; opacity: 0.8; }
+    .search { margin-left: auto; }
+    .search input { padding: 7px 11px; border: 1px solid var(--border); border-radius: 6px; font-size: 12px; width: 220px; outline: none; background: var(--bg-card); }
+    .search input:focus { box-shadow: 0 0 0 2px rgba(11,187,239,0.25); }
+    .toggle-resolved { font-size: 11px; color: var(--text-secondary); display: inline-flex; align-items: center; gap: 5px; cursor: pointer; user-select: none; }
+
+    /* Dossier card */
+    .dcard { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 14px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,66,139,0.04); }
+    .dcard-head { display: flex; align-items: center; gap: 10px; padding: 13px 16px; border-bottom: 1px solid var(--border-light); flex-wrap: wrap; }
+    .dcard-head .name { font-size: 15px; font-weight: 800; color: var(--text-primary); }
+    .dcard-head .atc { font-size: 11px; font-family: ui-monospace, Menlo, monospace; color: var(--text-muted); background: var(--bg-elevated); padding: 1px 6px; border-radius: 4px; }
+    .phase-badge { font-size: 11px; font-weight: 700; color: #fff; padding: 3px 10px; border-radius: 20px; }
+    .dcard-head .updated { font-size: 11px; color: var(--text-muted); }
+    .dcard-head .lcg-link { font-size: 11px; margin-left: auto; text-decoration: none; color: var(--lcg-cyan); font-weight: 600; white-space: nowrap; }
+    .dcard-head .lcg-link:hover { text-decoration: underline; }
+
+    .dcard-body { display: grid; grid-template-columns: 1fr 1.25fr; gap: 0; }
+    .pane { padding: 14px 16px; }
+    .pane.left { border-right: 1px solid var(--border-light); background: linear-gradient(180deg, rgba(218,245,253,0.25), transparent 120px); }
+    .pane-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--lcg-blue); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .pane-title .icon { font-size: 12px; }
+
+    .field { margin-bottom: 9px; }
+    .field-label { font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
+    .field-val { font-size: 12.5px; color: var(--text-primary); }
+    .field-val.muted { color: var(--text-muted); font-style: italic; }
+
+    /* Meldingen (landkaart) */
+    .meld-summary { display: flex; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
+    .meld-summary .m { font-size: 12px; color: var(--text-secondary); }
+    .meld-summary .m b { font-size: 15px; color: var(--lcg-blue); font-weight: 800; }
+    .meld-summary .m.new b { color: var(--status-active); }
+    .country-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border-light); font-size: 12.5px; }
+    .country-row:last-child { border-bottom: none; }
+    .country-flag { font-size: 15px; flex-shrink: 0; }
+    .country-name { font-weight: 600; min-width: 110px; }
+    .st-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .st-dot.active { background: var(--status-active); }
+    .st-dot.upcoming { background: var(--status-upcoming); }
+    .st-dot.resolved { background: var(--status-resolved); }
+    .c-date { color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 11px; }
+    .c-reason { color: var(--text-secondary); font-size: 11px; background: var(--bg-elevated); padding: 1px 6px; border-radius: 4px; }
+    .c-count { margin-left: auto; color: var(--text-muted); font-size: 11px; }
+    .badge-new { font-size: 8px; font-weight: 800; background: var(--status-active); color: #fff; padding: 1px 5px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.3px; }
+    .meld-none { font-size: 12px; color: var(--text-muted); font-style: italic; padding: 8px 0; }
+
+    .footer { text-align: center; font-size: 11px; color: var(--text-muted); padding: 18px 0 0; }
+
+    @media (max-width: 780px) {
+        .kpis { grid-template-columns: repeat(2, 1fr); }
+        .dcard-body { grid-template-columns: 1fr; }
+        .pane.left { border-right: none; border-bottom: 1px solid var(--border-light); }
+        .search { margin-left: 0; width: 100%; }
+        .search input { width: 100%; }
+    }
+
+    /* Password gate */
+    #pw-gate { position: fixed; inset: 0; background: var(--bg-base); z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+    #pw-gate h2 { color: var(--lcg-blue); }
+    #pw-gate input { padding: 9px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+    #pw-gate button { padding: 9px 20px; background: var(--lcg-blue); color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; }
+    .pw-err { color: var(--status-active); font-size: 12px; min-height: 16px; }
+</style>
+</head>
+<body>
+<div class="page">
+    <div class="top">
+        <div class="top-logo"><svg viewBox="0 0 156 158" fill="#00428b"><path d="M.47,55.36l18.05-31.47c.98-1.68,3.09-2.24,4.77-1.26l16.51,9.45c10.33,5.99,13.93,19.17,8,29.55-5.99,10.33-19.17,13.89-29.55,7.95L1.74,60.09c-1.64-.94-2.24-3.04-1.26-4.72Z"/><path d="M47.93,96.42c5.99,10.33,2.48,23.57-7.81,29.55l-16.46,9.59c-1.68.98-3.83.42-4.77-1.26L.66,102.92c-.98-1.68-.37-3.79,1.26-4.77l16.46-9.54c10.33-5.99,23.57-2.48,29.55,7.81Z"/><path d="M99.6,78.93c0,11.97-9.68,21.65-21.6,21.65s-21.6-9.68-21.6-21.65,9.68-21.6,21.6-21.6,21.6,9.68,21.6,21.6Z"/><path d="M99.6,3.46v19.08c0,11.92-9.68,21.6-21.6,21.6s-21.6-9.68-21.6-21.6V3.46c0-1.92,1.54-3.46,3.46-3.46h36.28c1.92,0,3.46,1.54,3.46,3.46Z"/><path d="M99.6,135.37v19.03c0,1.96-1.54,3.51-3.46,3.51h-36.28c-1.92,0-3.46-1.54-3.46-3.51v-19.03c0-11.92,9.68-21.6,21.6-21.6s21.6,9.68,21.6,21.6Z"/><path d="M155.43,102.54l-18.05,31.47c-.98,1.68-3.09,2.24-4.77,1.26l-16.51-9.45c-10.33-5.99-13.93-19.17-8-29.55,5.99-10.33,19.17-13.93,29.55-7.95l16.51,9.49c1.64.94,2.24,3.04,1.26,4.72Z"/><path d="M108.16,61.49c-6.03-10.33-2.52-23.57,7.81-29.55l16.46-9.59c1.68-.98,3.79-.42,4.77,1.26l18.24,31.38c.93,1.64.37,3.79-1.26,4.77l-16.46,9.54c-10.33,5.99-23.57,2.48-29.55-7.81Z"/></svg></div>
+        <div>
+            <h1>LCG Dossierstatus</h1>
+            <div class="sub">Actuele tekortendossiers · LCG-fase &amp; buitenlandse meldingen uit de landkaart</div>
+        </div>
+        <div class="top-right">
+            <a class="top-link" href="index.html">← Landkaart</a>
+        </div>
+    </div>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="controls">
+        <div class="phase-chips" id="phase-chips"></div>
+        <div class="search">
+            <input type="text" id="search" placeholder="Zoek dossier, ATC of stof…" autocomplete="off">
+        </div>
+    </div>
+    <div class="controls" style="margin-top:-6px">
+        <label class="toggle-resolved"><input type="checkbox" id="show-resolved"> Toon ook opgeloste meldingen</label>
+    </div>
+
+    <div id="dossier-container"></div>
+
+    <div class="footer" id="footer"></div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+// LCG dossiers — metadata (fase-status van lcg.nl) + WHO ATC
+// ═══════════════════════════════════════════════════════════
+const DOSSIERS = [
+    { key:"ifosfamide",        title:"Ifosfamide (Holoxan)",                atc:"L01AA06", phase:"Therapeutische coördinatiefase", updated:"2026-07-07", url:"https://lcg.nl/medicijnentekort/ifosfamide-holoxan/" },
+    { key:"quetiapine",        title:"Quetiapine",                          atc:"N05AH04", phase:"Therapeutische coördinatiefase", updated:"2026-07-13", url:"https://lcg.nl/medicijnentekort/quetiapine/" },
+    { key:"prednisolon",       title:"DAF-prednisolon",                     atc:"H02AB06", phase:"Therapeutische coördinatiefase", updated:"2026-06-26", url:"https://lcg.nl/medicijnentekort/daf-prednisolon-2/" },
+    { key:"gentamicine",       title:"Gentamicine (i.v.)",                  atc:"J01GB03", phase:"Logistieke coördinatiefase",     updated:"2026-07-24", url:"https://lcg.nl/medicijnentekort/gentamicine-i-v/" },
+    { key:"praziquantel",      title:"Praziquantel (Biltricide)",           atc:"P02BA01", phase:"Bewakingsfase",                  updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/praziquantel-biltricide/" },
+    { key:"capecitabine",      title:"Capecitabine",                        atc:"L01BC06", phase:"Inventarisatie",                 updated:"2026-07-27", url:"https://lcg.nl/medicijnentekort/capecitabine/" },
+    { key:"mitoxantron",       title:"Mitoxantron (i.v.)",                  atc:"L01DB07", phase:"Inventarisatie",                 updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/mitoxantron-i-v/" },
+    { key:"albendazol",        title:"Albendazol (Eskazole)",               atc:"P02CA03", phase:"Inventarisatie",                 updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/albendazol-eskazole-400mg-tablet/" },
+    { key:"folinezuur",        title:"Folinezuur (capsules, oraal)",        atc:"V03AF03", phase:"Monitoring",                     updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/folinezuur-capsules-oraal/" },
+    { key:"methylergometrine", title:"Methylergometrine (i.v.)",            atc:"G02AB01", phase:"Monitoring",                     updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/methylergometrine/" },
+    { key:"hyaluronidase",     title:"Hyaluronidase (Hyason)",              atc:"B06AA03", phase:"Monitoring",                     updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/hyaluronidase-hyason/" },
+    { key:"fentolamine",       title:"Fentolamine (Regitine)",              atc:"C04AB01", phase:"Monitoring",                     updated:"2026-04-29", url:"https://lcg.nl/medicijnentekort/fentolamine-ampul-10mg-ml/" },
+    { key:"triamcinolon",      title:"Triamcinolonacetonide (Kenacort)",    atc:"H02AB08", phase:"Monitoring",                     updated:"2026-07-23", url:"https://lcg.nl/medicijnentekort/kenacort-a10/" },
+    { key:"visudyne",          title:"Visudyne (verteporfine)",             atc:"S01LA01", phase:"Monitoring",                     updated:"2026-05-18", url:"https://lcg.nl/medicijnentekort/visudyne/" },
+];
+
+// Narratieve LCG-status per dossier (snapshot van lcg.nl, opgehaald 2026-07-28)
+const LCG_STATUS = {
+    ifosfamide: {
+        situation: "Er is een beschikbaarheidsprobleem van ifosfamide (Holoxan) in Nederland. Het LCG heeft meerdere rode alerts uitgegeven en deze voortdurend verlengd. Het dossier bevindt zich in de therapeutische coördinatiefase, waarbij aandacht wordt gevraagd voor het behandeladvies in de alert.",
+        expectation: "De huidige alert is verlengd tot en met 4 september 2026.",
+        advice: "Het LCG vraagt aandacht voor het behandeladvies in de alert. Voorschrijvers en apothekers worden aangeraden de downloadbare PDF-alerts te raadplegen voor gedetailleerde behandeladviezen en alternatieven.",
+    },
+    quetiapine: {
+        situation: "De alert voor quetiapine is verlengd tot en met 28 augustus 2026. Een eerdere rode alert is in januari 2026 naar oranje bijgesteld vanwege een verbeterde beschikbaarheid van tabletten met gereguleerde afgifte. Het dossier bevindt zich in de therapeutische coördinatiefase.",
+        expectation: "Alert loopt tot en met 28 augustus 2026; een exacte resolutieduur wordt niet gespecificeerd.",
+        advice: "Het dossier verwijst naar downloadbare PDF-documenten met gedetailleerde richtlijnen, waaronder aanpassingen voor de behandeling van delier op de IC.",
+    },
+    prednisolon: {
+        situation: "Het dossier DAF-prednisolon bevindt zich in de therapeutische coördinatiefase. De webpagina bevat geen uitgebreide beschrijving van de actuele situatie; voor de volledige toelichting wordt verwezen naar het downloadbare LCG-alert (26-06-2026).",
+    },
+    gentamicine: {
+        situation: "Het LCG heeft de landelijke voorraadpositie en het landelijke scenario van gentamicine (i.v.) in kaart gebracht en deze informatie met ziekenhuizen gedeeld. Het dossier bevindt zich in de logistieke coördinatiefase.",
+    },
+    praziquantel: {
+        situation: "Het dossier bevindt zich in de bewakingsfase: er is aandacht voor nodig, maar op dit moment is er geen kritieke tekortproblematiek. Gepubliceerd op 10-11-2025.",
+        advice: "Er is geen vrijstellingsbesluit voor praziquantel. Import is mogelijk op basis van indicatie (invoer wanneer medisch geïndiceerd, zonder formele vrijstelling).",
+    },
+    capecitabine: {
+        situation: "Het LCG voert een inventarisatie uit naar de beschikbaarheid van capecitabine. Er worden voorraadgegevens bij de ziekenhuizen opgevraagd (uiterlijke aanleverdatum donderdag 30 juli). De inventarisatie moet inzicht geven in de mogelijke impact van een tekort.",
+    },
+    mitoxantron: {
+        situation: "Het LCG heeft de landelijke voorraadpositie en het landelijke scenario voor mitoxantron (i.v.) in kaart gebracht en gedeeld met ziekenhuizen, het CBG en de IGJ. Het dossier bevindt zich in de fase inventarisatie.",
+    },
+    albendazol: {
+        situation: "Het LCG ontvangt signalen over een beperkte beschikbaarheid van albendazol (Eskazole) 400mg tablet en onderzoekt deze meldingen. Het dossier bevindt zich in een vroeg stadium (inventarisatie).",
+    },
+    folinezuur: {
+        situation: "Het LCG heeft signalen ontvangen over een tekort aan folinezuur capsules (oraal). Deze zijn besproken met het CBG en de IGJ en worden nader onderzocht. Het dossier bevindt zich in de fase monitoring.",
+    },
+    methylergometrine: {
+        situation: "Het LCG ontvangt signalen dat er een tekort bestaat van methylergometrine intraveneus (i.v.). Deze signalen worden samen met het CBG en de IGJ verder onderzocht. Het dossier bevindt zich nog in de onderzoeksfase.",
+    },
+    hyaluronidase: {
+        situation: "De pagina bevat geen gedetailleerde beschrijving van de huidige tekortsituatie voor hyaluronidase (Hyason). Het dossier staat in de fase monitoring; er is een vrijstellingsbesluit gepubliceerd op de IGJ-website (05-05-2026).",
+        advice: "Raadpleeg het vrijstellingsbesluit op de IGJ-website (05-05-2026) voor de mogelijkheden om af te wijken van de normale vereisten en voor alternatieven.",
+    },
+    fentolamine: {
+        situation: "Het tekortdossier voor fentolamine (Regitine) ampul 10 mg/ml staat in de monitoringfase. Gepubliceerd op 27-03-2026. Op 20-04-2026 is door de IGJ een vrijstellingsbesluit afgegeven om de beschikbaarheid aan te pakken.",
+        expectation: "Op 20-04-2026 heeft de IGJ een vrijstellingsbesluit afgegeven voor fentolamine (Regitine); er zijn maatregelen getroffen om de beschikbaarheid te herstellen.",
+        advice: "Voor verdere informatie wordt verwezen naar het vrijstellingsbesluit van de IGJ.",
+    },
+    triamcinolon: {
+        situation: "Voor Kenacort A10 en Kenacort A40 (triamcinolonacetonide) zijn er importmogelijkheden onder het actuele vrijstellingsbesluit. Het dossier staat in de fase monitoring.",
+        advice: "Er is een vrijstellingsbesluit beschikbaar op de IGJ-website waardoor import van Kenacort A10/A40 mogelijk is.",
+    },
+    visudyne: {
+        situation: "Het dossier voor Visudyne (verteporfine) staat in de fase monitoring. Er is momenteel geen alert afgegeven; de pagina bevat verder beperkte inhoudelijke informatie over de tekortsituatie.",
+    },
+};
+
+// LCG-escalatiefasen: rang (hoog = ernstiger) + kleur
+const PHASES = {
+    "Therapeutische coördinatiefase": { rank:4, color:"#d83b3b", label:"Therapeutische coördinatie", txt:"#fff" },
+    "Logistieke coördinatiefase":     { rank:3, color:"#b45f10", label:"Logistieke coördinatie",     txt:"#fff" },
+    "Bewakingsfase":                  { rank:2, color:"#9a7410", label:"Bewaking",                   txt:"#fff" },
+    "Monitoring":                     { rank:2, color:"#3b9dd0", label:"Monitoring",                 txt:"#fff" },
+    "Inventarisatie":                 { rank:1, color:"#7f97ab", label:"Inventarisatie",             txt:"#fff" },
+};
+function phaseInfo(p) { return PHASES[p] || { rank:0, color:"#7f97ab", label:p, txt:"#fff" }; }
+
+// Vlaggen per landcode (subset van de landkaart)
+const FLAG = { AR:"🇦🇷",AT:"🇦🇹",AU:"🇦🇺",BE:"🇧🇪",BR:"🇧🇷",CA:"🇨🇦",CH:"🇨🇭",CL:"🇨🇱",CO:"🇨🇴",CZ:"🇨🇿",DE:"🇩🇪",DK:"🇩🇰",EE:"🇪🇪",EG:"🇪🇬",ES:"🇪🇸",EU:"🇪🇺",FI:"🇫🇮",FR:"🇫🇷",GR:"🇬🇷",HR:"🇭🇷",HU:"🇭🇺",IE:"🇮🇪",IL:"🇮🇱",IN:"🇮🇳",IS:"🇮🇸",IT:"🇮🇹",JP:"🇯🇵",KR:"🇰🇷",LT:"🇱🇹",LV:"🇱🇻",MX:"🇲🇽",MY:"🇲🇾",NL:"🇳🇱",NO:"🇳🇴",PE:"🇵🇪",PH:"🇵🇭",PK:"🇵🇰",PT:"🇵🇹",RO:"🇷🇴",SA:"🇸🇦",SE:"🇸🇪",SG:"🇸🇬",SI:"🇸🇮",SK:"🇸🇰",TR:"🇹🇷",TW:"🇹🇼",US:"🇺🇸",ZA:"🇿🇦" };
+
+let RAW = null, BYATC = {}, REASON_LABELS = {};
+let S = { phase: "all", q: "", showResolved: false };
+
+function isoToday() { return new Date().toISOString().slice(0, 10); }
+function addDays(iso, d) { const x = new Date(iso); x.setDate(x.getDate() + d); return x.toISOString().slice(0, 10); }
+function esc(s) { return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function reasonText(r) { return r.rt || REASON_LABELS[r.rc] || r.rc || ""; }
+function countryName(r) { return r.cn || r.cc; }
+
+// Actuele meldingen (active/upcoming, evt. resolved) voor een ATC, gegroepeerd per land
+function meldingenForAtc(atc, includeResolved) {
+    const today = isoToday();
+    const cutoff = addDays(today, -60);
+    const recs = (BYATC[atc] || []).filter(r =>
+        r.st === "active" || r.st === "upcoming" || (includeResolved && r.st === "resolved"));
+    const byCc = {};
+    recs.forEach(r => { (byCc[r.cc] ||= []).push(r); });
+    const rows = Object.entries(byCc).map(([cc, rs]) => {
+        const st = rs.some(r => r.st === "active") ? "active" : rs.some(r => r.st === "upcoming") ? "upcoming" : "resolved";
+        const starts = rs.map(r => r.ss).filter(Boolean).sort();
+        const first = starts.length ? starts[0] : null;                       // vroegste = "sinds"
+        const newest = starts.length ? starts[starts.length - 1] : null;      // meest recente start
+        const reasons = [...new Set(rs.map(reasonText).filter(Boolean))];
+        // "nieuw" = echte bron-startdatum (ss !== sa), in de laatste 60 dagen, niet in de toekomst
+        const isNew = rs.some(r => r.ss && r.ss !== r.sa && r.ss >= cutoff && r.ss <= today);
+        return { cc, st, first, newest, reasons, n: rs.length, isNew };
+    });
+    const stRank = { active: 0, upcoming: 1, resolved: 2 };
+    rows.sort((a, b) => stRank[a.st] - stRank[b.st] || (b.newest || "0").localeCompare(a.newest || "0"));
+    return rows;
+}
+
+function renderKpis(list) {
+    const totalCountries = new Set();
+    let coord = 0, nieuw = 0;
+    list.forEach(d => {
+        const rows = meldingenForAtc(d.atc, false);
+        rows.forEach(r => totalCountries.add(d.atc + "|" + r.cc));
+        if (phaseInfo(d.phase).rank >= 3) coord++;
+        if (rows.some(r => r.isNew)) nieuw++;
+    });
+    const active = list.filter(d => meldingenForAtc(d.atc, false).length > 0).length;
+    document.getElementById("kpis").innerHTML = `
+        <div class="kpi"><div class="n">${list.length}</div><div class="l">Dossiers</div></div>
+        <div class="kpi"><div class="n">${active}</div><div class="l">Met buitenlandse meldingen</div></div>
+        <div class="kpi"><div class="n">${coord}</div><div class="l">In coördinatiefase</div></div>
+        <div class="kpi"><div class="n">${nieuw}</div><div class="l">Met nieuw signaal (&lt;60d)</div></div>`;
+}
+
+function renderPhaseChips() {
+    const counts = {};
+    DOSSIERS.forEach(d => counts[d.phase] = (counts[d.phase] || 0) + 1);
+    const phases = Object.keys(counts).sort((a, b) => phaseInfo(b).rank - phaseInfo(a).rank);
+    const chips = [`<div class="chip ${S.phase === "all" ? "active" : ""}" data-phase="all">Alle <span class="cnt">${DOSSIERS.length}</span></div>`];
+    phases.forEach(p => {
+        const pi = phaseInfo(p);
+        chips.push(`<div class="chip ${S.phase === p ? "active" : ""}" data-phase="${esc(p)}"><span class="dot" style="background:${pi.color}"></span>${esc(pi.label)} <span class="cnt">${counts[p]}</span></div>`);
+    });
+    document.getElementById("phase-chips").innerHTML = chips.join("");
+}
+
+function renderCards() {
+    let list = DOSSIERS.slice();
+    if (S.phase !== "all") list = list.filter(d => d.phase === S.phase);
+    if (S.q) {
+        const q = S.q.toUpperCase();
+        list = list.filter(d => (d.title + " " + d.atc).toUpperCase().includes(q));
+    }
+    // Sorteer op fase-ernst, dan op aantal landen
+    list.sort((a, b) => phaseInfo(b.phase).rank - phaseInfo(a.phase).rank
+        || meldingenForAtc(b.atc, false).length - meldingenForAtc(a.atc, false).length);
+
+    renderKpis(DOSSIERS);
+
+    const cont = document.getElementById("dossier-container");
+    if (!list.length) { cont.innerHTML = `<div class="meld-none" style="padding:24px;text-align:center">Geen dossiers gevonden.</div>`; return; }
+
+    cont.innerHTML = list.map(d => {
+        const pi = phaseInfo(d.phase);
+        const st = LCG_STATUS[d.key] || {};
+        const rows = meldingenForAtc(d.atc, S.showResolved);
+        const nNew = rows.filter(r => r.isNew).length;
+        const nMeld = rows.reduce((s, r) => s + r.n, 0);
+        const nResolved = (BYATC[d.atc] || []).filter(r => r.st === "resolved").length;
+
+        // ── LCG-status pane ──
+        const lcgFields = [];
+        if (st.situation) lcgFields.push(`<div class="field"><div class="field-label">Situatie</div><div class="field-val">${esc(st.situation)}</div></div>`);
+        if (st.cause) lcgFields.push(`<div class="field"><div class="field-label">Oorzaak</div><div class="field-val">${esc(st.cause)}</div></div>`);
+        if (st.expectation) lcgFields.push(`<div class="field"><div class="field-label">Verwachting</div><div class="field-val">${esc(st.expectation)}</div></div>`);
+        if (st.advice) lcgFields.push(`<div class="field"><div class="field-label">Handelingsadvies</div><div class="field-val">${esc(st.advice)}</div></div>`);
+        if (!lcgFields.length) lcgFields.push(`<div class="field-val muted">Geen nadere toelichting opgehaald — zie het dossier op lcg.nl.</div>`);
+
+        // ── Meldingen pane ──
+        let meldHtml;
+        if (!rows.length) {
+            meldHtml = `<div class="meld-none">Geen buitenlandse meldingen in de landkaart voor dit middel.</div>`;
+        } else {
+            meldHtml = `<div class="meld-summary">
+                <div class="m"><b>${rows.length}</b> landen</div>
+                <div class="m"><b>${nMeld}</b> meldingen</div>
+                ${nNew ? `<div class="m new"><b>${nNew}</b> nieuw</div>` : ""}
+            </div>` + rows.map(r => `
+                <div class="country-row">
+                    <span class="st-dot ${r.st}"></span>
+                    <span class="country-flag">${FLAG[r.cc] || ""}</span>
+                    <span class="country-name">${esc(countryName({cc:r.cc, cn:(BYATC[d.atc].find(x=>x.cc===r.cc)||{}).cn}))}</span>
+                    ${r.isNew ? `<span class="badge-new">nieuw</span>` : ""}
+                    ${r.first ? `<span class="c-date">sinds ${r.first}</span>` : ""}
+                    ${r.reasons.length ? `<span class="c-reason">${esc(r.reasons[0])}</span>` : ""}
+                    ${r.n > 1 ? `<span class="c-count">${r.n}×</span>` : `<span class="c-count"></span>`}
+                </div>`).join("");
+        }
+
+        return `<div class="dcard">
+            <div class="dcard-head">
+                <span class="name">${esc(d.title)}</span>
+                <span class="atc">${d.atc}</span>
+                <span class="phase-badge" style="background:${pi.color};color:${pi.txt}">${esc(pi.label)}</span>
+                <span class="updated">bijgewerkt ${d.updated}</span>
+                <a class="lcg-link" href="${d.url}" target="_blank" rel="noopener">Dossier op lcg.nl ↗</a>
+            </div>
+            <div class="dcard-body">
+                <div class="pane left">
+                    <div class="pane-title"><span class="icon">📋</span> LCG-status</div>
+                    ${lcgFields.join("")}
+                </div>
+                <div class="pane">
+                    <div class="pane-title"><span class="icon">🌍</span> Meldingen uit de landkaart${nResolved && !S.showResolved ? ` <span style="color:var(--text-muted);font-weight:400;text-transform:none;letter-spacing:0">· ${nResolved} opgelost verborgen</span>` : ""}</div>
+                    ${meldHtml}
+                </div>
+            </div>
+        </div>`;
+    }).join("");
+}
+
+function render() {
+    if (!RAW) {
+        document.getElementById("kpis").innerHTML = "";
+        document.getElementById("phase-chips").innerHTML = "";
+        document.getElementById("dossier-container").innerHTML =
+            `<div class="meld-none" style="padding:28px;text-align:center">Fout bij laden van <code>data.json</code>. Open deze pagina via de webserver (niet als los bestand) of draai eerst <code>build_data.py</code>.</div>`;
+        return;
+    }
+    renderPhaseChips();
+    renderCards();
+}
+
+// Events
+document.getElementById("phase-chips").addEventListener("click", e => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    S.phase = chip.dataset.phase;
+    render();
+});
+let _t;
+document.getElementById("search").addEventListener("input", e => {
+    clearTimeout(_t); _t = setTimeout(() => { S.q = e.target.value; renderCards(); }, 150);
+});
+document.getElementById("show-resolved").addEventListener("change", e => { S.showResolved = e.target.checked; renderCards(); });
+
+// Load landkaart data
+fetch("data.json").then(r => r.json()).then(data => {
+    RAW = data;
+    REASON_LABELS = data.reason_labels || {};
+    BYATC = {};
+    data.records.forEach(r => { (BYATC[r.atc] ||= []).push(r); });
+    document.getElementById("footer").innerHTML =
+        `Landelijk Coördinatiecentrum Geneesmiddelen · LCG-status: snapshot lcg.nl · landkaart: ${esc(data.generated)} · ${data.records.length.toLocaleString("nl-NL")} meldingen`;
+    render();
+}).catch(() => {
+    document.getElementById("dossier-container").innerHTML =
+        `<div class="meld-none" style="padding:24px;text-align:center">Fout bij laden van data.json.</div>`;
+    render();
+});
+</script>
+
+<div id="pw-gate">
+    <h2>LCG Dossierstatus</h2>
+    <p>Voer het wachtwoord in om verder te gaan</p>
+    <input type="password" id="pw-input" placeholder="Wachtwoord" autofocus>
+    <button onclick="checkPw()">Inloggen</button>
+    <div class="pw-err" id="pw-err"></div>
+</div>
+<script>
+(function(){
+    if (sessionStorage.getItem('lcg-auth') === '1') { var g = document.getElementById('pw-gate'); if (g) g.remove(); }
+    var pi = document.getElementById('pw-input');
+    if (pi) pi.addEventListener('keydown', function(e){ if (e.key === 'Enter') checkPw(); });
+})();
+function checkPw(){
+    var v = document.getElementById('pw-input').value;
+    if (v === 'Kernteam') { sessionStorage.setItem('lcg-auth','1'); document.getElementById('pw-gate').remove(); }
+    else { document.getElementById('pw-err').textContent = 'Onjuist wachtwoord'; }
+}
+</script>
+</body>
+</html>
