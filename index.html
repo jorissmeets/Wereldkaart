@@ -588,7 +588,7 @@ const T = {
         load_error: "Fout bij laden. Draai eerst build_data.py.", for_atc: "voor",
         trend_title: "Trend: actieve tekorten over tijd", watch_title: "Vroegsignaal-watchlist",
         watch_sub: "nieuw in 1–2 landen · bron-startdatum · laatste 120 dagen", watch_none: "Geen recente vroegsignalen",
-        nav_dossiers: "Dossierstatus",
+        nav_dossiers: "Dossierstatus", nav_signals: "Vroegsignalering",
     },
     en: {
         period_all: "All", kpi_shortages: "Number of shortages",
@@ -612,7 +612,7 @@ const T = {
         load_error: "Loading error. Run build_data.py first.", for_atc: "for",
         trend_title: "Trend: active shortages over time", watch_title: "Early-signal watchlist",
         watch_sub: "new in 1–2 countries · source start date · last 120 days", watch_none: "No recent early signals",
-        nav_dossiers: "Dossier status",
+        nav_dossiers: "Dossier status", nav_signals: "Early signals",
     },
 };
 const REASON_EN = {
@@ -1387,6 +1387,7 @@ function renderDetail() {
     summary.style.display = "";
 
     let recs = D.inPeriod;
+    if (S.emsRoodOnly) recs = recs.filter(r => emsRoodSet.has(r.atc));  // "Alleen kritiek (EMS rood)"
     let title = "", subtitle = "";
 
     if (S.selectedAtc && S.selectedCountry) {
@@ -1567,9 +1568,23 @@ function renderDetailDefault() {
     const body = document.getElementById("detail-body");
     let html = "";
 
+    // "Alleen kritiek (EMS rood)" werkt ook door in het overzicht
+    let top5 = D.top5;
+    let countrySummary = D.countrySummary;
+    if (S.emsRoodOnly) {
+        top5 = [...D.atcSummary].filter(a => a.aN > 0 && emsRoodSet.has(a.atc))
+            .sort((a, b) => b.countryCount - a.countryCount || b.aN - a.aN).slice(0, 5);
+        countrySummary = Object.entries(D.countryIndex).map(([cc, recs]) => {
+            const em = recs.filter(r => emsRoodSet.has(r.atc));
+            return { cc, active: em.filter(r => r.st === "active").length, upcoming: em.filter(r => r.st === "upcoming").length };
+        }).filter(c => c.active || c.upcoming).sort((a, b) => b.active - a.active);
+    }
+    // Landenlijst alfabetisch op (weergegeven) landnaam
+    countrySummary = [...countrySummary].sort((a, b) => countryName(a.cc).localeCompare(countryName(b.cc), S.lang === "en" ? "en" : "nl"));
+
     // Top 5
     html += `<div class="detail-section"><div class="detail-section-title">${t("top_shortages")}</div>`;
-    D.top5.forEach((a, i) => {
+    top5.forEach((a, i) => {
         html += `<div class="detail-top-item" data-select-atc="${a.atc}">
             <span class="detail-top-rank">${i + 1}.</span>
             <span class="atc-dot st-${a.worst}" style="width:6px;height:6px"></span>
@@ -1581,7 +1596,7 @@ function renderDetailDefault() {
 
     // Country overview
     html += `<div class="detail-section"><div class="detail-section-title">${t("by_country")}</div>`;
-    D.countrySummary.forEach(c => {
+    countrySummary.forEach(c => {
         const ci = CC[c.cc] || { flag: "", name: c.cc };
         const stats = [];
         if (c.active) stats.push(`<span class="act">${c.active} ${t("active")}</span>`);
@@ -1598,8 +1613,16 @@ function renderDetailDefault() {
 }
 
 function medCard(r, groupBy) {
-    const name = r.mn || r.sub || (S.lang === "en" ? "Unknown medicine" : "Onbekend middel");
-    const substance = r.sub && r.mn ? r.sub : "";
+    const fallback = S.lang === "en" ? "Unknown medicine" : "Onbekend middel";
+    const rawName = r.mn || r.sub || fallback;
+    // Niet-latijnse (bv. Japanse) namen omzetten naar de leesbare G-standaard/WHO-naam
+    const translated = hasCJK(rawName);
+    const name = translated ? medNameByLang(r.atc, "", "") : rawName;
+    let substance = (r.sub && r.mn) ? r.sub : "";
+    if (hasCJK(substance)) substance = "";
+    const origLine = translated
+        ? `<div class="med-substance" style="color:var(--text-muted)" title="Oorspronkelijke productnaam uit de bron">${escHtml(rawName)}</div>`
+        : "";
     const stLabel = r.st === "active" ? t("st_active") : r.st === "upcoming" ? t("st_upcoming") : t("st_resolved");
 
     let dates = "";
@@ -1619,7 +1642,8 @@ function medCard(r, groupBy) {
     return `<div class="med-card">
         <div class="med-name">${escHtml(name)}</div>
         ${substance ? `<div class="med-substance">${escHtml(substance)}</div>` : ""}
-        ${r.tv || r.df ? `<div class="med-substance" style="font-style:italic">${escHtml(r.tv ? tvLabel(r.tv) : r.df)}${r.tv_src === "atc" ? ` <span style="font-style:normal;color:var(--text-muted);font-size:10px">(${S.lang === "en" ? "via ATC" : "via ATC"})</span>` : ''}</div>` : ""}
+        ${origLine}
+        ${r.tv || r.df ? `<div class="med-substance" style="font-style:italic">${escHtml(r.tv ? tvLabel(r.tv) : r.df)}${r.tv_src === "atc" ? ` <span style="font-style:normal;color:var(--text-muted);font-size:10px" title="${S.lang === "en" ? "Route derived from the ATC code, not stated in the source notification" : "Toedieningsvorm afgeleid uit de ATC-code, niet vermeld in de bronmelding"}">(${S.lang === "en" ? "via ATC" : "via ATC"})</span>` : ''}</div>` : ""}
         <div class="med-meta">
             <span class="med-tag ${r.st}">${stLabel}</span>
             ${r.tv && emsRoodDetail[r.atc] && emsRoodDetail[r.atc].includes(r.tv) ? `<span class="med-tag" style="background:var(--status-active);color:white">${t("ems_critical")}</span>` : ''}
@@ -1687,6 +1711,7 @@ document.getElementById("ems-rood-toggle").addEventListener("change", (e) => {
     S.emsRoodOnly = e.target.checked;
     renderSidebar();
     renderKpis();
+    renderDetail();
 });
 
 // Taalschakelaar NL/EN
