@@ -357,6 +357,7 @@
     </div>
     <div class="header-right">
         <a class="nav-tab" href="dossiers.html" title="LCG Dossierstatus">📋 <span data-i18n="nav_dossiers">Dossierstatus</span></a>
+        <a class="nav-tab" href="vroegsignalering.html" title="Vroegsignalering">🔔 <span data-i18n="nav_signals">Vroegsignalering</span></a>
         <div class="lang-filter" role="radiogroup" aria-label="Taal / Language">
             <button class="lang-btn active" data-lang="nl">NL</button>
             <button class="lang-btn" data-lang="en">EN</button>
@@ -477,17 +478,6 @@
 
 <div class="footer" id="footer"></div>
 </div><!-- /#app-screen -->
-
-<div class="bottom-panels">
-    <section class="bp-card" id="trend-panel">
-        <div class="bp-title"><span data-i18n="trend_title">Trend: actieve tekorten over tijd</span> <span class="bp-sub" id="trend-sub"></span></div>
-        <div id="trend-chart"></div>
-    </section>
-    <section class="bp-card" id="watchlist-panel">
-        <div class="bp-title"><span data-i18n="watch_title">Vroegsignaal-watchlist</span> <span class="bp-sub" data-i18n="watch_sub">nieuw in 1–2 landen · bron-startdatum · laatste 120 dagen</span></div>
-        <div class="watch-scroll" id="watchlist-body"></div>
-    </section>
-</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
@@ -1044,8 +1034,6 @@ function render() {
     renderSidebar();
     renderMap();
     renderDetail();
-    renderTrend();
-    renderWatchlist();
     saveHash();
 }
 
