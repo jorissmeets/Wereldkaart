@@ -45,6 +45,7 @@
     .chip.active { background: var(--lcg-blue); color: #fff; border-color: var(--lcg-blue); }
     .search input { padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 12px; width: 190px; outline: none; }
     .search input:focus { box-shadow: 0 0 0 2px rgba(11,187,239,0.25); }
+    .vorm-select { font-size: 11px; padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg-card); color: var(--text-secondary); cursor: pointer; font-weight: 600; }
 
     .rows { max-height: 560px; overflow-y: auto; }
     .row { display: flex; align-items: center; gap: 10px; padding: 8px 16px; border-bottom: 1px solid var(--border-light); font-size: 12.5px; }
@@ -133,6 +134,7 @@
                 <div class="chip feml" data-eml="oranje">Oranje</div>
                 <div class="chip feml" data-eml="geel">Geel</div>
                 <label class="chip" style="cursor:pointer"><input type="checkbox" id="f-preferent" style="vertical-align:-1px;margin-right:4px">alleen preferent</label>
+                <select id="f-vorm" class="vorm-select" title="Toedieningsvorm"><option value="all">Alle vormen</option></select>
                 <div class="search"><input type="text" id="f-search" placeholder="Zoek stof of product…" autocomplete="off"></div>
             </div>
         </div>
@@ -180,7 +182,38 @@ const ATC_NAMES = {"A01AA01":"NATRIUMFLUORIDE","A01AA03":"OLAFLUR","A01AA04":"st
 const FLAG = { AR:"🇦🇷",AT:"🇦🇹",AU:"🇦🇺",BE:"🇧🇪",BR:"🇧🇷",CA:"🇨🇦",CH:"🇨🇭",CL:"🇨🇱",CO:"🇨🇴",CZ:"🇨🇿",DE:"🇩🇪",DK:"🇩🇰",EE:"🇪🇪",EG:"🇪🇬",ES:"🇪🇸",EU:"🇪🇺",FI:"🇫🇮",FR:"🇫🇷",GR:"🇬🇷",HR:"🇭🇷",HU:"🇭🇺",IE:"🇮🇪",IL:"🇮🇱",IN:"🇮🇳",IS:"🇮🇸",IT:"🇮🇹",JP:"🇯🇵",KR:"🇰🇷",LT:"🇱🇹",LV:"🇱🇻",MX:"🇲🇽",MY:"🇲🇾",NL:"🇳🇱",NO:"🇳🇴",PE:"🇵🇪",PH:"🇵🇭",PK:"🇵🇰",PT:"🇵🇹",RO:"🇷🇴",SA:"🇸🇦",SE:"🇸🇪",SG:"🇸🇬",SI:"🇸🇮",SK:"🇸🇰",TR:"🇹🇷",TW:"🇹🇼",US:"🇺🇸",ZA:"🇿🇦" };
 
 let RAW = null, REASON_LABELS = {}, MAP_SIGNALS = [];
-const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapFewOnly: false, mapEmlOnly: false, fEml: "all", fPref: false, fQ: "" };
+const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapFewOnly: false, mapEmlOnly: false, fEml: "all", fPref: false, fVorm: "all", fQ: "" };
+
+// ── Toedieningsvorm-categorieën (Farmanco 'vorm' is vrije tekst) ──
+const VORM_CATS = [["tablet", "Tablet"], ["capsule", "Capsule"], ["oraal", "Drank/oraal"], ["injectie", "Injectie/infuus"],
+    ["inhalatie", "Inhalatie"], ["oog", "Oog"], ["neus", "Neus"], ["cutaan", "Cutaan/transdermaal"],
+    ["rectaal", "Rectaal"], ["vaginaal", "Vaginaal"], ["overig", "Overig"]];
+function vormPart(p) {
+    p = p.toLowerCase().trim();
+    if (p.includes("oog")) return "oog";
+    if (p.includes("neus") || p.includes("nasaal")) return "neus";
+    if (p.includes("inhalat") || p.includes("aerosol") || p.includes("vernevel")) return "inhalatie";
+    if (p.includes("inject") || p.includes("infus")) return "injectie";
+    if (p.includes("transdermaal") || p.includes("pleister")) return "cutaan";
+    if (p.includes("vaginaal") || p.includes("iud") || p.includes("uterine")) return "vaginaal";
+    if (p.includes("blaasspoeling")) return "overig";
+    if (p.includes("zetpil") || p.includes("klysma") || p.includes("suppos") || p.includes("rectaal")) return "rectaal";
+    if (p.includes("oraal")) return "oraal";
+    if (p.includes("creme") || p.includes("zalf") || p.includes("spray") || p.includes("gel") || p.includes("cutaan") || p.includes("emulsie")) return "cutaan";
+    if (p.includes("capsule")) return "capsule";
+    if (p.includes("tablet") || p.includes("dragee")) return "tablet";
+    if (p.includes("drank") || p.includes("stroop") || p.includes("suspensie") || p.includes("druppels") || p.includes("granulaat")) return "oraal";
+    return "overig";
+}
+function vormCats(v) { return [...new Set((v || "").split(",").map(p => p.trim()).filter(Boolean).map(vormPart))]; }
+function populateVormFilter() {
+    const sel = document.getElementById("f-vorm");
+    if (!sel) return;
+    const cnt = {};
+    FARMANCO_EML.forEach(m => vormCats(m.vorm).forEach(c => cnt[c] = (cnt[c] || 0) + 1));
+    sel.innerHTML = `<option value="all">Alle vormen</option>` +
+        VORM_CATS.filter(([k]) => cnt[k]).map(([k, lab]) => `<option value="${k}">${lab} (${cnt[k]})</option>`).join("");
+}
 function mapRef() { return (RAW && RAW.generated) || isoToday(); }
 function cbgRef() { return CBG_SCRAPED || isoToday(); }
 
@@ -291,6 +324,7 @@ function renderFarmanco() {
     let list = FARMANCO_EML.slice();
     if (S.fEml !== "all") list = list.filter(m => m.eml === S.fEml);
     if (S.fPref) list = list.filter(m => m.preferent);
+    if (S.fVorm !== "all") list = list.filter(m => vormCats(m.vorm).includes(S.fVorm));
     if (S.fQ) { const q = S.fQ.toUpperCase(); list = list.filter(m => (m.stof + " " + m.omschrijving).toUpperCase().includes(q)); }
     if (!list.length) { host.innerHTML = `<div class="empty">Geen Farmanco-meldingen in deze selectie.</div>`; return; }
     host.innerHTML = list.map(m => `<div class="row">
@@ -326,6 +360,7 @@ document.querySelectorAll(".feml").forEach(c => c.addEventListener("click", () =
     c.classList.add("active"); S.fEml = c.dataset.eml; renderFarmanco();
 }));
 document.getElementById("f-preferent").addEventListener("change", e => { S.fPref = e.target.checked; renderFarmanco(); });
+document.getElementById("f-vorm").addEventListener("change", e => { S.fVorm = e.target.value; renderFarmanco(); });
 let _t3;
 document.getElementById("f-search").addEventListener("input", e => { clearTimeout(_t3); _t3 = setTimeout(() => { S.fQ = e.target.value; renderFarmanco(); }, 150); });
 
@@ -340,6 +375,7 @@ Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("e
         CBG_TAV = (cbg && cbg.items) || [];
         CBG_SCRAPED = (cbg && cbg.generated) || "";
         EML_ATC5 = (ems && ems.map) || {};
+        populateVormFilter();
         MAP_SIGNALS = computeMapSignals();
         document.getElementById("footer").innerHTML =
             `Landelijk Coördinatiecentrum Geneesmiddelen · Farmanco: ${FARMANCO_EML.length} op EMS (${esc(FARMANCO_SCRAPED)}) · CBG-TAV: ${CBG_TAV.length} (${esc(CBG_SCRAPED)}) · landkaart: ${esc(data ? data.generated : "niet geladen")}`;
