@@ -2,7 +2,8 @@
 "generated": "2026-07-29",
 "source": "https://farmanco.knmp.nl/",
 "total_scraped": 295,
-"count": 221,
+"count": 223,
+"dropped_not_on_eml": 71,
 "items": [
 {
 "stof": "Quetiapine",
@@ -42,7 +43,7 @@
 "vorm": "tablet",
 "preferent": true,
 "datum": "2026-07-29",
-"eml": "geel"
+"eml": "oranje"
 },
 {
 "stof": "Propranolol",
@@ -485,6 +486,14 @@
 "eml": "rood"
 },
 {
+"stof": "Carbidopa/Levodopa",
+"omschrijving": "Levodopa/carbidopa tablet   50/12,5mg, levodopa/carbidopa tablet  100/10mg, levodopa/carbidopa tablet  100/25mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-07-23",
+"eml": "oranje"
+},
+{
 "stof": "Gabapentine",
 "omschrijving": "Gabapentine capsule 100mg, gabapentine capsule 300mg, gabapentine capsule 400mg, gabapentine tablet 600mg",
 "vorm": "capsule, tablet",
@@ -626,7 +635,7 @@
 "vorm": "oogdruppels",
 "preferent": true,
 "datum": "2026-07-21",
-"eml": "geel"
+"eml": "oranje"
 },
 {
 "stof": "Rifabutine",
@@ -1074,7 +1083,7 @@
 "vorm": "suspensie voor injectie",
 "preferent": false,
 "datum": "2026-07-07",
-"eml": "oranje"
+"eml": "rood"
 },
 {
 "stof": "Amoxicilline/Clavulaanzuur",
@@ -1202,7 +1211,7 @@
 "vorm": "dragee",
 "preferent": false,
 "datum": "2026-07-01",
-"eml": "rood"
+"eml": "oranje"
 },
 {
 "stof": "Levetiracetam",
@@ -1218,7 +1227,7 @@
 "vorm": "aerosol",
 "preferent": false,
 "datum": "2026-07-01",
-"eml": "oranje"
+"eml": "geel"
 },
 {
 "stof": "Prednisolon",
@@ -1578,6 +1587,14 @@
 "vorm": "poeder voor oplossing voor infusie",
 "preferent": false,
 "datum": "2026-04-16",
+"eml": "oranje"
+},
+{
+"stof": "Insuline, isofaan",
+"omschrijving": "Insuline isofaan injsusp 100ie/ml fl 10ml, insuline isofaan injsusp 100ie/ml patr 3ml, insuline isofaan injsusp pen 300ie=3ml (100ie/ml)",
+"vorm": "suspensie voor injectie",
+"preferent": false,
+"datum": "2026-04-10",
 "eml": "oranje"
 },
 {

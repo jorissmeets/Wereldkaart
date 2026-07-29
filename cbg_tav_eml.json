@@ -1,0 +1,1592 @@
+{
+"generated": "2026-07-29",
+"source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
+"count": 176,
+"on_eml": 82,
+"items": [
+{
+"product": "Folinezuur Kalceks 10 mg/ml oplossing voor injectie/infusie",
+"mah": "AS Kalceks",
+"reg": "131117",
+"reg_type": "RVG",
+"datum": "2026-07-22",
+"atc": "V03AF03",
+"eml": ""
+},
+{
+"product": "Duvyzat 8,86 mg/ml suspensie voor oraal gebruik",
+"mah": "Italfarmaco S.p.A.",
+"reg": "EU/1/25/1930/001",
+"reg_type": "EU",
+"datum": "2026-07-22",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Axitinib  5 mg filmomhulde tabletten",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "EU/1/24/1847",
+"reg_type": "EU",
+"datum": "2026-07-21",
+"atc": "L01EK01",
+"eml": ""
+},
+{
+"product": "Xylocaine 20 mg/g Gel, catheterslijm",
+"mah": "Aspen Pharma Trading Limited",
+"reg": "07830",
+"reg_type": "RVG",
+"datum": "2026-07-21",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Zutectra 500 IE oplossing voor injectie in een voorgevulde pen",
+"mah": "Biotest Pharma GmbH",
+"reg": "EU/1/09/600/002",
+"reg_type": "EU",
+"datum": "2026-07-20",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Isotretinoïne SUN 20 mg, zachte capsules",
+"mah": "Sun Pharmaceutical Industries Europe B.V.",
+"reg": "119053",
+"reg_type": "RVG",
+"datum": "2026-07-17",
+"atc": "D10BA01",
+"eml": "geel"
+},
+{
+"product": "HETRONIFLY 10 mg/ml, concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare SLU RVG -nummer: 131282 EU nummer: EU/1/24/1870",
+"reg": "",
+"reg_type": "",
+"datum": "2026-07-15",
+"atc": "",
+"eml": ""
+},
+{
+"product": "PYRUKYND 100 mg, filmomhulde tabletten",
+"mah": "Agios Netherlands B.V.",
+"reg": "EU/1/22/1662/007",
+"reg_type": "EU",
+"datum": "2026-07-12",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Clofarabine Vivanta 1 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Vivanta Generics s.r.o.",
+"reg": "121707",
+"reg_type": "RVG",
+"datum": "2026-07-10",
+"atc": "L01BB06",
+"eml": "oranje"
+},
+{
+"product": "Isotretinoïne SUN 10 mg, zachte capsules",
+"mah": "Sun Pharmaceutical Industries Europe B.V.",
+"reg": "119052",
+"reg_type": "RVG",
+"datum": "2026-07-10",
+"atc": "D10BA01",
+"eml": "geel"
+},
+{
+"product": "Nanogam 100 mg/ml; 50ml=5g presentatie",
+"mah": "Prothya Biosolutions Netherlands B.V.",
+"reg": "118226",
+"reg_type": "RVG",
+"datum": "2026-07-05",
+"atc": "J06BA02",
+"eml": "oranje"
+},
+{
+"product": "Oxaliplatine Accord 5 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare B.V. RVG/EU nummer: 103779",
+"reg": "",
+"reg_type": "",
+"datum": "2026-06-30",
+"atc": "L01XA03",
+"eml": "oranje"
+},
+{
+"product": "Nexviadyme100 mg poeder voor concentraat voor oplossing voor infusie",
+"mah": "Sanofi B.V. Registratienummer: EU/1/21/1579",
+"reg": "",
+"reg_type": "",
+"datum": "2026-06-30",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Extencin 1.200.000 IE, poeder en oplosmiddel voor suspensie voor injectie",
+"mah": "Nordic Group B.V. Registratienummer: RVG 124965",
+"reg": "",
+"reg_type": "",
+"datum": "2026-06-30",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Propofol 10 mg/ml MCT/LCT Fresenius, emulsie voor injectie of infusie",
+"mah": "Fresenius Kabi Nederland B.V.",
+"reg": "31762",
+"reg_type": "RVG",
+"datum": "2026-06-26",
+"atc": "N01AX10",
+"eml": "rood"
+},
+{
+"product": "Levobupivacaine Fresenius Kabi 2,5 mg/ml, oplossing voor infusie of injectie",
+"mah": "Fresenius Kabi Nederland B.V.",
+"reg": "113448",
+"reg_type": "RVG",
+"datum": "2026-06-16",
+"atc": "N01BB10",
+"eml": "rood"
+},
+{
+"product": "Trandate Injectie, oplossing voor injectie 5 mg/ml",
+"mah": "Aspen Pharma",
+"reg": "RVG 07879",
+"reg_type": "RVG",
+"datum": "2026-06-08",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Rybelsus 1,5 mg tabletten",
+"mah": "Novo Nordisk B.V.",
+"reg": "EU/1/20/1430 (RVG nummer 132395)",
+"reg_type": "EU",
+"datum": "2026-06-04",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Filspari 200 mg filmomhulde tabletten",
+"mah": "Vifor France",
+"reg": "EU/1/23/1788/001",
+"reg_type": "EU",
+"datum": "2026-06-04",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Uromitexan, omhulde tablet, 400 mg",
+"mah": "Baxter B.V.",
+"reg": "18357",
+"reg_type": "RVG",
+"datum": "2026-06-01",
+"atc": "V03AF01",
+"eml": "oranje"
+},
+{
+"product": "Diazepam Allgen rektiole 5 mg, oplossing voor rectaal gebruik 5 mg/2,5 ml",
+"mah": "All-Gen Pharmaceuticals & Generics B.V.",
+"reg": "19798",
+"reg_type": "RVG",
+"datum": "2026-06-01",
+"atc": "N05BA01",
+"eml": "rood"
+},
+{
+"product": "Capecitabine Accord 500 mg, filmomhulde tabletten",
+"mah": "Accord Healthcare SLU",
+"reg": "EU/1/12/762",
+"reg_type": "EU",
+"datum": "2026-06-01",
+"atc": "H03AA01",
+"eml": "rood"
+},
+{
+"product": "Voraxaze 1000 IE/ml, poeder voor oplossing voor injectie",
+"mah": "SERB S.A.S.",
+"reg": "EU/1/21/1586",
+"reg_type": "EU",
+"datum": "2026-05-31",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Afqlir 40 mg/ml oplossing voor injectie in een voorgevulde spuit.",
+"mah": "Sandoz B.V.",
+"reg": "EU/1/24/1867/001",
+"reg_type": "EU",
+"datum": "2026-05-28",
+"atc": "",
+"eml": ""
+},
+{
+"product": "IJzer(III)carboxymaltose Sandoz 50 mg/ml, dispersie voor injectie/infusie",
+"mah": "Sandoz",
+"reg": "127842",
+"reg_type": "RVG",
+"datum": "2026-05-20",
+"atc": "",
+"eml": ""
+},
+{
+"product": "VIMKUNYA suspensie voor injectie in een voorgevulde spuit Chikungunyavaccin (recombinant, geadsorbeerd)",
+"mah": "Bavarian Nordic A/S",
+"reg": "EU/1/25/1916",
+"reg_type": "EU",
+"datum": "2026-05-13",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Keforal 500 mg, filmomhulde tabletten",
+"mah": "Eurocept International B.V.",
+"reg": "06325",
+"reg_type": "RVG",
+"datum": "2026-05-12",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Natriumchloride 0,9%, oplossing voor infusie",
+"mah": "Fresenius Kabi Nederland B.V.",
+"reg": "51680",
+"reg_type": "RVG",
+"datum": "2026-05-12",
+"atc": "B05BB01",
+"eml": "rood"
+},
+{
+"product": "Propofol 20 mg/ml MCT/LCT Fresenius, emulsie voor injectie of infusie",
+"mah": "Fresenius Kabi Nederland B.V.",
+"reg": "26727",
+"reg_type": "RVG",
+"datum": "2026-05-08",
+"atc": "N01AX10",
+"eml": "rood"
+},
+{
+"product": "Sephience 1.000 mg poeder voor oraal gebruik in sachet",
+"mah": "PTC Therapeutics International Limited EU nummer: EU/1/25/1939",
+"reg": "",
+"reg_type": "",
+"datum": "2026-05-04",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Sephience 250 mg poeder voor oraal gebruik in sachet",
+"mah": "PTC Therapeutics International Limited EU nummer: EU/1/25/1939",
+"reg": "",
+"reg_type": "",
+"datum": "2026-05-04",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Pyrukynd 5/20/50 mg, filmomhulde tabletten",
+"mah": "Agios Netherlands B.V",
+"reg": "",
+"reg_type": "",
+"datum": "2026-05-04",
+"atc": "",
+"eml": ""
+},
+{
+"product": "REZUROCK 200 mg, filmomhulde tabletten",
+"mah": "Sanofi Winthrop Industrie EU nummer: EU/1/26/2015/002",
+"reg": "",
+"reg_type": "",
+"datum": "2026-05-01",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Opdivo 10 mg/ml, concentraat voor oplossing voor infusie",
+"mah": "Bristol-Myers Squibb Pharma EEIG",
+"reg": "EU/1/15/1014/001-002",
+"reg_type": "EU",
+"datum": "2026-04-28",
+"atc": "",
+"eml": ""
+},
+{
+"product": "HETRONIFLY 10 mg/ml, concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare SLU RVG -nummer: 131282",
+"reg": "EU/1/24/1870",
+"reg_type": "EU",
+"datum": "2026-04-23",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Ogsiveo (nirogacestat) 100 mg, 150 mg film-coated tablets",
+"mah": "SpringWorks Therapeutics Ireland Limited",
+"reg": "EU/1/25/1932/003-004",
+"reg_type": "EU",
+"datum": "2026-04-22",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Nipruss 60 mg, poeder voor oplossing voor infusie.",
+"mah": "Altamedics GmbH - Josef-Lammerting-Allee 16, Köln - 50933 – Duitsland",
+"reg": "123483",
+"reg_type": "RVG",
+"datum": "2026-04-21",
+"atc": "C02DD01",
+"eml": ""
+},
+{
+"product": "Palladon injvlst 50mg/ml oplossing voor injectie of infusie",
+"mah": "Mundipharma Pharmaceuticals B.V.",
+"reg": "104838",
+"reg_type": "RVG",
+"datum": "2026-04-17",
+"atc": "N02AA03",
+"eml": ""
+},
+{
+"product": "Oxaliplatine Accord 5 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare B.V.",
+"reg": "103779",
+"reg_type": "RVG",
+"datum": "2026-04-16",
+"atc": "L01XA03",
+"eml": "oranje"
+},
+{
+"product": "Gamunex 10%, 100 mg/ml oplossing voor infusie, flacon 200 ml",
+"mah": "Grifols Deutschland GmbH",
+"reg": "33687",
+"reg_type": "RVG",
+"datum": "2026-04-14",
+"atc": "J06BA02",
+"eml": "oranje"
+},
+{
+"product": "Afqlir 40 mg/ml oplossing voor injectie in een voorgevulde spuit",
+"mah": "Sandoz GmbH",
+"reg": "132184",
+"reg_type": "RVG",
+"datum": "2026-04-13",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Bendamustine Baxter 2,5 mg/ml poeder voor concentraat voor oplossing voor infusie",
+"mah": "Baxter BV RVG -nummer: 121963",
+"reg": "",
+"reg_type": "",
+"datum": "2026-04-13",
+"atc": "L01AA09",
+"eml": ""
+},
+{
+"product": "Tegretol, suspensie voor oraal gebruik 20 mg/ml",
+"mah": "Novartis Pharma B.V.",
+"reg": "06346",
+"reg_type": "RVG",
+"datum": "2026-04-01",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Palmeux 75 mg suspensie voor injectie met verlengde afgifte in een voorgevulde spuit",
+"mah": "Amdipharm Limited",
+"reg": "125451",
+"reg_type": "RVG",
+"datum": "2026-04-01",
+"atc": "N05AX13",
+"eml": "oranje"
+},
+{
+"product": "Ondansetron 4 mg/5 ml Focus Care, Stroop",
+"mah": "Focus Care Pharmaceuticals B.V.",
+"reg": "128566",
+"reg_type": "RVG",
+"datum": "2026-03-30",
+"atc": "A04AA01",
+"eml": "rood"
+},
+{
+"product": "Antitrombine III concentraat Baxalta 500 IE poeder en oplosmiddel voor oplossing voor injectie",
+"mah": "Baxalta Innovations GmbH",
+"reg": "17433",
+"reg_type": "RVG",
+"datum": "2026-03-30",
+"atc": "B01AB02",
+"eml": "oranje"
+},
+{
+"product": "CEVENFACTA, 5mg, poeder en oplosmiddel voor oplossing voor injectie",
+"mah": "Laboratoire Français du Fractionnement et des Biotechnologies (LFB Biomedicaments)",
+"reg": "EU/1/22/1664/003",
+"reg_type": "EU",
+"datum": "2026-03-19",
+"atc": "B02BD08",
+"eml": "rood"
+},
+{
+"product": "Cyclofosfamide Seacross 2000 mg poeder voor oplossing voor injectie/infusie",
+"mah": "Seacross Pharma (Europe) Limited",
+"reg": "131348",
+"reg_type": "RVG",
+"datum": "2026-03-18",
+"atc": "L01AA01",
+"eml": "oranje"
+},
+{
+"product": "Octanate 1000 IE, poeder en oplosmiddel voor oplossing voor injectie",
+"mah": "Octapharma GmbH",
+"reg": "29926",
+"reg_type": "RVG",
+"datum": "2026-03-17",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Palmeux 150 mg suspensie voor injectie met verlengde afgifte in een voorgevulde spuit",
+"mah": "Amdipharm Limited",
+"reg": "125453",
+"reg_type": "RVG",
+"datum": "2026-03-11",
+"atc": "N05AX13",
+"eml": "oranje"
+},
+{
+"product": "Palmeux 100 mg suspensie voor injectie met verlengde afgifte in een voorgevulde spuit",
+"mah": "Amdipharm Limited",
+"reg": "125452",
+"reg_type": "RVG",
+"datum": "2026-03-11",
+"atc": "N05AX13",
+"eml": "oranje"
+},
+{
+"product": "Palmeux 50 mg suspensie voor injectie met verlengde afgifte in een voorgevulde spuit",
+"mah": "Amdipharm Limited",
+"reg": "125450",
+"reg_type": "RVG",
+"datum": "2026-03-11",
+"atc": "N05AX13",
+"eml": "oranje"
+},
+{
+"product": "Refixia 2000 IE, poeder en oplosmiddel voor oplossing voor injectie",
+"mah": "Novo Nordisk A/S",
+"reg": "EU/1/17/1193/003",
+"reg_type": "EU",
+"datum": "2026-03-09",
+"atc": "B02BD04",
+"eml": "rood"
+},
+{
+"product": "Zercepac 150 mg, poeder voor concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "EU/1/20/1456/001",
+"reg_type": "EU",
+"datum": "2026-03-04",
+"atc": "L01FD01",
+"eml": ""
+},
+{
+"product": "Zercepac 420 mg, poeder voor concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "EU/1/20/1456/003",
+"reg_type": "EU",
+"datum": "2026-03-04",
+"atc": "L01FD01",
+"eml": ""
+},
+{
+"product": "Sumatriptan SUN 3 mg/0,5 ml oplossing voor injectie in voorgevulde pen",
+"mah": "Sun Pharmaceutical Industries Europe B.V.",
+"reg": "124476",
+"reg_type": "RVG",
+"datum": "2026-03-01",
+"atc": "N02CC01",
+"eml": "rood"
+},
+{
+"product": "Zolsketil pegylated liposomal 2 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "EU/1/22/1629",
+"reg_type": "EU",
+"datum": "2026-02-28",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Optison 0,19 mg/ml dispersie voor injectie",
+"mah": "GE Healthcare AS",
+"reg": "70196",
+"reg_type": "RVG",
+"datum": "2026-02-27",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Carmustine Accord 100 mg poeder en oplosmiddel voor concentraat voor infusie",
+"mah": "Accord Healthcare B.V.",
+"reg": "125824",
+"reg_type": "RVG",
+"datum": "2026-02-18",
+"atc": "L01AD01",
+"eml": ""
+},
+{
+"product": "IMMUKINE, oplossing voor injectie 2 x 10.6 IE (0,1 mg)",
+"mah": "Clinigen Healthcare B.V.",
+"reg": "15195",
+"reg_type": "RVG",
+"datum": "2026-02-10",
+"atc": "L03AB03",
+"eml": ""
+},
+{
+"product": "Zypadhera 405 mg, poeder en oplosmiddel voor suspensie voor injectie, met verlengde afgifte",
+"mah": "CHEPLAPHARM Registration GmbH",
+"reg": "EU/1/08/479",
+"reg_type": "EU",
+"datum": "2026-02-03",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Triamcinolonacetonide Addimed suspensie voor injectie 40 mg/ml",
+"mah": "Addimed Pharma B.V.",
+"reg": "130697//05341",
+"reg_type": "RVG",
+"datum": "2026-02-03",
+"atc": "H02AB08",
+"eml": "oranje"
+},
+{
+"product": "ORENCIA 125 mg oplossing voor injectie in een voorgevulde pen",
+"mah": "Bristol-Myers Squibb Pharma EEIG",
+"reg": "EU/1/07/389/011",
+"reg_type": "EU",
+"datum": "2026-02-02",
+"atc": "L04AA24",
+"eml": "oranje"
+},
+{
+"product": "Refixia 500 IE , poeder en oplosmiddel voor oplossing voor injectie",
+"mah": "Novo Nordisk A/S",
+"reg": "EU/1/17/1193/001",
+"reg_type": "EU",
+"datum": "2026-02-01",
+"atc": "B02BD04",
+"eml": "rood"
+},
+{
+"product": "Tryngolza 80 mg oplossing voor injectie in een voorgevulde pen",
+"mah": "Swedish Orphan Biovitrum AB",
+"reg": "EU/1/25/1969/001",
+"reg_type": "EU",
+"datum": "2026-02-01",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Cyclofosfamide Seacross 500 mg poeder voor oplossing voor injectie/infusie",
+"mah": "Seacross Pharma (Europe) Limited",
+"reg": "131347",
+"reg_type": "RVG",
+"datum": "2026-01-29",
+"atc": "L01AA01",
+"eml": "oranje"
+},
+{
+"product": "Micafungine Accord 100 mg poeder voor concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare B.V.",
+"reg": "129885",
+"reg_type": "RVG",
+"datum": "2026-01-29",
+"atc": "J02AX05",
+"eml": "oranje"
+},
+{
+"product": "Seroquel XR 50 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "34625",
+"reg_type": "RVG",
+"datum": "2026-01-29",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Duvyzat 8,86 mg/ml suspensie voor oraal gebruik",
+"mah": "Italfarmaco S.p.A.",
+"reg": "EU/1/25/1930/001",
+"reg_type": "EU",
+"datum": "2026-01-22",
+"atc": "",
+"eml": ""
+},
+{
+"product": "XCHIQ poeder en oplosmiddel voor oplossing voor injectie Chikungunya-vaccin (levend)",
+"mah": "Valneva Austria GmbH",
+"reg": "EU/1/24/1828",
+"reg_type": "EU",
+"datum": "2026-01-16",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Visudyne, poeder voor oplossing voor intraveneuze infusie 15 mg",
+"mah": "CHEPLAPHARM Arzneimittel GmbH",
+"reg": "70795",
+"reg_type": "RVG",
+"datum": "2026-01-15",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Bendamustine Baxter 2,5 mg/ml poeder voor concentraat voor oplossing voor infusie",
+"mah": "Baxter BV",
+"reg": "121963",
+"reg_type": "RVG",
+"datum": "2026-01-15",
+"atc": "L01AA09",
+"eml": ""
+},
+{
+"product": "Syntocinon 5 IE/ml, concentraat voor oplossing voor infusie, oplossing voor injectie",
+"mah": "Alfasigma Nederland BV",
+"reg": "03714",
+"reg_type": "RVG",
+"datum": "2026-01-08",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Urokinase Syner-Medica 100.000 IE, poeder voor oplossing voor injectie/infusie",
+"mah": "Syner-Medica B.V.",
+"reg": "122410",
+"reg_type": "RVG",
+"datum": "2026-01-07",
+"atc": "B01AD04",
+"eml": "rood"
+},
+{
+"product": "Urokinase Syner-Medica 500.000 IE, poeder voor oplossing voor injectie/infusie",
+"mah": "Syner-Medica B.V.",
+"reg": "122412",
+"reg_type": "RVG",
+"datum": "2026-01-07",
+"atc": "B01AD04",
+"eml": "rood"
+},
+{
+"product": "HETRONIFLY  10 mg/ml, concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare SLU RVG -nummer: 131282",
+"reg": "EU/1/24/1870",
+"reg_type": "EU",
+"datum": "2026-01-07",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Doxycycline Addimed 100 mg/5 ml oplossing voor injectie",
+"mah": "Addimed Pharma B.V.",
+"reg": "133868//06396",
+"reg_type": "RVG",
+"datum": "2026-01-06",
+"atc": "J01AA02",
+"eml": "rood"
+},
+{
+"product": "Rocuroniumbromide Aguettant 10 mg/ml oplossing voor injectie in een voorgevulde spuit",
+"mah": "Laboratoire Aguettant",
+"reg": "129706",
+"reg_type": "RVG",
+"datum": "2026-01-05",
+"atc": "M03AC09",
+"eml": "rood"
+},
+{
+"product": "Folinezuur Kalceks 10 mg/ml oplossing voor injectie/infusie",
+"mah": "AS Kalceks",
+"reg": "131117",
+"reg_type": "RVG",
+"datum": "2026-01-01",
+"atc": "V03AF03",
+"eml": ""
+},
+{
+"product": "Zessly 100 mg, poeder voor concentraat voor oplossing voor infusie",
+"mah": "Sandoz B.V.",
+"reg": "EU/1/18/1280/005",
+"reg_type": "EU",
+"datum": "2025-12-24",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Vinorelbine Accord 10 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare SLU",
+"reg": "119281",
+"reg_type": "RVG",
+"datum": "2025-12-15",
+"atc": "L01CA04",
+"eml": "oranje"
+},
+{
+"product": "BicaVera 1,5 % glucose, 1,25 mmol/l calcium, oplossing voor peritoneale dialyse",
+"mah": "Fresenius Medical Care Deutschland GmbH",
+"reg": "117122",
+"reg_type": "RVG",
+"datum": "2025-12-09",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Novoseven 2 mg, poeder en oplosmiddel voor oplossing voor injectie",
+"mah": "Novo Nordisk",
+"reg": "EU/1/96/006/009",
+"reg_type": "EU",
+"datum": "2025-12-04",
+"atc": "B02BD08",
+"eml": "rood"
+},
+{
+"product": "Axitinib Accord 1 mg, filmomhulde tabletten (centraal geregistreerd onder EU nummer EU/1/24/1847)",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "EU/1/24/1847",
+"reg_type": "EU",
+"datum": "2025-12-01",
+"atc": "L01EK01",
+"eml": ""
+},
+{
+"product": "Sumatriptan SUN 3 mg/0,5 ml oplossing voor injectie in voorgevulde pen",
+"mah": "Sun Pharmaceutical Industries Europe B.V.",
+"reg": "124476",
+"reg_type": "RVG",
+"datum": "2025-12-01",
+"atc": "N02CC01",
+"eml": "rood"
+},
+{
+"product": "Zypadhera 405 mg, poeder en oplosmiddel voor suspensie voor injectie, met verlengde afgifte",
+"mah": "CHEPLAPHARM Registration GmbH",
+"reg": "EU/1/08/479",
+"reg_type": "EU",
+"datum": "2025-11-28",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Seroquel XR 400 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "34628",
+"reg_type": "RVG",
+"datum": "2025-11-25",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Urokinase Syner-Medica 100.000 IE, poeder voor oplossing voor injectie/infusie",
+"mah": "Syner-Medica B.V.",
+"reg": "122410",
+"reg_type": "RVG",
+"datum": "2025-11-21",
+"atc": "B01AD04",
+"eml": "rood"
+},
+{
+"product": "Pregabaline Vivanta 25 mg harde capsules",
+"mah": "Vivanta Generics s.r.o.",
+"reg": "121875",
+"reg_type": "RVG",
+"datum": "2025-11-20",
+"atc": "N02BF02",
+"eml": "oranje"
+},
+{
+"product": "Azzalure, 125 Speywood-eenheden, poeder voor oplossing voor injectie",
+"mah": "Ipsen Pharma",
+"reg": "106065",
+"reg_type": "RVG",
+"datum": "2025-11-18",
+"atc": "M03AX01",
+"eml": ""
+},
+{
+"product": "Seroquel XR 200 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "34626",
+"reg_type": "RVG",
+"datum": "2025-11-13",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Eylea 40 mg/ml oplossing voor injectie",
+"mah": "Bayer AG",
+"reg": "EU/1/12/797/001",
+"reg_type": "EU",
+"datum": "2025-11-10",
+"atc": "S01LA05",
+"eml": ""
+},
+{
+"product": "Ilaris 150 mg/ml oplossing voor injectie in een injectieflacon.",
+"mah": "Novartis Europharm Limited",
+"reg": "EU/1/09/564/004",
+"reg_type": "EU",
+"datum": "2025-11-06",
+"atc": "L04AC08",
+"eml": "geel"
+},
+{
+"product": "Sephience 1.000 mg en 250 mg poeder voor oraal gebruik in sachet",
+"mah": "PTC Therapeutics International Limited",
+"reg": "EU/1/25/1939",
+"reg_type": "EU",
+"datum": "2025-11-05",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Micafungine Hikma 100 mg poeder voor concentraat voor oplossing voor infusie",
+"mah": "Hikma Farmaceutica",
+"reg": "125376",
+"reg_type": "RVG",
+"datum": "2025-10-29",
+"atc": "J02AX05",
+"eml": "oranje"
+},
+{
+"product": "Duvyzat 8,86 mg/ml suspensie voor oraal gebruik",
+"mah": "Italfarmaco S.p.A.",
+"reg": "EU/1/25/1930/001",
+"reg_type": "EU",
+"datum": "2025-10-22",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Fotivda 890 microgram en Fotivda 1340 microgram harde capsules",
+"mah": "Recordati Netherlands B.V.",
+"reg": "EU/1/17/1215/001-002",
+"reg_type": "EU",
+"datum": "2025-10-17",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Doxycycline Addimed 100 mg/5 ml oplossing voor injectie",
+"mah": "Addimed Pharma B.V.",
+"reg": "133868/06396",
+"reg_type": "RVG",
+"datum": "2025-10-16",
+"atc": "J01AA02",
+"eml": "rood"
+},
+{
+"product": "Seroquel XR 150 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "102408",
+"reg_type": "RVG",
+"datum": "2025-10-15",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Angusta 25 microgram tabletten",
+"mah": "Norgine B.V.",
+"reg": "126719",
+"reg_type": "RVG",
+"datum": "2025-10-13",
+"atc": "G02AD06",
+"eml": ""
+},
+{
+"product": "Triamcinolonacetonide Addimed suspensie voor injectie 40 mg/ml",
+"mah": "Addimed Pharma B.V.",
+"reg": "130697/05341",
+"reg_type": "RVG",
+"datum": "2025-10-07",
+"atc": "H02AB08",
+"eml": "oranje"
+},
+{
+"product": "Mitomycine Accord 2 mg, poeder voor oplossing voor injectie / infusie of intravesicaal gebruik",
+"mah": "Accord Healthcare SLU",
+"reg": "114858",
+"reg_type": "RVG",
+"datum": "2025-09-29",
+"atc": "L01DC03",
+"eml": "oranje"
+},
+{
+"product": "Mitomycine Accord 10 mg, poeder voor oplossing voor injectie / infusie of intravesicaal gebruik",
+"mah": "Accord Healthcare SLU",
+"reg": "114858",
+"reg_type": "RVG",
+"datum": "2025-09-29",
+"atc": "L01DC03",
+"eml": "oranje"
+},
+{
+"product": "Fingolimod Glenmark 0,5 mg capsules",
+"mah": "Glenmark Pharmaceuticals Nordic AB",
+"reg": "125694",
+"reg_type": "RVG",
+"datum": "2025-09-18",
+"atc": "L04AE01",
+"eml": ""
+},
+{
+"product": "Seroquel XR 300 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "34627",
+"reg_type": "RVG",
+"datum": "2025-09-12",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Pyrukynd, filmomhulde tabletten 5/20/50 mg",
+"mah": "Agios Netherlands B.V.",
+"reg": "EU/1/22/1662/001-006",
+"reg_type": "EU",
+"datum": "2025-09-12",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Mitomycine Accord 10 mg, poeder voor oplossing voor injectie / infusie of intravesicaal gebruik",
+"mah": "Accord Healthcare SLU",
+"reg": "114861",
+"reg_type": "RVG",
+"datum": "2025-09-04",
+"atc": "L01DC03",
+"eml": "oranje"
+},
+{
+"product": "Calciumacetaat-Nefro 700 mg, filmomhulde tabletten",
+"mah": "Medice Arzneimittel Pütter GmbH & Co. KG",
+"reg": "32332",
+"reg_type": "RVG",
+"datum": "2025-09-03",
+"atc": "V03AE07",
+"eml": ""
+},
+{
+"product": "Teriflunomide Viatris 14 mg, filmomhulde tabletten",
+"mah": "Viatris Limited",
+"reg": "128947",
+"reg_type": "RVG",
+"datum": "2025-09-01",
+"atc": "L04AK02",
+"eml": ""
+},
+{
+"product": "Seroquel XR 150 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "102408",
+"reg_type": "RVG",
+"datum": "2025-08-28",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Seroquel XR 50 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "34625",
+"reg_type": "RVG",
+"datum": "2025-08-28",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Urokinase Syner-Medica 500.000 IE, poeder voor oplossing voor injectie/infusie",
+"mah": "Syner-Medica B.V.",
+"reg": "122412",
+"reg_type": "RVG",
+"datum": "2025-08-28",
+"atc": "B01AD04",
+"eml": "rood"
+},
+{
+"product": "HETRONIFLY 10 mg/ml, concentraat voor oplossing voor infusie,",
+"mah": "Accord Healthcare SLU RVG -nummer: 131282",
+"reg": "EU/1/24/1870",
+"reg_type": "EU",
+"datum": "2025-08-26",
+"atc": "",
+"eml": ""
+},
+{
+"product": "AKANTIOR 0,8 mg/ml oogdruppels, oplossing in verpakking voor eenmalig gebruik",
+"mah": "SIFI S.p.A. Via Ercole Patti, 36 95025 Aci Sant’Antonio (CT) Italië",
+"reg": "EU/1/24/1840",
+"reg_type": "EU",
+"datum": "2025-08-25",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Thiotepa Fresenius Kabi 100 mg poeder voor concentraat voor oplossing voor infusie",
+"mah": "Fresenius Kabi",
+"reg": "127802",
+"reg_type": "RVG",
+"datum": "2025-08-21",
+"atc": "L01AC01",
+"eml": "oranje"
+},
+{
+"product": "Urokinase Syner-Medica 100.000 IE, poeder voor oplossing voor injectie/infusie",
+"mah": "Syner-Medica B.V.",
+"reg": "122410",
+"reg_type": "RVG",
+"datum": "2025-08-21",
+"atc": "B01AD04",
+"eml": "rood"
+},
+{
+"product": "Oxytocine Eureco-Pharma 5 IE/ml, oplossing voor injectie/infusie",
+"mah": "Eureco-Pharma",
+"reg": "126825 / 117498",
+"reg_type": "RVG",
+"datum": "2025-08-14",
+"atc": "H01BB02",
+"eml": "rood"
+},
+{
+"product": "Cresemba 40 mg harde capsules",
+"mah": "Basilea Pharmaceutica Deutschland GmbH",
+"reg": "EU/1/15/1036/003",
+"reg_type": "EU",
+"datum": "2025-08-08",
+"atc": "J02AC05",
+"eml": ""
+},
+{
+"product": "Seroquel XR 200 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "34626",
+"reg_type": "RVG",
+"datum": "2025-08-06",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Zolsketil pegylated liposomal 2 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "EU/1/22/1629",
+"reg_type": "EU",
+"datum": "2025-08-05",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Pantoprazol Kalceks 40 mg poeder voor oplossing voor injectie",
+"mah": "Eureco Pharma",
+"reg": "129304",
+"reg_type": "RVG",
+"datum": "2025-07-29",
+"atc": "A02BC02",
+"eml": "oranje"
+},
+{
+"product": "Erwinase 10.000 E poeder voor oplossing voor injectie/infusie",
+"mah": "Porton Biopharma Limited",
+"reg": "126713",
+"reg_type": "RVG",
+"datum": "2025-07-25",
+"atc": "L01XX02",
+"eml": "oranje"
+},
+{
+"product": "Alhemo 15mg-, 60mg-, 150mg- en 300mg/1,5 ml oplossing voor injectie in een voorgevulde pen",
+"mah": "Novo Nordisk A.S.",
+"reg": "",
+"reg_type": "",
+"datum": "2025-07-17",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Doxycycline Addimed 100 mg/5 ml oplossing voor injectie",
+"mah": "Addimed Pharma B.V.",
+"reg": "133868 / 06396",
+"reg_type": "RVG",
+"datum": "2025-07-17",
+"atc": "J01AA02",
+"eml": "rood"
+},
+{
+"product": "Seroquel XR 50 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "34625",
+"reg_type": "RVG",
+"datum": "2025-07-10",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Clindamycine CF 600 mg, harde capsules",
+"mah": "Centrafarm B.V.",
+"reg": "118389",
+"reg_type": "RVG",
+"datum": "2025-07-07",
+"atc": "J01FF01",
+"eml": "rood"
+},
+{
+"product": "Nipruss 60 mg, poeder voor oplossing voor infusie.",
+"mah": "Altamedics GmbH",
+"reg": "123483",
+"reg_type": "RVG",
+"datum": "2025-07-02",
+"atc": "C02DD01",
+"eml": ""
+},
+{
+"product": "Bendamustine Accord 2,5 mg/ml poeder voor concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare SLU",
+"reg": "117843",
+"reg_type": "RVG",
+"datum": "2025-07-01",
+"atc": "L01AA09",
+"eml": ""
+},
+{
+"product": "Sugammadex Kalceks 100 mg/ml oplossing voor injectie",
+"mah": "AS Kalceks",
+"reg": "129475",
+"reg_type": "RVG",
+"datum": "2025-07-01",
+"atc": "V03AB35",
+"eml": "rood"
+},
+{
+"product": "Esketiv 5 mg/ml, oplossing voor injectie",
+"mah": "Eurocept International B.V.",
+"reg": "121113",
+"reg_type": "RVG",
+"datum": "2025-07-01",
+"atc": "N01AX14",
+"eml": "rood"
+},
+{
+"product": "Tyenne 20 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Fresenius Kabi Deutschland GmbH",
+"reg": "EU/1/23/1754/001; EU/1/23/1754/002; EU/1/23/1754/003; EU/1/23/1754/004; EU/1/23/1754/005; EU/1/23/1754/006",
+"reg_type": "EU",
+"datum": "2025-06-26",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Pedmarqsi 80 mg/ml, oplossing voor infusie",
+"mah": "Norgine B.V.",
+"reg": "EU/1/23/1734/001",
+"reg_type": "EU",
+"datum": "2025-06-09",
+"atc": "V03AB06",
+"eml": ""
+},
+{
+"product": "Imatinib Accord 400 mg filmomhulde tabletten",
+"mah": "Accord Healthcare SLU",
+"reg": "EU/1/13/845",
+"reg_type": "EU",
+"datum": "2025-06-02",
+"atc": "L01EA01",
+"eml": "oranje"
+},
+{
+"product": "Mitomycine Accord 20 mg, poeder voor oplossing voor injectie / infusie of intravesicaal gebruik",
+"mah": "Accord Healthcare SLU",
+"reg": "114862",
+"reg_type": "RVG",
+"datum": "2025-06-01",
+"atc": "L01DC03",
+"eml": "oranje"
+},
+{
+"product": "Epirubicinehydrochloride Accord 2 mg/ml oplossing voor injectie of infusie",
+"mah": "Accord Healthcare SLU",
+"reg": "100134",
+"reg_type": "RVG",
+"datum": "2025-06-01",
+"atc": "L01DB03",
+"eml": "oranje"
+},
+{
+"product": "WELIREG 40 mg filmomhulde tabletten",
+"mah": "Merck Sharp & Dohme B.V.",
+"reg": "EU/1/24/1893/002",
+"reg_type": "EU",
+"datum": "2025-05-28",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Andembry 200 mg oplossing voor injectie in voorgevulde pen",
+"mah": "CSL Behring GmbH",
+"reg": "EU/1/24/1885/003",
+"reg_type": "EU",
+"datum": "2025-05-07",
+"atc": "B06AC07",
+"eml": ""
+},
+{
+"product": "Aminomix 1 Novum, oplossing voor infusie",
+"mah": "Fresenius Kabi Nederland B.V.",
+"reg": "32127",
+"reg_type": "RVG",
+"datum": "2025-05-02",
+"atc": "B05BA10",
+"eml": ""
+},
+{
+"product": "Bortezomib Accord 2,5mg/ml oplossing voor injectie",
+"mah": "Accord Healthcare SLU",
+"reg": "126670",
+"reg_type": "RVG",
+"datum": "2025-05-01",
+"atc": "L01XG01",
+"eml": ""
+},
+{
+"product": "Elahere 5 mg/ml, concentraat voor oplossing voor infusie",
+"mah": "AbbVie Deutschland GmbH & Co. KG",
+"reg": "EU/1/24/1866/001",
+"reg_type": "EU",
+"datum": "2025-05-01",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Oxybutynine HCl Unimedic 0,5 mg/ml, oplossing voor intravesicaal gebruik",
+"mah": "Unimedic Pharma",
+"reg": "127448",
+"reg_type": "RVG",
+"datum": "2025-04-24",
+"atc": "G04BD04",
+"eml": "geel"
+},
+{
+"product": "Seroquel XR 150 mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "102408",
+"reg_type": "RVG",
+"datum": "2025-04-18",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Zypadhera 405 mg, poeder en oplosmiddel voor suspensie voor injectie, met verlengde afgifte",
+"mah": "Cheplapharm Registration GmbH",
+"reg": "EU/1/08/479",
+"reg_type": "EU",
+"datum": "2025-04-18",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Epirubicinehydrochloride Accord 2 mg/ml oplossing voor injectie of infusie",
+"mah": "Accord Healthcare B.V.",
+"reg": "100134",
+"reg_type": "RVG",
+"datum": "2025-04-17",
+"atc": "L01DB03",
+"eml": "oranje"
+},
+{
+"product": "Cabazitaxel Accord 60 mg, concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare B.V.",
+"reg": "EU/1/20/1448",
+"reg_type": "EU",
+"datum": "2025-04-17",
+"atc": "L01CD04",
+"eml": ""
+},
+{
+"product": "Clindamycine CF 600 mg, harde capsules",
+"mah": "Centrafarm B.V.",
+"reg": "118389",
+"reg_type": "RVG",
+"datum": "2025-04-16",
+"atc": "J01FF01",
+"eml": "rood"
+},
+{
+"product": "Pentacarinat 300 mg, poeder voor oplossing voor injectie",
+"mah": "The Simple Pharma Company Limited",
+"reg": "13417",
+"reg_type": "RVG",
+"datum": "2025-04-16",
+"atc": "P01CX01",
+"eml": "oranje"
+},
+{
+"product": "Shingrix, poeder en suspensie voor suspensie voor injectie",
+"mah": "GlaxoSmithKline Biologicals S.A., België",
+"reg": "EU/1/18/1272",
+"reg_type": "EU",
+"datum": "2025-04-16",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Mytolac 120 mg oplossing voor injectie in een voorgevulde spuit",
+"mah": "Amdipharm Limited",
+"reg": "124722",
+"reg_type": "RVG",
+"datum": "2025-04-15",
+"atc": "H01CB03",
+"eml": ""
+},
+{
+"product": "Rekovelle 72 microgram/2,16 ml oplossing voor injectie in een voorgevulde pen",
+"mah": "Ferring B.V.",
+"reg": "118199",
+"reg_type": "RVG",
+"datum": "2025-04-14",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Rifadin, poeder voor infusievloeistof 600 mg",
+"mah": "Sanofi B.V.",
+"reg": "08755",
+"reg_type": "RVG",
+"datum": "2025-04-04",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Oncaspar 750 U/ml poeder voor oplossing voor injectie of infusie",
+"mah": "Les Laboratoires Servier",
+"reg": "EU/1/15/1070/002",
+"reg_type": "EU",
+"datum": "2025-04-02",
+"atc": "L01XX24",
+"eml": "oranje"
+},
+{
+"product": "Fampyra 10 mg tabletten met verlengde afgifte",
+"mah": "Acorda Therapeutics Ireland Limited",
+"reg": "EU/1/11/699/004",
+"reg_type": "EU",
+"datum": "2025-04-01",
+"atc": "N07XX07",
+"eml": ""
+},
+{
+"product": "Proleukin 18 x 1.000.000 IE poeder voor oplossing voor injectie of infusie",
+"mah": "Iovance Biotherapeutics B.V.",
+"reg": "13354",
+"reg_type": "RVG",
+"datum": "2025-04-01",
+"atc": "L03AC01",
+"eml": ""
+},
+{
+"product": "Epirubicinehydrochloride Accord 2 mg/ml oplossing voor injectie of infusie",
+"mah": "Accord Healthcare B.V.",
+"reg": "100134",
+"reg_type": "RVG",
+"datum": "2025-03-31",
+"atc": "L01DB03",
+"eml": "oranje"
+},
+{
+"product": "Dopaminehydrochloride Hikma 40 mg/ml",
+"mah": "Hikma",
+"reg": "116931",
+"reg_type": "RVG",
+"datum": "2025-03-27",
+"atc": "C01CA04",
+"eml": "oranje"
+},
+{
+"product": "Pomalidomide Accord 4 mg harde capsules",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "EU/1/24/1831",
+"reg_type": "EU",
+"datum": "2025-03-25",
+"atc": "L04AX06",
+"eml": ""
+},
+{
+"product": "Clofarabine Accord 1 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "122986",
+"reg_type": "RVG",
+"datum": "2025-03-15",
+"atc": "L01BB06",
+"eml": "oranje"
+},
+{
+"product": "Zolsketil pegylated liposomal 2 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "EU/1/22/1629",
+"reg_type": "EU",
+"datum": "2025-03-12",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Hepatect CP 50IE/ml, oplossing voor infusie",
+"mah": "Biotest Pharma GmbH/DE",
+"reg": "27115",
+"reg_type": "RVG",
+"datum": "2025-03-04",
+"atc": "J06BB04",
+"eml": "oranje"
+},
+{
+"product": "Seroquel XR 300mg, tabletten met verlengde afgifte",
+"mah": "Cheplapharm Arzneimittel GmbH",
+"reg": "34627",
+"reg_type": "RVG",
+"datum": "2025-03-03",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Sorafenib Accord 200mg, filmomhulde tablet",
+"mah": "Accord Healthcare S.L.U.",
+"reg": "EU/1/22/1696",
+"reg_type": "EU",
+"datum": "2025-02-21",
+"atc": "L01EX02",
+"eml": ""
+},
+{
+"product": "Teysuno 20 mg/5,8 mg/15,8 mg harde capsules",
+"mah": "Nordic Group BV",
+"reg": "EU/1/11/669",
+"reg_type": "EU",
+"datum": "2025-02-20",
+"atc": "G03AA12",
+"eml": ""
+},
+{
+"product": "Thiotepa Fresenius Kabi 100 mg poeder voor concentraat voor oplossing voor infusie",
+"mah": "Fresenius Kabi Nederland BV",
+"reg": "127802",
+"reg_type": "RVG",
+"datum": "2025-02-14",
+"atc": "L01AC01",
+"eml": "oranje"
+},
+{
+"product": "Lonsurf 20 mg, filmomhulde tabletten",
+"mah": "Servier Nederland Farma",
+"reg": "EU/1/16/1096",
+"reg_type": "EU",
+"datum": "2025-02-06",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Vinorelbine Accord 10 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare SLU",
+"reg": "119281",
+"reg_type": "RVG",
+"datum": "2025-02-05",
+"atc": "L01CA04",
+"eml": "oranje"
+},
+{
+"product": "Eliquis 2,5 mg en 5 mg filmomhulde tabletten",
+"mah": "Bristol-Myers Squibb",
+"reg": "107212, 110712",
+"reg_type": "RVG",
+"datum": "2025-02-03",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Zypadhera 210 mg, poeder en oplosmiddel voor suspensie voor injectie",
+"mah": "CHEPLAPHARM Registration GmbH",
+"reg": "EU/1/08/479",
+"reg_type": "EU",
+"datum": "2025-02-03",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Zypadhera 300 mg, poeder en oplosmiddel voor suspensie voor injectie",
+"mah": "CHEPLAPHARM Registration GmbH",
+"reg": "EU/1/08/479",
+"reg_type": "EU",
+"datum": "2025-02-03",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Pankaine Glucose 5 mg/ml, oplossing voor injectie",
+"mah": "Panpharma",
+"reg": "122759",
+"reg_type": "RVG",
+"datum": "2025-02-01",
+"atc": "N01BB01",
+"eml": "rood"
+},
+{
+"product": "Tyenne 20 mg/ml concentraat voor oplossing voor infusie",
+"mah": "Fresenius Kabi Deutschland GmbH",
+"reg": "EU/1/23/1754/001, EU/1/23/1754/002, EU/1/23/1754/003, EU/1/23/1754/004, EU/1/23/1754/005, EU/1/23/1754/006",
+"reg_type": "EU",
+"datum": "2025-01-23",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Mytolac 90 mg oplossing voor injectie in een voorgevulde spuit",
+"mah": "Amdipharm Limited",
+"reg": "124721",
+"reg_type": "RVG",
+"datum": "2025-01-07",
+"atc": "H01CB03",
+"eml": ""
+},
+{
+"product": "Mytolac 60 mg oplossing voor injectie in een voorgevulde spuit",
+"mah": "Amdipharm Limited",
+"reg": "124720",
+"reg_type": "RVG",
+"datum": "2025-01-07",
+"atc": "H01CB03",
+"eml": ""
+},
+{
+"product": "Tyenne 162 mg oplossing voor injectie in voorgevulde pen",
+"mah": "Fresenius Kabi Deutschland GmbH",
+"reg": "EU/1/23/1754/010; EU/1/23/1754/011",
+"reg_type": "EU",
+"datum": "2025-01-06",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Doxycycline Addimed 100 mg/5 ml oplossing voor injectie",
+"mah": "Addimed Pharma B.V.",
+"reg": "133868//06396",
+"reg_type": "RVG",
+"datum": "2025-01-02",
+"atc": "J01AA02",
+"eml": "rood"
+},
+{
+"product": "Xenetix 300 mg I/ml, oplossing voor injectie",
+"mah": "Guerbet B.V.",
+"reg": "18284",
+"reg_type": "RVG",
+"datum": "2025-01-01",
+"atc": "V08AB11",
+"eml": ""
+}
+]
+}
