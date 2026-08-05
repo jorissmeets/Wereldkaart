@@ -1,24 +1,448 @@
 {
-"generated": "2026-07-29",
+"generated": "2026-08-05",
 "source": "https://farmanco.knmp.nl/",
-"total_scraped": 295,
-"count": 223,
-"dropped_not_on_eml": 71,
+"total_scraped": 293,
+"count": 225,
+"dropped_not_on_eml": 68,
 "items": [
+{
+"stof": "Clobetasol",
+"omschrijving": "Clobetasol shampoo 0,5mg/g",
+"vorm": "shampoo",
+"preferent": false,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Calciumcarbonaat/Colecalciferol",
+"omschrijving": "Calciumcarb/colecalc kauwtb 1,25g/800ie (500mg ca), calciumcarb/colecalc kauwtb 2,5g/880ie (1000mg ca)",
+"vorm": "kauwtablet",
+"preferent": false,
+"datum": "2026-08-04",
+"eml": "geel"
+},
+{
+"stof": "Hepatitis-a-vaccin",
+"omschrijving": "Hepatitis-a-vaccin havrix adult wsp 1ml (1440e/ml)",
+"vorm": "suspensie voor injectie",
+"preferent": false,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Amoxicilline/Clavulaanzuur",
+"omschrijving": "Amoxicilline/clavulaanzuur infpdr 2000/200mg fl, amoxicilline/clavulaanzuur injpdr 1000/100mg fl, amoxicilline/clavulaanzuur injpdr 1000/200mg fl",
+"vorm": "poeder voor injectievloeistof, poeder voor oplossing voor infusie",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Latanoprost/Timolol",
+"omschrijving": "Timolol/latanopr oogdr 5mg/50ug/ml fl 2,5ml benz, timolol/latanopr oogdr 5mg/50ug/ml fl 2,5ml z benz",
+"vorm": "oogdruppels",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Eplerenon",
+"omschrijving": "Eplerenon tablet 25mg, eplerenon tablet 50mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Esomeprazol",
+"omschrijving": "Esomeprazol capsule msr 20mg, esomeprazol capsule msr 40mg, esomeprazol tablet msr 20mg, esomeprazol tablet msr 40mg",
+"vorm": "maagsapresistente tablet, maagsapresistente capsule",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Foliumzuur",
+"omschrijving": "Foliumzuur tablet 0,5mg, foliumzuur tablet 5mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Rosuvastatine",
+"omschrijving": "Rosuvastatine tablet  5mg, rosuvastatine tablet 10mg, rosuvastatine tablet 20mg, rosuvastatine tablet 40mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Levothyroxine",
+"omschrijving": "Levothyroxine tablet  25ug (natrium), levothyroxine tablet  50ug (natrium), levothyroxine tablet  75ug (natrium), levothyroxine tablet 100ug (natrium), levothyroxine tablet 125ug (natrium), levothyroxine tablet 137ug (natrium), levothyroxine tablet 150ug (natrium), levothyroxine tablet 175ug (natrium), levothyroxine tablet 200ug (natrium)",
+"vorm": "tablet",
+"preferent": false,
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Carbidopa/Levodopa",
+"omschrijving": "Levodopa/carbidopa tablet  100/10mg, levodopa/carbidopa tablet  100/25mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Acetylsalicylzuur",
+"omschrijving": "Acetylsalicylzuur dispertablet 80mg",
+"vorm": "dispergeerbare tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Morfine",
+"omschrijving": "Morfine tablet mga  10mg (hcl), morfine tablet mga  10mg (sulfaat), morfine tablet mga  15mg (sulfaat), morfine tablet mga  30mg (hcl), morfine tablet mga  30mg (sulfaat)",
+"vorm": "tablet, tablet met gereguleerde afgifte",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Diazepam",
+"omschrijving": "Diazepam tablet  5mg, diazepam tablet 10mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Valaciclovir",
+"omschrijving": "Valaciclovir tablet  500mg",
+"vorm": "tablet",
+"preferent": false,
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Ticagrelor",
+"omschrijving": "Ticagrelor tablet 60mg, ticagrelor tablet 90mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Beclometason",
+"omschrijving": "Beclometason aer  50ug/do 200do extrafyn autoh",
+"vorm": "inhalatiepoeder, aerosol",
+"preferent": false,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
 {
 "stof": "Quetiapine",
 "omschrijving": "Quetiapine tablet fo  25mg, quetiapine tablet fo 100mg, quetiapine tablet fo 200mg, quetiapine tablet fo 300mg, quetiapine tablet mga  50mg, quetiapine tablet mga 150mg, quetiapine tablet mga 200mg, quetiapine tablet mga 300mg, quetiapine tablet mga 400mg",
 "vorm": "filmomhulde tablet, tablet met gereguleerde afgifte",
 "preferent": true,
-"datum": "2026-07-29",
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Pregabaline",
+"omschrijving": "Pregabaline capsule  25mg, pregabaline capsule  75mg, pregabaline capsule 150mg, pregabaline capsule 300mg",
+"vorm": "capsule",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Paliperidon",
+"omschrijving": "Paliperidon tablet mga 3mg, paliperidon tablet mga 6mg",
+"vorm": "tablet met gereguleerde afgifte",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Oxycodon",
+"omschrijving": "Oxycodon tablet mga  30mg",
+"vorm": "capsule, tablet met gereguleerde afgifte",
+"preferent": true,
+"datum": "2026-08-04",
 "eml": "oranje"
 },
 {
 "stof": "Ondansetron",
-"omschrijving": "Ondansetron orodisp tablet 4mg, ondansetron stroop 0,8mg/ml, ondansetron tablet 4mg",
+"omschrijving": "Ondansetron stroop 0,8mg/ml, ondansetron tablet 4mg",
 "vorm": "stroop, orodispergeerbare tablet, tablet",
 "preferent": true,
-"datum": "2026-07-29",
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Olanzapine",
+"omschrijving": "Olanzapine orodisp tablet 10mg, olanzapine orodisp tablet 15mg, olanzapine orodisp tablet 20mg, olanzapine tablet 10mg, olanzapine tablet 15mg, olanzapine tablet 20mg",
+"vorm": "orodispergeerbare tablet, tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Nifedipine",
+"omschrijving": "Nifedipine tablet mga 30mg, nifedipine tablet mga 60mg",
+"vorm": "tablet met gereguleerde afgifte",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "geel"
+},
+{
+"stof": "Valproinezuur",
+"omschrijving": "Valproinezuur granulaat mga  250mg (zuur+na-zout), valproinezuur granulaat mga  500mg (zuur+na-zout), valproinezuur tablet mga 300mg (zuur+na-zout), valproinezuur tablet mga 500mg (zuur+na-zout), valproinezuur tablet msr 300mg",
+"vorm": "granulaat met gereguleerde afgifte, maagsapresistente tablet, tablet met gereguleerde afgifte",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Methylfenidaat",
+"omschrijving": "Methylfenidaat tablet mga 18mg, methylfenidaat tablet mga 27mg, methylfenidaat tablet mga 36mg, methylfenidaat tablet mga 54mg",
+"vorm": "tablet, capsule met gereguleerde afgifte, tablet met gereguleerde afgifte",
+"preferent": false,
+"datum": "2026-08-04",
+"eml": "geel"
+},
+{
+"stof": "Mebendazol",
+"omschrijving": "Mebendazol tablet 100mg",
+"vorm": "tablet",
+"preferent": false,
+"datum": "2026-08-04",
+"eml": "geel"
+},
+{
+"stof": "Hydrochloorthiazide",
+"omschrijving": "Hydrochloorthiazide tablet 12,5mg, hydrochloorthiazide tablet 25mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Furosemide",
+"omschrijving": "Furosemide tablet 40mg, furosemide tablet 500mg",
+"vorm": "tablet, capsule met gereguleerde afgifte",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "rood"
+},
+{
+"stof": "Emtricitabine/Tenofovir disoproxil",
+"omschrijving": "Emtricitabine/tenofovirdiso tablet 200/245mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Amlodipine/Valsartan",
+"omschrijving": "Amlodipine/valsartan tablet  5/ 80mg, amlodipine/valsartan tablet  5/160mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Zolmitriptan",
+"omschrijving": "Zolmitriptan orodisp tablet 2,5mg, zolmitriptan tablet omhuld 2,5mg",
+"vorm": "orodispergeerbare tablet, omhulde tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "geel"
+},
+{
+"stof": "Ezetimib/Simvastatine",
+"omschrijving": "Ezetimib/simvastatine tablet 10/20mg, ezetimib/simvastatine tablet 10/40mg, ezetimib/simvastatine tablet 10/80mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Etoricoxib",
+"omschrijving": "Etoricoxib tablet fo  30mg, etoricoxib tablet fo  60mg, etoricoxib tablet fo  90mg",
+"vorm": "filmomhulde tablet",
+"preferent": true,
+"datum": "2026-08-04",
+"eml": "oranje"
+},
+{
+"stof": "Allopurinol",
+"omschrijving": "Allopurinol tablet 100mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-08-03",
+"eml": "oranje"
+},
+{
+"stof": "Liraglutide",
+"omschrijving": "Liraglutide inj pen 18mg=3ml (6mg/ml) 0,6-3,0mg/do (bij obesitas en overgewicht)",
+"vorm": "injectievloeistof",
+"preferent": true,
+"datum": "2026-08-03",
+"eml": "oranje"
+},
+{
+"stof": "Diclofenac",
+"omschrijving": "Diclofenac-natrium zetpil  25mg, diclofenac-natrium zetpil  50mg, diclofenac-natrium zetpil 100mg",
+"vorm": "zetpil",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "oranje"
+},
+{
+"stof": "Captopril",
+"omschrijving": "Captopril tablet  6,25mg, captopril tablet 12,5mg, captopril tablet 25mg, captopril tablet 50mg",
+"vorm": "tablet",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "rood"
+},
+{
+"stof": "Midazolam",
+"omschrijving": "Midazolam neusspray 2,5mg, midazolam neusspray 2,5mg/do fl  55do, midazolam neusspray 2,5mg/do fl  65do, midazolam neusspray 3,75mg, midazolam neusspray 5mg",
+"vorm": "neusspray",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "rood"
+},
+{
+"stof": "Fenobarbital",
+"omschrijving": "Fenobarbital drank  4mg/ml, fenobarbital tablet  10mg, fenobarbital tablet  25mg, fenobarbital tablet  50mg",
+"vorm": "suspensie voor oraal gebruik, tablet, drank",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "oranje"
+},
+{
+"stof": "Ipratropium",
+"omschrijving": "Ipratropium aerosol 20ug/do 200do inh",
+"vorm": "aerosol",
+"preferent": true,
+"datum": "2026-07-31",
+"eml": "rood"
+},
+{
+"stof": "Midazolam",
+"omschrijving": "Midazolam drank 10mg=5ml amp (2mg/ml)+toeb",
+"vorm": "tablet, drank",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "rood"
+},
+{
+"stof": "Rifabutine",
+"omschrijving": "Rifabutine capsule 150mg",
+"vorm": "capsule",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "oranje"
+},
+{
+"stof": "Folinezuur",
+"omschrijving": "Folinezuur capsule 15mg",
+"vorm": "capsule",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "rood"
+},
+{
+"stof": "Metronidazol",
+"omschrijving": "Metronidazol creme 10mg/g, metronidazol creme 20mg/g",
+"vorm": "creme",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "rood"
+},
+{
+"stof": "Dexamethason",
+"omschrijving": "Dexamethason oogdr 1mg/ml (fosfaat) fl 6ml z benz",
+"vorm": "oogdruppels",
+"preferent": true,
+"datum": "2026-07-31",
+"eml": "rood"
+},
+{
+"stof": "Valsartan",
+"omschrijving": "Valsartan tablet omhuld 160mg",
+"vorm": "omhulde tablet",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "oranje"
+},
+{
+"stof": "Rivaroxaban",
+"omschrijving": "Rivaroxaban tablet 20mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-07-31",
+"eml": "rood"
+},
+{
+"stof": "Naproxen",
+"omschrijving": "Naproxen zetpil 250mg, naproxen zetpil 500mg",
+"vorm": "zetpil",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "oranje"
+},
+{
+"stof": "Beclometason/Mesalazine",
+"omschrijving": "Beclometason/mesalazine klysma 3mg/3g=60g",
+"vorm": "klysma",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "oranje"
+},
+{
+"stof": "Pantoprazol",
+"omschrijving": "Pantoprazol injectiepoeder 40mg fl",
+"vorm": "poeder voor injectievloeistof",
+"preferent": false,
+"datum": "2026-07-31",
+"eml": "oranje"
+},
+{
+"stof": "Simvastatine",
+"omschrijving": "Simvastatine tablet fo 10mg, simvastatine tablet fo 20mg",
+"vorm": "filmomhulde tablet",
+"preferent": false,
+"datum": "2026-07-30",
+"eml": "oranje"
+},
+{
+"stof": "Amitriptyline",
+"omschrijving": "Amitriptyline hcl tablet 10mg, amitriptyline hcl tablet 25mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-07-30",
+"eml": "oranje"
+},
+{
+"stof": "Capecitabine",
+"omschrijving": "Capecitabine tablet fo 150mg, capecitabine tablet fo 300mg, capecitabine tablet fo 500mg",
+"vorm": "filmomhulde tablet",
+"preferent": false,
+"datum": "2026-07-30",
+"eml": "oranje"
+},
+{
+"stof": "Tobramycine",
+"omschrijving": "Tobramycine vernevelvlst  60mg/ml amp 5ml",
+"vorm": "vernevelvloeistof",
+"preferent": true,
+"datum": "2026-07-30",
 "eml": "rood"
 },
 {
@@ -30,41 +454,9 @@
 "eml": "geel"
 },
 {
-"stof": "Levothyroxine",
-"omschrijving": "Levothyroxine tablet  25ug (natrium), levothyroxine tablet  50ug (natrium), levothyroxine tablet  75ug (natrium), levothyroxine tablet 100ug (natrium), levothyroxine tablet 125ug (natrium), levothyroxine tablet 137ug (natrium), levothyroxine tablet 150ug (natrium), levothyroxine tablet 175ug (natrium), levothyroxine tablet 200ug (natrium)",
-"vorm": "tablet",
-"preferent": false,
-"datum": "2026-07-29",
-"eml": "rood"
-},
-{
-"stof": "Ezetimib/Simvastatine",
-"omschrijving": "Ezetimib/simvastatine tablet 10/20mg, ezetimib/simvastatine tablet 10/40mg, ezetimib/simvastatine tablet 10/80mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-29",
-"eml": "oranje"
-},
-{
 "stof": "Propranolol",
 "omschrijving": "Propranolol tablet 10mg",
 "vorm": "capsule met gereguleerde afgifte, tablet",
-"preferent": true,
-"datum": "2026-07-29",
-"eml": "oranje"
-},
-{
-"stof": "Paliperidon",
-"omschrijving": "Paliperidon tablet mga 3mg, paliperidon tablet mga 6mg",
-"vorm": "tablet met gereguleerde afgifte",
-"preferent": true,
-"datum": "2026-07-29",
-"eml": "oranje"
-},
-{
-"stof": "Foliumzuur",
-"omschrijving": "Foliumzuur tablet 0,5mg, foliumzuur tablet 5mg",
-"vorm": "tablet",
 "preferent": true,
 "datum": "2026-07-29",
 "eml": "oranje"
@@ -78,34 +470,10 @@
 "eml": "rood"
 },
 {
-"stof": "Eplerenon",
-"omschrijving": "Eplerenon tablet 25mg, eplerenon tablet 50mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-29",
-"eml": "oranje"
-},
-{
-"stof": "Acetylsalicylzuur",
-"omschrijving": "Acetylsalicylzuur dispertablet 80mg",
-"vorm": "dispergeerbare tablet",
-"preferent": true,
-"datum": "2026-07-29",
-"eml": "rood"
-},
-{
 "stof": "Liothyronine",
 "omschrijving": "Liothyronine tablet  5ug (als na-zout), liothyronine tablet 12,5ug (als na-zout)",
 "vorm": "tablet",
 "preferent": false,
-"datum": "2026-07-28",
-"eml": "oranje"
-},
-{
-"stof": "Rosuvastatine",
-"omschrijving": "Rosuvastatine tablet  5mg, rosuvastatine tablet 10mg, rosuvastatine tablet 20mg, rosuvastatine tablet 40mg",
-"vorm": "tablet",
-"preferent": true,
 "datum": "2026-07-28",
 "eml": "oranje"
 },
@@ -118,22 +486,6 @@
 "eml": "oranje"
 },
 {
-"stof": "Morfine",
-"omschrijving": "Morfine tablet mga  10mg (hcl), morfine tablet mga  10mg (sulfaat), morfine tablet mga  15mg (sulfaat), morfine tablet mga  30mg (hcl), morfine tablet mga  30mg (sulfaat)",
-"vorm": "tablet, tablet met gereguleerde afgifte",
-"preferent": true,
-"datum": "2026-07-28",
-"eml": "rood"
-},
-{
-"stof": "Mebendazol",
-"omschrijving": "Mebendazol tablet 100mg",
-"vorm": "tablet",
-"preferent": false,
-"datum": "2026-07-28",
-"eml": "geel"
-},
-{
 "stof": "Irbesartan",
 "omschrijving": "Irbesartan tablet  75mg, irbesartan tablet 150mg, irbesartan tablet 300mg",
 "vorm": "tablet",
@@ -142,28 +494,12 @@
 "eml": "oranje"
 },
 {
-"stof": "Diazepam",
-"omschrijving": "Diazepam tablet  5mg, diazepam tablet 10mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-28",
-"eml": "rood"
-},
-{
 "stof": "Rizatriptan",
 "omschrijving": "Rizatriptan orodisp tablet 10mg",
 "vorm": "orodispergeerbare tablet",
 "preferent": false,
 "datum": "2026-07-28",
 "eml": "geel"
-},
-{
-"stof": "Amlodipine/Valsartan",
-"omschrijving": "Amlodipine/valsartan tablet  5/ 80mg, amlodipine/valsartan tablet  5/160mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-28",
-"eml": "oranje"
 },
 {
 "stof": "Flucloxacilline",
@@ -196,22 +532,6 @@
 "preferent": false,
 "datum": "2026-07-28",
 "eml": "geel"
-},
-{
-"stof": "Pregabaline",
-"omschrijving": "Pregabaline capsule  25mg, pregabaline capsule  75mg, pregabaline capsule 150mg, pregabaline capsule 300mg",
-"vorm": "capsule",
-"preferent": true,
-"datum": "2026-07-28",
-"eml": "oranje"
-},
-{
-"stof": "Valsartan",
-"omschrijving": "Valsartan tablet omhuld  40mg, valsartan tablet omhuld  80mg, valsartan tablet omhuld 160mg",
-"vorm": "omhulde tablet",
-"preferent": false,
-"datum": "2026-07-28",
-"eml": "oranje"
 },
 {
 "stof": "Tolterodine",
@@ -254,14 +574,6 @@
 "eml": "geel"
 },
 {
-"stof": "Etoricoxib",
-"omschrijving": "Etoricoxib tablet fo  30mg, etoricoxib tablet fo  60mg, etoricoxib tablet fo  90mg",
-"vorm": "filmomhulde tablet",
-"preferent": true,
-"datum": "2026-07-28",
-"eml": "oranje"
-},
-{
 "stof": "Duloxetine",
 "omschrijving": "Duloxetine capsule msr 30mg, duloxetine capsule msr 60mg",
 "vorm": "maagsapresistente capsule",
@@ -302,25 +614,9 @@
 "eml": "rood"
 },
 {
-"stof": "Tobramycine",
-"omschrijving": "Tobramycine vernevelvlst  60mg/ml amp 5ml",
-"vorm": "vernevelvloeistof",
-"preferent": true,
-"datum": "2026-07-28",
-"eml": "rood"
-},
-{
 "stof": "Isosorbidemononitraat",
 "omschrijving": "Isosorbidemononitraat tablet mga  60mg",
 "vorm": "tablet met gereguleerde afgifte",
-"preferent": true,
-"datum": "2026-07-27",
-"eml": "oranje"
-},
-{
-"stof": "Latanoprost/Timolol",
-"omschrijving": "Timolol/latanopr oogdr 5mg/50ug/ml fl 2,5ml z benz",
-"vorm": "oogdruppels",
 "preferent": true,
 "datum": "2026-07-27",
 "eml": "oranje"
@@ -346,14 +642,6 @@
 "omschrijving": "Tranylcypromine tablet 10mg, tranylcypromine tablet 20mg",
 "vorm": "tablet",
 "preferent": false,
-"datum": "2026-07-27",
-"eml": "oranje"
-},
-{
-"stof": "Oxycodon",
-"omschrijving": "Oxycodon tablet mga  30mg",
-"vorm": "capsule, tablet met gereguleerde afgifte",
-"preferent": true,
 "datum": "2026-07-27",
 "eml": "oranje"
 },
@@ -438,14 +726,6 @@
 "eml": "geel"
 },
 {
-"stof": "Esomeprazol",
-"omschrijving": "Esomeprazol capsule msr 20mg, esomeprazol capsule msr 40mg, esomeprazol tablet msr 20mg, esomeprazol tablet msr 40mg",
-"vorm": "maagsapresistente tablet, maagsapresistente capsule",
-"preferent": true,
-"datum": "2026-07-23",
-"eml": "oranje"
-},
-{
 "stof": "Remifentanil",
 "omschrijving": "Remifentanil injectiepoeder 1mg fl",
 "vorm": "poeder voor injectievloeistof",
@@ -478,22 +758,6 @@
 "eml": "geel"
 },
 {
-"stof": "Ticagrelor",
-"omschrijving": "Ticagrelor tablet 60mg, ticagrelor tablet 90mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-23",
-"eml": "rood"
-},
-{
-"stof": "Carbidopa/Levodopa",
-"omschrijving": "Levodopa/carbidopa tablet   50/12,5mg, levodopa/carbidopa tablet  100/10mg, levodopa/carbidopa tablet  100/25mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-23",
-"eml": "oranje"
-},
-{
 "stof": "Gabapentine",
 "omschrijving": "Gabapentine capsule 100mg, gabapentine capsule 300mg, gabapentine capsule 400mg, gabapentine tablet 600mg",
 "vorm": "capsule, tablet",
@@ -506,14 +770,6 @@
 "omschrijving": "Venlafaxine capsule mga  37,5mg",
 "vorm": "capsule met gereguleerde afgifte",
 "preferent": false,
-"datum": "2026-07-23",
-"eml": "oranje"
-},
-{
-"stof": "Olanzapine",
-"omschrijving": "Olanzapine orodisp tablet 10mg, olanzapine orodisp tablet 15mg, olanzapine orodisp tablet 20mg, olanzapine tablet 10mg, olanzapine tablet 15mg, olanzapine tablet 20mg",
-"vorm": "orodispergeerbare tablet, tablet",
-"preferent": true,
 "datum": "2026-07-23",
 "eml": "oranje"
 },
@@ -542,26 +798,10 @@
 "eml": "geel"
 },
 {
-"stof": "Methylfenidaat",
-"omschrijving": "Methylfenidaat tablet mga 18mg, methylfenidaat tablet mga 27mg, methylfenidaat tablet mga 36mg, methylfenidaat tablet mga 54mg",
-"vorm": "tablet, capsule met gereguleerde afgifte, tablet met gereguleerde afgifte",
-"preferent": false,
-"datum": "2026-07-23",
-"eml": "geel"
-},
-{
 "stof": "Buprenorfine",
 "omschrijving": "Buprenorfine tablet sublinguaal 2mg",
 "vorm": "tablet voor sublinguaal gebruik",
 "preferent": false,
-"datum": "2026-07-22",
-"eml": "rood"
-},
-{
-"stof": "Valproinezuur",
-"omschrijving": "Valproinezuur granulaat mga  250mg (zuur+na-zout), valproinezuur granulaat mga  500mg (zuur+na-zout), valproinezuur tablet mga 300mg (zuur+na-zout), valproinezuur tablet mga 500mg (zuur+na-zout), valproinezuur tablet msr 300mg",
-"vorm": "granulaat met gereguleerde afgifte, maagsapresistente tablet, tablet met gereguleerde afgifte",
-"preferent": true,
 "datum": "2026-07-22",
 "eml": "rood"
 },
@@ -622,92 +862,12 @@
 "eml": "rood"
 },
 {
-"stof": "Ipratropium",
-"omschrijving": "Ipratropium aerosol 20ug/do 200do inh",
-"vorm": "aerosol",
-"preferent": true,
-"datum": "2026-07-21",
-"eml": "rood"
-},
-{
-"stof": "Dorzolamide/Timolol",
-"omschrijving": "Timolol/dorzolamide oogdr 5/20mg/ml m 0,3ml z benz",
-"vorm": "oogdruppels",
-"preferent": true,
-"datum": "2026-07-21",
-"eml": "oranje"
-},
-{
-"stof": "Rifabutine",
-"omschrijving": "Rifabutine capsule 150mg",
-"vorm": "capsule",
-"preferent": false,
-"datum": "2026-07-21",
-"eml": "oranje"
-},
-{
 "stof": "Pravastatine",
 "omschrijving": "Pravastatine tablet 10mg",
 "vorm": "tablet",
 "preferent": true,
 "datum": "2026-07-21",
 "eml": "geel"
-},
-{
-"stof": "Hydrochloorthiazide",
-"omschrijving": "Hydrochloorthiazide tablet 12,5mg, hydrochloorthiazide tablet 25mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-21",
-"eml": "oranje"
-},
-{
-"stof": "Fenobarbital",
-"omschrijving": "Fenobarbital drank  4mg/ml, fenobarbital tablet  10mg, fenobarbital tablet  25mg, fenobarbital tablet  50mg",
-"vorm": "suspensie voor oraal gebruik, tablet, drank",
-"preferent": false,
-"datum": "2026-07-21",
-"eml": "oranje"
-},
-{
-"stof": "Emtricitabine/Tenofovir disoproxil",
-"omschrijving": "Emtricitabine/tenofovirdiso tablet 200/245mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-21",
-"eml": "oranje"
-},
-{
-"stof": "Calciumcarbonaat/Colecalciferol",
-"omschrijving": "Calciumcarb/colecalc kauwtb 2,5g/880ie (1000mg ca)",
-"vorm": "kauwtablet",
-"preferent": false,
-"datum": "2026-07-21",
-"eml": "geel"
-},
-{
-"stof": "Valaciclovir",
-"omschrijving": "Valaciclovir tablet  250mg, valaciclovir tablet  500mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-20",
-"eml": "rood"
-},
-{
-"stof": "Rivaroxaban",
-"omschrijving": "Rivaroxaban tablet 20mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-20",
-"eml": "rood"
-},
-{
-"stof": "Liraglutide",
-"omschrijving": "Liraglutide inj pen 18mg=3ml (6mg/ml) 0,6-3,0mg/do (bij obesitas en overgewicht)",
-"vorm": "injectievloeistof",
-"preferent": true,
-"datum": "2026-07-20",
-"eml": "oranje"
 },
 {
 "stof": "Gentamicine",
@@ -726,26 +886,10 @@
 "eml": "oranje"
 },
 {
-"stof": "Nifedipine",
-"omschrijving": "Nifedipine tablet mga 30mg, nifedipine tablet mga 60mg",
-"vorm": "tablet met gereguleerde afgifte",
-"preferent": true,
-"datum": "2026-07-20",
-"eml": "geel"
-},
-{
 "stof": "Haloperidol",
 "omschrijving": "Haloperidol tablet  1mg, haloperidol tablet  5mg",
 "vorm": "tablet",
 "preferent": false,
-"datum": "2026-07-17",
-"eml": "rood"
-},
-{
-"stof": "Dexamethason",
-"omschrijving": "Dexamethason oogdr 1mg/ml (fosfaat) fl 6ml z benz",
-"vorm": "oogdruppels",
-"preferent": true,
 "datum": "2026-07-17",
 "eml": "rood"
 },
@@ -782,30 +926,6 @@
 "eml": "rood"
 },
 {
-"stof": "Naproxen",
-"omschrijving": "Naproxen zetpil 250mg, naproxen zetpil 500mg",
-"vorm": "zetpil",
-"preferent": false,
-"datum": "2026-07-16",
-"eml": "oranje"
-},
-{
-"stof": "Midazolam",
-"omschrijving": "Midazolam neusspray 2,5mg, midazolam neusspray 2,5mg/do fl  55do, midazolam neusspray 2,5mg/do fl  65do, midazolam neusspray 3,75mg, midazolam neusspray 5mg",
-"vorm": "neusspray",
-"preferent": false,
-"datum": "2026-07-16",
-"eml": "rood"
-},
-{
-"stof": "Furosemide",
-"omschrijving": "Furosemide tablet 40mg, furosemide tablet 500mg",
-"vorm": "tablet, capsule met gereguleerde afgifte",
-"preferent": true,
-"datum": "2026-07-16",
-"eml": "rood"
-},
-{
 "stof": "Lisinopril",
 "omschrijving": "Lisinopril tablet  2,5mg, lisinopril tablet  5mg, lisinopril tablet 10mg, lisinopril tablet 20mg",
 "vorm": "tablet",
@@ -830,28 +950,12 @@
 "eml": "rood"
 },
 {
-"stof": "Beclometason/Mesalazine",
-"omschrijving": "Beclometason/mesalazine klysma 3mg/2g=60g, beclometason/mesalazine klysma 3mg/3g=60g",
-"vorm": "klysma",
-"preferent": false,
-"datum": "2026-07-15",
-"eml": "oranje"
-},
-{
 "stof": "Labetalol",
 "omschrijving": "Labetalol tablet 100mg",
 "vorm": "tablet",
 "preferent": false,
 "datum": "2026-07-14",
 "eml": "rood"
-},
-{
-"stof": "Beclometason",
-"omschrijving": "Beclometason aer  50ug/do 200do extrafyn autoh",
-"vorm": "inhalatiepoeder, aerosol",
-"preferent": false,
-"datum": "2026-07-14",
-"eml": "oranje"
 },
 {
 "stof": "Amlodipine/Hydrochloorthiazide/Valsartan",
@@ -910,22 +1014,6 @@
 "eml": "rood"
 },
 {
-"stof": "Folinezuur",
-"omschrijving": "Folinezuur capsule 15mg",
-"vorm": "capsule",
-"preferent": false,
-"datum": "2026-07-13",
-"eml": "rood"
-},
-{
-"stof": "Metronidazol",
-"omschrijving": "Metronidazol creme 10mg/g, metronidazol creme 20mg/g",
-"vorm": "creme",
-"preferent": false,
-"datum": "2026-07-13",
-"eml": "rood"
-},
-{
 "stof": "Diazepam",
 "omschrijving": "Diazepam klysma 2mg/ml fl 2,5ml, diazepam klysma 4mg/ml fl 2,5ml",
 "vorm": "klysma",
@@ -942,28 +1030,12 @@
 "eml": "geel"
 },
 {
-"stof": "Zolmitriptan",
-"omschrijving": "Zolmitriptan orodisp tablet 2,5mg, zolmitriptan tablet omhuld 2,5mg",
-"vorm": "orodispergeerbare tablet, omhulde tablet",
-"preferent": true,
-"datum": "2026-07-13",
-"eml": "geel"
-},
-{
 "stof": "Insuline aspart",
 "omschrijving": "Insuline aspart injvlst 100e/ml patr 1,6ml",
 "vorm": "injectievloeistof",
 "preferent": false,
 "datum": "2026-07-10",
 "eml": "rood"
-},
-{
-"stof": "Diclofenac",
-"omschrijving": "Diclofenac-natrium zetpil  25mg, diclofenac-natrium zetpil  50mg, diclofenac-natrium zetpil 100mg",
-"vorm": "zetpil",
-"preferent": false,
-"datum": "2026-07-10",
-"eml": "oranje"
 },
 {
 "stof": "Brimonidine",
@@ -987,14 +1059,6 @@
 "vorm": "suspensie voor injectie",
 "preferent": false,
 "datum": "2026-07-10",
-"eml": "rood"
-},
-{
-"stof": "Midazolam",
-"omschrijving": "Midazolam drank 10mg=5ml amp (2mg/ml)+toeb, midazolam tablet 15mg",
-"vorm": "tablet, drank",
-"preferent": false,
-"datum": "2026-07-09",
 "eml": "rood"
 },
 {
@@ -1062,14 +1126,6 @@
 "eml": "rood"
 },
 {
-"stof": "Allopurinol",
-"omschrijving": "Allopurinol tablet 100mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-07-07",
-"eml": "oranje"
-},
-{
 "stof": "Azelastine/Fluticason",
 "omschrijving": "Azelastine/fluticason neusspray 137/50ug/do 120 do",
 "vorm": "neusspray",
@@ -1082,14 +1138,6 @@
 "omschrijving": "Dtp vaccin (bilthoven biologicals) wwsp 1ml",
 "vorm": "suspensie voor injectie",
 "preferent": false,
-"datum": "2026-07-07",
-"eml": "rood"
-},
-{
-"stof": "Amoxicilline/Clavulaanzuur",
-"omschrijving": "Amoxicilline/clavulaanzuur infpdr 2000/200mg fl, amoxicilline/clavulaanzuur injpdr 1000/200mg fl",
-"vorm": "poeder voor oplossing voor infusie, poeder voor injectievloeistof",
-"preferent": true,
 "datum": "2026-07-07",
 "eml": "rood"
 },
@@ -1142,36 +1190,12 @@
 "eml": "geel"
 },
 {
-"stof": "Pantoprazol",
-"omschrijving": "Pantoprazol injectiepoeder 40mg fl",
-"vorm": "poeder voor injectievloeistof",
-"preferent": true,
-"datum": "2026-07-03",
-"eml": "oranje"
-},
-{
 "stof": "Liraglutide",
 "omschrijving": "Liraglutide inj pen 18mg=3ml (6mg/ml) 0,6-1,8mg/do (bij diabetes mellitus type 2)",
 "vorm": "injectievloeistof",
 "preferent": false,
 "datum": "2026-07-03",
 "eml": "oranje"
-},
-{
-"stof": "Calcitriol",
-"omschrijving": "Calcitriol zalf 3ug/g",
-"vorm": "zalf",
-"preferent": false,
-"datum": "2026-07-02",
-"eml": "geel"
-},
-{
-"stof": "Captopril",
-"omschrijving": "Captopril tablet  6,25mg, captopril tablet 12,5mg, captopril tablet 25mg, captopril tablet 50mg",
-"vorm": "tablet",
-"preferent": false,
-"datum": "2026-07-02",
-"eml": "rood"
 },
 {
 "stof": "Solifenacine",
@@ -1716,14 +1740,6 @@
 "preferent": false,
 "datum": "2026-03-06",
 "eml": "rood"
-},
-{
-"stof": "Nicorandil",
-"omschrijving": "Nicorandil tablet 10mg Ikorel tablet 10 mg",
-"vorm": "tablet",
-"preferent": false,
-"datum": "2026-02-23",
-"eml": "oranje"
 },
 {
 "stof": "Mometason",

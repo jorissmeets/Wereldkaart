@@ -1,9 +1,63 @@
 {
-"generated": "2026-07-29",
+"generated": "2026-08-05",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 176,
-"on_eml": 82,
+"count": 182,
+"on_eml": 85,
 "items": [
+{
+"product": "Capecitabine Accord 500 mg, filmomhulde tabletten",
+"mah": "Accord Healthcare SLU",
+"reg": "EU/1/12/762",
+"reg_type": "EU",
+"datum": "2026-08-03",
+"atc": "H03AA01",
+"eml": "rood"
+},
+{
+"product": "Urokinase Syner-Medica 250.000 IE, poeder voor oplossing voor injectie/infusie",
+"mah": "Syner-Medica B.V.",
+"reg": "122411",
+"reg_type": "RVG",
+"datum": "2026-08-03",
+"atc": "B01AD04",
+"eml": "rood"
+},
+{
+"product": "REZUROCK 200 mg, filmomhulde tabletten",
+"mah": "Sanofi Winthrop Industrie",
+"reg": "EU/1/26/2015/002",
+"reg_type": "EU",
+"datum": "2026-08-01",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Ampicilline/Sulbactam AptaPharma 1 g/0,5 g, poeder voor oplossing voor injectie/infusie",
+"mah": "Apta Medica Internacional d.o.o.",
+"reg": "132360",
+"reg_type": "RVG",
+"datum": "2026-07-31",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Ampicilline/Sulbactam AptaPharma 2 g/1 g, poeder voor oplossing voor injectie/infusie",
+"mah": "Apta Medica Internacional d.o.o .",
+"reg": "132361",
+"reg_type": "RVG",
+"datum": "2026-07-31",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Doxycycline Macure 20 mg/ml, oplossing voor injectie",
+"mah": "Macure Healthcare Limited",
+"reg": "133272",
+"reg_type": "RVG",
+"datum": "2026-07-28",
+"atc": "J01AA02",
+"eml": "rood"
+},
 {
 "product": "Folinezuur Kalceks 10 mg/ml oplossing voor injectie/infusie",
 "mah": "AS Kalceks",
