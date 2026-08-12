@@ -1,9 +1,27 @@
 {
-"generated": "2026-08-05",
+"generated": "2026-08-12",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 182,
-"on_eml": 85,
+"count": 184,
+"on_eml": 87,
 "items": [
+{
+"product": "Zoledroninezuur Fresenius Kabi 4 mg/5 ml concentraat voor oplossing voor infusie",
+"mah": "Fresenius Kabi Nederland B.V.",
+"reg": "109892",
+"reg_type": "RVG",
+"datum": "2026-08-11",
+"atc": "M05BA08",
+"eml": "geel"
+},
+{
+"product": "Hepatect CP 50 IE/ml, oplossing voor infusie",
+"mah": "Biotest Pharma GmbH",
+"reg": "27115",
+"reg_type": "RVG",
+"datum": "2026-08-06",
+"atc": "J06BB04",
+"eml": "oranje"
+},
 {
 "product": "Capecitabine Accord 500 mg, filmomhulde tabletten",
 "mah": "Accord Healthcare SLU",

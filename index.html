@@ -148,10 +148,10 @@ const DOSSIERS = [
     { key:"prednisolon",       title:"DAF-prednisolon",                     atc:"H02AB06", phase:"Therapeutische coördinatiefase", updated:"2026-06-26", url:"https://lcg.nl/medicijnentekort/daf-prednisolon-2/" },
     { key:"gentamicine",       title:"Gentamicine (i.v.)",                  atc:"J01GB03", phase:"Logistieke coördinatiefase",     updated:"2026-07-24", url:"https://lcg.nl/medicijnentekort/gentamicine-i-v/" },
     { key:"praziquantel",      title:"Praziquantel (Biltricide)",           atc:"P02BA01", phase:"Bewakingsfase",                  updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/praziquantel-biltricide/" },
-    { key:"capecitabine",      title:"Capecitabine",                        atc:"L01BC06", phase:"Logistieke coördinatiefase",     updated:"2026-08-03", url:"https://lcg.nl/medicijnentekort/capecitabine/" },
+    { key:"capecitabine",      title:"Capecitabine",                        atc:"L01BC06", phase:"Logistieke coördinatiefase",     updated:"2026-08-11", url:"https://lcg.nl/medicijnentekort/capecitabine/" },
     { key:"mitoxantron",       title:"Mitoxantron (i.v.)",                  atc:"L01DB07", phase:"Monitoring",                     updated:"2026-08-03", url:"https://lcg.nl/medicijnentekort/mitoxantron-i-v/" },
-    { key:"albendazol",        title:"Albendazol (Eskazole)",               atc:"P02CA03", phase:"Inventarisatie",                 updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/albendazol-eskazole-400mg-tablet/" },
-    { key:"folinezuur",        title:"Folinezuur (capsules, oraal)",        atc:"V03AF03", phase:"Monitoring",                     updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/folinezuur-capsules-oraal/" },
+    { key:"albendazol",        title:"Albendazol (Eskazole)",               atc:"P02CA03", phase:"Monitoring",                     updated:"2026-08-06", url:"https://lcg.nl/medicijnentekort/albendazol-eskazole-400mg-tablet/" },
+    { key:"folinezuur",        title:"Folinezuur (capsules, oraal)",        atc:"V03AF03", phase:"Monitoring",                     updated:"2026-08-06", url:"https://lcg.nl/medicijnentekort/folinezuur-capsules-oraal/" },
     { key:"methylergometrine", title:"Methylergometrine (i.v.)",            atc:"G02AB01", phase:"Monitoring",                     updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/methylergometrine/" },
     { key:"hyaluronidase",     title:"Hyaluronidase (Hyason)",              atc:"B06AA03", phase:"Monitoring",                     updated:"2026-07-16", url:"https://lcg.nl/medicijnentekort/hyaluronidase-hyason/" },
     { key:"fentolamine",       title:"Fentolamine (Regitine)",              atc:"C04AB01", phase:"Monitoring",                     updated:"2026-04-29", url:"https://lcg.nl/medicijnentekort/fentolamine-ampul-10mg-ml/" },
@@ -161,7 +161,7 @@ const DOSSIERS = [
     { key:"mesna",             title:"Mesna (Uromitexan)",                  atc:"V03AF01", phase:"Bewakingsfase",                  updated:"2026-07-30", url:"https://lcg.nl/medicijnentekort/mercapto-ethaansulfonzuur-uromitexan-100mg-ml/" },
 ];
 
-// Narratieve LCG-status per dossier (snapshot van lcg.nl, opgehaald 2026-08-05)
+// Narratieve LCG-status per dossier (snapshot van lcg.nl, opgehaald 2026-08-12)
 const LCG_STATUS = {
     ifosfamide: {
         situation: "Er is een beschikbaarheidsprobleem van ifosfamide (Holoxan) in Nederland. Het LCG heeft meerdere rode alerts uitgegeven en deze voortdurend verlengd. Het dossier bevindt zich in de therapeutische coördinatiefase, waarbij aandacht wordt gevraagd voor het behandeladvies in de alert.",
@@ -184,14 +184,14 @@ const LCG_STATUS = {
         advice: "Er is geen vrijstellingsbesluit voor praziquantel. Import is mogelijk op basis van indicatie (invoer wanneer medisch geïndiceerd, zonder formele vrijstelling).",
     },
     capecitabine: {
-        situation: "Het LCG heeft de landelijke voorraadpositie van capecitabine in kaart gebracht en gedeeld met ziekenhuizen, poliklinische apotheken, CBG en IGJ. Met Accord is afgesproken dat noodbestellingen (150mg, 300mg) via het LCG kunnen worden geplaatst indien nodig. Het dossier is opgeschaald naar de logistieke coördinatiefase.",
-        advice: "Apothekers en voorschrijvers kunnen contact opnemen met het LCG (info@lcg.nl, 085-0221390) voor beschikbaarheid en de noodbestellingsprocedure; raadpleeg ziekenhuisapotheken voor mogelijke alternatieven.",
+        situation: "Capecitabine is schaars in Nederland (logistieke coördinatiefase). Met Accord is afgesproken dat via het LCG een noodbestelling ter grootte van ~1 week verbruik kan worden geplaatst voor 150mg- en 500mg-capsules; 300mg is niet meer beschikbaar. Er is een IGJ-vrijstellingsbesluit gepubliceerd en zorgverleners zijn via alert geïnformeerd (update 11-08-2026).",
+        advice: "Controleer voorraden en plaats zo nodig een noodbestelling (150/500mg) via het LCG (info@lcg.nl, 085-0221390); raadpleeg het IGJ-vrijstellingsbesluit voor alternatieven en volg de LCG-alerts.",
     },
     mitoxantron: {
         situation: "Het LCG heeft de landelijke voorraadpositie van mitoxantron (i.v.) in kaart gebracht en gedeeld met ziekenhuizen, CBG en IGJ. Het dossier staat in de monitoringfase — de situatie wordt gevolgd zonder acuut tekort.",
     },
     albendazol: {
-        situation: "Het LCG ontvangt signalen over een beperkte beschikbaarheid van albendazol (Eskazole) 400mg tablet en onderzoekt deze meldingen. Het dossier bevindt zich in een vroeg stadium (inventarisatie).",
+        situation: "Het LCG signaleert beperkte beschikbaarheid van albendazol (Eskazole) 400mg tablet; de meldingen worden onderzocht. Het dossier staat sinds begin augustus in de monitoringfase.",
     },
     folinezuur: {
         situation: "Het LCG heeft signalen ontvangen over een tekort aan folinezuur capsules (oraal). Deze zijn besproken met het CBG en de IGJ en worden nader onderzocht. Het dossier bevindt zich in de fase monitoring.",
