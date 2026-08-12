@@ -68,6 +68,12 @@
     .eml-tag.rood { background: #e05555; } .eml-tag.oranje { background: #e08a10; } .eml-tag.geel { background: #b79a10; }
     .badge.impact { background: #d83b3b; } .badge.nieuw2 { background: var(--lcg-cyan); }
     .empty { padding: 20px 16px; color: var(--text-muted); font-style: italic; }
+    .caret { cursor: pointer; color: var(--text-muted); font-size: 12px; user-select: none; transition: transform 0.15s; flex-shrink: 0; }
+    .caret:hover { color: var(--lcg-blue); }
+    .section.collapsed .caret { transform: rotate(-90deg); }
+    .section.collapsed .rows, .section.collapsed .controls { display: none; }
+    .mgroup { padding: 8px 16px 3px; font-size: 12px; font-weight: 800; color: var(--sig-map); background: var(--bg-elevated); border-top: 1px solid var(--border-light); display: flex; gap: 8px; align-items: baseline; }
+    .mgroup .cnt { font-size: 10px; color: var(--text-muted); font-weight: 600; margin-left: auto; }
     .note { font-size: 11.5px; color: var(--text-muted); background: var(--bg-elevated); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; }
     .footer { text-align: center; font-size: 11px; color: var(--text-muted); padding: 16px 0 0; }
 
@@ -108,6 +114,7 @@
     <!-- Sectie 1: CBG TAV -->
     <div class="section">
         <div class="section-head">
+            <span class="caret" title="in-/uitklappen">▾</span>
             <span class="section-badge" style="background:var(--sig-cbg)"></span>
             <span class="title">CBG — Tijdelijk Afwijkende Verpakking</span>
             <span class="src">NL · <a href="https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking" target="_blank" rel="noopener">bron ↗</a></span>
@@ -125,6 +132,7 @@
     <!-- Sectie 1b: Farmanco op EMS -->
     <div class="section">
         <div class="section-head">
+            <span class="caret" title="in-/uitklappen">▾</span>
             <span class="section-badge" style="background:#e05555"></span>
             <span class="title">Farmanco — meldingen op de EMS-lijst</span>
             <span class="src">KNMP Farmanco · alleen stoffen op de EMS-lijst · kleur = beoordeling</span>
@@ -133,7 +141,7 @@
                 <div class="chip feml" data-eml="rood">Rood</div>
                 <div class="chip feml" data-eml="oranje">Oranje</div>
                 <div class="chip feml" data-eml="geel">Geel</div>
-                <label class="chip" style="cursor:pointer"><input type="checkbox" id="f-preferent" style="vertical-align:-1px;margin-right:4px">alleen preferent</label>
+                <label class="chip" style="cursor:pointer" title="Preferentiebeleid: de zorgverzekeraar heeft een voorkeursvariant (meestal de goedkoopste) aangewezen die standaard wordt vergoed. Een tekort van een preferent middel weegt zwaarder omdat alternatieven niet automatisch vergoed worden."><input type="checkbox" id="f-preferent" style="vertical-align:-1px;margin-right:4px">alleen preferent</label>
                 <select id="f-vorm" class="vorm-select" title="Toedieningsvorm"><option value="all">Alle vormen</option></select>
                 <div class="search"><input type="text" id="f-search" placeholder="Zoek stof of product…" autocomplete="off"></div>
             </div>
@@ -144,15 +152,20 @@
     <!-- Sectie 2: Landkaart-vroegsignalen -->
     <div class="section">
         <div class="section-head">
+            <span class="caret" title="in-/uitklappen">▾</span>
             <span class="section-badge" style="background:var(--sig-map)"></span>
             <span class="title">Landkaart — vroegsignaal-watchlist</span>
-            <span class="src">nieuw opgekomen · vroegste bron-startdatum · weinig landen eerst</span>
+            <span class="src">nieuw opgekomen · vroegste bron-startdatum</span>
             <div class="controls">
                 <div class="chip map-period" data-days="60">60d</div>
                 <div class="chip map-period active" data-days="120">120d</div>
                 <div class="chip map-period" data-days="365">12m</div>
-                <label class="chip" style="cursor:pointer"><input type="checkbox" id="map-fewonly" style="vertical-align:-1px;margin-right:4px">alleen ≤2 landen</label>
-                <label class="chip" style="cursor:pointer"><input type="checkbox" id="map-eml" style="vertical-align:-1px;margin-right:4px">alleen EMS</label>
+                <div class="chip mcolor active" data-color="all" title="EMS-beoordeling">Alle</div>
+                <div class="chip mcolor" data-color="rood" title="EMS rood">🔴</div>
+                <div class="chip mcolor" data-color="oranje" title="EMS oranje">🟠</div>
+                <div class="chip mcolor" data-color="geel" title="EMS geel">🟡</div>
+                <label class="chip" style="cursor:pointer" title="Alleen stoffen in ≥3 landen (breder tekort)"><input type="checkbox" id="map-many" style="vertical-align:-1px;margin-right:4px">≥3 landen</label>
+                <label class="chip" style="cursor:pointer" title="Groepeer op ATC-4-groep — zo zie je een domino-effect (meerdere middelen in dezelfde groep) sneller"><input type="checkbox" id="map-group" style="vertical-align:-1px;margin-right:4px">ATC-groep</label>
                 <div class="search"><input type="text" id="map-search" placeholder="Zoek stof of ATC…" autocomplete="off"></div>
             </div>
         </div>
@@ -182,7 +195,7 @@ const ATC_NAMES = {"A01AA01":"NATRIUMFLUORIDE","A01AA03":"OLAFLUR","A01AA04":"st
 const FLAG = { AR:"🇦🇷",AT:"🇦🇹",AU:"🇦🇺",BE:"🇧🇪",BR:"🇧🇷",CA:"🇨🇦",CH:"🇨🇭",CL:"🇨🇱",CO:"🇨🇴",CZ:"🇨🇿",DE:"🇩🇪",DK:"🇩🇰",EE:"🇪🇪",EG:"🇪🇬",ES:"🇪🇸",EU:"🇪🇺",FI:"🇫🇮",FR:"🇫🇷",GR:"🇬🇷",HR:"🇭🇷",HU:"🇭🇺",IE:"🇮🇪",IL:"🇮🇱",IN:"🇮🇳",IS:"🇮🇸",IT:"🇮🇹",JP:"🇯🇵",KR:"🇰🇷",LT:"🇱🇹",LV:"🇱🇻",MX:"🇲🇽",MY:"🇲🇾",NL:"🇳🇱",NO:"🇳🇴",PE:"🇵🇪",PH:"🇵🇭",PK:"🇵🇰",PT:"🇵🇹",RO:"🇷🇴",SA:"🇸🇦",SE:"🇸🇪",SG:"🇸🇬",SI:"🇸🇮",SK:"🇸🇰",TR:"🇹🇷",TW:"🇹🇼",US:"🇺🇸",ZA:"🇿🇦" };
 
 let RAW = null, REASON_LABELS = {}, MAP_SIGNALS = [];
-const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapFewOnly: false, mapEmlOnly: false, fEml: "all", fPref: false, fVorm: "all", fQ: "" };
+const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapColor: "all", mapMany: false, mapGroup: false, fEml: "all", fPref: false, fVorm: "all", fQ: "" };
 
 // ── Toedieningsvorm-categorieën (Farmanco 'vorm' is vrije tekst) ──
 const VORM_CATS = [["tablet", "Tablet"], ["capsule", "Capsule"], ["oraal", "Drank/oraal"], ["injectie", "Injectie/infuus"],
@@ -271,28 +284,42 @@ function computeMapSignals() {
 }
 
 const MAP_CAP = 250;
+function signalRow(s) {
+    const flags = s.ccs.slice(0, 8).map(cc => FLAG[cc] || "").join("");
+    const more = s.ccs.length > 8 ? ` +${s.ccs.length - 8}` : "";
+    return `<div class="row">
+        <span class="date">${s.first}</span>
+        <span class="eml-dot ${s.eml || "none"}" title="${s.eml ? "EMS: " + s.eml : "niet op EMS"}"></span>
+        <span class="name">${esc(medName(s.atc, s.subFallback))}${s.eml ? ` <span class="eml-tag ${s.eml}">${s.eml.toUpperCase()}</span>` : ''}${s.isDossier ? ' <span class="badge dossier">LCG-dossier</span>' : ''}</span>
+        <span class="reg">${s.atc}</span>
+        <span class="flags">${flags}${more}</span>
+        <span class="cc-count">${s.countryCount} ${s.countryCount === 1 ? "land" : "landen"}</span>
+    </div>`;
+}
+function atc4Name(a4) { return ATC_NAMES[a4] ? prettyName(ATC_NAMES[a4]) : ""; }
 function renderMap() {
     const host = document.getElementById("map-rows");
     const cutoff = S.mapDays ? addDays(mapRef(), -S.mapDays) : "0000-00-00";
     const q = S.mapQ.toUpperCase();
     let list = MAP_SIGNALS.filter(s => s.first && s.first >= cutoff);
-    if (S.mapFewOnly) list = list.filter(s => s.countryCount <= 2);
-    if (S.mapEmlOnly) list = list.filter(s => s.eml);
+    if (S.mapColor !== "all") list = list.filter(s => s.eml === S.mapColor);
+    if (S.mapMany) list = list.filter(s => s.countryCount >= 3);
     if (q) list = list.filter(s => (medName(s.atc, s.subFallback) + " " + s.atc).toUpperCase().includes(q));
-    if (!list.length) { host.innerHTML = `<div class="empty">Geen nieuw opgekomen buitenlandse signalen in deze selectie.</div>`; return; }
+    if (!list.length) { host.innerHTML = `<div class="empty">Geen buitenlandse signalen in deze selectie.</div>`; return; }
+    if (S.mapGroup) {
+        // Groepeer op ATC-4-groep (eerste 5 tekens); meeste middelen eerst = domino-effect
+        const groups = {};
+        list.forEach(s => { (groups[s.atc.slice(0, 5)] ||= []).push(s); });
+        const ordered = Object.entries(groups).sort((a, b) => b[1].length - a[1].length || (b[1][0].first || "0").localeCompare(a[1][0].first || "0"));
+        host.innerHTML = ordered.map(([a4, sigs]) => {
+            const nm = atc4Name(a4);
+            return `<div class="mgroup">${nm ? esc(nm) + " " : ""}<span class="reg">${a4}</span><span class="cnt">${sigs.length} ${sigs.length === 1 ? "middel" : "middelen"}</span></div>` +
+                sigs.map(signalRow).join("");
+        }).join("");
+        return;
+    }
     const shown = list.slice(0, MAP_CAP);
-    host.innerHTML = shown.map(s => {
-        const flags = s.ccs.slice(0, 8).map(cc => FLAG[cc] || "").join("");
-        const more = s.ccs.length > 8 ? ` +${s.ccs.length - 8}` : "";
-        return `<div class="row">
-            <span class="date">${s.first}</span>
-            <span class="eml-dot ${s.eml || "none"}" title="${s.eml ? "EMS: " + s.eml : "niet op EMS"}"></span>
-            <span class="name">${esc(medName(s.atc, s.subFallback))}${s.eml ? ` <span class="eml-tag ${s.eml}">${s.eml.toUpperCase()}</span>` : ''}${s.isDossier ? ' <span class="badge dossier">LCG-dossier</span>' : ''}</span>
-            <span class="reg">${s.atc}</span>
-            <span class="flags">${flags}${more}</span>
-            <span class="cc-count">${s.countryCount} ${s.countryCount === 1 ? "land" : "landen"}</span>
-        </div>`;
-    }).join("") + (list.length > MAP_CAP ? `<div class="empty">${list.length - MAP_CAP} meer — verfijn met periode, ≤2 landen of zoek.</div>` : "");
+    host.innerHTML = shown.map(signalRow).join("") + (list.length > MAP_CAP ? `<div class="empty">${list.length - MAP_CAP} meer — verfijn met periode, kleur, ≥3 landen of zoek.</div>` : "");
 }
 
 function hasCJK(s) { return /[　-鿿＀-￯가-힯]/.test(s || ""); }
@@ -330,7 +357,7 @@ function renderFarmanco() {
     host.innerHTML = list.map(m => `<div class="row">
             <span class="date">${m.datum || ""}</span>
             <span class="eml-dot ${m.eml}"></span>
-            <span class="name">${esc(m.stof)}${m.preferent ? ' <span class="badge impact">preferent</span>' : ''}</span>
+            <span class="name">${esc(m.stof)}${m.preferent ? ' <span class="badge impact" title="Preferentiebeleid: zorgverzekeraar heeft een voorkeursvariant aangewezen die standaard wordt vergoed">preferent</span>' : ''}</span>
             <span class="meta">${esc(m.omschrijving)}</span>
             <span class="eml-tag ${m.eml}">${(m.eml || "").toUpperCase()}</span>
         </div>`).join("");
@@ -350,8 +377,16 @@ document.querySelectorAll(".map-period").forEach(c => c.addEventListener("click"
 let _t1, _t2;
 document.getElementById("cbg-search").addEventListener("input", e => { clearTimeout(_t1); _t1 = setTimeout(() => { S.cbgQ = e.target.value; renderCbg(); }, 150); });
 document.getElementById("map-search").addEventListener("input", e => { clearTimeout(_t2); _t2 = setTimeout(() => { S.mapQ = e.target.value; renderMap(); }, 150); });
-document.getElementById("map-fewonly").addEventListener("change", e => { S.mapFewOnly = e.target.checked; renderMap(); });
-document.getElementById("map-eml").addEventListener("change", e => { S.mapEmlOnly = e.target.checked; renderMap(); });
+document.querySelectorAll(".mcolor").forEach(c => c.addEventListener("click", () => {
+    document.querySelectorAll(".mcolor").forEach(x => x.classList.remove("active"));
+    c.classList.add("active"); S.mapColor = c.dataset.color; renderMap();
+}));
+document.getElementById("map-many").addEventListener("change", e => { S.mapMany = e.target.checked; renderMap(); });
+document.getElementById("map-group").addEventListener("change", e => { S.mapGroup = e.target.checked; renderMap(); });
+// Secties in-/uitklappen via de caret
+document.querySelectorAll(".caret").forEach(c => c.addEventListener("click", () => {
+    c.closest(".section").classList.toggle("collapsed");
+}));
 document.getElementById("cbg-eml").addEventListener("change", e => { S.cbgEmlOnly = e.target.checked; renderCbg(); });
 
 // Farmanco-filters

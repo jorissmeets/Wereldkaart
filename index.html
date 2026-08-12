@@ -244,7 +244,8 @@ function isoToday() { return new Date().toISOString().slice(0, 10); }
 function addDays(iso, d) { const x = new Date(iso); x.setDate(x.getDate() + d); return x.toISOString().slice(0, 10); }
 function esc(s) { return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 function reasonText(r) { return r.rt || REASON_LABELS[r.rc] || r.rc || ""; }
-function countryName(r) { return r.cn || r.cc; }
+const CC_NL = {"AR":"Argentinië","AT":"Oostenrijk","AU":"Australië","BE":"België","BR":"Brazilië","CA":"Canada","CH":"Zwitserland","CL":"Chili","CO":"Colombia","CZ":"Tsjechië","DE":"Duitsland","DK":"Denemarken","EE":"Estland","EG":"Egypte","ES":"Spanje","EU":"EU (EMA)","FI":"Finland","FR":"Frankrijk","GR":"Griekenland","HR":"Kroatië","HU":"Hongarije","IE":"Ierland","IL":"Israël","IN":"India","IS":"IJsland","IT":"Italië","JP":"Japan","KR":"Zuid-Korea","LT":"Litouwen","LV":"Letland","MX":"Mexico","MY":"Maleisië","NL":"Nederland","NO":"Noorwegen","PE":"Peru","PH":"Filipijnen","PK":"Pakistan","PT":"Portugal","RO":"Roemenië","SA":"Saoedi-Arabië","SE":"Zweden","SG":"Singapore","SI":"Slovenië","SK":"Slowakije","TR":"Turkije","TW":"Taiwan","US":"VS","ZA":"Zuid-Afrika","GB":"Verenigd Koninkrijk","NZ":"Nieuw-Zeeland"};
+function countryName(r) { return (r && r.cc && CC_NL[r.cc]) || (r && r.cn) || (r && r.cc) || ""; }
 
 // Actuele meldingen (active/upcoming, evt. resolved) voor een ATC, gegroepeerd per land
 function meldingenForAtc(atc, includeResolved) {
@@ -265,7 +266,7 @@ function meldingenForAtc(atc, includeResolved) {
         return { cc, st, first, newest, reasons, n: rs.length, isNew };
     });
     const stRank = { active: 0, upcoming: 1, resolved: 2 };
-    rows.sort((a, b) => stRank[a.st] - stRank[b.st] || (b.newest || "0").localeCompare(a.newest || "0"));
+    rows.sort((a, b) => countryName({ cc: a.cc }).localeCompare(countryName({ cc: b.cc }), "nl"));
     return rows;
 }
 
@@ -283,7 +284,7 @@ function renderKpis(list) {
         <div class="kpi"><div class="n">${list.length}</div><div class="l">Dossiers</div></div>
         <div class="kpi"><div class="n">${active}</div><div class="l">Met buitenlandse meldingen</div></div>
         <div class="kpi"><div class="n">${coord}</div><div class="l">In coördinatiefase</div></div>
-        <div class="kpi"><div class="n">${nieuw}</div><div class="l">Met nieuw signaal (&lt;60d)</div></div>`;
+        <div class="kpi"><div class="n">${nieuw}</div><div class="l" title="Aantal dossiers met ≥1 land waarvan een tekort in de laatste 60 dagen begon (echte bron-startdatum, niet de scrapedatum)">Dossiers met recent signaal (&lt;60d)</div></div>`;
 }
 
 function renderPhaseChips() {
@@ -337,17 +338,15 @@ function renderCards() {
         } else {
             meldHtml = `<div class="meld-summary">
                 <div class="m"><b>${rows.length}</b> landen</div>
-                <div class="m"><b>${nMeld}</b> meldingen</div>
-                ${nNew ? `<div class="m new"><b>${nNew}</b> nieuw</div>` : ""}
+                <div class="m" title="Aantal buitenlandse tekortmeldingen (producten/presentaties) voor deze ATC — actief én aankomend, zonder periodefilter; geen NL ZI-nummers"><b>${nMeld}</b> meldingen</div>
             </div>` + rows.map(r => `
                 <div class="country-row">
                     <span class="st-dot ${r.st}"></span>
                     <span class="country-flag">${FLAG[r.cc] || ""}</span>
                     <span class="country-name">${esc(countryName({cc:r.cc, cn:(BYATC[d.atc].find(x=>x.cc===r.cc)||{}).cn}))}</span>
-                    ${r.isNew ? `<span class="badge-new">nieuw</span>` : ""}
                     ${r.first ? `<span class="c-date">sinds ${r.first}</span>` : ""}
                     ${r.reasons.length ? `<span class="c-reason">${esc(r.reasons[0])}</span>` : ""}
-                    ${r.n > 1 ? `<span class="c-count">${r.n}×</span>` : `<span class="c-count"></span>`}
+                    ${r.n > 1 ? `<span class="c-count" title="aantal buitenlandse tekortmeldingen (producten/presentaties) in dit land — geen NL ZI-nummers">${r.n}×</span>` : `<span class="c-count"></span>`}
                 </div>`).join("");
         }
 
