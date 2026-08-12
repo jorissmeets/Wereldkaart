@@ -362,13 +362,6 @@
             <button class="lang-btn active" data-lang="nl">NL</button>
             <button class="lang-btn" data-lang="en">EN</button>
         </div>
-        <div class="period-filter" role="radiogroup" aria-label="Periode">
-            <button class="period-btn" data-period="7">7d</button>
-            <button class="period-btn active" data-period="30">30d</button>
-            <button class="period-btn" data-period="90">90d</button>
-            <button class="period-btn" data-period="365">12m</button>
-            <button class="period-btn" data-period="0" data-i18n="period_all">Alles</button>
-        </div>
     </div>
 </div>
 
@@ -540,7 +533,7 @@ const CC = {
 // STATE
 // ═══════════════════════════════════════
 const S = {
-    period: 30,
+    period: 0,   // vast op "alle tijd" — geen periodefilter
     selectedAtc: null,
     selectedCountry: null,
     kpiFilter: null,
@@ -1090,9 +1083,6 @@ function renderContextBar() {
     const bar = document.getElementById("context-bar");
     const chips = [];
     const en = S.lang === "en";
-    const periodLabel = S.period === 0 ? t("period_all") : S.period === 365 ? (en ? "12 months" : "12 maanden") : `${S.period} ${en ? "days" : "dagen"}`;
-    chips.push(`<span class="context-chip static"><span class="chip-label">${en ? "Period:" : "Periode:"}</span> <span class="chip-value">${periodLabel}</span></span>`);
-
     const hasFilters = S.kpiFilter || S.selectedCountry || S.selectedAtc || S.searchQuery;
 
     if (S.kpiFilter) {
@@ -1648,15 +1638,6 @@ function escHtml(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").repl
 // EVENTS
 // ═══════════════════════════════════════
 
-// Period
-document.querySelectorAll(".period-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        document.querySelectorAll(".period-btn").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        S.period = parseInt(btn.dataset.period);
-        recompute(); render();
-    });
-});
 
 // KPI cards
 document.querySelectorAll(".kpi-card").forEach(card => {
@@ -1799,7 +1780,6 @@ document.addEventListener("click", e => {
 // URL hash state
 function saveHash() {
     const parts = [];
-    if (S.period !== 30) parts.push(`p=${S.period}`);
     if (S.selectedAtc) parts.push(`atc=${S.selectedAtc}`);
     if (S.selectedCountry) parts.push(`cc=${S.selectedCountry}`);
     if (S.kpiFilter) parts.push(`kpi=${S.kpiFilter}`);
@@ -1811,7 +1791,6 @@ function loadHash() {
     if (!h) return;
     h.split("&").forEach(part => {
         const [k, v] = part.split("=");
-        if (k === "p") { S.period = parseInt(v) || 30; document.querySelectorAll(".period-btn").forEach(b => b.classList.toggle("active", parseInt(b.dataset.period) === S.period)); }
         if (k === "atc") S.selectedAtc = v;
         if (k === "cc") S.selectedCountry = v;
         if (k === "kpi") S.kpiFilter = v;
