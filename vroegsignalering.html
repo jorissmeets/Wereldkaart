@@ -51,7 +51,8 @@
     .row { display: flex; align-items: center; gap: 10px; padding: 8px 16px; border-bottom: 1px solid var(--border-light); font-size: 12.5px; }
     .row:last-child { border-bottom: none; }
     .row .date { color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 11px; min-width: 82px; flex-shrink: 0; }
-    .row .name { font-weight: 600; flex: 1; min-width: 180px; }
+    .row .name { font-weight: 600; flex: 1; min-width: 180px; overflow-wrap: anywhere; }
+    .rows, .row, .row .name, .row .meta, .mgroup { user-select: text; }
     .row .meta { color: var(--text-secondary); font-size: 11px; }
     .row .reg { font-family: ui-monospace, Menlo, monospace; font-size: 10px; color: var(--text-muted); background: var(--bg-elevated); padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
     .flags { letter-spacing: 1px; }
@@ -100,6 +101,7 @@
             <div class="sub">Vroege signalen van (dreigende) tekorten uit meerdere bronnen</div>
         </div>
         <div class="top-right">
+            <button class="top-link" id="collapse-all" style="cursor:pointer" title="Alle secties in- of uitklappen">▾ Alles in-/uitklappen</button>
             <a class="top-link" href="index.html">Dossierstatus</a>
             <a class="top-link" href="landkaart.html">Landkaart</a>
         </div>
@@ -149,6 +151,20 @@
         <div class="rows" id="farmanco-rows"></div>
     </div>
 
+    <!-- Sectie 1c: Farmanco per ATC -->
+    <div class="section collapsed">
+        <div class="section-head">
+            <span class="caret" title="in-/uitklappen">▾</span>
+            <span class="section-badge" style="background:#e08a10"></span>
+            <span class="title">Farmanco — per ATC</span>
+            <span class="src">gegroepeerd op ATC · datum · ATC-naam · welke meldingen</span>
+            <div class="controls">
+                <div class="search"><input type="text" id="fatc-search" placeholder="Zoek stof, ATC of naam…" autocomplete="off"></div>
+            </div>
+        </div>
+        <div class="rows" id="fatc-rows"></div>
+    </div>
+
     <!-- Sectie 2: Landkaart-vroegsignalen -->
     <div class="section">
         <div class="section-head">
@@ -195,7 +211,7 @@ const ATC_NAMES = {"A01AA01":"NATRIUMFLUORIDE","A01AA03":"OLAFLUR","A01AA04":"st
 const FLAG = { AR:"🇦🇷",AT:"🇦🇹",AU:"🇦🇺",BE:"🇧🇪",BR:"🇧🇷",CA:"🇨🇦",CH:"🇨🇭",CL:"🇨🇱",CO:"🇨🇴",CZ:"🇨🇿",DE:"🇩🇪",DK:"🇩🇰",EE:"🇪🇪",EG:"🇪🇬",ES:"🇪🇸",EU:"🇪🇺",FI:"🇫🇮",FR:"🇫🇷",GR:"🇬🇷",HR:"🇭🇷",HU:"🇭🇺",IE:"🇮🇪",IL:"🇮🇱",IN:"🇮🇳",IS:"🇮🇸",IT:"🇮🇹",JP:"🇯🇵",KR:"🇰🇷",LT:"🇱🇹",LV:"🇱🇻",MX:"🇲🇽",MY:"🇲🇾",NL:"🇳🇱",NO:"🇳🇴",PE:"🇵🇪",PH:"🇵🇭",PK:"🇵🇰",PT:"🇵🇹",RO:"🇷🇴",SA:"🇸🇦",SE:"🇸🇪",SG:"🇸🇬",SI:"🇸🇮",SK:"🇸🇰",TR:"🇹🇷",TW:"🇹🇼",US:"🇺🇸",ZA:"🇿🇦" };
 
 let RAW = null, REASON_LABELS = {}, MAP_SIGNALS = [];
-const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapColor: "all", mapMany: false, mapGroup: false, fEml: "all", fPref: false, fVorm: "all", fQ: "" };
+const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapColor: "all", mapMany: false, mapGroup: false, fEml: "all", fPref: false, fVorm: "all", fQ: "", fatcQ: "" };
 
 // ── Toedieningsvorm-categorieën (Farmanco 'vorm' is vrije tekst) ──
 const VORM_CATS = [["tablet", "Tablet"], ["capsule", "Capsule"], ["oraal", "Drank/oraal"], ["injectie", "Injectie/infuus"],
@@ -363,7 +379,32 @@ function renderFarmanco() {
         </div>`).join("");
 }
 
-function render() { renderKpis(); renderCbg(); renderFarmanco(); renderMap(); }
+// ── Farmanco per ATC (datum · ATC · ATC-naam · welke meldingen) ──
+function renderFarmancoByAtc() {
+    const host = document.getElementById("fatc-rows");
+    if (!host) return;
+    const q = (S.fatcQ || "").toUpperCase();
+    let items = FARMANCO_EML.filter(m => m.atc);
+    if (q) items = items.filter(m => (m.stof + " " + m.omschrijving + " " + m.atc + " " + medName(m.atc, "")).toUpperCase().includes(q));
+    const groups = {};
+    items.forEach(m => { (groups[m.atc] ||= []).push(m); });
+    const ordered = Object.entries(groups).sort((a, b) => a[0].localeCompare(b[0]));   // op ATC-code → therapeutische groepen clusteren
+    if (!ordered.length) { host.innerHTML = `<div class="empty">Geen Farmanco-meldingen met ATC in deze selectie.</div>`; return; }
+    host.innerHTML = ordered.map(([atc, ms]) => {
+        const newest = ms.map(m => m.datum).filter(Boolean).sort().slice(-1)[0] || "";
+        const worst = ms.some(m => m.eml === "rood") ? "rood" : ms.some(m => m.eml === "oranje") ? "oranje" : "geel";
+        return `<div class="mgroup"><span class="date">${newest}</span> <span class="eml-dot ${worst}"></span> ${esc(medName(atc, ""))} <span class="reg">${atc}</span><span class="cnt">${ms.length} ${ms.length === 1 ? "melding" : "meldingen"}</span></div>` +
+            ms.map(m => `<div class="row">
+                <span class="date">${m.datum || ""}</span>
+                <span class="eml-dot ${m.eml}"></span>
+                <span class="name">${esc(m.stof)}${m.preferent ? ' <span class="badge impact">preferent</span>' : ''}</span>
+                <span class="meta">${esc(m.omschrijving)}</span>
+                <span class="eml-tag ${m.eml}">${(m.eml || "").toUpperCase()}</span>
+            </div>`).join("");
+    }).join("");
+}
+
+function render() { renderKpis(); renderCbg(); renderFarmanco(); renderFarmancoByAtc(); renderMap(); }
 
 // Events
 document.querySelectorAll(".cbg-period").forEach(c => c.addEventListener("click", () => {
@@ -387,6 +428,11 @@ document.getElementById("map-group").addEventListener("change", e => { S.mapGrou
 document.querySelectorAll(".caret").forEach(c => c.addEventListener("click", () => {
     c.closest(".section").classList.toggle("collapsed");
 }));
+document.getElementById("collapse-all").addEventListener("click", () => {
+    const secs = document.querySelectorAll(".section");
+    const anyOpen = [...secs].some(s => !s.classList.contains("collapsed"));
+    secs.forEach(s => s.classList.toggle("collapsed", anyOpen));
+});
 document.getElementById("cbg-eml").addEventListener("change", e => { S.cbgEmlOnly = e.target.checked; renderCbg(); });
 
 // Farmanco-filters
@@ -396,8 +442,9 @@ document.querySelectorAll(".feml").forEach(c => c.addEventListener("click", () =
 }));
 document.getElementById("f-preferent").addEventListener("change", e => { S.fPref = e.target.checked; renderFarmanco(); });
 document.getElementById("f-vorm").addEventListener("change", e => { S.fVorm = e.target.value; renderFarmanco(); });
-let _t3;
+let _t3, _t4;
 document.getElementById("f-search").addEventListener("input", e => { clearTimeout(_t3); _t3 = setTimeout(() => { S.fQ = e.target.value; renderFarmanco(); }, 150); });
+document.getElementById("fatc-search").addEventListener("input", e => { clearTimeout(_t4); _t4 = setTimeout(() => { S.fatcQ = e.target.value; renderFarmancoByAtc(); }, 150); });
 
 // Elke bron faalt onafhankelijk (een kapotte data.json maakt de andere secties niet leeg)
 const j = (u) => fetch(u).then(r => r.json()).catch(() => null);
