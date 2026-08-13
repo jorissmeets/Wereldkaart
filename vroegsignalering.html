@@ -73,8 +73,12 @@
     .caret:hover { color: var(--lcg-blue); }
     .section.collapsed .caret { transform: rotate(-90deg); }
     .section.collapsed .rows, .section.collapsed .controls { display: none; }
-    .mgroup { padding: 8px 16px 3px; font-size: 12px; font-weight: 800; color: var(--sig-map); background: var(--bg-elevated); border-top: 1px solid var(--border-light); display: flex; gap: 8px; align-items: baseline; }
+    .mgroup { padding: 8px 16px 3px; font-size: 12px; font-weight: 800; color: var(--sig-map); background: var(--bg-elevated); border-top: 1px solid var(--border-light); display: flex; gap: 8px; align-items: baseline; cursor: pointer; }
+    .mgroup:hover .mcaret { color: var(--lcg-blue); }
     .mgroup .cnt { font-size: 10px; color: var(--text-muted); font-weight: 600; margin-left: auto; }
+    .mcaret { display: inline-block; color: var(--text-muted); font-size: 10px; transition: transform 0.15s; flex-shrink: 0; }
+    .mgroup-wrap:not(.collapsed) > .mgroup .mcaret { transform: rotate(90deg); }
+    .mgroup-wrap.collapsed .mgroup-body { display: none; }
     .note { font-size: 11.5px; color: var(--text-muted); background: var(--bg-elevated); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; }
     .footer { text-align: center; font-size: 11px; color: var(--text-muted); padding: 16px 0 0; }
 
@@ -330,8 +334,9 @@ function renderMap() {
         const ordered = Object.entries(groups).sort((a, b) => b[1].length - a[1].length || (b[1][0].first || "0").localeCompare(a[1][0].first || "0"));
         host.innerHTML = ordered.map(([a4, sigs]) => {
             const nm = atc4Name(a4);
-            return `<div class="mgroup">${nm ? esc(nm) + " " : ""}<span class="reg">${a4}</span><span class="cnt">${sigs.length} ${sigs.length === 1 ? "middel" : "middelen"}</span></div>` +
-                sigs.map(signalRow).join("");
+            const header = `<div class="mgroup"><span class="mcaret">▸</span>${nm ? esc(nm) + " " : ""}<span class="reg">${a4}</span><span class="cnt">${sigs.length} ${sigs.length === 1 ? "middel" : "middelen"}</span></div>`;
+            const body = `<div class="mgroup-body">` + sigs.map(signalRow).join("") + `</div>`;
+            return `<div class="mgroup-wrap collapsed">${header}${body}</div>`;
         }).join("");
         return;
     }
@@ -395,15 +400,16 @@ function renderFarmancoByAtc() {
         const newest = ms.map(m => m.datum).filter(Boolean).sort().slice(-1)[0] || "";
         const worst = ms.some(m => m.eml === "rood") ? "rood" : ms.some(m => m.eml === "oranje") ? "oranje" : "geel";
         const nm = atc4Name(a4);
-        return `<div class="mgroup"><span class="date">${newest}</span> <span class="eml-dot ${worst}"></span> ${nm ? esc(nm) + " " : ""}<span class="reg">${a4}</span><span class="cnt">${ms.length} ${ms.length === 1 ? "melding" : "meldingen"}</span></div>` +
-            ms.map(m => `<div class="row">
+        const header = `<div class="mgroup"><span class="mcaret">▸</span><span class="date">${newest}</span> <span class="eml-dot ${worst}"></span> ${nm ? esc(nm) + " " : ""}<span class="reg">${a4}</span><span class="cnt">${ms.length} ${ms.length === 1 ? "melding" : "meldingen"}</span></div>`;
+        const body = `<div class="mgroup-body">` + ms.map(m => `<div class="row">
                 <span class="date">${m.datum || ""}</span>
                 <span class="eml-dot ${m.eml}"></span>
                 <span class="name">${esc(m.stof)}${m.preferent ? ' <span class="badge impact">preferent</span>' : ''}</span>
                 <span class="meta">${esc(m.omschrijving)}</span>
                 <span class="reg">${m.atc}</span>
                 <span class="eml-tag ${m.eml}">${(m.eml || "").toUpperCase()}</span>
-            </div>`).join("");
+            </div>`).join("") + `</div>`;
+        return `<div class="mgroup-wrap collapsed">${header}${body}</div>`;
     }).join("");
 }
 
@@ -448,6 +454,14 @@ document.getElementById("f-vorm").addEventListener("change", e => { S.fVorm = e.
 let _t3, _t4;
 document.getElementById("f-search").addEventListener("input", e => { clearTimeout(_t3); _t3 = setTimeout(() => { S.fQ = e.target.value; renderFarmanco(); }, 150); });
 document.getElementById("fatc-search").addEventListener("input", e => { clearTimeout(_t4); _t4 = setTimeout(() => { S.fatcQ = e.target.value; renderFarmancoByAtc(); }, 150); });
+// Klik op een ATC-4-groepskop klapt de groep in/uit (containers zijn statisch; rijen worden opnieuw gerenderd)
+["fatc-rows", "map-rows"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("click", e => {
+        const h = e.target.closest(".mgroup");
+        if (h && el.contains(h)) { const w = h.closest(".mgroup-wrap"); if (w) w.classList.toggle("collapsed"); }
+    });
+});
 
 // Elke bron faalt onafhankelijk (een kapotte data.json maakt de andere secties niet leeg)
 const j = (u) => fetch(u).then(r => r.json()).catch(() => null);
