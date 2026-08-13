@@ -34,7 +34,9 @@
     .kpi .l { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
 
     .section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
-    .section-head { display: flex; align-items: center; gap: 10px; padding: 13px 16px; border-bottom: 1px solid var(--border-light); flex-wrap: wrap; }
+    .section-head { display: flex; align-items: center; gap: 10px; padding: 13px 16px; border-bottom: 1px solid var(--border-light); flex-wrap: wrap; cursor: pointer; }
+    .section-head:hover .caret { color: var(--lcg-blue); }
+    .section-head .controls { cursor: auto; }
     .section-badge { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
     .section-head .title { font-size: 15px; font-weight: 800; }
     .section-head .src { font-size: 11px; color: var(--text-muted); }
@@ -433,9 +435,10 @@ document.querySelectorAll(".mcolor").forEach(c => c.addEventListener("click", ()
 }));
 document.getElementById("map-many").addEventListener("change", e => { S.mapMany = e.target.checked; renderMap(); });
 document.getElementById("map-group").addEventListener("change", e => { S.mapGroup = e.target.checked; renderMap(); });
-// Secties in-/uitklappen via de caret
-document.querySelectorAll(".caret").forEach(c => c.addEventListener("click", () => {
-    c.closest(".section").classList.toggle("collapsed");
+// Secties in-/uitklappen: klik ergens op de kopbalk (caret, stip of titel) — behalve de filters/zoek en de bron-link
+document.querySelectorAll(".section-head").forEach(head => head.addEventListener("click", e => {
+    if (e.target.closest(".controls, a")) return;
+    head.closest(".section").classList.toggle("collapsed");
 }));
 document.getElementById("collapse-all").addEventListener("click", () => {
     const secs = document.querySelectorAll(".section");
