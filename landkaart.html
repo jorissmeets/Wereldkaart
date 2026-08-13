@@ -610,7 +610,7 @@ function reasonLabel(code) { return S.lang === "en" ? (REASON_EN[code] || reason
 let _enRegions = null;
 function countryName(cc) {
     const ci = CC[cc]; const fb = ci ? ci.name : cc;
-    if (S.lang !== "en" || cc === "EU") return fb;
+    if (S.lang !== "en") return fb;
     try { _enRegions = _enRegions || new Intl.DisplayNames(["en"], { type: "region" }); return _enRegions.of(cc) || fb; }
     catch (e) { return fb; }
 }
@@ -1281,39 +1281,6 @@ function renderMap() {
         });
     }
 
-    // EU (EMA) as special circle marker — it's not a country polygon
-    const euInfo = CC["EU"];
-    if (euInfo) {
-        const euRecs = D.countryIndex["EU"] || [];
-        const euAN = euRecs.filter(r => r.st === "active").length;
-        const euUN = euRecs.filter(r => r.st === "upcoming").length;
-        const euRN = euRecs.filter(r => r.st === "resolved").length;
-
-        let fill, opacity;
-        if (euAN > 0) { fill = "#e85050"; opacity = 0.85; }
-        else if (euUN > 0) { fill = "#f0a020"; opacity = 0.7; }
-        else if (euRN > 0) { fill = "#a8c04d"; opacity = 0.65; }
-        else { fill = "#60ccf0"; opacity = 0.55; }
-
-        const isSel = S.selectedCountry === "EU";
-        if (S.selectedCountry && !isSel) opacity *= 0.4;
-
-        const euMarker = L.circleMarker([euInfo.lat, euInfo.lng], {
-            radius: 8, fillColor: fill, fillOpacity: opacity,
-            color: isSel ? "#00428b" : "rgba(255,255,255,0.5)", weight: isSel ? 2 : 1,
-        }).addTo(map);
-
-        const lines = [`<b>${euInfo.flag} ${euInfo.name}</b>`];
-        if (euAN) lines.push(`${euAN} actief`);
-        if (euUN) lines.push(`${euUN} aankomend`);
-        if (euRN) lines.push(`${euRN} opgelost`);
-        euMarker.bindTooltip(lines.join("<br>"), { direction: "top", offset: [0, -8] });
-        euMarker.on("click", () => {
-            S.selectedCountry = S.selectedCountry === "EU" ? null : "EU";
-            render();
-        });
-        markers.push(euMarker);
-    }
 }
 
 // ── Detail ──
