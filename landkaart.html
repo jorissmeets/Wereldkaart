@@ -494,7 +494,6 @@ const CC = {
     EE: { name: "Estland", lat: 58.60, lng: 25.01, flag: "\u{1F1EA}\u{1F1EA}" },
     EG: { name: "Egypte", lat: 26.82, lng: 30.80, flag: "\u{1F1EA}\u{1F1EC}" },
     ES: { name: "Spanje", lat: 40.46, lng: -3.75, flag: "\u{1F1EA}\u{1F1F8}" },
-    EU: { name: "EU (EMA)", lat: 52.37, lng: 4.90, flag: "\u{1F1EA}\u{1F1FA}" },
     FI: { name: "Finland", lat: 61.92, lng: 25.75, flag: "\u{1F1EB}\u{1F1EE}" },
     FR: { name: "Frankrijk", lat: 46.23, lng: 2.21, flag: "\u{1F1EB}\u{1F1F7}" },
     GR: { name: "Griekenland", lat: 39.07, lng: 21.82, flag: "\u{1F1EC}\u{1F1F7}" },
@@ -570,7 +569,7 @@ const T = {
         footer_sources: "bronlanden", footer_notif: "meldingen", footer_back: "terug", footer_search: "zoeken",
         load_error: "Fout bij laden. Draai eerst build_data.py.", for_atc: "voor",
         trend_title: "Trend: actieve tekorten over tijd", watch_title: "Vroegsignaal-watchlist",
-        watch_sub: "nieuw in 1–2 landen · bron-startdatum · laatste 120 dagen", watch_none: "Geen recente vroegsignalen",
+        watch_sub: "nieuw in 1–2 landen · bron-startdatum · laatste 120 dagen", watch_none: "Geen recente vroegsignalen", badge_new: "nieuw",
         nav_dossiers: "Dossierstatus", nav_signals: "Vroegsignalering",
     },
     en: {
@@ -594,7 +593,7 @@ const T = {
         footer_sources: "source countries", footer_notif: "notifications", footer_back: "back", footer_search: "search",
         load_error: "Loading error. Run build_data.py first.", for_atc: "for",
         trend_title: "Trend: active shortages over time", watch_title: "Early-signal watchlist",
-        watch_sub: "new in 1–2 countries · source start date · last 120 days", watch_none: "No recent early signals",
+        watch_sub: "new in 1–2 countries · source start date · last 120 days", watch_none: "No recent early signals", badge_new: "new",
         nav_dossiers: "Dossier status", nav_signals: "Early signals",
     },
 };
@@ -1163,7 +1162,7 @@ function renderSidebar() {
         return `<div class="atc-item${sel}" data-atc="${a.atc}">
             <div class="atc-row1">
                 <div class="atc-dot st-${a.worst}"></div>
-                <span class="atc-name">${escHtml(a.name)}</span>${a.isNew ? '<span class="badge-new">nieuw</span>' : ''}
+                <span class="atc-name">${escHtml(a.name)}</span>${a.isNew ? '<span class="badge-new">' + t("badge_new") + '</span>' : ''}
                 <span class="atc-lnd">${a.countryCount} ${a.countryCount === 1 ? (S.lang === "en" ? "country" : "land") : t("countries")}</span>
             </div>
             ${a.name !== a.atc ? `<div class="atc-code-line"><span class="atc-code">${a.atc}</span></div>` : ""}

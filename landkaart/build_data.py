@@ -406,7 +406,7 @@ def build():
             cc = safe_str(row.get("country_code")).upper()
             if not cc or len(cc) != 2:
                 continue
-            if cc == "NL":
+            if cc in ("NL", "EU"):
                 continue
 
             cn = safe_str(row.get("country_name")) or cc
