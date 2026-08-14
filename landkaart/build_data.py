@@ -17,6 +17,7 @@ DATA_FILE = Path(__file__).resolve().parent / "data.json"
 EMS_FILE = Path(__file__).resolve().parent.parent / "LijstenEMS" / "Achtergrondlijst 2025-Tabel 1.csv"
 CAUSE_MAPPING_FILE = Path(__file__).resolve().parent.parent / "output" / "cause_mapping_v2.csv"
 JP_ATC_MAP_FILE = Path(__file__).resolve().parent / "jp_substance_atc.json"
+PRK_NAMEN_FILE = Path(__file__).resolve().parent / "prk_namen.json"
 
 ATC_COLUMNS = ["atc_code", "atc_level1", "Atc Code"]
 ATC5_RE = re.compile(r"^[A-Z]\d{2}[A-Z]{2}\d{2}$")
@@ -367,6 +368,15 @@ def build():
     jp_atc_map = load_jp_atc_map()
     jp_enriched = 0
 
+    # PRK-namen (G-standaard) voor records die via de OpenAI-matcher een PRK-code kregen
+    prk_namen = {}
+    if PRK_NAMEN_FILE.exists():
+        try:
+            prk_namen = json.loads(PRK_NAMEN_FILE.read_text(encoding="utf-8"))
+            print(f"  PRK-namen geladen: {len(prk_namen)}")
+        except Exception as e:
+            print(f"  PRK-namen niet geladen: {e}")
+
     records: list[dict] = []
 
     for p in sorted(OUTPUT_DIR.glob("*_shortage_*.csv")):
@@ -445,6 +455,16 @@ def build():
                 rec["mn"] = med
             if substance:
                 rec["sub"] = substance
+
+            # PRK (G-standaard voorschrijfcode) via de OpenAI-matcher, alleen bij confidence >= 90%
+            prk = safe_str(row.get("prk"))
+            if prk.endswith(".0"):          # pandas leest de numerieke kolom als float
+                prk = prk[:-2]
+            if prk:
+                rec["prk"] = prk
+                prk_nm = prk_namen.get(prk)
+                if prk_nm:
+                    rec["prk_naam"] = prk_nm
 
             # Reden van tekort: per land lezen we een specifieke kolom en mappen die
             # via cause_mapping_v2.csv naar een genormaliseerde categorie. Rc="none"

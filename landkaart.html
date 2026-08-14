@@ -260,6 +260,8 @@
         .med-card { background: var(--lcg-light); border: none; border-radius: 8px; padding: 8px 10px; margin: 0 14px 5px; }
         .med-name { font-size: 11px; font-weight: 600; color: var(--text-primary); }
         .med-substance { font-size: 10px; color: var(--text-muted); margin-top: 1px; }
+        .med-prk { font-size: 10px; color: var(--text-primary); margin-top: 2px; }
+        .prk-badge { display: inline-block; font-size: 9px; font-weight: 700; background: var(--lcg-blue, #00428b); color: #fff; padding: 1px 5px; border-radius: 3px; margin-right: 4px; letter-spacing: 0.2px; }
         .med-meta { display: flex; gap: 6px; margin-top: 3px; flex-wrap: wrap; }
         .med-tag { font-size: 9px; padding: 1px 5px; border-radius: 3px; font-weight: 600; }
         .med-tag.active { background: var(--status-active-bg); color: var(--status-active); }
@@ -917,7 +919,7 @@ function recompute() {
         const recentCutoff = addDays(isoToday(), -2);
         const isNew = recs.some(r => (r.sa || "") >= recentCutoff);
         // Collect searchable text
-        const searchText = [atc, substance, ...recs.map(r => r.mn || "")].join(" ").toUpperCase();
+        const searchText = [atc, substance, ...recs.map(r => r.mn || ""), ...recs.map(r => r.prk || ""), ...recs.map(r => r.prk_naam || "")].join(" ").toUpperCase();
         return { atc, countries, countryCount: countries.length, aN, uN, rN, dN, worst, substance, medName, name, searchText, isNew };
     });
 
@@ -1588,6 +1590,7 @@ function medCard(r, groupBy) {
         ${substance ? `<div class="med-substance">${escHtml(substance)}</div>` : ""}
         ${origLine}
         ${r.tv || r.df ? `<div class="med-substance" style="font-style:italic">${escHtml(r.tv ? tvLabel(r.tv) : r.df)}${r.tv_src === "atc" ? ` <span style="font-style:normal;color:var(--text-muted);font-size:10px" title="${S.lang === "en" ? "Route derived from the ATC code, not stated in the source notification" : "Toedieningsvorm afgeleid uit de ATC-code, niet vermeld in de bronmelding"}">(${S.lang === "en" ? "via ATC" : "via ATC"})</span>` : ''}</div>` : ""}
+        ${r.prk ? `<div class="med-prk" title="${S.lang === "en" ? "G-standaard prescription code (PRK), matched to the Dutch product via AI (confidence ≥90%)" : "G-standaard voorschrijfcode (PRK), via AI gekoppeld aan het NL-product (confidence ≥90%)"}"><span class="prk-badge">PRK ${escHtml(r.prk)}</span>${r.prk_naam ? ` ${escHtml(r.prk_naam)}` : ""}</div>` : ""}
         <div class="med-meta">
             <span class="med-tag ${r.st}">${stLabel}</span>
             ${r.tv && emsRoodDetail[r.atc] && emsRoodDetail[r.atc].includes(r.tv) ? `<span class="med-tag" style="background:var(--status-active);color:white">${t("ems_critical")}</span>` : ''}
