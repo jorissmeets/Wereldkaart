@@ -129,17 +129,16 @@ def main():
                     found.append(eml_atc5[a])
         return reduce(worse, found) if found else None
 
-    out, dropped = [], []
+    out, n_overig = [], 0
     for it in items:
         if "GEEN WERKZAAM" in it["stof"].upper():
             continue
-        b = eml_beoordeling(it["stof"])
+        b = eml_beoordeling(it["stof"])           # None = niet op EMS -> "overig" (eml leeg)
         if b is None:
-            dropped.append(it["stof"])
-            continue
+            n_overig += 1
         cands = [canon(it["stof"])] + comps(it["stof"])
         atc = next((name2atc[c] for c in cands if c in name2atc), "")
-        out.append({**it, "eml": b, "atc": atc})
+        out.append({**it, "eml": b or "", "atc": atc})
 
     seen, uniq = set(), []
     for m in out:
@@ -155,7 +154,8 @@ def main():
         "source": FARMANCO_URL,
         "total_scraped": len(items),
         "count": len(uniq),
-        "dropped_not_on_eml": len(set(dropped)),
+        "on_eml": sum(1 for m in uniq if m["eml"]),
+        "overig": sum(1 for m in uniq if not m["eml"]),
         "items": uniq,
     }
     with open(OUT, "w", encoding="utf-8") as f:
@@ -163,9 +163,10 @@ def main():
 
     from collections import Counter
     n_pref = sum(1 for m in uniq if m["preferent"])
-    print(f"Farmanco gescrapet: {len(items)} meldingen; op EML: {len(uniq)} "
-          f"({dict(Counter(m['eml'] for m in uniq))}, preferent: {n_pref}) -> {OUT}")
-    print(f"niet op EML (gedropt): {len(set(dropped))} — voorbeeld: {sorted(set(dropped))[:12]}")
+    n_eml = sum(1 for m in uniq if m["eml"])
+    print(f"Farmanco gescrapet: {len(items)} meldingen; behouden: {len(uniq)} "
+          f"(op EMS: {n_eml}, overig: {len(uniq) - n_eml}, preferent: {n_pref}) -> {OUT}")
+    print(f"  EMS-verdeling: {dict(Counter(m['eml'] or 'overig' for m in uniq))}")
 
 
 if __name__ == "__main__":

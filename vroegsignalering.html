@@ -68,8 +68,10 @@
     .eml-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
     .eml-dot.rood { background: #e05555; } .eml-dot.oranje { background: #f0a020; } .eml-dot.geel { background: #e0c020; } .eml-dot.none { background: var(--border); }
     .eml-tag { font-size: 9px; font-weight: 800; color: #fff; padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
-    .eml-tag.rood { background: #e05555; } .eml-tag.oranje { background: #e08a10; } .eml-tag.geel { background: #b79a10; }
+    .eml-tag.rood { background: #e05555; } .eml-tag.oranje { background: #e08a10; } .eml-tag.geel { background: #b79a10; } .eml-tag.overig { background: #8a99a8; }
     .badge.impact { background: #d83b3b; } .badge.nieuw2 { background: var(--lcg-cyan); }
+    .badge.src-farm { background: #7a5195; } .badge.src-cbg { background: #ef7d00; } .badge.src-sfk { background: #2aa198; }
+    .prk-tag { display: inline-block; font-size: 9px; font-weight: 700; background: var(--lcg-blue, #00428b); color: #fff; padding: 1px 5px; border-radius: 3px; letter-spacing: 0.2px; white-space: nowrap; vertical-align: middle; }
     .empty { padding: 20px 16px; color: var(--text-muted); font-style: italic; }
     .caret { cursor: pointer; color: var(--text-muted); font-size: 12px; user-select: none; transition: transform 0.15s; flex-shrink: 0; }
     .caret:hover { color: var(--lcg-blue); }
@@ -108,6 +110,7 @@
         </div>
         <div class="top-right">
             <button class="top-link" id="collapse-all" style="cursor:pointer" title="Alle secties in- of uitklappen">▾ Alles in-/uitklappen</button>
+            <a class="top-link" href="signaaloverzicht.html">Overzicht</a>
             <a class="top-link" href="index.html">Dossierstatus</a>
             <a class="top-link" href="landkaart.html">Landkaart</a>
         </div>
@@ -163,12 +166,27 @@
             <span class="caret" title="in-/uitklappen">▾</span>
             <span class="section-badge" style="background:#e08a10"></span>
             <span class="title">Farmanco — per ATC</span>
-            <span class="src">gegroepeerd op ATC-4-groep · meeste meldingen eerst (domino)</span>
+            <span class="src">gegroepeerd op ATC-4-groep · incl. overig (niet-EMS) · meeste meldingen eerst (domino)</span>
             <div class="controls">
                 <div class="search"><input type="text" id="fatc-search" placeholder="Zoek stof, ATC of naam…" autocomplete="off"></div>
             </div>
         </div>
         <div class="rows" id="fatc-rows"></div>
+    </div>
+
+    <!-- Sectie 1d: SFK-tekorten (totaal) -->
+    <div class="section collapsed">
+        <div class="section-head">
+            <span class="caret" title="in-/uitklappen">▾</span>
+            <span class="section-badge" style="background:#2aa198"></span>
+            <span class="title">SFK — tekorten (totaal)</span>
+            <span class="src">ZI-nummer → G-standaard PRK/ATC · <a href="https://www3.sfk.nl/tekorten/?soort=totaal" target="_blank" rel="noopener">bron ↗</a></span>
+            <div class="controls">
+                <label class="chip" style="cursor:pointer" title="Alleen artikelen waarvan de ATC op de EMS-lijst staat"><input type="checkbox" id="sfk-eml" style="vertical-align:-1px;margin-right:4px">alleen EMS</label>
+                <div class="search"><input type="text" id="sfk-search" placeholder="Zoek artikel, ATC of PRK…" autocomplete="off"></div>
+            </div>
+        </div>
+        <div class="rows" id="sfk-rows"></div>
     </div>
 
     <!-- Sectie 2: Landkaart-vroegsignalen -->
@@ -194,6 +212,21 @@
         <div class="rows" id="map-rows"></div>
     </div>
 
+    <!-- Sectie 3: Landkaart-vroegsignaal per product (PRK) -->
+    <div class="section">
+        <div class="section-head">
+            <span class="caret" title="in-/uitklappen">▾</span>
+            <span class="section-badge" style="background:var(--sig-map)"></span>
+            <span class="title">Landkaart — vroegsignaal per product (PRK)</span>
+            <span class="src">zelfde NL-product (G-standaard PRK) · meeste landen eerst (productniveau domino)</span>
+            <div class="controls">
+                <label class="chip" style="cursor:pointer" title="Alleen producten die in ≥2 landen tegelijk opkomen — het cross-country productniveau-signaal"><input type="checkbox" id="prk-many" checked style="vertical-align:-1px;margin-right:4px">≥2 landen</label>
+                <div class="search"><input type="text" id="prk-search" placeholder="Zoek product, PRK of ATC…" autocomplete="off"></div>
+            </div>
+        </div>
+        <div class="rows" id="prk-rows"></div>
+    </div>
+
     <div class="footer" id="footer"></div>
 </div>
 
@@ -208,6 +241,8 @@ let CBG_SCRAPED = "";
 // ── Farmanco-meldingen (KNMP) gefilterd op de EMS-lijst (EMS-lijst) ──
 let FARMANCO_EML = [];       // wordt gevuld uit farmanco_eml.json (scrape_farmanco.py)
 let FARMANCO_SCRAPED = "";
+let SFK = [];                // sfk_tekorten.json (scrape_sfk.py)
+let SFK_SCRAPED = "";
 let EML_ATC5 = {};   // ATC5 -> EMS-beoordeling (uit eml_atc5.json), voor de watchlist
 
 // ── ATC → leesbare naam (G-standaard NL / WHO EN), geïnjecteerd uit index.html ──
@@ -216,8 +251,9 @@ const ATC_NAMES = {"A01AA01":"NATRIUMFLUORIDE","A01AA03":"OLAFLUR","A01AA04":"st
 // ── Vlaggen ──
 const FLAG = { AR:"🇦🇷",AT:"🇦🇹",AU:"🇦🇺",BE:"🇧🇪",BR:"🇧🇷",CA:"🇨🇦",CH:"🇨🇭",CL:"🇨🇱",CO:"🇨🇴",CZ:"🇨🇿",DE:"🇩🇪",DK:"🇩🇰",EE:"🇪🇪",EG:"🇪🇬",ES:"🇪🇸",EU:"🇪🇺",FI:"🇫🇮",FR:"🇫🇷",GR:"🇬🇷",HR:"🇭🇷",HU:"🇭🇺",IE:"🇮🇪",IL:"🇮🇱",IN:"🇮🇳",IS:"🇮🇸",IT:"🇮🇹",JP:"🇯🇵",KR:"🇰🇷",LT:"🇱🇹",LV:"🇱🇻",MX:"🇲🇽",MY:"🇲🇾",NL:"🇳🇱",NO:"🇳🇴",PE:"🇵🇪",PH:"🇵🇭",PK:"🇵🇰",PT:"🇵🇹",RO:"🇷🇴",SA:"🇸🇦",SE:"🇸🇪",SG:"🇸🇬",SI:"🇸🇮",SK:"🇸🇰",TR:"🇹🇷",TW:"🇹🇼",US:"🇺🇸",ZA:"🇿🇦" };
 
-let RAW = null, REASON_LABELS = {}, MAP_SIGNALS = [];
-const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapColor: "all", mapMany: false, mapGroup: false, fEml: "all", fPref: false, fVorm: "all", fQ: "", fatcQ: "" };
+let RAW = null, REASON_LABELS = {}, MAP_SIGNALS = [], PRK_SIGNALS = [];
+let FARMANCO_PRKS = new Set(), CBG_PRKS = new Set(), SFK_PRKS = new Set();   // PRK's per bron, voor cross-bron-koppeling
+const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapColor: "all", mapMany: false, mapGroup: false, fEml: "all", fPref: false, fVorm: "all", fQ: "", fatcQ: "", prkQ: "", prkMany: true, sfkQ: "", sfkEmlOnly: false };
 
 // ── Toedieningsvorm-categorieën (Farmanco 'vorm' is vrije tekst) ──
 const VORM_CATS = [["tablet", "Tablet"], ["capsule", "Capsule"], ["oraal", "Drank/oraal"], ["injectie", "Injectie/infuus"],
@@ -270,7 +306,7 @@ function renderCbg() {
         <div class="row">
             <span class="date">${e.datum}</span>
             <span class="eml-dot ${e.eml || "none"}" title="${e.eml ? "EMS: " + e.eml : "niet op EMS"}"></span>
-            <span class="name">${esc(e.product)}</span>
+            <span class="name">${esc(e.product)}${e.prk ? ` <span class="prk-tag" title="G-standaard: ${esc(e.prk_naam || "")}">PRK ${esc(e.prk)}</span>` : ''}</span>
             <span class="meta">${esc(e.mah)}</span>
             ${e.eml ? `<span class="eml-tag ${e.eml}">${e.eml.toUpperCase()}</span>` : ''}
             <span class="reg">${esc((e.reg_type || "RVG") + " " + e.reg)}</span>
@@ -355,12 +391,13 @@ function prettyName(s) {
 }
 
 function renderKpis() {
-    const farmPref = FARMANCO_EML.filter(m => m.preferent).length;
+    const farmEms = FARMANCO_EML.filter(m => m.eml);
+    const farmPref = farmEms.filter(m => m.preferent).length;
     const cbgEml = CBG_TAV.filter(e => e.eml).length;
     const mapRecent = MAP_SIGNALS.filter(s => s.first && s.first >= addDays(mapRef(), -120));
     const mapEml = mapRecent.filter(s => s.eml).length;
     document.getElementById("kpis").innerHTML = `
-        <div class="kpi"><div class="n">${FARMANCO_EML.length}</div><div class="l">Farmanco op EMS (${farmPref} preferent)</div></div>
+        <div class="kpi"><div class="n">${farmEms.length}</div><div class="l">Farmanco op EMS (${farmPref} preferent)</div></div>
         <div class="kpi"><div class="n">${cbgEml}</div><div class="l">CBG-TAV op EMS</div></div>
         <div class="kpi"><div class="n">${mapRecent.length}</div><div class="l">Nieuwe buitenlandse signalen (120d)</div></div>
         <div class="kpi"><div class="n">${mapEml}</div><div class="l">Daarvan op EMS</div></div>`;
@@ -372,7 +409,7 @@ function renderKpis() {
 function renderFarmanco() {
     const host = document.getElementById("farmanco-rows");
     if (!host) return;
-    let list = FARMANCO_EML.slice();
+    let list = FARMANCO_EML.filter(m => m.eml);   // sectie 1b = alleen op EMS
     if (S.fEml !== "all") list = list.filter(m => m.eml === S.fEml);
     if (S.fPref) list = list.filter(m => m.preferent);
     if (S.fVorm !== "all") list = list.filter(m => vormCats(m.vorm).includes(S.fVorm));
@@ -382,7 +419,7 @@ function renderFarmanco() {
             <span class="date">${m.datum || ""}</span>
             <span class="eml-dot ${m.eml}"></span>
             <span class="name">${esc(m.stof)}${m.preferent ? ' <span class="badge impact" title="Preferentiebeleid: zorgverzekeraar heeft een voorkeursvariant aangewezen die standaard wordt vergoed">preferent</span>' : ''}</span>
-            <span class="meta">${esc(m.omschrijving)}</span>
+            <span class="meta">${esc(m.omschrijving)}${m.prk ? ` <span class="prk-tag" title="G-standaard: ${esc(m.prk_naam || "")}">PRK ${esc(m.prk)}</span>` : ''}</span>
             <span class="eml-tag ${m.eml}">${(m.eml || "").toUpperCase()}</span>
         </div>`).join("");
 }
@@ -400,22 +437,97 @@ function renderFarmancoByAtc() {
     if (!ordered.length) { host.innerHTML = `<div class="empty">Geen Farmanco-meldingen met ATC in deze selectie.</div>`; return; }
     host.innerHTML = ordered.map(([a4, ms]) => {
         const newest = ms.map(m => m.datum).filter(Boolean).sort().slice(-1)[0] || "";
-        const worst = ms.some(m => m.eml === "rood") ? "rood" : ms.some(m => m.eml === "oranje") ? "oranje" : "geel";
+        const worst = ms.some(m => m.eml === "rood") ? "rood" : ms.some(m => m.eml === "oranje") ? "oranje" : ms.some(m => m.eml === "geel") ? "geel" : "none";
         const nm = atc4Name(a4);
         const header = `<div class="mgroup"><span class="mcaret">▸</span><span class="date">${newest}</span> <span class="eml-dot ${worst}"></span> ${nm ? esc(nm) + " " : ""}<span class="reg">${a4}</span><span class="cnt">${ms.length} ${ms.length === 1 ? "melding" : "meldingen"}</span></div>`;
         const body = `<div class="mgroup-body">` + ms.map(m => `<div class="row">
                 <span class="date">${m.datum || ""}</span>
-                <span class="eml-dot ${m.eml}"></span>
+                <span class="eml-dot ${m.eml || "none"}"></span>
                 <span class="name">${esc(m.stof)}${m.preferent ? ' <span class="badge impact">preferent</span>' : ''}</span>
-                <span class="meta">${esc(m.omschrijving)}</span>
+                <span class="meta">${esc(m.omschrijving)}${m.prk ? ` <span class="prk-tag" title="G-standaard: ${esc(m.prk_naam || "")}">PRK ${esc(m.prk)}</span>` : ''}</span>
                 <span class="reg">${m.atc}</span>
-                <span class="eml-tag ${m.eml}">${(m.eml || "").toUpperCase()}</span>
+                <span class="eml-tag ${m.eml || "overig"}">${(m.eml || "overig").toUpperCase()}</span>
             </div>`).join("") + `</div>`;
         return `<div class="mgroup-wrap collapsed">${header}${body}</div>`;
     }).join("");
 }
 
-function render() { renderKpis(); renderCbg(); renderFarmanco(); renderFarmancoByAtc(); renderMap(); }
+// ── Landkaart-vroegsignaal per PRODUCT (G-standaard PRK) — cross-country productniveau ──
+function computePrkSignals() {
+    if (!RAW) return [];
+    const today = mapRef();
+    const byPrk = {};
+    RAW.records.forEach(r => {
+        if (r.st !== "active" && r.st !== "upcoming") return;
+        if (!r.ss || r.ss === r.sa || r.ss > today) return;   // alleen echte bron-startdatum
+        if (!r.prk) return;                                    // alleen meldingen met PRK-koppeling
+        (byPrk[r.prk] ||= []).push(r);
+    });
+    const sigs = [];
+    Object.entries(byPrk).forEach(([prk, recs]) => {
+        const ccs = [...new Set(recs.map(r => r.cc))];
+        const starts = recs.map(r => r.ss).filter(Boolean).sort();
+        const atc = recs[0].atc;
+        const naam = recs.map(r => r.prk_naam).find(Boolean) || "";
+        sigs.push({ prk, naam, atc, ccs, countryCount: ccs.length,
+                    first: starts[0] || null, newest: starts[starts.length - 1] || null,
+                    eml: EML_ATC5[atc] || "", isDossier: DOSSIER_ATCS.has(atc) });
+    });
+    // Productniveau domino: meeste landen eerst, dan meest recent opgekomen
+    sigs.sort((a, b) => b.countryCount - a.countryCount || (b.first || "0").localeCompare(a.first || "0"));
+    return sigs;
+}
+function prkRow(s) {
+    const flags = s.ccs.slice(0, 10).map(cc => FLAG[cc] || "").join("");
+    const more = s.ccs.length > 10 ? ` +${s.ccs.length - 10}` : "";
+    // Cross-bron: staat ditzelfde product (PRK) óók op Farmanco / met een CBG-vrijstelling?
+    let also = "";
+    if (FARMANCO_PRKS.has(String(s.prk))) also += ' <span class="badge src-farm" title="Ook op de Farmanco-tekortenlijst (NL)">Farmanco</span>';
+    if (SFK_PRKS.has(String(s.prk))) also += ' <span class="badge src-sfk" title="Ook op de SFK-tekortenlijst (NL)">SFK</span>';
+    if (CBG_PRKS.has(String(s.prk))) also += ' <span class="badge src-cbg" title="Ook een CBG-verpakkingsvrijstelling (TAV)">CBG-TAV</span>';
+    return `<div class="row">
+        <span class="date">${s.first || ""}</span>
+        <span class="eml-dot ${s.eml || "none"}" title="${s.eml ? "EMS: " + s.eml : "niet op EMS"}"></span>
+        <span class="name">${esc(s.naam || s.prk)}${s.eml ? ` <span class="eml-tag ${s.eml}">${s.eml.toUpperCase()}</span>` : ''}${s.isDossier ? ' <span class="badge dossier">LCG-dossier</span>' : ''}${also}</span>
+        <span class="reg">PRK ${esc(s.prk)} · ${s.atc}</span>
+        <span class="flags">${flags}${more}</span>
+        <span class="cc-count">${s.countryCount} ${s.countryCount === 1 ? "land" : "landen"}</span>
+    </div>`;
+}
+function renderPrk() {
+    const host = document.getElementById("prk-rows");
+    if (!host) return;
+    const cutoff = addDays(mapRef(), -120);
+    const q = (S.prkQ || "").toUpperCase();
+    let list = PRK_SIGNALS.filter(s => s.first && s.first >= cutoff);
+    if (S.prkMany) list = list.filter(s => s.countryCount >= 2);
+    if (q) list = list.filter(s => (s.naam + " " + s.prk + " " + s.atc).toUpperCase().includes(q));
+    if (!list.length) { host.innerHTML = `<div class="empty">Geen productniveau-signalen in deze selectie.</div>`; return; }
+    const shown = list.slice(0, MAP_CAP);
+    host.innerHTML = shown.map(prkRow).join("") + (list.length > MAP_CAP ? `<div class="empty">${list.length - MAP_CAP} meer — verfijn met de filters.</div>` : "");
+}
+
+// ── SFK-tekorten (totaal) — ZI-nummer → G-standaard PRK/ATC, EMS-kleur via ATC ──
+function renderSfk() {
+    const host = document.getElementById("sfk-rows");
+    if (!host) return;
+    const sev = { rood: 3, oranje: 2, geel: 1 };
+    const q = (S.sfkQ || "").toUpperCase();
+    let list = SFK.map(it => ({ ...it, eml: EML_ATC5[it.atc] || "" }));
+    if (S.sfkEmlOnly) list = list.filter(it => it.eml);
+    if (q) list = list.filter(it => (it.naam + " " + (it.atc || "") + " " + (it.prk || "") + " " + it.zi).toUpperCase().includes(q));
+    if (!list.length) { host.innerHTML = `<div class="empty">Geen SFK-tekorten in deze selectie.</div>`; return; }
+    list.sort((a, b) => (sev[b.eml] || 0) - (sev[a.eml] || 0) || a.naam.localeCompare(b.naam));
+    const shown = list.slice(0, MAP_CAP);
+    host.innerHTML = shown.map(it => `<div class="row">
+            <span class="eml-dot ${it.eml || "none"}" title="${it.eml ? "EMS: " + it.eml : "niet op EMS"}"></span>
+            <span class="name">${esc(it.naam)}${it.eml ? ` <span class="eml-tag ${it.eml}">${it.eml.toUpperCase()}</span>` : ''}${it.preferent && it.preferent.length ? ` <span class="badge impact" title="Preferent bij: ${esc(it.preferent.join(", "))}">preferent</span>` : ''}</span>
+            <span class="meta">${esc(it.opmerking || it.status || "")}${it.prk ? ` <span class="prk-tag" title="G-standaard: ${esc(it.prk_naam || "")}">PRK ${esc(it.prk)}</span>` : ''}</span>
+            <span class="reg">${it.atc || ""} · ZI ${esc(it.zi)}</span>
+        </div>`).join("") + (list.length > MAP_CAP ? `<div class="empty">${list.length - MAP_CAP} meer — verfijn met zoeken of "alleen EMS".</div>` : "");
+}
+
+function render() { renderKpis(); renderCbg(); renderFarmanco(); renderFarmancoByAtc(); renderSfk(); renderMap(); renderPrk(); }
 
 // Events
 document.querySelectorAll(".cbg-period").forEach(c => c.addEventListener("click", () => {
@@ -454,9 +566,14 @@ document.querySelectorAll(".feml").forEach(c => c.addEventListener("click", () =
 }));
 document.getElementById("f-preferent").addEventListener("change", e => { S.fPref = e.target.checked; renderFarmanco(); });
 document.getElementById("f-vorm").addEventListener("change", e => { S.fVorm = e.target.value; renderFarmanco(); });
-let _t3, _t4;
+let _t3, _t4, _t5;
 document.getElementById("f-search").addEventListener("input", e => { clearTimeout(_t3); _t3 = setTimeout(() => { S.fQ = e.target.value; renderFarmanco(); }, 150); });
 document.getElementById("fatc-search").addEventListener("input", e => { clearTimeout(_t4); _t4 = setTimeout(() => { S.fatcQ = e.target.value; renderFarmancoByAtc(); }, 150); });
+document.getElementById("prk-search").addEventListener("input", e => { clearTimeout(_t5); _t5 = setTimeout(() => { S.prkQ = e.target.value; renderPrk(); }, 150); });
+document.getElementById("prk-many").addEventListener("change", e => { S.prkMany = e.target.checked; renderPrk(); });
+let _t6;
+document.getElementById("sfk-search").addEventListener("input", e => { clearTimeout(_t6); _t6 = setTimeout(() => { S.sfkQ = e.target.value; renderSfk(); }, 150); });
+document.getElementById("sfk-eml").addEventListener("change", e => { S.sfkEmlOnly = e.target.checked; renderSfk(); });
 // Klik op een ATC-4-groepskop klapt de groep in/uit (containers zijn statisch; rijen worden opnieuw gerenderd)
 ["fatc-rows", "map-rows"].forEach(id => {
     const el = document.getElementById(id);
@@ -468,8 +585,8 @@ document.getElementById("fatc-search").addEventListener("input", e => { clearTim
 
 // Elke bron faalt onafhankelijk (een kapotte data.json maakt de andere secties niet leeg)
 const j = (u) => fetch(u).then(r => r.json()).catch(() => null);
-Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("eml_atc5.json")])
-    .then(([data, farm, cbg, ems]) => {
+Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("eml_atc5.json"), j("sfk_tekorten.json")])
+    .then(([data, farm, cbg, ems, sfk]) => {
         RAW = data;
         REASON_LABELS = (data && data.reason_labels) || {};
         FARMANCO_EML = (farm && farm.items) || [];
@@ -477,10 +594,16 @@ Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("e
         CBG_TAV = (cbg && cbg.items) || [];
         CBG_SCRAPED = (cbg && cbg.generated) || "";
         EML_ATC5 = (ems && ems.map) || {};
+        SFK = (sfk && sfk.items) || [];
+        SFK_SCRAPED = (sfk && sfk.generated) || "";
         populateVormFilter();
+        FARMANCO_PRKS = new Set(FARMANCO_EML.filter(m => m.prk).map(m => String(m.prk)));
+        CBG_PRKS = new Set(CBG_TAV.filter(e => e.prk).map(e => String(e.prk)));
+        SFK_PRKS = new Set(SFK.filter(e => e.prk).map(e => String(e.prk)));
         MAP_SIGNALS = computeMapSignals();
+        PRK_SIGNALS = computePrkSignals();
         document.getElementById("footer").innerHTML =
-            `Landelijk Coördinatiecentrum Geneesmiddelen · Farmanco: ${FARMANCO_EML.length} op EMS (${esc(FARMANCO_SCRAPED)}) · CBG-TAV: ${CBG_TAV.length} (${esc(CBG_SCRAPED)}) · landkaart: ${esc(data ? data.generated : "niet geladen")}`;
+            `Landelijk Coördinatiecentrum Geneesmiddelen · Farmanco: ${FARMANCO_EML.filter(m => m.eml).length} op EMS + ${FARMANCO_EML.filter(m => !m.eml).length} overig (${esc(FARMANCO_SCRAPED)}) · CBG-TAV: ${CBG_TAV.length} (${esc(CBG_SCRAPED)}) · SFK: ${SFK.length} (${esc(SFK_SCRAPED)}) · landkaart: ${esc(data ? data.generated : "niet geladen")}`;
         render();
         if (!data) document.getElementById("map-rows").innerHTML = `<div class="empty">Fout bij laden van data.json (open via de webserver, niet als los bestand).</div>`;
     });

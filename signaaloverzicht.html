@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LCG Vroegsignaal-overzicht</title>
+<style>
+    :root {
+        --lcg-blue: #00428b; --lcg-cyan: #0bbbef; --lcg-green: #a8c04d;
+        --lcg-light: #daf5fd; --bg-base: #f2f7fb; --bg-card: #ffffff;
+        --bg-elevated: #eaf8fd; --border: #dbe6f0; --border-light: #eef3f8;
+        --text-primary: #17324d; --text-secondary: #4a6a88; --text-muted: #8aa0b4;
+        --status-active: #e05555; --status-upcoming: #f0a020; --status-resolved: #a8c04d;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: var(--bg-base); color: var(--text-primary); font-size: 13px; line-height: 1.5; }
+    a { color: var(--lcg-blue); }
+    .page { max-width: 1180px; margin: 0 auto; padding: 20px 20px 60px; }
+
+    .top { display: flex; align-items: center; gap: 14px; padding: 6px 0 18px; flex-wrap: wrap; }
+    .top-logo { width: 34px; height: 34px; flex-shrink: 0; }
+    .top-logo svg { width: 100%; height: 100%; }
+    .top h1 { font-size: 20px; font-weight: 800; color: var(--lcg-blue); letter-spacing: -0.3px; }
+    .top .sub { font-size: 12px; color: var(--text-muted); }
+    .top-right { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .top-link { font-size: 12px; text-decoration: none; padding: 6px 12px; border-radius: 6px; background: var(--bg-card); border: 1px solid var(--border); color: var(--lcg-blue); font-weight: 600; white-space: nowrap; }
+    .top-link.active { background: var(--lcg-blue); color: #fff; border-color: var(--lcg-blue); }
+    .top-link:hover { background: var(--lcg-light); }
+
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+    .kpi { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+    .kpi .n { font-size: 24px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; }
+    .kpi .l { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
+    @media (max-width: 760px) { .kpis { grid-template-columns: repeat(2, 1fr); } }
+
+    .note { font-size: 12px; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; margin-bottom: 14px; }
+
+    .controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .chip { font-size: 11px; padding: 5px 10px; border-radius: 999px; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-secondary); cursor: pointer; user-select: none; }
+    .chip.active { background: var(--lcg-blue); color: #fff; border-color: var(--lcg-blue); }
+    .search { margin-left: auto; }
+    .search input { font-size: 12px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; width: 240px; max-width: 46vw; }
+
+    .list { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .grp-wrap { border-top: 1px solid var(--border); }
+    .grp-wrap:first-child { border-top: none; }
+    .grp { display: flex; align-items: center; gap: 10px; padding: 10px 14px; cursor: pointer; background: var(--bg-elevated); font-size: 13px; }
+    .grp:hover { background: var(--lcg-light); }
+    .gcaret { display: inline-block; color: var(--text-muted); font-size: 10px; transition: transform 0.15s; flex-shrink: 0; }
+    .grp-wrap:not(.collapsed) .gcaret { transform: rotate(90deg); }
+    .grp-wrap.collapsed .gbody { display: none; }
+    .gname { flex: 1; font-weight: 800; color: var(--lcg-blue); overflow-wrap: anywhere; }
+    .gcode { font-size: 11px; color: var(--text-muted); font-weight: 700; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .gcount { font-size: 11px; color: var(--text-muted); white-space: nowrap; margin-left: auto; }
+    .gval { font-size: 15px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; width: 40px; text-align: right; flex-shrink: 0; }
+    .gbody .row { padding-left: 30px; }
+    .row { display: flex; align-items: baseline; gap: 10px; padding: 9px 14px; border-top: 1px solid var(--border-light); }
+    .row:first-child { border-top: none; }
+    .row:hover { background: var(--bg-elevated); }
+    .rank { font-size: 11px; color: var(--text-muted); font-weight: 700; width: 26px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+    .eml-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; align-self: center; }
+    .eml-dot.rood { background: #e05555; } .eml-dot.oranje { background: #f0a020; } .eml-dot.geel { background: #e0c020; } .eml-dot.none { background: var(--border); }
+    .prod { flex: 1; min-width: 0; }
+    .prod .nm { font-weight: 700; color: var(--text-primary); overflow-wrap: anywhere; }
+    .prod .meta { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+    .badges { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; margin-top: 3px; }
+    .b { font-size: 9px; font-weight: 800; color: #fff; padding: 1px 6px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; }
+    .b.land { background: var(--lcg-cyan); } .b.farm { background: #7a5195; } .b.sfk { background: #2aa198; } .b.cbg { background: #ef7d00; } .b.dossier { background: var(--lcg-green); }
+    .b.rood { background: #e05555; } .b.oranje { background: #e08a10; } .b.geel { background: #b79a10; }
+    .b.type-voorloper { background: #d64550; } .b.type-convergerend { background: #b8600a; } .b.type-nl { background: #5a7791; }
+    .flags { font-size: 12px; }
+    .score { font-size: 15px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; width: 34px; text-align: right; flex-shrink: 0; align-self: center; }
+    .empty { padding: 20px 14px; color: var(--text-muted); font-style: italic; }
+    .footer { margin-top: 18px; font-size: 11px; color: var(--text-muted); }
+
+    #pw-gate { position: fixed; inset: 0; background: var(--bg-base); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; z-index: 999; }
+    #pw-gate h2 { color: var(--lcg-blue); } #pw-gate input { font-size: 14px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; }
+    #pw-gate button { font-size: 14px; padding: 8px 18px; border: none; border-radius: 6px; background: var(--lcg-blue); color: #fff; cursor: pointer; }
+    .pw-err { color: #e05555; font-size: 12px; min-height: 16px; }
+</style>
+</head>
+<body>
+<div class="page">
+    <div class="top">
+        <div class="top-logo"><svg viewBox="0 0 156 158" fill="#00428b"><path d="M.47,55.36l18.05-31.47c.98-1.68,3.09-2.24,4.77-1.26l16.51,9.45c10.33,5.99,13.93,19.17,8,29.55-5.99,10.33-19.17,13.89-29.55,7.95L1.74,60.09c-1.64-.94-2.24-3.04-1.26-4.72Z"/><path d="M47.93,96.42c5.99,10.33,2.48,23.57-7.81,29.55l-16.46,9.59c-1.68.98-3.83.42-4.77-1.26L.66,102.92c-.98-1.68-.37-3.79,1.26-4.77l16.46-9.54c10.33-5.99,23.57-2.48,29.55,7.81Z"/><path d="M99.6,78.93c0,11.97-9.68,21.65-21.6,21.65s-21.6-9.68-21.6-21.65,9.68-21.6,21.6-21.6,21.6,9.68,21.6,21.6Z"/><path d="M99.6,3.46v19.08c0,11.92-9.68,21.6-21.6,21.6s-21.6-9.68-21.6-21.6V3.46c0-1.92,1.54-3.46,3.46-3.46h36.28c1.92,0,3.46,1.54,3.46,3.46Z"/><path d="M99.6,135.37v19.03c0,1.96-1.54,3.51-3.46,3.51h-36.28c-1.92,0-3.46-1.54-3.46-3.51v-19.03c0-11.92,9.68-21.6,21.6-21.6s21.6,9.68,21.6,21.6Z"/><path d="M155.43,102.54l-18.05,31.47c-.98,1.68-3.09,2.24-4.77,1.26l-16.51-9.45c-10.33-5.99-13.93-19.17-8-29.55,5.99-10.33,19.17-13.93,29.55-7.95l16.51,9.49c1.64.94,2.24,3.04,1.26,4.72Z"/><path d="M108.16,61.49c-6.03-10.33-2.52-23.57,7.81-29.55l16.46-9.59c1.68-.98,3.79-.42,4.77,1.26l18.24,31.38c.93,1.64.37,3.79-1.26,4.77l-16.46,9.54c-10.33,5.99-23.57,2.48-29.55-7.81Z"/></svg></div>
+        <div>
+            <h1>LCG Vroegsignaal-overzicht</h1>
+            <div class="sub">Alle bronnen samengebracht op productniveau (G-standaard PRK) · geprioriteerd op vroegsignaal</div>
+        </div>
+        <div class="top-right">
+            <a class="top-link active" href="signaaloverzicht.html">Overzicht</a>
+            <a class="top-link" href="index.html">Dossierstatus</a>
+            <a class="top-link" href="vroegsignalering.html">Vroegsignalering</a>
+            <a class="top-link" href="landkaart.html">Landkaart</a>
+        </div>
+    </div>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="note">
+        Elk <b>product</b> (G-standaard PRK: stof + sterkte + vorm) krijgt een <b>vroegsignaal-score</b> die de bronnen combineert:
+        buitenlandse tekorten (landkaart, laatste 120d), <b>Farmanco</b>, <b>SFK</b>, <b>CBG</b>-verpakkingsvrijstelling, EMS-beoordeling en LCG-dossier.
+        <b>Alleen buitenland</b> = uitsluitend in buitenlandse tekortmeldingen (vroegste waarschuwing), <b>Buitenland + NL</b> = buitenland én al bevestigd op een NL-bron, <b>Alleen NL</b> = alleen NL-bronnen (Farmanco/SFK/CBG).
+    </div>
+
+    <div class="controls">
+        <div class="chip typ active" data-type="all">Alles</div>
+        <div class="chip typ" data-type="voorloper" title="Uitsluitend in buitenlandse tekortmeldingen — de vroegste waarschuwing">Alleen buitenland</div>
+        <div class="chip typ" data-type="convergerend" title="Buitenland én al bevestigd op een NL-bron">Buitenland + NL</div>
+        <div class="chip typ" data-type="nl" title="Alleen NL-bronnen (Farmanco/SFK/CBG)">Alleen NL</div>
+        <span style="width:10px"></span>
+        <div class="chip col active" data-col="all">Alle EMS</div>
+        <div class="chip col" data-col="rood">🔴</div>
+        <div class="chip col" data-col="oranje">🟠</div>
+        <div class="chip col" data-col="geel">🟡</div>
+        <div class="search"><input type="text" id="q" placeholder="Zoek product, stof, ATC of PRK…" autocomplete="off"></div>
+    </div>
+
+    <div class="list" id="rows"></div>
+    <div class="footer" id="footer"></div>
+</div>
+
+<script>
+const DOSSIER_ATCS = new Set(["L01AA06","N05AH04","L01BC06","L01DB07","P02CA03","V03AF03","G02AB01","H02AB06","J01GB03","B06AA03","C04AB01","H02AB08","P02BA01","S01LA01"]);
+const WINDOW_DAYS = 120;
+const S = { type: "all", col: "all", q: "" };
+let PRODUCTS = [], ATC4_NAMES = {};
+
+function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+function flagOf(cc) { return /^[A-Za-z]{2}$/.test(cc) ? cc.toUpperCase().replace(/./g, c => String.fromCodePoint(127397 + c.charCodeAt())) : ""; }
+function isoToday() { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+function addDays(iso, n) { const d = new Date(iso + "T00:00:00"); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); }
+
+// Bouw per PRK één product-record uit alle bronnen
+function build(data, farm, cbg, sfk, ems) {
+    const EML = (ems && ems.map) || {};
+    const P = {};
+    const get = (prk) => (P[prk] ||= { prk, naam: "", atc: "", ccs: new Set(), first: null, farm: false, sfk: false, cbg: false });
+
+    const today = (data && data.generated) || isoToday();
+    const cutoff = addDays(today, -WINDOW_DAYS);
+    // Landkaart: buitenlandse vroegsignalen (recent), per PRK
+    ((data && data.records) || []).forEach(r => {
+        if (!r.prk) return;
+        if (r.st !== "active" && r.st !== "upcoming") return;
+        if (!r.ss || r.ss === r.sa || r.ss > today || r.ss < cutoff) return;
+        const p = get(String(r.prk));
+        p.ccs.add(r.cc); p.atc = p.atc || r.atc; p.naam = p.naam || r.prk_naam || "";
+        if (!p.first || r.ss < p.first) p.first = r.ss;
+    });
+    // NL-bronnen
+    ((farm && farm.items) || []).forEach(m => { if (m.prk) { const p = get(String(m.prk)); p.farm = true; p.atc = p.atc || m.atc || ""; p.naam = p.naam || m.prk_naam || ""; } });
+    ((sfk && sfk.items) || []).forEach(e => { if (e.prk) { const p = get(String(e.prk)); p.sfk = true; p.atc = p.atc || e.atc || ""; p.naam = p.naam || e.prk_naam || ""; } });
+    ((cbg && cbg.items) || []).forEach(e => { if (e.prk) { const p = get(String(e.prk)); p.cbg = true; p.atc = p.atc || e.atc || ""; p.naam = p.naam || e.prk_naam || ""; } });
+
+    return Object.values(P).map(p => {
+        const nCc = p.ccs.size;
+        const nlSrc = p.farm || p.sfk || p.cbg;
+        const eml = EML[p.atc] || "";
+        const dossier = DOSSIER_ATCS.has(p.atc);
+        const type = nCc > 0 ? (nlSrc ? "convergerend" : "voorloper") : "nl";
+        const emlW = eml === "rood" ? 4 : eml === "oranje" ? 2 : eml === "geel" ? 1 : 0;
+        const score = Math.min(nCc, 8) + (p.farm ? 3 : 0) + (p.sfk ? 3 : 0) + (p.cbg ? 4 : 0) + emlW + (dossier ? 2 : 0);
+        return { ...p, ccs: [...p.ccs], nCc, eml, dossier, type, score };
+    });
+}
+
+function productRow(p, idx) {
+    const typeLbl = { voorloper: "Alleen buitenland", convergerend: "Buitenland + NL", nl: "Alleen NL" };
+    const flags = p.ccs.slice(0, 10).map(flagOf).join("") + (p.ccs.length > 10 ? ` +${p.ccs.length - 10}` : "");
+    const b = [`<span class="b type-${p.type}">${typeLbl[p.type]}</span>`];
+    if (p.nCc) b.push(`<span class="b land" title="${esc(p.ccs.join(", "))}">🌍 ${p.nCc} ${p.nCc === 1 ? "land" : "landen"}</span>`);
+    if (p.farm) b.push(`<span class="b farm">Farmanco</span>`);
+    if (p.sfk) b.push(`<span class="b sfk">SFK</span>`);
+    if (p.cbg) b.push(`<span class="b cbg">CBG-TAV</span>`);
+    if (p.eml) b.push(`<span class="b ${p.eml}">EMS ${p.eml}</span>`);
+    if (p.dossier) b.push(`<span class="b dossier">LCG-dossier</span>`);
+    return `<div class="row">
+        <span class="rank">${idx}</span>
+        <span class="eml-dot ${p.eml || "none"}"></span>
+        <div class="prod">
+            <div class="nm">${esc(p.naam || ("PRK " + p.prk))}</div>
+            <div class="meta">PRK ${esc(p.prk)}${p.atc ? " · " + esc(p.atc) : ""}${p.first ? " · vroegste buitenlands signaal " + p.first : ""} <span class="flags">${flags}</span></div>
+            <div class="badges">${b.join("")}</div>
+        </div>
+        <span class="score" title="Vroegsignaal-score">${p.score}</span>
+    </div>`;
+}
+function render() {
+    const host = document.getElementById("rows");
+    let list = PRODUCTS.slice();
+    if (S.type !== "all") list = list.filter(p => p.type === S.type);
+    if (S.col !== "all") list = list.filter(p => p.eml === S.col);
+    if (S.q) { const q = S.q.toUpperCase(); list = list.filter(p => (p.naam + " " + p.atc + " " + p.prk).toUpperCase().includes(q)); }
+    if (!list.length) { host.innerHTML = `<div class="empty">Geen producten in deze selectie.</div>`; return; }
+    // Groepeer op ATC-4 (subgroep); groepen gesorteerd op de hoogste score erin
+    const groups = {};
+    list.forEach(p => { const a4 = (p.atc || "").slice(0, 5) || "—"; (groups[a4] ||= []).push(p); });
+    const ordered = Object.entries(groups).map(([a4, ps]) => {
+        ps.sort((a, b) => b.score - a.score || b.nCc - a.nCc || (b.first || "0").localeCompare(a.first || "0"));
+        const val = ps.reduce((s, p) => s + p.score, 0);              // gecombineerde waarde = som van de productscores
+        const nRood = ps.filter(p => p.eml === "rood").length;
+        const nLand = new Set(ps.flatMap(p => p.ccs)).size;
+        return { a4, ps, val, nRood, nLand };
+    });
+    ordered.sort((a, b) => b.val - a.val || b.ps.length - a.ps.length || a.a4.localeCompare(b.a4));
+    const CAP = 200;
+    host.innerHTML = ordered.slice(0, CAP).map(g => {
+        const nm = ATC4_NAMES[g.a4] || "";
+        const worst = g.ps.some(p => p.eml === "rood") ? "rood" : g.ps.some(p => p.eml === "oranje") ? "oranje" : g.ps.some(p => p.eml === "geel") ? "geel" : "none";
+        const tel = [`${g.ps.length} ${g.ps.length === 1 ? "product" : "producten"}`];
+        if (g.nRood) tel.unshift(`🔴 ${g.nRood}`);
+        if (g.nLand) tel.push(`🌍 ${g.nLand} ${g.nLand === 1 ? "land" : "landen"}`);
+        const header = `<div class="grp"><span class="gcaret">▸</span><span class="eml-dot ${worst}"></span><span class="gname">${nm ? esc(nm) + " " : ""}<span class="gcode">${g.a4}</span></span><span class="gcount">${tel.join(" · ")}</span><span class="gval" title="Gecombineerde waarde: som van de productscores in deze groep (buitenland + NL-bronnen + EMS + dossier)">${g.val}</span></div>`;
+        const body = `<div class="gbody">` + g.ps.map((p, i) => productRow(p, i + 1)).join("") + `</div>`;
+        return `<div class="grp-wrap collapsed">${header}${body}</div>`;
+    }).join("") + (ordered.length > CAP ? `<div class="empty">${ordered.length - CAP} groepen meer — verfijn met de filters of zoek.</div>` : "");
+}
+
+function renderKpis(scraped) {
+    const vo = PRODUCTS.filter(p => p.type === "voorloper").length;
+    const cv = PRODUCTS.filter(p => p.type === "convergerend").length;
+    const rood = PRODUCTS.filter(p => p.eml === "rood").length;
+    document.getElementById("kpis").innerHTML = `
+        <div class="kpi"><div class="n">${PRODUCTS.length}</div><div class="l">Producten gevolgd (PRK)</div></div>
+        <div class="kpi"><div class="n">${vo}</div><div class="l">Alleen buitenland (vroeg)</div></div>
+        <div class="kpi"><div class="n">${cv}</div><div class="l">Buitenland + NL</div></div>
+        <div class="kpi"><div class="n">${rood}</div><div class="l">EMS-rood</div></div>`;
+    document.getElementById("footer").innerHTML = `Landelijk Coördinatiecentrum Geneesmiddelen · bronnen: landkaart, Farmanco, SFK, CBG-TAV, EMS · ${esc(scraped)}`;
+}
+
+document.querySelectorAll(".typ").forEach(c => c.addEventListener("click", () => { document.querySelectorAll(".typ").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.type = c.dataset.type; render(); }));
+document.querySelectorAll(".col").forEach(c => c.addEventListener("click", () => { document.querySelectorAll(".col").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.col = c.dataset.col; render(); }));
+let _t;
+document.getElementById("q").addEventListener("input", e => { clearTimeout(_t); _t = setTimeout(() => { S.q = e.target.value; render(); }, 150); });
+// Klik op een ATC-4-groepskop klapt de groep in/uit
+document.getElementById("rows").addEventListener("click", e => {
+    const h = e.target.closest(".grp");
+    if (h) { const w = h.closest(".grp-wrap"); if (w) w.classList.toggle("collapsed"); }
+});
+
+const j = (u) => fetch(u).then(r => r.json()).catch(() => null);
+Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("sfk_tekorten.json"), j("eml_atc5.json"), j("atc4_namen.json")])
+    .then(([data, farm, cbg, sfk, ems, a4]) => {
+        ATC4_NAMES = a4 || {};
+        PRODUCTS = build(data, farm, cbg, sfk, ems);
+        renderKpis(data ? data.generated : "niet geladen");
+        render();
+    });
+</script>
+
+<div id="pw-gate">
+    <h2>LCG Vroegsignaal-overzicht</h2>
+    <p>Voer het wachtwoord in om verder te gaan</p>
+    <input type="password" id="pw-input" placeholder="Wachtwoord" autofocus>
+    <button onclick="checkPw()">Inloggen</button>
+    <div class="pw-err" id="pw-err"></div>
+</div>
+<script>
+(function(){
+    if (sessionStorage.getItem('lcg-auth') === '1') { var g = document.getElementById('pw-gate'); if (g) g.remove(); }
+    var pi = document.getElementById('pw-input');
+    if (pi) pi.addEventListener('keydown', function(e){ if (e.key === 'Enter') checkPw(); });
+})();
+function checkPw(){
+    var v = document.getElementById('pw-input').value;
+    if (v === 'Kernteam') { sessionStorage.setItem('lcg-auth','1'); document.getElementById('pw-gate').remove(); }
+    else { document.getElementById('pw-err').textContent = 'Onjuist wachtwoord'; }
+}
+</script>
+</body>
+</html>

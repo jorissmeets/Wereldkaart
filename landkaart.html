@@ -262,6 +262,16 @@
         .med-substance { font-size: 10px; color: var(--text-muted); margin-top: 1px; }
         .med-prk { font-size: 10px; color: var(--text-primary); margin-top: 2px; }
         .prk-badge { display: inline-block; font-size: 9px; font-weight: 700; background: var(--lcg-blue, #00428b); color: #fff; padding: 1px 5px; border-radius: 3px; margin-right: 4px; letter-spacing: 0.2px; }
+        .prk-breakdown { margin: 4px 0 10px; border: 1px solid var(--border, #d9e2ea); border-radius: 8px; overflow: hidden; }
+        .prk-bd-head { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: var(--text-muted, #6b7f92); padding: 6px 10px; background: var(--bg-elevated, #eef3f7); }
+        .prk-bd-row { display: flex; align-items: baseline; gap: 8px; padding: 5px 10px; font-size: 11px; cursor: pointer; border-top: 1px solid var(--border-light, #e7edf2); }
+        .prk-bd-row:hover { background: var(--bg-elevated, #eef3f7); }
+        .prk-bd-row.selected { background: rgba(0,66,139,0.10); box-shadow: inset 3px 0 0 var(--lcg-blue, #00428b); }
+        .prk-bd-name { font-weight: 600; color: var(--text-primary, #12222f); flex: 1; overflow-wrap: anywhere; }
+        .prk-bd-code { color: var(--text-muted, #6b7f92); font-size: 10px; white-space: nowrap; }
+        .prk-bd-cc { color: var(--text-muted, #6b7f92); font-size: 10px; white-space: nowrap; margin-left: auto; }
+        .prk-bd-clear { padding: 5px 10px; font-size: 10px; color: var(--lcg-blue, #00428b); cursor: pointer; border-top: 1px solid var(--border-light, #e7edf2); }
+        .prk-bd-clear:hover { text-decoration: underline; }
         .med-meta { display: flex; gap: 6px; margin-top: 3px; flex-wrap: wrap; }
         .med-tag { font-size: 9px; padding: 1px 5px; border-radius: 3px; font-weight: 600; }
         .med-tag.active { background: var(--status-active-bg); color: var(--status-active); }
@@ -358,6 +368,7 @@
         <h1><span data-i18n="app_title">Geneesmiddeltekorten</span> <span>Dashboard</span></h1>
     </div>
     <div class="header-right">
+        <a class="nav-tab" href="signaaloverzicht.html" title="Vroegsignaal-overzicht">📊 <span>Overzicht</span></a>
         <a class="nav-tab" href="index.html" title="LCG Dossierstatus">📋 <span data-i18n="nav_dossiers">Dossierstatus</span></a>
         <a class="nav-tab" href="vroegsignalering.html" title="Vroegsignalering">🔔 <span data-i18n="nav_signals">Vroegsignalering</span></a>
         <div class="lang-filter" role="radiogroup" aria-label="Taal / Language">
@@ -537,6 +548,7 @@ const S = {
     period: 0,   // vast op "alle tijd" — geen periodefilter
     selectedAtc: null,
     selectedCountry: null,
+    selectedPrk: null,   // gekozen product (G-standaard PRK) binnen de geselecteerde ATC
     kpiFilter: null,
     searchQuery: "",
     sidebarFilter: "all",
@@ -1189,6 +1201,7 @@ function countryStyle(cc) {
     const hasSelection = S.selectedAtc || S.selectedCountry;
     let recs = D.countryIndex[cc] || [];
     if (S.selectedAtc) recs = recs.filter(r => r.atc === S.selectedAtc);
+    if (S.selectedPrk) recs = recs.filter(r => r.prk === S.selectedPrk);   // PRK gekozen → alleen dat product op de kaart
 
     const aN = recs.filter(r => r.st === "active").length;
     const uN = recs.filter(r => r.st === "upcoming").length;
@@ -1318,6 +1331,7 @@ function renderDetail() {
     const summary = document.getElementById("detail-summary");
     const back = document.getElementById("detail-back");
     const hasSelection = S.selectedAtc || S.selectedCountry;
+    if (!S.selectedAtc) S.selectedPrk = null;   // PRK-keuze hoort bij een geselecteerde ATC
 
     // Scroll detail body to top on any render
     document.getElementById("detail-body").scrollTop = 0;
@@ -1396,8 +1410,32 @@ function renderDetail() {
 
     // Group by country or ATC
     if (S.selectedAtc) {
+        // PRK-uitsplitsing: welke exacte producten binnen deze ATC, in hoeveel landen (klik = kaart-highlight)
+        const prkGroups = {};
+        tabRecs.forEach(r => { if (r.prk) (prkGroups[r.prk] ||= []).push(r); });
+        let prkHtml = "";
+        if (Object.keys(prkGroups).length) {
+            const cw = n => n === 1 ? (S.lang === "en" ? "country" : "land") : (S.lang === "en" ? "countries" : "landen");
+            const pe = Object.entries(prkGroups).map(([prk, rs]) => ({
+                prk, naam: rs.map(r => r.prk_naam).find(Boolean) || prk, ccs: [...new Set(rs.map(r => r.cc))],
+            }));
+            pe.sort((a, b) => b.ccs.length - a.ccs.length || a.naam.localeCompare(b.naam));
+            const rows = pe.map(x => {
+                const sel = S.selectedPrk === x.prk ? " selected" : "";
+                const flags = x.ccs.slice(0, 8).map(cc => (CC[cc] || {}).flag || "").join("");
+                return `<div class="prk-bd-row${sel}" data-select-prk="${x.prk}" title="${S.lang === "en" ? "Highlight the countries where this exact product is short" : "Licht de landen op waar juist dit product tekort is"}">
+                    <span class="prk-bd-name">${escHtml(x.naam)}</span>
+                    <span class="prk-bd-code mono">PRK ${x.prk}</span>
+                    <span class="prk-bd-cc">${flags} ${x.ccs.length} ${cw(x.ccs.length)}</span>
+                </div>`;
+            }).join("");
+            const clear = S.selectedPrk ? `<div class="prk-bd-clear" data-select-prk="">${S.lang === "en" ? "× show all products" : "× toon alle producten"}</div>` : "";
+            prkHtml = `<div class="prk-breakdown"><div class="prk-bd-head">${S.lang === "en" ? "By product (PRK) — click to highlight on the map" : "Per product (PRK) — klik om op de kaart te tonen"}</div>${rows}${clear}</div>`;
+        }
+        // Country-groepering, optioneel gefilterd op het gekozen product (PRK)
+        const gRecs = S.selectedPrk ? tabRecs.filter(r => r.prk === S.selectedPrk) : tabRecs;
         const groups = {};
-        tabRecs.forEach(r => { (groups[r.cc] ||= []).push(r); });
+        gRecs.forEach(r => { (groups[r.cc] ||= []).push(r); });
         // Vroegste startdatum per land — voor de "eerste tekort"-volgorde (1, 2, 3…)
         const entries = Object.entries(groups).map(([cc, recs]) => ({
             cc, recs, first: recs.map(r => r.ss).filter(Boolean).sort()[0] || null,
@@ -1405,7 +1443,7 @@ function renderDetail() {
         if (S.countrySortByDate) entries.sort((a, b) => (a.first || "9999-99-99").localeCompare(b.first || "9999-99-99") || b.recs.length - a.recs.length);
         else entries.sort((a, b) => b.recs.length - a.recs.length);
         const toggle = `<div class="country-sort-bar"><label><input type="checkbox" id="country-sort-date"${S.countrySortByDate ? " checked" : ""}> ${t("country_sort_toggle")}</label></div>`;
-        body.innerHTML = toggle + entries.map((e, i) => {
+        body.innerHTML = prkHtml + toggle + entries.map((e, i) => {
             const ci = CC[e.cc] || { flag: "", name: e.cc };
             const rank = S.countrySortByDate ? `<span class="section-rank">${i + 1}.</span>` : "";
             const date = S.countrySortByDate && e.first ? `<span class="section-date">${e.first}</span>` : "";
@@ -1679,6 +1717,7 @@ document.getElementById("atc-list").addEventListener("click", e => {
     if (!item) return;
     const atc = item.dataset.atc;
     S.selectedAtc = S.selectedAtc === atc ? null : atc;
+    S.selectedPrk = null;
     S.detailTab = "active";
     render();
 });
@@ -1726,9 +1765,19 @@ document.addEventListener("click", e => {
     }
 
     // Detail default: click on top ATC item
+    // Detail: klik op een PRK-uitsplitsingsrij → kaart-highlight van de landen van dat product
+    const selPrk = e.target.closest("[data-select-prk]");
+    if (selPrk) {
+        const prk = selPrk.dataset.selectPrk;
+        S.selectedPrk = prk ? (S.selectedPrk === prk ? null : prk) : null;
+        render();
+        return;
+    }
+
     const selAtc = e.target.closest("[data-select-atc]");
     if (selAtc) {
         S.selectedAtc = selAtc.dataset.selectAtc;
+        S.selectedPrk = null;
         S.detailTab = "active";
         render();
         return;
