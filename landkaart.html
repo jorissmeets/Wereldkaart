@@ -1176,7 +1176,7 @@ function renderSidebar() {
         return `<div class="atc-item${sel}" data-atc="${a.atc}">
             <div class="atc-row1">
                 <div class="atc-dot st-${a.worst}"></div>
-                <span class="atc-name">${escHtml(a.name)}</span>${a.isNew ? '<span class="badge-new">' + t("badge_new") + '</span>' : ''}
+                <span class="atc-name">${escHtml(a.name)}</span>
                 <span class="atc-lnd">${a.countryCount} ${a.countryCount === 1 ? (S.lang === "en" ? "country" : "land") : t("countries")}</span>
             </div>
             ${a.name !== a.atc ? `<div class="atc-code-line"><span class="atc-code">${a.atc}</span></div>` : ""}
