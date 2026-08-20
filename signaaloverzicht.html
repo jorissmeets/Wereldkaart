@@ -55,6 +55,11 @@
     .gcount { font-size: 11px; color: var(--text-muted); white-space: nowrap; margin-left: auto; }
     .gval { font-size: 15px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; width: 40px; text-align: right; flex-shrink: 0; }
     .gbody .row { padding-left: 30px; }
+    .tl { padding: 8px 14px 4px 30px; border-bottom: 1px solid var(--border-light); }
+    .tl-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: var(--text-muted); margin-bottom: 4px; }
+    .tl-svg { width: 100%; height: auto; display: block; }
+    .tl-svg circle { transition: r 0.1s; } .tl-svg circle:hover { r: 4; }
+    .tl-empty { font-size: 11px; color: var(--text-muted); font-style: italic; }
     .row { display: flex; align-items: baseline; gap: 10px; padding: 9px 14px; border-top: 1px solid var(--border-light); }
     .row:first-child { border-top: none; }
     .row:hover { background: var(--bg-elevated); }
@@ -125,7 +130,7 @@
 const DOSSIER_ATCS = new Set(["L01AA06","N05AH04","L01BC06","L01DB07","P02CA03","V03AF03","G02AB01","H02AB06","J01GB03","B06AA03","C04AB01","H02AB08","P02BA01","S01LA01"]);
 const WINDOW_DAYS = 120;
 const S = { type: "all", col: "all", q: "" };
-let PRODUCTS = [], ATC4_NAMES = {};
+let PRODUCTS = [], ATC4_NAMES = {}, SERIES = {}, MONTHS = [];
 
 function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 function flagOf(cc) { return /^[A-Za-z]{2}$/.test(cc) ? cc.toUpperCase().replace(/./g, c => String.fromCodePoint(127397 + c.charCodeAt())) : ""; }
@@ -187,6 +192,59 @@ function productRow(p, idx) {
         <span class="score" title="Vroegsignaal-score">${p.score}</span>
     </div>`;
 }
+// Tijdreeks per ATC-4: aantal NIEUW opgekomen buitenlandse tekortsignalen per maand (laatste 18 mnd).
+// Alleen records met een ECHTE bron-startdatum (ss != sa); ss==sa = scrape-datum-fallback, niet betrouwbaar.
+function buildSeries(records, today) {
+    const N = 18;
+    const [ty, tm] = String(today || "2026-01").split("-").map(Number);
+    MONTHS = [];
+    for (let i = N - 1; i >= 0; i--) {
+        let y = ty, mo = tm - i;
+        while (mo <= 0) { mo += 12; y -= 1; }
+        MONTHS.push(`${y}-${String(mo).padStart(2, "0")}`);
+    }
+    const idx = {}; MONTHS.forEach((m, i) => idx[m] = i);
+    SERIES = {};
+    records.forEach(r => {
+        if (!r.atc || !r.ss || r.ss === r.sa) return;                 // alleen echte bron-startdatum
+        if (r.st !== "active" && r.st !== "upcoming" && r.st !== "resolved") return;
+        const m = r.ss.slice(0, 7);
+        if (!(m in idx)) return;                                       // buiten het venster
+        const a4 = r.atc.slice(0, 5);
+        const arr = SERIES[a4] || (SERIES[a4] = new Array(N).fill(0));
+        arr[idx[m]]++;
+    });
+}
+function timelineSvg(a4) {
+    const arr = SERIES[a4];
+    if (!arr || !arr.some(v => v > 0)) return `<div class="tl-empty">Geen tijdreeks beschikbaar (geen startdatums in deze groep).</div>`;
+    const n = arr.length, max = Math.max(...arr, 1);
+    const W = 680, H = 86, padL = 8, padR = 8, top = 20, base = H - 16;
+    const step = (W - padL - padR) / (n - 1);
+    const X = i => padL + i * step;
+    const Y = v => base - (base - top) * Math.max(0, Math.min(v, max)) / max;
+    const pts = arr.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`);
+    const line = "M" + pts.join(" L");
+    const area = `M${X(0).toFixed(1)},${base} L` + pts.join(" L") + ` L${X(n - 1).toFixed(1)},${base} Z`;
+    // Lineaire trendlijn (kleinste kwadraten) -> richting
+    let sx = 0, sy = 0, sxx = 0, sxy = 0;
+    for (let i = 0; i < n; i++) { sx += i; sy += arr[i]; sxx += i * i; sxy += i * arr[i]; }
+    const b = (n * sxy - sx * sy) / (n * sxx - sx * sx || 1), a0 = (sy - b * sx) / n;
+    const trend = `M${X(0).toFixed(1)},${Y(a0).toFixed(1)} L${X(n - 1).toFixed(1)},${Y(a0 + b * (n - 1)).toFixed(1)}`;
+    const dir = b > 0.2 ? "oplopend ▲" : b < -0.2 ? "aflopend ▼" : "vlak →";
+    const dots = arr.map((v, i) => `<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="2.4" fill="var(--lcg-cyan)"><title>${MONTHS[i]}: ${v}</title></circle>`).join("");
+    const labels = MONTHS.map((m, i) => (i % 3 === 0 || i === n - 1)
+        ? `<text x="${X(i).toFixed(1)}" y="${H - 3}" font-size="9" text-anchor="middle" fill="var(--text-muted)">${m.slice(2)}</text>` : "").join("");
+    return `<div class="tl-title">Nieuwe buitenlandse signalen per maand · piek ${max} · trend ${dir}</div>
+        <svg viewBox="0 0 ${W} ${H}" class="tl-svg" role="img" aria-label="Trend nieuwe buitenlandse signalen per maand voor ${a4}: ${dir}">
+            <line x1="${padL}" y1="${base}" x2="${W - padR}" y2="${base}" stroke="var(--border)" stroke-width="1"/>
+            <path d="${area}" fill="var(--lcg-cyan)" opacity="0.12"/>
+            <path d="${line}" fill="none" stroke="var(--lcg-cyan)" stroke-width="2" stroke-linejoin="round"/>
+            <path d="${trend}" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            ${dots}${labels}
+        </svg>`;
+}
+
 function render() {
     const host = document.getElementById("rows");
     let list = PRODUCTS.slice();
@@ -213,7 +271,7 @@ function render() {
         if (g.nRood) tel.unshift(`🔴 ${g.nRood}`);
         if (g.nLand) tel.push(`🌍 ${g.nLand} ${g.nLand === 1 ? "land" : "landen"}`);
         const header = `<div class="grp"><span class="gcaret">▸</span><span class="eml-dot ${worst}"></span><span class="gname">${nm ? esc(nm) + " " : ""}<span class="gcode">${g.a4}</span></span><span class="gcount">${tel.join(" · ")}</span><span class="gval" title="Gecombineerde waarde: som van de productscores in deze groep (buitenland + NL-bronnen + EMS + dossier)">${g.val}</span></div>`;
-        const body = `<div class="gbody">` + g.ps.map((p, i) => productRow(p, i + 1)).join("") + `</div>`;
+        const body = `<div class="gbody"><div class="tl" data-a4="${g.a4}"></div>` + g.ps.map((p, i) => productRow(p, i + 1)).join("") + `</div>`;
         return `<div class="grp-wrap collapsed">${header}${body}</div>`;
     }).join("") + (ordered.length > CAP ? `<div class="empty">${ordered.length - CAP} groepen meer — verfijn met de filters of zoek.</div>` : "");
 }
@@ -237,7 +295,14 @@ document.getElementById("q").addEventListener("input", e => { clearTimeout(_t); 
 // Klik op een ATC-4-groepskop klapt de groep in/uit
 document.getElementById("rows").addEventListener("click", e => {
     const h = e.target.closest(".grp");
-    if (h) { const w = h.closest(".grp-wrap"); if (w) w.classList.toggle("collapsed"); }
+    if (!h) return;
+    const w = h.closest(".grp-wrap");
+    if (!w) return;
+    w.classList.toggle("collapsed");
+    if (!w.classList.contains("collapsed")) {                 // lui: tijdlijn pas renderen bij openklappen
+        const tl = w.querySelector(".tl");
+        if (tl && !tl.dataset.done) { tl.innerHTML = timelineSvg(tl.dataset.a4); tl.dataset.done = "1"; }
+    }
 });
 
 const j = (u) => fetch(u).then(r => r.json()).catch(() => null);
@@ -245,6 +310,7 @@ Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("s
     .then(([data, farm, cbg, sfk, ems, a4]) => {
         ATC4_NAMES = a4 || {};
         PRODUCTS = build(data, farm, cbg, sfk, ems);
+        buildSeries((data && data.records) || [], data && data.generated);
         renderKpis(data ? data.generated : "niet geladen");
         render();
     });
