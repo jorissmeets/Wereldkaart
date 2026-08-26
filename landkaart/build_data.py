@@ -157,9 +157,12 @@ def derive_status(raw_status: str, shortage_start: str | None,
     if actual_end and actual_end <= today:
         return "resolved"
 
-    # Inactief: > 1 jaar geen recente melding (last_updated heeft voorrang, anders shortage_start)
+    # Inactief: > 1 jaar geen recente melding (last_updated heeft voorrang, anders shortage_start),
+    # MAAR niet als er een einddatum in de toekomst ligt — dan loopt het tekort nog. Zonder deze
+    # uitzondering werd bv. GR Preveloda (start 2025, einddatum nov-2026) onterecht verborgen. (25-08)
     last_known = last_updated or shortage_start
-    if last_known and last_known < cutoff_1yr:
+    end_in_future = (estimated_end and estimated_end >= today) or (actual_end and actual_end >= today)
+    if last_known and last_known < cutoff_1yr and not end_in_future:
         return "inactive"
 
     return "active"
@@ -416,7 +419,9 @@ def build():
             cc = safe_str(row.get("country_code")).upper()
             if not cc or len(cc) != 2:
                 continue
-            if cc in ("NL", "EU"):
+            # NL/EU staan bewust niet op de kaart. LT/TR/EE er tijdelijk uit: die scrapen een
+            # registratie-/beschikbaarheidsregister i.p.v. gemelde tekorten (validatie Jesper 25-08).
+            if cc in ("NL", "EU", "LT", "TR", "EE"):
                 continue
 
             cn = safe_str(row.get("country_name")) or cc
