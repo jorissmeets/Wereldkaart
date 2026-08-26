@@ -381,6 +381,7 @@ def build():
             print(f"  PRK-namen niet geladen: {e}")
 
     records: list[dict] = []
+    today_iso = date.today().isoformat()
 
     for p in sorted(OUTPUT_DIR.glob("*_shortage_*.csv")):
         try:
@@ -446,12 +447,23 @@ def build():
             # we onterecht als tekortstart (validatie AT/DK 25-08). Geen datum -> leeg laten.
             if not shortage_start:
                 shortage_start = parse_date(row.get("published_date"))
+            # FR/ANSM kent geen startdatum-kolom; onze 'shortage_start' is daar de bijwerkdatum
+            # ('Mise à jour'). Niet als tekortstart tonen, maar wél bewaren als last_updated zodat
+            # de >1-jaar-inactiefregel blijft werken (validatie 25-08; scraper hierop aangepast).
+            if cc == "FR":
+                last_updated = last_updated or shortage_start
+                shortage_start = None
 
             # Bereken resolved_date
             resolved_date = None
             derived = derive_status(status_raw, shortage_start, estimated_end, actual_end, last_updated)
             if derived == "resolved":
                 resolved_date = actual_end or estimated_end or scraped_at
+
+            # Verlopen einddatum-schatting: een geschatte einddatum die al in het verleden ligt terwijl
+            # het tekort niet is opgelost, is achterhaald (bv. AEMPS rollende 'ffin') -> niet tonen.
+            if estimated_end and estimated_end < today_iso and derived not in ("resolved", "discontinued"):
+                estimated_end = None
 
             rec = {
                 "atc": atc5,

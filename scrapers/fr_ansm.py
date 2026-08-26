@@ -1,4 +1,5 @@
 """Scraper for France ANSM (Agence nationale de sécurité du médicament)."""
+from __future__ import annotations
 
 import re
 import requests
@@ -62,6 +63,10 @@ class FrAnsmScraper(BaseScraper):
                 continue
 
             status_raw = cells[0].get_text(strip=True)
+            # ANSM-kolommen: Statut | Mise à jour | Spécialité | Remise à disposition | Domaines.
+            # Er is GEEN startdatum-kolom; 'Mise à jour' is enkel de bijwerkdatum -> last_updated
+            # (niet shortage_start, dat gaf een onjuiste 'start'). 'Remise à disposition' =
+            # verwachte hersteldatum -> estimated_end.
             update_date = cells[1].get_text(strip=True)
             specialty_raw = cells[2].get_text(strip=True)
             remise_date = cells[3].get_text(strip=True) if len(cells) > 3 else ""
@@ -85,8 +90,9 @@ class FrAnsmScraper(BaseScraper):
                 "strength": "",
                 "package_size": "",
                 "product_no": "",
-                "shortage_start": self._parse_date(update_date),
+                "shortage_start": "",  # ANSM levert geen startdatum
                 "estimated_end": self._parse_date(remise_date),
+                "last_updated": self._parse_date(update_date),  # 'Mise à jour' (voor staleness)
                 "status": status,
                 "scraped_at": datetime.now().isoformat(),
             })
