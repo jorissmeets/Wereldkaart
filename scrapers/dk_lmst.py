@@ -22,6 +22,12 @@ class DkLmstScraper(BaseScraper):
     FIELD_PERIOD = "{D05F2686-DFE8-4E1F-BD45-4D48E7D9A266}"
     FIELD_REASON = "{27F80008-4F2B-4D25-8520-AF8681A909BB}"
 
+    # Deense maandnamen voor het parsen van 'expected_period' (bv. "Start juli - slut september 2026")
+    DK_MONTHS = {
+        "januar": 1, "februar": 2, "marts": 3, "april": 4, "maj": 5, "juni": 6,
+        "juli": 7, "august": 8, "september": 9, "oktober": 10, "november": 11, "december": 12,
+    }
+
     def __init__(self):
         super().__init__(
             country_code="DK",
@@ -57,6 +63,36 @@ class DkLmstScraper(BaseScraper):
         except Exception:
             pass
         return ""
+
+    @staticmethod
+    def _pub_to_date(s: str) -> str:
+        """ISO-timestamp (2026-07-22T13:14:00Z) -> 2026-07-22."""
+        s = (s or "").strip()
+        return s[:10] if len(s) >= 10 and s[4:5] == "-" else ""
+
+    def _period_end(self, period: str) -> str:
+        """Leid een geschatte einddatum af uit de Deense periode-tekst.
+
+        "Start juli - slut september 2026" -> 2026-09-25 ; "Fra midt oktober 2026" (alleen
+        start) -> "" ; "... - ukendt" (einde onbekend) -> "".
+        """
+        p = (period or "").strip().lower()
+        if not p:
+            return ""
+        end_part = p.split("-")[-1].strip() if "-" in p else p
+        if "ukendt" in end_part:
+            return ""
+        if "-" not in p and p.startswith("fra"):
+            return ""  # alleen een startdatum, geen einde
+        m = re.search(r"(20\d{2})", end_part) or re.search(r"(20\d{2})", p)
+        if not m:
+            return ""
+        year = int(m.group(1))
+        month = next((num for name, num in self.DK_MONTHS.items() if name in end_part), None)
+        if not month:
+            return ""
+        day = 5 if ("start" in end_part or "begynd" in end_part) else 15 if "midt" in end_part else 25
+        return f"{year:04d}-{month:02d}-{day:02d}"
 
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
@@ -123,8 +159,8 @@ class DkLmstScraper(BaseScraper):
                 "strength": "",
                 "package_size": "",
                 "product_no": "",
-                "shortage_start": "",
-                "estimated_end": "",
+                "shortage_start": self._pub_to_date(item.get("date", "")),
+                "estimated_end": self._period_end(table_data.get(self.FIELD_PERIOD, "")),
                 "expected_period": table_data.get(self.FIELD_PERIOD, ""),
                 "status": "shortage",
                 "reason": table_data.get(self.FIELD_REASON, ""),

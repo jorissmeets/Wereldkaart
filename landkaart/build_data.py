@@ -441,9 +441,11 @@ def build():
             actual_end = parse_date(row.get("actual_end"))
             last_updated = parse_date(row.get("last_updated"))
             scraped_at = parse_date(row.get("scraped_at"))
-            # Scrapedatum als fallback-startdatum wanneer de bron geen startdatum geeft
+            # Publicatie-/melddatum als startdatum wanneer de bron geen expliciete startdatum geeft
+            # (bv. DK/LMST 'published_date'). BEWUST geen scrapedatum meer als nepdatum: die toonden
+            # we onterecht als tekortstart (validatie AT/DK 25-08). Geen datum -> leeg laten.
             if not shortage_start:
-                shortage_start = scraped_at
+                shortage_start = parse_date(row.get("published_date"))
 
             # Bereken resolved_date
             resolved_date = None

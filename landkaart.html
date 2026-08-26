@@ -434,6 +434,7 @@
         </div>
         <div class="ems-toggle-bar">
             <label><input type="checkbox" id="ems-rood-toggle"> <span data-i18n="ems_toggle">Alleen kritiek (EMS rood)</span></label>
+            <label><input type="checkbox" id="show-resolved-toggle"> <span data-i18n="resolved_toggle">Toon opgeloste tekorten</span></label>
         </div>
         <div class="sort-bar">
             <label data-i18n="sort_label">Sorteer:</label>
@@ -549,6 +550,7 @@ const S = {
     selectedAtc: null,
     selectedCountry: null,
     selectedPrk: null,   // gekozen product (G-standaard PRK) binnen de geselecteerde ATC
+    showResolved: false, // opgeloste tekorten standaard verborgen op de kaart (toggle om te tonen)
     kpiFilter: null,
     searchQuery: "",
     sidebarFilter: "all",
@@ -567,7 +569,7 @@ const T = {
         kpi_shortages_tip: "Geneesmiddelen (ATC-codes) met een tekort in 3 of meer landen",
         sub_3countries: "in ≥3 landen", kpi_countries: "Landen geraakt", kpi_reasons: "Redenen", app_title: "Geneesmiddeltekorten",
         search_ph: "Zoek ATC-code, stof of geneesmiddel...", filter_all: "Alle",
-        ems_toggle: "Alleen kritiek (EMS rood)", sort_label: "Sorteer:", sort_countries: "Landen", sort_active: "Actief",
+        ems_toggle: "Alleen kritiek (EMS rood)", resolved_toggle: "Toon opgeloste tekorten", sort_label: "Sorteer:", sort_countries: "Landen", sort_active: "Actief",
         tab_active: "Actief", tab_upcoming: "Aankomend", legend_status: "Status",
         legend_active: "Actief tekort", legend_upcoming: "Aankomend", legend_noshortage: "Geen tekort", legend_nodata: "Geen data",
         overview_title: "Dashboard overzicht", data_as_of: "Data van", top_shortages: "Top tekorten (meeste landen)",
@@ -591,7 +593,7 @@ const T = {
         kpi_shortages_tip: "Medicines (ATC codes) with a shortage in 3 or more countries",
         sub_3countries: "in ≥3 countries", kpi_countries: "Countries affected", kpi_reasons: "Reasons", app_title: "Medicine shortages",
         search_ph: "Search ATC code, substance or medicine...", filter_all: "All",
-        ems_toggle: "Critical only (EMS red)", sort_label: "Sort:", sort_countries: "Countries", sort_active: "Active",
+        ems_toggle: "Critical only (EMS red)", resolved_toggle: "Show resolved shortages", sort_label: "Sort:", sort_countries: "Countries", sort_active: "Active",
         tab_active: "Active", tab_upcoming: "Upcoming", legend_status: "Status",
         legend_active: "Active shortage", legend_upcoming: "Upcoming", legend_noshortage: "No shortage", legend_nodata: "No data",
         overview_title: "Dashboard overview", data_as_of: "Data as of", top_shortages: "Top shortages (most countries)",
@@ -855,7 +857,7 @@ function recompute() {
 
     const inPeriod = RAW.records.filter(r => {
         if (r.st === "inactive") return false;  // verouderd (>1 jaar geen update)
-        if (r.st === "resolved") return false;  // opgelost tonen we niet meer
+        if (r.st === "resolved" && !S.showResolved) return false;  // opgelost standaard verbergen (toggle)
         if (!pStart) return true;
         const start = r.ss || r.sa || today;
         const end = r.rd || r.ee || null;
@@ -1688,6 +1690,13 @@ document.getElementById("ems-rood-toggle").addEventListener("change", (e) => {
     renderSidebar();
     renderKpis();
     renderDetail();
+});
+
+// Opgeloste tekorten tonen/verbergen (raakt inPeriod -> volledige herberekening)
+document.getElementById("show-resolved-toggle").addEventListener("change", (e) => {
+    S.showResolved = e.target.checked;
+    recompute();
+    render();
 });
 
 // Taalschakelaar NL/EN
