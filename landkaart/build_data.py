@@ -391,6 +391,12 @@ def build():
             except Exception:
                 continue
 
+        # Ontdubbel identieke ruwe regels: sommige scrapers (m.n. DK) emitteren dezelfde
+        # melding meermaals, alleen verschillend in de per-regel scraped_at-timestamp.
+        dedup_cols = [c for c in df.columns if c != "scraped_at"]
+        if dedup_cols:
+            df = df.drop_duplicates(subset=dedup_cols)
+
         atc_col = None
         for c in ATC_COLUMNS:
             if c in df.columns:
