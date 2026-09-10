@@ -23,6 +23,8 @@
     .top-logo svg { width: 100%; height: 100%; }
     .top h1 { font-size: 20px; font-weight: 800; color: var(--lcg-blue); letter-spacing: -0.3px; }
     .top .sub { font-size: 12px; color: var(--text-muted); }
+    .lastup { text-align: center; margin: 0 0 12px; }
+    .lastup span { display: inline-block; font-size: 11px; font-weight: 600; color: var(--text-secondary); background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 999px; padding: 4px 14px; letter-spacing: 0.02em; }
     .top-right { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .top-link { font-size: 12px; text-decoration: none; padding: 6px 12px; border-radius: 6px; background: var(--bg-card); border: 1px solid var(--border); color: var(--lcg-blue); font-weight: 600; white-space: nowrap; }
     .top-link.active { background: var(--lcg-blue); color: #fff; border-color: var(--lcg-blue); }
@@ -87,6 +89,7 @@
 </head>
 <body>
 <div class="page">
+    <div class="lastup" id="lastup"></div>
     <div class="top">
         <div class="top-logo"><svg viewBox="0 0 156 158" fill="#00428b"><path d="M.47,55.36l18.05-31.47c.98-1.68,3.09-2.24,4.77-1.26l16.51,9.45c10.33,5.99,13.93,19.17,8,29.55-5.99,10.33-19.17,13.89-29.55,7.95L1.74,60.09c-1.64-.94-2.24-3.04-1.26-4.72Z"/><path d="M47.93,96.42c5.99,10.33,2.48,23.57-7.81,29.55l-16.46,9.59c-1.68.98-3.83.42-4.77-1.26L.66,102.92c-.98-1.68-.37-3.79,1.26-4.77l16.46-9.54c10.33-5.99,23.57-2.48,29.55,7.81Z"/><path d="M99.6,78.93c0,11.97-9.68,21.65-21.6,21.65s-21.6-9.68-21.6-21.65,9.68-21.6,21.6-21.6,21.6,9.68,21.6,21.6Z"/><path d="M99.6,3.46v19.08c0,11.92-9.68,21.6-21.6,21.6s-21.6-9.68-21.6-21.6V3.46c0-1.92,1.54-3.46,3.46-3.46h36.28c1.92,0,3.46,1.54,3.46,3.46Z"/><path d="M99.6,135.37v19.03c0,1.96-1.54,3.51-3.46,3.51h-36.28c-1.92,0-3.46-1.54-3.46-3.51v-19.03c0-11.92,9.68-21.6,21.6-21.6s21.6,9.68,21.6,21.6Z"/><path d="M155.43,102.54l-18.05,31.47c-.98,1.68-3.09,2.24-4.77,1.26l-16.51-9.45c-10.33-5.99-13.93-19.17-8-29.55,5.99-10.33,19.17-13.93,29.55-7.95l16.51,9.49c1.64.94,2.24,3.04,1.26,4.72Z"/><path d="M108.16,61.49c-6.03-10.33-2.52-23.57,7.81-29.55l16.46-9.59c1.68-.98,3.79-.42,4.77,1.26l18.24,31.38c.93,1.64.37,3.79-1.26,4.77l-16.46,9.54c-10.33,5.99-23.57,2.48-29.55-7.81Z"/></svg></div>
         <div>
@@ -308,6 +311,8 @@ Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("s
         PRODUCTS = build(data, farm, cbg, sfk, ems);
         buildSeries((data && data.records) || [], data && data.generated);
         renderKpis(data ? data.generated : "niet geladen");
+        const lu = document.getElementById("lastup");
+        if (lu && data && data.generated) lu.innerHTML = `<span>Laatste update: ${data.generated.split("-").reverse().join("-")}</span>`;
         render();
     });
 </script>
