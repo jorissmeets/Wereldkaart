@@ -1,9 +1,69 @@
 {
-"generated": "2026-08-12",
+"generated": "2026-09-10",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 184,
-"on_eml": 87,
+"count": 190,
+"on_eml": 91,
 "items": [
+{
+"product": "Nexviadyme100 mg poeder voor concentraat voor oplossing voor infusie",
+"mah": "Sanofi B.V.",
+"reg": "EU/1/21/1579",
+"reg_type": "EU",
+"datum": "2026-09-07",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Ixiaro, suspensie voor injectie",
+"mah": "Valneva Austria GmbH",
+"reg": "EU/1/08/501",
+"reg_type": "EU",
+"datum": "2026-09-07",
+"atc": "N05AH04",
+"eml": "oranje"
+},
+{
+"product": "Milrinon Devrimed 1 mg/ml, concentraat voor oplossing voor infusie",
+"mah": "DeVriMed B.V.",
+"reg": "109265",
+"reg_type": "RVG",
+"datum": "2026-09-03",
+"atc": "C01CE02",
+"eml": "rood",
+"prk": "105031",
+"prk_naam": "MILRINON INFOPL CONC 1MG/ML AMP 10ML"
+},
+{
+"product": "Foscavir 24 mg/ml oplossing voor infusie",
+"mah": "Clinigen Healthcare B.V.",
+"reg": "13057",
+"reg_type": "RVG",
+"datum": "2026-09-02",
+"atc": "J05AD01",
+"eml": "oranje",
+"prk": "33081",
+"prk_naam": "FOSCARNET INFVLST 24MG/ML FL 250ML"
+},
+{
+"product": "Pazopanib Accord 200 mg en 400 mg filmomhulde tabletten",
+"mah": "Accord Healthcare B.V.",
+"reg": "",
+"reg_type": "",
+"datum": "2026-09-01",
+"atc": "L01EX03",
+"eml": ""
+},
+{
+"product": "Clindamycine Kalceks 150 mg/ml oplossing voor injectie/infusie",
+"mah": "AS Kalceks",
+"reg": "129457",
+"reg_type": "RVG",
+"datum": "2026-09-01",
+"atc": "J01FF01",
+"eml": "rood",
+"prk": "4693",
+"prk_naam": "CLINDAMYCINE INJVLST 150MG/ML AMP 2ML"
+},
 {
 "product": "Zoledroninezuur Fresenius Kabi 4 mg/5 ml concentraat voor oplossing voor infusie",
 "mah": "Fresenius Kabi Nederland B.V.",
