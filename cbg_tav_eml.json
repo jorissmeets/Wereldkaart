@@ -1,9 +1,20 @@
 {
-"generated": "2026-09-10",
+"generated": "2026-09-14",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 190,
-"on_eml": 91,
+"count": 191,
+"on_eml": 92,
 "items": [
+{
+"product": "Ringer lactaat 1000 ml, infusievloeistof",
+"mah": "Fresenius Kabi Nederland B.V.",
+"reg": "51694",
+"reg_type": "RVG",
+"datum": "2026-09-10",
+"atc": "B05BB01",
+"eml": "rood",
+"prk": "57797",
+"prk_naam": "RINGER/LACTAAT INFVLST (BRAUN/FRESENIUS) ZK  500ML"
+},
 {
 "product": "Nexviadyme100 mg poeder voor concentraat voor oplossing voor infusie",
 "mah": "Sanofi B.V.",
