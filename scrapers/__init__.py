@@ -7,6 +7,7 @@ from scrapers.de_pei import DePeiScraper
 from scrapers.fr_ansm import FrAnsmScraper
 from scrapers.no_dmp import NoDmpScraper
 from scrapers.cz_sukl import CzSuklScraper
+from scrapers.bg_sespa import BgSespaScraper
 from scrapers.eu_ema import EuEmaScraper
 from scrapers.se_lv import SeLvScraper
 from scrapers.dk_lmst import DkLmstScraper
