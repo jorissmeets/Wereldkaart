@@ -455,6 +455,11 @@ def build():
             if cc == "FR":
                 last_updated = last_updated or shortage_start
                 shortage_start = None
+            # CZ/SÚKL 'nedostupne-lp' = actuele niet-beschikbaar-lijst: alles erop is NÚ een tekort,
+            # ook al is de startdatum oud. Zet last_updated op de scrapedatum zodat de >1-jaar-
+            # inactiefregel een lopend tekort niet verbergt (validatie/uitbreiding 17-09).
+            if cc == "CZ":
+                last_updated = scraped_at
 
             # Bereken resolved_date
             resolved_date = None

@@ -28,8 +28,12 @@ class CzSuklScraper(BaseScraper):
             base_url="https://prehledy.sukl.cz",
         )
 
-    def _lookup_substance(self, kod_sukl: str) -> str:
-        """Look up active substance via SÚKL drug database API."""
+    def _lookup_atc(self, kod_sukl: str) -> str:
+        """Haal de ATC-code op via de SÚKL geneesmiddel-detail-API (veld 'ATCkod').
+
+        De lijst-API (nedostupne-lp) geeft geen ATC; de detail-API wel. De oude
+        stof-lookup gaf alleen stof-ID's ([936]) terug, waardoor CZ zonder ATC bleef.
+        """
         if not kod_sukl:
             return ""
         try:
@@ -41,22 +45,11 @@ class CzSuklScraper(BaseScraper):
             if resp.status_code != 200:
                 return ""
             data = resp.json()
-            # Try common field names for active substance
-            for field in ("leciveLatkyCZ", "leciveLatky", "aktivniLatka", "ucinnaLatka"):
-                val = data.get(field, "")
-                if val:
-                    return str(val).strip()
-            # Try nested substances list
-            substances = data.get("leciveLatky", data.get("substances", []))
-            if isinstance(substances, list) and substances:
-                return ", ".join(
-                    str(s.get("nazev", s.get("name", ""))).strip()
-                    for s in substances
-                    if s.get("nazev") or s.get("name")
-                )
+            if isinstance(data, list):
+                data = data[0] if data else {}
+            return str(data.get("ATCkod", "")).strip().upper()
         except Exception:
-            pass
-        return ""
+            return ""
 
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
@@ -68,17 +61,17 @@ class CzSuklScraper(BaseScraper):
         data = response.json()
         print(f"  Downloaded {len(data)} records from API")
 
-        # Batch-lookup unique kodSUKL values for active substances
+        # Per uniek product de ATC-code ophalen via de detail-API
         unique_kods = {str(item.get("kodSUKL", "")).strip() for item in data if item.get("kodSUKL")}
-        print(f"  Looking up active substances for {len(unique_kods)} unique products...")
-        kod_substance_map: dict[str, str] = {}
+        print(f"  ATC opzoeken voor {len(unique_kods)} unieke producten...")
+        kod_atc_map: dict[str, str] = {}
         for i, kod in enumerate(unique_kods):
-            kod_substance_map[kod] = self._lookup_substance(kod)
+            kod_atc_map[kod] = self._lookup_atc(kod)
             if (i + 1) % 50 == 0:
-                print(f"    ... {i + 1}/{len(unique_kods)} lookups done")
+                print(f"    ... {i + 1}/{len(unique_kods)}")
             time.sleep(0.1)
-        found = sum(1 for v in kod_substance_map.values() if v)
-        print(f"  Substance found for {found}/{len(unique_kods)} products")
+        found = sum(1 for v in kod_atc_map.values() if v)
+        print(f"  ATC gevonden voor {found}/{len(unique_kods)} producten")
 
         records = []
         for item in data:
@@ -88,13 +81,14 @@ class CzSuklScraper(BaseScraper):
                 "country_name": self.country_name,
                 "source": self.source_name,
                 "medicine_name": str(item.get("nazev", "")).strip(),
-                "active_substance": kod_substance_map.get(kod, ""),
+                "active_substance": "",
                 "strength": str(item.get("doplnek", "")).strip(),
                 "package_size": "",
                 "product_no": kod,
                 "shortage_start": item.get("platOd", ""),
                 "estimated_end": item.get("platDo", ""),
                 "status": self.TYPE_MAP.get(item.get("typ"), "shortage"),
+                "atc_code": kod_atc_map.get(kod, ""),
                 "reference_no": str(item.get("cisloJednaciOd", "")).strip(),
                 "scraped_at": datetime.now().isoformat(),
             })
