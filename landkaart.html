@@ -1640,6 +1640,7 @@ function medCard(r, groupBy) {
     return `<div class="med-card">
         <div class="med-name">${escHtml(name)}</div>
         ${substance ? `<div class="med-substance">${escHtml(substance)}</div>` : ""}
+        ${r.co ? `<div class="med-substance" style="opacity:.82">${S.lang === "en" ? "MAH" : "Vergunninghouder"}: ${escHtml(r.co)}</div>` : ""}
         ${origLine}
         ${r.tv || r.df ? `<div class="med-substance" style="font-style:italic">${escHtml(r.tv ? tvLabel(r.tv) : r.df)}${r.tv_src === "atc" ? ` <span style="font-style:normal;color:var(--text-muted);font-size:10px" title="${S.lang === "en" ? "Route derived from the ATC code, not stated in the source notification" : "Toedieningsvorm afgeleid uit de ATC-code, niet vermeld in de bronmelding"}">(${S.lang === "en" ? "via ATC" : "via ATC"})</span>` : ''}</div>` : ""}
         ${r.prk ? `<div class="med-prk" title="${S.lang === "en" ? "G-standaard prescription code (PRK), matched to the Dutch product via AI (confidence ≥90%)" : "G-standaard voorschrijfcode (PRK), via AI gekoppeld aan het NL-product (confidence ≥90%)"}"><span class="prk-badge">PRK ${escHtml(r.prk)}</span>${r.prk_naam ? ` ${escHtml(r.prk_naam)}` : ""}</div>` : ""}

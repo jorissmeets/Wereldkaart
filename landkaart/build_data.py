@@ -426,15 +426,17 @@ def build():
             cc = safe_str(row.get("country_code")).upper()
             if not cc or len(cc) != 2:
                 continue
-            # NL/EU staan bewust niet op de kaart. LT/TR/EE er tijdelijk uit: die scrapen een
-            # registratie-/beschikbaarheidsregister i.p.v. gemelde tekorten (validatie Jesper 25-08).
-            if cc in ("NL", "EU", "LT", "TR", "EE"):
+            # NL/EU staan bewust niet op de kaart. LT/TR/EE: registratie-/beschikbaarheidsregister
+            # i.p.v. gemelde tekorten (validatie Jesper 25-08). ZA/KR/TW: algemene website, geen
+            # tekortenbron (validatie 28-08) -> ook eruit.
+            if cc in ("NL", "EU", "LT", "TR", "EE", "ZA", "KR", "TW"):
                 continue
 
             cn = safe_str(row.get("country_name")) or cc
             med = safe_str(row.get("medicine_name"))
             substance = safe_str(row.get("active_substance"))
             dosage_form = safe_str(row.get("dosage_form"))
+            company = safe_str(row.get("marketing_auth_holder") or row.get("mah") or row.get("company_name"))
             status_raw = safe_str(row.get("status")) or "shortage"
 
             shortage_start = parse_date(row.get("shortage_start"))
@@ -480,6 +482,8 @@ def build():
                 rec["mn"] = med
             if substance:
                 rec["sub"] = substance
+            if company:                                   # vergunninghouder/firma (validatie 28-08)
+                rec["co"] = company[:80]
 
             # PRK (G-standaard voorschrijfcode) via de OpenAI-matcher, alleen bij confidence >= 90%
             prk = safe_str(row.get("prk"))
