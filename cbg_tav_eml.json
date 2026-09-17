@@ -1,9 +1,27 @@
 {
-"generated": "2026-09-14",
+"generated": "2026-09-17",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 191,
-"on_eml": 92,
+"count": 193,
+"on_eml": 93,
 "items": [
+{
+"product": "Lyvdelzi 10 mg harde capsules",
+"mah": "Gilead Sciences Ireland UC",
+"reg": "EU/1/24/1898",
+"reg_type": "EU",
+"datum": "2026-09-14",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Thiamine HCl Eureco-Pharma 100 mg/ml",
+"mah": "Eureco-Pharma B.V.",
+"reg": "",
+"reg_type": "",
+"datum": "2026-09-14",
+"atc": "A11DA01",
+"eml": "rood"
+},
 {
 "product": "Ringer lactaat 1000 ml, infusievloeistof",
 "mah": "Fresenius Kabi Nederland B.V.",
