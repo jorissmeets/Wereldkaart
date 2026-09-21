@@ -109,9 +109,15 @@ class EeRavimiametScraper(BaseScraper):
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "lxml")
 
-        # Step 2: POST with supply disruption filter
+        # Step 2: POST with supply disruption filter.
+        # LET OP: het filter kent vier waarden -- 'Tarneraskusega' (mét leveringsproblemen),
+        # 'Turustamine lõpetatud' (marketing beëindigd), 'Mõlemad' (BEIDE) en 'Puudub' (geen).
+        # Dit stond op 'Mõlemad', waardoor ook middelen waarvan de marketing gewoon beëindigd
+        # was als tekort binnenkwamen. Daardoor oogde Estland als een registratielijst en is
+        # het in augustus 2026 van de kaart gehaald. Alleen 'Tarneraskusega' levert echte
+        # leveringsproblemen op.
         data = self._get_hidden_fields(soup)
-        data["ctl04$ctl00$ctl00$Detailotsing$tarneraskus"] = "Mõlemad"
+        data["ctl04$ctl00$ctl00$Detailotsing$tarneraskus"] = "Tarneraskusega"
         data["ctl04$ctl00$ctl00$Detailotsing$search2"] = "Otsi \u00bb"
 
         time.sleep(1)

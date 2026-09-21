@@ -2,8 +2,8 @@
 
 import re
 import json
-import time
 import requests
+from concurrent.futures import ThreadPoolExecutor
 from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import datetime
@@ -15,7 +15,7 @@ class DkLmstScraper(BaseScraper):
     """Scraper for Lægemiddelstyrelsen medicine shortage notices."""
 
     URL = "https://laegemiddelstyrelsen.dk/da/godkendelse/kontrol-og-inspektion/mangel-paa-medicin/meddelelser-om-forsyning-af-medicin/"
-    PAGE_SIZE = 20
+    PAGE_SIZE = 1000          # ruim boven het totaal: alles in een enkele call
 
     # GUIDs for table fields (from data-data attribute)
     FIELD_PRODUCT = "{4BE8272E-F07F-4CD6-BDEB-D175115B5B47}"
@@ -64,6 +64,55 @@ class DkLmstScraper(BaseScraper):
             pass
         return ""
 
+    def _fetch_all(self) -> list:
+        """Haal ALLE actuele meldingen in een keer op via de dynamiclists-API.
+
+        De pagina zelf rendert altijd maar de eerste 20 rijen: zowel `page` als `pageSize`
+        in de URL worden door de server genegeerd (een eerdere versie van deze scraper
+        dacht daardoor te pagineren en haalde 19x dezelfde 20 records op). Het doorbladeren
+        gebeurt in werkelijkheid door een Vue-app die POST naar
+        /content/api/dynamiclists/{listId}.
+
+        Twee dingen zijn daarbij essentieel:
+          - `filterQueries` moet als LIJST van {key, value} worden gestuurd, terwijl de
+            pagina het als object meegeeft. Stuur je het object, dan antwoordt de server
+            met een redirect naar de foutpagina.
+          - De headers RequestVerificationToken / SitecoreId / SitecoreLanguage komen uit
+            de data-attributen van het app-element.
+
+        Met pageSize ruim boven het totaal komt alles in een enkele call binnen.
+        """
+        sess = requests.Session()
+        sess.headers.update({"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                                           "AppleWebKit/537.36 (KHTML, like Gecko) "
+                                           "Chrome/120.0 Safari/537.36"})
+        pagina = sess.get(self.URL, timeout=60)
+        pagina.raise_for_status()
+        el = BeautifulSoup(pagina.text, "lxml").find(attrs={"data-results": True})
+        if el is None:
+            raise RuntimeError("dynamiclist-app niet gevonden op de LMST-pagina")
+
+        query = json.loads(el.get("data-query", "{}"))
+        query["filterQueries"] = [{"key": k, "value": v}
+                                  for k, v in (query.get("filterQueries") or {}).items()]
+        query["pagingOptions"] = {"pageSize": self.PAGE_SIZE, "page": 0, "disablePaging": False}
+
+        lijst_id = json.loads(el.get("data-data", "{}")).get("id")
+        resp = sess.post(
+            f"{self.base_url}/content/api/dynamiclists/{lijst_id}",
+            headers={"RequestVerificationToken": el.get("data-antiforgery-token", ""),
+                     "SitecoreId": el.get("data-id", ""),
+                     "SitecoreLanguage": el.get("data-lang", "da"),
+                     "Accept": "application/json",
+                     "Content-Type": "application/json"},
+            json=query, timeout=120)
+        resp.raise_for_status()
+        data = resp.json()
+        teller = data.get("counter") or {}
+        if teller:
+            print(f"  bron meldt: {teller.get('itemCount')}")
+        return data.get("results") or []
+
     @staticmethod
     def _pub_to_date(s: str) -> str:
         """ISO-timestamp (2026-07-22T13:14:00Z) -> 2026-07-22."""
@@ -97,51 +146,17 @@ class DkLmstScraper(BaseScraper):
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
 
-        all_results = []
-        page = 0
-
-        total_expected = None
-        while True:
-            url = f"{self.URL}?page={page}&pageSize={self.PAGE_SIZE}"
-            response = requests.get(url, timeout=30,
-                                    headers={"User-Agent": "Mozilla/5.0"})
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, "lxml")
-
-            el = soup.find(attrs={"data-results": True})
-            if not el:
-                break
-
-            results = json.loads(el.get("data-results", "[]"))
-            if not results:
-                break
-
-            if page == 0:
-                counter = json.loads(el.get("data-counter", "{}"))
-                total_expected = counter.get("totalResults")
-                print(f"  Total results: {total_expected}")
-
-            all_results.extend(results)
-            page += 1
-
-            if len(results) < self.PAGE_SIZE:
-                break
-
-            # Safety: stop when we've fetched more than the reported total
-            if total_expected and len(all_results) >= int(total_expected):
-                break
-
-        print(f"  Downloaded {len(all_results)} records across {page} pages")
+        all_results = self._fetch_all()
+        print(f"  Downloaded {len(all_results)} records")
 
         # Batch-lookup substances from detail pages
-        detail_urls = {item.get("url", "") for item in all_results if item.get("url")}
+        detail_urls = sorted({item.get("url", "") for item in all_results if item.get("url")})
         print(f"  Scraping {len(detail_urls)} detail pages for active substances...")
-        url_substance_map: dict[str, str] = {}
-        for i, durl in enumerate(detail_urls):
-            url_substance_map[durl] = self._scrape_detail_substance(durl)
-            if (i + 1) % 20 == 0:
-                print(f"    ... {i + 1}/{len(detail_urls)} detail pages done")
-            time.sleep(0.2)
+        # Parallel: een voor een duurde bij 364 meldingen ruim drie minuten en liep daarmee
+        # tegen de time-out van de rerun-runner aan.
+        with ThreadPoolExecutor(max_workers=12) as ex:
+            stoffen = list(ex.map(self._scrape_detail_substance, detail_urls))
+        url_substance_map: dict[str, str] = dict(zip(detail_urls, stoffen))
         found = sum(1 for v in url_substance_map.values() if v)
         print(f"  Substance found for {found}/{len(detail_urls)} products")
 

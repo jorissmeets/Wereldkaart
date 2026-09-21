@@ -1,0 +1,1055 @@
+country_code,country_name,source,medicine_name,active_substance,strength,package_size,product_no,shortage_start,estimated_end,status,scraped_at,atc_code,prk
+LV,Latvia,ZVA,Abacavir/Lamivudine Mylan 600 mg/300 mg film-coated tablets,"Abacavirum, Lamivudinum",600 mg/300 mg,30 pcs,18-0056-01,2025-06-03,,leaving the market,2026-09-21T13:18:35.484693,,
+LV,Latvia,ZVA,Abilify,Aripiprazolum,"9,75 mg/1,3 ml",1 pc,EU/1/04/276/036,2022-01-31,,shortage - end date unknown,2026-09-21T13:18:35.484744,N05AX12,86118
+LV,Latvia,ZVA,Abiraterone Krka,Abirateroni acetas,500 mg,60 pcs,EU/1/21/1553/002,2024-07-03,,shortage - end date unknown,2026-09-21T13:18:35.484777,L02BX03,136913
+LV,Latvia,ZVA,Abiraterone Olpha 500 mg film-coated tablets,Abirateroni acetas,500 mg,60 pcs,23-0195-02,2026-09-09,2026-10-15,shortage,2026-09-21T13:18:35.484813,L02BX03,136913
+LV,Latvia,ZVA,Abiraterone Sandoz 1000 mg film-coated tablets,Abirateroni acetas,1000 mg,30 pcs,21-0092-02,2024-11-19,,shortage - end date unknown,2026-09-21T13:18:35.484836,L02BX03,216526
+LV,Latvia,ZVA,Abrea 75 mg gastro-resistant tablets,Acidum acetylsalicylicum,75 mg,90 pcs,17-0001-07,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:35.484858,B01AC06,
+LV,Latvia,ZVA,Acard 150 mg gastro-resistant tablets,Acidum acetylsalicylicum,150 mg,60 pcs,16-0239-02,2020-08-28,,shortage - end date unknown,2026-09-21T13:18:35.484879,B01AC06,
+LV,Latvia,ZVA,Acard 75 mg gastro-resistant tablets,Acidum acetylsalicylicum,75 mg,60 pcs,16-0238-02,2020-08-28,,shortage - end date unknown,2026-09-21T13:18:35.484900,B01AC06,
+LV,Latvia,ZVA,Aceclofenac Rivopharm 100 mg film-coated tablets,Aceclofenacum,100 mg,20 pcs,15-0046-01,2023-06-01,,shortage - end date unknown,2026-09-21T13:18:35.484922,M01AB16,49522
+LV,Latvia,ZVA,Aceterin 10 mg film-coated tablets,Cetirizini dihydrochloridum,10 mg,30 pcs,03-0257-01,2026-04-30,,leaving the market,2026-09-21T13:18:35.484947,R06AE07,26298
+LV,Latvia,ZVA,Acetilsalicilskābe Stirol 325 mg tabletes,Acidum acetylsalicylicum,325 mg,12 pcs,00-0085-02,2016-10-31,,shortage - end date unknown,2026-09-21T13:18:35.484971,B01AC06,
+LV,Latvia,ZVA,Acic 200 mg tablets,Aciclovirum,200 mg,25 pcs,03-0122-01,2020-02-05,,shortage - end date unknown,2026-09-21T13:18:35.484992,J05AB01,40991
+LV,Latvia,ZVA,Aciloc 25 mg/ml solution for injection,Ranitidinum,50 mg/2 ml,5 pcs,94-0323-01,2019-11-15,,shortage - end date unknown,2026-09-21T13:18:35.485012,A02BA02,126993
+LV,Latvia,ZVA,Actifed 30 mg/1.25 mg/5 ml syrup,"Triprolidini hydrochloridum, Pseudoephedrini hydrochloridum",100 ml,1 pc,98-0624-01,2024-10-20,,shortage - end date unknown,2026-09-21T13:18:35.485032,,
+LV,Latvia,ZVA,Actos,Pioglitazonum,30 mg,28 pcs,EU/1/00/150/004,2018-01-01,,shortage - end date unknown,2026-09-21T13:18:35.485052,A10BG03,84247
+LV,Latvia,ZVA,Actos,Pioglitazonum,15 mg,28 pcs,EU/1/00/150/001,2018-01-01,,shortage - end date unknown,2026-09-21T13:18:35.485072,A10BG03,
+LV,Latvia,ZVA,Acyclovir Stada 50 mg/g cream,Aciclovirum,250 mg/5 g,1 pc,00-1167-01,2026-06-08,2026-10-15,shortage,2026-09-21T13:18:35.485102,J05AB01,
+LV,Latvia,ZVA,Adrenaline Sopharma 1 mg/ml solution for injection,Epinephrinum,1 mg/1 ml,100 pcs,05-0362-02,2018-03-14,,shortage - end date unknown,2026-09-21T13:18:35.485124,C01CA24,145416
+LV,Latvia,ZVA,Aerius,Desloratadinum,60 ml,1 pc,EU/1/00/160/063,2019-08-01,,shortage - end date unknown,2026-09-21T13:18:35.485145,R06AX27,86886
+LV,Latvia,ZVA,Aerius,Desloratadinum,5 mg,10 pcs,EU/1/00/160/006,2018-08-02,,shortage - end date unknown,2026-09-21T13:18:35.485165,R06AX27,59021
+LV,Latvia,ZVA,Aerius,Desloratadinum,5 mg,30 pcs,EU/1/00/160/011,2019-08-01,,shortage - end date unknown,2026-09-21T13:18:35.485185,R06AX27,59021
+LV,Latvia,ZVA,Afinitor,Everolimusum,5 mg,30 pcs,EU/1/09/538/001,2018-10-17,,shortage - end date unknown,2026-09-21T13:18:35.485205,L01EG02,92568
+LV,Latvia,ZVA,"Aforbe 100 micrograms/6 micrograms actuation pressurised inhalation, solution","Beclometasoni dipropionas, Formoteroli fumaras dihydricus",100 µg/6 µg,1 pc,22-0148-01,2025-05-01,,leaving the market,2026-09-21T13:18:35.485228,,
+LV,Latvia,ZVA,Agen 10 mg tablets,Amlodipinum,10 mg,30 pcs,06-0182-02,2025-05-13,,leaving the market,2026-09-21T13:18:35.485251,C08CA01,123323
+LV,Latvia,ZVA,Agen 5 mg tablets,Amlodipinum,5 mg,30 pcs,06-0181-02,2025-03-13,,shortage - end date unknown,2026-09-21T13:18:35.485272,C08CA01,123315
+LV,Latvia,ZVA,Alendronic acid/Colecalciferol Zentiva 70 mg/5600 IU tablets,"Acidum alendronicum, Colecalciferolum",70 mg/5600 IU,4 pcs,17-0140-02,2023-01-25,,shortage - end date unknown,2026-09-21T13:18:35.485294,,
+LV,Latvia,ZVA,Alfacalcidol Theramex 0.25 micrograms soft capsules,Alfacalcidolum,"0,25 µg",30 pcs,96-0301-06,2023-07-12,,shortage - end date unknown,2026-09-21T13:18:35.485317,A11CC03,14737
+LV,Latvia,ZVA,Alfacalcidol Theramex 0.5 micrograms soft capsules,Alfacalcidolum,"0,5 µg",30 pcs,05-0315-02,2026-05-19,,shortage - end date unknown,2026-09-21T13:18:35.485339,A11CC03,54763
+LV,Latvia,ZVA,Alfacalcidol Theramex 1 microgram soft capsules,Alfacalcidolum,1 µg,10 pcs,01-0419-01,2020-07-21,,shortage - end date unknown,2026-09-21T13:18:35.485366,A11CC03,3549
+LV,Latvia,ZVA,Alfuzosin-Teva 10 mg prolonged release tablets,Alfuzosini hydrochloridum,10 mg,30 pcs,07-0219-02,2025-03-01,,shortage - end date unknown,2026-09-21T13:18:35.485387,G04CA01,54798
+LV,Latvia,ZVA,Alimta,Pemetrexedum,100 mg,1 pc,EU/1/04/290/002,2022-01-01,,shortage - end date unknown,2026-09-21T13:18:35.485408,L01BA04,138061
+LV,Latvia,ZVA,Alimta,Pemetrexedum,500 mg,1 pc,EU/1/04/290/001,2022-01-01,,shortage - end date unknown,2026-09-21T13:18:35.485428,L01BA04,138088
+LV,Latvia,ZVA,Alluzience 200 Speywood units/ml solution for injection,Toxinum A Clostridii botulini haemagglutininum multiplex,125 Speywood units,1 pc,21-0121-01,2023-10-04,,shortage - end date unknown,2026-09-21T13:18:35.485448,,
+LV,Latvia,ZVA,Almagel A 436 mg/150 mg/218 mg/10 ml suspension for oral use,"Aluminii hydroxidum, Magnesii hydroxidum, Benzocainum",170 ml,1 pc,I000125-01,2020-04-09,,shortage - end date unknown,2026-09-21T13:18:35.485469,,
+LV,Latvia,ZVA,Alpicort 0.4 g/100 ml/0.2 g/100 ml cutaneous solution,"Acidum salicylicum, Prednisolonum",100 ml,1 pc,I001302-01,2025-11-10,,shortage - end date unknown,2026-09-21T13:18:35.485492,,
+LV,Latvia,ZVA,Alprazolam Orion 0.5 mg tablets,Alprazolamum,"0,5 mg",30 pcs,11-0076-02,2017-01-01,,shortage - end date unknown,2026-09-21T13:18:35.485513,N05BA12,31925
+LV,Latvia,ZVA,"Alprazolam-Grindeks 0,5 mg tabletes",Alprazolamum,"0,5 mg",30 pcs,00-1033-01,2025-11-06,,leaving the market,2026-09-21T13:18:35.485537,N05BA12,31925
+LV,Latvia,ZVA,"Alvesco 160 micrograms pressurised inhalation, solution",Ciclesonidum,160 µg,60 pcs,05-0019-03,2023-11-23,,shortage - end date unknown,2026-09-21T13:18:35.485559,R01AD13,52434
+LV,Latvia,ZVA,Alyostal Prick,Allergenum extractum,"4,5 ml",1 pc,02-0154-01,2021-06-15,,shortage - end date unknown,2026-09-21T13:18:35.485578,,
+LV,Latvia,ZVA,Amiokordin 200 mg tablets,Amiodaroni hydrochloridum,200 mg,30 pcs,00-0558-02,2019-07-01,,shortage - end date unknown,2026-09-21T13:18:35.485602,C01BD01,1554
+LV,Latvia,ZVA,"Amiptic 20 mg/5 mg/ml eye drops, solution","Dorzolamidum, Timololum",5 ml,1 pc,13-0099-01,2022-04-08,,shortage - end date unknown,2026-09-21T13:18:35.485621,,
+LV,Latvia,ZVA,Amisan 200 mg tablets,Amisulpridum,200 mg,30 pcs,09-0354-02,2020-01-01,,shortage - end date unknown,2026-09-21T13:18:35.485641,N05AL05,
+LV,Latvia,ZVA,Amisan 400 mg film-coated tablets,Amisulpridum,400 mg,30 pcs,09-0355-02,2020-01-01,,shortage - end date unknown,2026-09-21T13:18:35.485661,N05AL05,
+LV,Latvia,ZVA,Amlessa 4 mg/5 mg tablets,"Tert-butylamini perindoprilum, Amlodipinum",4 mg/5 mg,90 pcs,11-0360-11,2022-12-22,,shortage - end date unknown,2026-09-21T13:18:35.485681,,
+LV,Latvia,ZVA,Amlessa 8 mg/10 mg tablets,"Tert-butylamini perindoprilum, Amlodipinum",8 mg/10 mg,90 pcs,11-0361-11,2024-05-15,,shortage - end date unknown,2026-09-21T13:18:35.485701,,
+LV,Latvia,ZVA,Amlessa 8 mg/5 mg tablets,"Tert-butylamini perindoprilum, Amlodipinum",8 mg/5 mg,90 pcs,11-0362-11,2024-05-15,,shortage - end date unknown,2026-09-21T13:18:35.485720,,
+LV,Latvia,ZVA,Amlodipine Vitabalans 10 mg tablets,Amlodipinum,10 mg,100 pcs,11-0281-03,2025-01-01,,shortage - end date unknown,2026-09-21T13:18:35.485740,C08CA01,123323
+LV,Latvia,ZVA,Amlodipine Vitabalans 10 mg tablets,Amlodipinum,10 mg,30 pcs,11-0281-01,2025-01-01,,shortage - end date unknown,2026-09-21T13:18:35.485759,C08CA01,123323
+LV,Latvia,ZVA,Amlodipine Vitabalans 5 mg tablets,Amlodipinum,5 mg,30 pcs,11-0280-01,2023-07-07,,shortage - end date unknown,2026-09-21T13:18:35.485780,C08CA01,123315
+LV,Latvia,ZVA,Amoksiklav 875 mg/125 mg dispersible/orodispersible tablets,"Amoxicillinum, Acidum clavulanicum",875 mg/125 mg,14 pcs,05-0171-02,2017-11-30,,shortage - end date unknown,2026-09-21T13:18:35.485800,,
+LV,Latvia,ZVA,Amoksiklav 875 mg/125 mg film-coated tablets,"Amoxicillinum, Acidum clavulanicum",875 mg/125 mg,14 pcs,I000845-01,2022-12-12,,shortage - end date unknown,2026-09-21T13:18:35.950002,,
+LV,Latvia,ZVA,Androcur 50 mg tablets,Cyproteroni acetas,50 mg,50 pcs,95-0266-03,2025-02-01,,leaving the market,2026-09-21T13:18:35.950057,L02AA01,2712
+LV,Latvia,ZVA,Angusta 25 micrograms tablets,Misoprostolum,25 µg,8 pcs,18-0010-01,2023-05-17,,shortage - end date unknown,2026-09-21T13:18:35.950105,G02AD06,30732
+LV,Latvia,ZVA,Apredonav 5 mg film-coated tablets,Ivabradinum,5 mg,56 pcs,19-0012-03,2026-05-08,2026-09-28,shortage,2026-09-21T13:18:35.950154,C01EB17,81213
+LV,Latvia,ZVA,Apredonav 7.5 mg film-coated tablets,Ivabradinum,"7,5 mg",56 pcs,19-0013-03,2025-04-14,2026-09-28,shortage,2026-09-21T13:18:35.950199,C01EB17,81213
+LV,Latvia,ZVA,Aprovel,Irbesartanum,150 mg,30 pcs,EU/1/97/046/035,2021-12-15,,shortage - end date unknown,2026-09-21T13:18:35.950231,C09CA04,48798
+LV,Latvia,ZVA,Aprovel,Irbesartanum,150 mg,28 pcs,EU/1/97/046/022,2022-02-25,,shortage - end date unknown,2026-09-21T13:18:35.950266,C09CA04,48798
+LV,Latvia,ZVA,Aprovel,Irbesartanum,300 mg,28 pcs,EU/1/97/046/027,2022-02-25,,shortage - end date unknown,2026-09-21T13:18:35.950305,C09CA04,48801
+LV,Latvia,ZVA,Arduan 4 mg powder and solvent for solution for injection,Pipecuronii bromidum,4 mg,25 pcs,97-0138-01,2021-06-30,,shortage - end date unknown,2026-09-21T13:18:35.950338,M03AC02,
+LV,Latvia,ZVA,Aripiprazole Mylan Pharma,Aripiprazolum,15 mg,28 pcs,EU/1/15/1005/008,2019-01-01,,shortage - end date unknown,2026-09-21T13:18:35.950369,N05AX12,75256
+LV,Latvia,ZVA,Aripiprazole Zentiva,Aripiprazolum,15 mg,28 pcs,EU/1/15/1009/012,2020-11-10,,shortage - end date unknown,2026-09-21T13:18:35.950400,N05AX12,75256
+LV,Latvia,ZVA,Arisppa 10 mg tablets,Aripiprazolum,10 mg,14 pcs,15-0037-01,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:35.950430,N05AX12,75248
+LV,Latvia,ZVA,Arisppa 10 mg tablets,Aripiprazolum,10 mg,30 pcs,15-0037-03,2017-05-24,,shortage - end date unknown,2026-09-21T13:18:35.950459,N05AX12,75248
+LV,Latvia,ZVA,Arisppa 15 mg tablets,Aripiprazolum,15 mg,28 pcs,15-0038-02,2021-12-22,,shortage - end date unknown,2026-09-21T13:18:35.950488,N05AX12,75256
+LV,Latvia,ZVA,Arisppa 15 mg tablets,Aripiprazolum,15 mg,30 pcs,15-0038-03,2019-07-01,,shortage - end date unknown,2026-09-21T13:18:35.950518,N05AX12,75256
+LV,Latvia,ZVA,Asacol 500 mg suppositories,Mesalazinum,500 mg,20 pcs,04-0434-01,2025-10-01,,shortage - end date unknown,2026-09-21T13:18:35.950548,A07EC02,24686
+LV,Latvia,ZVA,Ascophen P tablets,"Acidum acetylsalicylicum, Paracetamolum, Coffeinum",1 UD,10 pcs,98-0107-01,2020-08-13,,shortage - end date unknown,2026-09-21T13:18:35.950577,,
+LV,Latvia,ZVA,Asentra 100 mg film-coated tablets,Sertralinum,100 mg,28 pcs,03-0281-01,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:35.950607,N06AB06,39411
+LV,Latvia,ZVA,Asolfena 10 mg film-coated tablets,Solifenacini succinas,10 mg,30 pcs,10-0654-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:35.950637,G04BD08,75345
+LV,Latvia,ZVA,Asolfena 5 mg film-coated tablets,Solifenacini succinas,5 mg,30 pcs,10-0655-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:35.950667,G04BD08,75337
+LV,Latvia,ZVA,Atgam 50 mg/ml concentrate for solution for infusion,Immunoglobulinum antithymocytorum ex equini ad usum humanum,5 ml,5 pcs,22-0004-01,2025-12-01,2026-11-30,shortage,2026-09-21T13:18:35.950708,,
+LV,Latvia,ZVA,Atimos 12 micrograms/actuation pressurised inhalation solution,Formoteroli fumaras dihydricus,12 µg/dose,100 pcs,07-0102-02,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:35.950739,R03AC13,73350
+LV,Latvia,ZVA,Atordapin 10 mg + 10 mg film-coated tablets,"Amlodipinum, Atorvastatinum",10 mg/10 mg,30 pcs,13-0059-05,2026-05-27,,leaving the market,2026-09-21T13:18:35.950774,,
+LV,Latvia,ZVA,Atordapin 5 mg + 10 mg film-coated tablets,"Amlodipinum, Atorvastatinum",5 mg/10 mg,30 pcs,14-0133-05,2026-05-27,,leaving the market,2026-09-21T13:18:35.950807,,
+LV,Latvia,ZVA,Atoris 10 mg film-coated tablets,Atorvastatinum,10 mg,30 pcs,03-0362-01,2025-08-21,,shortage - end date unknown,2026-09-21T13:18:35.950831,C10AA05,98604
+LV,Latvia,ZVA,Atoris 20 mg film-coated tablets,Atorvastatinum,20 mg,30 pcs,03-0363-01,2025-03-20,,leaving the market,2026-09-21T13:18:35.950857,C10AA05,98612
+LV,Latvia,ZVA,Atoris 40 mg film-coated tablets,Atorvastatinum,40 mg,30 pcs,05-0169-01,2025-12-16,,shortage - end date unknown,2026-09-21T13:18:35.950879,C10AA05,98620
+LV,Latvia,ZVA,Atoris 80 mg film-coated tablets,Atorvastatinum,80 mg,30 pcs,10-0607-01,2021-06-30,,shortage - end date unknown,2026-09-21T13:18:35.950902,C10AA05,98639
+LV,Latvia,ZVA,Atorvastatin TAD 40 mg film-coated tablets,Atorvastatinum,40 mg,30 pcs,12-0104-07,2025-12-16,,leaving the market,2026-09-21T13:18:35.950927,C10AA05,98620
+LV,Latvia,ZVA,Atorvastatin Teva 20 mg film-coated tablets,Atorvastatinum,20 mg,30 pcs,14-0005-06,2026-04-27,,leaving the market,2026-09-21T13:18:35.950952,C10AA05,98612
+LV,Latvia,ZVA,Atorvastatin Unifarma 20 mg film-coated tablets,Atorvastatinum,20 mg,30 pcs,22-0115-05,2026-04-28,,shortage - end date unknown,2026-09-21T13:18:35.950975,C10AA05,98612
+LV,Latvia,ZVA,Atorvastatin Unifarma 40 mg film-coated tablets,Atorvastatinum,40 mg,30 pcs,22-0116-05,2026-04-28,,shortage - end date unknown,2026-09-21T13:18:35.950997,C10AA05,98620
+LV,Latvia,ZVA,Atorvastatin Zentiva 10 mg film-coated tablets,Atorvastatinum,10 mg,30 pcs,15-0051-06,2024-04-04,,shortage - end date unknown,2026-09-21T13:18:35.951020,C10AA05,98604
+LV,Latvia,ZVA,Atorvastatin Zentiva 20 mg film-coated tablets,Atorvastatinum,20 mg,90 pcs,15-0052-12,2025-08-20,,shortage - end date unknown,2026-09-21T13:18:35.951043,C10AA05,98612
+LV,Latvia,ZVA,Atorvastatin Zentiva 20 mg film-coated tablets,Atorvastatinum,20 mg,30 pcs,15-0052-06,2025-08-20,,shortage - end date unknown,2026-09-21T13:18:35.951066,C10AA05,98612
+LV,Latvia,ZVA,Atorvastatin Zentiva 40 mg film-coated tablets,Atorvastatinum,40 mg,30 pcs,15-0053-05,2025-08-20,,shortage - end date unknown,2026-09-21T13:18:35.951089,C10AA05,98620
+LV,Latvia,ZVA,Atorvastatin/Ezetimibe Teva 80 mg/10 mg film-coated tablets,"Atorvastatinum, Ezetimibum",80 mg/10 mg,30 pcs,24-0026-02,2026-04-27,,leaving the market,2026-09-21T13:18:35.951115,,
+LV,Latvia,ZVA,Atropine Sopharma 1 mg/ml solution for injection,Atropini sulfas,1 mg/1 ml,100 pcs,05-0442-02,2018-03-20,,shortage - end date unknown,2026-09-21T13:18:35.951139,A03BA01,112283
+LV,Latvia,ZVA,Atsimutin 50 mg film-coated tablets,Azathioprinum,50 mg,100 pcs,15-0273-06,2022-01-31,,shortage - end date unknown,2026-09-21T13:18:35.951163,L04AX01,5681
+LV,Latvia,ZVA,Aubagio,Teriflunomidum,7 mg,28 pcs,EU/1/13/838/006,2024-09-01,,shortage - end date unknown,2026-09-21T13:18:35.951187,L04AA24,
+LV,Latvia,ZVA,Augmentin 875 mg/125 mg film-coated tablets,"Amoxicillinum, Acidum clavulanicum",875 mg/125 mg,14 pcs,I001510-01,2022-12-14,,shortage - end date unknown,2026-09-21T13:18:35.951211,,
+LV,Latvia,ZVA,Augmentin Fruit 400 mg/57 mg/5 ml powder for oral suspension,"Amoxicillinum, Acidum clavulanicum",70 ml,1 pc,17-0184-02,2023-02-01,,shortage - end date unknown,2026-09-21T13:18:35.951234,,
+LV,Latvia,ZVA,Avastin,Bevacizumabum,100 mg/4 ml,1 pc,EU/1/04/300/001,2026-01-20,2027-01-20,shortage,2026-09-21T13:18:35.951264,L01FG01,76910
+LV,Latvia,ZVA,Avelox 400 mg/250 ml solution for infusion,Moxifloxacinum,400 mg/250 ml,5 pcs,04-0395-01,2018-12-18,,shortage - end date unknown,2026-09-21T13:18:35.951287,J01MA14,67636
+LV,Latvia,ZVA,Avelox 400 mg/250 ml solution for infusion,Moxifloxacinum,400 mg/250 ml,1 pc,04-0395-02,2026-04-06,,leaving the market,2026-09-21T13:18:35.951312,J01MA14,67636
+LV,Latvia,ZVA,Axetine 750 mg powder for solution for injection/infusion,Cefuroximum,750 mg/10 ml,10 pcs,02-0291-02,2022-12-29,,shortage - end date unknown,2026-09-21T13:18:35.951335,J01DC02,8192
+LV,Latvia,ZVA,Azacitidine Mylan,Azacitidinum,100 mg,1 pc,EU/1/20/1426/001,2024-09-30,,leaving the market,2026-09-21T13:18:35.951360,L01BC07,88692
+LV,Latvia,ZVA,Azalia 75 microgram film-coated tablets,Desogestrelum,75 µg,84 pcs,07-0378-02,2018-12-11,,shortage - end date unknown,2026-09-21T13:18:35.951382,G03AC09,56111
+LV,Latvia,ZVA,"Bedufora 100 micrograms/6 micrograms per actuation pressurised inhalation, solution","Beclometasoni dipropionas, Formoteroli fumaras dihydricus",100 µg/6 µg,1 pc,24-0293-01,2025-12-20,2035-12-31,shortage,2026-09-21T13:18:35.951413,,
+LV,Latvia,ZVA,"Bedufora 200 micrograms/6 micrograms per actuation pressurised inhalation, solution","Beclometasoni dipropionas, Formoteroli fumaras dihydricus",200 µg/6 µg,1 pc,24-0294-01,2025-12-20,2035-12-31,shortage,2026-09-21T13:18:35.951443,,
+LV,Latvia,ZVA,Bemfola,Follitropinum alfa,"450 IU/0,75 ml",1 pc,EU/1/13/909/005,2025-09-01,,shortage - end date unknown,2026-09-21T13:18:36.203277,G03GA05,
+LV,Latvia,ZVA,Benfogamma 50 mg coated tablets,Benfotiaminum,50 mg,50 pcs,00-0796-01,2025-09-11,,shortage - end date unknown,2026-09-21T13:18:36.203337,A11DA03,
+LV,Latvia,ZVA,Benlysta,Belimumabum,120 mg,1 pc,EU/1/11/700/001,2023-12-05,,shortage - end date unknown,2026-09-21T13:18:36.203376,L04AA32,98140
+LV,Latvia,ZVA,"Berotec N 100 micrograms/dose pressurised inhalation, solution",Fenoteroli hydrobromidum,100 µg/1 dose,200 pcs,00-0611-01,2026-04-29,,shortage - end date unknown,2026-09-21T13:18:36.203412,R03AC02,125571
+LV,Latvia,ZVA,Betac 20 mg film-coated tablets,Betaxololi hydrochloridum,20 mg,30 pcs,04-0209-01,2025-09-18,,shortage - end date unknown,2026-09-21T13:18:36.203444,C07AB05,214582
+LV,Latvia,ZVA,Betaklav 500 mg/125 mg film-coated tablets,"Amoxicillinum, Acidum clavulanicum",500 mg/125 mg,20 pcs,15-0237-15,2022-11-07,,shortage - end date unknown,2026-09-21T13:18:36.203475,,
+LV,Latvia,ZVA,Betaloc ZOK 100 mg prolonged release tablets,Metoprololi succinas,100 mg,30 pcs,I000270-01,2020-02-26,,shortage - end date unknown,2026-09-21T13:18:36.203504,C07AB02,26190
+LV,Latvia,ZVA,Betaserc 24 mg tablets,Betahistini dihydrochloridum,24 mg,60 pcs,I000611-01,2020-08-25,,shortage - end date unknown,2026-09-21T13:18:36.203535,N07CA01,93378
+LV,Latvia,ZVA,Bicalutamide TEVA 50 mg film-coated tablets,Bicalutamidum,50 mg,28 pcs,07-0139-02,2025-03-01,,leaving the market,2026-09-21T13:18:36.203576,L02BG03,45020
+LV,Latvia,ZVA,Bilobil 120 mg hard capsules,Ginkgonis extractum siccum raffinatum et quantificatum,120 mg,60 pcs,11-0117-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:36.203607,,
+LV,Latvia,ZVA,"Bimican 0.3 mg/ml eye drops, solution",Bimatoprostum,"0,9 mg/3 ml",1 pc,14-0001-01,2020-01-20,,shortage - end date unknown,2026-09-21T13:18:36.203636,S01EE03,201022
+LV,Latvia,ZVA,Bisogamma 10 mg film-coated tablets,Bisoprololi fumaras,10 mg,30 pcs,04-0021-01,2025-07-31,,leaving the market,2026-09-21T13:18:36.203671,C07AB07,25542
+LV,Latvia,ZVA,Bisogamma 5 mg film-coated tablets,Bisoprololi fumaras,5 mg,30 pcs,04-0020-01,2025-10-10,,leaving the market,2026-09-21T13:18:36.203705,C07AB07,25534
+LV,Latvia,ZVA,Bisoprolol Accord 10 mg film-coated tablets,Bisoprololi fumaras,10 mg,30 pcs,15-0337-03,2025-01-01,,leaving the market,2026-09-21T13:18:36.203739,C07AB07,25542
+LV,Latvia,ZVA,Bisoprolol Accord 5 mg film-coated tablets,Bisoprololi fumaras,5 mg,30 pcs,15-0336-03,2025-01-01,,leaving the market,2026-09-21T13:18:36.203770,C07AB07,25534
+LV,Latvia,ZVA,Bisoprolol Vitabalans 5 mg tablets,Bisoprololi hemifumaras,5 mg,100 pcs,08-0337-08,2025-01-02,,shortage - end date unknown,2026-09-21T13:18:36.203800,,
+LV,Latvia,ZVA,Bisoprolol Vitabalans 5 mg tablets,Bisoprololi hemifumaras,5 mg,100 pcs,08-0337-17,2025-01-01,,shortage - end date unknown,2026-09-21T13:18:36.203829,,
+LV,Latvia,ZVA,Bisoprolol Zentiva 10 mg tablets,Bisoprololi fumaras,10 mg,30 pcs,21-0066-09,2025-06-05,,leaving the market,2026-09-21T13:18:36.203861,C07AB07,25542
+LV,Latvia,ZVA,Bisoprolol Zentiva 5 mg tablets,Bisoprololi fumaras,5 mg,30 pcs,21-0065-08,2025-11-01,,shortage - end date unknown,2026-09-21T13:18:36.203890,C07AB07,25534
+LV,Latvia,ZVA,Bisoprolol Zentiva 5 mg tablets,Bisoprololi fumaras,5 mg,30 pcs,21-0065-02,2025-10-30,,shortage - end date unknown,2026-09-21T13:18:36.203920,C07AB07,25534
+LV,Latvia,ZVA,Bixebra 5 mg film-coated tablets,Ivabradinum,5 mg,56 pcs,16-0142-04,2022-11-07,,shortage - end date unknown,2026-09-21T13:18:36.203951,C01EB17,81213
+LV,Latvia,ZVA,Bixebra 5 mg film-coated tablets,Ivabradinum,5 mg,112 pcs,16-0142-09,2022-11-07,,shortage - end date unknown,2026-09-21T13:18:36.203980,C01EB17,81213
+LV,Latvia,ZVA,Bixebra 7.5 mg film-coated tablets,Ivabradinum,"7,5 mg",56 pcs,16-0143-04,2022-11-07,,shortage - end date unknown,2026-09-21T13:18:36.204009,C01EB17,81213
+LV,Latvia,ZVA,Bixebra 7.5 mg film-coated tablets,Ivabradinum,"7,5 mg",112 pcs,16-0143-09,2022-11-07,,shortage - end date unknown,2026-09-21T13:18:36.204038,C01EB17,81213
+LV,Latvia,ZVA,Blastomat 20 mg hard capsules,Temozolomidum,20 mg,5 pcs,12-0310-01,2024-05-09,,shortage - end date unknown,2026-09-21T13:18:36.204067,L01AX03,52310
+LV,Latvia,ZVA,Bondronat,Acidum ibandronicum,50 mg,28 pcs,EU/1/96/012/009,2017-10-11,,shortage - end date unknown,2026-09-21T13:18:36.204096,M05BX04,
+LV,Latvia,ZVA,Bosentan Norameda 62.5 mg film-coated tablets,Bosentanum,"62,5 mg",56 pcs,13-0272-02,2019-12-27,,shortage - end date unknown,2026-09-21T13:18:36.204126,C02KA01,67369
+LV,Latvia,ZVA,Bridion,Sugammadexum,200 mg/2 ml,10 pcs,EU/1/08/466/001,2016-10-19,,shortage - end date unknown,2026-09-21T13:18:36.204156,V03AB35,87300
+LV,Latvia,ZVA,"Brimonal 2 mg/ml eye drops, solution",Brimonidini tartras,20 mg/10 ml,1 pc,07-0275-01,2019-03-11,,shortage - end date unknown,2026-09-21T13:18:36.204185,D11AX21,114375
+LV,Latvia,ZVA,Brivecor 5 mg film-coated tablets,Ivabradinum,5 mg,56 pcs,16-0201-04,2026-07-21,2026-10-28,shortage,2026-09-21T13:18:36.204226,C01EB17,81213
+LV,Latvia,ZVA,Brivecor 7.5 mg film-coated tablets,Ivabradinum,"7,5 mg",56 pcs,16-0202-04,2026-07-27,2026-10-28,shortage,2026-09-21T13:18:36.204266,C01EB17,81213
+LV,Latvia,ZVA,Bromhexin Sopharma 4 mg/5 ml syrup,Bromhexini hydrochloridum,100 mg/125 ml,1 pc,00-0092-01,2017-10-23,,shortage - end date unknown,2026-09-21T13:18:36.204310,R05CB02,
+LV,Latvia,ZVA,Bromhexine Grindeks 4 mg tabletes,Bromhexini hydrochloridum,4 mg,50 pcs,98-0366-02,2026-03-25,,leaving the market,2026-09-21T13:18:36.204346,R05CB02,
+LV,Latvia,ZVA,Bromhexine-Grindeks 4 mg/5 ml sīrups,Bromhexini hydrochloridum,80 mg/100 ml,1 pc,95-0038-01,2026-03-25,,leaving the market,2026-09-21T13:18:36.204382,R05CB02,
+LV,Latvia,ZVA,Bronchial Balsam oral solution,"Mentholum, Anisi aetheroleum, Capsici tinctura",200 ml,1 pc,00-0930-01,2026-08-05,,shortage - end date unknown,2026-09-21T13:18:36.204411,,
+LV,Latvia,ZVA,Brotmin 1000 mg film-coated tablets,Metformini hydrochloridum,1000 mg,30 pcs,21-0063-07,2022-12-29,,shortage - end date unknown,2026-09-21T13:18:36.204440,A10BA02,60674
+LV,Latvia,ZVA,Brotmin 1000 mg film-coated tablets,Metformini hydrochloridum,1000 mg,120 pcs,21-0063-15,2024-11-25,,leaving the market,2026-09-21T13:18:36.204472,A10BA02,60674
+LV,Latvia,ZVA,Brotmin 500 mg film-coated tablets,Metformini hydrochloridum,500 mg,30 pcs,21-0061-04,2022-12-29,,shortage - end date unknown,2026-09-21T13:18:36.204500,A10BA02,1090
+LV,Latvia,ZVA,Brotmin 850 mg film-coated tablets,Metformini hydrochloridum,850 mg,30 pcs,21-0062-07,2022-12-29,,shortage - end date unknown,2026-09-21T13:18:36.204529,A10BA02,5509
+LV,Latvia,ZVA,Brotmin 850 mg film-coated tablets,Metformini hydrochloridum,850 mg,120 pcs,21-0062-15,2024-10-31,,shortage - end date unknown,2026-09-21T13:18:36.204558,A10BA02,5509
+LV,Latvia,ZVA,Budenofalk 2 mg/dose rectal foam,Budesonidum,2 mg/dose,14 pcs,10-0283-01,2022-06-14,,shortage - end date unknown,2026-09-21T13:18:36.204586,A07EA06,
+LV,Latvia,ZVA,"Budesonid Sandoz 50 micrograms nasal spray, suspension",Budesonidum,50 µg/dose,200 pcs,02-0043-01,2023-06-01,,shortage - end date unknown,2026-09-21T13:18:36.204615,R01AD05,24554
+LV,Latvia,ZVA,Budesonide Teva 1 mg/2 ml nebuliser suspension,Budesonidum,1 mg/2 ml,20 pcs,22-0133-04,2024-12-09,,shortage - end date unknown,2026-09-21T13:18:36.204644,R01AD05,
+LV,Latvia,ZVA,Calcigran Forte Flex 500 mg/400 IU film-coated tablets,"Calcium, Colecalciferolum",500 mg/10 µg,60 pcs,10-0061-04,2020-10-01,,shortage - end date unknown,2026-09-21T13:18:36.204673,,
+LV,Latvia,ZVA,Calquence,Acalabrutinibum,100 mg,60 pcs,EU/1/20/1479/002,2024-02-06,,shortage - end date unknown,2026-09-21T13:18:36.204702,L01EL02,222267
+LV,Latvia,ZVA,Camilia oral solution in single-dose container,"Matricaria chamomilla, Phytolacca decandra, Rheum",1 ml,10 pcs,14-0128-01,2020-05-08,,shortage - end date unknown,2026-09-21T13:18:36.204730,,
+LV,Latvia,ZVA,Cancidas,Caspofunginum,70 mg,1 pc,EU/1/01/196/003,2022-02-28,,shortage - end date unknown,2026-09-21T13:18:36.204759,J02AX04,70319
+LV,Latvia,ZVA,Cancidas,Caspofunginum,50 mg,1 pc,EU/1/01/196/001,2022-01-31,,shortage - end date unknown,2026-09-21T13:18:36.204787,J02AX04,70300
+LV,Latvia,ZVA,Canocombi 32 mg/12.5 mg tablets,"Candesartanum cilexetilum, Hydrochlorothiazidum","32 mg/12,5 mg",30 pcs,15-0012-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:36.204816,,
+LV,Latvia,ZVA,Canocombi 32 mg/25 mg tablets,"Candesartanum cilexetilum, Hydrochlorothiazidum",32 mg/25 mg,30 pcs,15-0013-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:36.204846,,
+LV,Latvia,ZVA,Canocombi 8 mg/12.5 mg tablets,"Candesartanum cilexetilum, Hydrochlorothiazidum","8 mg/12,5 mg",30 pcs,15-0010-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:36.454156,,
+LV,Latvia,ZVA,Canocord 32 mg tablets,Candesartanum cilexetilum,32 mg,30 pcs,11-0306-03,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:36.454420,C09CA06,76376
+LV,Latvia,ZVA,Canocord 8 mg tablets,Candesartanum cilexetilum,8 mg,28 pcs,11-0304-02,2018-12-28,,shortage - end date unknown,2026-09-21T13:18:36.454481,C09CA06,48402
+LV,Latvia,ZVA,Capecitabine Teva,Capecitabinum,500 mg,120 pcs,EU/1/12/761/002,2017-08-24,,shortage - end date unknown,2026-09-21T13:18:36.454523,L01BC06,59366
+LV,Latvia,ZVA,Capecitabine Teva,Capecitabinum,150 mg,60 pcs,EU/1/12/761/001,2017-08-24,,shortage - end date unknown,2026-09-21T13:18:36.454558,L01BC06,59358
+LV,Latvia,ZVA,Capecitabine Zentiva 500 mg film-coated tablets,Capecitabinum,500 mg,120 pcs,12-0315-02,2026-04-15,,leaving the market,2026-09-21T13:18:36.454607,L01BC06,59366
+LV,Latvia,ZVA,Caprelsa,Vandetanibum,100 mg,30 pcs,EU/1/11/749/001,2017-03-09,,shortage - end date unknown,2026-09-21T13:18:36.454646,L01EX04,101516
+LV,Latvia,ZVA,"Carboplatin ""Ebewe"" 10 mg/ml concentrate for solution for infusion",Carboplatinum,150 mg/15 ml,1 pc,05-0604-02,2016-10-28,,shortage - end date unknown,2026-09-21T13:18:36.454682,L01XA02,39993
+LV,Latvia,ZVA,Carboplatin Kabi 10 mg/ml concentrate for solution for infusion,Carboplatinum,50 mg/5 ml,1 pc,12-0048-01,2020-02-03,,shortage - end date unknown,2026-09-21T13:18:36.454714,L01XA02,39985
+LV,Latvia,ZVA,Carboplatin Kabi 10 mg/ml concentrate for solution for infusion,Carboplatinum,450 mg/45 ml,1 pc,12-0048-03,2024-04-30,,shortage - end date unknown,2026-09-21T13:18:36.454747,L01XA02,40002
+LV,Latvia,ZVA,Cardace 10 mg tablets,Ramiprilum,10 mg,28 pcs,03-0067-01,2026-02-03,,leaving the market,2026-09-21T13:18:36.454787,C09AA05,70351
+LV,Latvia,ZVA,Cardace 5 mg tablets,Ramiprilum,5 mg,56 pcs,99-0108-12,2025-01-17,,shortage - end date unknown,2026-09-21T13:18:36.454832,C09AA05,50563
+LV,Latvia,ZVA,Cardace 5 mg tablets,Ramiprilum,5 mg,98 pcs,99-0108-02,2025-01-17,,shortage - end date unknown,2026-09-21T13:18:36.454868,C09AA05,50563
+LV,Latvia,ZVA,Cardiket retard 20 mg prolonged-release tablets,Isosorbidi dinitras,20 mg,50 pcs,99-0601-01,2024-12-01,,shortage - end date unknown,2026-09-21T13:18:36.454902,C01DA08,4332
+LV,Latvia,ZVA,Cardura XL 4 mg controlled release tablets,Doxazosinum,4 mg,30 pcs,00-0269-01,2022-01-28,,shortage - end date unknown,2026-09-21T13:18:36.454934,C02CA04,53589
+LV,Latvia,ZVA,Cardura XL 4 mg controlled release tablets,Doxazosinum,4 mg,90 pcs,00-0269-02,2018-05-11,,shortage - end date unknown,2026-09-21T13:18:36.454966,C02CA04,53589
+LV,Latvia,ZVA,Caverject 10 micrograms powder and solvent for solution for injection,Alprostadilum,10 µg,1 pc,I000718-01,2023-08-24,,shortage - end date unknown,2026-09-21T13:18:36.455004,C01EA01,143561
+LV,Latvia,ZVA,Cavinton 5 mg tablets,Vinpocetinum,5 mg,50 pcs,I000204-01,2020-02-12,,shortage - end date unknown,2026-09-21T13:18:36.455036,N06BX18,
+LV,Latvia,ZVA,Cavinton 5 mg tablets,Vinpocetinum,5 mg,50 pcs,96-0629-01,2020-01-30,,shortage - end date unknown,2026-09-21T13:18:36.455070,N06BX18,
+LV,Latvia,ZVA,Cavinton Forte 10 mg tablets,Vinpocetinum,10 mg,60 pcs,02-0442-05,2018-12-11,,shortage - end date unknown,2026-09-21T13:18:36.455103,N06BX18,
+LV,Latvia,ZVA,Cavinton Forte 10 mg tablets,Vinpocetinum,10 mg,30 pcs,02-0442-02,2019-08-21,,shortage - end date unknown,2026-09-21T13:18:36.455134,N06BX18,
+LV,Latvia,ZVA,Cefazolin MIP 2 g powder for solution for injection/infusion,Cefazolinum,2 g,10 pcs,14-0063-03,2019-07-15,,shortage - end date unknown,2026-09-21T13:18:36.455166,J01DB04,144134
+LV,Latvia,ZVA,Cefazolin-BCPP 1000 mg powder for solution for injection/infusion,Cefazolinum,1 g,5 pcs,05-0084-01,2018-12-19,,shortage - end date unknown,2026-09-21T13:18:36.455201,J01DB04,3263
+LV,Latvia,ZVA,Cefotaxime MIP 1 g powder for solution for injection/infusion,Cefotaximum,1 g,10 pcs,13-0180-03,2024-11-18,,shortage - end date unknown,2026-09-21T13:18:36.455234,J01DD01,37168
+LV,Latvia,ZVA,Cefotaxime MIP 2 g powder for solution for injection/infusion,Cefotaximum,2 g,10 pcs,13-0181-03,2019-11-25,,shortage - end date unknown,2026-09-21T13:18:36.455265,J01DD01,
+LV,Latvia,ZVA,Ceftriaxone Kalceks 1 g powder for solution for injection/infusion,Ceftriaxonum,1 g,10 pcs,22-0218-02,2024-11-04,,shortage - end date unknown,2026-09-21T13:18:36.455299,J01DD04,69884
+LV,Latvia,ZVA,Ceftriaxone-BCPP 1000 mg powder for solution for injection/infusion,Ceftriaxonum,1000 mg,5 pcs,05-0082-01,2018-05-03,,shortage - end date unknown,2026-09-21T13:18:36.455331,J01DD04,69884
+LV,Latvia,ZVA,Cefuroxime MIP 1500 mg powder for solution for injection/infusion,Cefuroximum,1500 mg,10 pcs,13-0017-03,2024-11-18,,shortage - end date unknown,2026-09-21T13:18:36.455365,J01DC02,8206
+LV,Latvia,ZVA,Cefzil 250 mg/5 ml powder for oral suspension,Cefprozilum,5 g/100 ml,1 pc,99-0437-01,2017-04-06,,shortage - end date unknown,2026-09-21T13:18:36.455397,J01DB10,
+LV,Latvia,ZVA,"Celebrex 100 mg capsule, hard",Celecoxibum,100 mg,30 pcs,01-0288-01,2016-07-01,,shortage - end date unknown,2026-09-21T13:18:36.455430,M01AH01,58998
+LV,Latvia,ZVA,"Celebrex 200 mg capsule, hard",Celecoxibum,200 mg,10 pcs,01-0289-04,2018-03-23,,shortage - end date unknown,2026-09-21T13:18:36.455462,M01AH01,59005
+LV,Latvia,ZVA,Celsentri,Maravirocum,300 mg,60 pcs,EU/1/07/418/008,2023-12-31,,shortage - end date unknown,2026-09-21T13:18:36.455496,J05AX09,85421
+LV,Latvia,ZVA,Cerebrolysin 215.2 mg/ml solution for injection/concentrate for solution for infusion,Cerebrolysinum,"430,4 mg/2 ml",10 pcs,95-0065-02,2026-01-30,,shortage - end date unknown,2026-09-21T13:18:36.455528,,
+LV,Latvia,ZVA,Cervarix,"Vaccinum papillomaviri humani [stirpis 16,18], (recombinandorum, cum adjuvante, adsorbatum)","0,5 ml",1 pc,EU/1/07/419/004,2022-12-01,,shortage - end date unknown,2026-09-21T13:18:36.455559,,
+LV,Latvia,ZVA,Cetirizin Actavis 10 mg film-coated tablets,Cetirizini dihydrochloridum,10 mg,10 pcs,03-0294-01,2017-05-09,,shortage - end date unknown,2026-09-21T13:18:36.455589,R06AE07,26298
+LV,Latvia,ZVA,Cetrix 10 mg film-coated tablets,Cetirizini dihydrochloridum,10 mg,100 pcs,10-0576-10,2023-06-09,,shortage - end date unknown,2026-09-21T13:18:36.455619,R06AE07,26298
+LV,Latvia,ZVA,"Cevikap 100 mg/ml oral drops, solution",Acidum ascorbicum,1000 mg/10 ml,1 pc,08-0187-01,2020-08-28,,shortage - end date unknown,2026-09-21T13:18:36.455650,A11GA01,
+LV,Latvia,ZVA,Champix,Vareniclini tartras,1 UD,25 pcs,EU/1/06/360/003,2025-08-25,,shortage - end date unknown,2026-09-21T13:18:36.455681,N07BA03,230073
+LV,Latvia,ZVA,Champix,Vareniclini tartras,1 mg,28 pcs,EU/1/06/360/004,2025-08-25,,shortage - end date unknown,2026-09-21T13:18:36.455711,N07BA03,230073
+LV,Latvia,ZVA,Chlophazolin 150 micrograms tablets,Clonidini hydrochloridum,150 µg,50 pcs,I000684-01,2020-08-25,,shortage - end date unknown,2026-09-21T13:18:36.455742,C02AC01,4324
+LV,Latvia,ZVA,Cinacalcet Accordpharma,Cinacalcetum hydrochloridum,60 mg,28 pcs,EU/1/20/1429/006,2026-01-26,2027-07-01,shortage,2026-09-21T13:18:36.455784,H05BX01,77119
+LV,Latvia,ZVA,Cinacalcet Accordpharma,Cinacalcetum hydrochloridum,90 mg,28 pcs,EU/1/20/1429/010,2026-04-30,2027-07-01,shortage,2026-09-21T13:18:36.455832,H05BX01,77127
+LV,Latvia,ZVA,Cinacalcet Accordpharma,Cinacalcetum hydrochloridum,30 mg,28 pcs,EU/1/20/1429/002,2026-04-16,2027-07-01,shortage,2026-09-21T13:18:36.455873,H05BX01,77100
+LV,Latvia,ZVA,Ciplacef 1000 mg powder for solution for injection,Ceftriaxonum,1 g,1 pc,03-0219-01,2018-08-07,,shortage - end date unknown,2026-09-21T13:18:36.455907,J01DD04,69884
+LV,Latvia,ZVA,Ciplacef 1000 mg powder for solution for injection,Ceftriaxonum,1 g,50 pcs,03-0219-02,2018-08-07,,shortage - end date unknown,2026-09-21T13:18:36.455938,J01DD04,69884
+LV,Latvia,ZVA,Ciprofloxacin Olpha 250 mg film-coated tablets,Ciprofloxacinum,250 mg,10 pcs,11-0223-01,2017-10-02,,shortage - end date unknown,2026-09-21T13:18:36.455968,J01MA02,138924
+LV,Latvia,ZVA,Circadin,Melatoninum,2 mg,21 pcs,EU/1/07/392/001,2019-07-23,,shortage - end date unknown,2026-09-21T13:18:36.456002,N05CH01,86819
+LV,Latvia,ZVA,Citalopram-Teva 20 mg film-coated tablets,Citalopramum,20 mg,30 pcs,06-0096-04,2026-08-10,2026-09-23,shortage,2026-09-21T13:18:36.456047,N06AB04,44083
+LV,Latvia,ZVA,Citramons forte tablets,"Coffeinum, Paracetamolum, Acidum acetylsalicylicum",1 UD,60 pcs,01-0188-08,2024-11-07,2026-10-11,shortage,2026-09-21T13:18:36.456089,,
+LV,Latvia,ZVA,Citramons forte tablets,"Coffeinum, Paracetamolum, Acidum acetylsalicylicum",1 UD,120 pcs,01-0188-03,2022-04-17,,shortage - end date unknown,2026-09-21T13:18:36.456120,,
+LV,Latvia,ZVA,Citramons forte tablets,"Coffeinum, Paracetamolum, Acidum acetylsalicylicum",1 UD,6 pcs,01-0188-02,2016-11-04,,shortage - end date unknown,2026-09-21T13:18:36.769908,,
+LV,Latvia,ZVA,Citramons forte tablets,"Coffeinum, Paracetamolum, Acidum acetylsalicylicum",1 UD,12 pcs,01-0188-01,2016-11-04,,shortage - end date unknown,2026-09-21T13:18:36.769967,,
+LV,Latvia,ZVA,Clarithromycin Unifarma 500 mg powder for solution for infusion,Clarithromycinum,500 mg,1 pc,20-0011-01,2025-12-10,,shortage - end date unknown,2026-09-21T13:18:36.770009,J01FA09,
+LV,Latvia,ZVA,Clarithromycin-Teva 500 mg film-coated tablets,Clarithromycinum,500 mg,14 pcs,06-0003-01,2025-01-20,,shortage - end date unknown,2026-09-21T13:18:36.770047,J01FA09,39977
+LV,Latvia,ZVA,Clexane 6000 IU (60 mg)/0.6 ml solution for injection in pre-filled syringe,Enoxaparinum natricum,"6000 IU/0,6 ml",2 pcs,98-0719-01,2025-05-31,,shortage - end date unknown,2026-09-21T13:18:36.770081,B01AB05,146692
+LV,Latvia,ZVA,Clexane 8000 IU (80 mg)/0.8 ml solution for injection in pre-filled syringe,Enoxaparinum natricum,"8000 IU/0,8 ml",2 pcs,98-0720-01,2025-07-31,,shortage - end date unknown,2026-09-21T13:18:36.770112,B01AB05,146706
+LV,Latvia,ZVA,Clotrimazolum GSK 10 mg/g cream,Clotrimazolum,"0,2 g/20 g",1 pc,00-0434-01,2024-08-27,,shortage - end date unknown,2026-09-21T13:18:36.770143,D01AC01,4308
+LV,Latvia,ZVA,Clozapine Accord 100 mg tablets,Clozapinum,100 mg,50 pcs,20-0133-04,2025-10-01,2027-01-21,shortage,2026-09-21T13:18:36.770193,N05AH02,25437
+LV,Latvia,ZVA,Clozapine Accord 25 mg tablets,Clozapinum,25 mg,50 pcs,20-0134-05,2025-11-01,2027-01-21,shortage,2026-09-21T13:18:36.770235,N05AH02,25429
+LV,Latvia,ZVA,Co-Diovan 160 mg/12.5 mg film-coated tablets,"Valsartanum, Hydrochlorothiazidum","160 mg/12,5 mg",28 pcs,02-0393-01,2025-10-01,,shortage - end date unknown,2026-09-21T13:18:36.770265,,
+LV,Latvia,ZVA,Co-Diovan 160 mg/25 mg film-coated tablets,"Valsartanum, Hydrochlorothiazidum",160 mg/25 mg,28 pcs,02-0394-01,2025-11-01,,shortage - end date unknown,2026-09-21T13:18:36.770300,,
+LV,Latvia,ZVA,Co-Diovan 80 mg/12.5 mg film-coated tablets,"Valsartanum, Hydrochlorothiazidum","80 mg/12,5 mg",28 pcs,98-0310-01,2025-09-16,,shortage - end date unknown,2026-09-21T13:18:36.770329,,
+LV,Latvia,ZVA,Co-Perineva 2 mg/0.625 mg tablets,"Tert-butylamini perindoprilum, Indapamidum","2 mg/0,625 mg",30 pcs,10-0235-04,2025-12-16,,leaving the market,2026-09-21T13:18:36.770373,,
+LV,Latvia,ZVA,Co-Perineva 4 mg/1.25 mg tablets,"Tert-butylamini perindoprilum, Indapamidum","4 mg/1,25 mg",30 pcs,10-0236-04,2024-05-15,,shortage - end date unknown,2026-09-21T13:18:36.770404,,
+LV,Latvia,ZVA,Co-Perineva 8 mg/2.5 mg tablets,"Tert-butylamini perindoprilum, Indapamidum","8 mg/2,5 mg",30 pcs,11-0058-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:36.770433,,
+LV,Latvia,ZVA,CoAprovel,"Irbesartanum, Hydrochlorothiazidum","150 mg/12,5 mg",28 pcs,EU/1/98/086/012,2021-10-04,,shortage - end date unknown,2026-09-21T13:18:36.770461,,
+LV,Latvia,ZVA,CoAprovel,"Irbesartanum, Hydrochlorothiazidum","300 mg/12,5 mg",28 pcs,EU/1/98/086/017,2025-05-06,,shortage - end date unknown,2026-09-21T13:18:36.770490,,
+LV,Latvia,ZVA,Coldrex HotRem Honey & Lemon 750 mg/10 mg/60 mg powder for oral solution,"Paracetamolum, Acidum ascorbicum, Phenylephrini hydrochloridum",1 UD,5 pcs,08-0323-01,2019-01-01,,shortage - end date unknown,2026-09-21T13:18:36.770520,,
+LV,Latvia,ZVA,Colecalciferol KRKA 7000 IU tablets,Colecalciferolum,7000 IU,12 pcs,23-0083-04,2025-12-16,,leaving the market,2026-09-21T13:18:36.770555,A11CC05,130273
+LV,Latvia,ZVA,Columvi,Glofitamabum,"2,5 mg/2,5 ml",1 pc,EU/1/23/1742/001,2025-10-20,2026-10-20,shortage,2026-09-21T13:18:36.770595,L01FX28,
+LV,Latvia,ZVA,Columvi,Glofitamabum,10 mg/10 ml,1 pc,EU/1/23/1742/002,2026-06-01,2027-06-01,shortage,2026-09-21T13:18:36.770635,L01FX28,
+LV,Latvia,ZVA,Comirnaty JN.1,COVID-19 mRNA vaccine (nucleoside modified),"2,25 ml/6 dose",10 pcs,EU/1/20/1528/029,2025-12-31,,shortage - end date unknown,2026-09-21T13:18:36.770664,,
+LV,Latvia,ZVA,Comirnaty JN.1,COVID-19 mRNA vaccine (nucleoside modified),"2,25 ml/6 dose",10 pcs,EU/1/20/1528/033,2025-08-14,,shortage - end date unknown,2026-09-21T13:18:36.770693,,
+LV,Latvia,ZVA,Comirnaty JN.1,COVID-19 mRNA vaccine (nucleoside modified),"0,48 ml/3 dose",10 pcs,EU/1/20/1528/035,2025-08-14,,shortage - end date unknown,2026-09-21T13:18:36.770722,,
+LV,Latvia,ZVA,Comirnaty KP.2,COVID-19 mRNA vaccine (nucleoside modified),"0,48 ml/3 dose",10 pcs,EU/1/20/1528/042,2026-03-26,,shortage - end date unknown,2026-09-21T13:18:36.770757,,
+LV,Latvia,ZVA,Comirnaty KP.2,COVID-19 mRNA vaccine (nucleoside modified),"2,25 ml/6 dose",10 pcs,EU/1/20/1528/041,2026-03-26,,shortage - end date unknown,2026-09-21T13:18:36.770787,,
+LV,Latvia,ZVA,Comirnaty KP.2,COVID-19 mRNA vaccine (nucleoside modified),"2,25 ml/6 dose",10 pcs,EU/1/20/1528/038,2026-03-26,,shortage - end date unknown,2026-09-21T13:18:36.770815,,
+LV,Latvia,ZVA,Comirnaty Omicron XBB.1.5,COVID-19 mRNA vaccine (nucleoside modified),"2,25 ml/6 dose",10 pcs,EU/1/20/1528/019,2025-06-20,,shortage - end date unknown,2026-09-21T13:18:36.770844,,
+LV,Latvia,ZVA,Competact,"Pioglitazonum, Metformini hydrochloridum",15 mg/850 mg,56 pcs,EU/1/06/354/005,2018-01-01,,shortage - end date unknown,2026-09-21T13:18:36.770874,,
+LV,Latvia,ZVA,"Convulex 150 mg gastro-resistant capsules, soft",Acidum valproicum,150 mg,100 pcs,99-0604-01,2022-08-01,,shortage - end date unknown,2026-09-21T13:18:36.770904,N03AG01,
+LV,Latvia,ZVA,Corinfar retard 20 mg prolonged release film-coated tablets,Nifedipinum,20 mg,30 pcs,98-0287-01,2019-07-05,,shortage - end date unknown,2026-09-21T13:18:36.770933,C08CA05,43087
+LV,Latvia,ZVA,Corlentor,Ivabradinum,"7,5 mg",56 pcs,EU/1/05/317/010,2019-06-01,,shortage - end date unknown,2026-09-21T13:18:36.770961,C01EB17,81213
+LV,Latvia,ZVA,Corneregel 5% eye gel,Dexpanthenolum,500 mg/10 g,1 pc,I000755-01,2025-12-08,2026-09-30,shortage,2026-09-21T13:18:36.771001,A11HA30,
+LV,Latvia,ZVA,Corneregel 5% eye gel,Dexpanthenolum,500 mg/10 g,1 pc,I000506-01,2025-10-17,,shortage - end date unknown,2026-09-21T13:18:36.771030,A11HA30,
+LV,Latvia,ZVA,Cosentyx,Secukinumabum,150 mg/ml,2 pcs,EU/1/14/980/005,2021-10-01,,shortage - end date unknown,2026-09-21T13:18:36.771060,L04AC10,124397
+LV,Latvia,ZVA,"Cosopt 20 mg/5 mg/ml eye drops, solution","Dorzolamidum, Timololum",5 ml,1 pc,99-0966-02,2019-12-05,,shortage - end date unknown,2026-09-21T13:18:36.771092,,
+LV,Latvia,ZVA,Crestor 5 mg film-coated tablets,Rosuvastatinum,5 mg,28 pcs,09-0351-01,2019-08-01,,shortage - end date unknown,2026-09-21T13:18:36.771121,C10AA07,201030
+LV,Latvia,ZVA,"Curosurf 80 mg/ml endotracheopulmonary instillation, suspension",Phospholipida ex pulmonibus suum,"120 mg/1,5 ml",2 pcs,98-0547-02,2019-12-27,,shortage - end date unknown,2026-09-21T13:18:36.771150,,
+LV,Latvia,ZVA,Cyklokapron 500 mg film-coated tablets,Acidum tranexamicum,500 mg,20 pcs,05-0582-03,2019-12-20,,shortage - end date unknown,2026-09-21T13:18:36.771178,B02AA02,4626
+LV,Latvia,ZVA,Cymbalta,Duloxetinum,30 mg,28 pcs,EU/1/04/296/001,2025-03-01,,shortage - end date unknown,2026-09-21T13:18:36.771206,N06AX21,79057
+LV,Latvia,ZVA,Cymbalta,Duloxetinum,60 mg,28 pcs,EU/1/04/296/002,2025-03-01,,shortage - end date unknown,2026-09-21T13:18:36.771235,N06AX21,79065
+LV,Latvia,ZVA,Cytarabine Accord 100 mg/ml solution for injection or infusion,Cytarabinum,100 mg/1 ml,5 pcs,10-0187-02,2016-09-06,,shortage - end date unknown,2026-09-21T13:18:36.771264,L01BC01,104469
+LV,Latvia,ZVA,Cytarabine Kabi 100 mg/ml solution for injection or infusion,Cytarabinum,500 mg/5 ml,1 pc,12-0204-02,2020-02-03,,shortage - end date unknown,2026-09-21T13:18:36.771293,L01BC01,104477
+LV,Latvia,ZVA,Dabigatran Etexilate Stada 110 mg hard capsules,Dabigatranum etexilatum,110 mg,60 pcs,24-0042-03,2026-09-21,,leaving the market,2026-09-21T13:18:36.771331,B01AE07,86991
+LV,Latvia,ZVA,Dabigatran Etexilate Stada 150 mg hard capsules,Dabigatranum etexilatum,150 mg,60 pcs,24-0043-03,2026-09-21,,leaving the market,2026-09-21T13:18:36.771362,B01AE07,98361
+LV,Latvia,ZVA,Dabigatran Etexilate Viatris 110 mg hard capsules,Dabigatranum etexilatum,110 mg,60 pcs,24-0012-03,2026-04-30,,leaving the market,2026-09-21T13:18:36.771394,B01AE07,86991
+LV,Latvia,ZVA,Dabigatran Etexilate Viatris 150 mg hard capsules,Dabigatranum etexilatum,150 mg,60 pcs,24-0013-02,2026-03-31,,leaving the market,2026-09-21T13:18:36.771425,B01AE07,98361
+LV,Latvia,ZVA,Dacogen,Decitabinum,1000 mg/20 ml,1 pc,EU/1/12/792/001,2025-06-01,,shortage - end date unknown,2026-09-21T13:18:36.771455,L01BC08,
+LV,Latvia,ZVA,Dalnessa 4 mg/10 mg tablets,"Tert-butylamini perindoprilum, Amlodipinum",4 mg/10 mg,30 pcs,11-0405-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:36.771484,,
+LV,Latvia,ZVA,Dalnessa 4 mg/5 mg tablets,"Tert-butylamini perindoprilum, Amlodipinum",4 mg/5 mg,30 pcs,11-0406-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:36.771513,,
+LV,Latvia,ZVA,Dalnessa 8 mg/10 mg tablets,"Tert-butylamini perindoprilum, Amlodipinum",8 mg/10 mg,30 pcs,11-0407-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:37.013148,,
+LV,Latvia,ZVA,Dalnessa 8 mg/5 mg tablets,"Tert-butylamini perindoprilum, Amlodipinum",8 mg/5 mg,30 pcs,11-0408-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:37.013206,,
+LV,Latvia,ZVA,Daltex 50 mg/1000 mg film-coated tablets,"Vildagliptinum, Metformini hydrochloridum",50 mg/1000 mg,60 pcs,17-0208-03,2024-07-01,,leaving the market,2026-09-21T13:18:37.013289,,
+LV,Latvia,ZVA,Darunavir Krka,Darunavirum,800 mg,30 pcs,EU/1/17/1249/009,2021-06-30,,shortage - end date unknown,2026-09-21T13:18:37.013328,J05AE10,167398
+LV,Latvia,ZVA,DaTSCAN,Ioflupanum,"185 MBq/2,5 ml",1 pc,EU/1/00/135/001,2025-06-01,,shortage - end date unknown,2026-09-21T13:18:37.013361,,
+LV,Latvia,ZVA,DaTSCAN,Ioflupanum,370 MBq/5 ml,1 pc,EU/1/00/135/002,2025-06-01,,shortage - end date unknown,2026-09-21T13:18:37.013392,,
+LV,Latvia,ZVA,"Delufen nasal spray, solution","Mercurius bijodatus, Luffa, Euphorbium, Sinapis nigra, Pulsatilla nigricans",20 ml,1 pc,02-0014-01,2025-12-01,2028-12-01,shortage,2026-09-21T13:18:37.013433,,
+LV,Latvia,ZVA,Depo-Provera 150 mg/1 ml suspension for injection,Medroxyprogesteroni acetas,"500 mg/3,3 ml",1 pc,00-0481-03,2016-09-15,,shortage - end date unknown,2026-09-21T13:18:37.013464,G03AC06,
+LV,Latvia,ZVA,Depo-Provera 150 mg/1 ml suspension for injection in pre-filled syringe,Medroxyprogesteroni acetas,150 mg/1 ml,1 pc,00-0482-02,2018-08-01,,shortage - end date unknown,2026-09-21T13:18:37.013494,G03AC06,
+LV,Latvia,ZVA,Desloratadine Actavis,Desloratadinum,5 mg,30 pcs,EU/1/11/745/006,2018-08-09,,shortage - end date unknown,2026-09-21T13:18:37.013530,R06AX27,59021
+LV,Latvia,ZVA,Desloratadine Sopharma 0.5 mg/ml oral solution,Desloratadinum,60 mg/120 ml,1 pc,15-0132-02,2019-10-07,,shortage - end date unknown,2026-09-21T13:18:37.013562,R06AX27,86886
+LV,Latvia,ZVA,Detralex 500 mg film-coated tablets,"Diosminum, Hesperidinum",450 mg/50 mg,180 pcs,96-0377-04,2023-08-25,,shortage - end date unknown,2026-09-21T13:18:37.013593,,
+LV,Latvia,ZVA,Dexagel 0.985 mg/g eye gel,Dexamethasoni natrii phosphas,"4,925 mg/5 g",1 pc,16-0113-01,2026-07-01,,leaving the market,2026-09-21T13:18:37.013628,H02AB02,
+LV,Latvia,ZVA,Dexamethason Krka 40 mg tablets,Dexamethasonum,40 mg,20 pcs,16-0192-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:37.013658,H02AB02,109517
+LV,Latvia,ZVA,Dexamethason Krka 8 mg tablets,Dexamethasonum,8 mg,20 pcs,16-0190-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:37.013688,H02AB02,
+LV,Latvia,ZVA,Dexketoprofen Kalceks 50 mg/2 ml solution for injection/infusion,Dexketoprofenum,50 mg/2 ml,5 pcs,17-0265-02,2022-09-15,,shortage - end date unknown,2026-09-21T13:18:37.013717,M01AE17,55794
+LV,Latvia,ZVA,Diaprel MR 60 mg modified-release tablets,Gliclazidum,60 mg,60 pcs,09-0536-09,2025-04-10,,leaving the market,2026-09-21T13:18:37.013751,A10BB09,141925
+LV,Latvia,ZVA,Diazepeks 5 mg tabletes,Diazepamum,5 mg,250 pcs,94-0104-02,2021-03-08,,shortage - end date unknown,2026-09-21T13:18:37.013780,N05BA01,7447
+LV,Latvia,ZVA,Differin 1 mg/g cream,Adapalenum,30 mg/30 g,1 pc,02-0040-01,2018-10-29,,shortage - end date unknown,2026-09-21T13:18:37.013810,D10AD03,79294
+LV,Latvia,ZVA,Differin 1 mg/g gel,Adapalenum,30 mg/30 g,1 pc,02-0039-01,2021-03-30,,shortage - end date unknown,2026-09-21T13:18:37.013838,D10AD03,79294
+LV,Latvia,ZVA,Dificlir,Fidaxomicinum,200 mg,20 pcs,EU/1/11/733/004,2017-03-27,,shortage - end date unknown,2026-09-21T13:18:37.013868,A07AA12,102466
+LV,Latvia,ZVA,Digoxicor 0.5 mg/2 ml solution for injection/infusion,Digoxinum,"0,5 mg/2 ml",100 pcs,09-0526-02,2018-05-03,,shortage - end date unknown,2026-09-21T13:18:37.013897,C01AA05,1635
+LV,Latvia,ZVA,Dimethyl fumarate MSN 240 mg gastro-resistant hard capsules,Dimethylis fumaras,240 mg,56 pcs,24-0166-01,2025-11-01,,leaving the market,2026-09-21T13:18:37.013929,L04AX03,
+LV,Latvia,ZVA,Dimethyl fumarate Stada 120 mg gastro-resistant hard capsules,Dimethylis fumaras,120 mg,14 pcs,23-0035-01,2024-09-19,,shortage - end date unknown,2026-09-21T13:18:37.013958,L04AX03,
+LV,Latvia,ZVA,Dimethyl fumarate Stada 240 mg gastro-resistant hard capsules,Dimethylis fumaras,240 mg,56 pcs,23-0036-03,2024-09-19,,shortage - end date unknown,2026-09-21T13:18:37.013986,L04AX03,
+LV,Latvia,ZVA,"Diompraz 75 mg/20 mg modified release capsules, hard","Diclofenacum natricum, Omeprazolum",75 mg/20 mg,30 pcs,14-0270-04,2025-11-04,,shortage - end date unknown,2026-09-21T13:18:37.014015,,
+LV,Latvia,ZVA,Divigel 1 mg/dose gel,Estradiolum,1 mg/1 g,91 pcs,I000432-01,2026-07-13,,shortage - end date unknown,2026-09-21T13:18:37.014043,G03CA03,
+LV,Latvia,ZVA,Docetaxel Kabi,Docetaxelum,80 mg/4 ml,1 pc,EU/1/12/770/001,2022-12-31,,shortage - end date unknown,2026-09-21T13:18:37.014072,L01CD02,92894
+LV,Latvia,ZVA,Docetaxel Kabi,Docetaxelum,20 mg/1 ml,1 pc,EU/1/12/770/005,2022-12-31,,shortage - end date unknown,2026-09-21T13:18:37.014100,L01CD02,92886
+LV,Latvia,ZVA,Doreta 37.5 mg/325 mg film-coated tablets,"Tramadoli hydrochloridum, Paracetamolum","37,5 mg/325 mg",20 pcs,09-0320-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:37.014129,,
+LV,Latvia,ZVA,Doreta 75 mg/650 mg film-coated tablets,"Tramadoli hydrochloridum, Paracetamolum",75 mg/650 mg,60 pcs,12-0062-06,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:37.014164,,
+LV,Latvia,ZVA,Doreta 75 mg/650 mg film-coated tablets,"Tramadoli hydrochloridum, Paracetamolum",75 mg/650 mg,10 pcs,12-0062-01,2018-12-28,,shortage - end date unknown,2026-09-21T13:18:37.014196,,
+LV,Latvia,ZVA,Doxalfa 4 mg prolonged-release tablets,Doxazosinum,4 mg,28 pcs,07-0031-03,2025-08-31,,leaving the market,2026-09-21T13:18:37.014229,C02CA04,53589
+LV,Latvia,ZVA,Doxorubicin Accord 2 mg/ml concentrate for solution for infusion,Doxorubicini hydrochloridum,10 mg/5 ml,1 pc,10-0341-01,2023-11-20,,shortage - end date unknown,2026-09-21T13:18:37.014258,L01DB01,30694
+LV,Latvia,ZVA,Doxycyclin STADA 100 mg tablets,Doxycyclinum,100 mg,10 pcs,95-0132-01,2025-12-01,2027-03-01,shortage,2026-09-21T13:18:37.014296,J01AA02,68438
+LV,Latvia,ZVA,Dukoral,Vaccinum cholerae,1 deva,2 pcs,EU/1/03/263/002,2019-05-15,,shortage - end date unknown,2026-09-21T13:18:37.014325,J07BG01,
+LV,Latvia,ZVA,"Dulsevia 30 mg gastro-resistant capsule, hard",Duloxetinum,30 mg,30 pcs,15-0068-05,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:37.014354,N06AX21,79057
+LV,Latvia,ZVA,Duofilm 167 mg/150 mg/g cutaneous solution,"Acidum salicylicum, Acidum lacticum",15 ml,1 pc,05-0545-01,2018-11-16,,shortage - end date unknown,2026-09-21T13:18:37.014382,,
+LV,Latvia,ZVA,DuoTrav,"Travoprostum, Timololum","2,5 ml",1 pc,EU/1/06/338/001,2026-04-01,,leaving the market,2026-09-21T13:18:37.014413,,
+LV,Latvia,ZVA,Dupixent,Dupilumabum,300 mg/2 ml,2 pcs,EU/1/17/1229/018,2026-01-07,,leaving the market,2026-09-21T13:18:37.014449,D11AH05,201529
+LV,Latvia,ZVA,Duracef 250 mg/5 ml powder for oral suspension,Cefadroxilum,3000 mg/60 ml,1 pc,98-0863-01,2022-01-31,,shortage - end date unknown,2026-09-21T13:18:37.014479,J01DB05,5835
+LV,Latvia,ZVA,Dutrozen 0.5 mg/0.4 mg hard capsules,"Dutasteridum, Tamsulosini hydrochloridum","0,5 mg/0,4 mg",30 pcs,19-0112-02,2025-08-20,,leaving the market,2026-09-21T13:18:37.014511,,
+LV,Latvia,ZVA,Dutrozen 0.5 mg/0.4 mg hard capsules,"Dutasteridum, Tamsulosini hydrochloridum","0,5 mg/0,4 mg",90 pcs,19-0112-03,2025-01-27,,shortage - end date unknown,2026-09-21T13:18:37.014539,,
+LV,Latvia,ZVA,Ecansya,Capecitabinum,500 mg,120 pcs,EU/1/12/763/018,2021-06-30,,shortage - end date unknown,2026-09-21T13:18:37.014567,L01BC06,
+LV,Latvia,ZVA,Efavirenz/Emtricitabine/Tenofovir disoproxil Mylan,"Efavirenzum, Emtricitabinum, Tenofovirum disoproxilum",1 UD,30 pcs,EU/1/17/1222/001,2026-08-10,2026-09-30,shortage,2026-09-21T13:18:37.014606,,
+LV,Latvia,ZVA,Elahere,Mirvetuximabum soravtansinum,100 mg/20 ml,1 pc,EU/1/24/1866/001,2025-03-10,,shortage - end date unknown,2026-09-21T13:18:37.014635,,
+LV,Latvia,ZVA,Elenium 10 mg coated tablets,Chlordiazepoxidum,10 mg,50 pcs,96-0419-01,2025-06-06,,shortage - end date unknown,2026-09-21T13:18:37.014663,N05BA02,7455
+LV,Latvia,ZVA,Eligard 7.5 mg powder and solvent for solution for injection,Leuprorelini acetas,"7,5 mg",1 pc,05-0198-03,2020-04-17,,shortage - end date unknown,2026-09-21T13:18:37.014693,L02AE02,78352
+LV,Latvia,ZVA,Eliquis,Apixabanum,"2,5 mg",20 pcs,EU/1/11/691/002,2023-03-31,,shortage - end date unknown,2026-09-21T13:18:37.014721,B01AF02,99066
+LV,Latvia,ZVA,Elonva,Corifollitropinum alfa,"100 µg/0,5 ml",1 pc,EU/1/09/609/001,2018-07-01,,shortage - end date unknown,2026-09-21T13:18:37.014749,,
+LV,Latvia,ZVA,Elonva,Corifollitropinum alfa,"150 µg/0,5 ml",1 pc,EU/1/09/609/002,2018-07-01,,shortage - end date unknown,2026-09-21T13:18:37.310049,,
+LV,Latvia,ZVA,Emend,Aprepitantum,1 UD,3 pcs,EU/1/03/262/006,2023-05-30,,shortage - end date unknown,2026-09-21T13:18:37.310109,A04AA02,
+LV,Latvia,ZVA,Emla (2.5 + 2.5) % cream,"Prilocainum, Lidocainum",5 g,5 pcs,I000985-01,2026-03-25,2026-12-30,shortage,2026-09-21T13:18:37.310165,,
+LV,Latvia,ZVA,Emla (2.5 + 2.5) % cream,"Prilocainum, Lidocainum",5 g,5 pcs,I000966-01,2025-01-01,,shortage - end date unknown,2026-09-21T13:18:37.310202,,
+LV,Latvia,ZVA,Emtricitabine/Tenofovir disoproxil Krka,"Emtricitabinum, Tenofovirum disoproxilum",200 mg/245 mg,30 pcs,EU/1/16/1151/002,2018-06-26,,shortage - end date unknown,2026-09-21T13:18:37.310236,,
+LV,Latvia,ZVA,Emtricitabine/Tenofovir disoproxil Krka d.d.,"Emtricitabinum, Tenofovirum disoproxilum",200 mg/245 mg,30 pcs,EU/1/17/1182/002,2018-06-26,,shortage - end date unknown,2026-09-21T13:18:37.310268,,
+LV,Latvia,ZVA,Emtricitabine/Tenofovir disoproxil Mylan,"Emtricitabinum, Tenofovirum disoproxilum",200 mg/245 mg,30 pcs,EU/1/16/1133/001,2023-06-30,,shortage - end date unknown,2026-09-21T13:18:37.310299,,
+LV,Latvia,ZVA,Emtricitabine/Tenofovir disoproxil Zentiva,"Emtricitabinum, Tenofovirum disoproxilum",200 mg/245 mg,30 pcs,EU/1/16/1148/001,2023-09-07,,shortage - end date unknown,2026-09-21T13:18:37.310330,,
+LV,Latvia,ZVA,Emtriva,Emtricitabinum,200 mg,30 pcs,EU/1/03/261/001,2016-06-01,,shortage - end date unknown,2026-09-21T13:18:37.310359,J05AF09,
+LV,Latvia,ZVA,Emtriva,Emtricitabinum,1700 mg/170 ml,1 pc,EU/1/03/261/003,2025-06-06,,shortage - end date unknown,2026-09-21T13:18:37.310389,J05AF09,
+LV,Latvia,ZVA,Enap 10 mg tablets,Enalaprili maleas,10 mg,20 pcs,99-0669-01,2019-07-01,,shortage - end date unknown,2026-09-21T13:18:37.310421,C09AA02,21083
+LV,Latvia,ZVA,Enap 20 mg tablets,Enalaprili maleas,20 mg,20 pcs,93-0520-01,2017-03-27,,shortage - end date unknown,2026-09-21T13:18:37.310454,C09AA02,21075
+LV,Latvia,ZVA,Enap 5 mg tablets,Enalaprili maleas,5 mg,60 pcs,97-0574-02,2021-06-02,,shortage - end date unknown,2026-09-21T13:18:37.310483,C09AA02,23698
+LV,Latvia,ZVA,Enap 5 mg tablets,Enalaprili maleas,5 mg,20 pcs,97-0574-01,2017-03-27,,shortage - end date unknown,2026-09-21T13:18:37.310513,C09AA02,23698
+LV,Latvia,ZVA,Enap-HL 10 mg/12.5 mg tablets,"Enalaprili maleas, Hydrochlorothiazidum","10 mg/12,5 mg",20 pcs,97-0576-01,2019-07-01,,shortage - end date unknown,2026-09-21T13:18:37.310543,,
+LV,Latvia,ZVA,Enarenal 20 mg tablets,Enalaprili maleas,20 mg,30 pcs,99-0080-02,2023-03-17,,shortage - end date unknown,2026-09-21T13:18:37.310573,C09AA02,21075
+LV,Latvia,ZVA,Enarenal 5 mg tablets,Enalaprili maleas,5 mg,30 pcs,99-0079-02,2019-04-30,,shortage - end date unknown,2026-09-21T13:18:37.310603,C09AA02,23698
+LV,Latvia,ZVA,Enbrel,Etanerceptum,10 mg/ml,4 pcs,EU/1/99/126/022,2022-10-01,,shortage - end date unknown,2026-09-21T13:18:37.310633,L04AB01,101141
+LV,Latvia,ZVA,Enbrel,Etanerceptum,25 mg,4 pcs,EU/1/99/126/002,2017-04-12,,shortage - end date unknown,2026-09-21T13:18:37.310667,L04AB01,66125
+LV,Latvia,ZVA,Encepur Children 0.25 ml suspension for injection in pre-filled syringe,"Virus encephalitidis acarinarum (ixodicum)/stirps K23, inactivatum, purificatum","0,25 ml",1 pc,01-0316-04,2026-04-01,2026-10-05,shortage,2026-09-21T13:18:37.310708,,
+LV,Latvia,ZVA,Engerix B 10 micrograms/0.5 ml suspension for injection,Vaccinum hepatitidis B (ADNr),"10 µg/0,5 ml",10 pcs,02-0216-02,2017-02-08,,shortage - end date unknown,2026-09-21T13:18:37.310743,J07BK01,82201
+LV,Latvia,ZVA,Engerix B 10 micrograms/0.5 ml suspension for injection in pre-filled syringe,Vaccinum hepatitidis B (ADNr),"0,5 ml",1 pc,97-0007-01,2025-10-13,2028-01-29,shortage,2026-09-21T13:18:37.310783,J07BK01,82201
+LV,Latvia,ZVA,Eporatio,Epoetinum theta,10000 IU/1 ml,6 pcs,EU/1/09/573/016,2017-07-04,,shortage - end date unknown,2026-09-21T13:18:37.310816,B03XA01,43036
+LV,Latvia,ZVA,Eporatio,Epoetinum theta,30000 IU/1 ml,1 pc,EU/1/09/573/024,2017-07-04,,shortage - end date unknown,2026-09-21T13:18:37.310847,B03XA01,
+LV,Latvia,ZVA,Eporatio,Epoetinum theta,"4000 IU/0,5 ml",6 pcs,EU/1/09/573/007,2017-07-04,,shortage - end date unknown,2026-09-21T13:18:37.310877,B03XA01,
+LV,Latvia,ZVA,Erivedge,Vismodegibum,150 mg,28 pcs,EU/1/13/848/001,2019-04-01,,shortage - end date unknown,2026-09-21T13:18:37.310907,L01XJ01,106585
+LV,Latvia,ZVA,Esbriet,Pirfenidonum,801 mg,84 pcs,EU/1/11/667/018,2024-07-01,,shortage - end date unknown,2026-09-21T13:18:37.310935,L04AX05,146773
+LV,Latvia,ZVA,Esbriet,Pirfenidonum,267 mg,252 pcs,EU/1/11/667/017,2024-07-01,,shortage - end date unknown,2026-09-21T13:18:37.310965,L04AX05,146765
+LV,Latvia,ZVA,"Escadra 20 mg gastro-resistant capsules, hard",Esomeprazolum,20 mg,14 pcs,10-0133-02,2019-07-01,,shortage - end date unknown,2026-09-21T13:18:37.310994,A02BC05,94862
+LV,Latvia,ZVA,"Escadra 40 mg gastro-resistant capsules, hard",Esomeprazolum,40 mg,14 pcs,10-0134-02,2019-07-01,,shortage - end date unknown,2026-09-21T13:18:37.311029,A02BC05,94870
+LV,Latvia,ZVA,Etacizīns 50 mg coated tablets,Aethacizinum,50 mg,20 pcs,98-0371-03,2018-11-20,,shortage - end date unknown,2026-09-21T13:18:37.311062,C01BC09,
+LV,Latvia,ZVA,Etoposide Kabi 20 mg/ml concentrate for solution for infusion,Etoposidum,100 mg/5 ml,1 pc,14-0165-01,2024-04-30,,shortage - end date unknown,2026-09-21T13:18:37.311092,L01CB01,32700
+LV,Latvia,ZVA,Eucreas,"Vildagliptinum, Metformini hydrochloridum",50 mg/1000 mg,60 pcs,EU/1/07/425/027,2021-03-08,,shortage - end date unknown,2026-09-21T13:18:37.311121,,
+LV,Latvia,ZVA,Eucreas,"Vildagliptinum, Metformini hydrochloridum",50 mg/1000 mg,180 pcs,EU/1/07/425/035,2019-06-03,,shortage - end date unknown,2026-09-21T13:18:37.311152,,
+LV,Latvia,ZVA,Eucreas,"Vildagliptinum, Metformini hydrochloridum",50 mg/1000 mg,60 pcs,EU/1/07/425/048,2024-11-01,,shortage - end date unknown,2026-09-21T13:18:37.311184,,
+LV,Latvia,ZVA,Eucreas,"Vildagliptinum, Metformini hydrochloridum",50 mg/850 mg,60 pcs,EU/1/07/425/021,2021-04-05,,shortage - end date unknown,2026-09-21T13:18:37.311215,,
+LV,Latvia,ZVA,Eucreas,"Vildagliptinum, Metformini hydrochloridum",50 mg/850 mg,60 pcs,EU/1/07/425/039,2024-11-01,,shortage - end date unknown,2026-09-21T13:18:37.311245,,
+LV,Latvia,ZVA,"Everio Airmaster 50/100 micrograms dose inhalation powder, pre-dispensed","Salmeterolum, Fluticasoni propionas",50 µg/100 µg,1 pc,21-0001-01,2024-10-28,,leaving the market,2026-09-21T13:18:37.311287,,
+LV,Latvia,ZVA,"Everio Airmaster 50/250 micrograms dose inhalation powder, pre-dispensed","Salmeterolum, Fluticasoni propionas",50 µg/250 µg,1 pc,21-0002-01,2024-11-15,,leaving the market,2026-09-21T13:18:37.311321,,
+LV,Latvia,ZVA,"Everio Airmaster 50/500 micrograms dose inhalation powder, pre-dispensed","Salmeterolum, Fluticasoni propionas",50 µg/500 µg,1 pc,21-0003-01,2023-11-17,,shortage - end date unknown,2026-09-21T13:18:37.311349,,
+LV,Latvia,ZVA,Everolimus Teva 10 mg tablets,Everolimusum,10 mg,30 pcs,17-0137-02,2026-08-26,2026-09-23,shortage,2026-09-21T13:18:37.311392,L01EG02,92576
+LV,Latvia,ZVA,Eviplera,"Emtricitabinum, Rilpivirinum, Tenofovirum disoproxilum",25 mg,30 pcs,EU/1/11/737/001,2025-01-01,,shortage - end date unknown,2026-09-21T13:18:37.311421,,
+LV,Latvia,ZVA,Evra,"Norelgestraminum, Ethinylestradiolum",6 mg/600 µg,3 pcs,EU/1/02/223/001-P01,2018-01-01,,shortage - end date unknown,2026-09-21T13:18:37.311449,,
+LV,Latvia,ZVA,Exemestane Zentiva 25 mg film-coated tablets,Exemestanum,25 mg,30 pcs,10-0319-01,2024-04-04,,shortage - end date unknown,2026-09-21T13:18:37.311479,L02BG06,
+LV,Latvia,ZVA,Exolorfin 50 mg/ml medicated nail lacquer,Amorolfinum,"125 mg/2,5 ml",1 pc,19-0038-01,2026-07-16,2026-09-30,shortage,2026-09-21T13:18:37.311517,D01AE16,
+LV,Latvia,ZVA,Ezetimibe/Atorvastatin Olpha 10 mg/20 mg film-coated tablets,"Ezetimibum, Atorvastatinum",10 mg/20 mg,30 pcs,24-0004-02,2026-09-16,2026-11-09,shortage,2026-09-21T13:18:37.311557,,
+LV,Latvia,ZVA,Ezetimibe/Atorvastatin Olpha 10 mg/40 mg film-coated tablets,"Ezetimibum, Atorvastatinum",10 mg/40 mg,30 pcs,24-0005-02,2026-09-16,2026-11-09,shortage,2026-09-21T13:18:37.311602,,
+LV,Latvia,ZVA,Ezetimibe/Atorvastatin Olpha 10 mg/80 mg film-coated tablets,"Ezetimibum, Atorvastatinum",10 mg/80 mg,30 pcs,24-0006-02,2026-09-16,2026-11-09,shortage,2026-09-21T13:18:37.311645,,
+LV,Latvia,ZVA,Fampyra,Fampridinum,10 mg,28 pcs,EU/1/11/699/003,2025-04-28,2028-04-28,shortage,2026-09-21T13:18:37.311683,N07XX07,101826
+LV,Latvia,ZVA,Faslodex,Fulvestrantum,250 mg/5 ml,1 pc,EU/1/03/269/001,2017-05-17,,shortage - end date unknown,2026-09-21T13:18:37.311710,L02BA03,74934
+LV,Latvia,ZVA,Faslodex,Fulvestrantum,250 mg/5 ml,2 pcs,EU/1/03/269/002,2017-05-17,,shortage - end date unknown,2026-09-21T13:18:37.597004,L02BA03,74934
+LV,Latvia,ZVA,Febuxostat Krka,Febuxostatum,120 mg,28 pcs,EU/1/18/1347/006,2022-06-28,,shortage - end date unknown,2026-09-21T13:18:37.597063,M04AA03,101796
+LV,Latvia,ZVA,Febuxostat Zentiva 120 mg film-coated tablets,Febuxostatum,120 mg,28 pcs,19-0054-02,2026-01-07,,shortage - end date unknown,2026-09-21T13:18:37.597102,M04AA03,101796
+LV,Latvia,ZVA,Febuxostat Zentiva 80 mg film-coated tablets,Febuxostatum,80 mg,28 pcs,19-0053-02,2026-03-31,,shortage - end date unknown,2026-09-21T13:18:37.597138,M04AA03,101788
+LV,Latvia,ZVA,Fenkarol 50 mg tabletes,Quifenadini hydrochloridum,50 mg,30 pcs,03-0293-05,2017-10-02,,shortage - end date unknown,2026-09-21T13:18:37.597171,R06AX31,
+LV,Latvia,ZVA,Ferinject 50 mg iron/ml dispersion for injection/infusion,Ferri carboxymaltosum,500 mg/10 ml,1 pc,08-0017-04,2016-10-31,,shortage - end date unknown,2026-09-21T13:18:37.597205,,
+LV,Latvia,ZVA,Ferrum Lek 100 mg chewable tablets,Ferri hydroxidum cum polymaltosi complexus,100 mg,30 pcs,I001088-01,2023-03-02,,shortage - end date unknown,2026-09-21T13:18:37.597239,,
+LV,Latvia,ZVA,Finacea 150 mg/g gel,Acidum azelaicum,"4,5 g/30 g",1 pc,09-0055-04,2022-12-23,,shortage - end date unknown,2026-09-21T13:18:37.597271,D10AF01,
+LV,Latvia,ZVA,Finasteride Teva 5 mg film-coated tablets,Finasteridum,5 mg,30 pcs,08-0287-05,2026-08-26,2026-09-23,shortage,2026-09-21T13:18:37.597314,G04CB01,34975
+LV,Latvia,ZVA,Fingolimod Mylan,Fingolimodum,"0,5 mg",28 pcs,EU/1/21/1573/018,2022-11-16,2026-11-16,shortage,2026-09-21T13:18:37.597357,L04AE01,100129
+LV,Latvia,ZVA,Fingolimod Zentiva 0.5 mg hard capsules,Fingolimodum,"0,5 mg",28 pcs,20-0145-02,2026-08-14,,shortage - end date unknown,2026-09-21T13:18:37.597392,L04AE01,100129
+LV,Latvia,ZVA,Finlepsin 400 mg prolonged release tablets,Carbamazepinum,400 mg,50 pcs,98-0384-01,2025-12-29,,leaving the market,2026-09-21T13:18:37.597437,N03AF01,25984
+LV,Latvia,ZVA,Fluarix Tetra suspension for injection in pre-filled syringe,Vaccinum influenzae inactivatum ex virorum fragmentis praeparatum,"0,5 ml",1 pc,18-0098-03,2020-10-19,,shortage - end date unknown,2026-09-21T13:18:37.597471,J07BB02,
+LV,Latvia,ZVA,Flucinar N 0.25 mg/5 mg/g ziede,"Fluocinoloni acetonidum, Neomycini sulfas",15 g,1 pc,97-0104-01,2026-02-01,2027-03-01,shortage,2026-09-21T13:18:37.597511,,
+LV,Latvia,ZVA,"Fluconazole Unifarma 150 mg capsules, hard",Fluconazolum,150 mg,1 pc,01-0414-01,2018-07-05,,shortage - end date unknown,2026-09-21T13:18:37.597541,J02AC01,30384
+LV,Latvia,ZVA,Fluconazole Unifarma 2 mg/ml solution for injection/infusion,Fluconazolum,200 mg/100 ml,1 pc,04-0089-01,2016-09-01,,shortage - end date unknown,2026-09-21T13:18:37.597571,J02AC01,
+LV,Latvia,ZVA,Fluenz,"Vaccinum influenzae (vivum, attenuatum, intranasale)","0,2 ml",1 pc,EU/1/24/1816/001,2026-01-19,,shortage - end date unknown,2026-09-21T13:18:37.597601,,
+LV,Latvia,ZVA,Fluorouracil Accord 50 mg/ml solution for injection or infusion,Fluorouracilum,250 mg/5 ml,1 pc,09-0458-01,2016-09-19,,shortage - end date unknown,2026-09-21T13:18:37.597633,L01BC02,33111
+LV,Latvia,ZVA,Fluoxetine Vitabalans 20 mg film-coated tablets,Fluoxetinum,20 mg,100 pcs,11-0245-05,2026-07-01,2026-10-31,shortage,2026-09-21T13:18:37.597674,N06AB03,
+LV,Latvia,ZVA,"Fomeda Easyhaler 12 micrograms/dose, inhalation powder",Formoteroli fumaras dihydricus,12 µg/1 dose,120 pcs,05-0308-03,2026-01-09,,shortage - end date unknown,2026-09-21T13:18:37.597703,R03AC13,82546
+LV,Latvia,ZVA,Forsteo,Teriparatidum,"600 µg/2,4 ml",1 pc,EU/1/03/247/001,2022-01-01,,shortage - end date unknown,2026-09-21T13:18:37.597732,H05AA02,131601
+LV,Latvia,ZVA,Forvel 0.4 mg/ml solution for injection/infusion,Naloxoni hydrochloridum,"0,4 mg/ml",5 pcs,17-0156-01,2019-01-08,,shortage - end date unknown,2026-09-21T13:18:37.597766,V03AB15,
+LV,Latvia,ZVA,Fosinopril Actavis 10 mg tablets,Fosinoprilum natricum,10 mg,28 pcs,05-0616-01,2026-08-18,2026-10-05,shortage,2026-09-21T13:18:37.597807,C09AA05,39551
+LV,Latvia,ZVA,Fosinopril Actavis 20 mg tablets,Fosinoprilum natricum,20 mg,28 pcs,05-0617-01,2026-08-18,2026-10-05,shortage,2026-09-21T13:18:37.597848,C09AA05,
+LV,Latvia,ZVA,"Furamags 25 mg capsules, hard",Furaginum solubile,25 mg,30 pcs,08-0396-01,2023-12-31,,shortage - end date unknown,2026-09-21T13:18:37.597881,J01XE01,
+LV,Latvia,ZVA,"Furamags 50 mg capsules, hard",Furaginum solubile,50 mg,30 pcs,98-0577-01,2025-02-17,2026-10-01,shortage,2026-09-21T13:18:37.597920,J01XE01,5460
+LV,Latvia,ZVA,Furasol 100 mg powder for external solution,Furaginum solubile,100 mg,15 pcs,01-0001-01,2022-09-12,,shortage - end date unknown,2026-09-21T13:18:37.597950,J01XE01,
+LV,Latvia,ZVA,Fuzeon,Enfuvirtidum,90 mg/ml,60 pcs,EU/1/03/252/001,2017-06-08,,shortage - end date unknown,2026-09-21T13:18:37.597982,J05AX07,219606
+LV,Latvia,ZVA,"Gabagamma 400 mg capsules, hard",Gabapentinum,400 mg,50 pcs,03-0386-03,2025-11-10,,leaving the market,2026-09-21T13:18:37.598018,N02BF01,52833
+LV,Latvia,ZVA,Gadovist 1.0 mmol/ml solution for injections,Gadobutrolum,"39306,8 mg/65 ml",1 pc,02-0070-08,2019-12-18,,shortage - end date unknown,2026-09-21T13:18:37.598049,V08CA09,127167
+LV,Latvia,ZVA,Gadovist 1.0 mmol/ml solution for injections,Gadobutrolum,"9070,8 mg/15 ml",5 pcs,02-0070-13,2019-12-18,,shortage - end date unknown,2026-09-21T13:18:37.598080,V08CA09,95680
+LV,Latvia,ZVA,Gadovist 1.0 mmol/ml solution for injections,Gadobutrolum,"18141,6 mg/30 ml",5 pcs,02-0070-25,2019-12-18,,shortage - end date unknown,2026-09-21T13:18:37.598112,V08CA09,58297
+LV,Latvia,ZVA,Gadovist 1.0 mmol/ml solution for injections,Gadobutrolum,"4535,4 mg/7,5 ml",5 pcs,02-0070-04,2019-12-18,,shortage - end date unknown,2026-09-21T13:18:37.598141,V08CA09,85839
+LV,Latvia,ZVA,Gaduar 20 mg/5 mg/12.5 mg film-coated tablets,"Olmesartanum medoxomilum, Amlodipinum, Hydrochlorothiazidum",1 UD,28 pcs,20-0053-01,2025-10-09,,leaving the market,2026-09-21T13:18:37.598175,,
+LV,Latvia,ZVA,Gaduar 40 mg/10 mg/12.5 mg film-coated tablets,"Olmesartanum medoxomilum, Amlodipinum, Hydrochlorothiazidum",1 UD,28 pcs,20-0055-01,2026-07-06,,leaving the market,2026-09-21T13:18:37.598207,,
+LV,Latvia,ZVA,Gaduar 40 mg/5 mg/12.5 mg film-coated tablets,"Olmesartanum medoxomilum, Amlodipinum, Hydrochlorothiazidum",1 UD,28 pcs,20-0054-01,2025-10-24,,leaving the market,2026-09-21T13:18:37.598262,,
+LV,Latvia,ZVA,Galvus,Vildagliptinum,50 mg,180 pcs,EU/1/07/414/009,2025-08-01,,shortage - end date unknown,2026-09-21T13:18:37.598291,A10BH02,85936
+LV,Latvia,ZVA,Gammanorm 165 mg/ml solution for injection,Immunoglobulinum humanum normale,"1,65 g/10 ml",1 pc,10-0657-01,2022-10-17,,shortage - end date unknown,2026-09-21T13:18:37.598319,,
+LV,Latvia,ZVA,Gammanorm 165 mg/ml solution for injection,Immunoglobulinum humanum normale,"3,3 g/20 ml",1 pc,10-0657-04,2022-10-17,,shortage - end date unknown,2026-09-21T13:18:37.598351,,
+LV,Latvia,ZVA,Ganirelix Gedeon Richter,Ganirelixum,"0,25 mg/0,5 ml",1 pc,EU/1/22/1658/001,2026-01-01,2026-12-31,shortage,2026-09-21T13:18:37.598395,H01CC01,59048
+LV,Latvia,ZVA,"Gasec Gastrocaps 40 mg gastro-resistant capsules, hard",Omeprazolum,40 mg,14 pcs,04-0342-01,2019-07-05,,shortage - end date unknown,2026-09-21T13:18:37.598441,A02BC01,60070
+LV,Latvia,ZVA,Gemcitabine Kabi 38 mg/ml concentrate for solution for infusion,Gemcitabinum,"200 mg/5,26 ml",1 pc,15-0028-01,2024-04-30,,shortage - end date unknown,2026-09-21T13:18:37.598474,L01BC05,
+LV,Latvia,ZVA,Gemcitabine Kabi 38 mg/ml concentrate for solution for infusion,Gemcitabinum,"1000 mg/26,3 ml",1 pc,15-0028-02,2024-04-30,,shortage - end date unknown,2026-09-21T13:18:37.598523,L01BC05,
+LV,Latvia,ZVA,Gemsol 40 mg/ml concentrate for solution for infusion,Gemcitabinum,2000 mg/50 ml,1 pc,10-0549-05,2024-08-16,,leaving the market,2026-09-21T13:18:37.598559,L01BC05,
+LV,Latvia,ZVA,Gepretix 100 mg soft capsules,Progesteronum,100 mg,30 pcs,14-0211-01,2026-09-07,2026-10-01,shortage,2026-09-21T13:18:37.598603,G03DA04,29181
+LV,Latvia,ZVA,Gepretix 200 mg soft capsules,Progesteronum,200 mg,15 pcs,14-0212-01,2026-09-14,2026-10-01,shortage,2026-09-21T13:18:37.598643,G03DA04,
+LV,Latvia,ZVA,Giona Easyhaler 100 micrograms/dose inhalation powder,Budesonidum,100 µg/1 dose,200 pcs,05-0272-01,2020-02-28,,shortage - end date unknown,2026-09-21T13:18:37.598674,R01AD05,
+LV,Latvia,ZVA,Giona Easyhaler 200 micrograms/dose inhalation powder,Budesonidum,200 µg/1 dose,200 pcs,05-0273-03,2026-01-09,,shortage - end date unknown,2026-09-21T13:18:37.598718,R01AD05,
+LV,Latvia,ZVA,Giona Easyhaler 400 micrograms/dose inhalation powder,Budesonidum,400 µg/1 dose,100 pcs,05-0274-03,2026-01-09,,shortage - end date unknown,2026-09-21T13:18:37.598749,R01AD05,
+LV,Latvia,ZVA,Gliclada 30 mg modified-release tablets,Gliclazidum,30 mg,60 pcs,08-0047-07,2019-07-01,,shortage - end date unknown,2026-09-21T13:18:37.598779,A10BB09,61530
+LV,Latvia,ZVA,Gliclazide Actavis 60 mg modified-release tablets,Gliclazidum,60 mg,60 pcs,15-0088-15,2026-08-18,,leaving the market,2026-09-21T13:18:37.834326,A10BB09,141925
+LV,Latvia,ZVA,Gliclazide Actavis 60 mg modified-release tablets,Gliclazidum,60 mg,120 pcs,15-0088-17,2026-08-18,2026-11-05,shortage,2026-09-21T13:18:37.834365,A10BB09,141925
+LV,Latvia,ZVA,Gliclazide Zentiva 30 mg modified-release tablets,Gliclazidum,30 mg,60 pcs,14-0166-01,2020-02-24,,shortage - end date unknown,2026-09-21T13:18:37.834385,A10BB09,61530
+LV,Latvia,ZVA,Gliclazide Zentiva 60 mg modified-release tablets,Gliclazidum,60 mg,30 pcs,14-0167-01,2020-02-24,,shortage - end date unknown,2026-09-21T13:18:37.834404,A10BB09,141925
+LV,Latvia,ZVA,Glivec,Imatinibum,100 mg,120 pcs,EU/1/01/198/011,2018-01-02,,shortage - end date unknown,2026-09-21T13:18:37.834424,L01EA01,71293
+LV,Latvia,ZVA,Glucophage 1000 mg film-coated tablets,Metformini hydrochloridum,1000 mg,60 pcs,08-0335-04,2026-04-01,,leaving the market,2026-09-21T13:18:37.834461,A10BA02,60674
+LV,Latvia,ZVA,Glucophage 500 mg film-coated tablets,Metformini hydrochloridum,500 mg,90 pcs,09-0344-11,2026-07-01,,leaving the market,2026-09-21T13:18:37.834495,A10BA02,1090
+LV,Latvia,ZVA,Glucose Fresenius 10% solution for infusion,Glucosum,50 g/500 ml,20 pcs,99-0372-06,2026-03-31,,leaving the market,2026-09-21T13:18:37.834519,B05CX01,57223
+LV,Latvia,ZVA,Glucose Fresenius 10% solution for infusion,Glucosum,25 g/250 ml,20 pcs,99-0372-05,2025-10-28,,leaving the market,2026-09-21T13:18:37.834537,B05CX01,57223
+LV,Latvia,ZVA,Glucose Fresenius 5% solution for infusion,Glucosum,1000 ml,10 pcs,99-0371-11,2025-10-28,,leaving the market,2026-09-21T13:18:37.834554,B05CX01,57223
+LV,Latvia,ZVA,Glurenorm 30 mg tablets,Gliquidonum,30 mg,60 pcs,96-0072-01,2026-04-02,,shortage - end date unknown,2026-09-21T13:18:37.834569,A10BX05,
+LV,Latvia,ZVA,Glycophos 216 mg/ml concentrate for solution for infusion,Natrii glycerophosphas,"4,32 g/20 ml",10 pcs,04-0075-03,2022-09-01,,shortage - end date unknown,2026-09-21T13:18:37.834588,,
+LV,Latvia,ZVA,Glypvilo 50 mg tablets,Vildagliptinum,50 mg,60 pcs,18-0025-04,2025-08-21,,leaving the market,2026-09-21T13:18:37.834612,A10BH02,85936
+LV,Latvia,ZVA,GONAL-f,Follitropinum alfa,5 µg/1 ml,1 pc,EU/1/95/001/025,2023-11-20,,shortage - end date unknown,2026-09-21T13:18:37.834628,G03GA05,
+LV,Latvia,ZVA,GONAL-f,Follitropinum alfa,"11 µg/0,25 ml",1 pc,EU/1/95/001/036,2024-07-01,,shortage - end date unknown,2026-09-21T13:18:37.834644,G03GA05,
+LV,Latvia,ZVA,Halixol 30 mg tablets,Ambroxoli hydrochloridum,30 mg,20 pcs,01-0046-01,2019-01-02,,shortage - end date unknown,2026-09-21T13:18:37.834659,R05CB06,125903
+LV,Latvia,ZVA,Hartil HCT 5 mg/25 mg tablets,"Ramiprilum, Hydrochlorothiazidum",5 mg/25 mg,28 pcs,07-0083-05,2020-01-29,,shortage - end date unknown,2026-09-21T13:18:37.834674,,
+LV,Latvia,ZVA,Heparīna nātrijs Panpharma 25000 SV/5 ml šķīdums injekcijām flakonos,Heparinum natricum,25000 IU/5 ml,1 pc,99-0448-02,2016-08-09,,shortage - end date unknown,2026-09-21T13:18:37.834690,B01AB01,5614
+LV,Latvia,ZVA,Herbion Efeja 35 mg lozenges,Hederae helicis folii extractum siccum,35 mg,16 pcs,19-0101-02,2021-12-22,,shortage - end date unknown,2026-09-21T13:18:37.834705,,
+LV,Latvia,ZVA,Hexacima,"Vaccinum diphtheriae, tetani, pertussis sine cellulis ex elementis praeparatum, hepatitidis B (ADNr), poliomyelitidis inactivatum et haemophili stirpis b coniugatum adsorbatum","0,5 ml",1 pc,EU/1/13/828/006,2020-01-06,,shortage - end date unknown,2026-09-21T13:18:37.834720,,
+LV,Latvia,ZVA,Hexoral Spray 2 mg/ml nebuliser solution,Hexetidinum,80 mg/40 ml,1 pc,94-0313-01,2022-08-03,,shortage - end date unknown,2026-09-21T13:18:37.834736,A01AB12,
+LV,Latvia,ZVA,Hexoraletten N 5 mg/1.5 mg lozenges,"Chlorhexidini dihydrochloridum, Benzocainum","5 mg/1,5 mg",20 pcs,98-0597-01,2024-01-22,2027-01-31,shortage,2026-09-21T13:18:37.834756,,
+LV,Latvia,ZVA,Hjertemagnyl 150 mg/21 mg film-coated tablets,"Acidum acetylsalicylicum, Magnesii oxidum",150 mg/21 mg,30 pcs,93-0449-02,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:37.834776,,
+LV,Latvia,ZVA,Hjertemagnyl 75 mg/10.5 mg film-coated tablets,"Acidum acetylsalicylicum, Magnesii oxidum","75 mg/10,5 mg",30 pcs,05-0414-01,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:37.834791,,
+LV,Latvia,ZVA,Holoxan 1 g powder for solution for infusion,Ifosfamidum,1 g,1 pc,01-0469-01,2026-02-24,2027-01-01,shortage,2026-09-21T13:18:37.834811,L01AA06,
+LV,Latvia,ZVA,Holoxan 500 mg powder for solution for infusion,Ifosfamidum,500 mg,1 pc,01-0468-01,2026-02-24,2027-01-01,shortage,2026-09-21T13:18:37.834831,L01AA06,
+LV,Latvia,ZVA,Hukyndra,Adalimumabum,"40 mg/0,4 ml",1 pc,EU/1/21/1589/001,2024-02-01,,leaving the market,2026-09-21T13:18:37.834850,L04AB04,
+LV,Latvia,ZVA,Hukyndra,Adalimumabum,"40 mg/0,4 ml",1 pc,EU/1/21/1589/004,2024-01-13,,leaving the market,2026-09-21T13:18:37.834867,L04AB04,
+LV,Latvia,ZVA,Hukyndra,Adalimumabum,"80 mg/0,8 ml",1 pc,EU/1/21/1589/007,2025-06-01,,leaving the market,2026-09-21T13:18:37.834884,L04AB04,146153
+LV,Latvia,ZVA,Humalog,Insulinum lisprum,300 U/3 ml,5 pcs,EU/1/96/007/004,2023-04-01,,shortage - end date unknown,2026-09-21T13:18:37.834900,A10AB04,121363
+LV,Latvia,ZVA,Humira,Adalimumabum,"40 mg/0,8 ml",2 pcs,EU/1/03/256/001,2018-06-06,,shortage - end date unknown,2026-09-21T13:18:37.834915,L04AB04,
+LV,Latvia,ZVA,Humira,Adalimumabum,"40 mg/0,8 ml",2 pcs,EU/1/03/256/003,2017-01-01,,shortage - end date unknown,2026-09-21T13:18:37.834930,L04AB04,
+LV,Latvia,ZVA,Humira,Adalimumabum,"40 mg/0,4 ml",2 pcs,EU/1/03/256/013,2023-02-28,,shortage - end date unknown,2026-09-21T13:18:37.834945,L04AB04,129771
+LV,Latvia,ZVA,Humulin R 100 IU/ml solution for injection in cartridge,Insulinum humanum,300 IU/3 ml,5 pcs,18-0012-01,2026-01-01,,leaving the market,2026-09-21T13:18:37.834966,A10AB01,
+LV,Latvia,ZVA,Hustagil Thyme Cough Syrup oral solution,Thymi herbae extractum fluidum,150 ml,1 pc,96-0037-01,2017-02-28,,shortage - end date unknown,2026-09-21T13:18:37.834984,,
+LV,Latvia,ZVA,Ibandronic Acid Teva,Acidum ibandronicum,150 mg,1 pc,EU/1/10/642/003,2023-10-23,2026-12-31,shortage,2026-09-21T13:18:37.835004,M05BX04,
+LV,Latvia,ZVA,Ibandronic Acid Teva,Acidum ibandronicum,150 mg,3 pcs,EU/1/10/642/004,2023-10-18,2026-12-31,shortage,2026-09-21T13:18:37.835025,M05BX04,
+LV,Latvia,ZVA,Ibrance,Palbociclibum,100 mg,21 pcs,EU/1/16/1147/003,2023-08-14,,shortage - end date unknown,2026-09-21T13:18:37.835041,L01EF01,139467
+LV,Latvia,ZVA,Ibrance,Palbociclibum,125 mg,21 pcs,EU/1/16/1147/005,2023-04-03,,shortage - end date unknown,2026-09-21T13:18:37.835056,L01EF01,139475
+LV,Latvia,ZVA,Ibugard 125 mg suppositories,Ibuprofenum,125 mg,10 pcs,20-0013-02,2026-04-21,2026-12-15,shortage,2026-09-21T13:18:37.835076,M01AE01,79049
+LV,Latvia,ZVA,Ibugard 60 mg suppositories,Ibuprofenum,60 mg,10 pcs,20-0012-02,2026-09-07,2026-12-15,shortage,2026-09-21T13:18:37.835097,M01AE01,232009
+LV,Latvia,ZVA,Ibugesic 600 mg film-coated tablets,Ibuprofenum,600 mg,50 pcs,01-0413-01,2019-01-09,,shortage - end date unknown,2026-09-21T13:18:37.835112,M01AE01,17469
+LV,Latvia,ZVA,Ibuprofen-Grindeks 200 mg apvalkotās tabletes,Ibuprofenum,200 mg,20 pcs,04-0141-01,2026-03-25,,leaving the market,2026-09-21T13:18:37.835129,M01AE01,27251
+LV,Latvia,ZVA,Ibuprofen-Grindeks 400 mg film-coated tablets,Ibuprofenum,400 mg,10 pcs,05-0527-01,2026-03-25,,leaving the market,2026-09-21T13:18:37.835146,M01AE01,27278
+LV,Latvia,ZVA,Imatinib Teva,Imatinibum,400 mg,30 pcs,EU/1/12/808/013,2018-10-26,,shortage - end date unknown,2026-09-21T13:18:37.835161,L01EA01,71307
+LV,Latvia,ZVA,Imatinib Teva,Imatinibum,100 mg,120 pcs,EU/1/12/808/004,2019-07-05,,shortage - end date unknown,2026-09-21T13:18:37.835179,L01EA01,71293
+LV,Latvia,ZVA,Imbruvica,Ibrutinibum,140 mg,90 pcs,EU/1/14/945/001,2021-08-01,,shortage - end date unknown,2026-09-21T13:18:37.835196,L01EL01,120960
+LV,Latvia,ZVA,Imovane 7.5 mg film-coated tablets,Zopiclonum,"7,5 mg",20 pcs,98-0590-02,2022-07-01,,shortage - end date unknown,2026-09-21T13:18:37.835212,N05CF01,24732
+LV,Latvia,ZVA,Imovax d.T. Adult suspension for injection in pre-filled syringe,Vaccinum diphtheriae et tetani adsorbatum,"0,5 ml",10 pcs,06-0098-02,2020-03-18,,shortage - end date unknown,2026-09-21T13:18:37.835227,,
+LV,Latvia,ZVA,Imuldosa,Ustekinumabum,130 mg/26 ml,1 pc,EU/1/24/1872/003,2026-06-03,2027-05-31,shortage,2026-09-21T13:18:37.835257,L04AC05,138274
+LV,Latvia,ZVA,Infanrix hexa,"Vaccinum diphtheriae, tetani, pertussis sine cellulis ex elementis praeparatum, hepatitidis B (ADNr), poliomyelitidis inactivatum et haemophili stirpis b coniugatum adsorbatum","0,5 ml",10 pcs,EU/1/00/152/002,2025-09-16,2027-01-01,shortage,2026-09-21T13:18:38.071032,,
+LV,Latvia,ZVA,Inflectra,Infliximabum,100 mg,1 pc,EU/1/13/854/001,2024-01-01,,shortage - end date unknown,2026-09-21T13:18:38.071061,L04AB02,54542
+LV,Latvia,ZVA,Influcid tablets,"Eupatorium perfoliatum, Bryonia dioica, Phosphorus, Ipecacuanha, Gelsemium, Aconitum",1 UD,40 pcs,00-0990-02,2020-01-20,,shortage - end date unknown,2026-09-21T13:18:38.071081,,
+LV,Latvia,ZVA,Influvac suspension for injection,Vaccinum influenzae inactivatum ex corticis antigeniis praeparatum,"0,5 ml",1 pc,24-0156-01,2025-12-16,,shortage - end date unknown,2026-09-21T13:18:38.071110,J07BB02,229512
+LV,Latvia,ZVA,Inlyta,Axitinibum,1 mg,56 pcs,EU/1/12/777/002,2026-01-01,,shortage - end date unknown,2026-09-21T13:18:38.071128,L01EK01,104442
+LV,Latvia,ZVA,Inlyta,Axitinibum,5 mg,56 pcs,EU/1/12/777/005,2026-01-01,,shortage - end date unknown,2026-09-21T13:18:38.071145,L01EK01,104450
+LV,Latvia,ZVA,INOmax,Nitrogenii oxidum,10 l,1 pc,EU/1/01/194/001,2017-01-01,,shortage - end date unknown,2026-09-21T13:18:38.071161,,
+LV,Latvia,ZVA,Instillagel 20.9 mg/0.52 mg/ml Gel,"Chlorhexidini digluconas, Lidocaini hydrochloridum",6 ml,1 pc,03-0491-01,2019-08-26,,shortage - end date unknown,2026-09-21T13:18:38.071178,,
+LV,Latvia,ZVA,Instillagel 20.9 mg/0.52 mg/ml Gel,"Chlorhexidini digluconas, Lidocaini hydrochloridum",11 ml,1 pc,03-0491-02,2019-08-26,,shortage - end date unknown,2026-09-21T13:18:38.071194,,
+LV,Latvia,ZVA,Insulin lispro Sanofi,Insulinum lisprum,300 U/3 ml,5 pcs,EU/1/17/1203/001,2022-03-28,,shortage - end date unknown,2026-09-21T13:18:38.071210,A10AB04,121363
+LV,Latvia,ZVA,Insulin lispro Sanofi,Insulinum lisprum,1000 U/10 ml,1 pc,EU/1/17/1203/007,2023-01-30,,shortage - end date unknown,2026-09-21T13:18:38.071226,A10AB04,65838
+LV,Latvia,ZVA,Insulin lispro Sanofi,Insulinum lisprum,300 U/3 ml,5 pcs,EU/1/17/1203/005,2025-05-06,,shortage - end date unknown,2026-09-21T13:18:38.071244,A10AB04,121363
+LV,Latvia,ZVA,Insuman Basal SoloStar,Insulinum humanum,300 IU/3 ml,5 pcs,EU/1/97/030/148,2024-03-01,,shortage - end date unknown,2026-09-21T13:18:38.071262,A10AB01,
+LV,Latvia,ZVA,Invanz,Ertapenemum,1 g,1 pc,EU/1/02/216/001,2016-07-07,,shortage - end date unknown,2026-09-21T13:18:38.071278,J01DH03,63525
+LV,Latvia,ZVA,Ipertrofan 40 mg gastro-resistant tablets,Mepartricinum,40 mg,20 pcs,95-0014-01,2016-07-11,,shortage - end date unknown,2026-09-21T13:18:38.071294,A01AB16,
+LV,Latvia,ZVA,Ipigrix 5 mg/ml solution for injection,Ipidacrini hydrochloridum,5 mg/1 ml,10 pcs,11-0366-01,2020-06-10,,shortage - end date unknown,2026-09-21T13:18:38.071310,N06DA05,
+LV,Latvia,ZVA,Ipinzan 50 mg/1000 mg film-coated tablets,"Vildagliptinum, Metformini hydrochloridum",50 mg/1000 mg,60 pcs,21-0195-07,2025-09-03,,shortage - end date unknown,2026-09-21T13:18:38.071328,,
+LV,Latvia,ZVA,Ipraalox 20 mg gastro-resistant tablets,Pantoprazolum,20 mg,14 pcs,11-0064-02,2025-05-25,,shortage - end date unknown,2026-09-21T13:18:38.071346,A02BC02,52272
+LV,Latvia,ZVA,Iressa,Gefitinibum,250 mg,30 pcs,EU/1/09/526/002,2019-09-01,,shortage - end date unknown,2026-09-21T13:18:38.071362,L01EB01,90778
+LV,Latvia,ZVA,Irinotecan Kabi 20 mg/ml concentrate for solution for infusion,Irinotecani hydrochloridum trihydricum,40 mg/2 ml,1 pc,08-0260-03,2024-04-30,,shortage - end date unknown,2026-09-21T13:18:38.071378,,
+LV,Latvia,ZVA,Isentress,Raltegravirum,400 mg,60 pcs,EU/1/07/436/001,2026-08-31,,shortage - end date unknown,2026-09-21T13:18:38.071395,J05AJ01,85804
+LV,Latvia,ZVA,Isentress,Raltegravirum,25 mg,60 pcs,EU/1/07/436/003,2026-02-28,,shortage - end date unknown,2026-09-21T13:18:38.071411,J05AJ01,
+LV,Latvia,ZVA,Isentress,Raltegravirum,100 mg,60 pcs,EU/1/07/436/004,2026-01-01,,shortage - end date unknown,2026-09-21T13:18:38.071427,J05AJ01,
+LV,Latvia,ZVA,ISMN STADA 20 mg tablets,Isosorbidi mononitras,20 mg,100 pcs,05-0087-02,2026-04-28,,leaving the market,2026-09-21T13:18:38.071448,C01DA08,
+LV,Latvia,ZVA,ISMN STADA 40 mg tablets,Isosorbidi mononitras,40 mg,100 pcs,05-0088-02,2026-04-28,,leaving the market,2026-09-21T13:18:38.071466,C01DA08,
+LV,Latvia,ZVA,Isoket 1.25 mg/dose spray,Isosorbidi dinitras,"1,25 mg/1 dose",300 pcs,99-0862-01,2026-02-04,,leaving the market,2026-09-21T13:18:38.071484,C01DA08,
+LV,Latvia,ZVA,Isomonit 60 mg prolonged-release tablets,Isosorbidi mononitras,60 mg,60 pcs,03-0479-03,2024-02-01,,shortage - end date unknown,2026-09-21T13:18:38.071500,C01DA08,
+LV,Latvia,ZVA,Itivas 100 mg film-coated tablets,Imatinibum,100 mg,60 pcs,13-0055-03,2021-06-30,,shortage - end date unknown,2026-09-21T13:18:38.071516,L01EA01,71293
+LV,Latvia,ZVA,Itivas 400 mg film-coated tablets,Imatinibum,400 mg,60 pcs,13-0056-03,2022-06-28,,leaving the market,2026-09-21T13:18:38.071535,L01EA01,71307
+LV,Latvia,ZVA,Itivas 400 mg film-coated tablets,Imatinibum,400 mg,30 pcs,13-0056-02,2026-05-27,,leaving the market,2026-09-21T13:18:38.071552,L01EA01,71307
+LV,Latvia,ZVA,Itranols 100 mg cietās kapsulas,Itraconazolum,100 mg,10 pcs,01-0186-02,2017-10-02,,shortage - end date unknown,2026-09-21T13:18:38.071571,J02AC02,32336
+LV,Latvia,ZVA,Ivabradine Accord,Ivabradinum,5 mg,56 pcs,EU/1/17/1190/003,2026-07-08,,leaving the market,2026-09-21T13:18:38.071589,C01EB17,81213
+LV,Latvia,ZVA,Ivabradine Accord,Ivabradinum,"7,5 mg",56 pcs,EU/1/17/1190/010,2026-07-08,,leaving the market,2026-09-21T13:18:38.071607,C01EB17,81213
+LV,Latvia,ZVA,Ivabradine Anpharm,Ivabradinum,5 mg,56 pcs,EU/1/15/1041/003,2026-04-28,,shortage - end date unknown,2026-09-21T13:18:38.071625,C01EB17,81213
+LV,Latvia,ZVA,Ivabradine Anpharm,Ivabradinum,"7,5 mg",56 pcs,EU/1/15/1041/010,2026-04-28,,shortage - end date unknown,2026-09-21T13:18:38.071640,C01EB17,81213
+LV,Latvia,ZVA,Ivabradine Viatris 5 mg film-coated tablets,Ivabradinum,5 mg,56 pcs,16-0252-13,2023-04-01,,leaving the market,2026-09-21T13:18:38.071657,C01EB17,81213
+LV,Latvia,ZVA,Ivabradine Viatris 7.5 mg film-coated tablets,Ivabradinum,"7,5 mg",56 pcs,16-0253-13,2024-12-18,,leaving the market,2026-09-21T13:18:38.071675,C01EB17,81213
+LV,Latvia,ZVA,Ivabradine Zentiva,Ivabradinum,5 mg,56 pcs,EU/1/16/1144/003,2020-08-05,,shortage - end date unknown,2026-09-21T13:18:38.071690,C01EB17,81213
+LV,Latvia,ZVA,Ivabradine Zentiva,Ivabradinum,"7,5 mg",56 pcs,EU/1/16/1144/010,2023-04-17,,shortage - end date unknown,2026-09-21T13:18:38.071705,C01EB17,81213
+LV,Latvia,ZVA,Janumet,"Sitagliptinum, Metformini hydrochloridum",50 mg/850 mg,196 pcs,EU/1/08/455/015,2024-08-20,,shortage - end date unknown,2026-09-21T13:18:38.071721,,
+LV,Latvia,ZVA,Janumet,"Sitagliptinum, Metformini hydrochloridum",50 mg/850 mg,56 pcs,EU/1/08/455/003,2024-08-20,,shortage - end date unknown,2026-09-21T13:18:38.071738,,
+LV,Latvia,ZVA,Janumet,"Sitagliptinum, Metformini hydrochloridum",50 mg/1000 mg,56 pcs,EU/1/08/455/010,2024-08-20,,shortage - end date unknown,2026-09-21T13:18:38.071753,,
+LV,Latvia,ZVA,Janumet,"Sitagliptinum, Metformini hydrochloridum",50 mg/1000 mg,196 pcs,EU/1/08/455/016,2024-08-20,,shortage - end date unknown,2026-09-21T13:18:38.071769,,
+LV,Latvia,ZVA,Januvia,Sitagliptinum,25 mg,28 pcs,EU/1/07/383/002,2018-04-01,,shortage - end date unknown,2026-09-21T13:18:38.071784,A10BH01,218103
+LV,Latvia,ZVA,Januvia,Sitagliptinum,50 mg,28 pcs,EU/1/07/383/008,2024-08-20,,shortage - end date unknown,2026-09-21T13:18:38.071799,A10BH01,218111
+LV,Latvia,ZVA,Januvia,Sitagliptinum,100 mg,28 pcs,EU/1/07/383/014,2024-08-20,,shortage - end date unknown,2026-09-21T13:18:38.071814,A10BH01,218138
+LV,Latvia,ZVA,Januvia,Sitagliptinum,100 mg,98 pcs,EU/1/07/383/017,2024-08-20,,shortage - end date unknown,2026-09-21T13:18:38.071829,A10BH01,218138
+LV,Latvia,ZVA,Jazeta 100 mg film-coated tablets,Sitagliptinum,100 mg,28 pcs,21-0201-02,2025-10-17,,shortage - end date unknown,2026-09-21T13:18:38.071844,A10BH01,218138
+LV,Latvia,ZVA,Jazeta 50 mg film-coated tablets,Sitagliptinum,50 mg,28 pcs,21-0200-02,2025-09-04,,shortage - end date unknown,2026-09-21T13:18:38.071859,A10BH01,218111
+LV,Latvia,ZVA,JEVTANA,Cabazitaxelum,"1,5 ml/4,5 ml",1 pc,EU/1/11/676/001,2025-04-08,,shortage - end date unknown,2026-09-21T13:18:38.071876,L01XX40,98434
+LV,Latvia,ZVA,Kaletra,"Lopinavirum, Ritonavirum",60 ml,5 pcs,EU/1/01/172/003,2023-01-01,,shortage - end date unknown,2026-09-21T13:18:38.328098,,
+LV,Latvia,ZVA,Kaletra,"Lopinavirum, Ritonavirum",60 ml,2 pcs,EU/1/01/172/009,2023-01-01,,shortage - end date unknown,2026-09-21T13:18:38.328161,,
+LV,Latvia,ZVA,Kaletra,"Lopinavirum, Ritonavirum",200 mg/50 mg,120 pcs,EU/1/01/172/004,2024-08-09,,shortage - end date unknown,2026-09-21T13:18:38.328202,,
+LV,Latvia,ZVA,Kaletra,"Lopinavirum, Ritonavirum",100 mg/25 mg,60 pcs,EU/1/01/172/006,2023-01-01,,shortage - end date unknown,2026-09-21T13:18:38.328238,,
+LV,Latvia,ZVA,Kamiren 4 mg tablets,Doxazosinum,4 mg,30 pcs,01-0181-01,2021-12-22,,shortage - end date unknown,2026-09-21T13:18:38.328272,C02CA04,53589
+LV,Latvia,ZVA,Kapidin 10 mg film-coated tablets,Lercanidipini hydrochloridum,10 mg,28 pcs,12-0142-14,2026-01-15,,leaving the market,2026-09-21T13:18:38.328316,C08CA13,
+LV,Latvia,ZVA,Kapidin 20 mg film-coated tablets,Lercanidipini hydrochloridum,20 mg,28 pcs,12-0143-14,2026-07-06,,leaving the market,2026-09-21T13:18:38.328353,C08CA13,43087
+LV,Latvia,ZVA,Karvidil 12.5 mg tablets,Carvedilolum,"12,5 mg",28 pcs,03-0346-01,2026-03-25,,leaving the market,2026-09-21T13:18:38.328390,C07AG02,74241
+LV,Latvia,ZVA,Karvidil 25 mg tablets,Carvedilolum,25 mg,28 pcs,03-0347-01,2026-03-25,,leaving the market,2026-09-21T13:18:38.328420,C07AG02,41009
+LV,Latvia,ZVA,Karvidil 6.25 mg tablets,Carvedilolum,"6,25 mg",28 pcs,03-0345-01,2026-03-25,,leaving the market,2026-09-21T13:18:38.328450,C07AG02,47864
+LV,Latvia,ZVA,Kenalog 40 mg/ml suspension for injection,Triamcinoloni acetonidum,40 mg/1 ml,5 pcs,94-0041-01,2026-07-27,2026-10-28,shortage,2026-09-21T13:18:38.328486,,
+LV,Latvia,ZVA,Kestine 10 mg film-coated tablets,Ebastinum,10 mg,30 pcs,99-0237-04,2018-08-13,,shortage - end date unknown,2026-09-21T13:18:38.328512,R06AX22,66826
+LV,Latvia,ZVA,Kestine 10 mg film-coated tablets,Ebastinum,10 mg,10 pcs,02-0115-01,2018-08-13,,shortage - end date unknown,2026-09-21T13:18:38.328538,R06AX22,66826
+LV,Latvia,ZVA,Ketanov 10 mg film-coated tablets,Ketorolacum trometamolum,10 mg,20 pcs,I000445-01,2020-02-14,,shortage - end date unknown,2026-09-21T13:18:38.328563,M01AB15,
+LV,Latvia,ZVA,Ketanov 10 mg film-coated tablets,Ketorolacum trometamolum,10 mg,20 pcs,I000430-01,2020-02-14,,shortage - end date unknown,2026-09-21T13:18:38.328588,M01AB15,
+LV,Latvia,ZVA,Kineret,Anakinrum,"100 mg/0,67 ml",28 pcs,EU/1/02/203/007,2019-01-16,,shortage - end date unknown,2026-09-21T13:18:38.328613,L04AC03,
+LV,Latvia,ZVA,Kiovig,Immunoglobulinum humanum normale,20 g/200 ml,1 pc,EU/1/05/329/005,2018-06-28,,shortage - end date unknown,2026-09-21T13:18:38.328638,,
+LV,Latvia,ZVA,Klimaktoplan tablets,"Cimicifuga, Sepia officinalis, Ignatia amara, Sanguinaria",1 UD,100 pcs,15-0266-01,2019-10-28,,shortage - end date unknown,2026-09-21T13:18:38.328663,,
+LV,Latvia,ZVA,Komboglyze,"Saxagliptinum, Metformini hydrochloridum","2,5 mg/1000 mg",60 pcs,EU/1/11/731/009,2024-03-27,,leaving the market,2026-09-21T13:18:38.328693,,
+LV,Latvia,ZVA,Komboglyze,"Saxagliptinum, Metformini hydrochloridum","2,5 mg/850 mg",60 pcs,EU/1/11/731/003,2024-03-27,,leaving the market,2026-09-21T13:18:38.328722,,
+LV,Latvia,ZVA,"Kreon 25 000 U gastro-resistant capsules, hard",Pancreatis pulvis,25000 U,20 pcs,99-0595-05,2025-02-01,,shortage - end date unknown,2026-09-21T13:18:38.328752,,
+LV,Latvia,ZVA,Kuvan,Sapropterinum,100 mg,120 pcs,EU/1/08/481/002-P01,2024-09-13,,leaving the market,2026-09-21T13:18:38.328783,A16AX07,89508
+LV,Latvia,ZVA,Kventiax 150 mg prolonged-release tablets,Quetiapinum,150 mg,60 pcs,14-0278-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:38.328811,N05AH04,94757
+LV,Latvia,ZVA,Kventiax 200 mg prolonged-release tablets,Quetiapinum,200 mg,60 pcs,14-0279-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:38.328839,N05AH04,84190
+LV,Latvia,ZVA,Kventiax 300 mg prolonged-release tablets,Quetiapinum,300 mg,60 pcs,14-0280-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:38.328864,N05AH04,84204
+LV,Latvia,ZVA,Kventiax 400 mg prolonged-release tablets,Quetiapinum,400 mg,60 pcs,18-0117-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:38.328889,N05AH04,84212
+LV,Latvia,ZVA,Kventiax 50 mg prolonged-release tablets,Quetiapinum,50 mg,60 pcs,15-0318-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:38.328916,N05AH04,84182
+LV,Latvia,ZVA,L-Thyroxin Berlin-Chemie 150 micrograms tablets,Levothyroxinum natricum,150 µg,25 pcs,06-0016-01,2019-11-27,,shortage - end date unknown,2026-09-21T13:18:38.328944,H03AA01,23469
+LV,Latvia,ZVA,Lacosamide Teva 100 mg film-coated tablets,Lacosamidum,100 mg,60 pcs,24-0129-21,2026-08-10,2026-09-23,shortage,2026-09-21T13:18:38.328978,N03AX18,217875
+LV,Latvia,ZVA,Lactulose Fresenius 670 mg/ml oral solution,Lactulosum,201 g/300 ml,1 pc,10-0551-04,2021-08-19,,shortage - end date unknown,2026-09-21T13:18:38.329005,A06AD11,892
+LV,Latvia,ZVA,Lamisil Uno 1% cutaneous solution,Terbinafinum,40 mg/4 g,1 pc,06-0178-01,2022-12-01,,shortage - end date unknown,2026-09-21T13:18:38.329034,D01AE15,
+LV,Latvia,ZVA,"Lanzostad 30 mg gastro-resistant capsules, hard",Lansoprazolum,30 mg,14 pcs,05-0377-01,2024-06-04,,leaving the market,2026-09-21T13:18:38.329068,A02BC03,79391
+LV,Latvia,ZVA,"Lanzul 15 mg gastro-resistant capsules, hard",Lansoprazolum,15 mg,28 pcs,07-0040-08,2020-11-27,,shortage - end date unknown,2026-09-21T13:18:38.329098,A02BC03,79383
+LV,Latvia,ZVA,Larifans 2.5 mg/2 ml solution for injection,Acidum ribonucleinicum duplicatum,"2,5 mg/2 ml",1 pc,04-0230-01,2022-03-01,,shortage - end date unknown,2026-09-21T13:18:38.329128,,
+LV,Latvia,ZVA,"Latizolil 50 micrograms/ml eye drops, solution",Latanoprostum,"0,125 mg/2,5 ml",1 pc,11-0109-01,2026-08-24,2026-12-31,shortage,2026-09-21T13:18:38.329171,S01EE01,212091
+LV,Latvia,ZVA,Ledaga,Chlormethinum,60 g,1 pc,EU/1/16/1171/001,2025-12-09,,shortage - end date unknown,2026-09-21T13:18:38.329201,L01AA05,148490
+LV,Latvia,ZVA,Leflunomide Sandoz 20 mg film-coated tablets,Leflunomidum,20 mg,30 pcs,11-0002-04,2026-07-16,2026-09-30,shortage,2026-09-21T13:18:38.329239,L04AK01,53619
+LV,Latvia,ZVA,Lenalidomide Grindeks 10 mg hard capsules,Lenalidomidum,10 mg,21 pcs,19-0138-02,2026-03-10,,shortage - end date unknown,2026-09-21T13:18:38.329268,L04AX04,83917
+LV,Latvia,ZVA,Lenalidomide Grindeks 15 mg hard capsules,Lenalidomidum,15 mg,21 pcs,19-0139-02,2026-03-10,,shortage - end date unknown,2026-09-21T13:18:38.329296,L04AX04,83925
+LV,Latvia,ZVA,Lenalidomide Grindeks 25 mg hard capsules,Lenalidomidum,25 mg,21 pcs,19-0141-02,2026-03-10,,shortage - end date unknown,2026-09-21T13:18:38.329323,L04AX04,83933
+LV,Latvia,ZVA,Lenalidomide Grindeks 5 mg hard capsules,Lenalidomidum,5 mg,21 pcs,19-0136-02,2026-03-10,,shortage - end date unknown,2026-09-21T13:18:38.329352,L04AX04,83909
+LV,Latvia,ZVA,Lenalidomide Zentiva 10 mg hard capsules,Lenalidomidum,10 mg,21 pcs,18-0080-01,2023-11-23,,shortage - end date unknown,2026-09-21T13:18:38.329380,L04AX04,83917
+LV,Latvia,ZVA,Leptoprol 5 mg implant in pre-filled syringe,Leuprorelinum,5 mg,1 pc,14-0265-01,2022-03-24,,shortage - end date unknown,2026-09-21T13:18:38.329408,L02AE02,93769
+LV,Latvia,ZVA,Leqvio,Inclisiranum,"284 mg/1,5 ml",1 pc,EU/1/20/1494/001,2023-09-01,,shortage - end date unknown,2026-09-21T13:18:38.329437,C10AX16,213055
+LV,Latvia,ZVA,Leucovorin-Teva 10 mg/ml solution for injection,Calcii folinas,50 mg/5 ml,1 pc,99-0863-01,2019-09-09,,shortage - end date unknown,2026-09-21T13:18:38.329465,B03BA01,
+LV,Latvia,ZVA,Levalox 500 mg film-coated tablets,Levofloxacinum,500 mg,7 pcs,15-0090-03,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:38.329494,J01MA12,48763
+LV,Latvia,ZVA,Levalox 500 mg film-coated tablets,Levofloxacinum,500 mg,10 pcs,15-0090-04,2018-12-28,,shortage - end date unknown,2026-09-21T13:18:38.329518,J01MA12,48763
+LV,Latvia,ZVA,Levetiracetam ratiopharm,Levetiracetamum,30000 mg/300 ml,1 pc,EU/1/11/702/001,2024-04-02,,shortage - end date unknown,2026-09-21T13:18:38.329542,N03AX14,80918
+LV,Latvia,ZVA,Levetiracetam Teva,Levetiracetamum,250 mg,30 pcs,EU/1/11/701/001,2019-02-07,,leaving the market,2026-09-21T13:18:38.329570,N03AX14,58386
+LV,Latvia,ZVA,Levetiracetam Teva,Levetiracetamum,500 mg,30 pcs,EU/1/11/701/008,2020-01-30,,leaving the market,2026-09-21T13:18:38.329599,N03AX14,58394
+LV,Latvia,ZVA,Levetiracetam Teva,Levetiracetamum,1000 mg,30 pcs,EU/1/11/701/022,2020-04-21,,leaving the market,2026-09-21T13:18:38.591420,N03AX14,58408
+LV,Latvia,ZVA,Levitra,Vardenafilum,5 mg,2 pcs,EU/1/03/248/001,2019-08-02,,shortage - end date unknown,2026-09-21T13:18:38.591477,G04BE09,69191
+LV,Latvia,ZVA,Levitra,Vardenafilum,5 mg,4 pcs,EU/1/03/248/002,2019-08-02,,shortage - end date unknown,2026-09-21T13:18:38.591516,G04BE09,69191
+LV,Latvia,ZVA,Levitra,Vardenafilum,10 mg,2 pcs,EU/1/03/248/005,2019-01-17,,shortage - end date unknown,2026-09-21T13:18:38.591550,G04BE09,69205
+LV,Latvia,ZVA,Levitra,Vardenafilum,10 mg,4 pcs,EU/1/03/248/006,2019-08-02,,shortage - end date unknown,2026-09-21T13:18:38.591580,G04BE09,69205
+LV,Latvia,ZVA,Levitra,Vardenafilum,20 mg,4 pcs,EU/1/03/248/010,2019-08-02,,shortage - end date unknown,2026-09-21T13:18:38.591610,G04BE09,69213
+LV,Latvia,ZVA,Levodopa/Carbidopa/Entacapone Teva 150 mg/37.5 mg/200 mg film-coated tablets,"Levodopum, Carbidopum, Entacaponum",1 UD,100 pcs,14-0205-08,2026-09-15,2026-10-05,shortage,2026-09-21T13:18:38.591653,,
+LV,Latvia,ZVA,Levosert 20 micrograms/24 hours intrauterine delivery system,Levonorgestrelum,52 mg,1 pc,13-0032-01,2023-02-20,,shortage - end date unknown,2026-09-21T13:18:38.591689,G03AC03,223999
+LV,Latvia,ZVA,Levosimendan Kalceks 2.5 mg/ml concentrate for solution for infusion,Levosimendanum,"12,5 mg/5 ml",1 pc,22-0034-01,2024-11-04,,shortage - end date unknown,2026-09-21T13:18:38.591720,C01CX08,210307
+LV,Latvia,ZVA,Levosimendan Pharmidea 2.5 mg/ml concentrate for solution for infusion,Levosimendanum,"12,5 mg/5 ml",1 pc,23-0169-01,2026-07-01,2026-09-30,shortage,2026-09-21T13:18:38.591763,C01CX08,210307
+LV,Latvia,ZVA,Levothyroxine sodium Unifarma 100 micrograms tablets,Levothyroxinum natricum,100 µg,100 pcs,23-0173-01,2026-08-10,2026-11-01,shortage,2026-09-21T13:18:38.591807,H03AA01,15792
+LV,Latvia,ZVA,Levothyroxine sodium Unifarma 50 micrograms tablets,Levothyroxinum natricum,50 µg,100 pcs,23-0171-01,2026-08-05,2026-11-01,shortage,2026-09-21T13:18:38.591850,H03AA01,15784
+LV,Latvia,ZVA,Levothyroxine sodium Unifarma 75 micrograms tablets,Levothyroxinum natricum,75 µg,100 pcs,23-0172-01,2026-08-05,2026-11-01,shortage,2026-09-21T13:18:38.591892,H03AA01,48941
+LV,Latvia,ZVA,Lexotanil 3 mg tablets,Bromazepamum,3 mg,30 pcs,I001481-01,2023-07-06,,shortage - end date unknown,2026-09-21T13:18:38.591923,N05BA08,3298
+LV,Latvia,ZVA,Lincocin 500 mg hard capsules,Lincomycinum,500 mg,24 pcs,I000734-01,2020-09-30,,shortage - end date unknown,2026-09-21T13:18:38.591953,J01FF02,
+LV,Latvia,ZVA,Linezolid Accord 2 mg/ml solution for infusion,Linezolidum,600 mg/300 ml,10 pcs,18-0005-01,2026-07-28,,leaving the market,2026-09-21T13:18:38.591987,J01XX08,60151
+LV,Latvia,ZVA,Linola Urea 120 mg/g cream,Ureum,9 g/75 g,1 pc,00-1161-01,2022-11-01,,shortage - end date unknown,2026-09-21T13:18:38.592021,D02AE01,
+LV,Latvia,ZVA,Linola Urea 120 mg/g cream,Ureum,6 g/50 g,1 pc,00-1161-04,2021-10-20,,shortage - end date unknown,2026-09-21T13:18:38.592051,D02AE01,
+LV,Latvia,ZVA,Lomac 20 mg capsules,Omeprazolum,20 mg,14 pcs,99-0459-02,2016-08-09,,shortage - end date unknown,2026-09-21T13:18:38.592081,A02BC01,60062
+LV,Latvia,ZVA,Lonsurf,"Trifluridinum, Tipiracilum","20 mg/8,19 mg",20 pcs,EU/1/16/1096/004,2026-04-28,,leaving the market,2026-09-21T13:18:38.592121,,
+LV,Latvia,ZVA,Lonsurf,"Trifluridinum, Tipiracilum","15 mg/6,14 mg",20 pcs,EU/1/16/1096/001,2026-06-30,,shortage - end date unknown,2026-09-21T13:18:38.592154,,
+LV,Latvia,ZVA,"Loperamide Stirol 2 mg capsules, hard",Loperamidi hydrochloridum,2 mg,12 pcs,01-0086-01,2016-11-04,,shortage - end date unknown,2026-09-21T13:18:38.592183,A07DA03,3212
+LV,Latvia,ZVA,Lorafen 4 mg/ml solution for injection,Lorazepamum,4 mg/1 ml,10 pcs,23-0153-01,2026-04-24,,shortage - end date unknown,2026-09-21T13:18:38.592214,N05BA06,26557
+LV,Latvia,ZVA,Lorazepam Macure 4 mg/ml solution for injection,Lorazepamum,4 mg/1 ml,5 pcs,19-0095-01,2024-08-30,,leaving the market,2026-09-21T13:18:38.592247,N05BA06,26557
+LV,Latvia,ZVA,Lozap 50 mg film-coated tablets,Losartanum kalicum,50 mg,30 pcs,06-0092-04,2025-04-30,,shortage - end date unknown,2026-09-21T13:18:38.592276,C09CA01,41890
+LV,Latvia,ZVA,Lozap H 50 mg/12.5 mg film-coated tablets,"Losartanum kalicum, Hydrochlorothiazidum","50 mg/12,5 mg",30 pcs,09-0089-02,2025-07-02,,shortage - end date unknown,2026-09-21T13:18:38.592304,,
+LV,Latvia,ZVA,Lunaldin 100 micrograms sublingual tablets,Fentanylum,100 µg,10 pcs,09-0096-01,2018-06-01,,shortage - end date unknown,2026-09-21T13:18:38.592333,N02AB03,98175
+LV,Latvia,ZVA,Lunaldin 200 micrograms sublingual tablets,Fentanylum,200 µg,10 pcs,09-0097-01,2018-10-31,,shortage - end date unknown,2026-09-21T13:18:38.592361,N02AB03,98183
+LV,Latvia,ZVA,Lunsumio,Mosunetuzumabum,1 mg/1 ml,1 pc,EU/1/22/1649/001,2026-01-05,2027-01-05,shortage,2026-09-21T13:18:38.592404,L01FX25,216836
+LV,Latvia,ZVA,Lunsumio,Mosunetuzumabum,30 mg/30 ml,1 pc,EU/1/22/1649/002,2026-09-01,2027-09-01,shortage,2026-09-21T13:18:38.592444,L01FX25,216879
+LV,Latvia,ZVA,Lusopress 20 mg tablets,Nitrendipinum,20 mg,28 pcs,I000607-01,2020-02-19,,shortage - end date unknown,2026-09-21T13:18:38.592476,C08CA08,
+LV,Latvia,ZVA,Mabron 50 mg/ml solution for injection/infusion,Tramadoli hydrochloridum,100 mg/2 ml,5 pcs,02-0248-02,2024-07-15,,leaving the market,2026-09-21T13:18:38.592509,N02AX02,35203
+LV,Latvia,ZVA,Mabron SR 200 mg prolonged release tablets,Tramadoli hydrochloridum,200 mg,10 pcs,05-0502-02,2024-05-31,,leaving the market,2026-09-21T13:18:38.592542,N02AJ13,50466
+LV,Latvia,ZVA,MabThera,Rituximabum,100 mg/10 ml,2 pcs,EU/1/98/067/001,2024-09-30,,shortage - end date unknown,2026-09-21T13:18:38.592571,L01FA01,51004
+LV,Latvia,ZVA,MabThera,Rituximabum,500 mg/50 ml,1 pc,EU/1/98/067/002,2024-04-09,,shortage - end date unknown,2026-09-21T13:18:38.592599,L01FA01,51012
+LV,Latvia,ZVA,Magnesium Diasporal 295.7 mg granules for oral solution,Magnesium,"295,7 mg/5 g",20 pcs,10-0625-01,2024-08-27,,shortage - end date unknown,2026-09-21T13:18:38.592632,A06AD04,134562
+LV,Latvia,ZVA,Marixino,Memantini hydrochloridum,10 mg,56 pcs,EU/1/13/820/006,2021-06-30,,shortage - end date unknown,2026-09-21T13:18:38.592662,N06DX01,66818
+LV,Latvia,ZVA,Matrifen 100 micrograms/hour transdermal patch,Fentanylum,11 mg,5 pcs,06-0208-01,2024-12-31,,shortage - end date unknown,2026-09-21T13:18:38.592691,N02AB03,
+LV,Latvia,ZVA,Matrifen 12 micrograms/hour transdermal patch,Fentanylum,"1,38 mg",5 pcs,06-0204-01,2025-02-28,,shortage - end date unknown,2026-09-21T13:18:38.592722,N02AB03,
+LV,Latvia,ZVA,Matrifen 25 micrograms/hour transdermal patch,Fentanylum,"2,75 mg",5 pcs,06-0205-01,2025-02-28,,shortage - end date unknown,2026-09-21T13:18:38.592750,N02AB03,
+LV,Latvia,ZVA,Matrifen 50 micrograms/hour transdermal patch,Fentanylum,"5,5 mg",5 pcs,06-0206-01,2025-02-28,,shortage - end date unknown,2026-09-21T13:18:38.592779,N02AB03,
+LV,Latvia,ZVA,Matrifen 75 micrograms/hour transdermal patch,Fentanylum,"8,25 mg",5 pcs,06-0207-01,2024-12-15,,shortage - end date unknown,2026-09-21T13:18:38.592808,N02AB03,
+LV,Latvia,ZVA,Maymetsi 50 mg/1000 mg film-coated tablets,"Sitagliptinum, Metformini hydrochloridum",50 mg/1000 mg,196 pcs,20-0156-07,2024-05-09,,leaving the market,2026-09-21T13:18:38.592843,,
+LV,Latvia,ZVA,Maymetsi 50 mg/850 mg film-coated tablets,"Sitagliptinum, Metformini hydrochloridum",50 mg/850 mg,196 pcs,20-0155-07,2024-10-30,,shortage - end date unknown,2026-09-21T13:18:38.592871,,
+LV,Latvia,ZVA,Mayzent,Siponimodum,"0,25 mg",120 pcs,EU/1/19/1414/002,2023-06-14,,shortage - end date unknown,2026-09-21T13:18:38.592900,L04AE03,202010
+LV,Latvia,ZVA,"Medikinet XL 5 mg prolonged release capsules, hard",Methylphenidati hydrochloridum,5 mg,30 pcs,10-0448-02,2019-01-23,,shortage - end date unknown,2026-09-21T13:18:38.592928,N06BA04,88374
+LV,Latvia,ZVA,Medoclav 400 mg/57 mg/5 ml powder for oral suspension,"Amoxicillinum, Acidum clavulanicum",70 ml,1 pc,17-0050-01,2022-12-29,,shortage - end date unknown,2026-09-21T13:18:38.592957,,
+LV,Latvia,ZVA,Medorisper 2 mg film-coated tablets,Risperidonum,2 mg,60 pcs,07-0207-05,2025-10-23,,leaving the market,2026-09-21T13:18:38.592990,N05AX08,37729
+LV,Latvia,ZVA,Medorisper 2 mg film-coated tablets,Risperidonum,2 mg,30 pcs,07-0207-03,2019-08-27,,shortage - end date unknown,2026-09-21T13:18:38.593018,N05AX08,37729
+LV,Latvia,ZVA,Medorisper 4 mg film-coated tablets,Risperidonum,4 mg,30 pcs,07-0209-03,2019-08-27,,shortage - end date unknown,2026-09-21T13:18:38.593047,N05AX08,37745
+LV,Latvia,ZVA,Meldonium Olpha 250 mg hard capsules,Meldonium dihydricum,250 mg,20 pcs,11-0172-01,2026-03-25,,shortage - end date unknown,2026-09-21T13:18:38.824770,,
+LV,Latvia,ZVA,Meldonium Olpha 250 mg hard capsules,Meldonium dihydricum,250 mg,60 pcs,10-0216-06,2026-03-25,,shortage - end date unknown,2026-09-21T13:18:38.824830,,
+LV,Latvia,ZVA,Meldonium Olpha 250 mg hard capsules,Meldonium dihydricum,250 mg,40 pcs,10-0216-05,2017-10-02,,shortage - end date unknown,2026-09-21T13:18:38.824872,,
+LV,Latvia,ZVA,Meriofert Set 75 IU powder and solvent for solution for injection,Menotropinum,75 IU,1 pc,20-0152-01,2026-06-01,2026-12-31,shortage,2026-09-21T13:18:38.824921,,
+LV,Latvia,ZVA,Mesar Plus 20 mg/25 mg film-coated tablets,"Olmesartanum medoxomilum, Hydrochlorothiazidum",20 mg/25 mg,28 pcs,05-0632-02,2024-11-15,,shortage - end date unknown,2026-09-21T13:18:38.824958,,
+LV,Latvia,ZVA,Metalyse,Tenecteplasum,40 mg/8 ml,1 pc,EU/1/00/169/005,2022-09-01,,shortage - end date unknown,2026-09-21T13:18:38.824992,B01AD11,
+LV,Latvia,ZVA,Metazero 23.75 mg prolonged-release tablets,Metoprololi succinas,"23,75 mg",30 pcs,15-0342-04,2026-05-11,2026-10-01,shortage,2026-09-21T13:18:38.825037,C07AB02,81043
+LV,Latvia,ZVA,Metfogamma 1000 mg film-coated tablets,Metformini hydrochloridum,1000 mg,120 pcs,07-0390-02,2025-02-15,,leaving the market,2026-09-21T13:18:38.825080,A10BA02,60674
+LV,Latvia,ZVA,Metfogamma 500 mg film-coated tablets,Metformini hydrochloridum,500 mg,120 pcs,02-0345-02,2025-09-11,,shortage - end date unknown,2026-09-21T13:18:38.825117,A10BA02,1090
+LV,Latvia,ZVA,Metforal 1000 mg film-coated tablets,Metformini hydrochloridum,1000 mg,120 pcs,05-0096-05,2020-11-12,,shortage - end date unknown,2026-09-21T13:18:38.825149,A10BA02,60674
+LV,Latvia,ZVA,Metforal 500 mg film-coated tablets,Metformini hydrochloridum,500 mg,120 pcs,00-1080-03,2025-09-12,,shortage - end date unknown,2026-09-21T13:18:38.825179,A10BA02,1090
+LV,Latvia,ZVA,Metforal 500 mg film-coated tablets,Metformini hydrochloridum,500 mg,30 pcs,00-1080-01,2025-09-12,,shortage - end date unknown,2026-09-21T13:18:38.825210,A10BA02,1090
+LV,Latvia,ZVA,Metforal 850 mg film-coated tablets,Metformini hydrochloridum,850 mg,30 pcs,00-1081-01,2025-09-12,,shortage - end date unknown,2026-09-21T13:18:38.825240,A10BA02,5509
+LV,Latvia,ZVA,Metforal 850 mg film-coated tablets,Metformini hydrochloridum,850 mg,120 pcs,00-1081-03,2025-09-12,,shortage - end date unknown,2026-09-21T13:18:38.825270,A10BA02,5509
+LV,Latvia,ZVA,Metformin-ratiopharm 500 mg film-coated tablets,Metformini hydrochloridum,500 mg,120 pcs,00-0570-06,2026-06-29,,leaving the market,2026-09-21T13:18:38.825303,A10BA02,1090
+LV,Latvia,ZVA,Metoprolol-ratiopharm 100 mg tablets,Metoprololi tartras,100 mg,30 pcs,99-0224-01,2026-09-07,2026-10-22,shortage,2026-09-21T13:18:38.825347,C07AB02,7226
+LV,Latvia,ZVA,Mexolan 15 mg tablets,Meloxicamum,15 mg,30 pcs,04-0403-02,2023-12-21,,shortage - end date unknown,2026-09-21T13:18:38.825378,M01AC06,47481
+LV,Latvia,ZVA,Midazolam B.Braun 5 mg/ml solution for injection/infusion,Midazolamum,"4,99844 mg/1 ml",10 pcs,07-0005-01,2026-01-12,2026-12-31,shortage,2026-09-21T13:18:38.825420,N05CD08,148431
+LV,Latvia,ZVA,Migard 2.5 mg film-coated tablets,Frovatriptanum,"2,5 mg",2 pcs,05-0053-09,2024-05-07,,shortage - end date unknown,2026-09-21T13:18:38.825451,N02CC07,70688
+LV,Latvia,ZVA,Mildronāts 250 mg cietās kapsulas,Meldonium dihydricum,250 mg,60 pcs,00-0406-03,2026-03-25,,leaving the market,2026-09-21T13:18:38.825489,,
+LV,Latvia,ZVA,Mildronāts-Grindeks 250 mg hard capsules,Meldonium dihydricum,250 mg,20 pcs,99-0180-01,2020-07-23,,shortage - end date unknown,2026-09-21T13:18:38.825520,,
+LV,Latvia,ZVA,Milgamma 50 mg/250 micrograms coated tablets,"Benfotiaminum, Cyanocobalaminum",50 mg/250 µg,20 pcs,00-0005-02,2026-04-10,,leaving the market,2026-09-21T13:18:38.825552,,
+LV,Latvia,ZVA,Mirapexin,Pramipexolum,"0,18 mg",30 pcs,EU/1/97/051/003,2025-01-01,,shortage - end date unknown,2026-09-21T13:18:38.825582,N04BC05,49441
+LV,Latvia,ZVA,Mircera,Methoxy-polyethylen-glycol-epoetinum beta,"30 µg/0,3 ml",1 pc,EU/1/07/400/017,2017-08-02,,shortage - end date unknown,2026-09-21T13:18:38.825613,,
+LV,Latvia,ZVA,Mirzaten 45 mg film-coated tablets,Mirtazapinum,45 mg,30 pcs,04-0010-01,2017-03-27,,shortage - end date unknown,2026-09-21T13:18:38.825643,N06AX11,43370
+LV,Latvia,ZVA,Mirzaten 45 mg orodispersible tablets,Mirtazapinum,45 mg,30 pcs,07-0014-01,2017-03-27,,shortage - end date unknown,2026-09-21T13:18:38.825675,N06AX11,61492
+LV,Latvia,ZVA,Monosan 20 mg tablets,Isosorbidi mononitras,20 mg,30 pcs,98-0451-01,2026-05-05,2026-09-30,shortage,2026-09-21T13:18:38.825717,C01DA08,4332
+LV,Latvia,ZVA,Monosan 40 mg tablets,Isosorbidi mononitras,40 mg,30 pcs,98-0452-01,2026-04-14,2026-09-30,shortage,2026-09-21T13:18:38.825758,C01DA08,
+LV,Latvia,ZVA,Moxilen 1 g powder for solution for injection/infusion,Amoxicillinum,1 g,10 pcs,04-0333-05,2022-12-29,,shortage - end date unknown,2026-09-21T13:18:38.825789,J01CA04,4510
+LV,Latvia,ZVA,Mycomax 150 mg hard capsules,Fluconazolum,150 mg,1 pc,01-0093-03,2025-10-09,,shortage - end date unknown,2026-09-21T13:18:38.825819,J02AC01,30384
+LV,Latvia,ZVA,Mycomax 150 mg hard capsules,Fluconazolum,150 mg,3 pcs,01-0093-04,2025-10-09,,shortage - end date unknown,2026-09-21T13:18:38.825851,J02AC01,30384
+LV,Latvia,ZVA,Mycomax 150 mg hard capsules,Fluconazolum,150 mg,3 pcs,01-0093-02,2025-10-09,,shortage - end date unknown,2026-09-21T13:18:38.825882,J02AC01,30384
+LV,Latvia,ZVA,Mycomax 150 mg hard capsules,Fluconazolum,150 mg,1 pc,01-0093-01,2025-10-09,,shortage - end date unknown,2026-09-21T13:18:38.825912,J02AC01,30384
+LV,Latvia,ZVA,Mycosyst 150 mg hard capsules,Fluconazolum,150 mg,1 pc,01-0315-01,2017-06-28,,shortage - end date unknown,2026-09-21T13:18:38.825942,J02AC01,30384
+LV,Latvia,ZVA,Mycosyst 150 mg hard capsules,Fluconazolum,150 mg,2 pcs,01-0315-02,2019-08-21,,shortage - end date unknown,2026-09-21T13:18:38.825973,J02AC01,30384
+LV,Latvia,ZVA,Mydocalm 150 mg film-coated tablets,Tolperisoni hydrochloridum,150 mg,30 pcs,I000275-01,2025-09-24,,shortage - end date unknown,2026-09-21T13:18:38.826004,M03BX01,132594
+LV,Latvia,ZVA,Mydocalm 50 mg film-coated tablets,Tolperisoni hydrochloridum,50 mg,30 pcs,I000690-01,2025-10-10,,shortage - end date unknown,2026-09-21T13:18:38.826035,M03BX01,135135
+LV,Latvia,ZVA,Nalgesin 275 mg film-coated tablets,Naproxenum natricum,275 mg,10 pcs,12-0242-01,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:38.826064,M01AE02,17957
+LV,Latvia,ZVA,"Nasonex 50 micrograms/dose nasal spray, suspension",Mometasoni furoas,50 µg/dose,140 pcs,I000735-01,2020-02-19,,shortage - end date unknown,2026-09-21T13:18:38.826095,R01AD09,
+LV,Latvia,ZVA,Nealgin tablets,"Propyphenazonum, Coffeinum, Paracetamolum",1 UD,12 pcs,99-0650-01,2016-10-31,,shortage - end date unknown,2026-09-21T13:18:38.826125,,
+LV,Latvia,ZVA,Nebilet tablets,Nebivololum,5 mg,28 pcs,I000622-01,2016-07-08,,shortage - end date unknown,2026-09-21T13:18:38.826155,C07AB12,46353
+LV,Latvia,ZVA,Nebivolol Orion 5 mg tablets,Nebivololum,5 mg,30 pcs,07-0383-01,2023-09-04,,shortage - end date unknown,2026-09-21T13:18:38.826185,C07AB12,46353
+LV,Latvia,ZVA,Neiratax 100 mg/100 mg/1 mg/20 mg/2 ml solution for injection,"Pyridoxini hydrochloridum, Thiamini hydrochloridum, Cyanocobalaminum, Lidocaini hydrochloridum",2 ml,5 pcs,17-0180-01,2022-09-15,,shortage - end date unknown,2026-09-21T13:18:38.826214,,
+LV,Latvia,ZVA,Neiromidin 20 mg tabletes,Ipidacrini hydrochloridum,20 mg,100 pcs,97-0550-12,2026-09-16,2026-11-30,shortage,2026-09-21T13:18:38.826253,N06DA05,
+LV,Latvia,ZVA,Neo-angin cherry lozenges,"Alcohol 2,4-Dichlorobenzylicus, Amylmetacresolum, Levomentholum",1 UD,24 pcs,11-0012-03,2019-11-19,,shortage - end date unknown,2026-09-21T13:18:38.826282,,
+LV,Latvia,ZVA,Neo-angin salvia lozenges,"Alcohol 2,4-Dichlorobenzylicus, Amylmetacresolum, Levomentholum",1 UD,24 pcs,11-0013-03,2019-11-19,,shortage - end date unknown,2026-09-21T13:18:38.826310,,
+LV,Latvia,ZVA,Neulasta,Pegfilgrastimum,"6 mg/0,6 ml",1 pc,EU/1/02/227/004,2021-07-01,,shortage - end date unknown,2026-09-21T13:18:38.826339,L03AA13,68756
+LV,Latvia,ZVA,Nevanac,Nepafenacum,5 mg/5 ml,1 pc,EU/1/07/433/001,2026-08-21,2026-09-30,shortage,2026-09-21T13:18:38.826379,S01BC10,
+LV,Latvia,ZVA,Nevanac,Nepafenacum,9 mg/3 ml,1 pc,EU/1/07/433/002,2019-03-01,,shortage - end date unknown,2026-09-21T13:18:38.826411,S01BC10,220620
+LV,Latvia,ZVA,Nimotop 0.2 mg/ml solution for infusion,Nimodipinum,10 mg/50 ml,1 pc,98-0164-05,2026-02-13,,shortage - end date unknown,2026-09-21T13:18:38.826441,C08CA06,
+LV,Latvia,ZVA,"Niontix 100% medicinal gas, liquefied",Dinitrogenii oxidum,27 l,12 pcs,07-0339-08,2019-03-18,,shortage - end date unknown,2026-09-21T13:18:39.092919,,
+LV,Latvia,ZVA,Nitrocine 1 mg/ml solution for infusion,Glyceroli trinitras,10 mg/10 ml,10 pcs,00-0226-01,2024-11-30,,leaving the market,2026-09-21T13:18:39.092951,,
+LV,Latvia,ZVA,Nitrocor 0.5 mg sublingual tablets,Glyceroli trinitras,"0,5 mg",40 pcs,96-0531-03,2018-11-29,,shortage - end date unknown,2026-09-21T13:18:39.092970,,
+LV,Latvia,ZVA,"Nitrospray 0.4 mg/dose sublingual spray, solution",Glyceroli trinitras,"0,4 mg/1 dose",200 pcs,11-0434-01,2018-03-20,,shortage - end date unknown,2026-09-21T13:18:39.092986,,
+LV,Latvia,ZVA,Nivestim,Filgrastimum,"300 µg/0,5 ml",5 pcs,EU/1/10/631/005,2025-12-01,,shortage - end date unknown,2026-09-21T13:18:39.093001,L03AA02,41831
+LV,Latvia,ZVA,Nivestim,Filgrastimum,"480 µg/0,5 ml",5 pcs,EU/1/10/631/008,2025-12-01,,shortage - end date unknown,2026-09-21T13:18:39.093015,L03AA02,41858
+LV,Latvia,ZVA,Nolicin 400 mg film-coated tablets,Norfloxacinum,400 mg,20 pcs,I000514-01,2020-02-03,,shortage - end date unknown,2026-09-21T13:18:39.093029,J01MA06,22101
+LV,Latvia,ZVA,Noliprel Forte Arginine 5 mg/1.25 mg film-coated tablets,"Perindoprili argininum, Indapamidum","5 mg/1,25 mg",30 pcs,07-0016-04,2025-04-10,,leaving the market,2026-09-21T13:18:39.093044,,
+LV,Latvia,ZVA,Nolpaza 20 mg gastro-resistant tablets,Pantoprazolum,20 mg,7 pcs,07-0256-01,2022-10-01,,shortage - end date unknown,2026-09-21T13:18:39.093058,A02BC02,52272
+LV,Latvia,ZVA,Nolpaza 40 mg powder for solution for injection,Pantoprazolum,40 mg,1 pc,14-0109-01,2019-07-01,,shortage - end date unknown,2026-09-21T13:18:39.093071,A02BC02,50482
+LV,Latvia,ZVA,Norepinephrine Kabi 1 mg/ml concentrate for solution for infusion,Norepinephrinum,1 mg/1 ml,10 pcs,21-0085-02,2022-06-01,,shortage - end date unknown,2026-09-21T13:18:39.093084,C01CA03,46132
+LV,Latvia,ZVA,Norepinephrine Kalceks 1 mg/ml concentrate for solution for infusion,Norepinephrinum,1 mg/1 ml,10 pcs,20-0064-02,2024-02-28,,shortage - end date unknown,2026-09-21T13:18:39.093097,C01CA03,46132
+LV,Latvia,ZVA,Norvir,Ritonavirum,100 mg,30 pcs,EU/1/96/016/005,2020-07-01,,shortage - end date unknown,2026-09-21T13:18:39.093111,J05AE03,45128
+LV,Latvia,ZVA,Noxafil,Posaconazolum,100 mg,24 pcs,EU/1/05/320/002,2017-12-21,,shortage - end date unknown,2026-09-21T13:18:39.093123,J02AC04,117498
+LV,Latvia,ZVA,Nucala,Mepolizumabum,100 mg,1 pc,EU/1/15/1043/001,2023-12-05,,shortage - end date unknown,2026-09-21T13:18:39.093137,R03DX09,129836
+LV,Latvia,ZVA,Nuwiq,Simoctocogum alfa,250 IU,1 pc,EU/1/14/936/001,2025-10-06,2026-10-06,shortage,2026-09-21T13:18:39.093156,,
+LV,Latvia,ZVA,Nuwiq,Simoctocogum alfa,2000 IU,1 pc,EU/1/14/936/004,2020-06-25,,shortage - end date unknown,2026-09-21T13:18:39.093170,,
+LV,Latvia,ZVA,Nyvepria,Pegfilgrastimum,"6 mg/0,6 ml",1 pc,EU/1/20/1486/001,2026-07-10,,leaving the market,2026-09-21T13:18:39.093185,L03AA13,68756
+LV,Latvia,ZVA,Octagam 50 mg/ml solution for infusion,Immunoglobulinum humanum normale,10 g/200 ml,1 pc,04-0293-04,2019-10-16,,shortage - end date unknown,2026-09-21T13:18:39.093198,,
+LV,Latvia,ZVA,Octanate 500 IU powder and solvent for solution for injection,Factor VIII coagulationis humanus,500 IU/10 ml,1 pc,05-0048-01,2025-10-06,2026-10-06,shortage,2026-09-21T13:18:39.093216,B02BD02,
+LV,Latvia,ZVA,Octanine 500 IU powder and solvent for solution for injection,Factor IX coagulationis humanus,500 IU,1 pc,10-0191-01,2025-10-06,2026-10-06,shortage,2026-09-21T13:18:39.093234,B02BD03,
+LV,Latvia,ZVA,Ofloxin 200 mg film-coated tablets,Ofloxacinum,200 mg,10 pcs,98-0852-01,2026-01-12,,leaving the market,2026-09-21T13:18:39.093249,J01MA01,
+LV,Latvia,ZVA,Oftagel 2.5 mg/g eye gel,Carbomera,25 mg/10 g,1 pc,01-0137-01,2026-07-30,2027-04-01,shortage,2026-09-21T13:18:39.093267,S01XA20,
+LV,Latvia,ZVA,"Oftan Timolol 5 mg/ml eye drops, solution",Timololum,5 ml,1 pc,96-0283-01,2025-08-29,,shortage - end date unknown,2026-09-21T13:18:39.093281,S01ED01,
+LV,Latvia,ZVA,"Oftan Timolol 5 mg/ml eye drops, solution",Timololum,5 ml,1 pc,I001761-01,2025-08-14,,shortage - end date unknown,2026-09-21T13:18:39.093294,S01ED01,
+LV,Latvia,ZVA,Olanzapine Teva,Olanzapinum,10 mg,28 pcs,EU/1/07/427/012,2024-08-17,,shortage - end date unknown,2026-09-21T13:18:39.093307,N05AH03,45578
+LV,Latvia,ZVA,Olanzapine Teva,Olanzapinum,5 mg,28 pcs,EU/1/07/427/023,2020-01-21,,leaving the market,2026-09-21T13:18:39.093322,N05AH03,45543
+LV,Latvia,ZVA,Olfen-140 mg medicated plaster,Diclofenacum natricum,140 mg,5 pcs,03-0519-02,2020-02-22,,shortage - end date unknown,2026-09-21T13:18:39.093335,M01AB05,
+LV,Latvia,ZVA,Olmesartan medoxomil/Amlodipine Zentiva 20 mg/5 mg film-coated tablets,"Olmesartanum medoxomilum, Amlodipinum",20 mg/5 mg,28 pcs,17-0258-02,2024-09-18,,shortage - end date unknown,2026-09-21T13:18:39.093348,,
+LV,Latvia,ZVA,Olmesartan medoxomil/Amlodipine Zentiva 40 mg/10 mg film-coated tablets,"Olmesartanum medoxomilum, Amlodipinum",40 mg/10 mg,28 pcs,17-0260-02,2024-05-09,,shortage - end date unknown,2026-09-21T13:18:39.093361,,
+LV,Latvia,ZVA,Olmesartan medoxomil/Amlodipine Zentiva 40 mg/5 mg film-coated tablets,"Olmesartanum medoxomilum, Amlodipinum",40 mg/5 mg,28 pcs,17-0259-02,2026-09-01,,leaving the market,2026-09-21T13:18:39.093376,,
+LV,Latvia,ZVA,Olmesartan medoxomil/Amlodipine/Hydrochlorothiazide Teva 40 mg/5 mg/12.5 mg film-coated tablets,"Olmesartanum medoxomilum, Amlodipinum, Hydrochlorothiazidum",1 UD,28 pcs,20-0147-02,2026-08-13,2026-09-23,shortage,2026-09-21T13:18:39.093394,,
+LV,Latvia,ZVA,"Olynth 1 mg/ml nasal drops, solution",Xylometazolini hydrochloridum,10 mg/10 ml,1 pc,99-0006-01,2020-04-22,,shortage - end date unknown,2026-09-21T13:18:39.093407,R01AA07,6688
+LV,Latvia,ZVA,Omeprazole Unifarma 40 mg powder and solvent for solution for injection,Omeprazolum,40 mg/10 ml,1 pc,04-0433-01,2019-06-03,,shortage - end date unknown,2026-09-21T13:18:39.093420,A02BC01,126578
+LV,Latvia,ZVA,Oralair 100 IR & 300 IR sublingual tablets,Pollines ad producta allergenica,100 IR/300 IR,31 pcs,10-0048-01,2021-06-15,,shortage - end date unknown,2026-09-21T13:18:39.093433,,
+LV,Latvia,ZVA,Oralair 300 IR sublingual tablets,Pollines ad producta allergenica,300 IR,30 pcs,10-0049-01,2021-06-15,,shortage - end date unknown,2026-09-21T13:18:39.093446,,
+LV,Latvia,ZVA,Oralair 300 IR sublingual tablets,Pollines ad producta allergenica,300 IR,90 pcs,10-0049-02,2021-03-01,,shortage - end date unknown,2026-09-21T13:18:39.093458,,
+LV,Latvia,ZVA,Orfadin,Nitisinonum,2 mg,60 pcs,EU/1/04/303/001,2019-11-08,,shortage - end date unknown,2026-09-21T13:18:39.093471,C10AX06,79987
+LV,Latvia,ZVA,Orgalutran,Ganirelixum,"0,25 mg/0,5 ml",1 pc,EU/1/00/130/001,2018-10-15,,shortage - end date unknown,2026-09-21T13:18:39.093484,H01CC01,59048
+LV,Latvia,ZVA,Orofar 1 mg/1 mg lozenges,"Benzoxonium chloridum, Lidocaini hydrochloridum",1 mg/1 mg,16 pcs,05-0118-01,2019-12-04,,shortage - end date unknown,2026-09-21T13:18:39.093497,,
+LV,Latvia,ZVA,"Orofar 2 mg/1.5 mg/ml oromucosal spray, solution","Benzoxonium chloridum, Lidocaini hydrochloridum",1 UD/30 ml,1 pc,05-0117-01,2020-12-01,,shortage - end date unknown,2026-09-21T13:18:39.093510,,
+LV,Latvia,ZVA,Ospamox 1000 mg film-coated tablets,Amoxicillinum,1000 mg,12 pcs,I000915-01,2022-12-12,,shortage - end date unknown,2026-09-21T13:18:39.093526,J01CA04,
+LV,Latvia,ZVA,Ospamox 500 mg film-coated tablets,Amoxicillinum,500 mg,12 pcs,10-0083-03,2023-10-01,,leaving the market,2026-09-21T13:18:39.093541,J01CA04,
+LV,Latvia,ZVA,Ossica 150 mg film-coated tablets,Acidum ibandronicum,150 mg,1 pc,10-0149-01,2024-09-30,,leaving the market,2026-09-21T13:18:39.093560,M05BX04,
+LV,Latvia,ZVA,Oxaliplatin Kabi 5 mg/ml concentrate for solution for infusion,Oxaliplatinum,50 mg/10 ml,1 pc,11-0054-01,2026-08-28,,shortage - end date unknown,2026-09-21T13:18:39.093574,L01XA03,79766
+LV,Latvia,ZVA,Oxaliplatin Kabi 5 mg/ml concentrate for solution for infusion,Oxaliplatinum,100 mg/20 ml,1 pc,11-0054-02,2020-04-08,,shortage - end date unknown,2026-09-21T13:18:39.093587,L01XA03,79774
+LV,Latvia,ZVA,Oxis Turbuhaler 4.5 micrograms/dose inhalation powder,Formoteroli fumaras dihydricus,270 µg/60 dose,60 pcs,98-0533-01,2017-05-17,,shortage - end date unknown,2026-09-21T13:18:39.093600,R03AC13,
+LV,Latvia,ZVA,Oxis Turbuhaler 9 micrograms/dose inhalation powder,Formoteroli fumaras dihydricus,540 µg/60 dose,1 pc,98-0532-01,2022-06-14,,shortage - end date unknown,2026-09-21T13:18:39.093615,R03AC13,
+LV,Latvia,ZVA,Oxynador 10 mg + 5 mg prolonged-release tablets,"Oxycodonum, Naloxonum",10 mg/5 mg,30 pcs,17-0142-17,2023-01-13,,shortage - end date unknown,2026-09-21T13:18:39.093628,,
+LV,Latvia,ZVA,Oxynador 20 mg + 10 mg prolonged-release tablets,"Oxycodonum, Naloxonum",20 mg/10 mg,30 pcs,17-0143-15,2023-01-13,,shortage - end date unknown,2026-09-21T13:18:39.093642,,
+LV,Latvia,ZVA,Ozurdex,Dexamethasonum,700 µg,1 pc,EU/1/10/638/001,2018-10-04,,shortage - end date unknown,2026-09-21T13:18:39.362294,H02AB02,
+LV,Latvia,ZVA,Pamecil 1 g powder for solution for injection/infusion,Ampicillinum,1 g,100 pcs,98-0048-03,2018-11-23,,shortage - end date unknown,2026-09-21T13:18:39.362360,J01CA01,
+LV,Latvia,ZVA,Pamecil 500 mg hard capsules,Ampicillinum,500 mg,20 pcs,98-0046-04,2026-06-01,,leaving the market,2026-09-21T13:18:39.362415,J01CA01,
+LV,Latvia,ZVA,Pan-Cefazolin 1 g powder for solution for injection,Cefazolinum,1 g,50 pcs,99-0621-04,2018-11-13,,shortage - end date unknown,2026-09-21T13:18:39.362446,J01DB04,3263
+LV,Latvia,ZVA,Panadol 500 mg film-coated tablets,Paracetamolum,500 mg,12 pcs,98-0356-03,2017-01-10,,shortage - end date unknown,2026-09-21T13:18:39.362471,N02BE01,67903
+LV,Latvia,ZVA,Panadol Baby 120 mg/5 ml oral suspension,Paracetamolum,"2,4 g/100 ml",1 pc,I001196-01,2023-01-02,,shortage - end date unknown,2026-09-21T13:18:39.362494,N02BE01,33308
+LV,Latvia,ZVA,Panadol optizorb 500 mg film-coated tablets,Paracetamolum,500 mg,12 pcs,13-0114-05,2022-09-30,,shortage - end date unknown,2026-09-21T13:18:39.362517,N02BE01,
+LV,Latvia,ZVA,"Pantogar capsules, hard","Keratinum, Faex medicinalis, Calcii pantothenas, Thiamini nitras, Cystinum, Acidum 4-aminobenzoicum",1 UD,90 pcs,04-0188-02,2020-01-14,,shortage - end date unknown,2026-09-21T13:18:39.362539,,
+LV,Latvia,ZVA,Pantoprazole-Mepha 20 mg gastro-resistant tablets,Pantoprazolum,20 mg,14 pcs,11-0125-01,2018-07-13,,shortage - end date unknown,2026-09-21T13:18:39.362562,A02BC02,52272
+LV,Latvia,ZVA,Pantoprazole-Mepha 40 mg gastro-resistant tablets,Pantoprazolum,40 mg,14 pcs,11-0126-01,2017-01-06,,shortage - end date unknown,2026-09-21T13:18:39.362585,A02BC02,43044
+LV,Latvia,ZVA,Pantoprazole-Mepha 40 mg gastro-resistant tablets,Pantoprazolum,40 mg,28 pcs,11-0126-02,2019-05-30,,shortage - end date unknown,2026-09-21T13:18:39.362609,A02BC02,43044
+LV,Latvia,ZVA,Panzyga 100 mg/ml solution for infusion,Immunoglobulinum humanum normale,10 g/100 ml,1 pc,16-0064-05,2024-10-30,2026-12-01,shortage,2026-09-21T13:18:39.362642,,
+LV,Latvia,ZVA,Papaverine Sopharma 20 mg/ml solution for injection,Papaverini hydrochloridum,20 mg/1 ml,100 pcs,05-0525-02,2018-03-20,,shortage - end date unknown,2026-09-21T13:18:39.362667,N02AA03,
+LV,Latvia,ZVA,Paracetamol Accord 500 mg tablets,Paracetamolum,500 mg,10 pcs,15-0224-02,2020-03-19,,shortage - end date unknown,2026-09-21T13:18:39.362692,N02BE01,
+LV,Latvia,ZVA,Pegasys,Peginterferonum alfa-2a,"180 µg/0,5 ml",1 pc,EU/1/02/221/007,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:39.362718,L03AB12,
+LV,Latvia,ZVA,Penester 5 mg film-coated tablets,Finasteridum,5 mg,30 pcs,04-0150-01,2026-08-24,2026-10-01,shortage,2026-09-21T13:18:39.362754,G04CB01,34975
+LV,Latvia,ZVA,Pentaxim powder and suspension for suspension for injection in pre-filled syringe,"Vaccinum diphtheriae, tetani, pertussis, poliomyelitidis inactivatum et haemophili stirpis b coniugatum adsorbatum","0,5 ml",10 pcs,02-0311-02,2020-03-18,,shortage - end date unknown,2026-09-21T13:18:39.362780,,
+LV,Latvia,ZVA,Pentaxim powder and suspension for suspension for injection in pre-filled syringe,"Vaccinum diphtheriae, tetani, pertussis, poliomyelitidis inactivatum et haemophili stirpis b coniugatum adsorbatum","0,5 ml",20 pcs,02-0311-03,2020-03-18,,shortage - end date unknown,2026-09-21T13:18:39.362803,,
+LV,Latvia,ZVA,Pergoveris,"Follitropinum alfa, Lutropinum alfa",1 UD,1 pc,EU/1/07/396/001,2017-11-09,,shortage - end date unknown,2026-09-21T13:18:39.362826,,
+LV,Latvia,ZVA,Perindalon 4 mg tablets,Tert-butylamini perindoprilum,4 mg,30 pcs,08-0359-07,2023-08-11,,shortage - end date unknown,2026-09-21T13:18:39.362848,,
+LV,Latvia,ZVA,Perindopril Zentiva 5 mg film-coated tablets,Perindoprili argininum,5 mg,30 pcs,22-0103-05,2026-07-01,,leaving the market,2026-09-21T13:18:39.362875,C09AA04,85162
+LV,Latvia,ZVA,Perineva 8 mg tablets,Tert-butylamini perindoprilum,8 mg,30 pcs,10-0079-03,2025-12-16,,leaving the market,2026-09-21T13:18:39.362901,,
+LV,Latvia,ZVA,Perineva 8 mg tablets,Tert-butylamini perindoprilum,8 mg,90 pcs,10-0079-07,2025-03-04,,shortage - end date unknown,2026-09-21T13:18:39.362923,,
+LV,Latvia,ZVA,Persen forte hard capsules,"Menthae piperitae folii extractum siccum, Melissae folii extractum siccum, Valerianae extractum hydroalcoholicum siccum",1 UD,20 pcs,98-0711-01,2025-10-08,,shortage - end date unknown,2026-09-21T13:18:39.362945,,
+LV,Latvia,ZVA,Phlogenzym gastro-resistant film-coated tablets,"Bromelainum, Trypsinum, Rutosidum trihydricum",1 UD,40 pcs,95-0325-01,2019-03-19,,shortage - end date unknown,2026-09-21T13:18:39.362967,,
+LV,Latvia,ZVA,Phlogenzym gastro-resistant film-coated tablets,"Bromelainum, Trypsinum, Rutosidum trihydricum",1 UD,100 pcs,95-0325-02,2021-12-01,,shortage - end date unknown,2026-09-21T13:18:39.362990,,
+LV,Latvia,ZVA,Phlogenzym gastro-resistant film-coated tablets,"Bromelainum, Trypsinum, Rutosidum trihydricum",1 UD,200 pcs,95-0325-03,2021-12-01,,shortage - end date unknown,2026-09-21T13:18:39.363012,,
+LV,Latvia,ZVA,Piascledine 300 mg capsules,"Glycinis maxis oleum, Perseae gratissimae oleum",300 mg,15 pcs,05-0267-01,2019-12-03,,shortage - end date unknown,2026-09-21T13:18:39.363034,,
+LV,Latvia,ZVA,Piperacillin/Tazobactam Kalceks 2 g/0.25 g powder for solution for infusion,"Piperacillinum, Tazobactamum","2 g/0,25 g",10 pcs,23-0014-02,2024-11-04,,shortage - end date unknown,2026-09-21T13:18:39.363056,,
+LV,Latvia,ZVA,Pirfenidone Zentiva 801 mg film-coated tablets,Pirfenidonum,801 mg,84 pcs,22-0087-01,2026-03-10,,leaving the market,2026-09-21T13:18:39.363082,L04AX05,146773
+LV,Latvia,ZVA,Plavix,Clopidogrelum,300 mg,30 pcs,EU/1/98/069/009,2022-03-28,,shortage - end date unknown,2026-09-21T13:18:39.363105,B01AC04,124567
+LV,Latvia,ZVA,Polvertic 24 mg tablets,Betahistini dihydrochloridum,24 mg,100 pcs,07-0371-06,2023-08-14,,shortage - end date unknown,2026-09-21T13:18:39.363127,N07CA01,93378
+LV,Latvia,ZVA,Polvertic 24 mg tablets,Betahistini dihydrochloridum,24 mg,20 pcs,07-0371-01,2023-06-16,,shortage - end date unknown,2026-09-21T13:18:39.363153,N07CA01,93378
+LV,Latvia,ZVA,Pradaxa,Dabigatranum etexilatum,75 mg,10 pcs,EU/1/08/442/001,2018-04-01,,shortage - end date unknown,2026-09-21T13:18:39.363176,B01AE07,86983
+LV,Latvia,ZVA,"Pragiola 150 mg capsules, hard",Pregabalinum,150 mg,56 pcs,15-0079-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:39.363198,N02BF02,75728
+LV,Latvia,ZVA,"Pragiola 150 mg capsules, hard",Pregabalinum,150 mg,60 pcs,15-0079-05,2017-05-24,,shortage - end date unknown,2026-09-21T13:18:39.363222,N02BF02,75728
+LV,Latvia,ZVA,"Pragiola 300 mg capsules, hard",Pregabalinum,300 mg,90 pcs,15-0082-07,2017-05-24,,shortage - end date unknown,2026-09-21T13:18:39.363244,N02BF02,75736
+LV,Latvia,ZVA,"Pragiola 300 mg capsules, hard",Pregabalinum,300 mg,56 pcs,15-0082-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:39.363272,N02BF02,75736
+LV,Latvia,ZVA,"Pragiola 75 mg capsules, hard",Pregabalinum,75 mg,56 pcs,15-0077-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:39.363302,N02BF02,75701
+LV,Latvia,ZVA,"Pragiola 75 mg capsules, hard",Pregabalinum,75 mg,60 pcs,15-0077-05,2017-05-24,,shortage - end date unknown,2026-09-21T13:18:39.363330,N02BF02,75701
+LV,Latvia,ZVA,Prelum 4 mg film-coated tablets,Lacidipinum,4 mg,56 pcs,15-0154-02,2026-06-01,2026-12-31,shortage,2026-09-21T13:18:39.363369,C08CA09,
+LV,Latvia,ZVA,Prelum 6 mg film-coated tablets,Lacidipinum,6 mg,56 pcs,15-0155-02,2026-06-01,2026-12-31,shortage,2026-09-21T13:18:39.363407,C08CA09,
+LV,Latvia,ZVA,Prenessa 4 mg tablets,Tert-butylamini perindoprilum,4 mg,30 pcs,06-0128-01,2024-05-15,,shortage - end date unknown,2026-09-21T13:18:39.363438,,
+LV,Latvia,ZVA,Prenessa 8 mg tablets,Tert-butylamini perindoprilum,8 mg,30 pcs,08-0288-04,2024-07-03,,shortage - end date unknown,2026-09-21T13:18:39.363469,,
+LV,Latvia,ZVA,Prenewel 4 mg/1.25 mg tablets,"Tert-butylamini perindoprilum, Indapamidum","4 mg/1,25 mg",90 pcs,07-0370-08,2022-11-07,,shortage - end date unknown,2026-09-21T13:18:39.363498,,
+LV,Latvia,ZVA,Prenewel 8 mg/2.5 mg tablets,"Tert-butylamini perindoprilum, Indapamidum","8 mg/2,5 mg",90 pcs,10-0251-08,2025-04-29,,leaving the market,2026-09-21T13:18:39.363531,,
+LV,Latvia,ZVA,Prestarium 10 mg film-coated tablets,Perindoprili argininum,10 mg,30 pcs,05-0264-01,2025-04-03,,leaving the market,2026-09-21T13:18:39.363565,C09AA04,
+LV,Latvia,ZVA,Prestarium 10 mg film-coated tablets,Perindoprili argininum,10 mg,90 pcs,05-0264-08,2021-04-01,,shortage - end date unknown,2026-09-21T13:18:39.363587,C09AA04,
+LV,Latvia,ZVA,Prestarium 5 mg film-coated tablets,Perindoprili argininum,5 mg,90 pcs,05-0263-08,2021-04-01,,shortage - end date unknown,2026-09-21T13:18:39.363610,C09AA04,85162
+LV,Latvia,ZVA,Presteram 10 mg/10 mg tablets,"Perindoprili argininum, Amlodipinum",10 mg/10 mg,30 pcs,08-0114-07,2025-04-10,,leaving the market,2026-09-21T13:18:39.363635,,
+LV,Latvia,ZVA,Presteram 10 mg/5 mg tablets,"Perindoprili argininum, Amlodipinum",10 mg/5 mg,30 pcs,08-0113-07,2025-04-10,,leaving the market,2026-09-21T13:18:39.600892,,
+LV,Latvia,ZVA,Presteram 5 mg/5 mg tablets,"Perindoprili argininum, Amlodipinum",5 mg/5 mg,30 pcs,08-0111-07,2025-04-03,,leaving the market,2026-09-21T13:18:39.600949,,
+LV,Latvia,ZVA,Prindal 8 mg/2.5 mg/10 mg tablets,"Tert-butylamini perindoprilum, Indapamidum, Amlodipinum",1 UD,30 pcs,21-0130-01,2026-06-30,,leaving the market,2026-09-21T13:18:39.600992,,
+LV,Latvia,ZVA,Prindal 8 mg/2.5 mg/5 mg tablets,"Tert-butylamini perindoprilum, Indapamidum, Amlodipinum",1 UD,30 pcs,21-0129-01,2026-06-30,,leaving the market,2026-09-21T13:18:39.601027,,
+LV,Latvia,ZVA,Priorix powder and solvent for solution for injection in pre-filled syringe,"Virus rubellae, vivum, attenuatum, Virus morbilli (stirps Schwarzi), vivum, attenuatum, Virus parotitidis epidemici, vivum, attenuatum",1 deva,1 pc,99-0657-01,2019-05-30,,shortage - end date unknown,2026-09-21T13:18:39.601064,,
+LV,Latvia,ZVA,Procoralan,Ivabradinum,5 mg,14 pcs,EU/1/05/316/001,2025-04-10,,leaving the market,2026-09-21T13:18:39.601096,C01EB17,81213
+LV,Latvia,ZVA,Procoralan,Ivabradinum,5 mg,56 pcs,EU/1/05/316/003,2025-04-10,,leaving the market,2026-09-21T13:18:39.601127,C01EB17,81213
+LV,Latvia,ZVA,Procoralan,Ivabradinum,"7,5 mg",112 pcs,EU/1/05/316/014,2026-06-30,,leaving the market,2026-09-21T13:18:39.601158,C01EB17,81213
+LV,Latvia,ZVA,Procoralan,Ivabradinum,"7,5 mg",56 pcs,EU/1/05/316/010,2025-04-10,,leaving the market,2026-09-21T13:18:39.601190,C01EB17,81213
+LV,Latvia,ZVA,Profenac 75 mg/3 ml solution for injection,Diclofenacum natricum,75 mg/3 ml,5 pcs,04-0335-01,2018-09-12,,shortage - end date unknown,2026-09-21T13:18:39.601221,M01AB05,99945
+LV,Latvia,ZVA,Profenac SR 100 mg prolonged-release tablets,Diclofenacum natricum,100 mg,20 pcs,04-0227-01,2017-02-01,,shortage - end date unknown,2026-09-21T13:18:39.601249,M01AB05,8052
+LV,Latvia,ZVA,Promedols 20 mg/ml solution for injection,Trimeperidini hydrochloridum,20 mg/1 ml,10 pcs,96-0192-01,2023-07-24,,shortage - end date unknown,2026-09-21T13:18:39.601276,N05AN01,
+LV,Latvia,ZVA,Propafenone Accord 150 mg film-coated tablets,Propafenoni hydrochloridum,150 mg,60 pcs,17-0158-03,2025-07-24,,shortage - end date unknown,2026-09-21T13:18:39.601303,C01BC03,26026
+LV,Latvia,ZVA,"Prospan 20 mg/ml oral drops, solution",Hederae helicis folii extractum siccum,400 mg/20 ml,1 pc,99-0723-01,2025-01-06,,shortage - end date unknown,2026-09-21T13:18:39.601330,,
+LV,Latvia,ZVA,Prostenoon-Geel 1 mg/3.5 g endocervical gel,Dinoprostonum,"1 mg/3,5 g",1 pc,00-0627-01,2025-06-01,,shortage - end date unknown,2026-09-21T13:18:39.601503,G02AD02,
+LV,Latvia,ZVA,Prostenoon-Geel 2 mg/3.5 g vaginal gel,Dinoprostonum,"2 mg/3,5 g",1 pc,00-0628-01,2025-06-01,,shortage - end date unknown,2026-09-21T13:18:39.601530,G02AD02,
+LV,Latvia,ZVA,Pulmicort Turbuhaler 200 micrograms/dose inhalation powder,Budesonidum,200 µg/dose,100 pcs,97-0646-01,2022-05-21,,shortage - end date unknown,2026-09-21T13:18:39.601558,R01AD05,
+LV,Latvia,ZVA,Puregon,Follitropinum beta,"300 IU/0,36 ml",1 pc,EU/1/96/008/038,2018-05-03,,shortage - end date unknown,2026-09-21T13:18:39.601585,H01AC01,
+LV,Latvia,ZVA,Puregon,Follitropinum beta,"900 IU/1,08 ml",1 pc,EU/1/96/008/041,2018-05-03,,shortage - end date unknown,2026-09-21T13:18:39.601611,H01AC01,
+LV,Latvia,ZVA,Quamatel 20 mg powder and solvent for solution for injection,Famotidinum,20 mg,5 pcs,97-0489-01,2026-01-01,,shortage - end date unknown,2026-09-21T13:18:39.601637,A02BA03,
+LV,Latvia,ZVA,Quamatel 20 mg powder and solvent for solution for injection,Famotidinum,20 mg,5 pcs,I001783-01,2026-07-29,,shortage - end date unknown,2026-09-21T13:18:39.601663,A02BA03,
+LV,Latvia,ZVA,Quamatel 20 mg powder and solvent for solution for injection,Famotidinum,20 mg,5 pcs,I001818-01,2026-02-04,,shortage - end date unknown,2026-09-21T13:18:39.601689,A02BA03,
+LV,Latvia,ZVA,Quetiapine Accord 200 mg prolonged-release tablets,Quetiapinum,200 mg,60 pcs,11-0370-04,2025-08-25,,shortage - end date unknown,2026-09-21T13:18:39.601715,N05AH04,84190
+LV,Latvia,ZVA,Quetiapine Accord 300 mg prolonged-release tablets,Quetiapinum,300 mg,60 pcs,11-0371-04,2025-08-25,,shortage - end date unknown,2026-09-21T13:18:39.601739,N05AH04,84204
+LV,Latvia,ZVA,Quetiapine Polpharma 100 mg film-coated tablets,Quetiapinum,100 mg,60 pcs,10-0129-01,2023-12-12,,shortage - end date unknown,2026-09-21T13:18:39.601765,N05AH04,50768
+LV,Latvia,ZVA,Ramicor 10 mg tablets,Ramiprilum,10 mg,60 pcs,04-0389-08,2020-01-01,,shortage - end date unknown,2026-09-21T13:18:39.601790,C09AA05,70351
+LV,Latvia,ZVA,Ramipril Actavis 5 mg tablets,Ramiprilum,5 mg,98 pcs,05-0572-02,2017-04-06,,shortage - end date unknown,2026-09-21T13:18:39.601814,C09AA05,50563
+LV,Latvia,ZVA,Ramipril TAD 10 mg tablets,Ramiprilum,10 mg,30 pcs,13-0202-05,2025-12-16,,leaving the market,2026-09-21T13:18:39.601845,C09AA05,70351
+LV,Latvia,ZVA,Ramipril TAD 5 mg tablets,Ramiprilum,5 mg,30 pcs,13-0201-05,2025-12-16,,leaving the market,2026-09-21T13:18:39.601874,C09AA05,50563
+LV,Latvia,ZVA,Ramlon 10 mg/5 mg hard capsules,"Ramiprilum, Amlodipinum",10 mg/5 mg,60 pcs,12-0066-04,2021-08-06,,shortage - end date unknown,2026-09-21T13:18:39.601899,,
+LV,Latvia,ZVA,Ramlon 5 mg/10 mg hard capsules,"Ramiprilum, Amlodipinum",5 mg/10 mg,60 pcs,12-0065-04,2021-06-04,,shortage - end date unknown,2026-09-21T13:18:39.601923,,
+LV,Latvia,ZVA,Ramlon 5 mg/5 mg hard capsules,"Ramiprilum, Amlodipinum",5 mg/5 mg,60 pcs,12-0064-04,2021-08-06,,shortage - end date unknown,2026-09-21T13:18:39.601948,,
+LV,Latvia,ZVA,Ranexa,Ranolazinum,375 mg,60 pcs,EU/1/08/462/001,2025-09-19,,shortage - end date unknown,2026-09-21T13:18:39.601973,C01EB18,
+LV,Latvia,ZVA,Ranexa,Ranolazinum,750 mg,60 pcs,EU/1/08/462/005,2025-09-19,,shortage - end date unknown,2026-09-21T13:18:39.601997,C01EB18,
+LV,Latvia,ZVA,Rapiscan,Regadenosonum,400 µg/5 ml,1 pc,EU/1/10/643/001,2025-06-01,,shortage - end date unknown,2026-09-21T13:18:39.602025,C01EB21,107883
+LV,Latvia,ZVA,Rawel SR 1.5 mg prolonged-release tablets,Indapamidum,"1,5 mg",30 pcs,05-0457-02,2021-09-15,,shortage - end date unknown,2026-09-21T13:18:39.602051,C03BA11,
+LV,Latvia,ZVA,Recreol 50 mg/g ointment,Dexpanthenolum,1500 mg/30 g,1 pc,17-0076-01,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:39.602077,A11HA30,
+LV,Latvia,ZVA,Regaine 50 mg/ml cutaneous solution,Minoxidilum,3000 mg/60 ml,1 pc,00-0480-01,2025-09-01,,leaving the market,2026-09-21T13:18:39.602107,C02CA01,69795
+LV,Latvia,ZVA,"Relenza 5 mg/dose, inhalation powder, pre-dispensed",Zanamivirum,5 mg/dose,5 pcs,07-0088-02,2016-05-31,,shortage - end date unknown,2026-09-21T13:18:39.602133,J05AH01,199818
+LV,Latvia,ZVA,Relifex 1 g dispersible tablets,Nabumetonum,1 g,20 pcs,03-0504-01,2025-05-31,,shortage - end date unknown,2026-09-21T13:18:39.602172,M01AX01,68306
+LV,Latvia,ZVA,Remantadīns 100 mg hard capsules,Rimantadini hydrochloridum,100 mg,10 pcs,11-0397-01,2020-08-25,,shortage - end date unknown,2026-09-21T13:18:39.602202,J05AB02,
+LV,Latvia,ZVA,Remantadīns 50 mg tabletes,Rimantadini hydrochloridum,50 mg,20 pcs,97-0631-01,2020-08-25,,shortage - end date unknown,2026-09-21T13:18:39.602230,J05AB02,
+LV,Latvia,ZVA,Remsima,Infliximabum,100 mg,1 pc,EU/1/13/853/001,2021-10-01,,shortage - end date unknown,2026-09-21T13:18:39.602255,L04AB02,
+LV,Latvia,ZVA,Remurel 20 mg/ml solution for injection in pre-filled syringe,Glatirameri acetas,20 mg/ml,28 pcs,16-0080-02,2020-04-02,,shortage - end date unknown,2026-09-21T13:18:39.602281,L03AX13,
+LV,Latvia,ZVA,Renagel,Sevelamerum,800 mg,180 pcs,EU/1/99/123/012,2022-03-04,,shortage - end date unknown,2026-09-21T13:18:39.602307,V03AE02,60496
+LV,Latvia,ZVA,Reseligo 3.6 mg implant in pre-filled syringe,Goserelinum,"3,6 mg",1 pc,15-0332-01,2026-07-30,,shortage - end date unknown,2026-09-21T13:18:39.602332,L02AE03,
+LV,Latvia,ZVA,Retacrit,Epoetinum zeta,"2000 IU/0,6 ml",6 pcs,EU/1/07/431/004,2026-03-18,,leaving the market,2026-09-21T13:18:39.602360,,
+LV,Latvia,ZVA,Retacrit,Epoetinum zeta,"4000 IU/0,4 ml",6 pcs,EU/1/07/431/008,2026-03-18,,leaving the market,2026-09-21T13:18:39.602388,,
+LV,Latvia,ZVA,Retacrit,Epoetinum zeta,"5000 IU/0,5 ml",6 pcs,EU/1/07/431/010,2026-03-18,,leaving the market,2026-09-21T13:18:39.602415,,
+LV,Latvia,ZVA,Retacrit,Epoetinum zeta,10000 IU/1 ml,6 pcs,EU/1/07/431/016,2026-03-18,,leaving the market,2026-09-21T13:18:39.602442,,
+LV,Latvia,ZVA,Reyataz,Atazanaviri sulfas,150 mg,60 pcs,EU/1/03/267/004,2023-01-23,,shortage - end date unknown,2026-09-21T13:18:39.849174,J05AE08,74330
+LV,Latvia,ZVA,Reyataz,Atazanaviri sulfas,300 mg,30 pcs,EU/1/03/267/008,2023-01-23,,shortage - end date unknown,2026-09-21T13:18:39.849202,J05AE08,86479
+LV,Latvia,ZVA,Rhesonativ 625 IU/ml solution for injection,Immunoglobulinum humanum anti-D,625 IU/1 ml,1 pc,07-0329-01,2025-10-31,,leaving the market,2026-09-21T13:18:39.849230,,
+LV,Latvia,ZVA,Rhesonativ 625 IU/ml solution for injection,Immunoglobulinum humanum anti-D,1250 IU/2 ml,1 pc,07-0329-04,2025-08-31,,leaving the market,2026-09-21T13:18:39.849250,,
+LV,Latvia,ZVA,Rispolept 1 mg film-coated tablets,Risperidonum,1 mg,60 pcs,98-0099-01,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:39.849267,N05AX08,37710
+LV,Latvia,ZVA,Rispolept 2 mg film-coated tablets,Risperidonum,2 mg,60 pcs,98-0100-01,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:39.849281,N05AX08,37729
+LV,Latvia,ZVA,Rispolept 3 mg film-coated tablets,Risperidonum,3 mg,60 pcs,98-0101-01,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:39.849294,N05AX08,37737
+LV,Latvia,ZVA,Rispolept 4 mg film-coated tablets,Risperidonum,4 mg,60 pcs,98-0102-01,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:39.849306,N05AX08,37745
+LV,Latvia,ZVA,Rispolept Consta 25 mg powder and solvent for prolonged-release suspension for injection,Risperidonum,25 mg/2 ml,1 pc,03-0096-01,2025-01-01,,shortage - end date unknown,2026-09-21T13:18:39.849321,N05AX08,68268
+LV,Latvia,ZVA,Rispolept Consta 37.5 mg powder and solvent for prolonged-release suspension for injection,Risperidonum,"37,5 mg/2 ml",1 pc,03-0097-01,2025-01-01,,shortage - end date unknown,2026-09-21T13:18:39.849334,N05AX08,68276
+LV,Latvia,ZVA,Rispolept Consta 50 mg powder and solvent for prolonged-release suspension for injection,Risperidonum,50 mg/2 ml,1 pc,03-0098-01,2025-01-01,,shortage - end date unknown,2026-09-21T13:18:39.849355,N05AX08,68284
+LV,Latvia,ZVA,Ritonavir Mylan,Ritonavirum,100 mg,30 pcs,EU/1/17/1242/001,2024-04-30,,shortage - end date unknown,2026-09-21T13:18:39.849371,J05AE03,
+LV,Latvia,ZVA,Rivaroxaban Stada 15 mg + 20 mg film-coated tablets,Rivaroxabanum,1 UD,49 pcs,22-0178-01,2026-08-31,,leaving the market,2026-09-21T13:18:39.849388,B01AF01,
+LV,Latvia,ZVA,Rivaroxaban Stada 15 mg film-coated tablets,Rivaroxabanum,15 mg,28 pcs,22-0176-04,2024-06-14,,shortage - end date unknown,2026-09-21T13:18:39.849402,B01AF01,100145
+LV,Latvia,ZVA,Rivaroxaban Stada 15 mg hard capsules,Rivaroxabanum,15 mg,100 pcs,22-0212-11,2025-12-30,,shortage - end date unknown,2026-09-21T13:18:39.849416,B01AF01,100145
+LV,Latvia,ZVA,Rivaroxaban Stada 20 mg film-coated tablets,Rivaroxabanum,20 mg,28 pcs,22-0177-04,2024-06-14,,shortage - end date unknown,2026-09-21T13:18:39.849430,B01AF01,100153
+LV,Latvia,ZVA,Rivaroxaban Stada 20 mg hard capsules,Rivaroxabanum,20 mg,100 pcs,22-0213-20,2025-12-30,,shortage - end date unknown,2026-09-21T13:18:39.849443,B01AF01,100153
+LV,Latvia,ZVA,Rivaroxaban Teva 15 mg film-coated tablets,Rivaroxabanum,15 mg,28 pcs,21-0074-03,2024-05-29,,shortage - end date unknown,2026-09-21T13:18:39.849456,B01AF01,100145
+LV,Latvia,ZVA,Rivaroxaban Teva 15 mg film-coated tablets,Rivaroxabanum,15 mg,98 pcs,21-0074-07,2024-05-29,,shortage - end date unknown,2026-09-21T13:18:39.849469,B01AF01,100145
+LV,Latvia,ZVA,Rivaroxaban Teva 20 mg film-coated tablets,Rivaroxabanum,20 mg,28 pcs,21-0075-03,2024-05-29,,shortage - end date unknown,2026-09-21T13:18:39.849482,B01AF01,100153
+LV,Latvia,ZVA,Rivaroxaban Teva 20 mg film-coated tablets,Rivaroxabanum,20 mg,98 pcs,21-0075-06,2024-05-29,,shortage - end date unknown,2026-09-21T13:18:39.849494,B01AF01,100153
+LV,Latvia,ZVA,RoActemra,Tocilizumabum,80 mg/4 ml,1 pc,EU/1/08/492/001,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:39.849507,L04AC07,88994
+LV,Latvia,ZVA,RoActemra,Tocilizumabum,200 mg/10 ml,1 pc,EU/1/08/492/003,2018-10-01,,shortage - end date unknown,2026-09-21T13:18:39.849520,L04AC07,89001
+LV,Latvia,ZVA,RoActemra,Tocilizumabum,400 mg/20 ml,4 pcs,EU/1/08/492/006,2019-02-20,,shortage - end date unknown,2026-09-21T13:18:39.849534,L04AC07,89028
+LV,Latvia,ZVA,Rolpryna SR 2 mg prolonged-release tablets,Ropinirolum,2 mg,28 pcs,11-0085-02,2019-10-01,,shortage - end date unknown,2026-09-21T13:18:39.849548,N04BC04,
+LV,Latvia,ZVA,Romazic 15 mg film-coated tablets,Rosuvastatinum,15 mg,30 pcs,20-0042-01,2024-11-19,,shortage - end date unknown,2026-09-21T13:18:39.849561,C10AA07,
+LV,Latvia,ZVA,Romazic 30 mg film-coated tablets,Rosuvastatinum,30 mg,30 pcs,20-0043-01,2024-05-13,,shortage - end date unknown,2026-09-21T13:18:39.849576,C10AA07,
+LV,Latvia,ZVA,Ropinirole Orion 2 mg prolonged-release tablets,Ropinirolum,2 mg,28 pcs,12-0304-02,2025-02-06,2026-10-05,shortage,2026-09-21T13:18:39.849597,N04BC04,85626
+LV,Latvia,ZVA,Ropinirole Orion 4 mg prolonged-release tablets,Ropinirolum,4 mg,28 pcs,12-0305-02,2025-02-06,2026-10-05,shortage,2026-09-21T13:18:39.849616,N04BC04,85634
+LV,Latvia,ZVA,Ropinirole Orion 8 mg prolonged-release tablets,Ropinirolum,8 mg,28 pcs,12-0306-02,2024-12-02,2026-10-05,shortage,2026-09-21T13:18:39.849636,N04BC04,85642
+LV,Latvia,ZVA,Rosuvastatin TAD 15 mg film-coated tablets,Rosuvastatinum,15 mg,14 pcs,11-0271-02,2018-12-28,,shortage - end date unknown,2026-09-21T13:18:39.849649,C10AA07,
+LV,Latvia,ZVA,Rosuvastatin TAD 30 mg film-coated tablets,Rosuvastatinum,30 mg,14 pcs,11-0273-02,2018-12-28,,shortage - end date unknown,2026-09-21T13:18:39.849662,C10AA07,
+LV,Latvia,ZVA,Rosuvastatin TAD 5 mg film-coated tablets,Rosuvastatinum,5 mg,14 pcs,11-0269-02,2018-12-28,,shortage - end date unknown,2026-09-21T13:18:39.849680,C10AA07,201030
+LV,Latvia,ZVA,Rotarix,Rotavirus humanum attenuatum,"1,5 ml",1 pc,EU/1/05/330/005,2018-09-05,,shortage - end date unknown,2026-09-21T13:18:39.849692,,
+LV,Latvia,ZVA,Rovasyn 10 mg film-coated tablets,Rosuvastatinum,10 mg,30 pcs,13-0285-04,2024-10-31,,leaving the market,2026-09-21T13:18:39.849707,C10AA07,201049
+LV,Latvia,ZVA,Rovasyn 10 mg film-coated tablets,Rosuvastatinum,10 mg,60 pcs,13-0285-06,2022-11-30,,leaving the market,2026-09-21T13:18:39.849721,C10AA07,201049
+LV,Latvia,ZVA,Rovasyn 20 mg film-coated tablets,Rosuvastatinum,20 mg,60 pcs,13-0286-06,2020-04-07,,shortage - end date unknown,2026-09-21T13:18:39.849733,C10AA07,201057
+LV,Latvia,ZVA,Rovasyn 20 mg film-coated tablets,Rosuvastatinum,20 mg,30 pcs,13-0286-04,2024-05-31,,leaving the market,2026-09-21T13:18:39.849747,C10AA07,201057
+LV,Latvia,ZVA,Rovasyn 40 mg film-coated tablets,Rosuvastatinum,40 mg,30 pcs,13-0287-04,2026-02-28,,leaving the market,2026-09-21T13:18:39.849761,C10AA07,201065
+LV,Latvia,ZVA,Rozex 7.5 mg/g gel,Metronidazolum,225 mg/30 g,1 pc,03-0407-02,2019-05-07,,shortage - end date unknown,2026-09-21T13:18:39.849774,A01AB03,33480
+LV,Latvia,ZVA,Rozlytrek,Entrectinibum,100 mg,30 pcs,EU/1/20/1460/001,2025-10-20,2026-10-20,shortage,2026-09-21T13:18:39.849791,L01EX14,204617
+LV,Latvia,ZVA,Rybelsus,Semaglutidum,7 mg,30 pcs,EU/1/20/1430/005,2025-12-01,,leaving the market,2026-09-21T13:18:39.849806,A10BX05,
+LV,Latvia,ZVA,Rybelsus,Semaglutidum,14 mg,30 pcs,EU/1/20/1430/008,2025-12-01,,leaving the market,2026-09-21T13:18:39.849823,A10BX05,
+LV,Latvia,ZVA,Rybelsus,Semaglutidum,3 mg,30 pcs,EU/1/20/1430/002,2025-12-01,,leaving the market,2026-09-21T13:18:39.849837,A10BX05,
+LV,Latvia,ZVA,Ryeqo,"Relugolixum, Estradiolum hemihydricum, Norethisteroni acetas",1 UD,28 pcs,EU/1/21/1565/001,2024-06-14,,shortage - end date unknown,2026-09-21T13:18:39.849849,,
+LV,Latvia,ZVA,"Saflutin 50/100 micrograms/dose inhalation powder, pre-dispensed","Salmeterolum, Fluticasoni propionas",50 µg/100 µg/dose,60 pcs,17-0175-01,2025-01-06,2045-01-06,shortage,2026-09-21T13:18:39.849866,,
+LV,Latvia,ZVA,"Saflutin 50/250 micrograms/dose inhalation powder, pre-dispensed","Salmeterolum, Fluticasoni propionas",50 µg/250 µg/dose,60 pcs,17-0176-01,2025-01-06,2045-01-06,shortage,2026-09-21T13:18:39.849884,,
+LV,Latvia,ZVA,Sanoral HCT 40 mg/10 mg/25 mg film-coated tablets,"Olmesartanum medoxomilum, Amlodipinum, Hydrochlorothiazidum",1 UD,28 pcs,11-0036-02,2018-04-03,,shortage - end date unknown,2026-09-21T13:18:39.849897,,
+LV,Latvia,ZVA,Sanoral HCT 40 mg/5 mg/25 mg film-coated tablets,"Olmesartanum medoxomilum, Amlodipinum, Hydrochlorothiazidum",1 UD,28 pcs,11-0038-02,2018-04-03,,shortage - end date unknown,2026-09-21T13:18:39.849910,,
+LV,Latvia,ZVA,Sapro 50 mg film-coated tablets,Bicalutamidum,50 mg,28 pcs,07-0110-06,2025-06-01,,shortage - end date unknown,2026-09-21T13:18:39.849923,L02BG03,45020
+LV,Latvia,ZVA,Segluromet,"Ertugliflozinum, Metformini hydrochloridum","2,5 mg/1000 mg",56 pcs,EU/1/18/1265/011,2024-01-01,,shortage - end date unknown,2026-09-21T13:18:40.086346,,
+LV,Latvia,ZVA,Segluromet,"Ertugliflozinum, Metformini hydrochloridum","7,5 mg/1000 mg",56 pcs,EU/1/18/1265/025,2024-01-01,,shortage - end date unknown,2026-09-21T13:18:40.086451,,
+LV,Latvia,ZVA,Segosana 75 mg hard capsules,Oseltamivirum,75 mg,10 pcs,21-0119-01,2025-02-06,,leaving the market,2026-09-21T13:18:40.086517,J05AH02,67482
+LV,Latvia,ZVA,Septabene lemon and honey 3 mg/1 mg lozenges,"Benzydamini hydrochloridum, Cetylpyridinii chloridum",3 mg/1 mg,16 pcs,17-0203-02,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.086550,,
+LV,Latvia,ZVA,"Sēra RFF 333,3 mg/g ziede",Sulfur ad usum externum,"9,999 g/30 g",1 pc,99-0479-03,2026-02-10,2026-12-31,shortage,2026-09-21T13:18:40.086582,,
+LV,Latvia,ZVA,"Seretide Diskus 50/250 micrograms/dose inhalation powder, pre-dispensed","Salmeterolum, Fluticasoni propionas",50 µg/250 µg/dose,180 pcs,00-0934-02,2018-09-26,,shortage - end date unknown,2026-09-21T13:18:40.086608,,
+LV,Latvia,ZVA,"Seretide Diskus 50/500 micrograms/dose inhalation powder, pre-dispensed","Salmeterolum, Fluticasoni propionas",50 µg/500 µg/dose,180 pcs,00-0935-02,2018-10-17,,shortage - end date unknown,2026-09-21T13:18:40.086627,,
+LV,Latvia,ZVA,Sermion 5 mg coated tablets,Nicergolinum,5 mg,30 pcs,99-0124-01,2026-01-14,,leaving the market,2026-09-21T13:18:40.086650,C04AD01,
+LV,Latvia,ZVA,Sertralin Actavis 50 mg film-coated tablets,Sertralinum,50 mg,28 pcs,06-0026-01,2025-06-26,,shortage - end date unknown,2026-09-21T13:18:40.086669,N06AB06,39403
+LV,Latvia,ZVA,Sertraline Lannacher 100 mg film-coated tablets,Sertralini hydrochloridum,100 mg,30 pcs,05-0218-04,2021-12-01,,shortage - end date unknown,2026-09-21T13:18:40.086689,N06AB06,39411
+LV,Latvia,ZVA,Sevelamer carbonate Sandoz 800 mg film-coated tablets,Sevelameri carbonas,800 mg,180 pcs,14-0151-01,2025-08-22,,leaving the market,2026-09-21T13:18:40.086710,,
+LV,Latvia,ZVA,Sidretella 0.03 mg/3 mg film-coated tablets,"Ethinylestradiolum, Drospirenonum","0,03 mg/3 mg",21 pcs,10-0028-01,2023-10-19,,shortage - end date unknown,2026-09-21T13:18:40.086734,,
+LV,Latvia,ZVA,Signifor,Pasireotidum,"0,6 mg/1 ml",60 pcs,EU/1/12/753/008,2017-01-27,,shortage - end date unknown,2026-09-21T13:18:40.086754,H01CB05,103519
+LV,Latvia,ZVA,Sildenafil ratiopharm,Sildenafilum,50 mg,2 pcs,EU/1/09/603/014,2017-01-06,,shortage - end date unknown,2026-09-21T13:18:40.086772,G04BE03,51071
+LV,Latvia,ZVA,Sildenafil ratiopharm,Sildenafilum,100 mg,4 pcs,EU/1/09/603/010,2020-01-20,,leaving the market,2026-09-21T13:18:40.086794,G04BE03,51098
+LV,Latvia,ZVA,Sildenafil ratiopharm,Sildenafilum,100 mg,2 pcs,EU/1/09/603/015,2017-07-04,,shortage - end date unknown,2026-09-21T13:18:40.086812,G04BE03,51098
+LV,Latvia,ZVA,Simponi,Golimumabum,100 mg/1 ml,1 pc,EU/1/09/546/005,2016-07-07,,shortage - end date unknown,2026-09-21T13:18:40.086831,L04AB06,134430
+LV,Latvia,ZVA,Simulect,Basiliximabum,10 mg/5 ml,1 pc,EU/1/98/084/002,2018-02-14,,shortage - end date unknown,2026-09-21T13:18:40.086850,L04AC02,69876
+LV,Latvia,ZVA,Sinora 1 mg/ml concentrate for solution for infusion,Norepinephrinum,1 mg/1 ml,10 pcs,19-0104-01,2026-04-16,,leaving the market,2026-09-21T13:18:40.086870,C01CA03,98930
+LV,Latvia,ZVA,Sinora 1 mg/ml concentrate for solution for infusion,Norepinephrinum,4 mg/4 ml,10 pcs,19-0104-02,2026-04-16,,leaving the market,2026-09-21T13:18:40.086892,C01CA03,98930
+LV,Latvia,ZVA,Sitagliptin Grindeks 25 mg film-coated tablets,Sitagliptinum,25 mg,28 pcs,22-0006-01,2025-08-25,,leaving the market,2026-09-21T13:18:40.086913,A10BH01,218103
+LV,Latvia,ZVA,Sitagliptin Sandoz 50 mg film-coated tablets,Sitagliptinum,50 mg,28 pcs,22-0048-11,2025-08-22,,leaving the market,2026-09-21T13:18:40.086939,A10BH01,218111
+LV,Latvia,ZVA,Sitagliptin/Metformin Grindeks 50 mg/1000 mg film-coated tablets,"Sitagliptinum, Metformini hydrochloridum",50 mg/1000 mg,196 pcs,22-0043-04,2026-03-25,,leaving the market,2026-09-21T13:18:40.086961,,
+LV,Latvia,ZVA,Sitagliptin/Metformin Grindeks 50 mg/850 mg film-coated tablets,"Sitagliptinum, Metformini hydrochloridum",50 mg/850 mg,196 pcs,22-0042-04,2026-03-25,,leaving the market,2026-09-21T13:18:40.086982,,
+LV,Latvia,ZVA,Sitagliptin/Metformin hydrochloride Sandoz 50 mg/1000 mg film-coated tablets,"Sitagliptinum, Metformini hydrochloridum",50 mg/1000 mg,56 pcs,22-0051-12,2025-08-22,,leaving the market,2026-09-21T13:18:40.087002,,
+LV,Latvia,ZVA,Sitagliptin/Metformin hydrochloride Sandoz 50 mg/850 mg film-coated tablets,"Sitagliptinum, Metformini hydrochloridum",50 mg/850 mg,56 pcs,22-0050-12,2025-08-22,,leaving the market,2026-09-21T13:18:40.087023,,
+LV,Latvia,ZVA,Skinoren 20% cream,Acidum azelaicum,6 g/30 g,1 pc,I001304-01,2022-09-07,,shortage - end date unknown,2026-09-21T13:18:40.087041,D10AF01,
+LV,Latvia,ZVA,Skinoren 20% cream,Acidum azelaicum,6 g/30 g,1 pc,I000809-01,2019-10-15,,shortage - end date unknown,2026-09-21T13:18:40.087060,D10AF01,
+LV,Latvia,ZVA,Skinoren 200 mg/g cream,Acidum azelaicum,6 g/30 g,1 pc,94-0170-01,2021-09-09,,shortage - end date unknown,2026-09-21T13:18:40.087079,D10AF01,
+LV,Latvia,ZVA,Skyrizi,Risankizumabum,"75 mg/0,83 ml",2 pcs,EU/1/19/1361/001,2021-10-31,,shortage - end date unknown,2026-09-21T13:18:40.087097,L04AC18,
+LV,Latvia,ZVA,Sobycor 10 mg film-coated tablets,Bisoprololi fumaras,10 mg,30 pcs,14-0035-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.087116,C07AB07,25542
+LV,Latvia,ZVA,Sobycor 10 mg film-coated tablets,Bisoprololi fumaras,10 mg,90 pcs,14-0035-09,2017-05-24,,shortage - end date unknown,2026-09-21T13:18:40.087134,C07AB07,25542
+LV,Latvia,ZVA,Sobycor 2.5 mg film-coated tablets,Bisoprololi fumaras,"2,5 mg",30 pcs,14-0033-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.087153,C07AB07,71323
+LV,Latvia,ZVA,Sobycor 2.5 mg film-coated tablets,Bisoprololi fumaras,"2,5 mg",90 pcs,14-0033-09,2017-05-24,,shortage - end date unknown,2026-09-21T13:18:40.087171,C07AB07,71323
+LV,Latvia,ZVA,Sobycor 5 mg film-coated tablets,Bisoprololi fumaras,5 mg,30 pcs,14-0034-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.087189,C07AB07,25534
+LV,Latvia,ZVA,Soliris,Eculizumabum,300 mg/30 ml,1 pc,EU/1/07/393/001-P01,2025-02-03,2029-12-31,shortage,2026-09-21T13:18:40.087214,L04AC05,137472
+LV,Latvia,ZVA,Sollazon 100 mg tablets,Cilostazolum,100 mg,56 pcs,14-0015-02,2025-02-24,,shortage - end date unknown,2026-09-21T13:18:40.087232,B01AC23,52191
+LV,Latvia,ZVA,Sorafenib Zentiva 200 mg film-coated tablets,Sorafenibum,200 mg,112 pcs,20-0088-01,2026-03-10,,shortage - end date unknown,2026-09-21T13:18:40.087251,L01EX02,81450
+LV,Latvia,ZVA,Sortis 10 mg chewable tablets,Atorvastatinum,10 mg,30 pcs,10-0403-01,2020-01-01,,shortage - end date unknown,2026-09-21T13:18:40.087270,C10AA05,98779
+LV,Latvia,ZVA,Sortis 20 mg chewable tablets,Atorvastatinum,20 mg,30 pcs,10-0404-01,2017-03-14,,shortage - end date unknown,2026-09-21T13:18:40.087289,C10AA05,98787
+LV,Latvia,ZVA,Sorvasta 10 mg film-coated tablets,Rosuvastatinum,10 mg,28 pcs,11-0027-04,2022-04-12,,shortage - end date unknown,2026-09-21T13:18:40.087309,C10AA07,201049
+LV,Latvia,ZVA,Sorvasta 10 mg film-coated tablets,Rosuvastatinum,10 mg,90 pcs,11-0027-09,2021-12-22,,shortage - end date unknown,2026-09-21T13:18:40.087330,C10AA07,201049
+LV,Latvia,ZVA,Sorvasta 15 mg film-coated tablets,Rosuvastatinum,15 mg,28 pcs,11-0028-04,2022-09-07,,shortage - end date unknown,2026-09-21T13:18:40.087350,C10AA07,
+LV,Latvia,ZVA,Sorvasta 20 mg film-coated tablets,Rosuvastatinum,20 mg,28 pcs,11-0029-04,2022-12-22,,shortage - end date unknown,2026-09-21T13:18:40.087369,C10AA07,201057
+LV,Latvia,ZVA,Sorvasta 20 mg film-coated tablets,Rosuvastatinum,20 mg,90 pcs,11-0029-09,2023-04-11,,shortage - end date unknown,2026-09-21T13:18:40.087388,C10AA07,201057
+LV,Latvia,ZVA,Sorvasta 30 mg film-coated tablets,Rosuvastatinum,30 mg,28 pcs,11-0030-04,2022-09-07,,shortage - end date unknown,2026-09-21T13:18:40.087406,C10AA07,
+LV,Latvia,ZVA,Sorvasta 40 mg film-coated tablets,Rosuvastatinum,40 mg,28 pcs,11-0031-04,2023-04-11,,shortage - end date unknown,2026-09-21T13:18:40.087425,C10AA07,201065
+LV,Latvia,ZVA,Spasmalgon 500 mg/5 mg/0.1 mg tablets,"Metamizolum natricum, Pitofenoni hydrochloridum, Fenpiverini bromidum",1 UD,20 pcs,00-0777-01,2019-06-20,,leaving the market,2026-09-21T13:18:40.087445,,
+LV,Latvia,ZVA,Spasmalgon 500 mg/5 mg/0.1 mg tablets,"Metamizolum natricum, Pitofenoni hydrochloridum, Fenpiverini bromidum",1 UD,20 pcs,00-0777-03,2026-04-07,,leaving the market,2026-09-21T13:18:40.087465,,
+LV,Latvia,ZVA,Spazgan 40 mg tablets,Drotaverini hydrochloridum,40 mg,12 pcs,05-0277-01,2016-10-31,,shortage - end date unknown,2026-09-21T13:18:40.087485,A03AB02,
+LV,Latvia,ZVA,Spitomin 10 mg tablets,Buspironi hydrochloridum,10 mg,60 pcs,00-0554-01,2026-05-25,,shortage - end date unknown,2026-09-21T13:18:40.364440,N05BE01,27111
+LV,Latvia,ZVA,Spravato,Esketaminum,"28 mg/0,2 ml",2 pcs,EU/1/19/1410/002,2026-01-01,,shortage - end date unknown,2026-09-21T13:18:40.364504,N01AX14,
+LV,Latvia,ZVA,Sprycel,Dasatinibum,50 mg,60 pcs,EU/1/06/363/002,2025-06-01,,shortage - end date unknown,2026-09-21T13:18:40.364545,L01EA02,82120
+LV,Latvia,ZVA,Stadapress 0.4 mg film-coated tablets,Moxonidinum,"0,4 mg",30 pcs,05-0022-01,2025-12-15,,leaving the market,2026-09-21T13:18:40.364600,C02AC05,50660
+LV,Latvia,ZVA,Stalevo,"Levodopum, Carbidopum, Entacaponum",1 UD,100 pcs,EU/1/03/260/003,2017-01-01,,shortage - end date unknown,2026-09-21T13:18:40.364636,,
+LV,Latvia,ZVA,Stalevo,"Levodopum, Carbidopum, Entacaponum",1 UD,100 pcs,EU/1/03/260/036,2017-01-01,,shortage - end date unknown,2026-09-21T13:18:40.364666,,
+LV,Latvia,ZVA,Stalevo,"Levodopum, Carbidopum, Entacaponum",1 UD,100 pcs,EU/1/03/260/026,2017-01-01,,shortage - end date unknown,2026-09-21T13:18:40.364695,,
+LV,Latvia,ZVA,Staloral,Allergenum extractum,10 ml,5 pcs,02-0155-03,2021-06-15,,shortage - end date unknown,2026-09-21T13:18:40.364725,,
+LV,Latvia,ZVA,Staloral,Allergenum extractum,10 ml,5 pcs,02-0155-09,2021-03-01,,shortage - end date unknown,2026-09-21T13:18:40.364762,,
+LV,Latvia,ZVA,Stamaril powder and solvent for suspension for injection in pre-filled syringe,Vaccinum febris flavae vivum,"0,5 ml",10 pcs,97-0411-05,2020-03-18,,shortage - end date unknown,2026-09-21T13:18:40.364798,J07BD01,
+LV,Latvia,ZVA,Stelara,Ustekinumabum,90 mg/1 ml,1 pc,EU/1/08/494/004,2024-03-01,,shortage - end date unknown,2026-09-21T13:18:40.364831,L04AC05,122017
+LV,Latvia,ZVA,Stelara,Ustekinumabum,"45 mg/0,5 ml",1 pc,EU/1/08/494/003,2024-03-01,,shortage - end date unknown,2026-09-21T13:18:40.364865,L04AC05,223964
+LV,Latvia,ZVA,Stilnox 10 mg film-coated tablets,Zolpidemi tartras,10 mg,20 pcs,99-1021-01,2021-07-01,,shortage - end date unknown,2026-09-21T13:18:40.364898,N05CF02,195995
+LV,Latvia,ZVA,Suboxone,"Buprenorphinum, Naloxonum","2 mg/0,5 mg",7 pcs,EU/1/06/359/001,2017-10-10,,shortage - end date unknown,2026-09-21T13:18:40.364935,,
+LV,Latvia,ZVA,Suboxone,"Buprenorphinum, Naloxonum",8 mg/2 mg,7 pcs,EU/1/06/359/003,2024-12-28,,leaving the market,2026-09-21T13:18:40.364972,,
+LV,Latvia,ZVA,Sulfasalazine Krka 500 mg film-coated tablets,Sulfasalazinum,500 mg,50 pcs,95-0052-01,2024-11-01,,leaving the market,2026-09-21T13:18:40.365008,A07EC01,7137
+LV,Latvia,ZVA,Sunitinib Sandoz 12.5 mg hard capsules,Sunitinibum,"12,5 mg",28 pcs,19-0065-01,2026-08-24,,leaving the market,2026-09-21T13:18:40.365043,L01EX01,214191
+LV,Latvia,ZVA,Sunitinib Sandoz 50 mg hard capsules,Sunitinibum,50 mg,28 pcs,19-0063-01,2026-08-24,,leaving the market,2026-09-21T13:18:40.365075,L01EX01,214213
+LV,Latvia,ZVA,Sunitinib Teva 12.5 mg hard capsules,Sunitinibum,"12,5 mg",28 pcs,18-0054-01,2024-04-15,,shortage - end date unknown,2026-09-21T13:18:40.365104,L01EX01,214191
+LV,Latvia,ZVA,Suprastin 20 mg/ml solution for injection,Chloropyramini hydrochloridum,20 mg/ml,5 pcs,00-0023-01,2020-02-24,,shortage - end date unknown,2026-09-21T13:18:40.365133,D04AA09,
+LV,Latvia,ZVA,Sutent,Sunitinibum,50 mg,30 pcs,EU/1/06/347/003,2017-04-06,,shortage - end date unknown,2026-09-21T13:18:40.365165,L01EX01,214213
+LV,Latvia,ZVA,Sutent,Sunitinibum,"12,5 mg",28 pcs,EU/1/06/347/004,2026-07-03,,leaving the market,2026-09-21T13:18:40.365199,L01EX01,214191
+LV,Latvia,ZVA,Sutent,Sunitinibum,50 mg,28 pcs,EU/1/06/347/006,2026-07-03,,leaving the market,2026-09-21T13:18:40.365233,L01EX01,214213
+LV,Latvia,ZVA,"Symbicort Turbuhaler 80 micrograms/4.5 micrograms/inhalation, inhalation powder","Budesonidum, Formoteroli fumaras dihydricus","80 µg/4,5 µg/dose",120 pcs,10-0465-02,2021-12-31,,shortage - end date unknown,2026-09-21T13:18:40.365264,,
+LV,Latvia,ZVA,"Symbicort Turbuhaler 80 micrograms/4.5 micrograms/inhalation, inhalation powder","Budesonidum, Formoteroli fumaras dihydricus","80 µg/4,5 µg/dose",60 pcs,10-0465-01,2021-12-31,,shortage - end date unknown,2026-09-21T13:18:40.365293,,
+LV,Latvia,ZVA,Sympathyl film-coated tablets,"Eschscholtziae californica extractum siccum, Crataegi floris extractum siccum, Magnesii oxidum",1 UD,40 pcs,04-0206-01,2026-06-30,2028-03-31,shortage,2026-09-21T13:18:40.365332,,
+LV,Latvia,ZVA,Tafinlar,Dabrafenibum,50 mg,120 pcs,EU/1/13/865/002,2020-03-06,,shortage - end date unknown,2026-09-21T13:18:40.365361,L01EC02,107123
+LV,Latvia,ZVA,"Taflotan 15 micrograms/ml eye drops, solution in single-dose container",Tafluprostum,"4,5 µg/0,3 ml",30 pcs,09-0234-01,2019-09-27,,shortage - end date unknown,2026-09-21T13:18:40.365390,S01EE05,212180
+LV,Latvia,ZVA,Tarceva,Erlotinibum,100 mg,30 pcs,EU/1/05/311/002,2016-06-01,,shortage - end date unknown,2026-09-21T13:18:40.365426,L01EB02,79219
+LV,Latvia,ZVA,Tarceva,Erlotinibum,150 mg,30 pcs,EU/1/05/311/003,2019-04-01,,shortage - end date unknown,2026-09-21T13:18:40.365455,L01EB02,79227
+LV,Latvia,ZVA,Tarka 180 mg/2 mg modified-release tablets,"Verapamili hydrochloridum, Trandolaprilum",180 mg/2 mg,28 pcs,07-0023-02,2026-09-02,2026-10-30,shortage,2026-09-21T13:18:40.365494,,
+LV,Latvia,ZVA,Tarka 240 mg/4 mg modified-release tablets,"Verapamili hydrochloridum, Trandolaprilum",240 mg/4 mg,28 pcs,09-0157-01,2019-05-07,,shortage - end date unknown,2026-09-21T13:18:40.365525,,
+LV,Latvia,ZVA,Taruza 1 mg tablets,Rilmenidinum,1 mg,30 pcs,22-0105-01,2026-06-02,,shortage - end date unknown,2026-09-21T13:18:40.365557,C02AC06,
+LV,Latvia,ZVA,Taruza 1 mg tablets,Rilmenidinum,1 mg,90 pcs,22-0105-02,2026-06-01,,shortage - end date unknown,2026-09-21T13:18:40.365590,C02AC06,
+LV,Latvia,ZVA,Taxotere,Docetaxelum,80 mg/4 ml,1 pc,EU/1/95/002/004,2019-03-19,,shortage - end date unknown,2026-09-21T13:18:40.365620,L01CD02,92894
+LV,Latvia,ZVA,Taxotere,Docetaxelum,160 mg/8 ml,1 pc,EU/1/95/002/005,2017-03-09,,shortage - end date unknown,2026-09-21T13:18:40.365655,L01CD02,94234
+LV,Latvia,ZVA,Tecentriq,Atezolizumabum,840 mg/14 ml,1 pc,EU/1/17/1220/002,2026-03-01,2027-03-01,shortage,2026-09-21T13:18:40.365697,L01FF05,199230
+LV,Latvia,ZVA,Telmisartan-ratiopharm 40 mg tablets,Telmisartanum,40 mg,28 pcs,10-0505-05,2025-10-13,,leaving the market,2026-09-21T13:18:40.365734,C09CA07,50644
+LV,Latvia,ZVA,Telmisartan-ratiopharm 80 mg tablets,Telmisartanum,80 mg,28 pcs,10-0506-05,2026-06-29,,leaving the market,2026-09-21T13:18:40.365767,C09CA07,50652
+LV,Latvia,ZVA,Telmisartan/Hydrochlorothiazide TAD 80 mg/25 mg tablets,"Telmisartanum, Hydrochlorothiazidum",80 mg/25 mg,30 pcs,13-0193-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.365798,,
+LV,Latvia,ZVA,Telmisartan/Hydrochlorothiazide Teva Pharma 80 mg/12.5 mg tablets,"Telmisartanum, Hydrochlorothiazidum","80 mg/12,5 mg",28 pcs,14-0104-02,2026-07-10,2026-09-23,shortage,2026-09-21T13:18:40.365838,,
+LV,Latvia,ZVA,Temozolomide Teva,Temozolomidum,20 mg,5 pcs,EU/1/09/606/003,2019-07-01,,leaving the market,2026-09-21T13:18:40.365872,L01AX03,52310
+LV,Latvia,ZVA,Temozolomide Teva,Temozolomidum,100 mg,5 pcs,EU/1/09/606/005,2019-07-01,,leaving the market,2026-09-21T13:18:40.365905,L01AX03,52329
+LV,Latvia,ZVA,Temozolomide Teva,Temozolomidum,250 mg,5 pcs,EU/1/09/606/011,2019-07-01,,leaving the market,2026-09-21T13:18:40.365937,L01AX03,52337
+LV,Latvia,ZVA,Tenaxum 1 mg tablets,Rilmenidinum,1 mg,30 pcs,02-0344-01,2022-11-01,,shortage - end date unknown,2026-09-21T13:18:40.365966,C02AC06,
+LV,Latvia,ZVA,Tenloris 50 mg/5 mg film-coated tablets,"Losartanum kalicum, Amlodipinum",50 mg/5 mg,30 pcs,14-0071-02,2018-02-02,,shortage - end date unknown,2026-09-21T13:18:40.365997,,
+LV,Latvia,ZVA,Tenox 10 mg tablets,Amlodipinum,10 mg,30 pcs,04-0444-01,2024-10-30,,shortage - end date unknown,2026-09-21T13:18:40.366026,C08CA01,123323
+LV,Latvia,ZVA,Tenox 5 mg tablets,Amlodipinum,5 mg,30 pcs,04-0443-01,2022-06-10,,shortage - end date unknown,2026-09-21T13:18:40.366056,C08CA01,123315
+LV,Latvia,ZVA,Terbinafine Olpha 250 mg tablets,Terbinafinum,250 mg,14 pcs,07-0044-01,2017-10-02,,shortage - end date unknown,2026-09-21T13:18:40.366086,D01BA02,34010
+LV,Latvia,ZVA,Tertensif SR 1.5 mg prolonged-release film-coated tablets,Indapamidum,"1,5 mg",30 pcs,05-0157-01,2025-06-30,,leaving the market,2026-09-21T13:18:40.366123,C03BA11,
+LV,Latvia,ZVA,Tezeo 40 mg tablets,Telmisartanum,40 mg,30 pcs,10-0174-01,2025-10-08,,leaving the market,2026-09-21T13:18:40.627385,C09CA07,50644
+LV,Latvia,ZVA,Thiogamma Turbo-Set 12 mg/ml solution for infusion,Acidum thiocticum,600 mg/50 ml,10 pcs,02-0167-01,2020-01-02,,shortage - end date unknown,2026-09-21T13:18:40.627415,A16AX01,
+LV,Latvia,ZVA,Tilobrastil 90 mg film-coated tablets,Ticagrelorum,90 mg,56 pcs,20-0150-02,2026-09-15,,shortage - end date unknown,2026-09-21T13:18:40.627435,B01AC24,
+LV,Latvia,ZVA,Tobradex 0.1% + 0.3% eye ointment,"Tobramycinum, Dexamethasonum","3,5 g",1 pc,I000616-01,2025-08-05,,shortage - end date unknown,2026-09-21T13:18:40.627454,,
+LV,Latvia,ZVA,"Tobradex 3 mg/1 mg/ml eye drops, suspension","Tobramycinum, Dexamethasonum",5 ml,1 pc,I000943-01,2022-09-07,,shortage - end date unknown,2026-09-21T13:18:40.627470,,
+LV,Latvia,ZVA,"Tobrex 0,3% eye ointment",Tobramycinum,"10,5 mg/3,5 g",1 pc,I000596-01,2025-08-18,,shortage - end date unknown,2026-09-21T13:18:40.627486,J01FA06,
+LV,Latvia,ZVA,Tobrex 3 mg/g eye ointment,Tobramycinum,"10,5 mg/3,5 g",1 pc,I001160-01,2022-09-12,,shortage - end date unknown,2026-09-21T13:18:40.627501,J01FA06,
+LV,Latvia,ZVA,"Tobrex 3 mg/ml eye drops, solution",Tobramycinum,15 mg/5 ml,1 pc,I000942-01,2022-09-07,,shortage - end date unknown,2026-09-21T13:18:40.627516,J01FA06,
+LV,Latvia,ZVA,Torisel,Temsirolimusum,30 mg,1 pc,EU/1/07/424/001,2025-11-01,,shortage - end date unknown,2026-09-21T13:18:40.627532,L01EG01,
+LV,Latvia,ZVA,Torzelip 10 mg/40 mg tablets,"Ezetimibum, Atorvastatinum",10 mg/40 mg,30 pcs,19-0133-02,2022-07-01,,shortage - end date unknown,2026-09-21T13:18:40.627547,,
+LV,Latvia,ZVA,Torzelip 10 mg/80 mg tablets,"Ezetimibum, Atorvastatinum",10 mg/80 mg,30 pcs,19-0134-02,2021-06-03,,shortage - end date unknown,2026-09-21T13:18:40.627563,,
+LV,Latvia,ZVA,Trachisan lozenges,"Tyrothricinum, Lidocaini hydrochloridum, Chlorhexidini digluconas",1 UD,20 pcs,99-0949-01,2024-02-19,,shortage - end date unknown,2026-09-21T13:18:40.627578,,
+LV,Latvia,ZVA,Tracleer,Bosentanum,"62,5 mg",56 pcs,EU/1/02/220/002,2017-03-16,,shortage - end date unknown,2026-09-21T13:18:40.627595,C02KA01,67369
+LV,Latvia,ZVA,Tracleer,Bosentanum,125 mg,56 pcs,EU/1/02/220/004,2017-03-16,,shortage - end date unknown,2026-09-21T13:18:40.627612,C02KA01,67377
+LV,Latvia,ZVA,Tramadol Kalceks 50 mg/ml solution for injection/infusion,Tramadoli hydrochloridum,100 mg/2 ml,5 pcs,16-0115-01,2026-03-25,,leaving the market,2026-09-21T13:18:40.627631,N02AX02,35203
+LV,Latvia,ZVA,Tramadol Krka 150 mg prolonged-release tablets,Tramadoli hydrochloridum,150 mg,30 pcs,03-0206-01,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.627647,N02AJ13,50458
+LV,Latvia,ZVA,Tramadol Krka 200 mg prolonged-release tablets,Tramadoli hydrochloridum,200 mg,30 pcs,03-0207-01,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.627663,N02AJ13,50466
+LV,Latvia,ZVA,Tramadol Krka 50 mg/ml solution for injection,Tramadoli hydrochloridum,50 mg/ml,5 pcs,96-0107-01,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.627678,N02AX02,35203
+LV,Latvia,ZVA,Tremfya,Guselkumabum,100 mg/1 ml,1 pc,EU/1/17/1234/001,2021-08-01,,shortage - end date unknown,2026-09-21T13:18:40.627693,L04AA40,148687
+LV,Latvia,ZVA,Trigan-SP 10 mg/ml solution for injection,Dicycloverini hydrohloridum,20 mg/2 ml,5 pcs,01-0076-01,2016-06-08,,shortage - end date unknown,2026-09-21T13:18:40.627709,A03BB01,
+LV,Latvia,ZVA,Triplixam 10 mg/2.5 mg/10 mg film-coated tablets,"Perindoprili argininum, Indapamidum, Amlodipinum",1 UD,30 pcs,14-0060-01,2025-04-10,,leaving the market,2026-09-21T13:18:40.627731,,
+LV,Latvia,ZVA,Triplixam 10 mg/2.5 mg/5 mg film-coated tablets,"Perindoprili argininum, Indapamidum, Amlodipinum",1 UD,30 pcs,14-0059-01,2025-04-10,,leaving the market,2026-09-21T13:18:40.627748,,
+LV,Latvia,ZVA,Triplixam 5 mg/1.25 mg/10 mg film-coated tablets,"Perindoprili argininum, Indapamidum, Amlodipinum",1 UD,30 pcs,14-0058-01,2025-04-10,,leaving the market,2026-09-21T13:18:40.627764,,
+LV,Latvia,ZVA,Triplixam 5 mg/1.25 mg/5 mg film-coated tablets,"Perindoprili argininum, Indapamidum, Amlodipinum",1 UD,30 pcs,14-0057-01,2025-04-10,,leaving the market,2026-09-21T13:18:40.627781,,
+LV,Latvia,ZVA,Troxevasin 2% gel,Troxerutinum,800 mg/40 g,1 pc,97-0338-01,2017-07-04,,shortage - end date unknown,2026-09-21T13:18:40.627796,C05BA03,
+LV,Latvia,ZVA,Twynsta,"Telmisartanum, Amlodipinum",40 mg/5 mg,28 pcs,EU/1/10/648/002,2025-11-03,,leaving the market,2026-09-21T13:18:40.627813,,
+LV,Latvia,ZVA,Twynsta,"Telmisartanum, Amlodipinum",40 mg/10 mg,28 pcs,EU/1/10/648/009,2025-11-03,,leaving the market,2026-09-21T13:18:40.627830,,
+LV,Latvia,ZVA,Tyverb,Lapatinibum,250 mg,70 pcs,EU/1/07/440/004,2018-01-02,,shortage - end date unknown,2026-09-21T13:18:40.627845,L01EH01,90018
+LV,Latvia,ZVA,"Uniclophen 0.1% eye drops, solution",Diclofenacum natricum,10 mg/10 ml,1 pc,03-0108-01,2022-01-04,,shortage - end date unknown,2026-09-21T13:18:40.627860,M01AB05,
+LV,Latvia,ZVA,Urapidil Kalceks 25 mg solution for injection/infusion,Urapidilum,25 mg/5 ml,5 pcs,21-0043-01,2024-11-04,,shortage - end date unknown,2026-09-21T13:18:40.627875,C02CA06,
+LV,Latvia,ZVA,Uroflow 2 mg film-coated tablets,Tolterodini hydrogenotartras,2 mg,28 pcs,08-0079-01,2023-02-27,,shortage - end date unknown,2026-09-21T13:18:40.627891,G04BD07,50334
+LV,Latvia,ZVA,Urografin 76% solution for injection and infusion,"Natrii amidotrizoas, Meglumini amidotrizoas",2 g/20 ml,10 pcs,96-0117-01,2026-02-17,,shortage - end date unknown,2026-09-21T13:18:40.627906,,
+LV,Latvia,ZVA,Ursofalk 250 mg/5 ml oral suspension,Acidum ursodeoxycholicum,"12,5 g/250 ml",1 pc,10-0013-01,2023-03-17,,shortage - end date unknown,2026-09-21T13:18:40.627921,A05AA02,106054
+LV,Latvia,ZVA,Valarox 10 mg + 160 mg film-coated tablets,"Rosuvastatinum, Valsartanum",10 mg/160 mg,10 pcs,16-0199-09,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.627937,,
+LV,Latvia,ZVA,Valdoxan,Agomelatinum,25 mg,28 pcs,EU/1/08/499/003,2025-04-10,,leaving the market,2026-09-21T13:18:40.627953,N06AX22,
+LV,Latvia,ZVA,Valocordin 18 mg/18 mg/ml oral solution,"Phenobarbitalum, Aethylii bromisovaleras",20 ml,1 pc,95-0326-02,2026-04-27,,leaving the market,2026-09-21T13:18:40.627970,,
+LV,Latvia,ZVA,Valsacombi 320 mg/12.5 mg film-coated tablets,"Valsartanum, Hydrochlorothiazidum","320 mg/12,5 mg",28 pcs,11-0048-03,2017-05-24,,shortage - end date unknown,2026-09-21T13:18:40.627985,,
+LV,Latvia,ZVA,Valsacombi 320 mg/25 mg film-coated tablets,"Valsartanum, Hydrochlorothiazidum",320 mg/25 mg,28 pcs,11-0049-03,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.628000,,
+LV,Latvia,ZVA,Valsacor 320 mg film-coated tablets,Valsartanum,320 mg,28 pcs,10-0080-05,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.628015,C09CA03,82821
+LV,Latvia,ZVA,Valtricom 10 mg/160 mg/25 mg film-coated tablets,"Amlodipinum, Valsartanum, Hydrochlorothiazidum",1 UD,30 pcs,19-0045-05,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.628030,,
+LV,Latvia,ZVA,Vancomycin Kabi 1000 mg powder for concentrate for solution for infusion,Vancomycinum,1000 mg,1 pc,11-0221-01,2021-01-19,,shortage - end date unknown,2026-09-21T13:18:40.628045,J01XA01,32662
+LV,Latvia,ZVA,Vancomycin Kabi 500 mg powder for concentrate for solution for infusion,Vancomycinum,500 mg,1 pc,11-0222-01,2020-12-22,,shortage - end date unknown,2026-09-21T13:18:40.628060,J01XA01,23043
+LV,Latvia,ZVA,Vargatef,Nintedanibum,100 mg,120 pcs,EU/1/14/954/003,2023-03-02,,shortage - end date unknown,2026-09-21T13:18:40.628075,L01EX09,127337
+LV,Latvia,ZVA,Varivax powder and solvent for suspension for injection in pre-filled syringe,Vaccinum varicellae vivum,"0,5 ml/dose",10 pcs,05-0364-02,2024-05-20,,shortage - end date unknown,2026-09-21T13:18:40.628090,J07BK01,82201
+LV,Latvia,ZVA,Vasostenoon 20 micrograms/ml concentrate for solution for infusion,Alprostadilum,20 µg/1 ml,20 pcs,03-0228-01,2024-12-27,,shortage - end date unknown,2026-09-21T13:18:40.628105,C01EA01,143561
+LV,Latvia,ZVA,VaxigripTetra suspension for injection in pre-filled syringe,Vaccinum influenzae inactivatum ex virorum fragmentis praeparatum,"0,5 ml",1 pc,16-0141-01,2025-09-01,,shortage - end date unknown,2026-09-21T13:18:40.628119,J07BB02,229253
+LV,Latvia,ZVA,VaxigripTetra suspension for injection in pre-filled syringe,Vaccinum influenzae inactivatum ex virorum fragmentis praeparatum,"0,5 ml",1 pc,16-0141-04,2025-09-01,,shortage - end date unknown,2026-09-21T13:18:40.628135,J07BB02,229253
+LV,Latvia,ZVA,Velcade,Bortezomibum,"3,5 mg",1 pc,EU/1/04/274/001,2017-02-02,,shortage - end date unknown,2026-09-21T13:18:40.628149,L01XG01,75299
+LV,Latvia,ZVA,Vendal retard 100 mg prolonged-release tablets,Morphini hydrochloridum,100 mg,30 pcs,98-0606-02,2019-12-16,,shortage - end date unknown,2026-09-21T13:18:40.628166,N02AA01,52663
+LV,Latvia,ZVA,Ventavis,Iloprostum,20 µg/2 ml,30 pcs,EU/1/03/255/001,2017-03-28,,shortage - end date unknown,2026-09-21T13:18:40.628181,C02KX01,132713
+LV,Latvia,ZVA,Veoza,Fezolinetantum,45 mg,28 pcs,EU/1/23/1771/001,2025-07-03,,shortage - end date unknown,2026-09-21T13:18:40.929355,G02CX06,227323
+LV,Latvia,ZVA,VeraSeal,"Fibrinogenum humanum, Thrombinum humanum",4 ml,1 pc,EU/1/17/1239/002,2025-05-01,,shortage - end date unknown,2026-09-21T13:18:40.929404,,
+LV,Latvia,ZVA,VeraSeal,"Fibrinogenum humanum, Thrombinum humanum",6 ml,1 pc,EU/1/17/1239/003,2025-05-01,,shortage - end date unknown,2026-09-21T13:18:40.929438,,
+LV,Latvia,ZVA,VeraSeal,"Fibrinogenum humanum, Thrombinum humanum",10 ml,1 pc,EU/1/17/1239/004,2025-05-01,,shortage - end date unknown,2026-09-21T13:18:40.929467,,
+LV,Latvia,ZVA,Verospiron 25 mg tablets,Spironolactonum,25 mg,20 pcs,96-0141-01,2020-04-06,,shortage - end date unknown,2026-09-21T13:18:40.929497,C03DA01,3662
+LV,Latvia,ZVA,"Vertirosan 92.5 mg/ml oral drops, solution",Dimenhydrinatum,20 ml,1 pc,16-0130-01,2026-05-22,2026-10-01,shortage,2026-09-21T13:18:40.929546,R06AA11,
+LV,Latvia,ZVA,Viagra,Sildenafilum,100 mg,2 pcs,EU/1/98/077/015,2019-10-09,,shortage - end date unknown,2026-09-21T13:18:40.929581,G04BE03,51098
+LV,Latvia,ZVA,Viagra,Sildenafilum,50 mg,2 pcs,EU/1/98/077/014,2017-01-16,,shortage - end date unknown,2026-09-21T13:18:40.929614,G04BE03,51071
+LV,Latvia,ZVA,Viagra,Sildenafilum,50 mg,12 pcs,EU/1/98/077/008,2019-06-17,,shortage - end date unknown,2026-09-21T13:18:40.929645,G04BE03,51071
+LV,Latvia,ZVA,Viagra,Sildenafilum,50 mg,8 pcs,EU/1/98/077/007,2019-06-17,,shortage - end date unknown,2026-09-21T13:18:40.929675,G04BE03,51071
+LV,Latvia,ZVA,Viagra,Sildenafilum,50 mg,4 pcs,EU/1/98/077/006,2019-06-17,,shortage - end date unknown,2026-09-21T13:18:40.929704,G04BE03,51071
+LV,Latvia,ZVA,Victoza,Liraglutidum,3 ml,2 pcs,EU/1/09/529/002,2026-04-30,,leaving the market,2026-09-21T13:18:40.929742,A10BJ02,
+LV,Latvia,ZVA,Vilspox 50 mg/1000 mg film-coated tablets,"Vildagliptinum, Metformini hydrochloridum",50 mg/1000 mg,60 pcs,17-0119-02,2026-07-09,2026-09-30,shortage,2026-09-21T13:18:40.929783,,
+LV,Latvia,ZVA,Vimpat,Lacosamidum,200 mg,56 pcs,EU/1/08/470/011-P01,2022-05-27,,shortage - end date unknown,2026-09-21T13:18:40.929813,N03AX18,217808
+LV,Latvia,ZVA,Vimpat,Lacosamidum,100 mg,56 pcs,EU/1/08/470/005-P01,2022-05-20,,shortage - end date unknown,2026-09-21T13:18:40.929842,N03AX18,
+LV,Latvia,ZVA,Viread,Tenofovirum disoproxilum,245 mg,30 pcs,EU/1/01/200/001,2020-08-05,,shortage - end date unknown,2026-09-21T13:18:40.929871,J05AF07,146633
+LV,Latvia,ZVA,Viread,Tenofovirum disoproxilum,"1,98 g/60 g",1 pc,EU/1/01/200/003,2024-11-13,,shortage - end date unknown,2026-09-21T13:18:40.929900,J05AF07,146595
+LV,Latvia,ZVA,Vizarsin,Sildenafilum,50 mg,4 pcs,EU/1/09/551/006,2022-11-07,,shortage - end date unknown,2026-09-21T13:18:40.929930,G04BE03,225355
+LV,Latvia,ZVA,"Vizidorix 20 mg/5 mg/ml eye drops, solution","Dorzolamidum, Timololum",5 ml,1 pc,18-0064-01,2024-01-01,2026-12-31,shortage,2026-09-21T13:18:40.929969,,
+LV,Latvia,ZVA,Voltaren Emulgel 11.6 mg/g gel,Diclofenacum diethylaminum,"1,16 g/100 g",1 pc,94-0179-02,2020-03-31,,shortage - end date unknown,2026-09-21T13:18:40.929999,,
+LV,Latvia,ZVA,Voriconazole Accord,Voriconazolum,200 mg,28 pcs,EU/1/13/835/027-P01,2019-04-08,,shortage - end date unknown,2026-09-21T13:18:40.930028,J02AC03,63614
+LV,Latvia,ZVA,Wamlox 5 mg/80 mg film-coated tablets,"Amlodipinum, Valsartanum",5 mg/80 mg,30 pcs,16-0052-04,2019-12-30,,shortage - end date unknown,2026-09-21T13:18:40.930057,,
+LV,Latvia,ZVA,Warfarin-Grindeks 5 mg tabletes,Warfarinum natricum,5 mg,100 pcs,00-1031-01,2026-03-25,,leaving the market,2026-09-21T13:18:40.930093,B01AA03,112860
+LV,Latvia,ZVA,Wegovy,Semaglutidum,"2 mg/1,5 ml",1 pc,EU/1/21/1608/007,2026-06-01,,leaving the market,2026-09-21T13:18:40.930126,A10BX05,
+LV,Latvia,ZVA,Wobenzym gastro-resistant tablets,"Rutosidum, Lipasum, Amylasum, Papainum, Bromelainum, Chymotrypsinum, Trypsinum, Pancreatinum",1 UD,40 pcs,94-0047-04,2019-03-19,,shortage - end date unknown,2026-09-21T13:18:40.930162,,
+LV,Latvia,ZVA,Wobenzym gastro-resistant tablets,"Rutosidum, Lipasum, Amylasum, Papainum, Bromelainum, Chymotrypsinum, Trypsinum, Pancreatinum",1 UD,200 pcs,94-0047-05,2021-12-10,,shortage - end date unknown,2026-09-21T13:18:40.930187,,
+LV,Latvia,ZVA,Wobenzym gastro-resistant tablets,"Rutosidum, Lipasum, Amylasum, Papainum, Bromelainum, Chymotrypsinum, Trypsinum, Pancreatinum",1 UD,800 pcs,94-0047-03,2022-03-01,,shortage - end date unknown,2026-09-21T13:18:40.930212,,
+LV,Latvia,ZVA,"Xalacom 50 micrograms/5 mg/ml eye drops, solution","Latanoprostum, Timololum","2,5 ml",1 pc,03-0418-01,2022-04-01,,shortage - end date unknown,2026-09-21T13:18:40.930237,,
+LV,Latvia,ZVA,"Xalacom 50 micrograms/5 mg/ml eye drops, solution","Latanoprostum, Timololum","2,5 ml",3 pcs,03-0418-02,2018-12-01,,shortage - end date unknown,2026-09-21T13:18:40.930276,,
+LV,Latvia,ZVA,XALKORI,Crizotinibum,250 mg,60 pcs,EU/1/12/793/003,2025-07-10,,shortage - end date unknown,2026-09-21T13:18:40.930302,L01ED01,104515
+LV,Latvia,ZVA,Xanax 0.5 mg tablets,Alprazolamum,"0,5 mg",100 pcs,97-0166-02,2022-04-22,,shortage - end date unknown,2026-09-21T13:18:40.930342,N05BA12,49581
+LV,Latvia,ZVA,Xanax 1 mg tablets,Alprazolamum,1 mg,100 pcs,97-0165-02,2021-05-27,,shortage - end date unknown,2026-09-21T13:18:40.930368,N05BA12,49603
+LV,Latvia,ZVA,Xefo 4 mg film-coated tablets,Lornoxicamum,4 mg,20 pcs,99-0202-01,2026-02-09,,shortage - end date unknown,2026-09-21T13:18:40.930392,M01AC05,
+LV,Latvia,ZVA,Xeljanz,Tofacitinibum,240 mg/240 ml,1 pc,EU/1/17/1178/015,2025-12-18,,shortage - end date unknown,2026-09-21T13:18:40.930418,L04AF01,212946
+LV,Latvia,ZVA,Xiltess 15 mg film-coated tablets,Rivaroxabanum,15 mg,28 pcs,22-0222-01,2026-09-01,,shortage - end date unknown,2026-09-21T13:18:40.930443,B01AF01,100145
+LV,Latvia,ZVA,Xiltess 20 mg film-coated tablets,Rivaroxabanum,20 mg,28 pcs,22-0223-01,2026-09-01,,shortage - end date unknown,2026-09-21T13:18:40.930468,B01AF01,100153
+LV,Latvia,ZVA,Xtandi,Enzalutamidum,40 mg,112 pcs,EU/1/13/846/001,2024-12-27,,shortage - end date unknown,2026-09-21T13:18:40.930492,L02BB04,
+LV,Latvia,ZVA,Xultophy,"Insulinum degludecum, Liraglutidum",3 UD/3 ml,3 pcs,EU/1/14/947/002-P01,2023-03-29,,shortage - end date unknown,2026-09-21T13:18:40.930517,,
+LV,Latvia,ZVA,Xyzal 0.5 mg/ml oral solution,Levocetirizini dihydrochloridum,100 mg/200 ml,1 pc,06-0169-01,2021-08-30,,shortage - end date unknown,2026-09-21T13:18:40.930542,R06AE09,81698
+LV,Latvia,ZVA,Zalasta,Olanzapinum,15 mg,28 pcs,EU/1/07/415/048,2017-03-27,,shortage - end date unknown,2026-09-21T13:18:40.930577,N05AH03,61131
+LV,Latvia,ZVA,Zavedos 10 mg powder for solution for injection,Idarubicini hydrochloridum,10 mg,1 pc,04-0055-01,2026-07-13,2026-12-07,shortage,2026-09-21T13:18:40.930612,L01DB06,52515
+LV,Latvia,ZVA,Zeldox 40 mg capsules,Ziprasidonum,40 mg,56 pcs,02-0269-05,2020-07-24,,shortage - end date unknown,2026-09-21T13:18:40.930643,N05AX12,
+LV,Latvia,ZVA,Zeldox 60 mg capsules,Ziprasidonum,60 mg,56 pcs,02-0270-05,2021-08-30,,shortage - end date unknown,2026-09-21T13:18:40.930668,N05AX12,
+LV,Latvia,ZVA,Zibor 25000 IU anti-Xa/ml solution for injection in pre-filled syringe,Bemiparinum natricum,"5000 anti-Xa IU/0,2 ml",2 pcs,06-0283-01,2018-04-03,,shortage - end date unknown,2026-09-21T13:18:40.930693,B01AB06,
+LV,Latvia,ZVA,Zinnat 25 mg/ml granules for oral suspension,Cefuroximum,"2,5 g/100 ml",1 pc,95-0049-02,2026-07-15,2026-09-30,shortage,2026-09-21T13:18:40.930734,J01DC02,
+LV,Latvia,ZVA,Zofistar 30 mg film-coated tablets,Zofenoprilum calcium,30 mg,28 pcs,03-0030-04,2016-09-13,,shortage - end date unknown,2026-09-21T13:18:40.930759,C09AA15,57487
+LV,Latvia,ZVA,Zofistar Plus 30 mg/12.5 mg film-coated tablets,"Zofenoprilum calcium, Hydrochlorothiazidum","30 mg/12,5 mg",28 pcs,13-0177-02,2019-06-01,,shortage - end date unknown,2026-09-21T13:18:40.930784,,
+LV,Latvia,ZVA,Zoledronic acid Fresenius Kabi 4 mg/5 ml concentrate for solution for infusion,Acidum zoledronicum,4 mg/5 ml,1 pc,12-0274-01,2026-09-14,2026-12-01,shortage,2026-09-21T13:18:40.930818,M05BX03,
+LV,Latvia,ZVA,Zoledronic acid Teva,Acidum zoledronicum,4 mg/5 ml,1 pc,EU/1/12/771/004,2024-06-01,,shortage - end date unknown,2026-09-21T13:18:40.930843,M05BX03,
+LV,Latvia,ZVA,Zyllt,Clopidogrelum,75 mg,28 pcs,EU/1/09/553/003,2021-06-30,,shortage - end date unknown,2026-09-21T13:18:40.930869,B01AC04,124559
+LV,Latvia,ZVA,Zyprexa Velotab,Olanzapinum,5 mg,28 pcs,EU/1/99/125/001,2019-06-28,,shortage - end date unknown,2026-09-21T13:18:41.169630,N05AH03,60941
+LV,Latvia,ZVA,Zyprexa Velotab,Olanzapinum,10 mg,28 pcs,EU/1/99/125/002,2019-07-01,,shortage - end date unknown,2026-09-21T13:18:41.169690,N05AH03,60968
+LV,Latvia,ZVA,Zytiga,Abirateronum,250 mg,120 pcs,EU/1/11/714/001,2017-10-01,,shortage - end date unknown,2026-09-21T13:18:41.169729,L02BG03,100846
+LV,Latvia,ZVA,Zytiga,Abirateronum,500 mg,60 pcs,EU/1/11/714/003,2023-07-01,,shortage - end date unknown,2026-09-21T13:18:41.169764,L02BG03,136913

@@ -1206,6 +1206,9 @@ function medCard(r, groupBy) {
     if (r.ss) dates += `<span class="med-tag date">start ${r.ss}</span>`;
     if (r.ee) dates += `<span class="med-tag date">verw. ${r.ee}</span>`;
     if (r.rd && r.st === "resolved") dates += `<span class="med-tag date">opgelost ${r.rd}</span>`;
+    // Sommige bronnen leveren geen startdatum maar wel een bijwerkdatum (FR/ANSM geeft
+    // alleen 'Mise a jour'). Dan is dat het enige houvast voor hoe vers de melding is.
+    if (r.lu && !r.ss) dates += `<span class="med-tag date">bijgewerkt ${r.lu}</span>`;
 
     // Bidirectional link
     let link = "";

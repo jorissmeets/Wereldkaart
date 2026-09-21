@@ -1,21 +1,35 @@
-"""Scraper for Switzerland drugshortage.ch — publieke JSON-API v1.
+"""Scraper for Switzerland drugshortage.ch.
 
-De oude .aspx-pagina is verdwenen (410). De site draait nu op WordPress met een
-open JSON-API: https://www.drugshortage.ch/api/v1/drugshortage.php?endpoint=shortages
-(werkt zonder api_key). Levert naam, ATC, firma en status per artikel.
+De api/v1-route geeft sinds ~sep-2026 een 401. De site zelf haalt zijn gegevens op via
+https://www.drugshortage.ch/ds.php?a=engpaesse, dat wel werkt maar een Referer-header
+eist ("Zugriff verweigert - fehlende Header" zonder). Dat endpoint is bovendien rijker:
+tekorten op VERPAKKINGSNIVEAU met ATC, vergunninghouder, status en datums.
+
+Velden per melding: bezeichnung, gtin, pharmacode, firma, status, mutation (laatste
+wijziging), atc, tage (aantal dagen dat het tekort loopt) en lieferdatum (verwachte
+levering). Uit 'tage' leiden we een echte startdatum af -- de bron levert er geen.
 """
 
 import requests
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from scrapers.base_scraper import BaseScraper
 
 
 class ChDrugShortageScraper(BaseScraper):
-    """Scraper for drugshortage.ch (Switzerland) via de publieke JSON-API."""
+    """Scraper for drugshortage.ch (Switzerland) via het publieke ds.php-endpoint."""
 
-    API_URL = "https://www.drugshortage.ch/api/v1/drugshortage.php?endpoint=shortages"
+    API_URL = "https://www.drugshortage.ch/ds.php?a=engpaesse"
+
+    # De bron zet het statusnummer vooraan de tekst; we mappen op het nummer.
+    STATUS = {
+        "1": "shortage",        # aktuell keine Lieferungen
+        "2": "anticipated",     # angekuendigter Engpass
+        "3": "limited",         # Lieferungen kontingentiert/eingeschraenkt
+        "5": "limited",         # fuer Spitaeler verfuegbar; Retail eingeschraenkt
+        "10": "shortage",       # Versorgung erfolgt mit Pflichtlagerware
+    }
 
     def __init__(self):
         super().__init__(
@@ -25,31 +39,48 @@ class ChDrugShortageScraper(BaseScraper):
             base_url="https://www.drugshortage.ch",
         )
 
-    def _parse_date(self, date_str) -> str | None:
-        if not date_str or not isinstance(date_str, str):
-            return None
-        date_str = date_str.strip()
-        if not date_str or date_str.lower() in ("offen", "unbestimmt", "kontingentiert", "kontigentiert"):
-            return None
+    @staticmethod
+    def _parse_date(waarde) -> str:
+        """dd.mm.jjjj -> jjjj-mm-dd. 'offen', 'unbestimmt', 'en clarif.' enz. -> leeg."""
+        if not waarde or not isinstance(waarde, str):
+            return ""
+        waarde = waarde.strip()
         for fmt in ("%d.%m.%Y", "%Y-%m-%d"):
             try:
-                return datetime.strptime(date_str, fmt).strftime("%Y-%m-%d")
+                return datetime.strptime(waarde, fmt).strftime("%Y-%m-%d")
             except ValueError:
                 continue
-        return None
+        return ""
 
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
 
-        resp = requests.get(self.API_URL, timeout=30,
-                            headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
+        resp = requests.get(self.API_URL, timeout=60, headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+            "Referer": "https://www.drugshortage.ch/",     # zonder deze header: 403
+            "X-Requested-With": "XMLHttpRequest",
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+        })
         resp.raise_for_status()
-        payload = resp.json()
-        items = payload.get("data", []) if isinstance(payload, dict) else (payload or [])
-        print(f"  API returned {len(items)} items")
+        items = (resp.json() or {}).get("engpaesse", [])
+        print(f"  API leverde {len(items)} meldingen")
 
+        vandaag = datetime.now()
         records = []
         for it in items:
+            status_ruw = str(it.get("status") or "").strip()
+            nummer = status_ruw.split(None, 1)[0] if status_ruw else ""
+
+            # De bron heeft geen startdatum maar wel het aantal dagen dat het tekort loopt.
+            start = ""
+            try:
+                dagen = int(it.get("tage") or 0)
+                if dagen > 0:
+                    start = (vandaag - timedelta(days=dagen)).strftime("%Y-%m-%d")
+            except (TypeError, ValueError):
+                pass
+
             records.append({
                 "country_code": self.country_code,
                 "country_name": self.country_name,
@@ -58,14 +89,15 @@ class ChDrugShortageScraper(BaseScraper):
                 "active_substance": "",
                 "strength": "",
                 "package_size": "",
-                "atc_code": str(it.get("atcCode") or "").strip(),
-                "company_name": str(it.get("firma") or "").strip(),
-                "gtin": str(it.get("gtin") or ""),
-                "pharmacode": str(it.get("pharmacode") or ""),
-                "status": str(it.get("statusText") or "").strip(),
-                "status_code": str(it.get("statusCode") or ""),
-                "shortage_start": None,
-                "estimated_end": self._parse_date(it.get("lieferfaehigkeitDate")),
+                "atc_code": str(it.get("atc") or "").strip().upper(),
+                "marketing_auth_holder": str(it.get("firma") or "").strip(),
+                "product_no": str(it.get("pharmacode") or "").strip(),
+                "gtin": str(it.get("gtin") or "").strip(),
+                "shortage_start": start,
+                "estimated_end": self._parse_date(it.get("lieferdatum")),
+                "last_updated": self._parse_date(it.get("mutation")),
+                "status": self.STATUS.get(nummer, "shortage"),
+                "notes": status_ruw,
                 "scraped_at": datetime.now().isoformat(),
             })
 

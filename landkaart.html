@@ -579,7 +579,7 @@ const T = {
         reported: "met opgave", reason_empty: "Geen reden opgegeven in de bron",
         country_sort_toggle: "Volgorde van eerste tekort (1, 2, 3…)",
         st_active: "actief", st_upcoming: "aankomend", st_resolved: "opgelost",
-        med_start: "start", med_est: "verw.", med_resolved: "opgelost", ems_critical: "EMS kritiek",
+        med_start: "start", med_est: "verw.", med_resolved: "opgelost", med_updated: "bijgewerkt", ems_critical: "EMS kritiek",
         delta_same: "= gelijk", delta_vs: "vs vorige periode", no_atc: "Geen ATC-codes gevonden",
         refine: "Pas filters of zoekterm aan", more_refine: "meer — verfijn zoekopdracht",
         no_notifications: "meldingen", try_longer: "Probeer een langere periode",
@@ -603,7 +603,7 @@ const T = {
         reported: "reported", reason_empty: "No reason reported in the source",
         country_sort_toggle: "Order of first shortage (1, 2, 3…)",
         st_active: "active", st_upcoming: "upcoming", st_resolved: "resolved",
-        med_start: "start", med_est: "est.", med_resolved: "resolved", ems_critical: "EMS critical",
+        med_start: "start", med_est: "est.", med_resolved: "resolved", med_updated: "updated", ems_critical: "EMS critical",
         delta_same: "= same", delta_vs: "vs previous period", no_atc: "No ATC codes found",
         refine: "Adjust filters or search term", more_refine: "more — refine search",
         no_notifications: "notifications", try_longer: "Try a longer period",
@@ -1627,6 +1627,9 @@ function medCard(r, groupBy) {
     if (r.ss) dates += `<span class="med-tag date">${t("med_start")} ${r.ss}</span>`;
     if (r.ee) dates += `<span class="med-tag date">${t("med_est")} ${r.ee}</span>`;
     if (r.rd && r.st === "resolved") dates += `<span class="med-tag date">${t("med_resolved")} ${r.rd}</span>`;
+    // Bronnen zonder startdatum (FR/ANSM geeft alleen 'Mise a jour') tonen hun bijwerkdatum,
+    // anders staat er helemaal geen datum bij de melding.
+    if (r.lu && !r.ss) dates += `<span class="med-tag date">${t("med_updated")} ${r.lu}</span>`;
 
     // Bidirectional link
     let link = "";

@@ -51,3 +51,4 @@ from scrapers.za_sahpra import ZaSahpraScraper
 from scrapers.pl_mz import PlMzScraper
 from scrapers.gb_mhra import GbMhraScraper
 from scrapers.nz_pharmac import NzPharmacScraper
+from scrapers.jp_mhlw import JpMhlwScraper

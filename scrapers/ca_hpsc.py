@@ -1,172 +1,168 @@
-"""Scraper for Canada Drug Shortages via healthproductshortages.ca."""
+"""Scraper for Canada Drug Shortages Canada (DSC) via the official API.
 
-import re
+De publieke site healthproductshortages.ca zit sinds ~sep-2026 achter Cloudflare
+(requests/cloudscraper/headless-browser worden geblokkeerd). De officiële DSC-API
+(drugshortagescanada.ca/api/v1) is NIET geblokkeerd en is bedoeld voor aggregators;
+hij vereist een gratis account. Zet de inloggegevens in Matchen_prk/.env:
+    DSC_EMAIL=...
+    DSC_PASSWORD=...
+
+Flow: POST /api/v1/login (krijgt 'auth-token' in de response-header) -> GET
+/api/v1/search met die header, gepagineerd. Geen ATC in de bron -> afgeleid uit de
+werkzame stof door de verrijkingsstap.
+"""
+from __future__ import annotations
+
+import os
 import time
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
 from datetime import datetime
+
+import requests
+
+try:
+    from dotenv import load_dotenv
+    for _p in ("/Users/karkara/Documents/LCG/Matchen_prk/.env",
+               "/Users/karkara/Documents/LCG/Landkaart/.env"):
+        if os.path.exists(_p):
+            load_dotenv(_p)
+except Exception:
+    pass
+
+import pandas as pd
 
 from scrapers.base_scraper import BaseScraper
 
 
 class CaHpscScraper(BaseScraper):
-    """Scraper for Health Product Shortages Canada (HPSC)."""
+    """Drug Shortages Canada via de officiële API (auth-token)."""
 
-    SEARCH_URL = "https://healthproductshortages.ca/search"
-    PAGE_SIZE = 100
+    API = "https://www.drugshortagescanada.ca/api/v1"
+    PAGE = 100
+    # Statussen die we als lopend/relevant meenemen (opgeloste laten we weg — validatie Jesper 28-08).
+    KEEP_STATUS = {
+        "active_confirmed": "shortage",
+        "anticipated_shortage": "anticipated",
+        "to_be_discontinued": "to be discontinued",
+        "discontinued": "discontinued",
+    }
 
     def __init__(self):
         super().__init__(
             country_code="CA",
             country_name="Canada",
-            source_name="HPSC",
-            base_url="https://healthproductshortages.ca",
+            source_name="DSC",
+            base_url="https://www.drugshortagescanada.ca",
         )
         self.session = requests.Session()
-        self.session.headers.update({"User-Agent": "Mozilla/5.0"})
+        self.session.headers.update({
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+            "Accept": "application/json",
+        })
 
-    def _scrape_drug_substance(self, drug_url: str) -> str:
-        """Scrape active ingredient from a drug detail page on HPSC."""
-        if not drug_url:
-            return ""
-        try:
-            resp = self.session.get(drug_url, timeout=10)
-            if resp.status_code != 200:
-                return ""
-            soup = BeautifulSoup(resp.text, "lxml")
+    # ---- helpers ----------------------------------------------------------
+    def _login(self) -> str:
+        email = os.environ.get("DSC_EMAIL")
+        password = os.environ.get("DSC_PASSWORD")
+        if not email or not password:
+            raise RuntimeError(
+                "DSC_EMAIL/DSC_PASSWORD ontbreken. Registreer een gratis account op "
+                "drugshortagescanada.ca en zet de gegevens in Matchen_prk/.env")
+        # De API accepteert form-encoded login; token komt terug in de 'auth-token'-header.
+        resp = self.session.post(f"{self.API}/login",
+                                 data={"email": email, "password": password}, timeout=30)
+        token = resp.headers.get("auth-token") or resp.headers.get("Auth-Token")
+        if not token:
+            try:
+                token = (resp.json() or {}).get("auth_token") or (resp.json() or {}).get("token")
+            except Exception:
+                token = None
+        if not token:
+            raise RuntimeError(f"Login mislukt (status {resp.status_code}): geen auth-token ontvangen")
+        self.session.headers.update({"auth-token": token})
+        return token
 
-            # Look for "Active ingredient" or "Ingredient" label
-            for label_text in ("Active ingredient", "Ingredient", "Ingrédient actif"):
-                label = soup.find(string=re.compile(label_text, re.I))
-                if label:
-                    # The value is typically in the next sibling or parent's next sibling
-                    parent = label.find_parent(["dt", "th", "td", "strong", "b", "span", "div"])
-                    if parent:
-                        sibling = parent.find_next_sibling(["dd", "td", "span", "div"])
-                        if sibling:
-                            substance = sibling.get_text(strip=True)
-                            if substance and len(substance) >= 2:
-                                return substance
+    @staticmethod
+    def _txt(v) -> str:
+        if isinstance(v, dict):
+            return str(v.get("en") or v.get("name") or v.get("label") or "").strip()
+        if isinstance(v, list):
+            return ", ".join(CaHpscScraper._txt(x) for x in v if CaHpscScraper._txt(x))
+        return "" if v is None else str(v).strip()
 
-            # Fallback: search page text for pattern
-            text = soup.get_text(" ", strip=True)
-            m = re.search(r"[Aa]ctive\s+[Ii]ngredient[s]?:?\s*([^\n;]+?)(?:\s*(?:DIN|Strength|Company|$))", text)
-            if m:
-                return m.group(1).strip().rstrip(",. ")
-        except Exception:
-            pass
+    def _field(self, item: dict, drug: dict, *keys) -> str:
+        for k in keys:
+            for src in (item, drug):
+                if k in src and src[k] not in (None, ""):
+                    return self._txt(src[k])
         return ""
+
+    def _record(self, item: dict) -> dict | None:
+        status_raw = str(item.get("status", "")).strip().lower()
+        if status_raw not in self.KEEP_STATUS:
+            return None
+        drug = item.get("drug") if isinstance(item.get("drug"), dict) else {}
+        name = self._field(item, drug, "en_drug_brand_name", "drug_brand_name", "brand_name", "name")
+        substance = self._field(item, drug, "active_ingredients", "active_ingredient", "ingredients")
+        company = self._field(item, drug, "company_name", "company")
+        din = self._field(item, drug, "din", "drug_din")
+        strength = self._field(item, drug, "strength", "drug_strength")
+        form = self._field(item, drug, "dosage_form", "drug_dosage_form", "form")
+        start = self._field(item, drug, "actual_shortage_start_date", "actual_start_date",
+                            "anticipated_start_date", "shortage_start_date")
+        end = self._field(item, drug, "estimated_end_date", "actual_shortage_end_date",
+                          "actual_end_date", "estimated_shortage_end_date")
+        if not name and not substance:
+            return None
+        return {
+            "country_code": self.country_code,
+            "country_name": self.country_name,
+            "source": self.source_name,
+            "medicine_name": name,
+            "active_substance": substance,
+            "strength": strength,
+            "package_size": "",
+            "product_no": din,
+            "marketing_auth_holder": company,
+            "shortage_start": (start or "")[:10],
+            "estimated_end": (end or "")[:10],
+            "dosage_form": form,
+            "status": self.KEEP_STATUS[status_raw],
+            "scraped_at": datetime.now().isoformat(),
+        }
+
+    def _fetch(self, filter_type: str) -> list[dict]:
+        """Gepagineerd de search-API aflopen voor een filter_type (shortages/discontinuations)."""
+        out, offset = [], 0
+        while True:
+            params = {"filter_type": filter_type, "term": "", "offset": offset, "limit": self.PAGE}
+            r = self.session.get(f"{self.API}/search", params=params, timeout=45)
+            if r.status_code != 200:
+                print(f"  search {filter_type} offset {offset}: HTTP {r.status_code} — stop")
+                break
+            try:
+                data = r.json()
+            except Exception:
+                break
+            items = data.get("data") if isinstance(data, dict) else data
+            if not items:
+                break
+            out.extend(items)
+            total = data.get("total") if isinstance(data, dict) else None
+            offset += self.PAGE
+            if total is not None and offset >= int(total):
+                break
+            if len(items) < self.PAGE:
+                break
+            time.sleep(0.2)
+        return out
 
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
-
-        all_records = []
-        page = 1
-
-        while True:
-            resp = self.session.get(
-                self.SEARCH_URL,
-                params={"perform": 1, "page": page, "limit": self.PAGE_SIZE},
-                timeout=30,
-            )
-            if resp.status_code != 200:
-                print(f"  Warning: status {resp.status_code} at page {page}")
-                break
-
-            soup = BeautifulSoup(resp.text, "lxml")
-            table = soup.find("table")
-            if not table:
-                break
-
-            rows = table.find_all("tr")
-            if len(rows) < 2:
-                break
-
-            for row in rows[1:]:
-                cells = row.find_all("td")
-                if len(cells) < 6:
-                    continue
-
-                status = cells[0].get_text(strip=True)
-                brand_name = cells[1].get_text(strip=True)
-                company = cells[2].get_text(strip=True)
-                strengths = cells[3].get_text(strip=True).replace("\n", "; ").replace("\r", "")
-                date_updated = cells[4].get_text(strip=True)
-                report_id = cells[5].get_text(strip=True)
-
-                # Get drug link for DIN info
-                drug_link = cells[1].find("a")
-                drug_url = drug_link.get("href", "") if drug_link else ""
-
-                # Get report link
-                report_link = cells[5].find("a")
-                report_url = report_link.get("href", "") if report_link else ""
-                report_type = "shortage" if "/shortage/" in report_url else "discontinuation" if "/discontinuance/" in report_url else ""
-
-                all_records.append({
-                    "brand_name": brand_name,
-                    "company": company,
-                    "strengths": strengths,
-                    "report_id": report_id,
-                    "report_type": report_type,
-                    "report_url": f"{self.base_url}{report_url}" if report_url else "",
-                    "drug_url": f"{self.base_url}{drug_url}" if drug_url else "",
-                    "status": status,
-                    "date_updated": date_updated,
-                })
-
-            data_rows = len(rows) - 1
-            if page == 1:
-                for text in soup.find_all(string=True):
-                    if "of" in text and "showing" in text.lower():
-                        m = re.search(r"of\s+([\d,]+)", text)
-                        if m:
-                            total = int(m.group(1).replace(",", ""))
-                            print(f"  Total records: {total}")
-
-            if data_rows < self.PAGE_SIZE:
-                break
-
-            page += 1
-            if page % 50 == 0:
-                print(f"  Fetched {len(all_records)} records (page {page})...")
-
-        print(f"  Fetched {len(all_records)} records, looking up active substances...")
-
-        # Batch-lookup unique drug URLs for substances
-        unique_drug_urls = {r["drug_url"] for r in all_records if r["drug_url"]}
-        url_substance_map: dict[str, str] = {}
-        for i, durl in enumerate(unique_drug_urls):
-            url_substance_map[durl] = self._scrape_drug_substance(durl)
-            if (i + 1) % 50 == 0:
-                print(f"    ... {i + 1}/{len(unique_drug_urls)} drug pages done")
-            time.sleep(0.15)
-        found = sum(1 for v in url_substance_map.values() if v)
-        print(f"  Substance found for {found}/{len(unique_drug_urls)} products")
-
-        final_records = []
-        for r in all_records:
-            final_records.append({
-                "country_code": self.country_code,
-                "country_name": self.country_name,
-                "source": self.source_name,
-                "medicine_name": r["brand_name"],
-                "active_substance": url_substance_map.get(r["drug_url"], ""),
-                "strength": r["strengths"],
-                "package_size": "",
-                "company_name": r["company"],
-                "report_id": r["report_id"],
-                "report_type": r["report_type"],
-                "report_url": r["report_url"],
-                "drug_url": r["drug_url"],
-                "status": r["status"],
-                "update_date": r["date_updated"],
-                "shortage_start": None,
-                "estimated_end": None,
-                "scraped_at": datetime.now().isoformat(),
-            })
-
-        df = pd.DataFrame(final_records)
-        print(f"  Total: {len(df)} shortage/discontinuation records scraped")
+        self._login()
+        raw = self._fetch("shortages") + self._fetch("discontinuations")
+        print(f"  API leverde {len(raw)} items")
+        records = [rec for rec in (self._record(it) for it in raw) if rec]
+        df = pd.DataFrame(records)
+        print(f"  Total: {len(df)} shortage records scraped")
         return df

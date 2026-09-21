@@ -426,10 +426,14 @@ def build():
             cc = safe_str(row.get("country_code")).upper()
             if not cc or len(cc) != 2:
                 continue
-            # NL/EU staan bewust niet op de kaart. LT/TR/EE: registratie-/beschikbaarheidsregister
+            # NL/EU staan bewust niet op de kaart. LT/TR: registratie-/beschikbaarheidsregister
             # i.p.v. gemelde tekorten (validatie Jesper 25-08). ZA/KR/TW: algemene website, geen
             # tekortenbron (validatie 28-08) -> ook eruit.
-            if cc in ("NL", "EU", "LT", "TR", "EE", "ZA", "KR", "TW"):
+            # EE stond hier ook, maar dat bleek een SCRAPERFOUT en geen bronprobleem: het
+            # tarneraskus-filter stond op 'Mõlemad' (beide), waardoor ook 'marketing beëindigd'
+            # als tekort binnenkwam. Met 'Tarneraskusega' blijven 153 echte leveringsproblemen
+            # over (400 -> 153), alle met ATC, stof, vorm, sterkte en vergunninghouder.
+            if cc in ("NL", "EU", "LT", "TR", "ZA", "KR", "TW"):
                 continue
 
             cn = safe_str(row.get("country_name")) or cc
@@ -483,6 +487,12 @@ def build():
                 "rd": resolved_date,    # resolved_date
                 "sa": scraped_at,       # scraped_at
             }
+            # Bijwerkdatum meegeven waar de bron er een heeft. Voor bronnen zonder startdatum
+            # (FR/ANSM levert alleen 'Mise à jour', AT/BASG levert helemaal geen datum) is dit
+            # het enige houvast voor hoe vers een melding is; de kaart toont het als
+            # "laatst bijgewerkt".
+            if last_updated and last_updated != shortage_start:
+                rec["lu"] = last_updated
             if med:
                 rec["mn"] = med
             if substance:
