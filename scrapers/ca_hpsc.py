@@ -49,7 +49,12 @@ class CaHpscScraper(BaseScraper):
     # De dienst is per 18-01-2026 verhuisd van drugshortagescanada.ca naar
     # healthproductshortages.ca; het oude adres antwoordt nog met een 301. Alles buiten
     # /api/v1 zit achter Cloudflare, ook voor een echte browser.
-    API = "https://www.healthproductshortages.ca/api/v1"
+    # LET OP DE HOSTNAAM: healthproductshortages.ca bestaat WEL, maar
+    # www.healthproductshortages.ca is NXDOMAIN -- die subdomeinnaam is nooit aangemaakt.
+    # Met 'www.' ervoor loopt elke aanroep dood op een DNS-fout, ook mét geldige
+    # inloggegevens. Zonder 'www.' antwoordt /api/v1/search met 400 (route bestaat,
+    # token ontbreekt) en /api/v1/drugs met 404 -- de API leeft dus.
+    API = "https://healthproductshortages.ca/api/v1"
 
     # Terugval zonder account: Health Canada publiceert de Tier 3-bepalingen (de tekorten met
     # de grootste verwachte impact) als gewone HTML op canada.ca. Dat is maar een fractie van
@@ -73,7 +78,7 @@ class CaHpscScraper(BaseScraper):
             country_code="CA",
             country_name="Canada",
             source_name="DSC",
-            base_url="https://www.drugshortagescanada.ca",
+            base_url="https://healthproductshortages.ca",
         )
         self.session = requests.Session()
         self.session.headers.update({
@@ -89,7 +94,7 @@ class CaHpscScraper(BaseScraper):
         if not email or not password:
             raise RuntimeError(
                 "DSC_EMAIL/DSC_PASSWORD ontbreken. Registreer een gratis account op "
-                "drugshortagescanada.ca en zet de gegevens in Matchen_prk/.env")
+                "healthproductshortages.ca en zet de gegevens in Matchen_prk/.env")
         # De API accepteert form-encoded login; token komt terug in de 'auth-token'-header.
         resp = self.session.post(f"{self.API}/login",
                                  data={"email": email, "password": password}, timeout=30)
