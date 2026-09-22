@@ -598,6 +598,26 @@ def build():
               ", ".join(f"{k}={v}" for k, v in top))
         print(f"  Records met reden: {sum(reason_counts.values())}/{len(records)}")
 
+    # Ontdubbelen op het EINDRESULTAAT. Per bronbestand wordt al ontdubbeld, maar de kaart
+    # bewaart maar een deel van de brongegevens (molecuul, naam, datums, status). Meerdere
+    # meldingen die in de bron wel verschillen -- andere verpakking, ander registratienummer --
+    # worden daardoor identieke records. Canada leverde zo 13.608 niet te onderscheiden kopieen
+    # en de Verenigde Staten 64 keer hetzelfde molecuul. Dat vertekent elke telling: de
+    # voettekst telde bronregels in plaats van meldingen, en landen die op verpakkingsniveau
+    # rapporteren wogen zwaarder in de ATC-aggregaties dan landen die dat per product doen.
+    # Records die op ALLE getoonde velden gelijk zijn, voegen niets toe en gaan eruit.
+    _voor = len(records)
+    _gezien, _uniek = set(), []
+    for _r in records:
+        _k = tuple(sorted((k, str(v)) for k, v in _r.items()))
+        if _k not in _gezien:
+            _gezien.add(_k)
+            _uniek.append(_r)
+    records = _uniek
+    if _voor != len(records):
+        print(f"  ontdubbeld op eindresultaat: {_voor - len(records)} identieke records verwijderd "
+              f"({_voor} -> {len(records)})")
+
     result = {
         "generated": today,
         "monitored_countries": all_countries,

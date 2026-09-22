@@ -252,10 +252,15 @@ class JpMhlwScraper(BaseScraper):
             return "limited"
         if output_status == "output_decreased":
             return "shortage"
-        if output_status == "delisting_planned":
-            return "delisting"
+        # LET OP DE VOLGORDE: 'normale levering' wordt BEWUST vóór 'delisting_planned' getoetst.
+        # Andersom glipten 270 producten met ①通常出荷 (normale levering) er alsnog doorheen,
+        # enkel omdat hun prijslijstvermelding gaat vervallen. Een geplande schrapping van de
+        # prijslijst is geen leveringsprobleem: die middelen zijn gewoon verkrijgbaar en horen
+        # niet als actief tekort op de kaart.
         if shipment_status == "normal_shipment":
             return "normal"
+        if output_status == "delisting_planned":
+            return "delisting"
         return "unknown"
 
     def scrape(self) -> pd.DataFrame:
