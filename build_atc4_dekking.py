@@ -35,7 +35,14 @@ import datetime as dt
 from collections import defaultdict, Counter
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-GSTD = "/Users/karkara/Documents/LCG/Matchen_prk/LCG.csv"
+# De ACTUELE G-standaard-export heeft voorrang. LCG.csv is een momentopname van april en
+# mist alles wat sindsdien is bijgekomen of vervallen -- juist voor de NOEMER van deze pagina
+# ("hoeveel producten zijn er in deze groep?") is dat de zwakste schakel. gstandaard_actueel.csv
+# wordt uit g-standaard_actueel(1).xlsx afgeleid met de kolomnamen die dit script verwacht;
+# zie de omzetting in de projectdocumentatie. Ontbreekt hij, dan valt het script terug op LCG.csv.
+import os as _os
+_ACTUEEL = "/Users/karkara/Documents/LCG/Landkaart/gstandaard_actueel.csv"
+GSTD = _ACTUEEL if _os.path.exists(_ACTUEEL) else "/Users/karkara/Documents/LCG/Matchen_prk/LCG.csv"
 OUT = os.path.join(BASE, "atc4_dekking.json")
 
 # Alleen handelsproducten in de noemer; zie module-docstring.
