@@ -464,6 +464,14 @@ def build():
             # inactiefregel een lopend tekort niet verbergt (validatie/uitbreiding 17-09).
             if cc == "CZ":
                 last_updated = scraped_at
+            # JP/MHLW is net als CZ een MOMENTOPNAME: het bestand geeft de huidige
+            # leveringsstatus van elk product, dus wat erin staat is per definitie de stand van
+            # nu. De bron levert geen startdatum (de statusdatum-kolom is leeg), en zonder
+            # last_updated zou de >1-jaar-regel deze meldingen ten onrechte inactief maken.
+            # Let op: de scraper filtert '通常出荷' (normale levering) er al uit -- zonder dat
+            # filter zou ruim 80% van het bestand als tekort binnenkomen.
+            if cc == "JP":
+                last_updated = scraped_at
 
             # Bereken resolved_date
             resolved_date = None

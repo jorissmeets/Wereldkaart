@@ -288,6 +288,7 @@ class JpMhlwScraper(BaseScraper):
 
             # Build the output DataFrame using column positions
             records = []
+            _datum_voorbeeld = []   # diagnose: wat staat er echt in de statusdatum-kolom
             for _, row in raw.iterrows():
                 shipment_status_jp = row.iloc[self.COL_SHIPMENT_STATUS] if len(cols) > self.COL_SHIPMENT_STATUS else None
                 output_status_jp = row.iloc[self.COL_OUTPUT_STATUS] if len(cols) > self.COL_OUTPUT_STATUS else None
@@ -303,8 +304,20 @@ class JpMhlwScraper(BaseScraper):
                 # The MHLW data does not have an explicit "shortage start" date.
                 # Use the status-update date or the other-update date as a proxy.
                 status_update_raw = row.iloc[self.COL_STATUS_UPDATE] if len(cols) > self.COL_STATUS_UPDATE else None
+                if not _datum_voorbeeld and pd.notna(status_update_raw):
+                    _datum_voorbeeld.append(repr(status_update_raw)[:60])
                 other_update_raw = row.iloc[self.COL_OTHER_UPDATE_DATE] if len(cols) > self.COL_OTHER_UPDATE_DATE else None
                 shortage_start = self._parse_date(status_update_raw) or self._parse_date(other_update_raw)
+
+                # MHLW publiceert de leveringsstatus van ALLE producten, niet alleen van
+                # producten met een probleem. Ruim 80% staat op '①通常出荷' (normale levering).
+                # Die horen niet op een tekortenkaart: ze zouden als actief tekort binnenkomen
+                # en Japan in één klap de grootste "tekortenbron" maken terwijl er niets aan de
+                # hand is. Dit is dezelfde registerval waarop Litouwen, Turkije en Estland
+                # eerder van de kaart zijn gehaald -- alleen verstopt achter een statuskolom
+                # in plaats van achter de bron zelf.
+                if status in ("normal", "unknown"):
+                    continue
 
                 record = {
                     "country_code": self.country_code,
@@ -339,6 +352,8 @@ class JpMhlwScraper(BaseScraper):
                 }
                 records.append(record)
 
+            if _datum_voorbeeld:
+                print(f"  statusdatum-kolom bevat bv: {_datum_voorbeeld[0]}")
             df = pd.DataFrame(records)
 
             # Summary statistics

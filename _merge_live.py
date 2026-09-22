@@ -56,6 +56,12 @@ fresh_ccatc = {(r.get("cc"), (r.get("atc") or "").upper()) for r in fr}
 # enige wat we hebben.
 EXCLUDE = {"NL", "EU", "LT", "TR", "ZA", "KR", "TW",            # geen tekortbron
            "CH", "GR", "DE", "JP",                              # bron gerepareerd, vers is leidend
+           # SK: de oude export telde elke melding sinds 2019 als actief door een omgekeerde
+           # tiebreak op de aanmelddatum. MY: het oude endpoint maakte gevulde broncellen leeg
+           # (datums verdwenen stil). In beide gevallen is de verse data de gecorrigeerde.
+           # CA staat hier BEWUST NIET: de Tier 3-terugval levert maar 26 meldingen, terwijl
+           # last-live er 1.222 actieve heeft. Die zijn oud (maart) maar wel echt.
+           "SK", "MY",
            # SA stond hier ook, maar is teruggehaald: de nieuwe SFDA-bron is een verschraling
            # (alleen stofnaam, geen ATC/datum/productnummer). Uitsluiten kostte 1.260 records
            # en 804 PRK-koppelingen. Vers blijft leidend waar het dekking heeft; voor moleculen

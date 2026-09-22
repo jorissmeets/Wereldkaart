@@ -1,7 +1,7 @@
 {
-"generated": "2026-09-17",
+"generated": "2026-09-22",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 193,
+"count": 194,
 "on_eml": 93,
 "items": [
 {
@@ -23,15 +23,22 @@
 "eml": "rood"
 },
 {
+"product": "PYRUKYND 100 mg, filmomhulde tabletten",
+"mah": "Agios Netherlands B.V.",
+"reg": "",
+"reg_type": "",
+"datum": "2026-09-14",
+"atc": "",
+"eml": ""
+},
+{
 "product": "Ringer lactaat 1000 ml, infusievloeistof",
 "mah": "Fresenius Kabi Nederland B.V.",
 "reg": "51694",
 "reg_type": "RVG",
 "datum": "2026-09-10",
 "atc": "B05BB01",
-"eml": "rood",
-"prk": "57797",
-"prk_naam": "RINGER/LACTAAT INFVLST (BRAUN/FRESENIUS) ZK  500ML"
+"eml": "rood"
 },
 {
 "product": "Nexviadyme100 mg poeder voor concentraat voor oplossing voor infusie",
@@ -58,9 +65,7 @@
 "reg_type": "RVG",
 "datum": "2026-09-03",
 "atc": "C01CE02",
-"eml": "rood",
-"prk": "105031",
-"prk_naam": "MILRINON INFOPL CONC 1MG/ML AMP 10ML"
+"eml": "rood"
 },
 {
 "product": "Foscavir 24 mg/ml oplossing voor infusie",
@@ -69,9 +74,7 @@
 "reg_type": "RVG",
 "datum": "2026-09-02",
 "atc": "J05AD01",
-"eml": "oranje",
-"prk": "33081",
-"prk_naam": "FOSCARNET INFVLST 24MG/ML FL 250ML"
+"eml": "oranje"
 },
 {
 "product": "Pazopanib Accord 200 mg en 400 mg filmomhulde tabletten",
@@ -89,9 +92,7 @@
 "reg_type": "RVG",
 "datum": "2026-09-01",
 "atc": "J01FF01",
-"eml": "rood",
-"prk": "4693",
-"prk_naam": "CLINDAMYCINE INJVLST 150MG/ML AMP 2ML"
+"eml": "rood"
 },
 {
 "product": "Zoledroninezuur Fresenius Kabi 4 mg/5 ml concentraat voor oplossing voor infusie",
@@ -100,9 +101,7 @@
 "reg_type": "RVG",
 "datum": "2026-08-11",
 "atc": "M05BA08",
-"eml": "geel",
-"prk": "74888",
-"prk_naam": "ZOLEDRONINEZUUR INFOPL CONC 0,8MG/ML FL 5ML"
+"eml": "geel"
 },
 {
 "product": "Hepatect CP 50 IE/ml, oplossing voor infusie",
@@ -111,9 +110,7 @@
 "reg_type": "RVG",
 "datum": "2026-08-06",
 "atc": "J06BB04",
-"eml": "oranje",
-"prk": "85928",
-"prk_naam": "HEPATITIS-B-IMMUNOGLOBULINE INFVLST 50IE/ML F  10M"
+"eml": "oranje"
 },
 {
 "product": "Capecitabine Accord 500 mg, filmomhulde tabletten",
@@ -131,9 +128,7 @@
 "reg_type": "RVG",
 "datum": "2026-08-03",
 "atc": "B01AD04",
-"eml": "rood",
-"prk": "29165",
-"prk_naam": "UROKINASE INFUSIEPOEDER 250.000IE FL"
+"eml": "rood"
 },
 {
 "product": "REZUROCK 200 mg, filmomhulde tabletten",
@@ -178,9 +173,7 @@
 "reg_type": "RVG",
 "datum": "2026-07-22",
 "atc": "V03AF03",
-"eml": "",
-"prk": "48836",
-"prk_naam": "FOLINEZUUR INJVLST 10MG/ML FL 5ML"
+"eml": ""
 },
 {
 "product": "Duvyzat 8,86 mg/ml suspensie voor oraal gebruik",
@@ -225,9 +218,7 @@
 "reg_type": "RVG",
 "datum": "2026-07-17",
 "atc": "D10BA01",
-"eml": "geel",
-"prk": "69507",
-"prk_naam": "ISOTRETINOINE CAPSULE ZACHT 20MG"
+"eml": "geel"
 },
 {
 "product": "HETRONIFLY 10 mg/ml, concentraat voor oplossing voor infusie",
@@ -254,9 +245,7 @@
 "reg_type": "RVG",
 "datum": "2026-07-10",
 "atc": "L01BB06",
-"eml": "oranje",
-"prk": "85987",
-"prk_naam": "CLOFARABINE INFOPL CONC 1MG/ML FL 20ML"
+"eml": "oranje"
 },
 {
 "product": "Isotretinoïne SUN 10 mg, zachte capsules",
@@ -265,9 +254,7 @@
 "reg_type": "RVG",
 "datum": "2026-07-10",
 "atc": "D10BA01",
-"eml": "geel",
-"prk": "69493",
-"prk_naam": "ISOTRETINOINE CAPSULE ZACHT 10MG"
+"eml": "geel"
 },
 {
 "product": "Nanogam 100 mg/ml; 50ml=5g presentatie",
@@ -276,9 +263,7 @@
 "reg_type": "RVG",
 "datum": "2026-07-05",
 "atc": "J06BA02",
-"eml": "oranje",
-"prk": "80047",
-"prk_naam": "IMMUNOGLOBULINE NORMAAL INFVLST 100MG/ML FL  25ML"
+"eml": "oranje"
 },
 {
 "product": "Oxaliplatine Accord 5 mg/ml concentraat voor oplossing voor infusie",
@@ -314,9 +299,7 @@
 "reg_type": "RVG",
 "datum": "2026-06-26",
 "atc": "N01AX10",
-"eml": "rood",
-"prk": "80314",
-"prk_naam": "PROPOFOL INJ.EMULSIE 10MG/ML AMP 20ML MCT/LCT"
+"eml": "rood"
 },
 {
 "product": "Levobupivacaine Fresenius Kabi 2,5 mg/ml, oplossing voor infusie of injectie",
@@ -325,9 +308,7 @@
 "reg_type": "RVG",
 "datum": "2026-06-16",
 "atc": "N01BB10",
-"eml": "rood",
-"prk": "55697",
-"prk_naam": "LEVOBUPIVACAINE INJVLST 2,5MG/ML AMP 10ML"
+"eml": "rood"
 },
 {
 "product": "Trandate Injectie, oplossing voor injectie 5 mg/ml",
@@ -363,9 +344,7 @@
 "reg_type": "RVG",
 "datum": "2026-06-01",
 "atc": "V03AF01",
-"eml": "oranje",
-"prk": "43761",
-"prk_naam": "MERCAPTO-ETHAANSULFONZUUR (MESNA) TABLET 400MG"
+"eml": "oranje"
 },
 {
 "product": "Diazepam Allgen rektiole 5 mg, oplossing voor rectaal gebruik 5 mg/2,5 ml",
@@ -374,9 +353,7 @@
 "reg_type": "RVG",
 "datum": "2026-06-01",
 "atc": "N05BA01",
-"eml": "rood",
-"prk": "7390",
-"prk_naam": "DIAZEPAM KLYSMA 2MG/ML FL 2,5ML"
+"eml": "rood"
 },
 {
 "product": "Capecitabine Accord 500 mg, filmomhulde tabletten",
@@ -412,9 +389,7 @@
 "reg_type": "RVG",
 "datum": "2026-05-20",
 "atc": "",
-"eml": "",
-"prk": "89230",
-"prk_naam": "FERRICARBOXYMALTOSE INJVLST 50MGFE/ML FL 2ML"
+"eml": ""
 },
 {
 "product": "VIMKUNYA suspensie voor injectie in een voorgevulde spuit Chikungunyavaccin (recombinant, geadsorbeerd)",
@@ -441,9 +416,7 @@
 "reg_type": "RVG",
 "datum": "2026-05-12",
 "atc": "B05BB01",
-"eml": "rood",
-"prk": "27685",
-"prk_naam": "NATRIUMCHLORIDE INFVLST   9MG/ML(0,9%) FL   500ML"
+"eml": "rood"
 },
 {
 "product": "Propofol 20 mg/ml MCT/LCT Fresenius, emulsie voor injectie of infusie",
@@ -452,9 +425,7 @@
 "reg_type": "RVG",
 "datum": "2026-05-08",
 "atc": "N01AX10",
-"eml": "rood",
-"prk": "81299",
-"prk_naam": "PROPOFOL INJ.EMULSIE 20MG/ML FL 50ML MCT/LCT"
+"eml": "rood"
 },
 {
 "product": "Sephience 1.000 mg poeder voor oraal gebruik in sachet",
@@ -526,9 +497,7 @@
 "reg_type": "RVG",
 "datum": "2026-04-21",
 "atc": "C02DD01",
-"eml": "",
-"prk": "209082",
-"prk_naam": "NITROPRUSSIDE INFUSIEPOEDER 60MG AMP"
+"eml": ""
 },
 {
 "product": "Palladon injvlst 50mg/ml oplossing voor injectie of infusie",
@@ -537,9 +506,7 @@
 "reg_type": "RVG",
 "datum": "2026-04-17",
 "atc": "N02AA03",
-"eml": "",
-"prk": "107077",
-"prk_naam": "HYDROMORFON INJ/INFOPL 50MG/ML AMP 1ML"
+"eml": ""
 },
 {
 "product": "Oxaliplatine Accord 5 mg/ml concentraat voor oplossing voor infusie",
@@ -548,9 +515,7 @@
 "reg_type": "RVG",
 "datum": "2026-04-16",
 "atc": "L01XA03",
-"eml": "oranje",
-"prk": "79766",
-"prk_naam": "OXALIPLATINE INFOPL CONC 5MG/ML FL 10ML"
+"eml": "oranje"
 },
 {
 "product": "Gamunex 10%, 100 mg/ml oplossing voor infusie, flacon 200 ml",
@@ -559,9 +524,7 @@
 "reg_type": "RVG",
 "datum": "2026-04-14",
 "atc": "J06BA02",
-"eml": "oranje",
-"prk": "80055",
-"prk_naam": "IMMUNOGLOBULINE NORMAAL INFVLST 100MG/ML FL  50ML"
+"eml": "oranje"
 },
 {
 "product": "Afqlir 40 mg/ml oplossing voor injectie in een voorgevulde spuit",
@@ -597,9 +560,7 @@
 "reg_type": "RVG",
 "datum": "2026-04-01",
 "atc": "N05AX13",
-"eml": "oranje",
-"prk": "96970",
-"prk_naam": "PALIPERIDON INJSUSP WWSP  75MG=0,75ML (100MG/ML)"
+"eml": "oranje"
 },
 {
 "product": "Ondansetron 4 mg/5 ml Focus Care, Stroop",
@@ -608,9 +569,7 @@
 "reg_type": "RVG",
 "datum": "2026-03-30",
 "atc": "A04AA01",
-"eml": "rood",
-"prk": "46310",
-"prk_naam": "ONDANSETRON STROOP 0,8MG/ML"
+"eml": "rood"
 },
 {
 "product": "Antitrombine III concentraat Baxalta 500 IE poeder en oplosmiddel voor oplossing voor injectie",
@@ -619,9 +578,7 @@
 "reg_type": "RVG",
 "datum": "2026-03-30",
 "atc": "B01AB02",
-"eml": "oranje",
-"prk": "52868",
-"prk_naam": "ANTITROMBINE III INFUSIEPOEDER  500IE FL TOEB"
+"eml": "oranje"
 },
 {
 "product": "CEVENFACTA, 5mg, poeder en oplosmiddel voor oplossing voor injectie",
@@ -630,9 +587,7 @@
 "reg_type": "EU",
 "datum": "2026-03-19",
 "atc": "B02BD08",
-"eml": "rood",
-"prk": "225606",
-"prk_naam": "EPTACOG BETA GEACTIVEERD INJECTIEPDR 5MG FL + TOEB"
+"eml": "rood"
 },
 {
 "product": "Cyclofosfamide Seacross 2000 mg poeder voor oplossing voor injectie/infusie",
@@ -641,9 +596,7 @@
 "reg_type": "RVG",
 "datum": "2026-03-18",
 "atc": "L01AA01",
-"eml": "oranje",
-"prk": "105333",
-"prk_naam": "CYCLOFOSFAMIDE INJECTIEPOEDER 2000MG FL"
+"eml": "oranje"
 },
 {
 "product": "Octanate 1000 IE, poeder en oplosmiddel voor oplossing voor injectie",
@@ -661,9 +614,7 @@
 "reg_type": "RVG",
 "datum": "2026-03-11",
 "atc": "N05AX13",
-"eml": "oranje",
-"prk": "96997",
-"prk_naam": "PALIPERIDON INJSUSP WWSP 150MG=1,5ML (100MG/ML)"
+"eml": "oranje"
 },
 {
 "product": "Palmeux 100 mg suspensie voor injectie met verlengde afgifte in een voorgevulde spuit",
@@ -672,9 +623,7 @@
 "reg_type": "RVG",
 "datum": "2026-03-11",
 "atc": "N05AX13",
-"eml": "oranje",
-"prk": "96989",
-"prk_naam": "PALIPERIDON INJSUSP WWSP 100MG=1ML (100MG/ML)"
+"eml": "oranje"
 },
 {
 "product": "Palmeux 50 mg suspensie voor injectie met verlengde afgifte in een voorgevulde spuit",
@@ -683,9 +632,7 @@
 "reg_type": "RVG",
 "datum": "2026-03-11",
 "atc": "N05AX13",
-"eml": "oranje",
-"prk": "96962",
-"prk_naam": "PALIPERIDON INJSUSP WWSP  50MG=0,5ML (100MG/ML)"
+"eml": "oranje"
 },
 {
 "product": "Refixia 2000 IE, poeder en oplosmiddel voor oplossing voor injectie",
@@ -694,9 +641,7 @@
 "reg_type": "EU",
 "datum": "2026-03-09",
 "atc": "B02BD04",
-"eml": "rood",
-"prk": "144096",
-"prk_naam": "NONACOG BETA PEGOL INJPDR 2000IE FL TOEB"
+"eml": "rood"
 },
 {
 "product": "Zercepac 150 mg, poeder voor concentraat voor oplossing voor infusie",
@@ -705,9 +650,7 @@
 "reg_type": "EU",
 "datum": "2026-03-04",
 "atc": "L01FD01",
-"eml": "",
-"prk": "57991",
-"prk_naam": "TRASTUZUMAB INF 150MG F(HERC/HERZ/OGI/ONT/TRA/ZER)"
+"eml": ""
 },
 {
 "product": "Zercepac 420 mg, poeder voor concentraat voor oplossing voor infusie",
@@ -716,9 +659,7 @@
 "reg_type": "EU",
 "datum": "2026-03-04",
 "atc": "L01FD01",
-"eml": "",
-"prk": "150975",
-"prk_naam": "TRASTUZUMAB INFPD 420MG (HERZ/OGIV/ONTR/TRAZ/ZERC)"
+"eml": ""
 },
 {
 "product": "Sumatriptan SUN 3 mg/0,5 ml oplossing voor injectie in voorgevulde pen",
@@ -727,9 +668,7 @@
 "reg_type": "RVG",
 "datum": "2026-03-01",
 "atc": "N02CC01",
-"eml": "rood",
-"prk": "206121",
-"prk_naam": "SUMATRIPTAN INJVLST PEN 3MG=0,5ML (6MG/ML)"
+"eml": "rood"
 },
 {
 "product": "Zolsketil pegylated liposomal 2 mg/ml concentraat voor oplossing voor infusie",
@@ -756,9 +695,7 @@
 "reg_type": "RVG",
 "datum": "2026-02-18",
 "atc": "L01AD01",
-"eml": "",
-"prk": "37788",
-"prk_naam": "CARMUSTINE PDR V INFVLST 100MG FL"
+"eml": ""
 },
 {
 "product": "IMMUKINE, oplossing voor injectie 2 x 10.6 IE (0,1 mg)",
@@ -767,9 +704,7 @@
 "reg_type": "RVG",
 "datum": "2026-02-10",
 "atc": "L03AB03",
-"eml": "",
-"prk": "37362",
-"prk_naam": "INTERFERON GAMMA 1B INJVLST 0,2MG/ML FL 0,5ML"
+"eml": ""
 },
 {
 "product": "Zypadhera 405 mg, poeder en oplosmiddel voor suspensie voor injectie, met verlengde afgifte",
@@ -796,9 +731,7 @@
 "reg_type": "EU",
 "datum": "2026-02-02",
 "atc": "L04AA24",
-"eml": "oranje",
-"prk": "128848",
-"prk_naam": "ABATACEPT INJVLST PEN 125MG=1ML (125MG/ML)"
+"eml": "oranje"
 },
 {
 "product": "Refixia 500 IE , poeder en oplosmiddel voor oplossing voor injectie",
@@ -807,9 +740,7 @@
 "reg_type": "EU",
 "datum": "2026-02-01",
 "atc": "B02BD04",
-"eml": "rood",
-"prk": "144061",
-"prk_naam": "NONACOG BETA PEGOL INJPDR  500IE FL TOEB"
+"eml": "rood"
 },
 {
 "product": "Tryngolza 80 mg oplossing voor injectie in een voorgevulde pen",
@@ -827,9 +758,7 @@
 "reg_type": "RVG",
 "datum": "2026-01-29",
 "atc": "L01AA01",
-"eml": "oranje",
-"prk": "5053",
-"prk_naam": "CYCLOFOSFAMIDE INJECTIEPOEDER 1000MG FL"
+"eml": "oranje"
 },
 {
 "product": "Micafungine Accord 100 mg poeder voor concentraat voor oplossing voor infusie",
@@ -847,9 +776,7 @@
 "reg_type": "RVG",
 "datum": "2026-01-29",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "84182",
-"prk_naam": "QUETIAPINE TABLET MGA  50MG"
+"eml": "oranje"
 },
 {
 "product": "Duvyzat 8,86 mg/ml suspensie voor oraal gebruik",
@@ -885,9 +812,7 @@
 "reg_type": "RVG",
 "datum": "2026-01-15",
 "atc": "L01AA09",
-"eml": "",
-"prk": "98450",
-"prk_naam": "BENDAMUSTINE INFUSIEPOEDER  25MG FL"
+"eml": ""
 },
 {
 "product": "Syntocinon 5 IE/ml, concentraat voor oplossing voor infusie, oplossing voor injectie",
@@ -905,9 +830,7 @@
 "reg_type": "RVG",
 "datum": "2026-01-07",
 "atc": "B01AD04",
-"eml": "rood",
-"prk": "29157",
-"prk_naam": "UROKINASE INFUSIEPOEDER 100.000IE FL"
+"eml": "rood"
 },
 {
 "product": "Urokinase Syner-Medica 500.000 IE, poeder voor oplossing voor injectie/infusie",
@@ -916,9 +839,7 @@
 "reg_type": "RVG",
 "datum": "2026-01-07",
 "atc": "B01AD04",
-"eml": "rood",
-"prk": "29173",
-"prk_naam": "UROKINASE INFUSIEPOEDER 500.000IE FL"
+"eml": "rood"
 },
 {
 "product": "HETRONIFLY  10 mg/ml, concentraat voor oplossing voor infusie",
@@ -945,9 +866,7 @@
 "reg_type": "RVG",
 "datum": "2026-01-05",
 "atc": "M03AC09",
-"eml": "rood",
-"prk": "147907",
-"prk_naam": "ROCURONIUM INJVLST WWSP  50MG=5ML (10MG/ML)"
+"eml": "rood"
 },
 {
 "product": "Folinezuur Kalceks 10 mg/ml oplossing voor injectie/infusie",
@@ -956,9 +875,7 @@
 "reg_type": "RVG",
 "datum": "2026-01-01",
 "atc": "V03AF03",
-"eml": "",
-"prk": "48836",
-"prk_naam": "FOLINEZUUR INJVLST 10MG/ML FL 5ML"
+"eml": ""
 },
 {
 "product": "Zessly 100 mg, poeder voor concentraat voor oplossing voor infusie",
@@ -976,9 +893,7 @@
 "reg_type": "RVG",
 "datum": "2025-12-15",
 "atc": "L01CA04",
-"eml": "oranje",
-"prk": "58815",
-"prk_naam": "VINORELBINE INFOPL CONC 10MG/ML FL 1ML"
+"eml": "oranje"
 },
 {
 "product": "BicaVera 1,5 % glucose, 1,25 mmol/l calcium, oplossing voor peritoneale dialyse",
@@ -987,9 +902,7 @@
 "reg_type": "RVG",
 "datum": "2025-12-09",
 "atc": "",
-"eml": "",
-"prk": "196622",
-"prk_naam": "BICAVERA PD-OPL GLUCOSE 1,5% CALCIUM 1,25MMOL/L 2L"
+"eml": ""
 },
 {
 "product": "Novoseven 2 mg, poeder en oplosmiddel voor oplossing voor injectie",
@@ -998,9 +911,7 @@
 "reg_type": "EU",
 "datum": "2025-12-04",
 "atc": "B02BD08",
-"eml": "rood",
-"prk": "113298",
-"prk_naam": "EPTACOG ALFA GEACTIVEERD INJECTIEPDR 2MG FL + TOEB"
+"eml": "rood"
 },
 {
 "product": "Axitinib Accord 1 mg, filmomhulde tabletten (centraal geregistreerd onder EU nummer EU/1/24/1847)",
@@ -1018,9 +929,7 @@
 "reg_type": "RVG",
 "datum": "2025-12-01",
 "atc": "N02CC01",
-"eml": "rood",
-"prk": "206121",
-"prk_naam": "SUMATRIPTAN INJVLST PEN 3MG=0,5ML (6MG/ML)"
+"eml": "rood"
 },
 {
 "product": "Zypadhera 405 mg, poeder en oplosmiddel voor suspensie voor injectie, met verlengde afgifte",
@@ -1038,9 +947,7 @@
 "reg_type": "RVG",
 "datum": "2025-11-25",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "84212",
-"prk_naam": "QUETIAPINE TABLET MGA 400MG"
+"eml": "oranje"
 },
 {
 "product": "Urokinase Syner-Medica 100.000 IE, poeder voor oplossing voor injectie/infusie",
@@ -1049,9 +956,7 @@
 "reg_type": "RVG",
 "datum": "2025-11-21",
 "atc": "B01AD04",
-"eml": "rood",
-"prk": "29157",
-"prk_naam": "UROKINASE INFUSIEPOEDER 100.000IE FL"
+"eml": "rood"
 },
 {
 "product": "Pregabaline Vivanta 25 mg harde capsules",
@@ -1060,9 +965,7 @@
 "reg_type": "RVG",
 "datum": "2025-11-20",
 "atc": "N02BF02",
-"eml": "oranje",
-"prk": "75698",
-"prk_naam": "PREGABALINE CAPSULE  25MG"
+"eml": "oranje"
 },
 {
 "product": "Azzalure, 125 Speywood-eenheden, poeder voor oplossing voor injectie",
@@ -1071,9 +974,7 @@
 "reg_type": "RVG",
 "datum": "2025-11-18",
 "atc": "M03AX01",
-"eml": "",
-"prk": "92592",
-"prk_naam": "BOTULINE A TOXINE SPEYWOOD INJPDR 125E FL"
+"eml": ""
 },
 {
 "product": "Seroquel XR 200 mg, tabletten met verlengde afgifte",
@@ -1082,9 +983,7 @@
 "reg_type": "RVG",
 "datum": "2025-11-13",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "84190",
-"prk_naam": "QUETIAPINE TABLET MGA 200MG"
+"eml": "oranje"
 },
 {
 "product": "Eylea 40 mg/ml oplossing voor injectie",
@@ -1093,9 +992,7 @@
 "reg_type": "EU",
 "datum": "2025-11-10",
 "atc": "S01LA05",
-"eml": "",
-"prk": "127183",
-"prk_naam": "AFLIBERCEPT INJVLST WWSP 2MG=0,05ML (40MG/ML)"
+"eml": ""
 },
 {
 "product": "Ilaris 150 mg/ml oplossing voor injectie in een injectieflacon.",
@@ -1104,9 +1001,7 @@
 "reg_type": "EU",
 "datum": "2025-11-06",
 "atc": "L04AC08",
-"eml": "geel",
-"prk": "142794",
-"prk_naam": "CANAKINUMAB INJVLST 150MG/ML FL 1ML"
+"eml": "geel"
 },
 {
 "product": "Sephience 1.000 mg en 250 mg poeder voor oraal gebruik in sachet",
@@ -1124,9 +1019,7 @@
 "reg_type": "RVG",
 "datum": "2025-10-29",
 "atc": "J02AX05",
-"eml": "oranje",
-"prk": "91863",
-"prk_naam": "MICAFUNGINE INFUSIEPOEDER 100MG FL"
+"eml": "oranje"
 },
 {
 "product": "Duvyzat 8,86 mg/ml suspensie voor oraal gebruik",
@@ -1162,9 +1055,7 @@
 "reg_type": "RVG",
 "datum": "2025-10-15",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "94757",
-"prk_naam": "QUETIAPINE TABLET MGA 150MG"
+"eml": "oranje"
 },
 {
 "product": "Angusta 25 microgram tabletten",
@@ -1173,9 +1064,7 @@
 "reg_type": "RVG",
 "datum": "2025-10-13",
 "atc": "G02AD06",
-"eml": "",
-"prk": "206210",
-"prk_naam": "MISOPROSTOL TABLET 25UG"
+"eml": ""
 },
 {
 "product": "Triamcinolonacetonide Addimed suspensie voor injectie 40 mg/ml",
@@ -1193,9 +1082,7 @@
 "reg_type": "RVG",
 "datum": "2025-09-29",
 "atc": "L01DC03",
-"eml": "oranje",
-"prk": "200204",
-"prk_naam": "MITOMYCINE PDR INJ/INFOPL  2MG FL"
+"eml": "oranje"
 },
 {
 "product": "Mitomycine Accord 10 mg, poeder voor oplossing voor injectie / infusie of intravesicaal gebruik",
@@ -1204,9 +1091,7 @@
 "reg_type": "RVG",
 "datum": "2025-09-29",
 "atc": "L01DC03",
-"eml": "oranje",
-"prk": "200204",
-"prk_naam": "MITOMYCINE PDR INJ/INFOPL  2MG FL"
+"eml": "oranje"
 },
 {
 "product": "Fingolimod Glenmark 0,5 mg capsules",
@@ -1215,9 +1100,7 @@
 "reg_type": "RVG",
 "datum": "2025-09-18",
 "atc": "L04AE01",
-"eml": "",
-"prk": "100129",
-"prk_naam": "FINGOLIMOD CAPSULE 0,5MG"
+"eml": ""
 },
 {
 "product": "Seroquel XR 300 mg, tabletten met verlengde afgifte",
@@ -1226,9 +1109,7 @@
 "reg_type": "RVG",
 "datum": "2025-09-12",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "84204",
-"prk_naam": "QUETIAPINE TABLET MGA 300MG"
+"eml": "oranje"
 },
 {
 "product": "Pyrukynd, filmomhulde tabletten 5/20/50 mg",
@@ -1246,9 +1127,7 @@
 "reg_type": "RVG",
 "datum": "2025-09-04",
 "atc": "L01DC03",
-"eml": "oranje",
-"prk": "200212",
-"prk_naam": "MITOMYCINE PDR INJ/INFOPL 10MG FL"
+"eml": "oranje"
 },
 {
 "product": "Calciumacetaat-Nefro 700 mg, filmomhulde tabletten",
@@ -1257,9 +1136,7 @@
 "reg_type": "RVG",
 "datum": "2025-09-03",
 "atc": "V03AE07",
-"eml": "",
-"prk": "87882",
-"prk_naam": "CALCIUMACETAAT TABLET 700MG (177,4MG CA)"
+"eml": ""
 },
 {
 "product": "Teriflunomide Viatris 14 mg, filmomhulde tabletten",
@@ -1277,9 +1154,7 @@
 "reg_type": "RVG",
 "datum": "2025-08-28",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "94757",
-"prk_naam": "QUETIAPINE TABLET MGA 150MG"
+"eml": "oranje"
 },
 {
 "product": "Seroquel XR 50 mg, tabletten met verlengde afgifte",
@@ -1288,9 +1163,7 @@
 "reg_type": "RVG",
 "datum": "2025-08-28",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "84182",
-"prk_naam": "QUETIAPINE TABLET MGA  50MG"
+"eml": "oranje"
 },
 {
 "product": "Urokinase Syner-Medica 500.000 IE, poeder voor oplossing voor injectie/infusie",
@@ -1299,9 +1172,7 @@
 "reg_type": "RVG",
 "datum": "2025-08-28",
 "atc": "B01AD04",
-"eml": "rood",
-"prk": "29173",
-"prk_naam": "UROKINASE INFUSIEPOEDER 500.000IE FL"
+"eml": "rood"
 },
 {
 "product": "HETRONIFLY 10 mg/ml, concentraat voor oplossing voor infusie,",
@@ -1328,9 +1199,7 @@
 "reg_type": "RVG",
 "datum": "2025-08-21",
 "atc": "L01AC01",
-"eml": "oranje",
-"prk": "94110",
-"prk_naam": "THIOTEPA INFUSIEPOEDER 100MG FL"
+"eml": "oranje"
 },
 {
 "product": "Urokinase Syner-Medica 100.000 IE, poeder voor oplossing voor injectie/infusie",
@@ -1339,9 +1208,7 @@
 "reg_type": "RVG",
 "datum": "2025-08-21",
 "atc": "B01AD04",
-"eml": "rood",
-"prk": "29157",
-"prk_naam": "UROKINASE INFUSIEPOEDER 100.000IE FL"
+"eml": "rood"
 },
 {
 "product": "Oxytocine Eureco-Pharma 5 IE/ml, oplossing voor injectie/infusie",
@@ -1359,9 +1226,7 @@
 "reg_type": "EU",
 "datum": "2025-08-08",
 "atc": "J02AC05",
-"eml": "",
-"prk": "231258",
-"prk_naam": "ISAVUCONAZOL CAPSULE 40MG"
+"eml": ""
 },
 {
 "product": "Seroquel XR 200 mg, tabletten met verlengde afgifte",
@@ -1370,9 +1235,7 @@
 "reg_type": "RVG",
 "datum": "2025-08-06",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "84190",
-"prk_naam": "QUETIAPINE TABLET MGA 200MG"
+"eml": "oranje"
 },
 {
 "product": "Zolsketil pegylated liposomal 2 mg/ml concentraat voor oplossing voor infusie",
@@ -1390,9 +1253,7 @@
 "reg_type": "RVG",
 "datum": "2025-07-29",
 "atc": "A02BC02",
-"eml": "oranje",
-"prk": "50482",
-"prk_naam": "PANTOPRAZOL INJECTIEPOEDER 40MG FL"
+"eml": "oranje"
 },
 {
 "product": "Erwinase 10.000 E poeder voor oplossing voor injectie/infusie",
@@ -1401,9 +1262,7 @@
 "reg_type": "RVG",
 "datum": "2025-07-25",
 "atc": "L01XX02",
-"eml": "oranje",
-"prk": "51519",
-"prk_naam": "ASPARAGINASE INJPDR 10.000IE(ERWIN,CRISANTASPAS)FL"
+"eml": "oranje"
 },
 {
 "product": "Alhemo 15mg-, 60mg-, 150mg- en 300mg/1,5 ml oplossing voor injectie in een voorgevulde pen",
@@ -1430,9 +1289,7 @@
 "reg_type": "RVG",
 "datum": "2025-07-10",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "84182",
-"prk_naam": "QUETIAPINE TABLET MGA  50MG"
+"eml": "oranje"
 },
 {
 "product": "Clindamycine CF 600 mg, harde capsules",
@@ -1441,9 +1298,7 @@
 "reg_type": "RVG",
 "datum": "2025-07-07",
 "atc": "J01FF01",
-"eml": "rood",
-"prk": "144231",
-"prk_naam": "CLINDAMYCINE CAPSULE 600MG"
+"eml": "rood"
 },
 {
 "product": "Nipruss 60 mg, poeder voor oplossing voor infusie.",
@@ -1452,9 +1307,7 @@
 "reg_type": "RVG",
 "datum": "2025-07-02",
 "atc": "C02DD01",
-"eml": "",
-"prk": "209082",
-"prk_naam": "NITROPRUSSIDE INFUSIEPOEDER 60MG AMP"
+"eml": ""
 },
 {
 "product": "Bendamustine Accord 2,5 mg/ml poeder voor concentraat voor oplossing voor infusie",
@@ -1463,9 +1316,7 @@
 "reg_type": "RVG",
 "datum": "2025-07-01",
 "atc": "L01AA09",
-"eml": "",
-"prk": "98469",
-"prk_naam": "BENDAMUSTINE INFUSIEPOEDER 100MG FL"
+"eml": ""
 },
 {
 "product": "Sugammadex Kalceks 100 mg/ml oplossing voor injectie",
@@ -1474,9 +1325,7 @@
 "reg_type": "RVG",
 "datum": "2025-07-01",
 "atc": "V03AB35",
-"eml": "rood",
-"prk": "87300",
-"prk_naam": "SUGAMMADEX INJVLST 100MG/ML FL 2ML"
+"eml": "rood"
 },
 {
 "product": "Esketiv 5 mg/ml, oplossing voor injectie",
@@ -1485,9 +1334,7 @@
 "reg_type": "RVG",
 "datum": "2025-07-01",
 "atc": "N01AX14",
-"eml": "rood",
-"prk": "52922",
-"prk_naam": "ESKETAMINE INJVLST  5MG/ML AMP  5ML"
+"eml": "rood"
 },
 {
 "product": "Tyenne 20 mg/ml concentraat voor oplossing voor infusie",
@@ -1505,9 +1352,7 @@
 "reg_type": "EU",
 "datum": "2025-06-09",
 "atc": "V03AB06",
-"eml": "",
-"prk": "231371",
-"prk_naam": "NATRIUMTHIOSULF INFVLST 80MG/ML (0-WATER) FL 100ML"
+"eml": ""
 },
 {
 "product": "Imatinib Accord 400 mg filmomhulde tabletten",
@@ -1525,9 +1370,7 @@
 "reg_type": "RVG",
 "datum": "2025-06-01",
 "atc": "L01DC03",
-"eml": "oranje",
-"prk": "119806",
-"prk_naam": "MITOMYCINE PDR INJ/INFOPL 20MG FL"
+"eml": "oranje"
 },
 {
 "product": "Epirubicinehydrochloride Accord 2 mg/ml oplossing voor injectie of infusie",
@@ -1536,9 +1379,7 @@
 "reg_type": "RVG",
 "datum": "2025-06-01",
 "atc": "L01DB03",
-"eml": "oranje",
-"prk": "82252",
-"prk_naam": "EPIRUBICINE INJVLST 2MG/ML FL 5ML"
+"eml": "oranje"
 },
 {
 "product": "WELIREG 40 mg filmomhulde tabletten",
@@ -1556,9 +1397,7 @@
 "reg_type": "EU",
 "datum": "2025-05-07",
 "atc": "B06AC07",
-"eml": "",
-"prk": "232408",
-"prk_naam": "GARADACIMAB INJVLST PEN 200MG=1,2ML (167MG/ML)"
+"eml": ""
 },
 {
 "product": "Aminomix 1 Novum, oplossing voor infusie",
@@ -1567,9 +1406,7 @@
 "reg_type": "RVG",
 "datum": "2025-05-02",
 "atc": "B05BA10",
-"eml": "",
-"prk": "88048",
-"prk_naam": "AMINOMIX 1 NOVUM INFVLST ZAK 1000ML"
+"eml": ""
 },
 {
 "product": "Bortezomib Accord 2,5mg/ml oplossing voor injectie",
@@ -1596,9 +1433,7 @@
 "reg_type": "RVG",
 "datum": "2025-04-24",
 "atc": "G04BD04",
-"eml": "geel",
-"prk": "208124",
-"prk_naam": "OXYBUTYNINE BLAASSPOELING 0,5MG/ML FL 20ML"
+"eml": "geel"
 },
 {
 "product": "Seroquel XR 150 mg, tabletten met verlengde afgifte",
@@ -1607,9 +1442,7 @@
 "reg_type": "RVG",
 "datum": "2025-04-18",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "94757",
-"prk_naam": "QUETIAPINE TABLET MGA 150MG"
+"eml": "oranje"
 },
 {
 "product": "Zypadhera 405 mg, poeder en oplosmiddel voor suspensie voor injectie, met verlengde afgifte",
@@ -1627,9 +1460,7 @@
 "reg_type": "RVG",
 "datum": "2025-04-17",
 "atc": "L01DB03",
-"eml": "oranje",
-"prk": "82252",
-"prk_naam": "EPIRUBICINE INJVLST 2MG/ML FL 5ML"
+"eml": "oranje"
 },
 {
 "product": "Cabazitaxel Accord 60 mg, concentraat voor oplossing voor infusie",
@@ -1647,9 +1478,7 @@
 "reg_type": "RVG",
 "datum": "2025-04-16",
 "atc": "J01FF01",
-"eml": "rood",
-"prk": "144231",
-"prk_naam": "CLINDAMYCINE CAPSULE 600MG"
+"eml": "rood"
 },
 {
 "product": "Pentacarinat 300 mg, poeder voor oplossing voor injectie",
@@ -1658,9 +1487,7 @@
 "reg_type": "RVG",
 "datum": "2025-04-16",
 "atc": "P01CX01",
-"eml": "oranje",
-"prk": "29122",
-"prk_naam": "PENTAMIDINE INJECTIEPOEDER 300MG FL"
+"eml": "oranje"
 },
 {
 "product": "Shingrix, poeder en suspensie voor suspensie voor injectie",
@@ -1678,9 +1505,7 @@
 "reg_type": "RVG",
 "datum": "2025-04-15",
 "atc": "H01CB03",
-"eml": "",
-"prk": "214183",
-"prk_naam": "LANREOTIDE INJVLST WWSP 120MG=0,5ML (240MG/ML)"
+"eml": ""
 },
 {
 "product": "Rekovelle 72 microgram/2,16 ml oplossing voor injectie in een voorgevulde pen",
@@ -1707,9 +1532,7 @@
 "reg_type": "EU",
 "datum": "2025-04-02",
 "atc": "L01XX24",
-"eml": "oranje",
-"prk": "148644",
-"prk_naam": "PEGASPARGASE PDR INJ/INFOPL 3750E FL"
+"eml": "oranje"
 },
 {
 "product": "Fampyra 10 mg tabletten met verlengde afgifte",
@@ -1718,9 +1541,7 @@
 "reg_type": "EU",
 "datum": "2025-04-01",
 "atc": "N07XX07",
-"eml": "",
-"prk": "101826",
-"prk_naam": "FAMPRIDINE TABLET MGA 10MG"
+"eml": ""
 },
 {
 "product": "Proleukin 18 x 1.000.000 IE poeder voor oplossing voor injectie of infusie",
@@ -1729,9 +1550,7 @@
 "reg_type": "RVG",
 "datum": "2025-04-01",
 "atc": "L03AC01",
-"eml": "",
-"prk": "95184",
-"prk_naam": "ALDESLEUKINE PDR INJ/INFOPL 22ME FL"
+"eml": ""
 },
 {
 "product": "Epirubicinehydrochloride Accord 2 mg/ml oplossing voor injectie of infusie",
@@ -1740,9 +1559,7 @@
 "reg_type": "RVG",
 "datum": "2025-03-31",
 "atc": "L01DB03",
-"eml": "oranje",
-"prk": "82252",
-"prk_naam": "EPIRUBICINE INJVLST 2MG/ML FL 5ML"
+"eml": "oranje"
 },
 {
 "product": "Dopaminehydrochloride Hikma 40 mg/ml",
@@ -1751,9 +1568,7 @@
 "reg_type": "RVG",
 "datum": "2025-03-27",
 "atc": "C01CA04",
-"eml": "oranje",
-"prk": "17744",
-"prk_naam": "DOPAMINE INFOPL CONC 40MG/ML AMP 5ML"
+"eml": "oranje"
 },
 {
 "product": "Pomalidomide Accord 4 mg harde capsules",
@@ -1771,9 +1586,7 @@
 "reg_type": "RVG",
 "datum": "2025-03-15",
 "atc": "L01BB06",
-"eml": "oranje",
-"prk": "85987",
-"prk_naam": "CLOFARABINE INFOPL CONC 1MG/ML FL 20ML"
+"eml": "oranje"
 },
 {
 "product": "Zolsketil pegylated liposomal 2 mg/ml concentraat voor oplossing voor infusie",
@@ -1791,9 +1604,7 @@
 "reg_type": "RVG",
 "datum": "2025-03-04",
 "atc": "J06BB04",
-"eml": "oranje",
-"prk": "85928",
-"prk_naam": "HEPATITIS-B-IMMUNOGLOBULINE INFVLST 50IE/ML F  10M"
+"eml": "oranje"
 },
 {
 "product": "Seroquel XR 300mg, tabletten met verlengde afgifte",
@@ -1802,9 +1613,7 @@
 "reg_type": "RVG",
 "datum": "2025-03-03",
 "atc": "N05AH04",
-"eml": "oranje",
-"prk": "84204",
-"prk_naam": "QUETIAPINE TABLET MGA 300MG"
+"eml": "oranje"
 },
 {
 "product": "Sorafenib Accord 200mg, filmomhulde tablet",
@@ -1831,9 +1640,7 @@
 "reg_type": "RVG",
 "datum": "2025-02-14",
 "atc": "L01AC01",
-"eml": "oranje",
-"prk": "94110",
-"prk_naam": "THIOTEPA INFUSIEPOEDER 100MG FL"
+"eml": "oranje"
 },
 {
 "product": "Lonsurf 20 mg, filmomhulde tabletten",
@@ -1851,9 +1658,7 @@
 "reg_type": "RVG",
 "datum": "2025-02-05",
 "atc": "L01CA04",
-"eml": "oranje",
-"prk": "58815",
-"prk_naam": "VINORELBINE INFOPL CONC 10MG/ML FL 1ML"
+"eml": "oranje"
 },
 {
 "product": "Eliquis 2,5 mg en 5 mg filmomhulde tabletten",
@@ -1889,9 +1694,7 @@
 "reg_type": "RVG",
 "datum": "2025-02-01",
 "atc": "N01BB01",
-"eml": "rood",
-"prk": "18732",
-"prk_naam": "BUPIVACAINE/GLUCOSE INJVLST 5/80MG/ML AMP 4ML"
+"eml": "rood"
 },
 {
 "product": "Tyenne 20 mg/ml concentraat voor oplossing voor infusie",
@@ -1909,9 +1712,7 @@
 "reg_type": "RVG",
 "datum": "2025-01-07",
 "atc": "H01CB03",
-"eml": "",
-"prk": "214159",
-"prk_naam": "LANREOTIDE INJVLST WWSP 90MG=0,5ML  (180MG/ML)"
+"eml": ""
 },
 {
 "product": "Mytolac 60 mg oplossing voor injectie in een voorgevulde spuit",
@@ -1920,9 +1721,7 @@
 "reg_type": "RVG",
 "datum": "2025-01-07",
 "atc": "H01CB03",
-"eml": "",
-"prk": "214167",
-"prk_naam": "LANREOTIDE INJVLST WWSP 60MG=0,5ML (120MG/ML)"
+"eml": ""
 },
 {
 "product": "Tyenne 162 mg oplossing voor injectie in voorgevulde pen",
@@ -1949,9 +1748,7 @@
 "reg_type": "RVG",
 "datum": "2025-01-01",
 "atc": "V08AB11",
-"eml": "",
-"prk": "42609",
-"prk_naam": "JOBITRIDOL INJVLST 300MGI/ML FL 100ML"
+"eml": ""
 }
 ]
 }

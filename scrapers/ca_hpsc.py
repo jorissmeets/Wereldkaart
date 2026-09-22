@@ -1,19 +1,29 @@
-"""Scraper for Canada Drug Shortages Canada (DSC) via the official API.
+"""Scraper voor Canada: Drug Shortages Canada (DSC), met een publieke terugval.
 
-De publieke site healthproductshortages.ca zit sinds ~sep-2026 achter Cloudflare
-(requests/cloudscraper/headless-browser worden geblokkeerd). De officiële DSC-API
-(drugshortagescanada.ca/api/v1) is NIET geblokkeerd en is bedoeld voor aggregators;
-hij vereist een gratis account. Zet de inloggegevens in Matchen_prk/.env:
-    DSC_EMAIL=...
-    DSC_PASSWORD=...
+De dienst is per 18-01-2026 verhuisd naar healthproductshortages.ca. Alles buiten
+/api/v1 zit achter Cloudflare -- ook voor een echte headless browser -- dus de site
+zelf scrapen is geen optie.
 
-Flow: POST /api/v1/login (krijgt 'auth-token' in de response-header) -> GET
-/api/v1/search met die header, gepagineerd. Geen ATC in de bron -> afgeleid uit de
-werkzame stof door de verrijkingsstap.
+Twee wegen:
+  1. MET account: de volledige DSC-lijst (~28k meldingen) via /api/v1. Vereist een
+     gratis account op healthproductshortages.ca; zet in Matchen_prk/.env:
+         DSC_EMAIL=...
+         DSC_PASSWORD=...
+     Flow: POST /api/v1/login (auth-token in de response-header) -> gepagineerde
+     GET /api/v1/search. Limiet 1.000 requests per uur.
+  2. ZONDER account: de Tier 3-lijst op canada.ca, de tekorten met de grootste
+     verwachte impact. Maar 26 meldingen, maar wel actueel en publiek.
+
+Bewust geen harde fout meer bij ontbrekende inloggegevens: dat liet Canada maandenlang
+op data van maart staan (28.358 records waarvan 22.507 al opgelost) terwijl er publiek
+wel actuele tekorten beschikbaar waren.
+
+Geen ATC in de bron -> die wordt afgeleid uit de werkzame stof door de verrijkingsstap.
 """
 from __future__ import annotations
 
 import os
+import re
 import time
 from datetime import datetime
 
@@ -36,7 +46,19 @@ from scrapers.base_scraper import BaseScraper
 class CaHpscScraper(BaseScraper):
     """Drug Shortages Canada via de officiële API (auth-token)."""
 
-    API = "https://www.drugshortagescanada.ca/api/v1"
+    # De dienst is per 18-01-2026 verhuisd van drugshortagescanada.ca naar
+    # healthproductshortages.ca; het oude adres antwoordt nog met een 301. Alles buiten
+    # /api/v1 zit achter Cloudflare, ook voor een echte browser.
+    API = "https://www.healthproductshortages.ca/api/v1"
+
+    # Terugval zonder account: Health Canada publiceert de Tier 3-bepalingen (de tekorten met
+    # de grootste verwachte impact) als gewone HTML op canada.ca. Dat is maar een fractie van
+    # de DSC-lijst, maar het is WEL actueel en vergt geen inloggegevens -- beter dan een land
+    # dat op maanden oude data blijft staan.
+    # VALKUIL: canada.ca antwoordt hier alleen op de STANDAARD python-requests User-Agent.
+    # De browser-UA die deze scraper voor de API zet, veroorzaakt op dat adres een timeout.
+    TIER3_URL = ("https://www.canada.ca/en/health-canada/services/drugs-health-products/"
+                 "drug-products/drug-shortages/tier-3-shortages.html")
     PAGE = 100
     # Statussen die we als lopend/relevant meenemen (opgeloste laten we weg — validatie Jesper 28-08).
     KEEP_STATUS = {
@@ -157,12 +179,71 @@ class CaHpscScraper(BaseScraper):
             time.sleep(0.2)
         return out
 
+    def _scrape_tier3(self) -> list:
+        """Health Canada's Tier 3-lijst: de tekorten met de grootste verwachte impact.
+
+        Kolommen: Drug (Active Ingredient) | Date of Tier 3 Determination |
+        TAC Committee Membership | Used in the treatment of.
+        Er is geen einddatum en geen merknaam; alleen de werkzame stof en de datum waarop
+        de tekortcommissie het als Tier 3 bestempelde. Die datum is de START van het tekort,
+        niet de scrapedatum -- dat onderscheid is hier belangrijk.
+        """
+        from bs4 import BeautifulSoup
+        # Bewust een KALE sessie: canada.ca weigert de browser-UA die de API-sessie zet.
+        resp = requests.get(self.TIER3_URL, timeout=60)
+        resp.raise_for_status()
+        tabel = BeautifulSoup(resp.text, "html.parser").find("table")
+        if tabel is None:
+            raise RuntimeError("Tier 3-tabel niet gevonden op canada.ca")
+
+        records = []
+        for rij in tabel.find_all("tr"):
+            cellen = [c.get_text(" ", strip=True) for c in rij.find_all("td")]
+            if len(cellen) < 2 or not cellen[0]:
+                continue
+            datum = ""
+            m = re.search(r"(\d{4})-(\d{2})-(\d{2})", cellen[1])
+            if m:
+                datum = m.group(0)
+            else:                                   # "September 14, 2026"
+                try:
+                    datum = datetime.strptime(cellen[1].strip(), "%B %d, %Y").strftime("%Y-%m-%d")
+                except ValueError:
+                    datum = ""
+            records.append({
+                "country_code": self.country_code,
+                "country_name": self.country_name,
+                "source": "Health Canada Tier 3",
+                "medicine_name": "",
+                "active_substance": cellen[0],
+                "strength": "",
+                "package_size": "",
+                "product_no": "",
+                "marketing_auth_holder": "",
+                "shortage_start": datum,
+                "estimated_end": "",
+                "status": "shortage",
+                "reason": cellen[3] if len(cellen) > 3 else "",
+                "notes": "Tier 3: tekort met de grootste verwachte impact",
+                "scraped_at": datetime.now().isoformat(),
+            })
+        return records
+
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
-        self._login()
-        raw = self._fetch("shortages") + self._fetch("discontinuations")
-        print(f"  API leverde {len(raw)} items")
-        records = [rec for rec in (self._record(it) for it in raw) if rec]
+
+        # Met een account de volledige DSC-lijst; zonder account de Tier 3-lijst. Bewust géén
+        # harde fout meer bij ontbrekende inloggegevens: dan bleef Canada op maanden oude data
+        # staan terwijl er publiek wél actuele tekorten beschikbaar zijn.
+        if os.environ.get("DSC_EMAIL") and os.environ.get("DSC_PASSWORD"):
+            self._login()
+            raw = self._fetch("shortages") + self._fetch("discontinuations")
+            print(f"  API leverde {len(raw)} items")
+            records = [rec for rec in (self._record(it) for it in raw) if rec]
+        else:
+            print("  geen DSC-inloggegevens -> terugval op de publieke Tier 3-lijst")
+            records = self._scrape_tier3()
+
         df = pd.DataFrame(records)
         print(f"  Total: {len(df)} shortage records scraped")
         return df

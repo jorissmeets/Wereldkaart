@@ -67,7 +67,14 @@
         /* ── Header ── */
         .header { background: linear-gradient(135deg, #00428b 0%, #0bbbef 100%); border-bottom: none; padding: 9px 20px; display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
         .header-brand { display: flex; align-items: center; gap: 10px; }
-        .last-update { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.12); padding: 3px 9px; border-radius: 10px; white-space: nowrap; }
+        /* Meetingpunt 22-09: deze datum moet opvallen. De kaart wordt donderdag gebruikt bij de
+           geneesmiddelbespreking; dan moet in een oogopslag duidelijk zijn of de data vers is.
+           Kleur verspringt daarom zelf: grijs = vers, amber = 3+ dagen, rood = 7+ dagen. */
+        .last-update { font-size: 13px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.18);
+            padding: 5px 12px; border-radius: 11px; white-space: nowrap; letter-spacing: .01em;
+            border: 1px solid rgba(255,255,255,0.28); }
+        .last-update.verouderd { background: #f0a020; border-color: #f0a020; color: #3a2a00; }
+        .last-update.oud { background: #e05555; border-color: #e05555; color: #fff; }
         .header-logo { width: 26px; height: 26px; flex-shrink: 0; }
         .header-logo svg { width: 100%; height: 100%; }
         .header h1 { font-size: 15px; font-weight: 600; white-space: nowrap; color: #ffffff; }
@@ -373,6 +380,7 @@
         <a class="nav-tab" href="signaaloverzicht.html" title="Vroegsignaal-overzicht">📊 <span>Overzicht</span></a>
         <a class="nav-tab" href="index.html" title="LCG Dossierstatus">📋 <span data-i18n="nav_dossiers">Dossierstatus</span></a>
         <a class="nav-tab" href="vroegsignalering.html" title="Vroegsignalering">🔔 <span data-i18n="nav_signals">Vroegsignalering</span></a>
+        <a class="nav-tab" href="atc4.html" title="ATC4-pooldekking: hoeveel PRK in een ATC4-groep zijn weg en is er nog een uitwijk?">🧭 <span>ATC4-pooldekking</span></a>
         <div class="lang-filter" role="radiogroup" aria-label="Taal / Language">
             <button class="lang-btn active" data-lang="nl">NL</button>
             <button class="lang-btn" data-lang="en">EN</button>
@@ -652,7 +660,21 @@ function renderFooter() {
     if (!RAW) return;
     document.getElementById("footer").innerHTML = `<span style="color:#5a7faa">${t("footer_org")} · ${RAW.generated} · ${RAW.total_atc} ${t("footer_atc")} · ${RAW.total_countries} ${t("footer_sources")} · ${RAW.records.length.toLocaleString("nl-NL")} ${t("footer_notif")}</span><span class="footer-right"><span class="footer-kbd"><kbd>Esc</kbd> ${t("footer_back")} &middot; <kbd>/</kbd> ${t("footer_search")}</span></span>`;
     const lu = document.getElementById("last-update");
-    if (lu && RAW.generated) lu.textContent = (S.lang === "en" ? "Last update: " : "Laatste update: ") + RAW.generated.split("-").reverse().join("-");
+    if (lu && RAW.generated) {
+        // Leeftijd in hele dagen; de kaart moet zelf laten zien wanneer hij achterloopt in plaats
+        // van dat iemand de datum moet narekenen.
+        const dagen = Math.floor((Date.now() - new Date(RAW.generated + "T00:00:00")) / 86400000);
+        const label = S.lang === "en" ? "Last update: " : "Laatste update: ";
+        const oudheid = dagen <= 0 ? (S.lang === "en" ? " (today)" : " (vandaag)")
+                      : dagen === 1 ? (S.lang === "en" ? " (1 day ago)" : " (1 dag oud)")
+                      : (S.lang === "en" ? ` (${dagen} days ago)` : ` (${dagen} dagen oud)`);
+        lu.textContent = label + RAW.generated.split("-").reverse().join("-") + oudheid;
+        lu.classList.toggle("verouderd", dagen >= 3 && dagen < 7);
+        lu.classList.toggle("oud", dagen >= 7);
+        lu.title = dagen >= 3
+            ? (S.lang === "en" ? "Data is stale — refresh before use" : "Data loopt achter — ververs voor gebruik")
+            : (S.lang === "en" ? "Date of the last data update" : "Datum van de laatste data-update");
+    }
 }
 
 let RAW = null;

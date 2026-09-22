@@ -1,5 +1,15 @@
 """Scraper for Taiwan TFDA drug shortage data.
 
+LET OP -- TW STAAT BEWUST NIET OP DE KAART (uitgesloten in landkaart/build_data.py).
+Zet hem niet terug zonder de bron opnieuw te beoordelen. Reden (onderzoek 22-09-2026):
+de echte tekortenlijst staat in DSMS (dsms.fda.gov.tw) en die weigert elke verbinding
+van BUITEN TAIWAN, onder HTTP-niveau; vijf onafhankelijke paden getest, headers helpen
+niet en er is geen mirror op data.gov.tw. Wat deze scraper daardoor overhoudt zijn
+persberichtkoppen -- 15 stuks, waaronder een bericht dat de voorraad juist NORMAAL is,
+met de publicatiedatum (2015/2016) als startdatum. Dat is geen tekortenlijst.
+Om dit te repareren is een uitgaand punt in Taiwan nodig, of een datafeed van TFDA zelf.
+
+
 Primary source: TFDA Open Data API (data.fda.gov.tw)
 Fallback source: TFDA DSMS (Drug Shortage Management System) at dsms.fda.gov.tw
 Second fallback: TFDA website drug shortage announcements via news API
