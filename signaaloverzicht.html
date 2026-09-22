@@ -55,6 +55,8 @@
     .gname { flex: 1; font-weight: 800; color: var(--lcg-blue); overflow-wrap: anywhere; }
     .gcode { font-size: 11px; color: var(--text-muted); font-weight: 700; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
     .gcount { font-size: 11px; color: var(--text-muted); white-space: nowrap; margin-left: auto; }
+    .poollink { font-size: 10px; font-weight: 700; text-decoration: none; color: var(--lcg-blue); background: var(--bg-card); border: 1px solid var(--border); border-radius: 5px; padding: 2px 7px; white-space: nowrap; }
+    .poollink:hover { background: var(--lcg-light); }
     .gval { font-size: 15px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; width: 40px; text-align: right; flex-shrink: 0; }
     .gbody .row { padding-left: 30px; }
     .tl { padding: 8px 14px 4px 30px; border-bottom: 1px solid var(--border-light); }
@@ -100,6 +102,7 @@
             <a class="top-link active" href="signaaloverzicht.html">Overzicht</a>
             <a class="top-link" href="index.html">Dossierstatus</a>
             <a class="top-link" href="vroegsignalering.html">Vroegsignalering</a>
+            <a class="top-link" href="atc4.html">ATC4-pooldekking</a>
             <a class="top-link" href="landkaart.html">Landkaart</a>
         </div>
     </div>
@@ -273,7 +276,9 @@ function render() {
         const tel = [`${g.ps.length} ${g.ps.length === 1 ? "product" : "producten"}`];
         if (g.nRood) tel.unshift(`🔴 ${g.nRood}`);
         if (g.nLand) tel.push(`🌍 ${g.nLand} ${g.nLand === 1 ? "land" : "landen"}`);
-        const header = `<div class="grp"><span class="gcaret">▸</span><span class="eml-dot ${worst}"></span><span class="gname">${nm ? esc(nm) + " " : ""}<span class="gcode">${g.a4}</span></span><span class="gcount">${tel.join(" · ")}</span><span class="gval" title="Gecombineerde waarde: som van de productscores in deze groep (buitenland + NL-bronnen + EMS + dossier)">${g.val}</span></div>`;
+        // Deeplink naar de pooldekking: daar staat de noemer (hoeveel PRK de groep telt),
+        // die hier ontbreekt. Zonder die link groeien de twee pagina's uit elkaar.
+        const header = `<div class="grp"><span class="gcaret">▸</span><span class="eml-dot ${worst}"></span><span class="gname">${nm ? esc(nm) + " " : ""}<span class="gcode">${g.a4}</span></span><a class="poollink" href="atc4.html#${g.a4}" title="Pooldekking van deze ATC4-groep: hoeveel PRK telt de groep en hoeveel daarvan zijn weg?">pooldekking →</a><span class="gcount">${tel.join(" · ")}</span><span class="gval" title="Gecombineerde waarde: som van de productscores in deze groep (buitenland + NL-bronnen + EMS + dossier)">${g.val}</span></div>`;
         const body = `<div class="gbody">` + g.ps.map((p, i) => productRow(p, i + 1)).join("") + `</div>`;
         return `<div class="grp-wrap collapsed">${header}${body}</div>`;
     }).join("") + (ordered.length > CAP ? `<div class="empty">${ordered.length - CAP} groepen meer — verfijn met de filters of zoek.</div>` : "");
@@ -297,6 +302,7 @@ let _t;
 document.getElementById("q").addEventListener("input", e => { clearTimeout(_t); _t = setTimeout(() => { S.q = e.target.value; render(); }, 150); });
 // Klik op een ATC-4-groepskop klapt de groep in/uit
 document.getElementById("rows").addEventListener("click", e => {
+    if (e.target.closest("a")) return;          // de pooldekking-link niet kapen met in-/uitklappen
     const h = e.target.closest(".grp");
     if (!h) return;
     const w = h.closest(".grp-wrap");
