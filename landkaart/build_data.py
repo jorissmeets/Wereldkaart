@@ -31,6 +31,19 @@ PER_COUNTRY_REASON_COL: dict[str, str] = {
     "DE": "reason",
     "IT": "reason",
     "ES": "reason",
+    # Toegevoegd 2026-09-22, samen met de vertaalde redenwaarden in cause_mapping_v2.csv.
+    "AT": "reason",
+    "DK": "reason",
+    "GR": "reason",
+    "HR": "reason",
+    "HU": "reason",
+    "IE": "reason",
+    "MY": "reason",
+    # PT staat hier wel, maar wordt verderop bewust van de kaart geweerd (besluit Joris
+    # 22-09, zie de uitsluitingslijst bij het inlezen). Deze regel en de 8 PT-regels in
+    # cause_mapping_v2.csv hebben dus nu GEEN effect; ze staan klaar voor als PT ooit
+    # terugkomt. Niet lezen als "PT doet weer mee".
+    "PT": "reason",
 }
 
 # Categorieën die we tonen, met kleur-hint voor de frontend. De ordening bepaalt
