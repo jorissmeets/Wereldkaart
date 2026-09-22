@@ -76,6 +76,9 @@ echo; echo "### 3. Nederlandse bronnen (CBG / Farmanco / SFK)"
 $UV python build_tab3_data.py 2>&1 | tail -2      # CBG tijdelijk afwijkende verpakking + EML
 $UV python scrape_farmanco.py 2>&1 | tail -2
 $UV python scrape_sfk.py 2>&1 | tail -2
+# Historie van de SFK-monitor bijwerken. Haalt alleen de NIEUWE week op; de rest staat
+# in sfk_historie_cache/. Zonder dit blijft het PRK-verloop staan op de laatste draai.
+$UV python scrape_sfk_historie.py 2>&1 | tail -3
 
 # --- 4. Ontdubbelen en kaart bouwen ----------------------------------------
 echo; echo "### 4. Ontdubbelen en bouwen"

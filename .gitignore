@@ -9,3 +9,4 @@ landkaart/data.json
 output/*.pptx
 output/*.docx
 output/*.py
+sfk_historie_cache/
