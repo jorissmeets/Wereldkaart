@@ -494,7 +494,16 @@ def main():
             },
             "landkaart": {"bestand": "data.json", "generated": data.get("generated"),
                           **{k: v for k, v in bui["stat"].items()}},
-            "sfk": {"bestand": "sfk_tekorten.json", "generated": sfk.get("generated"), **sfk_stat},
+            # peildatum != generated: de Monitor is een WEEKlijst, dus de scrapedatum zegt
+            # niets over hoe vers hij is. En 'op de Monitor' betekent: minimaal 2 van de 4
+            # groothandels konden het die week niet DIRECT leveren -- geen beschikbaarheidstoets.
+            "sfk": {"bestand": "sfk_tekorten.json", "generated": sfk.get("generated"),
+                    "peildatum": sfk.get("peildatum", ""),
+                    "wat_het_meet": ("SFK Monitor leveringsproblemen: minimaal 2 van de 4 groothandels "
+                                     "(Alliance, Brocacef, Mosadex, Pluripharm) konden dit artikel die week "
+                                     "niet direct leveren. Parallelimport, directe fabrikantlevering, kleine "
+                                     "groothandels en apotheekvoorraad tellen niet mee."),
+                    **sfk_stat},
             "farmanco": {"bestand": "farmanco_eml.json", "generated": farm.get("generated"),
                          **farm_stat},
             "eml": {"bestand": "eml_atc5.json", "atc5_beoordeeld": len(eml)},

@@ -22,8 +22,19 @@ UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit
                     "(KHTML, like Gecko) Chrome/124 Safari/537.36"}
 
 
+PEILDATUM = ""   # gevuld door scrape(); de bron is een WEEKlijst
+
+
 def scrape():
     html = requests.get(SFK_URL, headers=UA, timeout=40).text
+
+    # Peildatum uit de kop halen ("Monitor leveringsproblemen - week 38 2026"). De bron wordt
+    # WEKELIJKS ververst, dus de scrapedatum zegt niets over hoe vers de lijst is: scrape je op
+    # maandag, dan staat er een datum van vandaag boven een lijst van vorige week. Dat is exact
+    # de fout die bij AT/DK eerder tot onjuiste startdatums leidde.
+    _m = re.search(r"week\s*(\d{1,2})\s*(\d{4})", html, re.I)
+    global PEILDATUM
+    PEILDATUM = f"week {_m.group(1)} {_m.group(2)}" if _m else ""
     soup = BeautifulSoup(html, "lxml")
     # De datatabel = de tabel met de meeste rijen.
     table = max(soup.find_all("table"), key=lambda t: len(t.find_all("tr")))
@@ -77,6 +88,7 @@ def main():
     payload = {
         "generated": datetime.date.today().isoformat(),
         "source": SFK_URL,
+        "peildatum": PEILDATUM,
         "count": len(items),
         "gekoppeld": hit,
         "items": items,
