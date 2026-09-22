@@ -446,7 +446,13 @@ def build():
             shortage_start = parse_date(row.get("shortage_start"))
             estimated_end = parse_date(row.get("estimated_end"))
             actual_end = parse_date(row.get("actual_end"))
-            last_updated = parse_date(row.get("last_updated"))
+            # Bronnen noemen de bijwerkdatum niet allemaal hetzelfde. Canada levert hem als
+            # 'update_date' -- gevuld voor alle 28.358 rijen, met datums tot 2019 terug -- maar
+            # die kolom werd niet gelezen. Daardoor had GEEN ENKEL Canadees record een
+            # last_updated of een shortage_start, kon de >1-jaar-regel er nooit vuren, en stonden
+            # tekorten uit 2019 gewoon als actief op de kaart.
+            last_updated = parse_date(row.get("last_updated") or row.get("update_date")
+                                      or row.get("last_update") or row.get("date_updated"))
             scraped_at = parse_date(row.get("scraped_at"))
             # Publicatie-/melddatum als startdatum wanneer de bron geen expliciete startdatum geeft
             # (bv. DK/LMST 'published_date'). BEWUST geen scrapedatum meer als nepdatum: die toonden

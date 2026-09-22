@@ -77,6 +77,21 @@ for r in orl:
         merged.append(r)
         added += 1
 
+# Ontdubbelen NA de samenvoeging. build_data ontdubbelt zijn eigen uitvoer al, maar de
+# last-live-data komt uit een eerdere draai die dat nog niet deed; die sleept zijn kopieen
+# hierheen. Zonder deze stap telt de kaart bronregels in plaats van meldingen -- precies de
+# vertekening die bij Canada 13.608 niet te onderscheiden kopieen opleverde.
+_voor = len(merged)
+_gezien, _uniek = set(), []
+for _r in merged:
+    _k = tuple(sorted((k, str(v)) for k, v in _r.items()))
+    if _k not in _gezien:
+        _gezien.add(_k)
+        _uniek.append(_r)
+merged = _uniek
+if _voor != len(merged):
+    print(f"ontdubbeld na samenvoegen: {_voor - len(merged)} identieke records verwijderd")
+
 # Indices herberekenen
 from collections import Counter
 ccs = sorted({r["cc"] for r in merged})
