@@ -158,7 +158,7 @@
                 <div class="chip feml" data-eml="rood">Rood</div>
                 <div class="chip feml" data-eml="oranje">Oranje</div>
                 <div class="chip feml" data-eml="geel">Geel</div>
-                <label class="chip" style="cursor:pointer" title="Preferentiebeleid: de zorgverzekeraar heeft een voorkeursvariant (meestal de goedkoopste) aangewezen die standaard wordt vergoed. Een tekort van een preferent middel weegt zwaarder omdat alternatieven niet automatisch vergoed worden."><input type="checkbox" id="f-preferent" style="vertical-align:-1px;margin-right:4px">alleen preferent</label>
+                
                 <select id="f-vorm" class="vorm-select" title="Toedieningsvorm"><option value="all">Alle vormen</option></select>
                 <div class="search"><input type="text" id="f-search" placeholder="Zoek stof of product…" autocomplete="off"></div>
             </div>
@@ -398,12 +398,11 @@ function prettyName(s) {
 
 function renderKpis() {
     const farmEms = FARMANCO_EML.filter(m => m.eml);
-    const farmPref = farmEms.filter(m => m.preferent).length;
     const cbgEml = CBG_TAV.filter(e => e.eml).length;
     const mapRecent = MAP_SIGNALS.filter(s => s.first && s.first >= addDays(mapRef(), -120));
     const mapEml = mapRecent.filter(s => s.eml).length;
     document.getElementById("kpis").innerHTML = `
-        <div class="kpi"><div class="n">${farmEms.length}</div><div class="l">Farmanco op EMS (${farmPref} preferent)</div></div>
+        <div class="kpi"><div class="n">${farmEms.length}</div><div class="l">Farmanco op EMS</div></div>
         <div class="kpi"><div class="n">${cbgEml}</div><div class="l">CBG-TAV op EMS</div></div>
         <div class="kpi"><div class="n">${mapRecent.length}</div><div class="l">Nieuwe buitenlandse signalen (120d)</div></div>
         <div class="kpi"><div class="n">${mapEml}</div><div class="l">Daarvan op EMS</div></div>`;
@@ -417,14 +416,13 @@ function renderFarmanco() {
     if (!host) return;
     let list = FARMANCO_EML.filter(m => m.eml);   // sectie 1b = alleen op EMS
     if (S.fEml !== "all") list = list.filter(m => m.eml === S.fEml);
-    if (S.fPref) list = list.filter(m => m.preferent);
     if (S.fVorm !== "all") list = list.filter(m => vormCats(m.vorm).includes(S.fVorm));
     if (S.fQ) { const q = S.fQ.toUpperCase(); list = list.filter(m => (m.stof + " " + m.omschrijving).toUpperCase().includes(q)); }
     if (!list.length) { host.innerHTML = `<div class="empty">Geen Farmanco-meldingen in deze selectie.</div>`; return; }
     host.innerHTML = list.map(m => `<div class="row">
             <span class="date">${m.datum || ""}</span>
             <span class="eml-dot ${m.eml}"></span>
-            <span class="name">${esc(m.stof)}${m.preferent ? ' <span class="badge impact" title="Preferentiebeleid: zorgverzekeraar heeft een voorkeursvariant aangewezen die standaard wordt vergoed">preferent</span>' : ''}</span>
+            <span class="name">${esc(m.stof)}</span>
             <span class="meta">${esc(m.omschrijving)}${m.prk ? ` <span class="prk-tag" title="G-standaard: ${esc(m.prk_naam || "")}">PRK ${esc(m.prk)}</span>` : ''}</span>
             <span class="eml-tag ${m.eml}">${(m.eml || "").toUpperCase()}</span>
         </div>`).join("");
@@ -449,7 +447,7 @@ function renderFarmancoByAtc() {
         const body = `<div class="mgroup-body">` + ms.map(m => `<div class="row">
                 <span class="date">${m.datum || ""}</span>
                 <span class="eml-dot ${m.eml || "none"}"></span>
-                <span class="name">${esc(m.stof)}${m.preferent ? ' <span class="badge impact">preferent</span>' : ''}</span>
+                <span class="name">${esc(m.stof)}</span>
                 <span class="meta">${esc(m.omschrijving)}${m.prk ? ` <span class="prk-tag" title="G-standaard: ${esc(m.prk_naam || "")}">PRK ${esc(m.prk)}</span>` : ''}</span>
                 <span class="reg">${m.atc}</span>
                 <span class="eml-tag ${m.eml || "overig"}">${(m.eml || "overig").toUpperCase()}</span>
@@ -570,7 +568,6 @@ document.querySelectorAll(".feml").forEach(c => c.addEventListener("click", () =
     document.querySelectorAll(".feml").forEach(x => x.classList.remove("active"));
     c.classList.add("active"); S.fEml = c.dataset.eml; renderFarmanco();
 }));
-document.getElementById("f-preferent").addEventListener("change", e => { S.fPref = e.target.checked; renderFarmanco(); });
 document.getElementById("f-vorm").addEventListener("change", e => { S.fVorm = e.target.value; renderFarmanco(); });
 let _t3, _t4, _t5;
 document.getElementById("f-search").addEventListener("input", e => { clearTimeout(_t3); _t3 = setTimeout(() => { S.fQ = e.target.value; renderFarmanco(); }, 150); });
