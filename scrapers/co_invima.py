@@ -156,7 +156,12 @@ class CoInvimaScraper(BaseScraper):
                 "country_name": self.country_name,
                 "source": self.source_name,
                 "medicine_name": product,
-                "active_substance": "",
+                # INVIMA publiceert deze lijst op GENERIEKE naam, niet op merknaam:
+                # "ABACAVIR", "ACITRETINA", "ACIDO COLICO". Dat veld is dus de werkzame
+                # stof. Het bleef leeg, waardoor er geen ATC uit af te leiden viel en de
+                # ontdubbeling terugviel op een CSV van juli -- Colombia stond daardoor
+                # twee maanden stil zonder dat er een foutmelding was.
+                "active_substance": product,
                 "strength": str(row.get("strength", "")).strip() if pd.notna(row.get("strength")) else "",
                 "package_size": "",
                 "dosage_form": str(row.get("dosage_form", "")).strip() if pd.notna(row.get("dosage_form")) else "",
