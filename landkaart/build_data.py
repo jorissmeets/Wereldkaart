@@ -433,7 +433,12 @@ def build():
             # tarneraskus-filter stond op 'Mõlemad' (beide), waardoor ook 'marketing beëindigd'
             # als tekort binnenkwam. Met 'Tarneraskusega' blijven 153 echte leveringsproblemen
             # over (400 -> 153), alle met ATC, stof, vorm, sterkte en vergunninghouder.
-            if cc in ("NL", "EU", "LT", "TR", "ZA", "KR", "TW"):
+            # PT eruit (22-09, besluit Joris na validatie): INFARMED meldt maar enkele
+            # tientallen tekorten terwijl de markt vele malen groter is, en Jesper kon de
+            # gemelde middelen niet in de bron terugvinden. Een bron die structureel te
+            # weinig meldt, geeft een vals gevoel van rust: nul tekorten in een ATC4-pool
+            # leest als "geen probleem" terwijl het "niet gemeten" betekent.
+            if cc in ("NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT"):
                 continue
 
             cn = safe_str(row.get("country_name")) or cc
