@@ -22,10 +22,44 @@ voor op Griekenland"*, oftewel vier en een half jaar.
 | `paren.csv` | één rij per molecuul × landenpaar, met het verschil in dagen |
 | `landenparen.csv` | samengevat per landenpaar — **naïef, niet voor conclusies** |
 | `landenparen_venster.csv` | idem, maar beperkt tot een gemeenschappelijk venster |
+| `landenparen_streng.csv` | **de enige tabel waar ik iets op zou baseren**: venster én beide datums een feitelijke start |
 | `panel.csv` | **het instrument voor de toekomst**, zie onder |
 
 Herbouwen: `uv run --python 3.13 --with pandas python bouw_volgorde_dataset.py`
 Het venster is verzetbaar: `VOLGORDE_VENSTER=2026-01-01 uv run … python bouw_volgorde_dataset.py`
+
+---
+
+## Wat de data nu laat zien: geen golf
+
+Ik heb het met de strengst mogelijke filter bekeken — alleen landenparen waarvan **beide**
+datums een feitelijke start meten, binnen een gemeenschappelijk venster. Dat zijn 3.356
+molecuulparen over 13 landen.
+
+De verdeling van de vertraging tussen twee landen:
+
+| binnen | aandeel |
+|---|---|
+| 7 dagen | 5% |
+| 14 dagen | 9% |
+| 30 dagen | 16% |
+| 60 dagen | 28% |
+| 90 dagen | 38% |
+
+Mediaan 133 dagen, kwartielen 52 tot 249.
+
+**Als tekorten in een golf over landen trokken, zou je een piek bij korte vertraging zien.**
+Die is er niet; de verdeling is vlak. En in élk "sterk" landenpaar uit
+`landenparen_streng.csv` is de spreiding groter dan de mediaan — Noorwegen loopt op bijna
+alles voor met medianen van 90 tot 160 dagen en spreidingen van 158 tot 192.
+
+Dat betekent één van drie dingen, en welke weet ik niet:
+1. landen raken grotendeels onafhankelijk van elkaar in tekort;
+2. er is wél een golf, maar onze datums zijn te grof om hem te zien;
+3. de golf zit in een deelverzameling (één oorzaakstype, één productvorm) die in het
+   gemiddelde wegvalt.
+
+Punt 3 is wat ik zelf als eerste zou onderzoeken.
 
 ---
 
@@ -41,9 +75,26 @@ vooraf**; lidstaten hebben dat verschillend aangescherpt.
 Een land met een strengere voorafmeldplicht loopt daardoor per definitie voor — en dat zegt
 niets over waar het tekort vandaan komt. **Dan meet je meldplicht, geen besmetting.**
 
-Wat per land bekend is, staat in `../../datum_betekenis.json` en in de kolom
-`datum_betekenis`. Gebruik `beide_vergelijkbaar` in `paren.csv` om alleen paren te houden
-waarvan beide datums hetzelfde meten.
+Dit is uitgezocht per land, in de brondocumentatie en de wetgeving. Uitkomst: **van de 28
+landen meten er 14 iets anders dan de feitelijke start.**
+
+| betekenis | landen |
+|---|---|
+| feitelijke start | AT BE DE EE FI GR HR HU LV NO SI SK (13) |
+| verwachte/geraamde start | AU IE IS IT MY SE (6) |
+| publicatiedatum | CA CZ DK GB US (5) |
+| meldingsdatum | ES RO (2) |
+| registratiedatum | JP (1) |
+| onbekend | SA (1) |
+
+Alles staat met citaat en bron in `../../datum_betekenis.json`.
+
+Let op één spanning die ik er niet uit heb gepoetst: **IJsland** staat als "vergelijkbaar"
+maar meet `Áætlað upphaf` — een *geraamd* begin. En juist IJsland loopt in de ruwe data op
+bijna alles voor. Gebruik daarom liever de kolom `beide_feitelijk` dan
+`beide_vergelijkbaar`; die is strenger en houdt dit soort gevallen buiten de deur.
+
+`landenparen_streng.csv` past dat filter al toe.
 
 ### 2. De registers lopen dertien jaar uiteen
 

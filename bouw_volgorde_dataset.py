@@ -114,6 +114,11 @@ def main() -> None:
             "meldingen": tel[(atc, cc)],
             "datum_betekenis": b.get("betekenis", "onbekend"),
             "datum_vergelijkbaar": b.get("vergelijkbaar", ""),
+            # Strenger dan de ja/nee-vlag, en bewust apart. IJsland staat als vergelijkbaar
+            # maar meet een GERAAMD begin ("Áætlað upphaf") -- en loopt in de data op bijna
+            # alles voor. Wie alleen feitelijke startdatums vergelijkt, houdt dat soort
+            # spanning buiten de deur.
+            "is_feitelijke_start": "ja" if b.get("betekenis") == "feitelijke_start" else "nee",
             "voor_venster": "ja" if v["start"] < VENSTER_START else "nee",
             "toekomst": "ja" if v["start"] > vandaag else "nee",
         })
@@ -144,6 +149,8 @@ def main() -> None:
                     "dagen_ertussen": dagen(a["start"], b["start"]),
                     "beide_vergelijkbaar": "ja" if (a["datum_vergelijkbaar"] is True
                                                     and b["datum_vergelijkbaar"] is True) else "nee",
+                    "beide_feitelijk": "ja" if (a["is_feitelijke_start"] == "ja"
+                                                and b["is_feitelijke_start"] == "ja") else "nee",
                     "een_voor_venster": "ja" if "ja" in (a["voor_venster"], b["voor_venster"]) else "nee",
                 })
     schrijf(os.path.join(UIT, "paren.csv"), paren)
@@ -242,11 +249,45 @@ def main() -> None:
         })
     venster.sort(key=lambda r: -abs(r["aandeel_a_eerst"] - 0.5))
     schrijf(os.path.join(UIT, "landenparen_venster.csv"), venster)
+
+    # ── 6. De strengste variant: venster EN beide datums een feitelijke start ──
+    # Dit is de enige tabel waar ik een uitspraak op zou baseren.
+    feitelijk = {cc for cc, v in betekenis.items() if v.get("betekenis") == "feitelijke_start"}
+    bak_s = defaultdict(list)
+    for p in paren:
+        if p["eerst"] not in feitelijk or p["daarna"] not in feitelijk:
+            continue
+        if p["eerst"] not in meedoen or p["daarna"] not in meedoen:
+            continue
+        if p["start_eerst"] < VENSTER_START or p["start_daarna"] < VENSTER_START:
+            continue
+        if p["start_daarna"] > vandaag:
+            continue
+        sleutel = tuple(sorted((p["eerst"], p["daarna"])))
+        bak_s[sleutel].append((1 if p["eerst"] == sleutel[0] else -1) * p["dagen_ertussen"])
+    streng = []
+    for (a, b), verschillen in bak_s.items():
+        n = len(verschillen)
+        if n < MIN_GEDEELD:
+            continue
+        a_eerst = sum(1 for v in verschillen if v > 0)
+        streng.append({
+            "land_a": a, "land_b": b, "gedeelde_moleculen": n,
+            "a_eerst": a_eerst, "b_eerst": sum(1 for v in verschillen if v < 0),
+            "gelijke_dag": sum(1 for v in verschillen if v == 0),
+            "aandeel_a_eerst": round(a_eerst / n, 3),
+            "mediaan_dagen": round(statistics.median(verschillen), 1),
+            "spreiding_dagen": round(statistics.pstdev(verschillen), 1) if n > 1 else 0,
+        })
+    streng.sort(key=lambda r: -abs(r["aandeel_a_eerst"] - 0.5))
+    schrijf(os.path.join(UIT, "landenparen_streng.csv"), streng)
+    print(f"landenparen_streng.csv: {len(streng)} paren "
+          f"({len(feitelijk)} landen met een feitelijke startdatum)")
     print(f"landenparen_venster.csv: {len(venster)} paren binnen {VENSTER_START}..{vandaag}")
 
-    if venster:
-        print("\nsterkst eenzijdige paren BINNEN het venster (nog GEEN conclusie -- zie README):")
-        for r in venster[:10]:
+    if streng:
+        print("\nsterkst eenzijdige paren, STRENGE variant (nog GEEN conclusie -- zie README):")
+        for r in streng[:10]:
             richting = f"{r['land_a']} voor {r['land_b']}" if r["aandeel_a_eerst"] > 0.5 \
                 else f"{r['land_b']} voor {r['land_a']}"
             aandeel = max(r["aandeel_a_eerst"], 1 - r["aandeel_a_eerst"])
