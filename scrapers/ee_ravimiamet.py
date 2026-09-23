@@ -98,9 +98,24 @@ class EeRavimiametScraper(BaseScraper):
         Ga dus niet de datumophaling vertragen om dit op te lossen.
         """
         for poging in range(1, pogingen + 1):
-            resp = self.session.post(
-                self.SEARCH_URL, data=data, headers=self._post_headers(), timeout=60
-            )
+            try:
+                resp = self.session.post(
+                    self.SEARCH_URL, data=data, headers=self._post_headers(), timeout=60
+                )
+            except requests.RequestException as exc:
+                # Ook een time-out of verbroken verbinding is het proberen waard. Voorheen
+                # vloog die er meteen uit, en omdat de pagineringslus een mislukte pagina als
+                # definitief beschouwt, viel de hele Estse set af: "50 van 113 opgehaald,
+                # niet weggeschreven". Dat is correct gedrag van die lus, maar het maakte een
+                # hikje van een seconde tot een gemiste verversing.
+                if poging == pogingen:
+                    print(f"  {label}: netwerkfout na {pogingen} pogingen ({type(exc).__name__})")
+                    return None
+                wacht = 4 * poging
+                print(f"  {label}: netwerkfout ({type(exc).__name__}), {wacht}s wachten "
+                      f"en opnieuw (poging {poging + 1}/{pogingen})")
+                time.sleep(wacht)
+                continue
             if resp.status_code == 200:
                 return resp
             if resp.status_code != 403:
