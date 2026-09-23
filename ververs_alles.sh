@@ -142,7 +142,10 @@ if leeg: print(f'  LET OP, landen met minder dan 10 records: {leeg}')
 
 if [ "${1:-}" = "--deploy" ]; then
   echo; echo "### 8. Publiceren"
-  git add -A data.json atc4_dekking.json sfk_verloop.json landkaart.html output/ 2>/dev/null
+  # De vier tab-3-bestanden staan er expliciet bij. Ze werden wel ververst maar nooit
+# gepubliceerd: ze ontbraken in deze lijst, dus vroegsignalering.html laadde maandenlang
+# verouderde Farmanco-, CBG- en SFK-gegevens terwijl de run als geslaagd gold.
+git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json landkaart.html output/ 2>/dev/null
   git commit -q -m "Dataverversing $DATUM" && git push -q origin HEAD && echo "  live gezet"
 else
   echo; echo "NIET gepubliceerd. Controleer de cijfers en draai daarna:"

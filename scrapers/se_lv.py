@@ -35,6 +35,34 @@ class SeLvScraper(BaseScraper):
         except (ValueError, TypeError):
             return None
 
+    DETAIL_URL = "https://www.lakemedelsverket.se/api/sts/"
+
+    def _haal_redenen(self, ids: list, workers: int = 6) -> dict:
+        """id -> reden, via de detail-endpoint. Zes tegelijk; de bron is geen grote dienst."""
+        from concurrent.futures import ThreadPoolExecutor
+
+        uit, mislukt = {}, 0
+
+        def een(pid):
+            try:
+                r = requests.get(self.DETAIL_URL, params={"id": pid}, timeout=30,
+                                 headers={"User-Agent": "Mozilla/5.0"})
+                if r.status_code != 200:
+                    return pid, None
+                return pid, (r.json().get("reason") or "").strip()
+            except Exception:                        # noqa: BLE001
+                return pid, None
+
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            for pid, reden in pool.map(een, ids):
+                if reden is None:
+                    mislukt += 1
+                elif reden:
+                    uit[pid] = reden
+        print(f"  Redenen opgehaald: {len(uit)}/{len(ids)}"
+              + (f" ({mislukt} mislukt)" if mislukt else ""))
+        return uit
+
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
 
@@ -68,6 +96,11 @@ class SeLvScraper(BaseScraper):
 
         print(f"  Downloaded {len(all_items)} records")
 
+        # De reden staat NIET in de zoekrespons maar wel achter GET /api/sts/?id=<id>.
+        # Zweden stond daardoor op 0 redenen. Parallel ophalen, want het zijn er ruim duizend;
+        # mislukt er een, dan blijft die ene reden leeg en draait de rest gewoon door.
+        redenen = self._haal_redenen([it.get("id") for it in all_items if it.get("id")])
+
         records = []
         for item in all_items:
             status_raw = item.get("status", "")
@@ -90,6 +123,7 @@ class SeLvScraper(BaseScraper):
                 "actual_end": self._parse_date(item.get("actualEndDate")),
                 "first_published": self._parse_date(item.get("firstPublicationDate")),
                 "last_updated": self._parse_date(item.get("lastUpdate")),
+                "reason": redenen.get(item.get("id"), ""),
                 "status": status,
                 "scraped_at": datetime.now().isoformat(),
             })

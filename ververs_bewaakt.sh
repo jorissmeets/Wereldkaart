@@ -138,6 +138,31 @@ PY
 SAMENVATTING=$(echo "$OORDEEL" | grep '^SAMENVATTING|' | cut -d'|' -f2-)
 echo; echo "TOETS: $SAMENVATTING"
 
+# Hoeveel bronnen hebben het gehaald? Dit ontbrak, en de eerste echte run liet meteen zien
+# waarom het nodig is: achttien van de dertig scrapers vielen om op netwerkfouten, de merge
+# vulde alles keurig aan uit de vorige live-data, en de toets keurde goed. De cijfers zagen
+# er plausibel uit omdat ze grotendeels van gisteren waren. Een verversing die niets ververst
+# hoort niet gepubliceerd te worden.
+# Alleen DEZE run tellen: het logboek is per dag en wordt aangevuld, dus bij een tweede run
+# op dezelfde dag zou je de bronnen van de eerste meetellen en altijd ruim boven de drempel
+# uitkomen. Vanaf de laatste startmarkering lezen.
+VERSLOG="$BASE/logs/ververs_$DATUM.log"
+if [ -f "$VERSLOG" ]; then
+  VANAF=$(grep -n "VERVERSING GESTART" "$VERSLOG" | tail -1 | cut -d: -f1)
+  VANAF=${VANAF:-1}
+  GELUKT=$(tail -n +"$VANAF" "$VERSLOG" | grep -cE '^OK ' || true)
+  GEFAALD=$(tail -n +"$VANAF" "$VERSLOG" | grep -cE '^(ERR|TIME) ' || true)
+  TOTAAL=$((GELUKT + GEFAALD))
+  echo "bronnen: $GELUKT geslaagd, $GEFAALD mislukt"
+  if [ "$TOTAAL" -gt 0 ] && [ "$GELUKT" -lt $((TOTAAL * 2 / 3)) ]; then
+    echo "NIET GEPUBLICEERD -- maar $GELUKT van de $TOTAAL bronnen geslaagd"
+    echo "$(date '+%F %T')  NIET GEPUBLICEERD  $SAMENVATTING  ::  slechts $GELUKT/$TOTAAL bronnen geslaagd" > "$STATUS"
+    melding "Niet gepubliceerd" "slechts $GELUKT van $TOTAAL bronnen geslaagd"
+    rm -f "$VOOR"
+    exit 1
+  fi
+fi
+
 # Een verwerkende stap die omviel maakt de cijfers onbetrouwbaar, ook als ze plausibel ogen:
 # een omgevallen build_tab3_data laat de kaart ongemoeid maar bevriest de EMS-beoordeling.
 FOUTEN="$BASE/logs/_kritieke_fouten.txt"
@@ -168,7 +193,10 @@ if [ "$DROOG" = "1" ]; then
 fi
 
 # --- publiceren -------------------------------------------------------------
-git add -A data.json atc4_dekking.json sfk_verloop.json sfk_historie.json output/ 2>/dev/null
+# De vier tab-3-bestanden staan er expliciet bij. Ze werden wel ververst maar nooit
+# gepubliceerd: ze ontbraken in deze lijst, dus vroegsignalering.html laadde maandenlang
+# verouderde Farmanco-, CBG- en SFK-gegevens terwijl de run als geslaagd gold.
+git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json sfk_historie.json output/ 2>/dev/null
 if git diff --cached --quiet; then
   echo "Niets veranderd; niets te publiceren."
   echo "$(date '+%F %T')  GEEN WIJZIGING  $SAMENVATTING" > "$STATUS"
