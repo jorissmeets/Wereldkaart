@@ -196,7 +196,10 @@ fi
 # De vier tab-3-bestanden staan er expliciet bij. Ze werden wel ververst maar nooit
 # gepubliceerd: ze ontbraken in deze lijst, dus vroegsignalering.html laadde maandenlang
 # verouderde Farmanco-, CBG- en SFK-gegevens terwijl de run als geslaagd gold.
-git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json sfk_historie.json output/ 2>/dev/null
+# analyse/ staat er expliciet bij: panel.csv groeit alleen als hij elke run wordt
+# meegecommit. Zonder die map blijft het panel een nulmeting en komt het volgorde-onderzoek
+# nooit van de grond.
+git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json sfk_historie.json analyse/ output/ 2>/dev/null
 if git diff --cached --quiet; then
   echo "Niets veranderd; niets te publiceren."
   echo "$(date '+%F %T')  GEEN WIJZIGING  $SAMENVATTING" > "$STATUS"

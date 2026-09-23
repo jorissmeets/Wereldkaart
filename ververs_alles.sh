@@ -123,6 +123,14 @@ echo; echo "### 5b. ATC-codes toetsen aan de stofnaam"
 $UV python corrigeer_atc_stofnaam.py --schrijf 2>&1 | tail -3
 kritiek "corrigeer_atc_data" $UV python corrigeer_atc_stofnaam.py --data --schrijf
 
+# --- 5c. Volgorde-onderzoek: panel bijwerken en dataset bouwen -------------
+# Het panel legt vast WANNEER wij een molecuul voor het eerst in een land zagen. Dat is het
+# enige wat voor alle landen hetzelfde gemeten wordt; gerapporteerde startdatums betekenen
+# per land iets anders. Het groeit alleen als het elke run meedraait EN wordt meegecommit.
+echo; echo "### 5c. Volgorde-onderzoek"
+$UV python bouw_panel.py 2>&1 | tail -3
+$UV python bouw_volgorde_dataset.py 2>&1 | tail -6
+
 # --- 6. ATC4-dekking (als dat script bestaat) ------------------------------
 [ -f build_atc4_dekking.py ] && { echo; echo "### 6. ATC4-dekking"; $UV python build_atc4_dekking.py 2>&1 | tail -3; }
 
@@ -145,7 +153,7 @@ if [ "${1:-}" = "--deploy" ]; then
   # De vier tab-3-bestanden staan er expliciet bij. Ze werden wel ververst maar nooit
 # gepubliceerd: ze ontbraken in deze lijst, dus vroegsignalering.html laadde maandenlang
 # verouderde Farmanco-, CBG- en SFK-gegevens terwijl de run als geslaagd gold.
-git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json landkaart.html output/ 2>/dev/null
+git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json landkaart.html analyse/ output/ 2>/dev/null
   git commit -q -m "Dataverversing $DATUM" && git push -q origin HEAD && echo "  live gezet"
 else
   echo; echo "NIET gepubliceerd. Controleer de cijfers en draai daarna:"

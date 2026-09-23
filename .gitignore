@@ -13,3 +13,7 @@ sfk_historie_cache/
 
 # 15 MB bevroren momentopname; nodig voor het vangnet in _merge_live.py
 referentie/
+
+# Het volgorde-panel MOET meegecommit worden, anders groeit het niet en blijft het
+# eeuwig een nulmeting. Zelfde voor de afgeleide analysebestanden.
+!analyse/volgorde/*.csv
