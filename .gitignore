@@ -10,3 +10,6 @@ output/*.pptx
 output/*.docx
 output/*.py
 sfk_historie_cache/
+
+# 15 MB bevroren momentopname; nodig voor het vangnet in _merge_live.py
+referentie/

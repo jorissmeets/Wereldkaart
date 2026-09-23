@@ -3,10 +3,13 @@
 - Verse records zonder PRK erven de PRK van het matchende last-live-record.
 - Last-live records die niet in vers zitten worden toegevoegd (niets verloren).
 Herberekent de indices en schrijft naar root data.json."""
-import json, re
+import json, os, re
 
 FRESH = "/Users/karkara/Documents/LCG/Landkaart/landkaart/data.json"
-OLD = "/private/tmp/claude-501/-Users-karkara-Documents/a8e1a32f-df92-4b90-907c-a464aa5707b6/scratchpad/lastlive_2026-09-21/data.json.lastlive"
+# Bevroren momentopname van de live kaart op 21-09-2026, als vangnet voor landen waarvan
+# de scraper faalt. Stond eerder in /private/tmp; dat wordt door macOS opgeruimd en bestaat
+# helemaal niet op een andere machine, waardoor de wekelijkse run stilletjes zou breken.
+OLD = os.path.join(os.path.dirname(os.path.abspath(__file__)), "referentie", "lastlive_2026-09-21.json")
 OUT = "/Users/karkara/Documents/LCG/Landkaart/data.json"
 
 _ws = re.compile(r"\s+")
