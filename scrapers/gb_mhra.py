@@ -31,20 +31,66 @@ WAT DEZE BRONNEN NIET LEVEREN — en dus leeg blijft
 Geen enkele GB-bron geeft een ATC-code, een package_size of een vergunninghoudernummer.
 Die velden blijven leeg. ATC hoort via de bestaande naam-naar-PRK/ATC-pijplijn te komen;
 in de scraper gokken levert precies de stille fouten op waar dit project eerder op is
-stukgelopen. `active_substance` zit meestal IN de medicijnnaam, maar niet als apart veld;
-we splitsen het niet uit, want dat zou raden zijn.
+stukgelopen.
+
+WERKZAME STOF: WEL UITLEZEN (correctie 23-09)
+---------------------------------------------
+Hier stond eerder dat we `active_substance` NIET uit de medicijnnaam halen "want dat zou
+raden zijn". Dat was te streng en het kostte het hele land: build_data slaat elke rij
+zonder ATC5 over (`if not atc5: continue`), en de ATC-verrijking (enrich_atc_llm.py) leest
+uitsluitend de kolom `active_substance`. Leeg veld -> geen ATC -> nul GB-rijen op de kaart,
+terwijl de scraper 207 rijen meldde en zichzelf als geslaagd rapporteerde. Dat is dezelfde
+fout als bij CO/INVIMA: de bron publiceert op generieke naam, maar die naam stond in de
+verkeerde kolom.
+
+DHSC schrijft zijn meldingen op INN + sterkte + toedieningsvorm ("Lansoprazole 15mg en 30mg
+orodispersible tablets"). De stofnaam STAAT er dus letterlijk; hem eruit lezen is lezen,
+geen raden. Wat we wel en niet doen:
+  * sterktes, toedieningsvormen en merknamen (alles met ®/™) gaan eruit;
+  * wat overblijft wordt alleen weggeschreven als het EXACT voorkomt in de INN-referentie
+    van dit project (name2atc.json, alleen de sleutels — we leiden hier GEEN ATC af);
+  * herkennen we een deel van de naam niet, dan blijft het veld LEEG. Liever geen stof dan
+    de verkeerde: "Sulfadiazine silver" wordt dus niet stilletjes "Sulfadiazine".
+  * staan er meerdere stoffen in, dan komen ze met " / " in het veld. De verrijking ziet
+    dat als combinatiepreparaat en laat de ATC leeg, in plaats van de code van de EERSTE
+    component te pakken (latanoprost/timolol zou anders "latanoprost" worden).
+Gemeten op de scrape van 22-09: 138 van de 207 rijen krijgen zo een stofnaam. De rest zijn
+merknaam-only meldingen (Estradot®, Creon®, Adipine® XL) en alerts op categorieniveau
+("GLP-1 receptor agonists"). Die blijven bewust leeg en worden in de log geteld.
 """
 
 from __future__ import annotations
 
+import json
 import re
 from datetime import datetime
+from pathlib import Path
 
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
 from scrapers.base_scraper import BaseScraper
+
+# INN-referentie van dit project. We gebruiken hier ALLEEN de sleutels (de stofnamen) als
+# woordenboek om te controleren of wat we uit de productnaam lezen echt een werkzame stof
+# is. De ATC-codes in dit bestand blijven hier bewust ongebruikt: het toekennen van een ATC
+# is het werk van enrich_atc_llm.py, met zijn eigen keuring en cache.
+_INN_FILE = Path(__file__).resolve().parent.parent / "name2atc.json"
+_INN_NAMES: set[str] | None = None
+
+
+def _inn_names() -> set[str]:
+    """Lees de INN-referentie een keer in. Ontbreekt hij, dan blijft de stofnaam leeg."""
+    global _INN_NAMES
+    if _INN_NAMES is None:
+        try:
+            _INN_NAMES = {k.upper() for k in json.loads(_INN_FILE.read_text(encoding="utf-8"))}
+        except (OSError, ValueError) as exc:
+            print(f"  LET OP: INN-referentie {_INN_FILE.name} niet leesbaar ({exc}); "
+                  f"active_substance blijft leeg en GB krijgt dus geen ATC")
+            _INN_NAMES = set()
+    return _INN_NAMES
 
 
 class GbMhraScraper(BaseScraper):
@@ -96,6 +142,39 @@ class GbMhraScraper(BaseScraper):
         "transdermal patches", "suppositories", "pessaries", "vaginal gel",
         "prefilled syringe", "pre-filled syringe", "inhaler", "injection", "infusion",
         "capsules", "tablets", "sachets", "cream", "ointment", "granules", "ampoules",
+    )
+
+    # Woorden die in een DHSC-productnaam om de stofnaam heen staan: toedieningsvorm,
+    # eenheid, verpakking, en het meldingsjargon ("restriction", "substitution"). Alles
+    # hieruit gaat weg voordat we kijken wat er als stofnaam overblijft. De lijst mag
+    # gerust groeien; hij kan de stofnaam niet aantasten, want elk overgebleven fragment
+    # moet daarna alsnog letterlijk in de INN-referentie staan.
+    SUBSTANCE_NOISE = re.compile(
+        r"\b(orodispersible|dispersible|modified[- ]release|prolonged[- ]release"
+        r"|immediate[- ]release|gastro[- ]resistant|effervescent|soluble|sublingual"
+        r"|oromucosal|buccal|transdermal|dry powder|breath actuated|unit dose"
+        r"|preservative free|sugar free|pre[- ]?filled|prefilled|multi[- ]?dose|low dose"
+        r"|auto[- ]injector|chewable|cfc free|cfc"
+        r"|tablets?|capsules?|granules?|sachets?|inhalers?|injections?|infusions?"
+        r"|solutions?|suspensions?|creams?|ointments?|gels?|drops?|patches?|pens?|vials?"
+        r"|ampoules?|syringes?|cartridges?|powders?|sprays?|shampoo|suppositories|pessaries"
+        r"|lozenges?|liquid|elixir|syrup|nebuliser|generators?|bags?"
+        r"|oral|eye|nasal|vaginal|rectal|dermal|solvent|for|with"
+        r"|micrograms?|mcg|milligrams?|mg|grams?|ml|iu|units?|mmol|hours?|dose|million"
+        r"|presentations?|of|in|is|are|being|discontinued|discontinuation|update[d]?"
+        r"|restriction|substitution|further|extended|mix|no)\b",
+        re.I,
+    )
+
+    # Zoutstaarten. Alleen voor de CONTROLE tegen de INN-referentie: "Apomorphine
+    # hydrochloride" moet als apomorfine herkend worden. In het veld schrijven we wel de
+    # letterlijke brontekst, zodat we de bron niet herschrijven. Zelfde lijst als
+    # enrich_atc_llm.norm() gebruikt, zodat "hier goedgekeurd" ook "daar deterministisch
+    # gevonden" betekent en er geen stof alsnog bij een LLM belandt.
+    SALT_TAIL = re.compile(
+        r"\b(HYDROCHLORIDE|HYDROCHLORIDUM|SODIUM|NATRIUM|SULFATE|SULFAS|MESILATE|MESYLATE"
+        r"|MALEATE|MALEAS|CITRATE|ACETATE|SUCCINATE|TARTRATE|FUMARATE|BESILATE|HEMIFUMARATE"
+        r"|DIHYDRATE|MONOHYDRATE|HYDRATE|POTASSIUM|CALCIUM|PHOSPHATE|CHLORIDE)\b"
     )
 
     def __init__(self) -> None:
@@ -164,6 +243,73 @@ class GbMhraScraper(BaseScraper):
         for form in self.DOSAGE_FORMS:  # langste vormen staan vooraan in de tuple
             if form in low:
                 return form
+        return ""
+
+    # ─── Werkzame stof uit de productnaam ───────────────────────────────────
+
+    def _substance_fragments(self, text: str) -> list[str]:
+        """Haal uit een stuk productnaam de losse stofnaam-kandidaten.
+
+        Weg gaat: alles met een cijfer erin (sterktes, "30/70", "Technetium99m"), de
+        ruiswoorden uit SUBSTANCE_NOISE, en elk fragment met ®/™ — dat is per definitie
+        een merknaam en geen INN. Wat overblijft wordt gesplitst op de scheidingstekens
+        die DHSC gebruikt, zodat een combinatiepreparaat ook echt als meer dan een stof
+        terugkomt.
+        """
+        s = re.sub(r"\S*\d\S*", " ", text or "")
+        s = self.SUBSTANCE_NOISE.sub(" ", s)
+
+        out: list[str] = []
+        for frag in re.split(r"[/+,&:;]|\s+and\s+", s):
+            frag = re.sub(r"\s+", " ", frag).strip(" .,-;:")
+            # DHSC plakt twee meldingen over dezelfde stof soms achter elkaar in een titel
+            # ("... transdermal patches Buprenorphine (Bupeaze®) ..."). Na het strippen
+            # staat er dan "Buprenorphine Buprenorphine"; dat is geen nieuwe stof.
+            woorden: list[str] = []
+            for w in frag.split():
+                if not woorden or w.lower() != woorden[-1].lower():
+                    woorden.append(w)
+            frag = " ".join(woorden)
+            if len(re.sub(r"[^A-Za-z]", "", frag)) < 4:
+                continue
+            if "®" in frag or "™" in frag:
+                continue
+            out.append(frag)
+
+        gezien, uniek = set(), []
+        for frag in out:
+            if frag.upper() not in gezien:
+                gezien.add(frag.upper())
+                uniek.append(frag)
+        return uniek
+
+    def _is_inn(self, fragment: str) -> bool:
+        """Staat dit fragment als werkzame stof in de INN-referentie van het project?"""
+        key = self.SALT_TAIL.sub("", fragment.upper())
+        return re.sub(r"\s+", " ", key).strip() in _inn_names()
+
+    def _active_substance(self, name: str) -> str:
+        """Lees de werkzame stof uit de productnaam, of geef "" als dat niet zeker kan.
+
+        Twee leesrichtingen, in deze volgorde:
+          1. de tekst BUITEN de haakjes — "Lansoprazole 15mg ... tablets" (stof eerst,
+             merk tussen haakjes);
+          2. de tekst BINNEN de haakjes — "Trurapi® (insulin aspart) ..." en
+             "Promixin (colistimethate) ..." (merk eerst, INN tussen haakjes).
+        Een leesrichting telt alleen als ELK fragment eruit in de INN-referentie staat.
+        Herkennen we er een niet, dan schrijven we niets: half opschrijven zou van
+        "Sodium fusidate ... en fusidic acid ..." een enkele stof maken en van
+        "Sulfadiazine silver" de verkeerde.
+        """
+        txt = str(name or "")
+        buiten = self._substance_fragments(re.sub(r"\([^)]*\)", " ", txt))
+        binnen = self._substance_fragments(" , ".join(re.findall(r"\(([^)]*)\)", txt)))
+        for kandidaten in (buiten, binnen):
+            if kandidaten and all(self._is_inn(f) for f in kandidaten):
+                # Meer dan een stof -> met " / " aan elkaar. enrich_atc_llm ziet dat als
+                # combinatiepreparaat en laat de ATC leeg, in plaats van de code van de
+                # eerste component toe te kennen.
+                return " / ".join(kandidaten)
         return ""
 
     def _blank(self) -> dict:
@@ -580,8 +726,21 @@ class GbMhraScraper(BaseScraper):
             seen.add(key)
             deduped.append(rec)
 
+        # Werkzame stof uit de productnaam. Centraal, na het ontdubbelen, zodat alle drie
+        # de bronnen langs dezelfde regels gaan en er maar een plek is om te controleren.
+        for rec in deduped:
+            rec["active_substance"] = self._active_substance(rec["medicine_name"])
+
         df = pd.DataFrame(deduped)
         dropped = len(records) - len(deduped)
+        met_stof = sum(1 for rec in deduped if rec["active_substance"])
+        combi = sum(1 for rec in deduped if " / " in rec["active_substance"])
         print(f"  Totaal: {len(df)} rijen ({dropped} duplicaten verwijderd), "
               f"{df['medicine_name'].nunique()} unieke producten")
+        # Deze regel is de reden dat GB eerder onzichtbaar op nul stond: zonder stofnaam
+        # geen ATC, en zonder ATC slaat build_data de rij over. Wat hier leeg blijft haalt
+        # de kaart dus NIET; dat hoort in de log te staan en niet stilletjes te gebeuren.
+        print(f"  Werkzame stof gelezen uit de naam: {met_stof}/{len(df)} rijen "
+              f"({combi} combinatiepreparaten; {len(df) - met_stof} zonder stof — "
+              f"merknaam-only of meldingen op categorieniveau, die halen de kaart niet)")
         return df

@@ -10,13 +10,18 @@ met die schone code (of leeg). Deterministisch, geen AI.
 """
 import sys, csv, re
 csv.field_size_limit(10_000_000)
-FIND = re.compile(r"[A-Z]\d{2}[A-Z]{2}\d{2}")
+# De Q-prefix is ATCvet: QJ01CE09 is de DIERgeneeskundige tegenhanger van J01CE09. Zonder
+# de optionele Q hieronder vindt search() de code MIDDEN in de string en levert hij de humane
+# variant terug -- diergeneesmiddelen verschijnen dan als humane tekorten en blazen bovendien
+# de bezetting van een therapeutische groep op. Het woordbegin voorkomt dat we een code uit
+# het midden van een langere tekenreeks plukken.
+FIND = re.compile(r"\bQ?[A-Z]\d{2}[A-Z]{2}\d{2}")
 # Sommige bronnen leveren een code op NIVEAU 4 (bv. B03AC, parenteraal ijzer). Dat is geen
 # defecte ATC-5 maar een geldige code: niet elke groep kent een vijfde niveau. Werd die niet
 # herkend, dan schreef dit script een LEGE waarde terug over de brondata -- 22 van de 23
 # Zwitserse codes gingen zo verloren, waardoor de kaart daar te stil stond. Nu behouden we
 # een niveau-4-code in plaats van hem weg te gooien.
-FIND4 = re.compile(r"[A-Z]\d{2}[A-Z]{2}(?![A-Z0-9])")
+FIND4 = re.compile(r"\bQ?[A-Z]\d{2}[A-Z]{2}(?![A-Z0-9])")
 
 
 def main():

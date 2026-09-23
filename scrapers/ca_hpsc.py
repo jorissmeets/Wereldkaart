@@ -139,6 +139,15 @@ class CaHpscScraper(BaseScraper):
                             "anticipated_start_date", "shortage_start_date")
         end = self._field(item, drug, "estimated_end_date", "actual_shortage_end_date",
                           "actual_end_date", "estimated_shortage_end_date")
+        # De ENIGE datum die Canada in de praktijk vult. In de export van 13-03-2026 was de
+        # bijwerkdatum voor alle 28.358 records gevuld (2017-03-13 t/m 2026-03-13), terwijl
+        # shortage_start, estimated_end en package_size voor 100% leeg waren. build_data leest
+        # die kolom bewust ('last_updated or update_date') voor de >1-jaar-inactiefregel.
+        # Zonder deze kolom heeft GEEN ENKEL Canadees record een datum, vuurt die regel nooit,
+        # en komt alles als 'actief' op de kaart -- precies de fout die tekorten uit 2019
+        # actief liet staan. Leeg laten als de bron niets levert; nooit de scrapedatum invullen.
+        updated = self._field(item, drug, "updated_date", "update_date", "last_updated",
+                              "updated_at", "en_updated_date", "date_updated")
         if not name and not substance:
             return None
         return {
@@ -153,14 +162,29 @@ class CaHpscScraper(BaseScraper):
             "marketing_auth_holder": company,
             "shortage_start": (start or "")[:10],
             "estimated_end": (end or "")[:10],
+            "update_date": (updated or "")[:10],
             "dosage_form": form,
             "status": self.KEEP_STATUS[status_raw],
             "scraped_at": datetime.now().isoformat(),
         }
 
     def _fetch(self, filter_type: str) -> list[dict]:
-        """Gepagineerd de search-API aflopen voor een filter_type (shortages/discontinuations)."""
-        out, offset = [], 0
+        """Gepagineerd de search-API aflopen voor een filter_type (shortages/discontinuations).
+
+        LET OP -- de lijst schuift tijdens het pagineren. In de export van 13-03-2026 stonden
+        266 paren rijen die op alle 18 bronkolommen identiek waren en alleen in scraped_at
+        1,3 tot 4,2 seconden verschilden: precies een pagina-aanroep uit elkaar (de run deed
+        ~2,3 s per pagina). De search-endpoint hersorteert dus tussen twee offset-aanroepen,
+        waardoor een melding op de paginagrens tweemaal langskomt. Daarom hier ontdubbelen op
+        het meldingsnummer.
+
+        Diezelfde verschuiving kan een melding ook OVERSLAAN, en dat ziet een rijtelling per
+        definitie niet. Daarom zetten we het aantal opgehaalde meldingen af tegen het totaal
+        dat de bron ZELF noemt; wijkt dat af, dan zegt de run dat hardop in plaats van zich
+        stil als geslaagd te melden.
+        """
+        out, offset, gezien, dubbel = [], 0, set(), 0
+        bron_totaal = None
         while True:
             params = {"filter_type": filter_type, "term": "", "offset": offset, "limit": self.PAGE}
             r = self.session.get(f"{self.API}/search", params=params, timeout=45)
@@ -174,14 +198,30 @@ class CaHpscScraper(BaseScraper):
             items = data.get("data") if isinstance(data, dict) else data
             if not items:
                 break
-            out.extend(items)
+            for it in items:
+                rid = it.get("id") or it.get("report_id") or it.get("shortage_id") \
+                    if isinstance(it, dict) else None
+                if rid is not None:
+                    if rid in gezien:
+                        dubbel += 1
+                        continue
+                    gezien.add(rid)
+                out.append(it)
             total = data.get("total") if isinstance(data, dict) else None
+            if total is not None:
+                bron_totaal = int(total)
             offset += self.PAGE
             if total is not None and offset >= int(total):
                 break
             if len(items) < self.PAGE:
                 break
             time.sleep(0.2)
+        if dubbel:
+            print(f"  {filter_type}: {dubbel} dubbel geleverde meldingen overgeslagen "
+                  f"(pagineringsverschuiving)")
+        if bron_totaal is not None and len(out) != bron_totaal:
+            print(f"  LET OP {filter_type}: de bron noemt {bron_totaal} meldingen, "
+                  f"opgehaald {len(out)} — er ontbreekt of dubbelt iets")
         return out
 
     def _scrape_tier3(self) -> list:

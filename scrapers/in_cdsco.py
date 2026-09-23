@@ -12,19 +12,54 @@ from scrapers.base_scraper import BaseScraper
 
 
 class InCdscoScraper(BaseScraper):
-    """Scraper for CDSCO (India) Not of Standard Quality (NSQ) drug alerts.
+    """UITGESCHAKELD (23-09-2026). CDSCO is geen tekortenbron.
 
-    CDSCO publishes NSQ data in two locations:
-    1. A dedicated NSQ drugs page with DataTables (JS-rendered):
-       /opencms/opencms/en/Notifications/nsq-drugs/
-    2. Monthly NSQ alert PDFs listed on the Alerts page:
-       /opencms/opencms/en/Notifications/Alerts/
+    CDSCO publiceert NSQ-meldingen (Not of Standard Quality): partijen die bij
+    steekproefcontrole door de kwaliteitstest zakken. Dat is kwaliteitstoezicht,
+    geen leveringsprobleem. De bron zegt dat zelf in de kop van elke maand-PDF:
+    "drug samples are picked from sales/distribution point, analyzed and list of
+    Not of Standard Quality (NSQ) drugs are displayed ... to make stakeholders
+    aware about the NSQ batches identified in the market."
 
-    This scraper targets the NSQ drugs page first (which contains structured
-    HTML tables with drug details including name, batch number, manufacturer,
-    and test results). If that page yields no data (due to JS rendering), it
-    falls back to scraping the Alerts page for NSQ alert metadata.
+    Wat deze scraper opleverde, was bovendien geen geneesmiddelenlijst maar een
+    lijst PDF-TITELS. In output/IN_CDSCO_shortage_*.csv stond bijvoorbeeld
+    medicine_name = "NOT OF STANDARD QUALITY ALERT FOR THE MONTH OF JAN-2018"
+    met shortage_start 2018-01-01. 37 rijen, 0 met een stofnaam, 0 met een ATC.
+
+    Nagemeten op 23-09-2026 (alle drie de stappen live gecontroleerd):
+      * Stap 1, /Notifications/nsq-drugs/ -> HTTP 200, 0 <table> in de HTML. De
+        tabel is verhuisd naar een iframe: cdscoonline.gov.in/CDSCO/viewPublicNSQDrug.
+        Daar staan twee lege DataTables ("NSQDrug", "SpuriousDrug") die pas via
+        jaar/maand-dropdowns gevuld worden. Levert dus altijd 0.
+      * Stap 2, PDF-parsing -> dood langs twee wegen tegelijk: tabula-py is niet
+        geinstalleerd, EN de verzamelde pdf_url is geen PDF. download_file_division.jsp
+        geeft HTTP 200 met Content-Type text/html en 149 bytes:
+        <iframe src='/opencms/resources/.../CDSCO NSQ june25.pdf'>. De echte PDF zit
+        een niveau dieper. Levert dus ook met tabula 0.
+      * Stap 3, /Notifications/Alerts/ -> HTTP 200, 300 rijen. Precies 37 daarvan
+        matchen het NSQ-patroon; dat zijn de 37 rijen in de CSV. Nieuwste bericht op
+        de hele pagina: 2025-10-08, dus ruim elf maanden stil. De 37 titels zijn sinds
+        2026-03-19 letterlijk ongewijzigd (identieke set in elke bewaarde CSV).
+      * Geen enkele van de 300 alerts (terug tot 2010-02-24) gaat over levering,
+        beschikbaarheid of tekort. 38 gaan over NSQ/kwaliteit, 12 over vervalsingen,
+        2 over recalls, de rest zijn circulaires.
+
+    Ook met een perfecte parser blijft het NSQ-partijdata: batchnummer, fabrikant en
+    een afkeurreden ("Assay of Dextrose", "Particulate matter"). Dat is geen tekort en
+    hoort niet op de tekortenkaart. Daarom niet gerepareerd maar uitgezet: 37
+    PDF-titels wegschrijven als tekortmeldingen is schadelijker dan niets leveren.
+
+    Het parseerwerk hieronder blijft staan voor het geval CDSCO ooit wel een
+    tekortenregister publiceert. Zet dan ENABLED weer op True.
+
+    Oorspronkelijke opzet:
+    1. NSQ-drugs-pagina met DataTables (JS-rendered)
+    2. Maandelijkse NSQ-alert-PDFs op de Alerts-pagina
+    3. Terugval op alert-metadata van de Alerts-pagina
     """
+
+    # Zet dit alleen op True als CDSCO aantoonbaar tekorten (en niet NSQ) publiceert.
+    ENABLED = False
 
     BASE = "https://cdsco.gov.in"
     NSQ_DRUGS_URL = "https://cdsco.gov.in/opencms/opencms/en/Notifications/nsq-drugs/"
@@ -514,6 +549,20 @@ class InCdscoScraper(BaseScraper):
         3. Always collect alert metadata from the Alerts page as baseline data
         """
         print(f"Scraping {self.country_name} ({self.source_name})...")
+
+        if not self.ENABLED:
+            # Zie de klasse-docstring voor de meting. CDSCO publiceert NSQ
+            # (kwaliteitsafkeuringen), geen tekorten; de Alerts-pagina staat sinds
+            # 2025-10-08 stil en leverde alleen PDF-titels op. Bewust leeg, geen fout.
+            print("  UITGESCHAKELD: CDSCO publiceert NSQ-kwaliteitsafkeuringen, geen "
+                  "tekorten. Zie de docstring van InCdscoScraper. 0 records.")
+            return pd.DataFrame(columns=[
+                "country_code", "country_name", "source",
+                "medicine_name", "active_substance", "strength",
+                "package_size", "status", "shortage_start",
+                "estimated_end", "scraped_at",
+            ])
+
         all_records = []
 
         # Step 1: Try structured NSQ tables page

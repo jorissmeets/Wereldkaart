@@ -28,6 +28,10 @@ class DkLmstScraper(BaseScraper):
         "juli": 7, "august": 8, "september": 9, "oktober": 10, "november": 11, "december": 12,
     }
 
+    # De lege datum die het Sitecore-CMS teruggeeft als er geen publicatiedatum is gezet
+    # (.NET DateTime.MinValue). Geen datum dus -- geen 1 januari van het jaar 1.
+    NULL_DATE = "0001-01-01"
+
     def __init__(self):
         super().__init__(
             country_code="DK",
@@ -35,6 +39,43 @@ class DkLmstScraper(BaseScraper):
             source_name="LMST",
             base_url="https://laegemiddelstyrelsen.dk",
         )
+        self.source_total: int | None = None
+
+    def _is_template(self, item: dict, table_data: dict) -> bool:
+        """Is dit een leeg CMS-sjabloon in plaats van een tekortmelding?
+
+        De lijst van Lægemiddelstyrelsen bevat vier redactiepagina's die nooit gevuld zijn
+        maar wel in de dynamiclists-API meekomen. Ze zijn aan drie onafhankelijke kenmerken
+        te herkennen, die alle drie exact dezelfde vier records aanwijzen (meting 23-09 op
+        366 live records):
+
+          1. de titel/URL noemt zichzelf sjabloon: "AA SKABELON - KAN DUPLIKERES";
+          2. de titel is "<product>; forsyningsvanskelighed" met een LEEG product, dus een
+             titel die met ';' begint (slug wordt dan '/-forsyningsvanskelighed/'): 3 stuks,
+             voor human-2025, human-2026 en veterinaer-2025;
+          3. het reden-veld bevat nog de hele ONGEKOZEN keuzelijst ("Produktionsproblemer /
+             Øget salg/efterspørgsel / Leveringsvanskeligheder / Kommercielle årsager /
+             Forsinkelser hos fremstiller"): 5 schuine strepen, terwijl een ingevulde reden
+             er 0 heeft of 1 (alleen "Øget salg/efterspørgsel" heeft er intern een).
+
+        BEWUST NIET gefilterd op een ontbrekende datum of een leeg veld op zich:
+          - "Sulfasalazin \"Hexal\" 500 mg enterotabletter" heeft ook datum 0001-01-01 maar
+            is een ECHTE melding (stof Sulfasalazin, ATC A07EC01, Sandoz A/S, permanent
+            markedsophør) -- die hoort te blijven;
+          - Previcox en Curamox Vet. (2021) hebben een leeg productveld in de lijst terwijl
+            de detailpagina wel product, stof en ATC noemt -- die horen ook te blijven.
+        """
+        naam = (item.get("name") or "").strip()
+        url = (item.get("url") or "").lower()
+        reden = (table_data.get(self.FIELD_REASON) or "").strip()
+
+        if "skabelon" in naam.lower() or "skabelon" in url:
+            return True
+        if naam.startswith(";"):
+            return True
+        if reden.count("/") >= 3:        # ongekozen keuzelijst i.p.v. één reden
+            return True
+        return False
 
     def _scrape_detail_substance(self, detail_url: str) -> str:
         """Scrape active substance from a detail page."""
@@ -111,12 +152,21 @@ class DkLmstScraper(BaseScraper):
         teller = data.get("counter") or {}
         if teller:
             print(f"  bron meldt: {teller.get('itemCount')}")
+            self.source_total = teller.get("totalResults")
         return data.get("results") or []
 
-    @staticmethod
-    def _pub_to_date(s: str) -> str:
-        """ISO-timestamp (2026-07-22T13:14:00Z) -> 2026-07-22."""
+    @classmethod
+    def _pub_to_date(cls, s: str) -> str:
+        """ISO-timestamp (2026-07-22T13:14:00Z) -> 2026-07-22.
+
+        De CMS-nuldatum 0001-01-01 betekent 'geen publicatiedatum gezet' en wordt leeg
+        teruggegeven. Zou je hem laten staan, dan leest de kaart hem als een startdatum van
+        ruim tweeduizend jaar geleden en verbergt de >1-jaar-inactiefregel de melding.
+        Leeg laten is hier het eerlijke antwoord; een scrapedatum invullen is dat niet.
+        """
         s = (s or "").strip()
+        if s.startswith(cls.NULL_DATE):
+            return ""
         return s[:10] if len(s) >= 10 and s[4:5] == "-" else ""
 
     def _period_end(self, period: str) -> str:
@@ -148,6 +198,17 @@ class DkLmstScraper(BaseScraper):
 
         all_results = self._fetch_all()
         print(f"  Downloaded {len(all_results)} records")
+        if self.source_total is not None and self.source_total != len(all_results):
+            print(f"  LET OP: bron noemt {self.source_total} resultaten, "
+                  f"opgehaald {len(all_results)}")
+
+        sjablonen = [it for it in all_results
+                     if self._is_template(it, it.get("dynamicTableData") or {})]
+        if sjablonen:
+            all_results = [it for it in all_results if it not in sjablonen]
+            print(f"  {len(sjablonen)} lege CMS-sjabloonpagina's overgeslagen "
+                  f"(geen tekortmelding): "
+                  + "; ".join(sorted((it.get("name") or "?").strip() for it in sjablonen)))
 
         # Batch-lookup substances from detail pages
         detail_urls = sorted({item.get("url", "") for item in all_results if item.get("url")})
@@ -164,6 +225,12 @@ class DkLmstScraper(BaseScraper):
         for item in all_results:
             table_data = item.get("dynamicTableData", {})
             detail_url = item.get("url", "")
+            # Ook hier de CMS-nuldatum niet doorgeven: build_data valt terug op
+            # published_date als shortage_start leeg is, en zou 0001-01-01 opnieuw als
+            # startdatum lezen.
+            gepubliceerd = (item.get("date") or "").strip()
+            if gepubliceerd.startswith(self.NULL_DATE):
+                gepubliceerd = ""
 
             records.append({
                 "country_code": self.country_code,
@@ -174,13 +241,13 @@ class DkLmstScraper(BaseScraper):
                 "strength": "",
                 "package_size": "",
                 "product_no": "",
-                "shortage_start": self._pub_to_date(item.get("date", "")),
+                "shortage_start": self._pub_to_date(gepubliceerd),
                 "estimated_end": self._period_end(table_data.get(self.FIELD_PERIOD, "")),
                 "expected_period": table_data.get(self.FIELD_PERIOD, ""),
                 "status": "shortage",
                 "reason": table_data.get(self.FIELD_REASON, ""),
                 "detail_url": detail_url,
-                "published_date": item.get("date", ""),
+                "published_date": gepubliceerd,
                 "scraped_at": datetime.now().isoformat(),
             })
 

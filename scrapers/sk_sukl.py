@@ -303,6 +303,86 @@ class SkSuklScraper(BaseScraper):
             open_toestand[kod] = kandidaat
         return open_toestand
 
+    # ── controle: ingangsdatum die niet bij de indieningsdatum past ─────────────
+
+    # Grens tussen "ver vooruit aangekondigd" en "vrijwel zeker een jaartal-tikfout".
+    # Gemeten over alle 7.720 R-meldingen in de export van 22-09-2026: mediaan 0 dagen,
+    # p95 48, p99 76. Tussen 304 en 365 dagen zit een gat en daarboven staan er nog maar
+    # vijf. 365 is dus geen rond getal dat we mooi vinden, maar de onderkant van dat gat.
+    MAX_VOORLOOP_DAGEN = 365
+
+    def _meld_ongeloofwaardige_ingangsdatums(self, rauw: pd.DataFrame,
+                                             toestand: dict[str, dict]) -> None:
+        """Maak zichtbaar welke OPENSTAANDE meldingen een onwaarschijnlijke ingangsdatum hebben.
+
+        WAT DIT VANGT. De toestandsmachine sorteert op Účinnosť (ingangsdatum). Een melding
+        met een ingangsdatum ver in de toekomst belandt daardoor ALTIJD achteraan in de reeks
+        van een product en overleeft dus elke hervatting die later is INGEDIEND. Zolang die
+        datum klopt is dat precies goed (09530 Ramipril: R ingediend 30-08-2026 met ingang
+        01-10-2026, 32 dagen; 80644 Javlor: 272 dagen — echte aankondigingen). Staat er een
+        jaartal-tikfout in, dan blijft het product voor onbepaalde tijd als tekort staan:
+
+          0498E Atorvastatín/Ezetimib Teva — R ingediend 04-02-2025, ingang 20-02-2028
+              (1.111 dagen, de grootste voorloop in de hele export; alle andere meldingen van
+              dit product hebben 0-64 dagen). Laatste woord van de houder is een HERVATTING
+              op 05-11-2025, maar het product staat als 'anticipated' vanaf 2028 op de kaart.
+          4989C Gamunex — R ingediend 10-12-2025, ingang 10-12-2026 (exact één jaar; alle
+              14 andere meldingen van dit product hebben ingang == indieningsdatum). Hervat
+              gemeld op 24-07-2026.
+          2376D Latanoprost/timolol Olikla — R ingediend 07-05-2024, ingang 07-05-2025 (exact
+              één jaar). Hervat gemeld op 28-05-2024; staat nu als LOPEND tekort.
+          95236 Sertralin Actavis 100 mg — R ingediend 22-12-2023, ingang 27-12-2024. Hervat
+              gemeld op 29-04-2024; staat nu als LOPEND tekort.
+          32720 Xyzal 50x5 mg — R ingediend 01-06-2021, ingang 01-09-2022. Twee LATER
+              ingediende Z-meldingen zetten het product per 2022 definitief uit de handel;
+              staat nu als lopend tekort sinds 2022.
+
+        WAAROM ALLEEN MELDEN EN NIET REPAREREN. Er is geen structureel verschil tussen deze
+        vijf en de terechte aankondigingen: in beide gevallen volgt er een later ingediende O
+        met een eerdere ingangsdatum. Het enige onderscheid is of de datum plausibel is, en
+        dat is een oordeel, geen bronfeit — ŠÚKL publiceert geen correctie. Zo'n regel
+        stilzwijgend weggooien of de datum "herstellen" zou data verzinnen. Dit hoort op tafel
+        bij Jesper/Nicky als kaartdefinitie, niet in een stille scraperregel. Het gaat om
+        5 van 2.726 producten (3 daarvan binnen de 813 lopende tekorten).
+        """
+        laatste: dict[str, tuple[str, str]] = {}
+        for kod, podanie, predmet in zip(rauw["Kód"], rauw["Podanie"], rauw["Predmet"]):
+            kod = self._tekst(kod)
+            podanie = self._tekst(podanie)
+            if not kod or not podanie:
+                continue
+            if kod not in laatste or podanie > laatste[kod][0]:
+                laatste[kod] = (podanie, self._tekst(predmet).upper())
+
+        verdacht = []
+        for kod, waarde in toestand.items():
+            start, podanie = waarde.get("start", ""), waarde.get("podanie", "")
+            try:
+                voorloop = (date.fromisoformat(start) - date.fromisoformat(podanie[:10])).days
+            except ValueError:
+                continue
+            if voorloop >= self.MAX_VOORLOOP_DAGEN:
+                verdacht.append((voorloop, kod, waarde, laatste.get(kod, ("", ""))))
+
+        if not verdacht:
+            return
+        print(f"  LET OP: {len(verdacht)} openstaande melding(en) met een ingangsdatum "
+              f">= {self.MAX_VOORLOOP_DAGEN} dagen na de indiening — mogelijk een jaartal-"
+              f"tikfout in de bron. Niet gecorrigeerd, wel om te controleren:")
+        for voorloop, kod, waarde, (laatste_podanie, laatste_predmet) in sorted(verdacht,
+                                                                               reverse=True):
+            # Alleen "weersproken" als het LAATSTE woord van de houder een ANDERE melding is
+            # dan de openstaande zelf. Anders is de aankondiging gewoon het jongste bericht
+            # (55407 MUSTOPHORAN: Z ingediend 14-03-2024 met ingang 01-06-2025 — ver vooruit,
+            # maar niets spreekt het tegen).
+            anders = laatste_podanie[:10] != waarde["podanie"][:10]
+            weersproken = (" — later ingediend weersproken door "
+                           f"{laatste_predmet} op {laatste_podanie[:10]}"
+                           if anders and laatste_predmet in ("O", "U", "Z") else "")
+            print(f"    {kod} {waarde['predmet']} ingang {waarde['start']} "
+                  f"(ingediend {waarde['podanie']}, +{voorloop} dagen) "
+                  f"-> status {waarde['status']}{weersproken}: {waarde['liek'][:55]}")
+
     # ── scrape ─────────────────────────────────────────────────────────────────
 
     def scrape(self) -> pd.DataFrame:
@@ -329,6 +409,8 @@ class SkSuklScraper(BaseScraper):
             per_status[waarde["status"]] += 1
         print(f"  na toestandsmachine: {len(toestand)} producten met een openstaande melding "
               + ", ".join(f"{k}={v}" for k, v in sorted(per_status.items())))
+
+        self._meld_ongeloofwaardige_ingangsdatums(rauw, toestand)
 
         lookup = self._bouw_lookup()
 
