@@ -140,6 +140,20 @@ class FiFimeaScraper(BaseScraper):
 
         return ""
 
+    @staticmethod
+    def _rss_datum(waarde: str) -> str:
+        """RFC-822 of ISO uit de RSS -> jjjj-mm-dd. Leeg bij iets onbekends."""
+        waarde = (waarde or "").strip()
+        if not waarde:
+            return ""
+        for fmt in ("%a, %d %b %Y %H:%M:%S %z", "%a, %d %b %Y %H:%M:%S %Z",
+                    "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d"):
+            try:
+                return datetime.strptime(waarde, fmt).strftime("%Y-%m-%d")
+            except ValueError:
+                continue
+        return ""
+
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
 
@@ -163,6 +177,9 @@ class FiFimeaScraper(BaseScraper):
             categories = {c.get("domain", ""): c.get_text(strip=True) for c in item.find_all("category")}
             guid = item.find("guid").get_text(strip=True) if item.find("guid") else ""
             creator_el = item.find("dc:creator") or item.find("creator")
+            # <pubDate> staat in elk item dat we toch al parseren, maar werd nooit uitgelezen;
+            # de kaart toonde daardoor voor Finland 0 bijwerkdatums op 738 meldingen.
+            pub_el = item.find("pubDate") or item.find("dc:date") or item.find("date")
             creator = creator_el.get_text(strip=True) if creator_el else ""
 
             start, end = self._parse_dates(content)
@@ -191,6 +208,7 @@ class FiFimeaScraper(BaseScraper):
                 "atc_code": categories.get("atc", ""),
                 "shortage_start": start,
                 "estimated_end": end,
+                "last_updated": self._rss_datum(pub_el.get_text(strip=True) if pub_el else ""),
                 "status": "shortage",
                 "marketing_auth_holder": creator,
                 "notes": desc,

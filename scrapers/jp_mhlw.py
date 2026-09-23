@@ -5,7 +5,7 @@ import time
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timedelta
 import tempfile
 import os
 
@@ -181,6 +181,20 @@ class JpMhlwScraper(BaseScraper):
         if isinstance(val, (datetime, pd.Timestamp)):
             return val.strftime("%Y-%m-%d")
 
+        # Excel-SERIENUMMER. De MHLW-sheet levert de datumkolommen als getal (45674, 46260.0)
+        # in plaats van als datum. Die belandden hier als str "45674", waar pd.to_datetime
+        # niets mee kan -- resultaat: 0 van de 2.778 Japanse meldingen had een startdatum,
+        # terwijl de kolom gewoon gevuld was. Telling vanaf 1899-12-30 (de Excel-epoch, met
+        # het beruchte schrikkeljaar-1900-gat al verdisconteerd). Bereik afgegrensd op
+        # 1990..2100, zodat een toevallig getal in een tekstkolom geen datum wordt.
+        if isinstance(val, (int, float)) and not isinstance(val, bool):
+            try:
+                serie = float(val)
+            except (TypeError, ValueError):
+                serie = None
+            if serie is not None and 32874 <= serie <= 73415:
+                return (datetime(1899, 12, 30) + timedelta(days=int(serie))).strftime("%Y-%m-%d")
+
         s = str(val).strip()
         if not s or s in ("-", "ー", "－", "―", "nan"):
             return None
@@ -313,6 +327,9 @@ class JpMhlwScraper(BaseScraper):
                     _datum_voorbeeld.append(repr(status_update_raw)[:60])
                 other_update_raw = row.iloc[self.COL_OTHER_UPDATE_DATE] if len(cols) > self.COL_OTHER_UPDATE_DATE else None
                 shortage_start = self._parse_date(status_update_raw) or self._parse_date(other_update_raw)
+                # Kolom 20 is de bijwerkdatum van al het ANDERE dan de leveringsstatus; die
+                # werd alleen als terugval voor de startdatum gebruikt en verdween daarna.
+                last_updated = self._parse_date(other_update_raw) or self._parse_date(status_update_raw)
 
                 # MHLW publiceert de leveringsstatus van ALLE producten, niet alleen van
                 # producten met een probleem. Ruim 80% staat op '①通常出荷' (normale levering).
@@ -333,6 +350,7 @@ class JpMhlwScraper(BaseScraper):
                     "strength": str(row.iloc[self.COL_STRENGTH]).strip() if pd.notna(row.iloc[self.COL_STRENGTH]) else "",
                     "package_size": "",
                     "shortage_start": shortage_start,
+                    "last_updated": last_updated,
                     "estimated_end": estimated_end,
                     "status": status,
                     "scraped_at": datetime.now().isoformat(),

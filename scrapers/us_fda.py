@@ -128,6 +128,13 @@ class UsFdaScraper(BaseScraper):
                 "status": rec.get("status", ""),
                 "update_type": rec.get("update_type", ""),
                 "shortage_start": self._parse_date(rec.get("initial_posting_date")),
+                # De openFDA-respons heeft gewoon een reden-veld; dat werd nooit gelezen,
+                # waardoor de kaart voor de VS 0 redenen toonde terwijl de bron er 400 van de
+                # 401 echte tekorten heeft. related_info bevat daarnaast vaak een verwachte
+                # hersteltermijn in proza ("Estimated Recovery: Q4 2026"); die zetten we als
+                # tekst neer, niet als datum, want een kwartaal is geen datum.
+                "shortage_reason": (rec.get("shortage_reason") or "").strip(),
+                "reason": (rec.get("shortage_reason") or "").strip(),
                 "estimated_end": None,
                 "discontinued_date": self._parse_date(rec.get("discontinued_date")),
                 "update_date": self._parse_date(rec.get("update_date")),

@@ -42,6 +42,55 @@ class AuTgaScraper(BaseScraper):
                 continue
         return None
 
+    EXPORT_URL = "https://apps.tga.gov.au/Prod/msi/search?shortagetype=All&exportType=Excel"
+
+    def _haal_export(self) -> dict:
+        """ARTG ID -> {reason, last_updated} uit de officiele CSV-export.
+
+        De export begint met tien regels proza; de echte kopregel is de eerste met minstens
+        tien komma's. Mislukt er iets, dan geven we een lege kaart terug en draait de scraper
+        verder op alleen de ingebedde JSON.
+        """
+        import csv as _csv
+        import io as _io
+        try:
+            r = requests.get(self.EXPORT_URL, timeout=90,
+                             headers={"User-Agent": "Mozilla/5.0"})
+            r.raise_for_status()
+            regels = r.content.decode("utf-8-sig", errors="replace").splitlines()
+            start = next((i for i, l in enumerate(regels) if l.count(",") >= 10), None)
+            if start is None:
+                print("  LET OP: kopregel niet gevonden in de TGA-export; geen redenen")
+                return {}
+            lezer = _csv.DictReader(_io.StringIO("\n".join(regels[start:])))
+            uit = {}
+            for rij in lezer:
+                artg = (rij.get("ARTG ID") or "").strip()
+                if not artg:
+                    continue
+                uit[artg] = {
+                    "reason": (rij.get("Reason") or "").strip(),
+                    "last_updated": self._export_datum(rij.get("Last updated")),
+                }
+            print(f"  Export: {len(uit)} rijen met reden en bijwerkdatum")
+            return uit
+        except Exception as e:                      # noqa: BLE001
+            print(f"  LET OP: TGA-export niet opgehaald ({type(e).__name__}); geen redenen")
+            return {}
+
+    @staticmethod
+    def _export_datum(waarde) -> str:
+        """d/mm/jjjj uit de export -> jjjj-mm-dd."""
+        waarde = str(waarde or "").strip()
+        if not waarde:
+            return ""
+        for fmt in ("%d/%m/%Y", "%Y-%m-%d"):
+            try:
+                return datetime.strptime(waarde, fmt).strftime("%Y-%m-%d")
+            except ValueError:
+                continue
+        return ""
+
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
 
@@ -56,6 +105,14 @@ class AuTgaScraper(BaseScraper):
         data = json.loads(m.group(1))
         raw_records = data.get("records", [])
         print(f"  Found {len(raw_records)} embedded records")
+
+        # De ingebedde tabularData mist twee dingen die de OFFICIELE export wel heeft: de
+        # reden van het tekort (984/984 gevuld, op de kaart stond 0) en de echte bijwerkdatum.
+        # Het JSON-veld dat 'last_updated' heet is een ander, ouder veld: het komt maar bij
+        # 278 van de 984 rijen overeen met wat de TGA zelf 'Last updated' noemt. We houden de
+        # JSON als basis -- die is bewezen -- en vullen aan uit de export. Valt de export weg,
+        # dan blijft de scraper gewoon werken, alleen zonder reden.
+        extra = self._haal_export()
 
         records = []
         for rec in raw_records:
@@ -84,7 +141,9 @@ class AuTgaScraper(BaseScraper):
                 "status": status,
                 "shortage_start": self._parse_date(rec.get("shortage_start")),
                 "estimated_end": self._parse_date(rec.get("shortage_end")),
-                "last_updated": self._parse_date(rec.get("last_updated")),
+                "last_updated": (extra.get(str(rec.get("artg_numb", "")).strip(), {}).get("last_updated")
+                                 or self._parse_date(rec.get("last_updated"))),
+                "reason": extra.get(str(rec.get("artg_numb", "")).strip(), {}).get("reason", ""),
                 "deleted_date": self._parse_date(rec.get("deleted_date")),
                 "scraped_at": datetime.now().isoformat(),
             })

@@ -41,6 +41,57 @@ class FrAnsmScraper(BaseScraper):
                 continue
         return None
 
+    EXPORT_URL = ("https://ansm.sante.fr/disponibilites-des-produits-de-sante/"
+                  "medicaments/export")
+
+    @staticmethod
+    def _sleutel(naam: str) -> str:
+        """Normaliseer een specialiteitsnaam tot een vergelijkbare sleutel."""
+        return re.sub(r"[^a-z0-9]", "", str(naam or "").lower())
+
+    def _haal_export(self) -> dict:
+        """Naam -> {start, eind, bijgewerkt} uit de Excel-export van dezelfde pagina.
+
+        Twee eigenaardigheden. De export is een .xls die xlrd als beschadigd ziet (een bekend
+        euvel bij gegenereerde bestanden), vandaar ignore_workbook_corruption. En de titel in
+        de export is de specialiteitsnaam PLUS " - [werkzame stof]", terwijl de HTML-tabel die
+        twee gescheiden heeft; we knippen het achtervoegsel er weer af om exact te kunnen
+        matchen in plaats van op een prefix te gokken.
+        """
+        try:
+            import xlrd
+            r = requests.get(self.EXPORT_URL, timeout=90,
+                             headers={"User-Agent": "Mozilla/5.0"}, allow_redirects=True)
+            r.raise_for_status()
+            bk = xlrd.open_workbook(file_contents=r.content, ignore_workbook_corruption=True)
+            sh = bk.sheet_by_index(0)
+            kop = [str(sh.cell_value(0, c)).strip() for c in range(sh.ncols)]
+            idx = {naam: kop.index(naam) for naam in
+                   ("Titre", "Date de début de situation", "Date de mise à jour",
+                    "Date de remise à disposition") if naam in kop}
+            if "Titre" not in idx or "Date de début de situation" not in idx:
+                print("  LET OP: ANSM-export heeft niet de verwachte kolommen; geen datums")
+                return {}
+            uit = {}
+            for rij in range(1, sh.nrows):
+                titel = str(sh.cell_value(rij, idx["Titre"])).strip()
+                if not titel:
+                    continue
+                kaal = re.sub(r"\s*[-\u2013\u2014]\s*\[.*?\]\s*$", "", titel)
+                uit[self._sleutel(kaal)] = {
+                    "start": self._parse_date(str(sh.cell_value(rij, idx["Date de début de situation"])).strip()),
+                    "bijgewerkt": self._parse_date(str(sh.cell_value(rij, idx.get("Date de mise à jour", 0))).strip())
+                                  if "Date de mise à jour" in idx else "",
+                    "eind": self._parse_date(str(sh.cell_value(rij, idx.get("Date de remise à disposition", 0))).strip())
+                            if "Date de remise à disposition" in idx else "",
+                }
+            print(f"  Export: {len(uit)} meldingen met begindatum")
+            return uit
+        except Exception as e:                      # noqa: BLE001
+            print(f"  LET OP: ANSM-export niet bruikbaar ({type(e).__name__}: {str(e)[:60]}); "
+                  f"geen startdatums")
+            return {}
+
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
 
@@ -57,6 +108,14 @@ class FrAnsmScraper(BaseScraper):
         print(f"  Found {len(rows) - 1} table rows")
 
         records = []
+        # De HTML-tabel heeft geen startdatum -- maar de officiele Excel-export van dezelfde
+        # pagina wel, voor alle 294 meldingen. Die export is er altijd geweest; hier stond
+        # jarenlang "ANSM levert geen startdatum", en Frankrijk had daardoor 0 startdatums
+        # op de kaart. We houden de HTML als basis, want die splitst de werkzame stof af, en
+        # halen de datums uit de export. Valt de export weg, dan draait de scraper door zoals
+        # voorheen.
+        extra = self._haal_export()
+
         for row in rows[1:]:  # Skip header
             cells = row.find_all("td")
             if len(cells) < 3:
@@ -90,9 +149,11 @@ class FrAnsmScraper(BaseScraper):
                 "strength": "",
                 "package_size": "",
                 "product_no": "",
-                "shortage_start": "",  # ANSM levert geen startdatum
-                "estimated_end": self._parse_date(remise_date),
-                "last_updated": self._parse_date(update_date),  # 'Mise à jour' (voor staleness)
+                "shortage_start": extra.get(self._sleutel(medicine_name), {}).get("start", ""),
+                "estimated_end": (extra.get(self._sleutel(medicine_name), {}).get("eind")
+                                  or self._parse_date(remise_date)),
+                "last_updated": (extra.get(self._sleutel(medicine_name), {}).get("bijgewerkt")
+                                 or self._parse_date(update_date)),
                 "status": status,
                 "scraped_at": datetime.now().isoformat(),
             })

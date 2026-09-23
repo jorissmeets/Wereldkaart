@@ -19,7 +19,9 @@ SFK_URL = "https://www3.sfk.nl/tekorten/?soort=totaal"
 import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from lcg_paden import GSTD as LCG_CSV   # actuele export; heeft ZI/ATC/PRK
-OUT = "sfk_tekorten.json"
+# Absoluut, zodat het niet uitmaakt vanuit welke map het script wordt aangeroepen.
+import os as _os2
+OUT = _os2.path.join(_os2.path.dirname(_os2.path.abspath(__file__)), "sfk_tekorten.json")
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/124 Safari/537.36"}
 

@@ -474,8 +474,13 @@ def build():
             # die kolom werd niet gelezen. Daardoor had GEEN ENKEL Canadees record een
             # last_updated of een shortage_start, kon de >1-jaar-regel er nooit vuren, en stonden
             # tekorten uit 2019 gewoon als actief op de kaart.
+            # notified_date staat erbij omdat IJsland de bijwerkdatum onder die naam levert
+            # (3.092/3.092 gevuld) -- de scraper las hem al, maar hier werd er nooit naar
+            # gekeken, dus stond IS op nul bijwerkdatums. Zelfde patroon als update_date bij
+            # Canada: het veld was er, de kolomnaam stond alleen niet in dit rijtje.
             last_updated = parse_date(row.get("last_updated") or row.get("update_date")
-                                      or row.get("last_update") or row.get("date_updated"))
+                                      or row.get("last_update") or row.get("date_updated")
+                                      or row.get("notified_date"))
             scraped_at = parse_date(row.get("scraped_at"))
             # Publicatie-/melddatum als startdatum wanneer de bron geen expliciete startdatum geeft
             # (bv. DK/LMST 'published_date'). BEWUST geen scrapedatum meer als nepdatum: die toonden

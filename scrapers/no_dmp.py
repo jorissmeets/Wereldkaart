@@ -13,12 +13,19 @@ from scrapers.base_scraper import BaseScraper
 class NoDmpScraper(BaseScraper):
     """Scraper for https://www.dmp.no/ (formerly legemiddelverket.no)"""
 
-    URL = "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell"
+    # De APOTHEEK-variant van dezelfde lijst. Zelfde structuur en evenveel rijen (1.520),
+    # maar met vier kolommen die de patiëntenvariant niet toont: Årsak (reden, 1.519/1.520),
+    # Sist oppdatert, ATC-kode (1.520/1.520 -- die leidden we tot nu toe zelf af met een
+    # LLM) en Varenummer. Noorwegen stond daardoor op 0% reden en 0% bijwerkdatum.
+    URL = "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-apotek"
 
     STATUS_MAP = {
         "pågående": "shortage",
         "kommende": "upcoming",
         "avsluttet": "resolved",
+        # Ontbrak: 48 rijen vielen als ruwe Noorse tekst door en werden daarna als actief
+        # tekort geteld, terwijl het om tijdelijk uit de handel genomen producten gaat.
+        "midlertidig utgått/avregistrert": "discontinued",
     }
 
     def __init__(self):
@@ -83,9 +90,14 @@ class NoDmpScraper(BaseScraper):
                 "active_substance": str(row.get("Virkestoff(er)", "")).strip(),
                 "strength": "",
                 "package_size": "",
-                "product_no": "",
+                "product_no": str(row.get("Varenummer", "")).strip(),
+                "atc_code": str(row.get("ATC-kode", "")).strip().upper(),
                 "shortage_start": self._parse_date(row.get("Mangelperiode fra", "")),
                 "estimated_end": self._parse_date(row.get("Mangelperiode til", "")),
+                # Sist oppdatert is maar bij 852 van de 1.520 gevuld; Meldingsdato bij alle.
+                "last_updated": (self._parse_date(row.get("Sist oppdatert", ""))
+                                 or self._parse_date(row.get("Meldingsdato", ""))),
+                "reason": str(row.get("Årsak", "")).strip(),
                 "status": status,
                 "notes": str(row.get("Informasjon/tiltak", "")).strip(),
                 "scraped_at": datetime.now().isoformat(),

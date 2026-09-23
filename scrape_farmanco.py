@@ -14,13 +14,16 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 FARMANCO_URL = "https://farmanco.knmp.nl/"
-EML_CSV = "LijstenEMS/Stofnamen 2025-Tabel 1.csv"
 import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from lcg_paden import BASE as _B
+# Alle paden absoluut. Waren werkdirectory-relatief; dat ging op de Mac goed omdat
+# ververs_alles.sh eerst cd't, maar maakte het script afhankelijk van waar het werd
+# aangeroepen. Zie dezelfde reparatie in build_tab3_data.py.
+EML_CSV = _os.path.join(_B, "LijstenEMS", "Stofnamen 2025-Tabel 1.csv")
 # Slanke extractie uit LCG.csv: de actuele G-standaard-export mist de stamkolom.
 LCG_CSV = _os.path.join(_B, "referentie", "gstd_rvg.csv")
-OUT = "farmanco_eml.json"
+OUT = _os.path.join(_B, "farmanco_eml.json")
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"}
 
 SEV = {"geel": 1, "oranje": 2, "rood": 3}
