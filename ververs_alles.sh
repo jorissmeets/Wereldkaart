@@ -96,6 +96,14 @@ $UV python landkaart/build_data.py 2>&1 | tail -4
 echo; echo "### 5. Samenvoegen met vorige live-data"
 $UV python _merge_live.py 2>&1 | tail -2
 
+# --- 5b. ATC-codes toetsen aan de stofnaam ---------------------------------
+# Een foute ATC is erger dan een ontbrekende: hij legt een buitenlands tekort onder het
+# verkeerde molecuul. Draait NA de merge, want een deel van de foute codes komt via de
+# last-live-aanvulling binnen en zit dus niet in output/.
+echo; echo "### 5b. ATC-codes toetsen aan de stofnaam"
+$UV python corrigeer_atc_stofnaam.py --schrijf 2>&1 | tail -3
+$UV python corrigeer_atc_stofnaam.py --data --schrijf 2>&1 | grep -E "CORRECTIES|PRK|geschreven"
+
 # --- 6. ATC4-dekking (als dat script bestaat) ------------------------------
 [ -f build_atc4_dekking.py ] && { echo; echo "### 6. ATC4-dekking"; $UV python build_atc4_dekking.py 2>&1 | tail -3; }
 
