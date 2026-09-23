@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Wekelijkse verversing van het LCG-tekortendashboard.
+
+  launchd en niet cron, om een reden die er hier toe doet: cron slaat een run gewoon over
+  als de Mac op dat moment sliep, zonder iets te melden. launchd onthoudt een gemiste
+  StartCalendarInterval en draait hem alsnog zodra de machine wakker wordt. Voor een taak
+  die maar een keer per week gaat, is dat het verschil tussen een week oude kaart en geen
+  kaart.
+
+  Woensdag 04:12. De geneesmiddelbespreking is donderdagochtend; door woensdag te draaien
+  blijft er een hele werkdag over om een mislukte run te repareren. Draaien op donderdag zelf
+  levert versere data maar geen hersteltijd.
+
+  Installeren:
+      cp com.lcg.tekortendashboard.plist ~/Library/LaunchAgents/
+      launchctl load ~/Library/LaunchAgents/com.lcg.tekortendashboard.plist
+
+  Nakijken / stoppen:
+      launchctl list | grep lcg
+      launchctl unload ~/Library/LaunchAgents/com.lcg.tekortendashboard.plist
+
+  Nu meteen een keer draaien (zonder op woensdag te wachten):
+      launchctl start com.lcg.tekortendashboard
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.lcg.tekortendashboard</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/karkara/Documents/LCG/Landkaart/ververs_bewaakt.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/karkara/Documents/LCG/Landkaart</string>
+
+    <!-- launchd geeft geen PATH mee; zonder dit vindt het script uv en git niet. -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/karkara/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/karkara</string>
+        <key>LANG</key>
+        <string>nl_NL.UTF-8</string>
+    </dict>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key>
+        <integer>3</integer>
+        <key>Hour</key>
+        <integer>4</integer>
+        <key>Minute</key>
+        <integer>12</integer>
+    </dict>
+
+    <!-- Draait nooit twee keer tegelijk; een run duurt 2 tot 4 uur. -->
+    <key>AbandonProcessGroup</key>
+    <false/>
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/karkara/Documents/LCG/Landkaart/logs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/karkara/Documents/LCG/Landkaart/logs/launchd.err.log</string>
+
+    <!-- Niet als achtergrondtaak knijpen: de scrape doet honderden netwerkaanroepen en
+         de PRK-koppeling is rekenintensief. Onder ProcessType Background throttlet macOS
+         de I/O zo sterk dat een run niet af komt voor de ochtend. -->
+    <key>ProcessType</key>
+    <string>Standard</string>
+    <key>Nice</key>
+    <integer>5</integer>
+</dict>
+</plist>
