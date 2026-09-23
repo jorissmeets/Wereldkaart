@@ -55,7 +55,8 @@ fresh_ccatc = {(r.get("cc"), (r.get("atc") or "").upper()) for r in fr}
 # Landen waarvan de scraper juist FAALDE (CA, MY) horen hier NIET in: daar is last-live het
 # enige wat we hebben.
 EXCLUDE = {"NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT",      # geen bruikbare tekortbron
-           "CH", "GR", "DE", "JP",                              # bron gerepareerd, vers is leidend
+           "CH",   # licentievoorbehoud in de bron; zie build_data.py
+           "GR", "DE", "JP",                                    # bron gerepareerd, vers is leidend
            # SK: de oude export telde elke melding sinds 2019 als actief door een omgekeerde
            # tiebreak op de aanmelddatum. MY: het oude endpoint maakte gevulde broncellen leeg
            # (datums verdwenen stil). In beide gevallen is de verse data de gecorrigeerde.

@@ -1,5 +1,12 @@
 """Scraper for Switzerland drugshortage.ch.
 
+LET OP -- CH STAAT BEWUST NIET OP DE KAART (uitgesloten in landkaart/build_data.py).
+De respons van deze bron draagt een expliciet gebruiksvoorbehoud: (c) Martinelli
+Consulting GmbH, met een beroep op Art. 62 URG, dat integratie in systemen van derden
+zonder schriftelijke toestemming verbiedt. Het endpoint is technisch publiek bereikbaar,
+maar dat is niet hetzelfde als vrij te gebruiken. Zet dit land niet terug op de kaart
+zonder schriftelijke toestemming van de rechthebbende.
+
 De api/v1-route geeft sinds ~sep-2026 een 401. De site zelf haalt zijn gegevens op via
 https://www.drugshortage.ch/ds.php?a=engpaesse, dat wel werkt maar een Referer-header
 eist ("Zugriff verweigert - fehlende Header" zonder). Dat endpoint is bovendien rijker:

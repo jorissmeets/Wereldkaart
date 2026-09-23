@@ -451,7 +451,12 @@ def build():
             # gemelde middelen niet in de bron terugvinden. Een bron die structureel te
             # weinig meldt, geeft een vals gevoel van rust: nul tekorten in een ATC4-pool
             # leest als "geen probleem" terwijl het "niet gemeten" betekent.
-            if cc in ("NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT"):
+            # CH eruit (23-09, besluit Joris): de drugshortage.ch-respons draagt een
+            # expliciet gebruiksvoorbehoud ((c) Martinelli Consulting GmbH, Art. 62 URG) dat
+            # integratie in systemen van derden zonder schriftelijke toestemming verbiedt.
+            # Technisch publiek bereikbaar is niet hetzelfde als vrij te gebruiken. De scraper
+            # blijft staan; zodra er toestemming is, is dit een regel terugdraaien.
+            if cc in ("NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT", "CH"):
                 continue
 
             cn = safe_str(row.get("country_name")) or cc
