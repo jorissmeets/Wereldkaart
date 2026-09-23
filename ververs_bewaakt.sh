@@ -24,9 +24,13 @@ mkdir -p logs
 DATUM=$(date +%Y-%m-%d)
 LOG="$BASE/logs/bewaakt_$DATUM.log"
 STATUS="$BASE/logs/laatste_run.txt"
-exec >> "$LOG" 2>&1
+# Zowel naar het logbestand als naar de standaarduitvoer. Alleen naar het bestand is op de
+# Mac prima, maar in GitHub Actions blijft het stapvenster dan leeg en is een mislukte run
+# niet te lezen zonder het artefact te downloaden.
+exec > >(tee -a "$LOG") 2>&1
 
 melding() {                       # verschijnt in het Berichtencentrum van macOS
+  [ -x /usr/bin/osascript ] || return 0        # geen macOS (bv. GitHub Actions)
   /usr/bin/osascript -e "display notification \"$2\" with title \"LCG-tekortendashboard\" subtitle \"$1\"" 2>/dev/null || true
 }
 
