@@ -18,10 +18,17 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 CBG_URL = "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking"
-EML_CSV = "LijstenEMS/Stofnamen 2025-Tabel 1.csv"
 import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from lcg_paden import BASE as _B
+
+# Alle paden absoluut. Ze waren werkdirectory-relatief, wat op de Mac altijd goed ging omdat
+# ververs_alles.sh eerst cd'de. In GitHub Actions viel dit script daardoor om op de eerste
+# regel van load_maps() -- en omdat ververs_alles.sh geen set -e heeft, liep de run gewoon
+# door met een verouderde eml_atc5.json en cbg_tav_eml.json.
+EML_CSV = _os.path.join(_B, "LijstenEMS", "Stofnamen 2025-Tabel 1.csv")
+UIT_EML = _os.path.join(_B, "eml_atc5.json")
+UIT_CBG = _os.path.join(_B, "cbg_tav_eml.json")
 # Slanke extractie: alleen hier zit het Registratienummer (RVG/EU) dat de actuele
 # G-standaard-export niet levert. Zie bouw_referentie.py.
 LCG_CSV = _os.path.join(_B, "referentie", "gstd_rvg.csv")
@@ -122,7 +129,7 @@ def main():
     eml_name, name2atc, rvg2atc, eml_atc5 = load_maps()
 
     # eml_atc5.json (voor de watchlist)
-    with open("eml_atc5.json", "w", encoding="utf-8") as f:
+    with open(UIT_EML, "w", encoding="utf-8") as f:
         json.dump({"generated": today, "count": len(eml_atc5), "map": eml_atc5}, f, ensure_ascii=False)
     print(f"eml_atc5.json: {len(eml_atc5)} ATC5 -> beoordeling")
 
@@ -149,7 +156,7 @@ def main():
         if e["eml"]:
             n_eml += 1
     dated.sort(key=lambda e: e["datum"], reverse=True)
-    with open("cbg_tav_eml.json", "w", encoding="utf-8") as f:
+    with open(UIT_CBG, "w", encoding="utf-8") as f:
         json.dump({"generated": today, "source": CBG_URL, "count": len(dated),
                    "on_eml": n_eml, "items": dated}, f, ensure_ascii=False, indent=0)
     from collections import Counter

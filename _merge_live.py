@@ -31,22 +31,51 @@ old = json.load(open(OLD))
 fr = fresh["records"]
 orl = old["records"]
 
+def stofsleutel(r):
+    """Land + molecuul + STOFNAAM, zonder de productnaam.
+
+    De gewone sleutel valt terug op mn (de productnaam) en pas daarna op sub. Levert een bron
+    ineens alleen nog stofnamen, dan vergelijkt hij "Hydralazine Sciegen" met "HYDRALAZINE" en
+    matcht er niets meer. Zo verloor Saoedi-Arabie in een klap 638 PRK-koppelingen: de nieuwe
+    SFDA-export heeft bij alle 539 records een lege productnaam. Beide kanten hebben wel een
+    stofnaam, dus daar valt op terug te vallen.
+    """
+    return (r.get("cc"), (r.get("atc") or "").upper(), norm(r.get("sub") or ""))
+
+
 # PRK lenen: eerste last-live-record per sleutel dat een PRK heeft
 old_prk = {}
+old_stof = {}
 for r in orl:
     if r.get("prk"):
         old_prk.setdefault(key(r), (r.get("prk"), r.get("prk_naam")))
+        old_stof.setdefault(stofsleutel(r), set()).add((r.get("prk"), r.get("prk_naam")))
+
+# Tweede kans alleen waar het ONDUBBELZINNIG is: geeft dezelfde stof in hetzelfde land
+# meerdere PRK's, dan weten we niet welke en lenen we niets. Dat slaat ~1.100 gevallen over
+# en levert er ~770 op -- de juiste kant om die afweging te laten vallen, want een verkeerde
+# PRK wijst een specifiek Nederlands product als geraakt aan.
+old_stof = {k: next(iter(v)) for k, v in old_stof.items() if len(v) == 1}
 
 fresh_keys = set()
 borrowed = 0
+borrowed_stof = 0
 for r in fr:
     k = key(r)
     fresh_keys.add(k)
-    if not r.get("prk") and k in old_prk:
-        r["prk"], nm = old_prk[k][0], old_prk[k][1]
+    if r.get("prk"):
+        continue
+    bron = old_prk.get(k)
+    if bron is None:
+        bron = old_stof.get(stofsleutel(r))
+        if bron is not None:
+            borrowed_stof += 1
+    else:
+        borrowed += 1
+    if bron is not None:
+        r["prk"], nm = bron[0], bron[1]
         if nm:
             r["prk_naam"] = nm
-        borrowed += 1
 
 # Unie op ATC×land: voeg last-live-records alleen toe voor een molecuul-in-land dat in
 # vers HELEMAAL ontbreekt (voorkomt dubbele meldingen door naamvarianten; vers is leidend
@@ -122,4 +151,4 @@ out["atc_country_count"] = acc
 json.dump(out, open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
 prk_n = sum(1 for r in merged if r.get("prk"))
 print(f"vers: {len(fr)} | last-live: {len(orl)} | toegevoegd uit last-live: {added} | MERGED: {len(merged)}")
-print(f"landen: {len(ccs)} | ATC5: {len(atcs)} | met PRK: {prk_n} | PRK geleend: {borrowed}")
+print(f"landen: {len(ccs)} | ATC5: {len(atcs)} | met PRK: {prk_n} | PRK geleend: {borrowed} op naam + {borrowed_stof} op stofnaam")

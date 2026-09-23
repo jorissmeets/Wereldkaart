@@ -37,6 +37,22 @@ mkdir -p "$LOGDIR"
 cd "$BASE" || exit 1
 exec > >(tee -a "$LOG") 2>&1
 
+FOUTEN="$BASE/logs/_kritieke_fouten.txt"
+: > "$FOUTEN"
+
+# Een stap die omvalt mag niet stil doorgaan. Dit script heeft bewust GEEN set -e, want een
+# scraper die faalt hoort de rest niet af te breken -- daar is de merge het vangnet voor.
+# Maar de verwerkende stappen zijn iets anders: valt build_tab3_data.py om, dan publiceert de
+# run gewoon door met een verouderde eml_atc5.json, en dat ziet niemand. Zulke stappen lopen
+# via kritiek(); ververs_bewaakt.sh weigert te publiceren als dit bestand niet leeg is.
+kritiek() {
+  local naam="$1"; shift
+  if ! "$@"; then
+    echo "  !! KRITIEKE STAP MISLUKT: $naam"
+    echo "$naam" >> "$FOUTEN"
+  fi
+}
+
 echo "=================================================="
 echo "VERVERSING GESTART  $(date '+%Y-%m-%d %H:%M:%S')"
 echo "=================================================="
@@ -79,25 +95,25 @@ done
 # --- 3. Nederlandse bronnen -------------------------------------------------
 # Deze horen bij ELKE verversing mee: ze zijn voor het LCG het meest direct relevant.
 echo; echo "### 3. Nederlandse bronnen (CBG / Farmanco / SFK)"
-$UV python build_tab3_data.py 2>&1 | tail -2      # CBG tijdelijk afwijkende verpakking + EML
-$UV python scrape_farmanco.py 2>&1 | tail -2
-$UV python scrape_sfk.py 2>&1 | tail -2
+kritiek "build_tab3_data" $UV python build_tab3_data.py   # CBG afwijkende verpakking + EML
+kritiek "scrape_farmanco" $UV python scrape_farmanco.py
+kritiek "scrape_sfk" $UV python scrape_sfk.py
 # Historie van de SFK-monitor bijwerken. Haalt alleen de NIEUWE week op; de rest staat
 # in sfk_historie_cache/. Zonder dit blijft het PRK-verloop staan op de laatste draai.
 $UV python scrape_sfk_historie.py 2>&1 | tail -3
 # Slanke afgeleide voor de browser: verloop per PRK + trend. Moet NA scrape_sfk.py en
 # scrape_sfk_historie.py, want hij leest beide.
-$UV python build_sfk_verloop.py 2>&1 | tail -2
+kritiek "build_sfk_verloop" $UV python build_sfk_verloop.py
 
 # --- 4. Ontdubbelen en kaart bouwen ----------------------------------------
 echo; echo "### 4. Ontdubbelen en bouwen"
 $UV python _dedup_output.py 2>&1 | tail -2
-$UV python landkaart/build_data.py 2>&1 | tail -4
+kritiek "build_data" $UV python landkaart/build_data.py
 
 # --- 5. Samenvoegen met de vorige live-data --------------------------------
 # Vangnet: een land waarvan de scraper faalde zakt zo niet weg uit de kaart.
 echo; echo "### 5. Samenvoegen met vorige live-data"
-$UV python _merge_live.py 2>&1 | tail -2
+kritiek "merge_live" $UV python _merge_live.py
 
 # --- 5b. ATC-codes toetsen aan de stofnaam ---------------------------------
 # Een foute ATC is erger dan een ontbrekende: hij legt een buitenlands tekort onder het
@@ -105,7 +121,7 @@ $UV python _merge_live.py 2>&1 | tail -2
 # last-live-aanvulling binnen en zit dus niet in output/.
 echo; echo "### 5b. ATC-codes toetsen aan de stofnaam"
 $UV python corrigeer_atc_stofnaam.py --schrijf 2>&1 | tail -3
-$UV python corrigeer_atc_stofnaam.py --data --schrijf 2>&1 | grep -E "CORRECTIES|PRK|geschreven"
+kritiek "corrigeer_atc_data" $UV python corrigeer_atc_stofnaam.py --data --schrijf
 
 # --- 6. ATC4-dekking (als dat script bestaat) ------------------------------
 [ -f build_atc4_dekking.py ] && { echo; echo "### 6. ATC4-dekking"; $UV python build_atc4_dekking.py 2>&1 | tail -3; }

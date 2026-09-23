@@ -91,14 +91,30 @@ def aandeel(recs, cc):
     van = [x for x in recs if x["cc"] == cc]
     return (sum(1 for x in van if x["st"] == "active") / len(van)) if van else 0.0
 
+#     Twee voorwaarden samen, en de tweede is essentieel. Een stijgend AANDEEL alleen is
+#     geen bewijs: bij Saoedi-Arabie ging het van 40% naar 74% doordat de nieuwe SFDA-bron
+#     geen datums publiceert, waardoor oude meldingen niet meer naar 'inactief' verouderen.
+#     Er kwamen daar 30 actieve meldingen bij op 625 -- geen registerval maar een schralere
+#     bron. Bij een echte registerval stijgt het AANTAL actieve meldingen juist hard: Japan
+#     kreeg er in een klap 8.215 bij. Daarom eisen we allebei.
+def actief(recs, cc):
+    return sum(1 for x in recs if x["cc"] == cc and x["st"] == "active")
+
 sprong = []
 for cc in sorted(set(cv) & set(cn)):
     if cn[cc] < 50:                      # te weinig records voor een betekenisvol aandeel
         continue
     was, wordt = aandeel(rv, cc), aandeel(rn, cc)
-    if wordt - was > 0.30:
-        sprong.append(f"{cc} {was:.0%}->{wordt:.0%}")
-eis(not sprong, f"aandeel actieve meldingen springt omhoog (registerval?): {sprong}")
+    av_cc, an_cc = actief(rv, cc), actief(rn, cc)
+    meer_actief = an_cc > max(25, av_cc * 1.25)
+    if wordt - was > 0.30 and meer_actief:
+        sprong.append(f"{cc} {was:.0%}->{wordt:.0%} en {av_cc}->{an_cc} actieve meldingen")
+eis(not sprong, f"aandeel EN aantal actieve meldingen springen omhoog (registerval?): {sprong}")
+#     GRENS VAN DEZE TOETS, eerlijk opgeschreven: getest op nagebootste storingen pakt hij een
+#     val van 6.000 records wel en een van 400 niet (die blijft onder de 30 procentpunt). Dit
+#     is een publicatierem tegen zichtbare rampen, geen kwaliteitsaudit. Een sluipende
+#     verslechtering van een paar honderd records ziet niemand hier -- daarvoor blijft
+#     periodiek met de hand kijken nodig.
 
 # 5. Een land met minder dan tien records is vrijwel altijd een kapotte scraper.
 mager = sorted(cc for cc, n in cn.items() if n < 10)
@@ -121,6 +137,18 @@ PY
 
 SAMENVATTING=$(echo "$OORDEEL" | grep '^SAMENVATTING|' | cut -d'|' -f2-)
 echo; echo "TOETS: $SAMENVATTING"
+
+# Een verwerkende stap die omviel maakt de cijfers onbetrouwbaar, ook als ze plausibel ogen:
+# een omgevallen build_tab3_data laat de kaart ongemoeid maar bevriest de EMS-beoordeling.
+FOUTEN="$BASE/logs/_kritieke_fouten.txt"
+if [ -s "$FOUTEN" ]; then
+  MISLUKT=$(tr '\n' ' ' < "$FOUTEN")
+  echo "NIET GEPUBLICEERD -- kritieke stappen mislukt: $MISLUKT"
+  echo "$(date '+%F %T')  NIET GEPUBLICEERD  $SAMENVATTING  ::  kritieke stappen mislukt: $MISLUKT" > "$STATUS"
+  melding "Niet gepubliceerd" "kritieke stappen mislukt: $MISLUKT"
+  rm -f "$VOOR"
+  exit 1
+fi
 
 if ! echo "$OORDEEL" | grep -q '^GOED$'; then
   REDEN=$(echo "$OORDEEL" | grep '^FOUT|' | cut -d'|' -f2-)
