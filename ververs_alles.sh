@@ -12,8 +12,11 @@
 # vangnet werkt alleen als iemand de cijfers nog even bekijkt.
 set -u
 
-BASE=/Users/karkara/Documents/LCG/Landkaart
-PRKD=/Users/karkara/Documents/LCG/Matchen_prk
+# Paden komen uit de omgeving als die gezet is (GitHub Actions), anders de vaste plek op
+# de Mac. Zonder dit draait de pijplijn alleen op een laptop die aan moet staan.
+BASE="${LCG_BASE:-/Users/karkara/Documents/LCG/Landkaart}"
+PRKD="${LCG_PRK:-/Users/karkara/Documents/LCG/Matchen_prk}"
+export LCG_BASE="$BASE" LCG_PRK="$PRKD"
 LOGDIR="$BASE/logs"
 DATUM=$(date +%Y-%m-%d)
 LOG="$LOGDIR/ververs_$DATUM.log"

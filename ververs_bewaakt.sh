@@ -13,8 +13,9 @@
 #   bash ververs_bewaakt.sh --droog      # alles doen behalve publiceren
 set -u
 
-BASE=/Users/karkara/Documents/LCG/Landkaart
-export PATH="/Users/karkara/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+BASE="${LCG_BASE:-/Users/karkara/Documents/LCG/Landkaart}"
+export LCG_BASE="$BASE"
+export PATH="${PATH:-}:/Users/karkara/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 DROOG=0
 [ "${1:-}" = "--droog" ] && DROOG=1
 
@@ -44,7 +45,7 @@ echo; echo "ververs_alles.sh eindigde met code $UITKOMST"
 
 # --- toets ------------------------------------------------------------------
 # Elke regel geeft GOED of een reden. Faalt er een, dan publiceren we niet.
-OORDEEL=$(/Users/karkara/.local/bin/uv run --python 3.13 python - "$VOOR" "$BASE/data.json" <<'PY'
+OORDEEL=$(uv run --python 3.13 python - "$VOOR" "$BASE/data.json" <<'PY'
 import json, sys, collections
 
 voor = json.load(open(sys.argv[1])); na = json.load(open(sys.argv[2]))

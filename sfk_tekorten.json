@@ -1,9 +1,9 @@
 {
-"generated": "2026-09-22",
+"generated": "2026-09-23",
 "source": "https://www3.sfk.nl/tekorten/?soort=totaal",
 "peildatum": "week 38 2026",
 "count": 666,
-"gekoppeld": 635,
+"gekoppeld": 666,
 "items": [
 {
 "zi": "15702944",
@@ -300,7 +300,10 @@
 "naam": "ANAPEN 300 INJVLST 1MG/ML PEN 0,3ML",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "145262",
+"prk_naam": "ADRENALINE INJVLST PEN 0,3MG=0,3ML (1MG/ML)",
+"atc": "C01CA24"
 },
 {
 "zi": "15650944",
@@ -367,7 +370,10 @@
 "naam": "APREPITANT XIROMED CAPSULE 1X125MG/2X80MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "85790",
+"prk_naam": "APREPITANT CAPSULE 125+80MG (COMBIVERPAKKING)",
+"atc": "A04AD12"
 },
 {
 "zi": "16174348",
@@ -1714,14 +1720,20 @@
 "naam": "ESOMEPRAZOL SANDOZ CAPSULE MSR 20MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "94862",
+"prk_naam": "ESOMEPRAZOL CAPSULE MSR 20MG",
+"atc": "A02BC05"
 },
 {
 "zi": "17409667",
 "naam": "ESOMEPRAZOL SANDOZ CAPSULE MSR 40MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "94870",
+"prk_naam": "ESOMEPRAZOL CAPSULE MSR 40MG",
+"atc": "A02BC05"
 },
 {
 "zi": "17349737",
@@ -1918,7 +1930,10 @@
 "naam": "FAMOTIDINE AUROBINDO TABLET FILMOMHULD 20MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "24252",
+"prk_naam": "FAMOTIDINE TABLET 20MG",
+"atc": "A02BA03"
 },
 {
 "zi": "14562553",
@@ -1935,7 +1950,10 @@
 "naam": "FAMPRIDINE TEVA TABLET MVA 10MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "101826",
+"prk_naam": "FAMPRIDINE TABLET MGA 10MG",
+"atc": "N07XX07"
 },
 {
 "zi": "16751310",
@@ -1982,28 +2000,40 @@
 "naam": "FENTANYL MATRIX VIATRIS PLEISTER 12MCG/UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "225738",
+"prk_naam": "FENTANYL PLEISTER 12 UG/UUR",
+"atc": "N02AB03"
 },
 {
 "zi": "15920348",
 "naam": "FENTANYL MATRIX VIATRIS PLEISTER 25MCG/UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "225746",
+"prk_naam": "FENTANYL PLEISTER 25 UG/UUR",
+"atc": "N02AB03"
 },
 {
 "zi": "15704866",
 "naam": "FENTANYL TEVA PLEISTER  12MCG/UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "225738",
+"prk_naam": "FENTANYL PLEISTER 12 UG/UUR",
+"atc": "N02AB03"
 },
 {
 "zi": "15704874",
 "naam": "FENTANYL TEVA PLEISTER  25MCG/UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "225746",
+"prk_naam": "FENTANYL PLEISTER 25 UG/UUR",
+"atc": "N02AB03"
 },
 {
 "zi": "17150132",
@@ -2332,7 +2362,7 @@
 "preferent": [],
 "opmerking": "",
 "prk": "20427",
-"prk_naam": "FUROSEMIDE INJECTIEVLST 10MG/ML AMP 4ML",
+"prk_naam": "FUROSEMIDE INJVLST 10MG/ML AMP 4ML",
 "atc": "C03CA01"
 },
 {
@@ -3581,8 +3611,8 @@
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "219770",
-"prk_naam": "DICLOFENAC-NATRIUM OOGDR 1MG/ML AMP 0,3ML Z BENZAL",
+"prk": "238139",
+"prk_naam": "DICLOFENAC-NATRIUM OOGDR 1MG/ML MINIM 0,3ML Z BENZ",
 "atc": "S01BC03"
 },
 {
@@ -3750,14 +3780,20 @@
 "naam": "NEUPRO PLEISTER 1MG/24UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "230162",
+"prk_naam": "ROTIGOTINE PLEISTER 1MG/24UUR",
+"atc": "N04BC09"
 },
 {
 "zi": "15347931",
 "naam": "NEUPRO PLEISTER 8MG/24UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "230200",
+"prk_naam": "ROTIGOTINE PLEISTER 8MG/24UUR",
+"atc": "N04BC09"
 },
 {
 "zi": "15218414",
@@ -4224,7 +4260,10 @@
 "naam": "OSVYRTI INJVLST 60MG/ML WWSP 1ML",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "96261",
+"prk_naam": "DENOSUMAB INJVLST WWSP 60MG=1ML (60MG/ML)",
+"atc": "M05BX04"
 },
 {
 "zi": "16145429",
@@ -4411,14 +4450,20 @@
 "naam": "PAZOPANIB CF TABLET FILMOMHULD 400MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "95273",
+"prk_naam": "PAZOPANIB TABLET 400MG",
+"atc": "L01EX03"
 },
 {
 "zi": "17413753",
 "naam": "PAZOPANIB GLENMARK TABLET FILMOMHULD 400MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "95273",
+"prk_naam": "PAZOPANIB TABLET 400MG",
+"atc": "L01EX03"
 },
 {
 "zi": "15921751",
@@ -4515,7 +4560,10 @@
 "naam": "PRALUENT INJVLST 150MG/ML PEN 1ML",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "131334",
+"prk_naam": "ALIROCUMAB INJVLST PEN 150MG=1ML (150MG/ML)",
+"atc": "C10AX14"
 },
 {
 "zi": "16064488",
@@ -4592,7 +4640,10 @@
 "naam": "PREDNISOLON AURO TABLET 1MG",
 "status": "",
 "preferent": [],
-"opmerking": "Niet preferent"
+"opmerking": "Niet preferent",
+"prk": "133612",
+"prk_naam": "PREDNISOLON TABLET   1MG",
+"atc": "H02AB06"
 },
 {
 "zi": "13921398",
@@ -4680,8 +4731,8 @@
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "47821",
-"prk_naam": "PROMETHAZINE TABLET OMHULD 25MG (ALS HCL)",
+"prk": "234974",
+"prk_naam": "PROMETHAZINE TABLET 25MG",
 "atc": "R06AD02"
 },
 {
@@ -5069,21 +5120,30 @@
 "naam": "RIVAROXABAN AMAROX TABLET FILMOMHULD 10MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 50"
+"opmerking": "Week 50",
+"prk": "88862",
+"prk_naam": "RIVAROXABAN TABLET 10MG",
+"atc": "B01AF01"
 },
 {
 "zi": "17423716",
 "naam": "RIVAROXABAN CF TABLET FILMOMHULD 15MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "100145",
+"prk_naam": "RIVAROXABAN TABLET 15MG",
+"atc": "B01AF01"
 },
 {
 "zi": "17432847",
 "naam": "RIVAROXABAN SANDOZ TABLET FILMOMHULD 20MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "100153",
+"prk_naam": "RIVAROXABAN TABLET 20MG",
+"atc": "B01AF01"
 },
 {
 "zi": "17218691",
@@ -5140,21 +5200,30 @@
 "naam": "RIVASTIGMINE TEVA PLEISTER TRANSDERM  4,6MG/24UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "228702",
+"prk_naam": "RIVASTIGMINE PLEISTER 4,6MG/24 UUR",
+"atc": "N06DA03"
 },
 {
 "zi": "17075157",
 "naam": "RIVASTIGMINE TEVA PLEISTER TRANSDERM  9,5MG/24UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "228699",
+"prk_naam": "RIVASTIGMINE PLEISTER 9,5MG/24 UUR",
+"atc": "N06DA03"
 },
 {
 "zi": "17075106",
 "naam": "RIVASTIGMINE TEVA PLEISTER TRANSDERM 13,3MG/24UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "228680",
+"prk_naam": "RIVASTIGMINE PLEISTER 13,3MG/24 UUR",
+"atc": "N06DA03"
 },
 {
 "zi": "15690679",
@@ -5401,7 +5470,10 @@
 "naam": "ROSUVASTATINE TEVA TABLET FILMOMHULD  5MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "201030",
+"prk_naam": "ROSUVASTATINE TABLET  5MG",
+"atc": "C10AA07"
 },
 {
 "zi": "16375998",
@@ -5418,7 +5490,10 @@
 "naam": "ROSUVASTATINE TEVA TABLET FILMOMHULD 10MG",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "201049",
+"prk_naam": "ROSUVASTATINE TABLET 10MG",
+"atc": "C10AA07"
 },
 {
 "zi": "16376064",
@@ -5465,28 +5540,40 @@
 "naam": "ROTIGOTINE XIROMED PLEISTER 2MG/24UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "230189",
+"prk_naam": "ROTIGOTINE PLEISTER 2MG/24UUR",
+"atc": "N04BC09"
 },
 {
 "zi": "17249783",
 "naam": "ROTIGOTINE XIROMED PLEISTER 4MG/24UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "230227",
+"prk_naam": "ROTIGOTINE PLEISTER 4MG/24UUR",
+"atc": "N04BC09"
 },
 {
 "zi": "17249805",
 "naam": "ROTIGOTINE XIROMED PLEISTER 8MG/24UUR",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "230200",
+"prk_naam": "ROTIGOTINE PLEISTER 8MG/24UUR",
+"atc": "N04BC09"
 },
 {
 "zi": "17431506",
 "naam": "SALBUTAMOL GLENMARK AER 100MCG/DO SPBS 200DO +INH",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "43281",
+"prk_naam": "SALBUTAMOL AEROSOL 100UG/DO 200DO INHALATOR",
+"atc": "R03AC02"
 },
 {
 "zi": "15563332",
@@ -6334,8 +6421,8 @@
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "23043",
-"prk_naam": "VANCOMYCINE PDR V INFVLST  500MG FL",
+"prk": "235660",
+"prk_naam": "VANCOMYCINE HCL PDR V INFVLST 500MG FL",
 "atc": "J01XA01"
 },
 {
@@ -6423,7 +6510,10 @@
 "naam": "VOBEXORYN INJVLST 6MG/ML PEN 3ML",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "235156",
+"prk_naam": "LIRAGLUTIDE INJ PEN 18MG=3ML (6MG/ML) 0,6-3,0MG/DO",
+"atc": "A10BJ02"
 },
 {
 "zi": "14150212",
@@ -6530,7 +6620,10 @@
 "naam": "ZOLEDRONINEZUUR SANDOZ INFVLST 0,05MG/ML FL 100ML",
 "status": "",
 "preferent": [],
-"opmerking": ""
+"opmerking": "",
+"prk": "79790",
+"prk_naam": "ZOLEDRONINEZUUR INFVLST 0,05MG/ML FL 100ML",
+"atc": "M05BA08"
 },
 {
 "zi": "15796582",

@@ -31,8 +31,9 @@ import requests
 
 try:
     from dotenv import load_dotenv
-    for _p in ("/Users/karkara/Documents/LCG/Matchen_prk/.env",
-               "/Users/karkara/Documents/LCG/Landkaart/.env"):
+    _b = os.environ.get("LCG_BASE") or "/Users/karkara/Documents/LCG/Landkaart"
+    _p2 = os.environ.get("LCG_PRK") or "/Users/karkara/Documents/LCG/Matchen_prk"
+    for _p in (os.path.join(_p2, ".env"), os.path.join(_b, ".env")):
         if os.path.exists(_p):
             load_dotenv(_p)
 except Exception:

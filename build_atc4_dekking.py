@@ -41,8 +41,10 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 # wordt uit g-standaard_actueel(1).xlsx afgeleid met de kolomnamen die dit script verwacht;
 # zie de omzetting in de projectdocumentatie. Ontbreekt hij, dan valt het script terug op LCG.csv.
 import os as _os
-_ACTUEEL = "/Users/karkara/Documents/LCG/Landkaart/gstandaard_actueel.csv"
-GSTD = _ACTUEEL if _os.path.exists(_ACTUEEL) else "/Users/karkara/Documents/LCG/Matchen_prk/LCG.csv"
+sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from lcg_paden import GSTD as _GSTD
+_ACTUEEL = _GSTD
+GSTD = _ACTUEEL
 OUT = os.path.join(BASE, "atc4_dekking.json")
 
 # Alleen handelsproducten in de noemer; zie module-docstring.

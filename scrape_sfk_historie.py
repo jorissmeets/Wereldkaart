@@ -30,12 +30,14 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 
-BASE = "/Users/karkara/Documents/LCG/Landkaart"
+import sys as _sys
+_sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lcg_paden import BASE, GSTD as _GSTD
 PAGINA = "https://www3.sfk.nl/tekorten/?soort=totaal"
 DOWNLOAD = "https://www3.sfk.nl/tekorten/download?period={p}&totaal=1"
 CACHE = os.path.join(BASE, "sfk_historie_cache")
 UIT = os.path.join(BASE, "sfk_historie.json")
-LCG = "/Users/karkara/Documents/LCG/Landkaart/gstandaard_actueel.csv"
+LCG = _GSTD
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"}
 

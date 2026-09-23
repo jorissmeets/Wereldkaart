@@ -60,10 +60,12 @@ import os
 import re
 import sys
 
-sys.path.insert(0, "/Users/karkara/Documents/LCG/Matchen_prk")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lcg_paden import PRK as _PRK
+sys.path.insert(0, _PRK)
 import enrich_atc_llm as E  # noqa: E402
 
-BASE = os.path.dirname(os.path.abspath(__file__))
+from lcg_paden import BASE
 ATC2NAME = os.path.join(BASE, "atc2name.json")
 DREMPEL = 0.85
 

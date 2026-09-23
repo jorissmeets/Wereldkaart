@@ -1,9 +1,27 @@
 {
-"generated": "2026-09-22",
+"generated": "2026-09-23",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 194,
+"count": 196,
 "on_eml": 93,
 "items": [
+{
+"product": "Xarelto 1 mg/ml granulaat voor orale suspensie",
+"mah": "Bayer B.V.",
+"reg": "EU/1/08/472",
+"reg_type": "EU",
+"datum": "2026-09-22",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Metamizol Eureco-Pharma 500 mg/ml, oplossing voor injectie",
+"mah": "Eureco-Pharma B.V.",
+"reg": "",
+"reg_type": "",
+"datum": "2026-09-21",
+"atc": "N02BB02",
+"eml": ""
+},
 {
 "product": "Lyvdelzi 10 mg harde capsules",
 "mah": "Gilead Sciences Ireland UC",
@@ -25,8 +43,8 @@
 {
 "product": "PYRUKYND 100 mg, filmomhulde tabletten",
 "mah": "Agios Netherlands B.V.",
-"reg": "",
-"reg_type": "",
+"reg": "EU/1/22/1662/007",
+"reg_type": "EU",
 "datum": "2026-09-14",
 "atc": "",
 "eml": ""
