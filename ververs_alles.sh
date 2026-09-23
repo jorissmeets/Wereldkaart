@@ -21,7 +21,10 @@ UV="uv run --python 3.13 --with typesafe-sdk --with python-dotenv --with openai 
 
 # De landen die daadwerkelijk op de kaart staan. Bewust niet de volledige scraperlijst:
 # LT/TR/EE-oud/ZA/KR/TW zijn registers of geen tekortbron, die worden in build_data uitgesloten.
-LANDEN="AT AU BE BG CA CH CO CZ DE DK EE ES FI FR GR HR HU IE IS IT JP LV MY NO PT RO SA SE SI SK US"
+# CH en PT staan hier ook niet meer in. PT had geen bruikbare tekortbron; CH draagt een
+# gebruiksvoorbehoud (zie scrapers/ch_drugshortage.py). Een bron die we niet mogen tonen,
+# blijven we ook niet elke twee dagen bevragen.
+LANDEN="AT AU BE BG CA CO CZ DE DK EE ES FI FR GR HR HU IE IS IT JP LV MY NO RO SA SE SI SK US"
 
 export MATCH_LLM=typesafe
 export PRK_MIN_CONFIDENCE=90
@@ -79,6 +82,9 @@ $UV python scrape_sfk.py 2>&1 | tail -2
 # Historie van de SFK-monitor bijwerken. Haalt alleen de NIEUWE week op; de rest staat
 # in sfk_historie_cache/. Zonder dit blijft het PRK-verloop staan op de laatste draai.
 $UV python scrape_sfk_historie.py 2>&1 | tail -3
+# Slanke afgeleide voor de browser: verloop per PRK + trend. Moet NA scrape_sfk.py en
+# scrape_sfk_historie.py, want hij leest beide.
+$UV python build_sfk_verloop.py 2>&1 | tail -2
 
 # --- 4. Ontdubbelen en kaart bouwen ----------------------------------------
 echo; echo "### 4. Ontdubbelen en bouwen"
@@ -109,7 +115,7 @@ if leeg: print(f'  LET OP, landen met minder dan 10 records: {leeg}')
 
 if [ "${1:-}" = "--deploy" ]; then
   echo; echo "### 8. Publiceren"
-  git add -A data.json atc4_dekking.json landkaart.html output/ 2>/dev/null
+  git add -A data.json atc4_dekking.json sfk_verloop.json landkaart.html output/ 2>/dev/null
   git commit -q -m "Dataverversing $DATUM" && git push -q origin HEAD && echo "  live gezet"
 else
   echo; echo "NIET gepubliceerd. Controleer de cijfers en draai daarna:"

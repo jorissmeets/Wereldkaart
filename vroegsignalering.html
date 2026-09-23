@@ -76,6 +76,17 @@
     .badge.impact { background: #d83b3b; } .badge.nieuw2 { background: var(--lcg-cyan); }
     .badge.src-farm { background: #7a5195; } .badge.src-cbg { background: #ef7d00; } .badge.src-sfk { background: #2aa198; }
     .prk-tag { display: inline-block; font-size: 9px; font-weight: 700; background: var(--lcg-blue, #00428b); color: #fff; padding: 1px 5px; border-radius: 3px; letter-spacing: 0.2px; white-space: nowrap; vertical-align: middle; }
+    /* SFK-verloop: grafiekje per middel + trendlabel + hoe lang het al loopt */
+    .spark { flex-shrink: 0; display: block; }
+    .spark-wrap { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .trend-tag { font-size: 8px; font-weight: 800; color: #fff; padding: 1px 5px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; }
+    .trend-tag.stijgend { background: #d83b3b; } .trend-tag.nieuw { background: var(--lcg-cyan, #00a0c8); }
+    .trend-tag.dalend { background: var(--lcg-green, #4a9e5c); } .trend-tag.stabiel { background: #8a99a8; }
+    .trend-tag.onbekend, .trend-tag.weg { background: var(--border); color: var(--text-muted); }
+    .streak { font-size: 10px; font-family: ui-monospace, Menlo, monospace; color: var(--text-muted); white-space: nowrap; }
+    .streak.lang { color: #d83b3b; font-weight: 700; }
+    .verloop-top { display: flex; align-items: center; gap: 14px; padding: 10px 16px; background: var(--bg-elevated); border-top: 1px solid var(--border-light); font-size: 11.5px; color: var(--text-secondary); flex-wrap: wrap; }
+    .verloop-top .cijfer { font-size: 17px; font-weight: 700; color: var(--text-primary); }
     .empty { padding: 20px 16px; color: var(--text-muted); font-style: italic; }
     .caret { cursor: pointer; color: var(--text-muted); font-size: 12px; user-select: none; transition: transform 0.15s; flex-shrink: 0; }
     .caret:hover { color: var(--lcg-blue); }
@@ -189,9 +200,17 @@
             <span class="src">ZI-nummer → G-standaard PRK/ATC · <a href="https://www3.sfk.nl/tekorten/?soort=totaal" target="_blank" rel="noopener">bron ↗</a></span>
             <div class="controls">
                 <label class="chip" style="cursor:pointer" title="Alleen artikelen waarvan de ATC op de EMS-lijst staat"><input type="checkbox" id="sfk-eml" style="vertical-align:-1px;margin-right:4px">alleen EMS</label>
+                <label class="chip" style="cursor:pointer" title="Alleen middelen waarvan het aantal getroffen verpakkingen de laatste 4 weken oploopt, of die nieuw op de monitor staan"><input type="checkbox" id="sfk-stijgend" style="vertical-align:-1px;margin-right:4px">alleen oplopend</label>
+                <select id="sfk-sort" class="chip" style="cursor:pointer" title="Sorteervolgorde">
+                    <option value="signaal">sorteer: signaal</option>
+                    <option value="aaneen">sorteer: langst lopend</option>
+                    <option value="ems">sorteer: EMS-kleur</option>
+                    <option value="naam">sorteer: naam</option>
+                </select>
                 <div class="search"><input type="text" id="sfk-search" placeholder="Zoek artikel, ATC of PRK…" autocomplete="off"></div>
             </div>
         </div>
+        <div class="verloop-top" id="sfk-verloop-top"></div>
         <div class="rows" id="sfk-rows"></div>
     </div>
 
@@ -249,6 +268,7 @@ let FARMANCO_EML = [];       // wordt gevuld uit farmanco_eml.json (scrape_farma
 let FARMANCO_SCRAPED = "";
 let SFK = [];                // sfk_tekorten.json (scrape_sfk.py)
 let SFK_SCRAPED = "";
+let SFK_VERLOOP = null;      // sfk_verloop.json (build_sfk_verloop.py) -- verloop per PRK over 104 weken
 let EML_ATC5 = {};   // ATC5 -> EMS-beoordeling (uit eml_atc5.json), voor de watchlist
 
 // ── ATC → leesbare naam (G-standaard NL / WHO EN), geïnjecteerd uit index.html ──
@@ -259,7 +279,7 @@ const FLAG = { AR:"🇦🇷",AT:"🇦🇹",AU:"🇦🇺",BE:"🇧🇪",BR:"🇧�
 
 let RAW = null, REASON_LABELS = {}, MAP_SIGNALS = [], PRK_SIGNALS = [];
 let FARMANCO_PRKS = new Set(), CBG_PRKS = new Set(), SFK_PRKS = new Set();   // PRK's per bron, voor cross-bron-koppeling
-const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapColor: "all", mapMany: false, mapGroup: false, fEml: "all", fPref: false, fVorm: "all", fQ: "", fatcQ: "", prkQ: "", prkMany: true, sfkQ: "", sfkEmlOnly: false };
+const S = { cbgDays: 90, cbgQ: "", cbgEmlOnly: false, mapDays: 120, mapQ: "", mapColor: "all", mapMany: false, mapGroup: false, fEml: "all", fPref: false, fVorm: "all", fQ: "", fatcQ: "", prkQ: "", prkMany: true, sfkQ: "", sfkEmlOnly: false, sfkStijgend: false, sfkSort: "signaal" };
 
 // ── Toedieningsvorm-categorieën (Farmanco 'vorm' is vrije tekst) ──
 const VORM_CATS = [["tablet", "Tablet"], ["capsule", "Capsule"], ["oraal", "Drank/oraal"], ["injectie", "Injectie/infuus"],
@@ -511,27 +531,105 @@ function renderPrk() {
     host.innerHTML = shown.map(prkRow).join("") + (list.length > MAP_CAP ? `<div class="empty">${list.length - MAP_CAP} meer — verfijn met de filters.</div>` : "");
 }
 
+// ── SFK-verloop ──
+// Een middel dat al 190 weken onafgebroken op de monitor staat is een ander probleem dan een
+// middel dat er vorige week bij kwam, maar in een platte lijst zien ze er identiek uit. Het
+// grafiekje en het trendlabel maken dat onderscheid zichtbaar zonder de rij breder te maken.
+const TREND_UITLEG = {
+    stijgend: "Aantal getroffen verpakkingen loopt op t.o.v. de 8 weken daarvoor",
+    nieuw: "Stond de 8 weken daarvoor niet op de monitor",
+    dalend: "Aantal getroffen verpakkingen loopt terug",
+    stabiel: "Aantal getroffen verpakkingen blijft gelijk",
+    onbekend: "Te kort in beeld om een trend te bepalen",
+    weg: "Deze week niet meer op de monitor",
+};
+const TREND_RANG = { stijgend: 4, nieuw: 3, stabiel: 2, dalend: 1, onbekend: 0, weg: 0 };
+
+function sparkline(reeks, breedte = 64, hoogte = 16) {
+    if (!reeks || !reeks.length) return "";
+    const top = Math.max(1, ...reeks);
+    const stap = breedte / Math.max(1, reeks.length - 1);
+    const punten = reeks.map((v, i) => `${(i * stap).toFixed(1)},${(hoogte - (v / top) * (hoogte - 2) - 1).toFixed(1)}`).join(" ");
+    const laatste = reeks[reeks.length - 1];
+    const cx = breedte, cy = hoogte - (laatste / top) * (hoogte - 2) - 1;
+    return `<svg class="spark" width="${breedte}" height="${hoogte}" viewBox="0 0 ${breedte + 3} ${hoogte}" aria-hidden="true">
+        <polyline points="${punten}" fill="none" stroke="#2aa198" stroke-width="1.2" stroke-linejoin="round"/>
+        <circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="1.8" fill="#2aa198"/>
+    </svg>`;
+}
+
+function verloopVan(prk) {
+    return (SFK_VERLOOP && SFK_VERLOOP.prk && SFK_VERLOOP.prk[String(prk)]) || null;
+}
+
+// Kop boven de lijst: hoe beweegt de monitor als geheel, en hoeveel middelen lopen op.
+function renderVerloopTop() {
+    const host = document.getElementById("sfk-verloop-top");
+    if (!host) return;
+    if (!SFK_VERLOOP || !SFK_VERLOOP.weken || !SFK_VERLOOP.weken.length) {
+        host.style.display = "none";
+        return;
+    }
+    host.style.display = "flex";
+    const tot = SFK_VERLOOP.totaal, weken = SFK_VERLOOP.weken;
+    const nu = tot[tot.length - 1], jaarGeleden = tot.length > 52 ? tot[tot.length - 53] : tot[0];
+    const verschil = jaarGeleden ? Math.round(((nu - jaarGeleden) / jaarGeleden) * 100) : 0;
+    const tekens = { stijgend: 0, nieuw: 0 };
+    Object.values(SFK_VERLOOP.prk || {}).forEach(g => { if (g.trend in tekens) tekens[g.trend]++; });
+    const richting = verschil > 0 ? `+${verschil}%` : `${verschil}%`;
+    host.innerHTML = `
+        <span title="Artikelen op de SFK-monitor in ${esc(weken[weken.length - 1])}"><span class="cijfer">${nu.toLocaleString("nl-NL")}</span> artikelen op de monitor</span>
+        ${sparkline(tot, 150, 26)}
+        <span title="Verandering ten opzichte van dezelfde week vorig jaar (${esc(weken[Math.max(0, weken.length - 53)])})">${richting} t.o.v. vorig jaar</span>
+        <span style="margin-left:auto"><span class="trend-tag stijgend">${tekens.stijgend}</span> oplopend &middot; <span class="trend-tag nieuw">${tekens.nieuw}</span> nieuw &middot; ${weken.length} weken historie${SFK_VERLOOP.weken_beschikbaar > weken.length ? ` (van ${SFK_VERLOOP.weken_beschikbaar})` : ""}</span>`;
+}
+
 // ── SFK-tekorten (totaal) — ZI-nummer → G-standaard PRK/ATC, EMS-kleur via ATC ──
 function renderSfk() {
     const host = document.getElementById("sfk-rows");
     if (!host) return;
     const sev = { rood: 3, oranje: 2, geel: 1 };
     const q = (S.sfkQ || "").toUpperCase();
-    let list = SFK.map(it => ({ ...it, eml: EML_ATC5[it.atc] || "" }));
+    let list = SFK.map(it => ({ ...it, eml: EML_ATC5[it.atc] || "", vl: verloopVan(it.prk) }));
     if (S.sfkEmlOnly) list = list.filter(it => it.eml);
+    if (S.sfkStijgend) list = list.filter(it => it.vl && (it.vl.trend === "stijgend" || it.vl.trend === "nieuw"));
     if (q) list = list.filter(it => (it.naam + " " + (it.atc || "") + " " + (it.prk || "") + " " + it.zi).toUpperCase().includes(q));
     if (!list.length) { host.innerHTML = `<div class="empty">Geen SFK-tekorten in deze selectie.</div>`; return; }
-    list.sort((a, b) => (sev[b.eml] || 0) - (sev[a.eml] || 0) || a.naam.localeCompare(b.naam));
+
+    const rang = it => TREND_RANG[(it.vl && it.vl.trend) || "onbekend"] || 0;
+    const aaneen = it => (it.vl && it.vl.aaneen) || 0;
+    const opNaam = (a, b) => a.naam.localeCompare(b.naam);
+    // 'signaal' zet oplopend en nieuw boven stabiel, en weegt daarbinnen de EMS-kleur mee:
+    // een oplopend tekort in een rood EMS-middel is het punt waar de vergadering over gaat.
+    const sorteringen = {
+        signaal: (a, b) => rang(b) - rang(a) || (sev[b.eml] || 0) - (sev[a.eml] || 0) || aaneen(b) - aaneen(a) || opNaam(a, b),
+        aaneen: (a, b) => aaneen(b) - aaneen(a) || opNaam(a, b),
+        ems: (a, b) => (sev[b.eml] || 0) - (sev[a.eml] || 0) || opNaam(a, b),
+        naam: opNaam,
+    };
+    list.sort(sorteringen[S.sfkSort] || sorteringen.signaal);
+
     const shown = list.slice(0, MAP_CAP);
-    host.innerHTML = shown.map(it => `<div class="row">
+    host.innerHTML = shown.map(it => {
+        const v = it.vl;
+        const trend = v ? v.trend : "";
+        const wk = v ? v.aaneen : 0;
+        const verloopHtml = v ? `<span class="spark-wrap">
+            <span class="streak${wk >= 52 ? " lang" : ""}" title="${wk} weken onafgebroken op de monitor${v.weken_totaal > wk ? `, ${v.weken_totaal} weken in totaal sinds 2023` : ""}">${wk}&thinsp;wk</span>
+            ${sparkline(v.v)}
+            <span class="trend-tag ${trend}" title="${esc(TREND_UITLEG[trend] || "")}">${trend}</span>
+        </span>` : '<span class="spark-wrap"><span class="streak" title="Geen historie voor deze PRK">&ndash;</span></span>';
+        return `<div class="row">
             <span class="eml-dot ${it.eml || "none"}" title="${it.eml ? "EMS: " + it.eml : "niet op EMS"}"></span>
             <span class="name">${esc(it.naam)}${it.eml ? ` <span class="eml-tag ${it.eml}">${it.eml.toUpperCase()}</span>` : ''}${it.preferent && it.preferent.length ? ` <span class="badge impact" title="Preferent bij: ${esc(it.preferent.join(", "))}">preferent</span>` : ''}</span>
             <span class="meta">${esc(it.opmerking || it.status || "")}${it.prk ? ` <span class="prk-tag" title="G-standaard: ${esc(it.prk_naam || "")}">PRK ${esc(it.prk)}</span>` : ''}</span>
+            ${verloopHtml}
             <span class="reg">${it.atc || ""} · ZI ${esc(it.zi)}</span>
-        </div>`).join("") + (list.length > MAP_CAP ? `<div class="empty">${list.length - MAP_CAP} meer — verfijn met zoeken of "alleen EMS".</div>` : "");
+        </div>`;
+    }).join("") + (list.length > MAP_CAP ? `<div class="empty">${list.length - MAP_CAP} meer — verfijn met zoeken of "alleen EMS".</div>` : "");
 }
 
-function render() { renderKpis(); renderCbg(); renderFarmanco(); renderFarmancoByAtc(); renderSfk(); renderMap(); renderPrk(); }
+function render() { renderKpis(); renderCbg(); renderFarmanco(); renderFarmancoByAtc(); renderSfk(); renderVerloopTop(); renderMap(); renderPrk(); }
 
 // Events
 document.querySelectorAll(".cbg-period").forEach(c => c.addEventListener("click", () => {
@@ -577,6 +675,8 @@ document.getElementById("prk-many").addEventListener("change", e => { S.prkMany 
 let _t6;
 document.getElementById("sfk-search").addEventListener("input", e => { clearTimeout(_t6); _t6 = setTimeout(() => { S.sfkQ = e.target.value; renderSfk(); }, 150); });
 document.getElementById("sfk-eml").addEventListener("change", e => { S.sfkEmlOnly = e.target.checked; renderSfk(); });
+document.getElementById("sfk-stijgend").addEventListener("change", e => { S.sfkStijgend = e.target.checked; renderSfk(); });
+document.getElementById("sfk-sort").addEventListener("change", e => { S.sfkSort = e.target.value; renderSfk(); });
 // Klik op een ATC-4-groepskop klapt de groep in/uit (containers zijn statisch; rijen worden opnieuw gerenderd)
 ["fatc-rows", "map-rows"].forEach(id => {
     const el = document.getElementById(id);
@@ -588,8 +688,8 @@ document.getElementById("sfk-eml").addEventListener("change", e => { S.sfkEmlOnl
 
 // Elke bron faalt onafhankelijk (een kapotte data.json maakt de andere secties niet leeg)
 const j = (u) => fetch(u).then(r => r.json()).catch(() => null);
-Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("eml_atc5.json"), j("sfk_tekorten.json")])
-    .then(([data, farm, cbg, ems, sfk]) => {
+Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("eml_atc5.json"), j("sfk_tekorten.json"), j("sfk_verloop.json")])
+    .then(([data, farm, cbg, ems, sfk, verloop]) => {
         RAW = data;
         REASON_LABELS = (data && data.reason_labels) || {};
         FARMANCO_EML = (farm && farm.items) || [];
@@ -599,6 +699,7 @@ Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("e
         EML_ATC5 = (ems && ems.map) || {};
         SFK = (sfk && sfk.items) || [];
         SFK_SCRAPED = (sfk && sfk.generated) || "";
+        SFK_VERLOOP = verloop || null;   // ontbreekt het bestand, dan vervalt alleen het verloop
         populateVormFilter();
         FARMANCO_PRKS = new Set(FARMANCO_EML.filter(m => m.prk).map(m => String(m.prk)));
         CBG_PRKS = new Set(CBG_TAV.filter(e => e.prk).map(e => String(e.prk)));
