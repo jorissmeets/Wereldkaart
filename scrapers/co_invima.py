@@ -138,12 +138,20 @@ class CoInvimaScraper(BaseScraper):
         # Drop rows without a product name
         if "product" in data.columns:
             data = data.dropna(subset=["product"])
-            # Filter out "Excluido" rows
-            data = data[
-                ~data["product"].astype(str).str.contains(
-                    "excluido", case=False, na=False
-                )
-            ]
+
+        # Producten die INVIMA van de lijst heeft gehaald ("Excluido del listado. Acta 4 de
+        # 2023...") zijn geen tekort meer. Er stond al een filter voor, maar het keek in de
+        # PRODUCT-kolom terwijl die tekst in de kolom FORMA FARMACEUTICA staat: 0 treffers
+        # daar, 297 hier. Bijna de helft van de 640 rijen telde dus ten onrechte mee als
+        # actief tekort -- en Colombia stond op de kaart volledig op 'actief'.
+        uitgesloten = 0
+        for kolom in ("dosage_form", "product"):
+            if kolom in data.columns:
+                vlag = data[kolom].astype(str).str.contains("excluido", case=False, na=False)
+                uitgesloten += int(vlag.sum())
+                data = data[~vlag]
+        if uitgesloten:
+            print(f"  Van de lijst gehaald ('Excluido del listado'): {uitgesloten} rijen overgeslagen")
 
         records = []
         for _, row in data.iterrows():
