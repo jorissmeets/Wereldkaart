@@ -1,4 +1,15 @@
-"""Scraper for Austria BASG medicine shortage data via XML export."""
+"""Scraper for Austria BASG medicine shortage data via XML export.
+
+LET OP bij het uitbreiden: de datums staan als ATTRIBUTEN op <Packung>, niet als
+child-elementen. findtext() geeft daar None op, en juist dat is hier lang misgegaan --
+shortage_start stond hard op "" terwijl de bron voor elke niet-beschikbare verpakking een
+echte begindatum levert. De kaart viel daardoor terug op de scrapedatum, wat elk Oostenrijks
+tekort even oud maakte als de laatste draai.
+
+    <Packung PZN="..." Datum_Meldung="2020-11-30" Datum_letzte_Aenderung="2026-04-07"
+             Beginn_Vertriebseinschraenkung="2020-11-30"
+             Datum_voraussichtliche_Wiederbelieferung="2026-10-15"> ... </Packung>
+"""
 
 import requests
 import pandas as pd
@@ -20,6 +31,27 @@ class AtBasgScraper(BaseScraper):
             source_name="BASG",
             base_url="https://www.basg.gv.at",
         )
+
+    @staticmethod
+    def _datum(entry, *namen: str) -> str:
+        """Eerste bruikbare datum uit de opgegeven ATTRIBUTEN van <Packung>.
+
+        De bron bevat tikfouten in het jaartal ("0206-08-26" in plaats van "2006-08-26").
+        Zo'n waarde is erger dan geen waarde: hij komt op de kaart terecht als een tekort
+        dat achttien eeuwen loopt. Alles buiten 1990..volgend jaar gaat daarom weg.
+        """
+        grens = datetime.now().year + 1
+        for naam in namen:
+            waarde = (entry.attrib.get(naam) or "").strip()[:10]
+            if len(waarde) != 10:
+                continue
+            try:
+                jaar = datetime.strptime(waarde, "%Y-%m-%d").year
+            except ValueError:
+                continue
+            if 1990 <= jaar <= grens:
+                return waarde
+        return ""
 
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
@@ -74,8 +106,13 @@ class AtBasgScraper(BaseScraper):
                 "legal_basis": (entry.findtext("Rechtsgrundlage_Meldung") or "").strip(),
                 "healthcare_notice": (entry.findtext("Mitteilung_Fachkreise") or "").strip(),
                 "basg_note": (entry.findtext("Hinweis_BASG") or "").strip(),
-                "shortage_start": "",
-                "estimated_end": "",
+                # Begin van de vertriebseinschraenkung; valt die weg, dan de meldingsdatum.
+                # Alle 678 niet-beschikbare verpakkingen hebben de eerste; de terugval raakt
+                # dus vrijwel alleen de wel-beschikbare regels.
+                "shortage_start": self._datum(entry, "Beginn_Vertriebseinschraenkung",
+                                              "Datum_Meldung"),
+                "estimated_end": self._datum(entry, "Datum_voraussichtliche_Wiederbelieferung"),
+                "last_updated": self._datum(entry, "Datum_letzte_Aenderung", "Datum_Meldung"),
                 "scraped_at": datetime.now().isoformat(),
             })
 

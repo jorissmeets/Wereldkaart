@@ -56,7 +56,11 @@ fresh_ccatc = {(r.get("cc"), (r.get("atc") or "").upper()) for r in fr}
 # enige wat we hebben.
 EXCLUDE = {"NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT",      # geen bruikbare tekortbron
            "CH",   # licentievoorbehoud in de bron; zie build_data.py
-           "GR", "DE", "JP",                                    # bron gerepareerd, vers is leidend
+           "GR", "DE", "JP", "AT",                              # bron gerepareerd, vers is leidend
+           # AT: de datums stonden als XML-ATTRIBUTEN op <Packung> en werden daardoor nooit
+           # gelezen (shortage_start stond hard op ""). Nu gerepareerd. De last-live-records
+           # zijn exact de datumloze versie van die bug; terughalen zou ze naast de gerepareerde
+           # regels zetten. De verse export is bovendien het volledige actuele register.
            # SK: de oude export telde elke melding sinds 2019 als actief door een omgekeerde
            # tiebreak op de aanmelddatum. MY: het oude endpoint maakte gevulde broncellen leeg
            # (datums verdwenen stil). In beide gevallen is de verse data de gecorrigeerde.
