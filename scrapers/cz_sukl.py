@@ -144,6 +144,41 @@ class CzSuklScraper(BaseScraper):
         except Exception:
             return "", []
 
+    MARKTRAPPORT_URL = "https://prehledy.sukl.cz/prehledy/v1/marketreport/posledni-hlaseni"
+
+    def _haal_marktrapport(self) -> dict:
+        """SUKL-code -> {reden, gemeld} uit het meldingenregister.
+
+        De lijst nedostupne-lp die we als basis gebruiken heeft GEEN redenveld; die staat
+        ook niet in het OpenAPI-schema ervan. Het meldingenregister van dezelfde dienst heeft
+        hem wel (duvodPreruseni). We houden per SUKL-code de LAATSTE melding aan, want een
+        product kan meerdere keren onderbroken en hervat zijn en alleen de recentste zegt iets
+        over de situatie van nu.
+        """
+        try:
+            r = requests.get(self.MARKTRAPPORT_URL, timeout=90,
+                             headers={"User-Agent": "Mozilla/5.0"})
+            r.raise_for_status()
+            rijen = (r.json() or {}).get("data") or []
+            laatste: dict = {}
+            for rij in rijen:
+                if not isinstance(rij, dict):
+                    continue
+                kod = str(rij.get("kodSUKL") or "").strip()
+                gemeld = str(rij.get("datumHlaseni") or "")[:10]
+                if not kod:
+                    continue
+                if kod in laatste and laatste[kod]["gemeld"] >= gemeld:
+                    continue
+                laatste[kod] = {"reden": str(rij.get("duvodPreruseni") or "").strip(),
+                                "gemeld": gemeld}
+            met = sum(1 for v in laatste.values() if v["reden"])
+            print(f"  Marktrapport: {len(laatste)} codes, {met} met een reden")
+            return laatste
+        except Exception as e:                       # noqa: BLE001
+            print(f"  LET OP: marktrapport niet opgehaald ({type(e).__name__}); geen redenen")
+            return {}
+
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
 
@@ -179,9 +214,12 @@ class CzSuklScraper(BaseScraper):
         print(f"  ATC gevonden voor {found}/{len(unique_kods)} producten")
         print(f"  Stofnaam gevonden voor {found_sub}/{len(unique_kods)} producten")
 
+        extra = self._haal_marktrapport()
+
         records = []
         for item in data:
             kod = str(item.get("kodSUKL", "")).strip()
+            meta = extra.get(kod, {})
             records.append({
                 "country_code": self.country_code,
                 "country_name": self.country_name,
@@ -196,9 +234,13 @@ class CzSuklScraper(BaseScraper):
                 "status": self.TYPE_MAP.get(item.get("typ"), "shortage"),
                 "atc_code": kod_atc_map.get(kod, ""),
                 "reference_no": str(item.get("cisloJednaciOd", "")).strip(),
+                "reason": meta.get("reden", ""),
+                "last_updated": meta.get("gemeld", ""),
                 "scraped_at": datetime.now().isoformat(),
             })
 
         df = pd.DataFrame(records)
+        gev = int((df["reason"].astype(str).str.strip() != "").sum()) if len(df) else 0
+        print(f"  Reden uit marketreport: {gev}/{len(df)}")
         print(f"  Total: {len(df)} shortage records scraped")
         return df

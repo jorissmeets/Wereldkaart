@@ -49,6 +49,7 @@ PER_COUNTRY_REASON_COL: dict[str, str] = {
     "AU": "reason",
     "NO": "reason",
     "SE": "reason",
+    "CZ": "reason",
     # PT staat hier wel, maar wordt verderop bewust van de kaart geweerd (besluit Joris
     # 22-09, zie de uitsluitingslijst bij het inlezen). Deze regel en de 8 PT-regels in
     # cause_mapping_v2.csv hebben dus nu GEEN effect; ze staan klaar voor als PT ooit
