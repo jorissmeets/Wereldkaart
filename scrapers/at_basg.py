@@ -72,10 +72,38 @@ class AtBasgScraper(BaseScraper):
         print(f"  Found {len(entries)} Packung entries")
 
         records = []
+        overgeslagen = 0
         for entry in entries:
             name = entry.findtext("Bezeichnung_Arzneispezialitaet") or ""
             if not name.strip():
                 continue
+
+            # Niet elke regel in dit register is een tekort. De MELDING loopt op het niveau
+            # van de Arzneispezialitaet en neemt ALLE verpakkingsgroottes mee, ook de niet
+            # getroffen. BASG waarschuwt daar op zijn eigen exportpagina uitdrukkelijk voor:
+            # "Bitte beachten Sie beim Verarbeiten der Daten auf die jeweiligen Status der
+            # Packungen." Volgens de BASG-FAQ betekent "verfügbar" dat de verpakking
+            # "kontinuierlich und in ausreichendem Ausmass von Apotheken in Oesterreich
+            # abgegeben werden" kan -- dus juist geen tekort.
+            #
+            #   verfügbar ZONDER begindatum  -> nooit beperkt geweest, meegelift met een
+            #                                   zusterverpakking. Weglaten.
+            #   verfügbar MET begindatum     -> was beperkt, levering hervat. Opgelost.
+            #
+            # Gecontroleerd op de export van 23-09-2026: alle 166 zonder begindatum hebben een
+            # zusterverpakking die wel beperkt is, en geen van de 508 middelen is volledig
+            # verfügbar. Zonder dit filter telde de kaart 885 verpakkingen waar er 678 getroffen
+            # zijn, een overschatting van 31 procent. Let op: "verfügbar gemaess §4 (1)" is iets
+            # heel anders en blijft staan -- dat is een ambtshalve BASG-plaatsing omdat de
+            # patientbehoefte niet gedekt wordt terwijl de vergunninghouder zegt te kunnen
+            # leveren. Dat is eerder een zwaarder tekort dan een lichter.
+            status = (entry.findtext("Status") or "").strip()
+            begin_beperking = self._datum(entry, "Beginn_Vertriebseinschraenkung")
+            if status == "verfügbar":
+                if not begin_beperking:
+                    overgeslagen += 1
+                    continue
+                status = "resolved"
 
             strength = entry.findtext("Staerke") or ""
             unit = entry.findtext("Unit") or ""
@@ -100,7 +128,7 @@ class AtBasgScraper(BaseScraper):
                 "atc_code": (entry.findtext("ATCCodes") or "").strip(),
                 "marketing_auth_holder": (entry.findtext("Zulassungsinhaber") or "").strip(),
                 "reporter": (entry.findtext("Melder") or "").strip(),
-                "status": (entry.findtext("Status") or "").strip(),
+                "status": status,
                 "reason": (entry.findtext("Grund") or "").strip(),
                 "parallel_export_ban": (entry.findtext("Parallelexportverbot") or "").strip(),
                 "legal_basis": (entry.findtext("Rechtsgrundlage_Meldung") or "").strip(),
@@ -117,5 +145,8 @@ class AtBasgScraper(BaseScraper):
             })
 
         df = pd.DataFrame(records)
+        if overgeslagen:
+            print(f"  Overgeslagen: {overgeslagen} verpakkingen met status 'verfügbar' zonder "
+                  f"begindatum (meegelift met de melding, zelf niet beperkt)")
         print(f"  Total: {len(df)} shortage records scraped")
         return df
