@@ -111,6 +111,11 @@ class SiCbzScraper(BaseScraper):
             encoding="cp1252",
             low_memory=False,
         )
+        # De CBZ-export heeft kolomnamen MET spaties eraan ('Nacionalna sifra '). Zonder
+        # deze strip geeft row.get("Nacionalna sifra") stil None, en omdat we die waarde
+        # zfill(6)-en werd dat "000000" voor alle 530 rijen -- een sleutel die nergens op
+        # matcht, zonder dat er iets faalt.
+        df_raw.columns = [str(c).strip() for c in df_raw.columns]
         print(f"  Total medicines in register: {len(df_raw)}")
 
         # Filter for active supply disruptions
@@ -149,7 +154,8 @@ class SiCbzScraper(BaseScraper):
                 "marketing_auth_holder": str(row.get("Naziv imetnika dovoljenja", "")).strip().replace("nan", ""),
                 "market_status": str(row.get("Naziv prisotnosti na trgu", "")).strip().replace("nan", ""),
                 "market_status_code": code,
-                "product_no": str(row.get("Nacionalna šifra", "")).strip().replace("nan", "").zfill(6),
+                "product_no": (str(row.get("Nacionalna šifra", "")).strip().replace("nan", "").zfill(6)
+                               if str(row.get("Nacionalna šifra", "")).strip() not in ("", "nan") else ""),
                 "shortage_start": datums.get(str(row.get("Nacionalna šifra", "")).strip().zfill(6), {}).get("start", ""),
                 "estimated_end": datums.get(str(row.get("Nacionalna šifra", "")).strip().zfill(6), {}).get("eind", ""),
                 "last_updated": datums.get(str(row.get("Nacionalna šifra", "")).strip().zfill(6), {}).get("ontvangen", ""),
