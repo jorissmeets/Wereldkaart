@@ -39,6 +39,16 @@ PER_COUNTRY_REASON_COL: dict[str, str] = {
     "HU": "reason",
     "IE": "reason",
     "MY": "reason",
+    # Toegevoegd 2026-09-23, nadat bleek dat deze vier bronnen de reden gewoon leveren maar
+    # we hem niet uitlazen: de VS als top-level JSON-veld shortage_reason, Australie in de
+    # officiele CSV-export, Noorwegen in de apotheekvariant van dezelfde lijst en Zweden
+    # achter de detail-endpoint. Zonder een regel HIER blijft zo'n kolom onzichtbaar, en
+    # zonder regels in cause_mapping_v2.csv blijft hij dat ook: build_data zet alleen een
+    # reden als de waarde daar te vinden is.
+    "US": "reason",
+    "AU": "reason",
+    "NO": "reason",
+    "SE": "reason",
     # PT staat hier wel, maar wordt verderop bewust van de kaart geweerd (besluit Joris
     # 22-09, zie de uitsluitingslijst bij het inlezen). Deze regel en de 8 PT-regels in
     # cause_mapping_v2.csv hebben dus nu GEEN effect; ze staan klaar voor als PT ooit
@@ -487,12 +497,13 @@ def build():
             # we onterecht als tekortstart (validatie AT/DK 25-08). Geen datum -> leeg laten.
             if not shortage_start:
                 shortage_start = parse_date(row.get("published_date"))
-            # FR/ANSM kent geen startdatum-kolom; onze 'shortage_start' is daar de bijwerkdatum
-            # ('Mise à jour'). Niet als tekortstart tonen, maar wél bewaren als last_updated zodat
-            # de >1-jaar-inactiefregel blijft werken (validatie 25-08; scraper hierop aangepast).
-            if cc == "FR":
-                last_updated = last_updated or shortage_start
-                shortage_start = None
+            # FR/ANSM: hier stond dat de bron geen startdatum-kolom kent en dat onze
+            # 'shortage_start' in werkelijkheid de bijwerkdatum was ('Mise a jour'), waarna
+            # die hier werd gewist. Dat klopte tot 23-09-2026. De ANSM-pagina heeft echter
+            # altijd al een Excel-export gehad MET 'Date de debut de situation' (294/294
+            # gevuld); de scraper leest die nu, dus shortage_start is voortaan een echte
+            # tekortstart. Wissen zou precies de datums weggooien die we net hebben gevonden.
+            # De bijwerkdatum komt nu uit 'Date de mise a jour' van diezelfde export.
             # CZ/SÚKL 'nedostupne-lp' = actuele niet-beschikbaar-lijst: alles erop is NÚ een tekort,
             # ook al is de startdatum oud. Zet last_updated op de scrapedatum zodat de >1-jaar-
             # inactiefregel een lopend tekort niet verbergt (validatie/uitbreiding 17-09).
@@ -500,7 +511,9 @@ def build():
                 last_updated = scraped_at
             # JP/MHLW is net als CZ een MOMENTOPNAME: het bestand geeft de huidige
             # leveringsstatus van elk product, dus wat erin staat is per definitie de stand van
-            # nu. De bron levert geen startdatum (de statusdatum-kolom is leeg), en zonder
+            # nu. De startdatum is er sinds 23-09-2026 wel (de kolom stond als Excel-serie-
+            # nummer in de cel en werd daardoor niet herkend), maar de bijwerkdatum blijft
+            # bewust de scrapedatum: het bestand IS de stand van nu, en zonder
             # last_updated zou de >1-jaar-regel deze meldingen ten onrechte inactief maken.
             # Let op: de scraper filtert '通常出荷' (normale levering) er al uit -- zonder dat
             # filter zou ruim 80% van het bestand als tekort binnenkomen.
