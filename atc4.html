@@ -139,6 +139,10 @@
     .cell { font-size: 12px; font-variant-numeric: tabular-nums; color: var(--text-secondary); min-width: 0; }
     .cell .big { font-weight: 800; color: var(--text-primary); }
     .cell .pct { font-weight: 700; color: var(--text-primary); }
+    .ik { display: inline-flex; align-items: center; justify-content: center; width: 13px; height: 13px;
+          border: 1px solid var(--text-muted); border-radius: 50%; font-size: 9px; font-style: normal;
+          font-weight: 700; color: var(--text-muted); cursor: help; vertical-align: middle; }
+    .ik:hover { color: var(--lcg-blue); border-color: var(--lcg-blue); }
     .cell .sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; line-height: 1.3; }
     /* "geraakt" krijgt bewust lichtere typografie en geen meter: het is vroegsignaal, geen beschikbaarheid. */
     .cell.licht, .cell.licht .big { font-weight: 400; color: var(--text-muted); }
@@ -189,12 +193,6 @@
 <body>
 <div class="page">
     <div class="lastup" id="lastup"></div>
-    <!-- De hele teller van deze pagina rust op de SFK Monitor. Die meet leverbaarheid VIA DE
-         GROOTHANDEL in een bepaalde week, niet of een middel verkrijgbaar is. Zonder die zin
-         erboven leest iemand "2 van de 7 weg" als "dit middel is er niet meer". -->
-    <div id="bronwaarschuwing" style="max-width:1180px;margin:0 auto 16px;padding:11px 15px;
-         background:#fff8e6;border:1px solid #f0c060;border-left:4px solid #f0a020;border-radius:7px;
-         font-size:12.5px;line-height:1.55;color:#4a3a10"></div>
     <div class="top">
         <div class="top-logo"><svg viewBox="0 0 156 158" fill="#00428b"><path d="M.47,55.36l18.05-31.47c.98-1.68,3.09-2.24,4.77-1.26l16.51,9.45c10.33,5.99,13.93,19.17,8,29.55-5.99,10.33-19.17,13.89-29.55,7.95L1.74,60.09c-1.64-.94-2.24-3.04-1.26-4.72Z"/><path d="M47.93,96.42c5.99,10.33,2.48,23.57-7.81,29.55l-16.46,9.59c-1.68.98-3.83.42-4.77-1.26L.66,102.92c-.98-1.68-.37-3.79,1.26-4.77l16.46-9.54c10.33-5.99,23.57-2.48,29.55,7.81Z"/><path d="M99.6,78.93c0,11.97-9.68,21.65-21.6,21.65s-21.6-9.68-21.6-21.65,9.68-21.6,21.6-21.6,21.6,9.68,21.6,21.6Z"/><path d="M99.6,3.46v19.08c0,11.92-9.68,21.6-21.6,21.6s-21.6-9.68-21.6-21.6V3.46c0-1.92,1.54-3.46,3.46-3.46h36.28c1.92,0,3.46,1.54,3.46,3.46Z"/><path d="M99.6,135.37v19.03c0,1.96-1.54,3.51-3.46,3.51h-36.28c-1.92,0-3.46-1.54-3.46-3.51v-19.03c0-11.92,9.68-21.6,21.6-21.6s21.6,9.68,21.6,21.6Z"/><path d="M155.43,102.54l-18.05,31.47c-.98,1.68-3.09,2.24-4.77,1.26l-16.51-9.45c-10.33-5.99-13.93-19.17-8-29.55,5.99-10.33,19.17-13.93,29.55-7.95l16.51,9.49c1.64.94,2.24,3.04,1.26,4.72Z"/><path d="M108.16,61.49c-6.03-10.33-2.52-23.57,7.81-29.55l16.46-9.59c1.68-.98,3.79-.42,4.77,1.26l18.24,31.38c.93,1.64.37,3.79-1.26,4.77l-16.46,9.54c-10.33,5.99-23.57,2.48-29.55-7.81Z"/></svg></div>
         <div>
@@ -791,8 +789,8 @@ function render() {
     const head = `<div class="phead">
         <span title="ATC4-groep met EMS-stip: de zwaarste EMS-beoordeling van een stof in deze pool">Pool</span>
         <span title="Aantal unieke PRK in de G-standaard (specialités) en het aantal artikelen daaronder">Omvang</span>
-        <span title="Alle verpakkingen op de SFK Monitor leveringsproblemen">Weg</span>
-        <span title="Minstens één verpakking op de lijst">Geraakt</span>
+        <span>Weg <i class="ik" title="Alle verpakkingen van een product staan op de SFK Monitor leveringsproblemen${META.sfkPeil ? ` (peildatum ${META.sfkPeil})` : ""}. Die monitor meet of minimaal twee van de vier groothandels — Alliance, Brocacef, Mosadex en Pluripharm — een artikel die week niet direct konden leveren. Geen beschikbaarheidstoets: parallelimport, directe fabrikantlevering, kleine groothandels en apotheekvoorraad tellen niet mee, en de lijst wisselt wekelijks. Lees dit als 'die week niet via de groothandel te bestellen', niet als 'niet meer verkrijgbaar'.">i</i></span>
+        <span>Geraakt <i class="ik" title="Minstens één verpakking van het product staat op de SFK Monitor leveringsproblemen${META.sfkPeil ? ` (peildatum ${META.sfkPeil})` : ""} — de andere verpakkingen zijn die week nog wel via de groothandel te bestellen. Een signaal, geen beschikbaarheidsprobleem.">i</i></span>
         <span title="PRK met maar één leverancier: hoe ondiep de pool is als er iets wegvalt">Diepte</span>
         <span title="Farmanco (KNMP), geteld op ATC5-stofniveau omdat deze bron geen PRK levert">Farmanco</span>
         <span title="Deel van de Nederlandse groep dat in het buitenland in tekort staat, geteld in PRK">Buitenland</span>
@@ -897,21 +895,10 @@ Promise.all([j("atc4_dekking.json"), j("atc4_pool.json"), j("data.json"), j("far
     // apart, met zijn eigen datum, zodat beide feiten zichtbaar blijven.
     const dts = [data && data.generated, farm && farm.generated, sfk && sfk.generated, META.generated].filter(Boolean).sort();
     const bron = (n, v) => v ? `<b>${esc(n)}</b> ${dmy(v)}` : `<b>${esc(n)}</b> niet geladen`;
-    // Vul het waarschuwingsblok: wat de teller WEL en NIET meet, plus de peildatum van de
-    // bron zelf. Dit staat bewust bovenaan en niet in de leeswijzer onderaan -- de kern van
-    // deze pagina is een groothandelsmonitor, en wie dat niet weet leest de cijfers verkeerd.
-    const _wb = document.getElementById("bronwaarschuwing");
-    if (_wb) {
-        const peil = META.sfkPeil ? `<b>${META.sfkPeil}</b>` : "onbekende week";
-        _wb.innerHTML =
-            `<b>Lees dit eerst.</b> De kolommen <b>Weg</b> en <b>Geraakt</b> komen uit de ` +
-            `<b>SFK Monitor leveringsproblemen</b> (peildatum ${peil}). Die meet of minimaal ` +
-            `twee van de vier groothandels — Alliance, Brocacef, Mosadex en Pluripharm — een ` +
-            `artikel die week <b>niet direct konden leveren</b>. Dat is geen beschikbaarheidstoets: ` +
-            `parallelimport, directe fabrikantlevering, kleine groothandels en apotheekvoorraad ` +
-            `tellen niet mee, en de lijst wisselt wekelijks. Lees “weg” dus als ` +
-            `<b>“die week niet via de groothandel te bestellen”</b>, niet als “niet meer verkrijgbaar”.`;
-    }
+    // Het waarschuwingsblok boven de pagina is eruit (verzoek Joris, 24-09). Wat het zei
+    // staat nu achter de i bij de kolommen Weg en Geraakt: daar wordt het gelezen op het
+    // moment dat iemand zich afvraagt wat het getal betekent, in plaats van als banner die
+    // je wegkijkt voordat je bij de tabel bent.
 
     document.getElementById("lastup").innerHTML =
         `<span class="main">Alle signaalbronnen bijgewerkt t/m: ${dts.length ? dmy(dts[0]) : "onbekend"}</span>
