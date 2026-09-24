@@ -213,19 +213,11 @@
     <div class="kpis" id="kpis"></div>
     <div id="alerts"></div>
 
-    <!-- Bewust hier: tussen de KPI's en de tabel, waar het oog na de getallen landt.
-         Niet in de voettekst - dit zijn de vier manieren waarop deze pagina bij een
-         vluchtige blik tot een verkeerde inkoopbeslissing leidt. -->
-    <div class="note warn" id="leeswijzer">
-        <b>Lees dit vóór u hier een inkoop- of formulariumbeslissing op baseert.</b>
-        <ul style="margin:6px 0 0 18px; padding:0">
-            <li><b>“Uitwijk verloren” geldt per product, niet per groep.</b> Bovenaan in de standaardsortering staan groepen waarin mínstens één PRK volledig weg is — niet dat de pool leeg is. In 40 van de 49 pools In die groepen blijven ná dat verlies nog ≥5 andere PRK over (mediaan 10). V08AB staat in een groep met 2 weggevallen PRK van de 65.</li>
-            <li><b>“Weg” is een lijststatus, geen beschikbaarheidstoets.</b> Het betekent: álle ZI-artikelen onder die PRK staan op de SFK Monitor leveringsproblemen. 56 van de 60 weggevallen PRK hebben er maar één; daar zijn “geraakt” en “weg” per definitie hetzelfde. Dat geldt voor 1.954 van de 4.692 PRK in de noemer (42%). Een leverbare parallelimport of een niet-gemelde verpakking ziet deze pagina niet.</li>
-            <li><b>De ATC4-pool is een classificatie, geen therapeutische uitwijkgroep.</b> Bij combinatiepreparaten ligt het alternatief meestal búiten de pool (C09BA perindopril/indapamide, C10BA ezetimib/simvastatine, S01CA dexamethason/gentamicine). Omgekeerd staat er in een grote pool vaak een middel dat klinisch geen vervanger is. Beoordeel de uitwijk altijd op de uitgeklapte PRK-regels, nooit op het percentage alleen.</li>
-            <li><b>“Mogelijk urgent” is een rangschikking, geen voorspelling.</b> De sortering zet bovenaan wat het bekijken waard is vóórdat Nederland het merkt, via een poort op drie feiten: de pool is groot genoeg om te meten (≥5 PRK), er is een in 3 of meer landen bevestigd buitenlandsignaal, en minder dan een kwart van de Nederlandse pool is geraakt. Daarbinnen telt het aandeel bevestigde PRK. Er zit geen model en geen gewogen score achter; elk van de drie feiten staat in de rij zelf en is na te rekenen. Dat een pool hier bovenaan staat betekent <i>niet</i> dat het tekort naar Nederland komt — de volgorde waarin tekorten over landen trekken is met deze data niet vast te stellen.</li>
-            <li><b>Buitenland zegt niets over de Nederlandse beschikbaarheid.</b> De pooldekking geeft aan welk deel van de Nederlandse pool ergens in het buitenland in tekort staat, geteld in PRK uit de G-standaard. Dat is bewust géén optelsom van landen — landen hanteren verschillende statusdefinities en zijn niet optelbaar tot een noemer — maar een breuk op de Nederlandse pool, waarin elke PRK één keer telt hoeveel landen hem ook melden. Een pool die in het buitenland op 100% staat, kan in Nederland gewoon leverbaar zijn; dat is juist het geval dat de moeite van het bekijken waard is. Meldingen zonder bruikbare PRK tellen <b>niet</b> mee in dat percentage — zonder PRK is niet vast te stellen om welk product het gaat, dus ze kunnen niet in de teller en niet in de noemer. Ze staan per ATC onder de pool als <i>ATC overig</i>, zodat ze niet stil verdwijnen. Groepen die hier niet als handelsproduct bestaan hebben géén Nederlandse noemer: daar is geen enkele uitspraak over de NL-markt uit af te leiden.</li>
-        </ul>
-    </div>
+    <!-- De leeswijzer met vijf bullets stond hier. Eruit op verzoek van Joris (24-09):
+         vijf alinea's waarschuwing boven een tabel leest niemand, en wat niemand leest
+         beschermt niemand. De inhoud staat waar hij thuishoort: de meetregels in de
+         docstring van build_atc4_dekking.py, de valkuilen in de commentaren hieronder. -->
+
 
     <!-- Leeftijd van de noemer. Apart van de leeswijzer: de kopdatum hierboven gaat
          alleen over de SIGNAALbronnen, de noemer is maanden ouder en dat verschil is
@@ -234,19 +226,17 @@
     <div id="noemer-leeftijd"></div>
 
     <div class="note">
-        <b>Noemer</b> = alle unieke PRK-codes in de ATC4-pool uit de G-standaard (alleen specialités; ATC4- of ATC5-niveau).
-        <b>Weg</b> = PRK waarvan <b>álle</b> onderliggende artikelen in de SFK Monitor leveringsproblemen staan. Dat betekent: minimaal twee van de vier groothandels (Alliance, Brocacef, Mosadex, Pluripharm) konden ze die week niet <b>direct</b> leveren. Het betekent <b>niet</b> dat het middel onverkrijgbaar is — parallelimport, directe fabrikantlevering, kleine groothandels en apotheekvoorraad tellen niet mee.
-        <b>Geraakt</b> = PRK met mínstens één artikel op de lijst; dat is vroegsignaal, géén beschikbaarheid, en staat daarom bewust lichter en zonder balk.
-        Het absolute aantal staat altijd vóór het percentage, en een percentage verschijnt pas vanaf <b id="minprk-note">5</b> PRK in de pool — daaronder springt het in te grote stappen om iets te meten.
-        NL en buitenland worden nooit in één breuk gezet; buitenland is altijd een telling.
+        <b>Weg</b> = alle verpakkingen van dat product op de SFK Monitor leveringsproblemen. <b>Geraakt</b> = minstens één.
+        Percentage vanaf <b id="minprk-note">5</b> PRK in de groep.
     </div>
 
     <div class="controls">
-        <span class="ctl-lbl">Sortering binnen blok</span>
-        <div class="chip srt active" data-sort="standaard" title="Ernstigste eerst: groepen waarin een heel product niet te bestellen was, dan waarin alleen verpakkingen geraakt zijn, dan zonder Nederlands tekortsignaal, dan de groepen die hier niet als handelsproduct bestaan">Standaard</div>
+        <span class="ctl-lbl">Sortering</span>
+        <div class="chip srt active" data-sort="standaard" title="Ernstigste eerst">Standaard</div>
+        <div class="chip srt" data-sort="geraakt" title="Meeste producten met minstens één verpakking op de tekortenlijst">Geraakt</div>
         <div class="chip srt" data-sort="omvang" title="Grootste pools eerst (aantal PRK in de noemer)">Omvang</div>
-        <div class="chip srt" data-sort="nieuw" title="Hiërarchisch: eerst het aantal Nederlandse Farmanco-meldingen (de NL-badge), daarbinnen het buitenlandse aantal. Nooit opgeteld — de zichtbare buitenlandkolom loopt daardoor niet netjes af.">Nieuw ≤7 d (NL eerst)</div>
-        <div class="chip srt" data-sort="urgent" title="Pools die het bekijken waard zijn vóórdat Nederland het merkt. Poort op drie feiten: de pool is groot genoeg om te meten, er is een in 3 of meer landen bevestigd buitenlandsignaal, en Nederland is nog grotendeels ongemoeid (minder dan een kwart van de pool geraakt). Daarna gerangschikt op het aandeel bevestigde PRK. Geen voorspelling en geen gewogen score — elk van de drie feiten staat in de rij zelf.">Mogelijk urgent</div>
+        <div class="chip srt" data-sort="nieuw" title="Nederlandse meldingen eerst, dan buitenlandse">Nieuw ≤7 d (NL eerst)</div>
+        <div class="chip srt" data-sort="urgent" title="Breed in tekort in het buitenland, Nederland nog nauwelijks geraakt">Mogelijk urgent</div>
         <div class="search"><input type="text" id="q" placeholder="Zoek pool, ATC4-code of stof…" autocomplete="off"></div>
     </div>
     <div class="controls" style="margin-top:-4px">
@@ -564,7 +554,7 @@ function urgentBadge(p) {
     if (S.sort !== "urgent") return "";
     const u = urgentie(p);
     if (!u) return "";
-    return ` <span class="b urgent" title="${nl(u.bevestigd)} van ${nl(p.nPrk)} PRK in deze pool staan in ${MIN_LANDEN} of meer landen tegelijk in tekort (${nl(Math.round(u.aandeel * 100))}%), terwijl in Nederland ${nl(Math.round(u.nlA * 100))}% van de pool geraakt is. Dat is wat deze pool hier bovenaan zet — geen voorspelling.">vroegsignaal</span>`;
+    return ` <span class="b urgent" title="${nl(u.bevestigd)} van ${nl(p.nPrk)} PRK in ≥${MIN_LANDEN} landen in tekort; in Nederland ${nl(Math.round(u.nlA * 100))}% geraakt">vroegsignaal</span>`;
 }
 
 function nlBadge(p) {
@@ -626,9 +616,9 @@ function poolRow(p) {
             : `<span class="big">${nl(p.buitN)}</span> ${p.buitN === 1 ? "stof" : "stoffen"}`);
     const buit = (p.buitPrk == null || p.nPrk == null || geenNoemer) ? buitTelling
         : `<span class="big">${nl(p.buitPrk)}</span> van ${nl(p.nPrk)} PRK`
-          + (p.buitPct != null ? ` <span class="pct" title="Deel van de Nederlandse pool dat ergens in het buitenland in tekort staat. Elke PRK telt één keer, hoeveel landen hem ook melden.">${nl(p.buitPct)}%</span>` : "")
+          + (p.buitPct != null ? ` <span class="pct" title="Deel van de Nederlandse groep dat in het buitenland in tekort staat">${nl(p.buitPct)}%</span>` : "")
           + (p.buitPrk3 != null ? `<div class="sub" title="Strenger: alleen PRK die in ${MIN_LANDEN} of meer landen tegelijk gemeld worden">waarvan ${nl(p.buitPrk3)} in ≥${MIN_LANDEN} landen</div>` : "")
-          + (p.buitOverig ? `<div class="sub" title="Meldingen in deze pool zonder bruikbare PRK, per ATC. Tellen NIET mee in het percentage hierboven: zonder PRK is niet vast te stellen om welk product het gaat, dus ze kunnen niet in de teller en niet in de noemer.">+ ${nl(p.buitOverig)} zonder PRK (ATC overig)</div>` : "");
+          + (p.buitOverig ? `<div class="sub" title="Zonder PRK, dus niet in het percentage hierboven">+ ${nl(p.buitOverig)} zonder PRK (ATC overig)</div>` : "");
 
     return `<div class="grp-wrap collapsed" id="${esc(p.code)}" data-code="${esc(p.code)}">
         <div class="prow">
@@ -702,8 +692,7 @@ function poolDetail(p) {
         d.push(`<div class="det"><div class="det-t">ATC overig — ${nl(p.buitOverig)} melding${p.buitOverig === 1 ? "" : "en"} die niet in de pooldekking meetellen${uitleg ? ` (${uitleg})` : ""}</div>
             <div class="det-l">${p.buitOverigAtc.slice(0, 12).map(x =>
                 `<span class="it" title="${(x.landen || []).join(", ")}">${esc(x.atc)}${ATC5_NAMEN[x.atc] ? " " + esc(ATC5_NAMEN[x.atc]) : ""} · ${(x.landen || []).slice(0, 6).map(flagOf).join("")} ${nl(x.n_landen)} ${x.n_landen === 1 ? "land" : "landen"}</span>`).join("")}
-            ${p.buitOverigAtc.length > 12 ? `<span class="it">… +${nl(p.buitOverigAtc.length - 12)}</span>` : ""}</div>
-            <div class="det-l" style="margin-top:4px;color:var(--text-muted)">Geen PRK betekent: geen plek in teller of noemer. Deze meldingen staan er alleen naast.</div></div>`);
+            ${p.buitOverigAtc.length > 12 ? `<span class="it">… +${nl(p.buitOverigAtc.length - 12)}</span>` : ""}</div></div>`);
     }
     if (p.farmNamen && p.farmNamen.length) {
         d.push(`<div class="det"><div class="det-t">Farmanco (KNMP) — op ATC5-niveau, niet op PRK</div>
@@ -732,20 +721,23 @@ function poolDetail(p) {
 // data en worden gebruikt als sorteersleutel en voor de KPI's.
 const SORTEER_KOP = {
     standaard: "Alle groepen, ernstigste eerst",
+    geraakt:   "Alle groepen, meeste geraakte producten eerst",
     omvang:    "Alle groepen, grootste eerst",
     nieuw:     "Alle groepen, nieuwste meldingen eerst",
     urgent:    "Alle groepen, mogelijk urgent eerst",
 };
 const SORTEER_UITLEG = {
-    standaard: "Eerst de groepen waarin een heel product niet te bestellen was, dan die waarin alleen verpakkingen geraakt zijn, dan die zonder Nederlands tekortsignaal, en als laatste de groepen die hier niet als handelsproduct bestaan.",
-    omvang:    "Op het aantal voorschrijfbare producten (PRK) in de groep. Zegt niets over tekorten; handig om te zien hoeveel ruimte een groep überhaupt heeft.",
-    nieuw:     "Eerst het aantal Nederlandse Farmanco-meldingen van de laatste 7 dagen, daarbinnen het buitenlandse aantal. Nooit opgeteld.",
-    urgent:    "Groepen die het bekijken waard zijn vóórdat Nederland het merkt: minstens één product in 3 of meer landen tegelijk in tekort, terwijl minder dan een kwart van de Nederlandse groep geraakt is. Een rangschikking op feiten, geen voorspelling.",
+    standaard: "", omvang: "", nieuw: "",
+    urgent:    "Breed in tekort in het buitenland, Nederland nog nauwelijks geraakt.",
 };
 
 function sorteer(list, blok) {
     const c = (x) => x == null ? -1 : x;
     if (S.sort === "omvang") return list.sort((a, b) => c(b.nPrk) - c(a.nPrk) || a.code.localeCompare(b.code));
+    // Op geraakt: eerst het aantal, dan het aandeel. Aantal vóór percentage, net als in de
+    // kolom zelf -- anders staat een groep van 2 PRK waarvan er 1 geraakt is (50%) boven een
+    // groep van 40 waarvan er 15 geraakt zijn (38%).
+    if (S.sort === "geraakt") return list.sort((a, b) => c(b.geraakt) - c(a.geraakt) || c(b.pctGeraakt) - c(a.pctGeraakt) || a.code.localeCompare(b.code));
     // Mogelijk urgent. Eerst de poort: alleen pools waar alle drie de feiten gelden, anders
     // zegt de volgorde niets. Daarna rangschikken op het aandeel van de pool dat in het
     // buitenland BEVESTIGD in tekort is -- bevestigd betekent in >= MIN_LANDEN landen
@@ -799,12 +791,12 @@ function render() {
     const head = `<div class="phead">
         <span title="ATC4-groep met EMS-stip: de zwaarste EMS-beoordeling van een stof in deze pool">Pool</span>
         <span title="Aantal unieke PRK in de G-standaard (specialités) en het aantal artikelen daaronder">Omvang</span>
-        <span title="PRK waarvan alle artikelen in de SFK Monitor leveringsproblemen staan: minimaal 2 van de 4 groothandels konden ze die week niet direct leveren">Weg</span>
-        <span title="PRK met minstens één artikel op de lijst — vroegsignaal, zegt niets over beschikbaarheid">Geraakt</span>
+        <span title="Alle verpakkingen op de SFK Monitor leveringsproblemen">Weg</span>
+        <span title="Minstens één verpakking op de lijst">Geraakt</span>
         <span title="PRK met maar één leverancier: hoe ondiep de pool is als er iets wegvalt">Diepte</span>
         <span title="Farmanco (KNMP), geteld op ATC5-stofniveau omdat deze bron geen PRK levert">Farmanco</span>
-        <span title="Welk deel van de Nederlandse pool ergens in het buitenland in tekort staat, geteld in PRK uit de G-standaard. Noemer is de Nederlandse pool, niet een optelsom van landen; elke PRK telt één keer hoeveel landen hem ook melden. Waar geen PRK-koppeling is, staat de oude stoffentelling (stoffen gemeld in ${MIN_LANDEN} of meer landen)">Buitenland</span>
-        <span title="Blauwpaarse badge NL = Farmanco-meldingen in Nederland in de laatste ${NIEUW_DAGEN} dagen. Het getal daarachter = buitenlandse meldingen met een echt bronsignaal (geen scrapedatum) in dezelfde periode, geteld vanaf de datadatum. De twee worden nooit opgeteld.">Nieuw ≤${NIEUW_DAGEN} d</span>
+        <span title="Deel van de Nederlandse groep dat in het buitenland in tekort staat, geteld in PRK">Buitenland</span>
+        <span title="NL-badge = Farmanco. Het getal daarachter = buitenland. Niet opgeteld.">Nieuw ≤${NIEUW_DAGEN} d</span>
     </div>`;
     // Een lijst. Geen vier uitklapbare kopjes meer: die zeiden in welke datacategorie een
     // pool viel en hielden tegelijk elke sortering gevangen binnen zo'n categorie.
@@ -956,28 +948,10 @@ Promise.all([j("atc4_dekking.json"), j("atc4_pool.json"), j("data.json"), j("far
         const dagen = Math.round((Date.parse(META.generated || isoToday()) - Date.parse(META.gstd)) / 86400000);
         if (!(dagen > 0)) return;
         const mnd = (dagen / 30.44).toFixed(1).replace(".", ",");
-        const sfkBr = (dek && dek.bronnen && dek.bronnen.sfk) || {};
-        const nietGevonden = num(sfkBr.zi_niet_in_noemer), sfkTot = num(sfkBr.unieke_zi);
-        // PRK die op één artikel na volledig in de Monitor leveringsproblemen staan: die kantelen naar
-        // "weg" zodra dat ene resterende artikel sinds de G-standaarddatum uit de handel is.
-        let rand = 0; const randPools = new Set();
-        POOLS.forEach(p => (p.prks || []).forEach(x => {
-            if (!x.weg && x.nArt != null && x.nTek != null && x.nTek > 0 && x.nArt - x.nTek === 1) {
-                rand++; if (p.blok === "B") randPools.add(p.code);
-            }
-        }));
-        const nB = POOLS.filter(p => p.blok === "B").length;
+        // Eén regel. Hier stond een blok met drie bullets; de onderbouwing daarvan staat in
+        // de docstring van build_atc4_dekking.py en verandert niet per run.
         host.innerHTML = `<div class="note warn">
-            <b>De noemer is ${mnd} maanden oud (G-standaard ${dmy(META.gstd)}); de tekortsignalen zijn van vandaag.</b>
-            De kopdatum hierboven gaat alleen over de signaalbronnen. Elk percentage op deze pagina deelt een teller van vandaag door een noemer van ${dmy(META.gstd)}.
-            De G-standaard kent bovendien geen uit-de-handel-vlag, dus producten die sindsdien zijn teruggetrokken tellen nog steeds als alternatief — de uitwijk wordt structureel te rooskleurig weergegeven.
-            Wat dat concreet kan schelen:
-            <ul style="margin:6px 0 0 18px; padding:0">
-                ${nietGevonden != null && sfkTot ? `<li><b>${nl(nietGevonden)} van de ${nl(sfkTot)} artikelen op de SFK Monitor leveringsproblemen (${(100 * nietGevonden / sfkTot).toFixed(1).replace(".", ",")}%) komen in deze noemer niet voor</b> en tellen dus nergens mee — die tekorten zijn op deze pagina onzichtbaar.</li>` : ""}
-                <li><b>${nl(rand)} PRK staan op één artikel na volledig op de tekortenlijst.</b> Is dat ene resterende artikel sinds ${dmy(META.gstd)} uit de handel, dan is de PRK in werkelijkheid weg. Daarmee zouden ${nl(randPools.size)} van de ${nl(nB)} pools uit blok B naar blok A verschuiven.</li>
-                <li>Nieuwe registraties van ná ${dmy(META.gstd)} ontbreken juist in de noemer; daar wordt de uitwijk te somber weergegeven. Beide richtingen komen voor en zijn niet tegen elkaar weg te strepen.</li>
-            </ul>
-            Vóór een besluit met financiële of leveringsgevolgen: ververs de G-standaard, of toets de betrokken PRK-regels los in de actuele Taxe.
+            Noemer is ${mnd} maanden oud (G-standaard ${dmy(META.gstd)}), de tekortsignalen zijn van vandaag.
         </div>`;
     })();
 
@@ -995,8 +969,7 @@ Promise.all([j("atc4_dekking.json"), j("atc4_pool.json"), j("data.json"), j("far
         ? `buitenland: ${nl(buiGebruikt)} actieve en aankomende meldingen, na aftrek van JP-“normal” en AT-“verfügbar” (van ${nl(nRec)} records in <code>data.json</code> in totaal; de rest is resolved, discontinued of inactive)`
         : `buitenland: uit ${nl(nRec)} records in <code>data.json</code>, alleen de actieve en aankomende meldingen, exclusief JP-“normal” en AT-“verfügbar”`;
     document.getElementById("footer").innerHTML =
-        `Landelijk Coördinatiecentrum Geneesmiddelen · classificatie <b>Internal</b> · noemer: G-standaard, alleen specialités${META.gstd ? `, ${META.gstdIsBestandsdatum ? "bestandsdatum" : "export"} ${dmy(META.gstd)}` : ""} · teller “weg”/“geraakt”: SFK Monitor leveringsproblemen · ${buiZin}.<br>
-         De G-standaard kent geen uit-de-handel-vlag: de noemer bevat een bekende, niet te kwantificeren overschatting van het aantal nog werkelijk verkrijgbare PRK. Farmanco staat op ATC5-niveau in een eigen kolom omdat die bron geen PRK levert; CBG-TAV telt hier niet mee, want een tijdelijk afwijkende verpakking is een oplossing voor een tekort, geen tekort.`;
+        `Landelijk Coördinatiecentrum Geneesmiddelen · classificatie <b>Internal</b> · noemer G-standaard${META.gstd ? ` ${dmy(META.gstd)}` : ""} · SFK Monitor leveringsproblemen · ${nl(buiGebruikt != null ? buiGebruikt : nRec)} buitenlandse meldingen.`;
 });
 </script>
 
