@@ -57,9 +57,6 @@
     .gcount { font-size: 11px; color: var(--text-muted); white-space: nowrap; margin-left: auto; }
     .poollink { font-size: 10px; font-weight: 700; text-decoration: none; color: var(--lcg-blue); background: var(--bg-card); border: 1px solid var(--border); border-radius: 5px; padding: 2px 7px; white-space: nowrap; }
     .poollink:hover { background: var(--lcg-light); }
-    .gbar { width: 54px; height: 6px; background: var(--border-light); border-radius: 3px; overflow: hidden; flex-shrink: 0; }
-    .gbar span { display: block; height: 100%; background: var(--lcg-cyan); }
-    .gsub { font-size: 10px; color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
     .gval { font-size: 15px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; width: 40px; text-align: right; flex-shrink: 0; }
     .gbody .row { padding-left: 30px; }
     .tl { padding: 8px 14px 4px 30px; border-bottom: 1px solid var(--border-light); }
@@ -118,27 +115,18 @@
     </div>
 
     <div class="controls">
-        <span style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.4px">Sortering</span>
         <div class="chip srt active" data-sort="norm" title="Signaalwaarde gedeeld door het aantal producten in de groep">Genormaliseerd</div>
-        <div class="chip srt" data-sort="aandeel" title="Aandeel van de groep met een signaal uit welke bron dan ook">Aandeel geraakt</div>
-        <div class="chip srt" data-sort="sfk" title="Aandeel van de groep dat op de SFK Monitor leveringsproblemen staat">SFK</div>
-        <div class="chip srt" data-sort="buiten" title="Aandeel van de groep met een buitenlandse tekortmelding">Buitenland</div>
+        <div class="chip srt" data-sort="aandeel" title="Aandeel van de groep met een signaal">Aandeel</div>
+        <div class="chip srt" data-sort="sfk" title="Aandeel op de SFK Monitor leveringsproblemen">SFK</div>
+        <div class="chip srt" data-sort="buiten" title="Aandeel met een buitenlandse melding">Buitenland</div>
         <div class="chip srt" data-sort="urgent" title="Breed in tekort in het buitenland, in Nederland nog nauwelijks">Mogelijk urgent</div>
-        <div class="chip srt" data-sort="som" title="Zoals het Overzicht: som van de productscores, niet genormaliseerd">Som (als Overzicht)</div>
-    </div>
-
-    <div class="controls">
-        <div class="chip typ active" data-type="all">Alles</div>
-        <div class="chip typ" data-type="voorloper" title="Uitsluitend in buitenlandse tekortmeldingen">Alleen buitenland</div>
-        <div class="chip typ" data-type="convergerend" title="Buitenland én al bevestigd op een NL-bron">Buitenland + NL</div>
-        <div class="chip typ" data-type="nl" title="Alleen NL-bronnen (Farmanco/SFK/CBG)">Alleen NL</div>
+        <div class="chip srt" data-sort="som" title="Zoals het Overzicht: som van de productscores">Som</div>
         <span style="width:10px"></span>
         <div class="chip col active" data-col="all">Alle EMS</div>
         <div class="chip col" data-col="rood">🔴</div>
         <div class="chip col" data-col="oranje">🟠</div>
         <div class="chip col" data-col="geel">🟡</div>
         <div class="search"><input type="text" id="q" placeholder="Zoek groep, product, ATC of PRK…" autocomplete="off"></div>
-    </div>
     </div>
 
     <div class="list" id="rows"></div>
@@ -153,7 +141,11 @@ const WINDOW_DAYS = 120;
 const MIN_PRK_PCT = 5;
 const MIN_LANDEN = 3;
 const URG_NL_MAX = 0.25;
-const S = { type: "all", col: "all", q: "", sort: "norm" };
+// Geen typefilter zoals op het Overzicht: daar kies je tussen 'alleen buitenland',
+// 'buitenland + NL' en 'alleen NL'. Dat onderscheid staat hier per product in de badge,
+// maar als groepsfilter zou het de noemer niet veranderen en dus een misleidend aandeel
+// geven -- je zou een deel van de teller wegfilteren en delen door de hele groep.
+const S = { col: "all", q: "", sort: "norm" };
 let PRODUCTS = [], ATC4_NAMES = {}, POOL = {};
 
 function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
@@ -315,7 +307,6 @@ function sorteer(gs) {
 function render() {
     const host = document.getElementById("rows");
     let list = PRODUCTS.slice();
-    if (S.type !== "all") list = list.filter(p => p.type === S.type);
     if (S.col !== "all") list = list.filter(p => p.eml === S.col);
     if (S.q) {
         const q = S.q.toUpperCase();
@@ -331,25 +322,26 @@ function render() {
     host.innerHTML = gs.slice(0, CAP).map(g => {
         const u = urgentie(g);
         const pctOk = g.nPool && g.nPool >= MIN_PRK_PCT;
-        const extra = g.buitenN.length ? ` +${nl(g.buitenN.length)} buiten de noemer` : "";
-        const stuks = g.nPool
-            ? `${nl(g.inN.length)} van ${nl(g.nPool)} producten${pctOk ? ` · ${Math.round(g.aandeel * 100)}%` : ""}${extra}`
-            : `${nl(g.ps.length)} ${g.ps.length === 1 ? "product" : "producten"} · geen noemer`;
-        const bar = g.aandeel != null
-            ? `<span class="gbar" title="Aandeel van de groep met een signaal"><span style="width:${Math.round(g.aandeel * 100)}%"></span></span>` : "";
+        // Zelfde opbouw als de groepskop op het Overzicht: caret, EMS-stip, naam met code,
+        // een link naar de andere pagina, de tellingen gescheiden door punten, en rechts een
+        // getal. Alleen de inhoud verschilt -- daar staat de som, hier de genormaliseerde waarde.
+        const tel = [];
+        const nRood = g.ps.filter(p => p.eml === "rood").length;
+        if (nRood) tel.push(`\u{1F534} ${nl(nRood)}`);
+        tel.push(g.nPool
+            ? `${nl(g.inN.length)} van ${nl(g.nPool)} producten${pctOk ? ` · ${Math.round(g.aandeel * 100)}%` : ""}`
+            : `${nl(g.ps.length)} ${g.ps.length === 1 ? "product" : "producten"}, geen noemer`);
+        if (g.buitenN.length) tel.push(`+${nl(g.buitenN.length)} buiten de noemer`);
+        if (g.nSfk) tel.push(`SFK ${nl(g.nSfk)}`);
+        if (g.nLand) tel.push(`\u{1F30D} ${nl(g.nLand)} ${g.nLand === 1 ? "land" : "landen"}`);
+        if (u) tel.push("vroegsignaal");
         const waarde = g.norm != null
             ? `<span class="gval" title="Signaalwaarde per product: ${nl(g.som)} gedeeld door ${nl(g.nPool)} producten in de groep">${g.norm.toFixed(1).replace(".", ",")}</span>`
             : `<span class="gval" title="Geen noemer in de G-standaard; dit is de som, niet genormaliseerd">${nl(g.som)}*</span>`;
-        const badges = [];
-        if (g.nSfk) badges.push(`<span class="b sfk" title="Producten uit de noemer op de SFK Monitor leveringsproblemen">SFK ${nl(g.nSfk)}${g.nPool ? "/" + nl(g.nPool) : ""}</span>`);
-        if (g.nFarm) badges.push(`<span class="b farm" title="Producten met een Farmanco-melding">Farmanco ${nl(g.nFarm)}${g.nPool ? "/" + nl(g.nPool) : ""}</span>`);
-        if (g.nBui) badges.push(`<span class="b land" title="Producten met een buitenlandse tekortmelding in de laatste ${WINDOW_DAYS} dagen">🌍 ${nl(g.nBui)}${g.nPool ? "/" + nl(g.nPool) : ""}</span>`);
-        if (u) badges.push(`<span class="b type-voorloper" title="${nl(u.bevestigd)} van ${nl(g.nPool)} producten in ≥${MIN_LANDEN} landen in tekort, in Nederland ${Math.round(u.nlA * 100)}% geraakt">vroegsignaal</span>`);
-        const header = `<div class="grp">
-            <span class="gcaret">▸</span><span class="eml-dot ${g.eml}"></span>
-            <span class="gname">${g.naam ? esc(g.naam) + " " : ""}<span class="gcode">${esc(g.a4)}</span>
-                <div class="badges">${badges.join("")}</div></span>
-            ${bar}<span class="gsub">${stuks}</span>${waarde}</div>`;
+        const header = `<div class="grp"><span class="gcaret">▸</span><span class="eml-dot ${g.eml}"></span>` +
+            `<span class="gname">${g.naam ? esc(g.naam) + " " : ""}<span class="gcode">${esc(g.a4)}</span></span>` +
+            `<a class="poollink" href="signaaloverzicht.html" title="Alle signalen op productniveau, niet genormaliseerd">overzicht →</a>` +
+            `<span class="gcount">${tel.join(" · ")}</span>${waarde}</div>`;
         return `<div class="grp-wrap collapsed" id="${esc(g.a4)}">${header}<div class="gbody">${g.inN.concat(g.buitenN).map((p, i) => productRow(p, i + 1, g.a4)).join("")}</div></div>`;
     }).join("") + (gs.length > CAP ? `<div class="empty">${nl(gs.length - CAP)} groepen meer — verfijn met de filters of zoek.</div>` : "");
 }
@@ -370,7 +362,6 @@ function renderKpis(scraped, dek) {
 }
 
 document.querySelectorAll(".srt").forEach(c => c.addEventListener("click", () => { document.querySelectorAll(".srt").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.sort = c.dataset.sort; render(); }));
-document.querySelectorAll(".typ").forEach(c => c.addEventListener("click", () => { document.querySelectorAll(".typ").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.type = c.dataset.type; render(); }));
 document.querySelectorAll(".col").forEach(c => c.addEventListener("click", () => { document.querySelectorAll(".col").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.col = c.dataset.col; render(); }));
 let _t;
 document.getElementById("q").addEventListener("input", e => { clearTimeout(_t); _t = setTimeout(() => { S.q = e.target.value; render(); }, 150); });
