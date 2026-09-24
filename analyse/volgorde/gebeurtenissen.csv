@@ -1726,7 +1726,7 @@ C02KX05,HU,2026-07-03,active,Riociguat,4,feitelijke_start,True,ja,nee,nee
 C02KX05,IS,2026-04-27,active,Riociguatum INN,1,verwachte_start,True,nee,nee,nee
 C02KX05,NO,2026-09-21,active,riociguat,1,feitelijke_start,True,ja,nee,nee
 C02KX05,RO,2026-07-07,active,RIOCIGUAT,3,meldingsdatum,False,nee,nee,nee
-C02KX05,SE,2026-09-24,upcoming,riociguat,1,verwachte_start,False,nee,nee,ja
+C02KX05,SE,2026-09-24,upcoming,riociguat,1,verwachte_start,False,nee,nee,nee
 C02KX05,SI,2026-07-17,active,riociguatum,3,feitelijke_start,True,ja,nee,nee
 C02KX05,SK,2026-07-09,active,Riociguát,1,feitelijke_start,True,ja,nee,nee
 C02KX54,BE,2026-09-07,active,"Macitentan , Tadalafil",1,feitelijke_start,True,ja,nee,nee
@@ -5965,7 +5965,7 @@ L04AC10,ES,2026-09-21,active,SECUKINUMAB,1,meldingsdatum,True,nee,nee,nee
 L04AC10,IS,2024-12-18,resolved,Secukinumabum INN,5,verwachte_start,True,nee,ja,nee
 L04AC10,IT,2026-09-15,active,SECUKINUMAB,1,verwachte_start,False,nee,nee,nee
 L04AC10,LV,2021-10-01,inactive,Secukinumabum,1,feitelijke_start,True,ja,ja,nee
-L04AC10,NO,2026-09-24,upcoming,sekukinumab,1,feitelijke_start,True,ja,nee,ja
+L04AC10,NO,2026-09-24,upcoming,sekukinumab,1,feitelijke_start,True,ja,nee,nee
 L04AC11,DK,2026-09-22,active,Siltuximab ATC-kode: L04AC11 Forventet periode: Slut oktober,1,publicatiedatum,False,nee,nee,nee
 L04AC11,SE,2026-10-20,upcoming,siltuximab,1,verwachte_start,False,nee,nee,ja
 L04AC13,AU,2026-02-28,discontinued,ixekizumab,1,verwachte_start,False,nee,nee,nee
@@ -7309,7 +7309,7 @@ N05AH03,ES,2025-09-17,active,OLANZAPINA,7,meldingsdatum,True,nee,nee,nee
 N05AH03,FI,2025-12-10,active,Olanzapine pamoate monohydrate,8,feitelijke_start,True,ja,nee,nee
 N05AH03,FR,2026-04-21,resolved,olanzapine (pamoate d') monohydraté,2,feitelijke_start,False,ja,nee,nee
 N05AH03,GR,2025-11-17,active,OLANZAPINE,5,feitelijke_start,True,ja,nee,nee
-N05AH03,HR,2026-09-24,upcoming,olanzapin,1,feitelijke_start,True,ja,nee,ja
+N05AH03,HR,2026-09-24,upcoming,olanzapin,1,feitelijke_start,True,ja,nee,nee
 N05AH03,HU,2019-12-12,inactive,olanzapine,8,feitelijke_start,True,ja,ja,nee
 N05AH03,IE,2025-10-03,active,Olanzapine,5,verwachte_start,False,nee,nee,nee
 N05AH03,IS,2024-06-12,resolved,Olanzapinum INN,37,verwachte_start,True,nee,ja,nee
@@ -8916,7 +8916,7 @@ S01LA05,FI,2026-09-01,active,Aflibercept,1,feitelijke_start,True,ja,nee,nee
 S01LA05,IS,2026-06-30,active,Afliberceptum INN,1,verwachte_start,True,nee,nee,nee
 S01LA05,IT,2026-07-06,active,AFLIBERCEPT,1,verwachte_start,False,nee,nee,nee
 S01LA05,SA,2023-04-10,inactive,AFLIBERCEPT,1,onbekend,False,nee,ja,nee
-S01LA05,SE,2026-09-24,upcoming,aflibercept,1,verwachte_start,False,nee,nee,ja
+S01LA05,SE,2026-09-24,upcoming,aflibercept,1,verwachte_start,False,nee,nee,nee
 S01LA05,SK,2022-03-17,discontinued,Aflibercept,3,feitelijke_start,True,ja,ja,nee
 S01LA09,IS,2026-04-08,active,Faricimabum INN,1,verwachte_start,True,nee,nee,nee
 S01LA09,RO,2025-11-11,discontinued,FARICIMABUM,1,meldingsdatum,False,nee,nee,nee
@@ -9191,7 +9191,7 @@ V08CA08,BE,2026-09-22,active,Gadobenic Acid,2,feitelijke_start,True,ja,nee,nee
 V08CA08,HU,2017-02-24,inactive,gadobenate dimeglumine,3,feitelijke_start,True,ja,ja,nee
 V08CA09,AU,2026-06-29,resolved,gadobutrol,1,verwachte_start,False,nee,nee,nee
 V08CA09,GR,2026-08-31,active,GADOBUTROL,1,feitelijke_start,True,ja,nee,nee
-V08CA09,IE,2026-09-24,upcoming,Gadobutrol,1,verwachte_start,False,nee,nee,ja
+V08CA09,IE,2026-09-24,upcoming,Gadobutrol,1,verwachte_start,False,nee,nee,nee
 V08CA09,IT,2026-09-01,active,GADOBUTROLO,1,verwachte_start,False,nee,nee,nee
 V08CA09,LV,2019-12-18,inactive,Gadobutrolum,4,feitelijke_start,True,ja,ja,nee
 V08CA09,SE,2026-08-11,active,gadobutrol (vattenfri),1,verwachte_start,False,nee,nee,nee

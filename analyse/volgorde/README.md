@@ -23,6 +23,7 @@ voor op Griekenland"*, oftewel vier en een half jaar.
 | `landenparen.csv` | samengevat per landenpaar — **naïef, niet voor conclusies** |
 | `landenparen_venster.csv` | idem, maar beperkt tot een gemeenschappelijk venster |
 | `landenparen_streng.csv` | **de enige tabel waar ik iets op zou baseren**: venster én beide datums een feitelijke start |
+| `aangekondigd.csv` | tekorten met een startdatum in de toekomst — het enige vooruitkijkende |
 | `panel.csv` | **het instrument voor de toekomst**, zie onder |
 
 Herbouwen: `uv run --python 3.13 --with pandas python bouw_volgorde_dataset.py`
@@ -142,6 +143,46 @@ tussen "A veroorzaakt B" en "A en B delen een oorzaak" is met deze data niet te 
 
 ---
 
+## Aangekondigde tekorten: het enige dat vooruitkijkt
+
+Los van de volgordevraag zit er iets simpelers in de data. **695 meldingen hebben een
+startdatum in de TOEKOMST** — leveranciers die aankondigen dat ze straks niet meer kunnen
+leveren. Mediaan 31 dagen vooruit, over 382 moleculen.
+
+Wie kondigt aan: Italië 196 moleculen, Zweden 100, Australië 62, Slowakije 30, Noorwegen 26.
+De meeste landen doen het niet of nauwelijks, dus het signaal komt uit een handvol registers.
+
+### Een sterk verband, maar pas op met de richting
+
+Moleculen met een aankondiging zijn veel vaker breed in tekort dan moleculen zonder:
+
+| | mét aankondiging | zonder |
+|---|---|---|
+| actief in ≥3 landen | 77% | 26% |
+| actief in ≥5 landen | 62% | 14% |
+| actief in ≥8 landen | **45%** | **5%** |
+
+Gemiddeld aantal landen waar het nú loopt: 7,2 tegen 2,2.
+
+**Dat is een verband, geen voorspelling.** De richting is met deze momentopname niet vast te
+stellen, en de meest waarschijnlijke verklaring is de omgekeerde van wat je hoopt: een
+molecuul dat al in acht landen op is, wordt nu eenmaal eerder in een negende aangekondigd.
+Dan is de aankondiging een *achterlopende* indicator van een probleem dat al breed is, niet
+een vooruitlopende.
+
+### Wat wél vooruitkijkt
+
+Slechts **36 moleculen** zijn aangekondigd én nergens al actief. Dat is de enige groep waar
+de aankondiging nieuws is in plaats van een echo. Ze staan in `aangekondigd.csv`.
+
+Of die 36 daadwerkelijk uitbreken is met een momentopname niet te toetsen — daar is het panel
+voor. Zodra dat een paar maanden loopt, is dit de eerste vraag om te stellen: **van de
+moleculen die ergens werden aangekondigd terwijl ze nergens liepen, hoeveel braken er
+werkelijk uit, en waar het eerst?** Dat is een echte toets op een echt vroegsignaal, en veel
+directer te beantwoorden dan de golfvraag.
+
+---
+
 ## Het panel: de meting die het wél kan
 
 `panel.csv` legt vast wanneer **wij** een molecuul voor het eerst in een land zagen. Dat is
@@ -170,9 +211,8 @@ niet. Voor iets trager dan een week werkt het wel.
 3. **Toets tegen iets wat je al weet.** Duitsland en Nederland delen veel
    vergunninghouders; als daar geen verband te zien is, is het instrument te stomp — niet de
    wereld te ongestructureerd.
-4. **Vraag Farmanco erbij.** Nederland staat niet op de kaart (bewust: de kaart gaat over het
-   buitenland), maar `farmanco_eml.json` en `sfk_verloop.json` bevatten de Nederlandse kant.
-   Voor een vroegsignaal is dat juist de kant die je wilt voorspellen.
+4. **Kijk naar de aangekondigde tekorten** (zie hieronder). Dat is het enige echt
+   vooruitkijkende dat in deze data zit, en het is nog niet getoetst.
 
 ---
 

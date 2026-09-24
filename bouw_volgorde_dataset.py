@@ -122,6 +122,7 @@ def main() -> None:
             "voor_venster": "ja" if v["start"] < VENSTER_START else "nee",
             "toekomst": "ja" if v["start"] > vandaag else "nee",
         })
+    aangekondigde(records, os.path.join(UIT, "aangekondigd.csv"), vandaag)
     schrijf(os.path.join(UIT, "gebeurtenissen.csv"), gebeurtenissen)
     print(f"gebeurtenissen.csv: {len(gebeurtenissen)} rijen")
 
@@ -293,6 +294,37 @@ def main() -> None:
             aandeel = max(r["aandeel_a_eerst"], 1 - r["aandeel_a_eerst"])
             print(f"  {richting:12} {aandeel:.0%} van {r['gedeelde_moleculen']:4} moleculen, "
                   f"mediaan {abs(r['mediaan_dagen']):.0f} dagen, spreiding {r['spreiding_dagen']:.0f}")
+
+
+def aangekondigde(records: list, uit: str, vandaag: str) -> None:
+    """Meldingen met een startdatum in de TOEKOMST -- het enige vooruitkijkende in de data.
+
+    Kolom nergens_actief onderscheidt nieuws van echo: een molecuul dat al in acht landen op
+    is, wordt nu eenmaal eerder in een negende aangekondigd. Alleen de rijen waar het nergens
+    loopt zijn een aankondiging van iets nieuws.
+    """
+    actief = defaultdict(set)
+    for x in records:
+        if x.get("st") == "active" and x.get("atc"):
+            actief[x["atc"]].add(x["cc"])
+    rijen = []
+    for x in records:
+        if x.get("st") != "upcoming" or not x.get("ss") or x["ss"] <= vandaag or not x.get("atc"):
+            continue
+        landen = actief.get(x["atc"], set())
+        rijen.append({
+            "atc": x["atc"], "land": x["cc"], "start": x["ss"],
+            "dagen_vooruit": (datetime.strptime(x["ss"], "%Y-%m-%d").date()
+                              - date.today()).days,
+            "stof": (x.get("sub") or x.get("mn") or "")[:60],
+            "nu_actief_in_landen": len(landen),
+            "nergens_actief": "ja" if not landen else "nee",
+            "reden": x.get("rc", ""),
+        })
+    rijen.sort(key=lambda r: (r["nergens_actief"] != "ja", r["start"]))
+    schrijf(uit, rijen)
+    nieuw = sum(1 for r in rijen if r["nergens_actief"] == "ja")
+    print(f"aangekondigd.csv: {len(rijen)} meldingen, {nieuw} voor een molecuul dat nergens loopt")
 
 
 def schrijf(pad: str, rijen: list) -> None:
