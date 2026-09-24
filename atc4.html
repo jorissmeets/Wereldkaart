@@ -138,6 +138,7 @@
     .cell { font-size: 12px; font-variant-numeric: tabular-nums; color: var(--text-secondary); min-width: 0; }
     .cell .big { font-weight: 800; color: var(--text-primary); }
     .cell .pct { font-weight: 700; color: var(--text-primary); }
+    .cell .sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; line-height: 1.3; }
     /* "geraakt" krijgt bewust lichtere typografie en geen meter: het is vroegsignaal, geen beschikbaarheid. */
     .cell.licht, .cell.licht .big { font-weight: 400; color: var(--text-muted); }
     .cell .nm-nietgemeten { color: var(--text-muted); font-style: italic; font-size: 11px; }
@@ -220,7 +221,7 @@
             <li><b>“Uitwijk verloren” geldt per product, niet per groep.</b> Blok A betekent: mínstens één PRK is volledig weg — niet dat de pool leeg is. In 40 van de 49 pools in blok A blijven ná dat verlies nog ≥5 andere PRK over (mediaan 10). V08AB staat in blok A met 2 weggevallen PRK van de 65.</li>
             <li><b>“Weg” is een lijststatus, geen beschikbaarheidstoets.</b> Het betekent: álle ZI-artikelen onder die PRK staan op de SFK Monitor leveringsproblemen. 56 van de 60 weggevallen PRK hebben er maar één; daar zijn “geraakt” en “weg” per definitie hetzelfde. Dat geldt voor 1.954 van de 4.692 PRK in de noemer (42%). Een leverbare parallelimport of een niet-gemelde verpakking ziet deze pagina niet.</li>
             <li><b>De ATC4-pool is een classificatie, geen therapeutische uitwijkgroep.</b> Bij combinatiepreparaten ligt het alternatief meestal búiten de pool (C09BA perindopril/indapamide, C10BA ezetimib/simvastatine, S01CA dexamethason/gentamicine). Omgekeerd staat er in een grote pool vaak een middel dat klinisch geen vervanger is. Beoordeel de uitwijk altijd op de uitgeklapte PRK-regels, nooit op het percentage alleen.</li>
-            <li><b>Buitenland zegt niets over de Nederlandse beschikbaarheid</b> en is daarom altijd een telling, nooit een percentage. Landen hanteren verschillende statusdefinities. Pools in blok D hebben géén Nederlandse noemer: daar is geen enkele uitspraak over de NL-markt uit af te leiden.</li>
+            <li><b>Buitenland zegt niets over de Nederlandse beschikbaarheid.</b> De pooldekking geeft aan welk deel van de Nederlandse pool ergens in het buitenland in tekort staat, geteld in PRK uit de G-standaard. Dat is bewust géén optelsom van landen — landen hanteren verschillende statusdefinities en zijn niet optelbaar tot een noemer — maar een breuk op de Nederlandse pool, waarin elke PRK één keer telt hoeveel landen hem ook melden. Een pool die in het buitenland op 100% staat, kan in Nederland gewoon leverbaar zijn; dat is juist het geval dat de moeite van het bekijken waard is. Meldingen zonder bruikbare PRK tellen <b>niet</b> mee in dat percentage — zonder PRK is niet vast te stellen om welk product het gaat, dus ze kunnen niet in de teller en niet in de noemer. Ze staan per ATC onder de pool als <i>ATC overig</i>, zodat ze niet stil verdwijnen. Pools in blok D hebben géén Nederlandse noemer: daar is geen enkele uitspraak over de NL-markt uit af te leiden.</li>
         </ul>
     </div>
 
@@ -341,6 +342,19 @@ function readPools(j) {
             farmN:  n2(["farmanco_stoffen", "n_farmanco", "farmanco"], fz.n_atc5),
             farmEml:pick(p, ["farmanco_eml", "eml_farmanco"]) || fz.eml || "",
             buitN:  n2(["buitenland_stoffen", "n_buitenland", "buitenland"], bz.n_atc5_min3landen),
+            // Pooldekking buitenland: hoeveel van de Nederlandse PRK-noemer ergens in het
+            // buitenland in tekort staat. Dit MAG een percentage zijn, anders dan de
+            // stoffentelling ernaast: de noemer is de Nederlandse pool uit de G-standaard,
+            // en elke PRK telt een keer hoeveel landen hem ook melden.
+            buitPrk:  num(bz.n_prk_geraakt),
+            buitPrk3: num(bz.n_prk_min3landen),
+            buitPct:  num(bz.pct_prk_geraakt),
+            // ATC overig: meldingen zonder bruikbare PRK. Staan NOOIT in de breuk -- niet in
+            // teller en niet in noemer -- want zonder PRK is het product niet vast te stellen.
+            // Alleen zichtbaar, zodat een pool niet rustiger lijkt dan hij is.
+            buitOverig:    num(obj(bz.overig).n_meldingen),
+            buitOverigAtc: Array.isArray(obj(bz.overig).atc) ? obj(bz.overig).atc : [],
+            buitOverigReden: obj(obj(bz.overig).reden),
             buitLanden: Array.isArray(bz.landen) ? bz.landen : null,
             nieuw:  n2(["nieuw7", "nieuw_7d", "n_nieuw7", "nieuw"], rz.n_nieuw_7d),
             // NEDERLANDSE meldingen in hetzelfde venster. Het bouwscript levert deze al
@@ -361,7 +375,9 @@ function readPools(j) {
                             // nodig om te kunnen tonen waarop een "weg" rust: een PRK met één
                             // artikel is per definitie weg zodra dat ene artikel gemeld wordt.
                             nArt: num(pick(x, ["n_artikelen", "n_art"])),
-                            nTek: num(pick(x, ["n_artikelen_tekort", "n_tekort"])) })
+                            nTek: num(pick(x, ["n_artikelen_tekort", "n_tekort"])),
+                            // zonder dit is de pooldekking een getal zonder adres
+                            buitLanden: Array.isArray(x.buitenland_landen) ? x.buitenland_landen : [] })
         };
     }).filter(p => /^[A-Z]\d{2}[A-Z]{2}$/.test(p.code));
     return { meta, pools };
@@ -571,9 +587,16 @@ function poolRow(p) {
     const farm = p.farmN == null ? NIETGEMETEN
         : (p.farmN === 0 ? `<span class="nul">0</span>`
             : `<span class="eml-dot ${p.farmEml || "none"}" style="display:inline-block;vertical-align:middle;margin-right:4px"></span><span class="big">${nl(p.farmN)}</span> ${p.farmN === 1 ? "stof" : "stoffen"}`);
-    const buit = p.buitN == null ? NIETGEMETEN
+    // Pooldekking als die er is, met de stoffentelling eronder. Het percentage volgt
+    // dezelfde onderdrukking als de NL-kolom: onder de drempel levert het bouwscript null.
+    const buitTelling = p.buitN == null ? NIETGEMETEN
         : (p.buitN === 0 ? `<span class="nul" title="Geen stof in deze pool is in ${MIN_LANDEN} of meer landen gemeld">0</span>`
             : `<span class="big">${nl(p.buitN)}</span> ${p.buitN === 1 ? "stof" : "stoffen"}`);
+    const buit = (p.buitPrk == null || p.nPrk == null || geenNoemer) ? buitTelling
+        : `<span class="big">${nl(p.buitPrk)}</span> van ${nl(p.nPrk)} PRK`
+          + (p.buitPct != null ? ` <span class="pct" title="Deel van de Nederlandse pool dat ergens in het buitenland in tekort staat. Elke PRK telt één keer, hoeveel landen hem ook melden.">${nl(p.buitPct)}%</span>` : "")
+          + (p.buitPrk3 != null ? `<div class="sub" title="Strenger: alleen PRK die in ${MIN_LANDEN} of meer landen tegelijk gemeld worden">waarvan ${nl(p.buitPrk3)} in ≥${MIN_LANDEN} landen</div>` : "")
+          + (p.buitOverig ? `<div class="sub" title="Meldingen in deze pool zonder bruikbare PRK, per ATC. Tellen NIET mee in het percentage hierboven: zonder PRK is niet vast te stellen om welk product het gaat, dus ze kunnen niet in de teller en niet in de noemer.">+ ${nl(p.buitOverig)} zonder PRK (ATC overig)</div>` : "");
 
     return `<div class="grp-wrap collapsed" id="${esc(p.code)}" data-code="${esc(p.code)}">
         <div class="prow">
@@ -598,16 +621,26 @@ function poolDetail(p) {
     const d = [];
     // PRK-detail: de enige plek waar te zien is wélke producten weg zijn.
     if (p.prks && p.prks.length) {
-        const weg = p.prks.filter(x => x.weg), rest = p.prks.filter(x => !x.weg);
+        // Rest sorteren op signaal. Zonder dit stonden de PRK's in PRK-volgorde en viel bij
+        // een grote pool juist het buitenlandsignaal achter de afkapgrens van 40 -- dan is de
+        // pooldekking in de kolom niet na te lopen in het detail eronder.
+        const weg = p.prks.filter(x => x.weg);
+        const rest = p.prks.filter(x => !x.weg).sort((a, b) =>
+            (b.geraakt ? 1 : 0) - (a.geraakt ? 1 : 0)
+            || (b.buitLanden || []).length - (a.buitLanden || []).length
+            || String(a.prk).localeCompare(String(b.prk)));
         const rij = x => `<div class="prk-row">
             <span class="prk-tag">PRK ${esc(x.prk)}</span>
             <span class="pnm">${esc(x.naam || "")}</span>
             ${x.weg ? `<span class="b weg">weg</span>` : x.geraakt ? `<span class="b geraakt">geraakt</span>` : ""}
             ${x.solo ? `<span class="b solo">één leverancier</span>` : ""}
+            ${(x.buitLanden && x.buitLanden.length)
+                ? `<span class="b" title="Deze PRK staat in het buitenland in tekort: ${x.buitLanden.join(", ")}">${x.buitLanden.slice(0, 8).map(flagOf).join("")}${x.buitLanden.length > 8 ? " +" + (x.buitLanden.length - 8) : ""}</span>`
+                : ""}
         </div>`;
         d.push(`<div class="det"><div class="det-t">Producten in deze pool (${nl(p.prks.length)} PRK)</div></div>`
             + weg.map(rij).join("") + rest.slice(0, 40).map(rij).join("")
-            + (rest.length > 40 ? `<div class="det"><span class="det-none">… en ${nl(rest.length - 40)} PRK zonder tekortsignaal</span></div>` : ""));
+            + (rest.length > 40 ? `<div class="det"><span class="det-none">… en ${nl(rest.length - 40)} PRK met een zwakker of geen signaal</span></div>` : ""));
     } else if (p.nPrk != null) {
         d.push(`<div class="det"><span class="det-none">Geen PRK-detail in atc4_dekking.json — alleen de telling is beschikbaar.</span></div>`);
     }
@@ -628,6 +661,17 @@ function poolDetail(p) {
                 `<span class="it">${esc(a)}${ATC5_NAMEN[a] ? " " + esc(ATC5_NAMEN[a]) : ""} · ${nl(n)} ${n === 1 ? "land" : "landen"}${n >= MIN_LANDEN ? " ✓" : ""}</span>`).join("")}
             ${st.length > 12 ? `<span class="it">… +${nl(st.length - 12)}</span>` : ""}</div>
             <div class="det-l" style="margin-top:4px;color:var(--text-muted)">Landen: ${(p.buitLanden || []).map(flagOf).join("")} (${nl((p.buitLanden || []).length)})</div></div>`);
+    }
+    if (p.buitOverigAtc && p.buitOverigAtc.length) {
+        const rd = p.buitOverigReden || {};
+        const uitleg = [rd.geen_prk ? `${nl(rd.geen_prk)} zonder PRK in de bron` : "",
+                        rd.prk_niet_in_noemer ? `${nl(rd.prk_niet_in_noemer)} met een PRK die niet als specialité in deze pool staat` : ""]
+                       .filter(Boolean).join(", ");
+        d.push(`<div class="det"><div class="det-t">ATC overig — ${nl(p.buitOverig)} melding${p.buitOverig === 1 ? "" : "en"} die niet in de pooldekking meetellen${uitleg ? ` (${uitleg})` : ""}</div>
+            <div class="det-l">${p.buitOverigAtc.slice(0, 12).map(x =>
+                `<span class="it" title="${(x.landen || []).join(", ")}">${esc(x.atc)}${ATC5_NAMEN[x.atc] ? " " + esc(ATC5_NAMEN[x.atc]) : ""} · ${(x.landen || []).slice(0, 6).map(flagOf).join("")} ${nl(x.n_landen)} ${x.n_landen === 1 ? "land" : "landen"}</span>`).join("")}
+            ${p.buitOverigAtc.length > 12 ? `<span class="it">… +${nl(p.buitOverigAtc.length - 12)}</span>` : ""}</div>
+            <div class="det-l" style="margin-top:4px;color:var(--text-muted)">Geen PRK betekent: geen plek in teller of noemer. Deze meldingen staan er alleen naast.</div></div>`);
     }
     if (p.farmNamen && p.farmNamen.length) {
         d.push(`<div class="det"><div class="det-t">Farmanco (KNMP) — op ATC5-niveau, niet op PRK</div>
@@ -697,7 +741,7 @@ function render() {
         <span title="PRK met minstens één artikel op de lijst — vroegsignaal, zegt niets over beschikbaarheid">Geraakt</span>
         <span title="PRK met maar één leverancier: hoe ondiep de pool is als er iets wegvalt">Diepte</span>
         <span title="Farmanco (KNMP), geteld op ATC5-stofniveau omdat deze bron geen PRK levert">Farmanco</span>
-        <span title="Aantal stoffen in deze pool met een actieve melding in ${MIN_LANDEN} of meer landen. Bewust een telling: landen hanteren verschillende statusdefinities en zijn niet optelbaar tot een noemer">Buitenland</span>
+        <span title="Welk deel van de Nederlandse pool ergens in het buitenland in tekort staat, geteld in PRK uit de G-standaard. Noemer is de Nederlandse pool, niet een optelsom van landen; elke PRK telt één keer hoeveel landen hem ook melden. Waar geen PRK-koppeling is, staat de oude stoffentelling (stoffen gemeld in ${MIN_LANDEN} of meer landen)">Buitenland</span>
         <span title="Blauwpaarse badge NL = Farmanco-meldingen in Nederland in de laatste ${NIEUW_DAGEN} dagen. Het getal daarachter = buitenlandse meldingen met een echt bronsignaal (geen scrapedatum) in dezelfde periode, geteld vanaf de datadatum. De twee worden nooit opgeteld.">Nieuw ≤${NIEUW_DAGEN} d</span>
     </div>`;
     host.innerHTML = BLOKKEN.map(b => {

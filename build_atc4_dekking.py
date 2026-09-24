@@ -213,9 +213,14 @@ def bronsignaal(r):
     return None
 
 
-def lees_buitenland(data, peildatum):
+def lees_buitenland(data, peildatum, prk_naar_pool):
     recs = data.get("records") or []
     grens = (dt.date.fromisoformat(peildatum) - dt.timedelta(days=NIEUW_DAGEN)).isoformat()
+    landen_per_prk = defaultdict(set)
+    # "ATC overig": meldingen die geen bruikbare PRK hebben en dus niet in de breuk kunnen.
+    # Ze verdwenen eerder stil uit de pooldekking; nu staan ze er per ATC naast.
+    overig_landen = defaultdict(lambda: defaultdict(set))   # pool -> atc -> landen
+    overig_reden = defaultdict(Counter)                     # pool -> reden -> meldingen
     landen_per_atc5 = defaultdict(set)
     meld_per_pool = Counter()
     gedateerd_per_pool = Counter()
@@ -233,6 +238,32 @@ def lees_buitenland(data, peildatum):
             continue
         stat["schoon"] += 1
         atc = (r.get("atc") or "").upper()
+
+        # Pooldekking via PRK. Welke pool een buitenlandse melding raakt, wordt bepaald
+        # door de PRK in de G-standaard -- bewust NIET door de ATC van de bron. Teller en
+        # noemer komen daarmee uit hetzelfde bestand; met de bron-ATC kan een melding in
+        # een pool vallen waar zijn eigen PRK niet in zit, en dan telt hij mee in een
+        # breuk waar hij niet toe behoort.
+        prk = norm(r.get("prk"))
+        prk_telt = False
+        reden_overig = None
+        if prk:
+            stat["melding_met_prk"] += 1
+            pool_van_prk = prk_naar_pool.get(prk)
+            if pool_van_prk:
+                landen_per_prk[prk].add(r.get("cc"))
+                prk_telt = True
+                if len(atc) == 7 and atc[:5] != pool_van_prk:
+                    stat["prk_pool_wijkt_af_van_bron_atc"] += 1
+            else:
+                reden_overig = "prk_niet_in_noemer"
+                # De PRK bestaat, maar niet als specialite in een pool: apotheekbereiding,
+                # of sinds de koppeling uit de handel. Telt nergens mee, wel zichtbaar.
+                stat["prk_buiten_noemer"] += 1
+        else:
+            stat["melding_zonder_prk"] += 1
+            reden_overig = "geen_prk"
+
         # zelfde regel als bij de G-standaard: ATC4 volstaat voor de pool. Vandaag raakt
         # dit 0 meldingen, maar zo vallen ATC4-only-meldingen later niet stil weg.
         if len(atc) not in (5, 7):
@@ -243,6 +274,13 @@ def lees_buitenland(data, peildatum):
             landen_per_atc5[atc].add(r.get("cc"))
         landen_per_pool[pool].add(r.get("cc"))
         meld_per_pool[pool] += 1
+        if not prk_telt:
+            # Geen PRK, dus geen plek in de PRK-breuk -- maar wel een echt tekortsignaal
+            # in deze therapeutische groep. Via de ATC onder de pool, apart zichtbaar,
+            # nooit in teller of noemer. Zelfde behandeling als apotheekbereidingen.
+            overig_landen[pool][atc].add(r.get("cc"))
+            overig_reden[pool][reden_overig or "onbekend"] += 1
+            stat["overig_melding"] += 1
         sig = bronsignaal(r)
         if sig and sig >= VROEGSTE_PLAUSIBELE_DATUM:
             gedateerd_per_pool[pool] += 1
@@ -258,6 +296,9 @@ def lees_buitenland(data, peildatum):
             stat["datum_onbruikbaar"] += 1
 
     return {
+        "landen_per_prk": landen_per_prk,
+        "overig_landen": overig_landen,
+        "overig_reden": overig_reden,
         "landen_per_atc5": landen_per_atc5,
         "landen_per_pool": landen_per_pool,
         "meld_per_pool": meld_per_pool,
@@ -282,7 +323,21 @@ def main():
     if not peildatum:
         sys.exit("data.json heeft geen 'generated'; zonder peildatum geen recentheid.")
 
-    bui = lees_buitenland(data, peildatum)
+    # PRK -> pool, de brug tussen de buitenlandse meldingen en de Nederlandse noemer.
+    # Een PRK die in twee pools voorkomt zou de teller dubbel laten tellen; dat komt in
+    # de G-standaard niet voor, maar als het ooit gebeurt moet het opvallen en niet
+    # stilletjes een van de twee winnen.
+    prk_naar_pool = {}
+    prk_dubbel = set()
+    for _pool, _prks in g["pools"].items():
+        for _prk in _prks:
+            if prk_naar_pool.setdefault(_prk, _pool) != _pool:
+                prk_dubbel.add(_prk)
+    if prk_dubbel:
+        print(f"  LET OP: {len(prk_dubbel)} PRK zitten in meer dan een pool; "
+              f"die tellen alleen in de eerste mee")
+
+    bui = lees_buitenland(data, peildatum, prk_naar_pool)
 
     # --- SFK: welke ZI-artikelen staan op de tekortenlijst -------------------
     sfk_items = sfk.get("items") or []
@@ -350,6 +405,7 @@ def main():
             n_weg += 1 if weg else 0
             n_geraakt += 1 if geraakt else 0
             n_solo += 1 if solo else 0
+            bui_landen = sorted(bui["landen_per_prk"].get(prk, ()))
             prk_rows.append({
                 "prk": prk,
                 "naam": p["naam"],
@@ -359,6 +415,10 @@ def main():
                 "weg": weg,
                 "geraakt": geraakt,
                 "solo": solo,
+                # Zonder deze regel is de pooldekking een getal zonder adres: je ziet dat
+                # 8 van de 12 PRK geraakt zijn, maar niet welke acht en door wie.
+                "buitenland_landen": bui_landen,
+                "n_buitenland_landen": len(bui_landen),
             })
         n_prk = len(prk_rows)
 
@@ -374,12 +434,36 @@ def main():
         kleuren = Counter(eml[a] for a in atc5_bekend if eml.get(a))
         pool_eml = ernstigste(kleuren)
 
-        # Buitenland: telling, nooit een percentage. Statussemantiek verschilt per land
-        # (CA is grotendeels archief, JP/AT/CZ/CO/EE/BG sluiten vrijwel nooit iets af),
-        # dus landen zijn niet optelbaar tot een noemer.
+        # Buitenland, oude maat: telling van ATC5-codes, nooit een percentage. Het aantal
+        # LANDEN is geen noemer -- statussemantiek verschilt per land (CA is grotendeels
+        # archief, JP/AT/CZ/CO/EE/BG sluiten vrijwel nooit iets af), dus landen zijn niet
+        # optelbaar. Deze telling blijft staan naast de pooldekking hieronder.
         bui_atc5 = {a: len(c) for a, c in bui["landen_per_atc5"].items() if a[:5] == pool}
         n_bui3 = sum(1 for v in bui_atc5.values() if v >= MIN_LANDEN_BUITENLAND)
         n_bui1 = len(bui_atc5)
+
+        # Buitenland, pooldekking: WELK DEEL van deze Nederlandse pool staat ergens in het
+        # buitenland in tekort? Dit mag wel een breuk zijn, en het bezwaar hierboven geldt
+        # er niet voor: de noemer is de Nederlandse pool uit de G-standaard, niet een
+        # optelsom van landen, en elke PRK telt een keer hoeveel landen hem ook melden.
+        # Teller en noemer staan daarmee in dezelfde eenheid als de NL-kolom ernaast.
+        bui_prk = {prk: len(cc) for prk, cc in bui["landen_per_prk"].items()
+                   if prk in prks}
+        n_prk_bui = len(bui_prk)
+        n_prk_bui3 = sum(1 for v in bui_prk.values() if v >= MIN_LANDEN_BUITENLAND)
+        pct_bui = round(100.0 * n_prk_bui / n_prk, 1) if toon_pct else None
+        pct_bui3 = round(100.0 * n_prk_bui3 / n_prk, 1) if toon_pct else None
+
+        # ATC overig: meldingen in deze pool zonder bruikbare PRK. Ze staan hier NAAST de
+        # breuk en gaan er nooit in -- niet in de teller (we weten niet welk product het
+        # is, dus ook niet of het er een is die al meetelt) en niet in de noemer (die komt
+        # uit de G-standaard en kent deze melding niet). Wel tonen: anders lijkt een pool
+        # rustiger dan hij is.
+        ov_atc = bui["overig_landen"].get(pool, {})
+        overig_rijen = sorted(
+            ({"atc": a, "landen": sorted(cc), "n_landen": len(cc)} for a, cc in ov_atc.items()),
+            key=lambda x: (-x["n_landen"], x["atc"]))
+        n_overig_meld = sum(bui["overig_reden"].get(pool, {}).values())
 
         # Recentheid: één telling, geen score en geen leeftijd.
         n_meld = bui["meld_per_pool"].get(pool, 0)
@@ -449,6 +533,19 @@ def main():
             "buitenland": {
                 "n_atc5_min3landen": n_bui3,
                 "n_atc5_min1land": n_bui1,
+                # Pooldekking: deel van de Nederlandse PRK-noemer dat in het buitenland
+                # in tekort staat. Zelfde eenheid en zelfde noemer als het NL-percentage.
+                "n_prk_geraakt": n_prk_bui,
+                "n_prk_min3landen": n_prk_bui3,
+                "pct_prk_geraakt": pct_bui,
+                "pct_prk_min3landen": pct_bui3,
+                # Buiten de breuk, zie de opmerking in het bouwscript.
+                "overig": {
+                    "n_meldingen": n_overig_meld,
+                    "n_atc": len(overig_rijen),
+                    "reden": dict(bui["overig_reden"].get(pool, {})),
+                    "atc": overig_rijen[:25],
+                },
                 "n_landen": len(bui["landen_per_pool"].get(pool, set())),
                 "n_meldingen": n_meld,
                 "landen": sorted(bui["landen_per_pool"].get(pool, set())),
@@ -530,9 +627,19 @@ def main():
             "solo": "PRK met één handelsvergunninghouder over alle artikelen.",
             "percentage": (f"alleen getoond bij >= {MIN_PRK_VOOR_PERCENTAGE} PRK in de pool; "
                            "daaronder staat uitsluitend de kale breuk."),
-            "buitenland": (f"telling, nooit een percentage: aantal ATC5-codes met een actieve of "
-                           f"aankomende melding in >= {MIN_LANDEN_BUITENLAND} landen, na verwijdering "
-                           "van JP 'normal' en AT 'verfügbar' (dat zijn beschikbaarheidsmeldingen)."),
+            "buitenland": (f"twee maten naast elkaar. (1) Telling: aantal ATC5-codes met een "
+                           f"actieve of aankomende melding in >= {MIN_LANDEN_BUITENLAND} landen. "
+                           "(2) Pooldekking: welk deel van de Nederlandse PRK-noemer ergens in het "
+                           "buitenland in tekort staat. De tweede mag wel een percentage zijn, want "
+                           "de noemer is de Nederlandse pool uit de G-standaard en niet een optelsom "
+                           "van landen; elke PRK telt een keer, hoeveel landen hem ook melden. Welke "
+                           "pool een melding raakt, bepaalt de PRK via de G-standaard, niet de ATC "
+                           "van de bron. Beide na verwijdering van JP 'normal' en AT 'verfügbar' "
+                           "(dat zijn beschikbaarheidsmeldingen). (3) ATC overig: meldingen zonder "
+                           "bruikbare PRK, per ATC onder de pool gehangen. Die tellen NIET mee in de "
+                           "pooldekking -- niet in de teller en niet in de noemer -- want zonder PRK "
+                           "is niet vast te stellen om welk product het gaat. Ze staan er alleen "
+                           "naast, zodat een pool niet rustiger lijkt dan hij is."),
             "farmanco": ("telling op ATC5-niveau met EMS-kleur; Farmanco heeft geen prk-veld en "
                          "zit daarom niet in de PRK-teller."),
             "cbg_tav": ("niet meegeteld: een tijdelijk afwijkende verpakking is een oplossing voor "
