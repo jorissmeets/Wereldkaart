@@ -4,43 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LCG ATC4-pooldekking</title>
-<!--
-  LCG ATC4-pooldekking — classificatie: Internal (Carecogni-classificatiebeleid)
-
-  Deze pagina beantwoordt één vraag per ATC4-pool: hoeveel van de voorschrijfbare
-  producten (PRK) in de pool zijn niet meer te krijgen, en is er nog een uitwijk?
-
-  WAAROM een aparte pagina en geen sectie in signaaloverzicht.html:
-  deze pagina heeft een NOEMER nodig (alle PRK in de pool, ook de leverbare) die
-  geen enkele bestaande pagina laadt; signaaloverzicht kapt bovendien af op 200
-  groepen en sorteert op somscore — een percentage in een afgekapte, anders
-  gesorteerde lijst leest verkeerd.
-
-  WAAROM zoveel "niet gemeten" in plaats van 0: op dit dashboard worden inkoop- en
-  beleidsbeslissingen genomen. Een leeg vakje mag nooit stilzwijgend "nul" betekenen.
-
-  DATACONTRACT — atc4_dekking.json (alternatief: atc4_pool.json), offline gebouwd
-  omdat de G-standaard (74.839 regels) nooit in de browser hoort:
-  {
-    "generated": "2026-09-22",
-    "gstandaard_export": "2026-09-18",      // exportdatum LCG.csv, staat in de voettekst
-    "min_prk_voor_pct": 5,
-    "pools": [{
-      "atc4": "B01AX", "naam": "Overige antitrombotische middelen",
-      "n_prk": 7, "n_artikelen": 19, "n_solo": 7, "n_bereidingen": 3,
-      "weg": 2,          // PRK waarvan ALLE onderliggende ZI-artikelen op de SFK Monitor leveringsproblemen staan
-      "geraakt": 3,      // PRK met >=1 artikel op de tekortenlijst
-      "prks": [{"prk":"12345","naam":"…","weg":true,"geraakt":true,"solo":true}]
-    }]
-  }
-  Alle veldnamen zijn optioneel en hebben aliassen (zie readPools); ontbreekt een
-  veld, dan toont de kolom "niet gemeten" en nooit een 0 of een percentage.
-  De kolommen Farmanco / Buitenland / Nieuw <=7 d mogen ook in dit bestand staan
-  (farmanco_stoffen, buitenland_stoffen, nieuw7); staan ze er niet, dan rekent de
-  pagina ze uit op data.json met exact de regels die in de kolomtitels staan.
--->
 <style>
-    /* Tokenset letterlijk uit signaaloverzicht.html — de landkaart heeft een eigen set, die niet mengen. */
     :root {
         --lcg-blue: #00428b; --lcg-cyan: #0bbbef; --lcg-green: #a8c04d;
         --lcg-light: #daf5fd; --bg-base: #f2f7fb; --bg-card: #ffffff;
@@ -59,31 +23,22 @@
     .top-logo svg { width: 100%; height: 100%; }
     .top h1 { font-size: 20px; font-weight: 800; color: var(--lcg-blue); letter-spacing: -0.3px; }
     .top .sub { font-size: 12px; color: var(--text-muted); }
+    .lastup { text-align: center; margin: 0 0 12px; }
+    .lastup span { display: inline-block; font-size: 11px; font-weight: 600; color: var(--text-secondary); background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 999px; padding: 4px 14px; letter-spacing: 0.02em; }
     .top-right { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .top-link { font-size: 12px; text-decoration: none; padding: 6px 12px; border-radius: 6px; background: var(--bg-card); border: 1px solid var(--border); color: var(--lcg-blue); font-weight: 600; white-space: nowrap; }
     .top-link.active { background: var(--lcg-blue); color: #fff; border-color: var(--lcg-blue); }
     .top-link:hover { background: var(--lcg-light); }
 
-    /* Updatedatum prominenter: expliciet punt uit het overleg van 22-09. */
-    .lastup { text-align: center; margin: 0 0 14px; }
-    .lastup span { display: inline-block; font-size: 11px; font-weight: 600; color: var(--text-secondary); background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 999px; padding: 4px 14px; letter-spacing: 0.02em; }
-    .lastup span.main { font-size: 13px; font-weight: 800; color: var(--lcg-blue); background: var(--lcg-light); border-color: var(--lcg-cyan); padding: 6px 18px; }
-    .lastup .subdates { display: block; margin-top: 7px; font-size: 11px; color: var(--text-muted); }
-    .lastup .subdates b { color: var(--text-secondary); font-weight: 700; }
-
-    /* auto-fit: er staan vijf KPI's (NL-nieuw staat bewust naast buitenland-nieuw en
-       wordt er nooit bij opgeteld); bij minder ruimte vallen ze vanzelf terug. */
-    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
     .kpi { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
     .kpi .n { font-size: 24px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; }
     .kpi .l { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
     @media (max-width: 760px) { .kpis { grid-template-columns: repeat(2, 1fr); } }
 
     .note { font-size: 12px; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; margin-bottom: 14px; }
-    .note.warn { background: #fff6f6; border-color: #f0c9c9; color: #7d3030; }
 
     .controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
-    .ctl-lbl { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; font-weight: 700; }
     .chip { font-size: 11px; padding: 5px 10px; border-radius: 999px; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-secondary); cursor: pointer; user-select: none; }
     .chip.active { background: var(--lcg-blue); color: #fff; border-color: var(--lcg-blue); }
     .search { margin-left: auto; }
@@ -100,89 +55,36 @@
     .gname { flex: 1; font-weight: 800; color: var(--lcg-blue); overflow-wrap: anywhere; }
     .gcode { font-size: 11px; color: var(--text-muted); font-weight: 700; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
     .gcount { font-size: 11px; color: var(--text-muted); white-space: nowrap; margin-left: auto; }
+    .poollink { font-size: 10px; font-weight: 700; text-decoration: none; color: var(--lcg-blue); background: var(--bg-card); border: 1px solid var(--border); border-radius: 5px; padding: 2px 7px; white-space: nowrap; }
+    .poollink:hover { background: var(--lcg-light); }
+    .gbar { width: 54px; height: 6px; background: var(--border-light); border-radius: 3px; overflow: hidden; flex-shrink: 0; }
+    .gbar span { display: block; height: 100%; background: var(--lcg-cyan); }
+    .gsub { font-size: 10px; color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
     .gval { font-size: 15px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; width: 40px; text-align: right; flex-shrink: 0; }
+    .gbody .row { padding-left: 30px; }
+    .tl { padding: 8px 14px 4px 30px; border-bottom: 1px solid var(--border-light); }
+    .tl-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: var(--text-muted); margin-bottom: 4px; }
+    .tl-svg { width: 100%; height: auto; display: block; }
+    .tl-svg circle { transition: r 0.1s; } .tl-svg circle:hover { r: 4; }
+    .tl-empty { font-size: 11px; color: var(--text-muted); font-style: italic; }
     .row { display: flex; align-items: baseline; gap: 10px; padding: 9px 14px; border-top: 1px solid var(--border-light); }
+    .row:first-child { border-top: none; }
     .row:hover { background: var(--bg-elevated); }
+    .rank { font-size: 11px; color: var(--text-muted); font-weight: 700; width: 26px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
     .eml-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; align-self: center; }
     .eml-dot.rood { background: #e05555; } .eml-dot.oranje { background: #f0a020; } .eml-dot.geel { background: #e0c020; } .eml-dot.none { background: var(--border); }
-    .prk-tag { font-size: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--text-muted); }
+    .prod { flex: 1; min-width: 0; }
+    .prod .nm { font-weight: 700; color: var(--text-primary); overflow-wrap: anywhere; }
+    .prod .meta { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+    .badges { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; margin-top: 3px; }
     .b { font-size: 9px; font-weight: 800; color: #fff; padding: 1px 6px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; }
-    .b.urgent { background: #b4541e; }
-    .b.weg { background: var(--lcg-blue); } .b.geraakt { background: #6f8ca8; } .b.solo { background: #7a5195; } .b.farm { background: #7a5195; } .b.land { background: var(--lcg-cyan); }
+    .b.land { background: var(--lcg-cyan); } .b.farm { background: #7a5195; } .b.sfk { background: #2aa198; } .b.cbg { background: #ef7d00; } .b.dossier { background: var(--lcg-green); }
+    .b.rood { background: #e05555; } .b.oranje { background: #e08a10; } .b.geel { background: #b79a10; }
+    .b.type-voorloper { background: #d64550; } .b.type-convergerend { background: #b8600a; } .b.type-nl { background: #5a7791; }
+    .flags { font-size: 12px; }
+    .score { font-size: 15px; font-weight: 800; color: var(--lcg-blue); font-variant-numeric: tabular-nums; width: 34px; text-align: right; flex-shrink: 0; align-self: center; }
     .empty { padding: 20px 14px; color: var(--text-muted); font-style: italic; }
     .footer { margin-top: 18px; font-size: 11px; color: var(--text-muted); }
-    .footer b { color: var(--text-secondary); }
-
-    /* ---- blokken: drie vaste blokken, pools worden er nooit tussen gemengd ---- */
-    .blok { border-top: 3px solid var(--border); }
-    .blok:first-child { border-top: none; }
-    .blok-head { display: flex; align-items: center; gap: 10px; padding: 12px 14px; cursor: pointer; background: var(--bg-card); border-bottom: 1px solid var(--border); }
-    .blok-head:hover { background: var(--bg-elevated); }
-    .blok.collapsed .blok-body { display: none; }
-    .blok-head .bt { font-size: 14px; font-weight: 800; color: var(--lcg-blue); }
-    .blok-head .bs { font-size: 11px; color: var(--text-muted); flex: 1; overflow-wrap: anywhere; }
-    .blok-head .bn { font-size: 11px; color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
-    .blok:not(.collapsed) .blok-head .gcaret { transform: rotate(90deg); }
-
-    /* ---- poolregel: acht kolommen, absolute aantallen altijd vóór het percentage ---- */
-    .prow, .phead { display: grid; grid-template-columns: minmax(190px, 2.1fr) 92px 146px 104px 116px 88px 104px 92px; gap: 10px; align-items: center; padding: 9px 14px; }
-    .phead { background: var(--bg-elevated); border-bottom: 1px solid var(--border); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: var(--text-muted); }
-    .phead span { cursor: help; }
-    .prow { cursor: pointer; border-top: 1px solid var(--border-light); background: var(--bg-card); }
-    .blok-body .grp-wrap { border-top: none; }   /* anders dubbele scheidingslijn boven elke poolregel */
-    .prow:hover { background: var(--bg-elevated); }
-    .grp-wrap.hit > .prow { background: var(--lcg-light); }
-    .pool { display: flex; align-items: center; gap: 8px; min-width: 0; }
-    .pool .nm { font-weight: 700; color: var(--text-primary); overflow-wrap: anywhere; }
-    .pool .cd { font-size: 11px; color: var(--text-muted); font-weight: 700; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-    .pool .onbekend { font-size: 10px; color: var(--text-muted); font-style: italic; }
-    .cell { font-size: 12px; font-variant-numeric: tabular-nums; color: var(--text-secondary); min-width: 0; }
-    .cell .big { font-weight: 800; color: var(--text-primary); }
-    .cell .pct { font-weight: 700; color: var(--text-primary); }
-    .ik { display: inline-flex; align-items: center; justify-content: center; width: 13px; height: 13px;
-          border: 1px solid var(--text-muted); border-radius: 50%; font-size: 9px; font-style: normal;
-          font-weight: 700; color: var(--text-muted); cursor: help; vertical-align: middle; }
-    .ik:hover { color: var(--lcg-blue); border-color: var(--lcg-blue); }
-    .cell .sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; line-height: 1.3; }
-    /* "geraakt" krijgt bewust lichtere typografie en geen meter: het is vroegsignaal, geen beschikbaarheid. */
-    .cell.licht, .cell.licht .big { font-weight: 400; color: var(--text-muted); }
-    .cell .nm-nietgemeten { color: var(--text-muted); font-style: italic; font-size: 11px; }
-    .cell .nul { color: var(--text-muted); }
-    .clbl { display: none; }
-    /* Meter: blauw op grijs. Geen rood/oranje/geel — die kleuren zijn bezet door EMS-ernst en meldingsstatus. */
-    .meter { height: 5px; border-radius: 3px; background: var(--border-light); margin-top: 4px; overflow: hidden; }
-    .meter i { display: block; height: 100%; background: var(--lcg-blue); border-radius: 3px; }
-
-    .gbody { background: var(--bg-base); padding: 4px 0 8px; }
-    .det { padding: 8px 14px 4px 34px; }
-    .det-t { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: var(--text-muted); margin-bottom: 4px; }
-    .det-l { font-size: 12px; color: var(--text-secondary); }
-    .det-l .it { display: inline-block; background: var(--bg-card); border: 1px solid var(--border); border-radius: 5px; padding: 2px 7px; margin: 0 4px 4px 0; }
-    .det-none { font-size: 11px; color: var(--text-muted); font-style: italic; }
-    .prk-row { display: flex; align-items: center; gap: 8px; padding: 4px 14px 4px 34px; font-size: 12px; }
-    .prk-row .pnm { flex: 1; min-width: 0; overflow-wrap: anywhere; }
-
-    /* 1080 en niet 1020: de acht kolommen hebben samen minimaal 1002px nodig (190 + 742 vast + 70 gap),
-       plus 28 padding, 2 rand en 40 paginamarge = 1072px viewport. Op 1020 kantelde de layout pas
-       nadat hij al niet meer paste, met een horizontale schuifbalk tussen 1021 en 1071 px. */
-    @media (max-width: 1080px) {
-        .phead { display: none; }
-        .prow { display: block; }
-        .prow .cell { display: flex; gap: 8px; align-items: baseline; padding: 2px 0; }
-        .prow .cell .clbl { display: inline-block; min-width: 92px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.3px; color: var(--text-muted); font-weight: 700; }
-        .prow .pool { margin-bottom: 4px; }
-        .meter { max-width: 180px; }
-    }
-    /* Op telefoonbreedte moet de blokkop kunnen afbreken: titel, uitleg en telling
-       passen daar niet naast elkaar, en de titel mag niet weggedrukt worden. */
-    @media (max-width: 620px) {
-        .blok-head { flex-wrap: wrap; }
-        .blok-head .bt { flex-shrink: 0; }
-        .blok-head .bs { flex: 1 1 100%; order: 3; }
-        .kpi .n { font-size: 20px; }
-        .search { margin-left: 0; width: 100%; }
-        .search input { width: 100%; max-width: none; }
-    }
 
     #pw-gate { position: fixed; inset: 0; background: var(--bg-base); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; z-index: 999; }
     #pw-gate h2 { color: var(--lcg-blue); } #pw-gate input { font-size: 14px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; }
@@ -197,7 +99,7 @@
         <div class="top-logo"><svg viewBox="0 0 156 158" fill="#00428b"><path d="M.47,55.36l18.05-31.47c.98-1.68,3.09-2.24,4.77-1.26l16.51,9.45c10.33,5.99,13.93,19.17,8,29.55-5.99,10.33-19.17,13.89-29.55,7.95L1.74,60.09c-1.64-.94-2.24-3.04-1.26-4.72Z"/><path d="M47.93,96.42c5.99,10.33,2.48,23.57-7.81,29.55l-16.46,9.59c-1.68.98-3.83.42-4.77-1.26L.66,102.92c-.98-1.68-.37-3.79,1.26-4.77l16.46-9.54c10.33-5.99,23.57-2.48,29.55,7.81Z"/><path d="M99.6,78.93c0,11.97-9.68,21.65-21.6,21.65s-21.6-9.68-21.6-21.65,9.68-21.6,21.6-21.6,21.6,9.68,21.6,21.6Z"/><path d="M99.6,3.46v19.08c0,11.92-9.68,21.6-21.6,21.6s-21.6-9.68-21.6-21.6V3.46c0-1.92,1.54-3.46,3.46-3.46h36.28c1.92,0,3.46,1.54,3.46,3.46Z"/><path d="M99.6,135.37v19.03c0,1.96-1.54,3.51-3.46,3.51h-36.28c-1.92,0-3.46-1.54-3.46-3.51v-19.03c0-11.92,9.68-21.6,21.6-21.6s21.6,9.68,21.6,21.6Z"/><path d="M155.43,102.54l-18.05,31.47c-.98,1.68-3.09,2.24-4.77,1.26l-16.51-9.45c-10.33-5.99-13.93-19.17-8-29.55,5.99-10.33,19.17-13.93,29.55-7.95l16.51,9.49c1.64.94,2.24,3.04,1.26,4.72Z"/><path d="M108.16,61.49c-6.03-10.33-2.52-23.57,7.81-29.55l16.46-9.59c1.68-.98,3.79-.42,4.77,1.26l18.24,31.38c.93,1.64.37,3.79-1.26,4.77l-16.46,9.54c-10.33,5.99-23.57,2.48-29.55-7.81Z"/></svg></div>
         <div>
             <h1>LCG ATC4-pooldekking</h1>
-            <div class="sub">Per ATC4-groep: hoeveel voorschrijfbare producten (PRK) zijn weg, en is er nog een uitwijk?</div>
+            <div class="sub">Dezelfde signalen als het Overzicht, afgezet tegen het aantal producten in de groep</div>
         </div>
         <div class="top-right">
             <a class="top-link" href="signaaloverzicht.html">Overzicht</a>
@@ -209,755 +111,296 @@
     </div>
 
     <div class="kpis" id="kpis"></div>
-    <div id="alerts"></div>
-
-    <!-- De leeswijzer met vijf bullets stond hier. Eruit op verzoek van Joris (24-09):
-         vijf alinea's waarschuwing boven een tabel leest niemand, en wat niemand leest
-         beschermt niemand. De inhoud staat waar hij thuishoort: de meetregels in de
-         docstring van build_atc4_dekking.py, de valkuilen in de commentaren hieronder. -->
-
-
-    <!-- Leeftijd van de noemer. Apart van de leeswijzer: de kopdatum hierboven gaat
-         alleen over de SIGNAALbronnen, de noemer is maanden ouder en dat verschil is
-         bij een vluchtige blik niet te zien. Wordt in JS gevuld zodat de leeftijd
-         meeloopt met het bestand en niet verjaart in de HTML. -->
-    <div id="noemer-leeftijd"></div>
 
     <div class="note">
-        <b>Weg</b> = alle verpakkingen van dat product op de SFK Monitor leveringsproblemen. <b>Geraakt</b> = minstens één.
-        Percentage vanaf <b id="minprk-note">5</b> PRK in de groep.
+        Per <b>ATC4-groep</b>: dezelfde signalen als op het Overzicht, gedeeld door het aantal producten (PRK) dat de groep in de G-standaard telt.
+        Het Overzicht telt scores op, waardoor een grote groep altijd bovenaan komt; hier telt het aandeel.
     </div>
 
     <div class="controls">
-        <span class="ctl-lbl">Sortering</span>
-        <div class="chip srt active" data-sort="standaard" title="Ernstigste eerst">Standaard</div>
-        <div class="chip srt" data-sort="geraakt" title="Meeste producten met minstens één verpakking op de tekortenlijst">Geraakt</div>
-        <div class="chip srt" data-sort="omvang" title="Grootste pools eerst (aantal PRK in de noemer)">Omvang</div>
-        <div class="chip srt" data-sort="nieuw" title="Nederlandse meldingen eerst, dan buitenlandse">Nieuw ≤7 d (NL eerst)</div>
-        <div class="chip srt" data-sort="urgent" title="Breed in tekort in het buitenland, Nederland nog nauwelijks geraakt">Mogelijk urgent</div>
-        <div class="search"><input type="text" id="q" placeholder="Zoek pool, ATC4-code of stof…" autocomplete="off"></div>
+        <span style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.4px">Sortering</span>
+        <div class="chip srt active" data-sort="norm" title="Signaalwaarde gedeeld door het aantal producten in de groep">Genormaliseerd</div>
+        <div class="chip srt" data-sort="aandeel" title="Aandeel van de groep met een signaal uit welke bron dan ook">Aandeel geraakt</div>
+        <div class="chip srt" data-sort="sfk" title="Aandeel van de groep dat op de SFK Monitor leveringsproblemen staat">SFK</div>
+        <div class="chip srt" data-sort="buiten" title="Aandeel van de groep met een buitenlandse tekortmelding">Buitenland</div>
+        <div class="chip srt" data-sort="urgent" title="Breed in tekort in het buitenland, in Nederland nog nauwelijks">Mogelijk urgent</div>
+        <div class="chip srt" data-sort="som" title="Zoals het Overzicht: som van de productscores, niet genormaliseerd">Som (als Overzicht)</div>
     </div>
-    <div class="controls" style="margin-top:-4px">
-        <span class="ctl-lbl">EMS</span>
-        <div class="chip col active" data-col="all">Alle</div>
+
+    <div class="controls">
+        <div class="chip typ active" data-type="all">Alles</div>
+        <div class="chip typ" data-type="voorloper" title="Uitsluitend in buitenlandse tekortmeldingen">Alleen buitenland</div>
+        <div class="chip typ" data-type="convergerend" title="Buitenland én al bevestigd op een NL-bron">Buitenland + NL</div>
+        <div class="chip typ" data-type="nl" title="Alleen NL-bronnen (Farmanco/SFK/CBG)">Alleen NL</div>
+        <span style="width:10px"></span>
+        <div class="chip col active" data-col="all">Alle EMS</div>
         <div class="chip col" data-col="rood">🔴</div>
         <div class="chip col" data-col="oranje">🟠</div>
         <div class="chip col" data-col="geel">🟡</div>
-        <span style="width:8px"></span>
-        <div class="chip flt" data-flt="minprk" title="Alleen pools die groot genoeg zijn voor een percentage">Alleen pools met percentage</div>
-        <div class="chip flt" data-flt="nieuw" title="Alleen pools met minstens één melding met een echt bronsignaal in de laatste 7 dagen">Alleen met nieuw signaal</div>
-        <div class="chip flt" data-flt="buitenland" title="Alleen pools met minstens één stof die in 3 of meer landen gemeld is">Alleen met buitenlandsignaal</div>
+        <div class="search"><input type="text" id="q" placeholder="Zoek groep, product, ATC of PRK…" autocomplete="off"></div>
+    </div>
     </div>
 
-    <div class="list" id="rows"><div class="empty">Bezig met laden…</div></div>
+    <div class="list" id="rows"></div>
     <div class="footer" id="footer"></div>
 </div>
 
 <script>
-/* ---------------------------------------------------------------------------
-   Vaste regels. Deze staan hier als constante zodat ze op één plek te herleiden
-   zijn; ze zijn geen instelling die per gebruiker mag verschillen.
---------------------------------------------------------------------------- */
-const MIN_PRK_PCT   = 5;   // onder 5 PRK springt het percentage in stappen van >=20 punt: dat is geen meting
-const MIN_LANDEN     = 3;  // drempel voor de buitenlandkolom
-const NIEUW_DAGEN    = 7;
-// Vroegsignaal: de drie feiten die samen maken dat een pool het bekijken waard is VOORDAT
-// Nederland hem merkt. Geen voorspelling en geen score -- een poort en daarna een volgorde,
-// allebei na te rekenen uit de cijfers die in de rij staan.
-const URG_NL_MAX     = 0.25;  // boven dit NL-aandeel is het geen vroegsignaal meer maar een tekort
-const DATUM_DEKKING  = 0.5; // <50% gedateerde meldingen in een pool -> geen recentheidsgetal
-
-const S = { sort: "standaard", col: "all", q: "", minprk: false, nieuw: false, buitenland: false };
-let POOLS = [], META = {}, HAVE = {}, ATC4_NAMEN = {}, ATC5_NAMEN = {}, EML = {};
+const DOSSIER_ATCS = new Set(["L01AA06","N05AH04","L01BC06","L01DB07","P02CA03","V03AF03","G02AB01","H02AB06","J01GB03","B06AA03","C04AB01","H02AB08","P02BA01","S01LA01"]);
+const WINDOW_DAYS = 120;
+// Onder deze poolgrootte springt een aandeel in stappen van >=20 procentpunt. Dan is het
+// geen meting meer. De groep blijft staan, het percentage wordt onderdrukt.
+const MIN_PRK_PCT = 5;
+const MIN_LANDEN = 3;
+const URG_NL_MAX = 0.25;
+const S = { type: "all", col: "all", q: "", sort: "norm" };
+let PRODUCTS = [], ATC4_NAMES = {}, POOL = {};
 
 function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 function nl(n) { return Number(n).toLocaleString("nl-NL"); }
-function dmy(iso) { return /^\d{4}-\d{2}-\d{2}$/.test(iso || "") ? iso.split("-").reverse().join("-") : (iso || ""); }
-function flagOf(cc) { return /^[A-Za-z]{2}$/.test(cc || "") ? cc.toUpperCase().replace(/./g, c => String.fromCodePoint(127397 + c.charCodeAt())) : ""; }
-// num() geeft null terug bij een ontbrekend veld. Dat onderscheid draagt de hele pagina:
-// null = niet gemeten, 0 = gemeten en nul. Die twee mogen er nooit hetzelfde uitzien.
-function num(v) { return (v === null || v === undefined || v === "" || Number.isNaN(Number(v))) ? null : Number(v); }
-function pick(o, keys) { for (const k of keys) if (o && o[k] !== undefined && o[k] !== null && o[k] !== "") return o[k]; return null; }
-// Bewust helemaal in UTC: met lokale tijd schuift toISOString() in de zomer een dag terug,
-// waardoor een venster van 7 dagen er in de praktijk 8 wordt (694 meldingen werd dan 698).
-function addDays(iso, n) { const d = new Date(iso + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); }
+function flagOf(cc) { return /^[A-Za-z]{2}$/.test(cc) ? cc.toUpperCase().replace(/./g, c => String.fromCodePoint(127397 + c.charCodeAt())) : ""; }
 function isoToday() { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+function addDays(iso, n) { const d = new Date(iso + "T00:00:00"); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); }
 
-/* ---------------------------------------------------------------------------
-   1. Inlezen van de voorberekende noemer. Ruim opgezet in veldnamen, want het
-   bouwscript wordt apart onderhouden; liever een alias te veel dan een kolom die
-   stilletjes leeg blijft.
---------------------------------------------------------------------------- */
-function readPools(j) {
-    if (!j) return { meta: {}, pools: [] };
-    let raw = Array.isArray(j) ? j : pick(j, ["pools", "atc4", "items", "groepen", "data"]);
-    if (raw && !Array.isArray(raw) && typeof raw === "object") {
-        raw = Object.entries(raw).map(([k, v]) => (v && typeof v === "object") ? { atc4: k, ...v } : { atc4: k, n_prk: v });
-    }
-    if (!Array.isArray(raw)) return { meta: {}, pools: [] };
-    // Het bouwscript zet de brondatums in een blok "bronnen"; oudere bestanden zetten ze plat.
-    const obj = (v) => (v && typeof v === "object" && !Array.isArray(v)) ? v : {};
-    const br = obj(j.bronnen);
-    const isDate = (v) => /^\d{4}-\d{2}-\d{2}$/.test(String(v == null ? "" : v));
-    const dat = (v) => isDate(v) ? v : null;
-    // Alleen een échte exportdatum telt als exportdatum. Levert het bouwscript uitsluitend de
-    // bestandsdatum van LCG.csv, dan wordt dat er in de voettekst ook bij gezet: die twee zijn
-    // niet hetzelfde en het verschil bepaalt of een percentage week-op-week vergelijkbaar is.
-    const gExport = dat(pick(j, ["gstandaard_export", "gstd_export", "lcg_csv_export", "gstandaard_datum"]))
-                 || dat(pick(obj(br.gstandaard), ["export", "exportdatum", "export_datum"]));
-    const gBestand = dat(pick(obj(br.gstandaard), ["bestandsdatum", "datum", "generated"]));
-    const meta = {
-        generated: dat(pick(j, ["generated", "gemaakt", "datum"])),
-        gstd: gExport || gBestand,
-        gstdIsBestandsdatum: !gExport && !!gBestand,
-        sfk: dat(pick(j, ["sfk_generated"])) || dat(pick(obj(br.sfk), ["generated", "datum"])),
-        // De Monitor is een WEEKlijst. De scrapedatum zegt dus niets over hoe vers hij is:
-        // scrape je op maandag, dan staat er een datum van vandaag boven de lijst van vorige
-        // week. Daarom tonen we de peildatum van de bron zelf, niet onze ophaaldatum.
-        sfkPeil: String(pick(obj(br.sfk), ["peildatum"]) || ""),
-        minprk: num(pick(j, ["min_prk_voor_pct", "min_prk", "minPrk"])) || MIN_PRK_PCT
-    };
-    const pools = raw.map(p => {
-        const code = String(pick(p, ["atc4", "code", "a4", "key", "atc"]) || "").toUpperCase().slice(0, 5);
-        // Het bouwscript levert de getallen genest (noemer / nl / farmanco / buitenland / recent);
-        // een plat bestand levert ze los. Beide vormen worden hier gelezen: eerst de platte naam,
-        // anders het geneste veld. num() maakt van een meegepikt OBJECT netjes null, zodat een
-        // alias als "noemer" (plat een getal, genest een object) geen rare waarde oplevert.
-        const nz = obj(p.noemer), nlz = obj(p.nl), fz = obj(p.farmanco), bz = obj(p.buitenland), rz = obj(p.recent);
-        const n2 = (plat, genest) => { const a = num(pick(p, plat)); return a != null ? a : num(genest); };
-        return {
-            code,
-            naam:   pick(p, ["naam", "name", "atc4_naam", "label", "omschrijving"]),
-            nPrk:   n2(["n_prk", "nPrk", "prk_totaal", "noemer", "aantal_prk"], nz.n_prk),
-            nArt:   n2(["n_artikelen", "nArt", "artikelen", "aantal_artikelen"], nz.n_artikelen),
-            nSolo:  n2(["n_solo", "nSolo", "solo", "single_source", "n_single_source"], nlz.n_prk_solo),
-            nBer:   n2(["n_bereidingen", "bereidingen", "nBer"], nz.n_bereidingen_prk),
-            weg:    n2(["weg", "n_weg", "prk_weg", "nWeg"], nlz.n_prk_weg),
-            geraakt:n2(["geraakt", "n_geraakt", "prk_geraakt", "nGeraakt"], nlz.n_prk_geraakt),
-            farmN:  n2(["farmanco_stoffen", "n_farmanco", "farmanco"], fz.n_atc5),
-            farmEml:pick(p, ["farmanco_eml", "eml_farmanco"]) || fz.eml || "",
-            buitN:  n2(["buitenland_stoffen", "n_buitenland", "buitenland"], bz.n_atc5_min3landen),
-            // Pooldekking buitenland: hoeveel van de Nederlandse PRK-noemer ergens in het
-            // buitenland in tekort staat. Dit MAG een percentage zijn, anders dan de
-            // stoffentelling ernaast: de noemer is de Nederlandse pool uit de G-standaard,
-            // en elke PRK telt een keer hoeveel landen hem ook melden.
-            buitPrk:  num(bz.n_prk_geraakt),
-            buitPrk3: num(bz.n_prk_min3landen),
-            buitPct:  num(bz.pct_prk_geraakt),
-            // ATC overig: meldingen zonder bruikbare PRK. Staan NOOIT in de breuk -- niet in
-            // teller en niet in noemer -- want zonder PRK is het product niet vast te stellen.
-            // Alleen zichtbaar, zodat een pool niet rustiger lijkt dan hij is.
-            buitOverig:    num(obj(bz.overig).n_meldingen),
-            buitOverigAtc: Array.isArray(obj(bz.overig).atc) ? obj(bz.overig).atc : [],
-            buitOverigReden: obj(obj(bz.overig).reden),
-            buitLanden: Array.isArray(bz.landen) ? bz.landen : null,
-            nieuw:  n2(["nieuw7", "nieuw_7d", "n_nieuw7", "nieuw"], rz.n_nieuw_7d),
-            // NEDERLANDSE meldingen in hetzelfde venster. Het bouwscript levert deze al
-            // (recent.n_nl_nieuw_7d); zonder dit veld toonde de kolom "Nieuw" uitsluitend
-            // buitenland en las een pool met een gloednieuw NL-tekort als "0 nieuw".
-            // Wordt naast het buitenlandse getal gezet en er nooit bij opgeteld.
-            nlNieuw: n2(["nl_nieuw_7d", "n_nl_nieuw7"], rz.n_nl_nieuw_7d),
-            nlNieuwDetail: Array.isArray(rz.nl_nieuw) ? rz.nl_nieuw : [],
-            // Recentheid hoort bij dezelfde bron als "nieuw": komt het getal uit het bestand,
-            // dan moet ook de dekking waarop dat getal rust uit dat bestand komen.
-            meldingen: num(rz.n_meldingen),
-            gedateerd: num(rz.n_gedateerd),
-            ems:    pick(p, ["eml", "ems"]),
-            prks:   (pick(p, ["prks", "prk_list", "prk_details", "prk"]) || []).map(x => (typeof x === "string" || typeof x === "number")
-                        ? { prk: String(x) }
-                        : { prk: String(pick(x, ["prk", "code"]) || ""), naam: pick(x, ["naam", "prk_naam", "name"]),
-                            weg: !!pick(x, ["weg"]), geraakt: !!pick(x, ["geraakt"]), solo: !!pick(x, ["solo", "single_source"]),
-                            // nodig om te kunnen tonen waarop een "weg" rust: een PRK met één
-                            // artikel is per definitie weg zodra dat ene artikel gemeld wordt.
-                            nArt: num(pick(x, ["n_artikelen", "n_art"])),
-                            nTek: num(pick(x, ["n_artikelen_tekort", "n_tekort"])),
-                            // zonder dit is de pooldekking een getal zonder adres
-                            buitLanden: Array.isArray(x.buitenland_landen) ? x.buitenland_landen : [] })
-        };
-    }).filter(p => /^[A-Z]\d{2}[A-Z]{2}$/.test(p.code));
-    return { meta, pools };
-}
+/* Per PRK een productrecord uit alle bronnen. Letterlijk dezelfde opbouw en dezelfde score
+   als signaaloverzicht.html -- als die twee pagina's uit elkaar gaan lopen, is niet meer uit
+   te leggen waarom hetzelfde product op de ene pagina zwaarder weegt dan op de andere. */
+function build(data, farm, cbg, sfk, ems) {
+    const EML = (ems && ems.map) || {};
+    const P = {};
+    const get = (prk) => (P[prk] ||= { prk, naam: "", atc: "", ccs: new Set(), first: null, farm: false, sfk: false, cbg: false });
 
-/* ---------------------------------------------------------------------------
-   2. Buitenland, recentheid en Farmanco uit de ruwe bronnen — alleen gebruikt
-   voor de kolommen die het bouwscript (nog) niet levert. Zelfde regels als in
-   het ontwerp, zodat er geen tweede definitie ontstaat.
---------------------------------------------------------------------------- */
-// JP 'normal' en AT 'verfügbar …' staan als 'active' in de bron maar betekenen
-// letterlijk: gewoon leverbaar. Meetellen maakt het buitenlandsignaal een derde te groot.
-function echtTekort(r) {
-    const sr = String(r.sr || "");
-    if (r.cc === "JP" && sr === "normal") return false;
-    if (r.cc === "AT" && /^verf/i.test(sr)) return false;
-    return true;
-}
-// Bronsignaal: lu telt alleen als het geen scrapedatum is, anders ss onder dezelfde voorwaarde.
-// CZ vult lu standaard met de scrapedatum; zonder deze regel lijkt die hele lijst vers.
-function bronsignaal(r) {
-    if (r.lu && r.lu !== r.sa) return r.lu;
-    if (r.ss && r.ss !== r.sa) return r.ss;
-    return null;
-}
-function uitData(data) {
-    const out = {};   // code -> { buitN, landen, stoffen, nieuw, meldingen, gedateerd, nieuwDetail }
-    if (!data || !data.records) return out;
-    const peil = data.generated || isoToday();   // nooit new Date(): de pagina moet tonen wat de data zegt
-    const grens = addDays(peil, -NIEUW_DAGEN);
-    const perAtc5 = {};                          // atc5 -> Set(landen), voor de drempel van 3 landen
-    data.records.forEach(r => {
+    const today = (data && data.generated) || isoToday();
+    const cutoff = addDays(today, -WINDOW_DAYS);
+    ((data && data.records) || []).forEach(r => {
+        if (!r.prk) return;
         if (r.st !== "active" && r.st !== "upcoming") return;
-        if (!echtTekort(r)) return;
-        const atc = String(r.atc || "");
-        if (atc.length < 5) return;
-        const code = atc.slice(0, 5);
-        const o = out[code] || (out[code] = { landen: new Set(), stoffen: {}, nieuw: 0, meldingen: 0, gedateerd: 0, nieuwDetail: [] });
-        o.meldingen++;
-        o.landen.add(r.cc);
-        if (atc.length === 7) ((perAtc5[atc] ||= { cc: new Set(), code })).cc.add(r.cc);
-        const sig = bronsignaal(r);
-        if (sig) {
-            o.gedateerd++;
-            if (sig >= grens && sig <= peil) {
-                o.nieuw++;
-                if (o.nieuwDetail.length < 8) o.nieuwDetail.push({ d: sig, cc: r.cc, mn: r.mn || r.sub || atc });
-            }
-        }
+        if (!r.ss || r.ss === r.sa || r.ss > today || r.ss < cutoff) return;
+        const p = get(String(r.prk));
+        p.ccs.add(r.cc); p.atc = p.atc || r.atc; p.naam = p.naam || r.prk_naam || "";
+        if (!p.first || r.ss < p.first) p.first = r.ss;
     });
-    Object.entries(perAtc5).forEach(([atc5, v]) => {
-        const o = out[v.code]; if (!o) return;
-        o.stoffen[atc5] = v.cc.size;
+    ((farm && farm.items) || []).forEach(m => { if (m.prk) { const p = get(String(m.prk)); p.farm = true; p.atc = p.atc || m.atc || ""; p.naam = p.naam || m.prk_naam || ""; } });
+    ((sfk && sfk.items) || []).forEach(e => { if (e.prk) { const p = get(String(e.prk)); p.sfk = true; p.atc = p.atc || e.atc || ""; p.naam = p.naam || e.prk_naam || ""; } });
+    ((cbg && cbg.items) || []).forEach(e => { if (e.prk) { const p = get(String(e.prk)); p.cbg = true; p.atc = p.atc || e.atc || ""; p.naam = p.naam || e.prk_naam || ""; } });
+
+    return Object.values(P).map(p => {
+        const nCc = p.ccs.size;
+        const nlSrc = p.farm || p.sfk || p.cbg;
+        const eml = EML[p.atc] || "";
+        const dossier = DOSSIER_ATCS.has(p.atc);
+        const type = nCc > 0 ? (nlSrc ? "convergerend" : "voorloper") : "nl";
+        const emlW = eml === "rood" ? 4 : eml === "oranje" ? 2 : eml === "geel" ? 1 : 0;
+        const score = Math.min(nCc, 8) + (p.farm ? 3 : 0) + (p.sfk ? 3 : 0) + (p.cbg ? 4 : 0) + emlW + (dossier ? 2 : 0);
+        return { ...p, ccs: [...p.ccs], nCc, eml, dossier, type, score };
     });
-    Object.values(out).forEach(o => {
-        o.buitN = Object.values(o.stoffen).filter(n => n >= MIN_LANDEN).length;
-        o.landen = [...o.landen];
-    });
-    return out;
-}
-function uitFarmanco(farm) {
-    const out = {};
-    ((farm && farm.items) || []).forEach(m => {
-        const atc = String(m.atc || "");
-        if (atc.length !== 7) return;                      // zonder volledige ATC5 is de pool niet bepaalbaar
-        const code = atc.slice(0, 5);
-        const o = out[code] || (out[code] = { stoffen: new Set(), eml: "", namen: new Set() });
-        o.stoffen.add(atc);
-        if (m.stof) o.namen.add(m.stof);
-        const rank = { rood: 3, oranje: 2, geel: 1 };
-        if ((rank[m.eml] || 0) > (rank[o.eml] || 0)) o.eml = m.eml;
-    });
-    Object.values(out).forEach(o => { o.n = o.stoffen.size; o.namen = [...o.namen]; });
-    return out;
-}
-// EMS-ernst van de pool = de zwaarste beoordeling van een ATC5 binnen de pool.
-function emsVanPool(code) {
-    let best = "";
-    const rank = { rood: 3, oranje: 2, geel: 1 };
-    for (const [atc5, kl] of Object.entries(EML)) {
-        if (atc5.slice(0, 5) !== code) continue;
-        if ((rank[kl] || 0) > (rank[best] || 0)) best = kl;
-    }
-    return best;
 }
 
-/* ---------------------------------------------------------------------------
-   3. Samenvoegen. Wat het bouwscript levert wint; wat het niet levert wordt hier
-   berekend; wat nergens vandaan komt blijft leeg en heet ook zo.
---------------------------------------------------------------------------- */
-// okMap / okFarm: is de bron überhaupt geladen? Alleen dan mag een ontbrekende pool
-// als "0" gelezen worden. Is de bron er niet, dan is het "niet gemeten".
-function merge(poolsJson, mapData, farmData, okMap, okFarm) {
-    const byCode = {};
-    poolsJson.forEach(p => { byCode[p.code] = p; });
-    // Pools die alleen in het buitenland of bij Farmanco voorkomen krijgen geen noemer
-    // en dus ook geen percentage — ze horen wel zichtbaar te zijn (onderaan de standaardsortering).
-    Object.keys(mapData).forEach(c => { if (!byCode[c]) byCode[c] = { code: c, prks: [] }; });
-    Object.keys(farmData).forEach(c => { if (!byCode[c]) byCode[c] = { code: c, prks: [] }; });
-
-    return Object.values(byCode).map(p => {
-        const m = mapData[p.code] || {}, f = farmData[p.code] || {};
-        const nPrk = num(p.nPrk);
-        const q = {
-            ...p,
-            nPrk,
-            naam: p.naam || ATC4_NAMEN[p.code] || "",
-            ems: p.ems || emsVanPool(p.code),
-            farmN:  HAVE.farm ? num(p.farmN)  : (okFarm ? (f.n || 0) : null),
-            farmEml: HAVE.farm ? (p.farmEml || "") : (f.eml || ""),
-            farmNamen: f.namen || [],
-            buitN:  HAVE.buit ? num(p.buitN)  : (okMap ? (m.buitN || 0) : null),
-            buitLanden: (p.buitLanden && p.buitLanden.length) ? p.buitLanden : (m.landen || []),
-            buitStoffen: m.stoffen || {},
-            nieuw:  HAVE.nieuw ? num(p.nieuw) : (okMap ? (m.nieuw || 0) : null),
-            nieuwDetail: m.nieuwDetail || [],
-            // Zelfde bron als de kolom "nieuw": anders zou de dekkingsmelding
-            // ("recentheid onbekend voor X van Y") bij een getal uit het bestand horen
-            // maar op tellingen uit data.json rusten.
-            meldingen: HAVE.nieuw && p.meldingen != null ? p.meldingen : (m.meldingen || 0),
-            gedateerd: HAVE.nieuw && p.gedateerd != null ? p.gedateerd : (m.gedateerd || 0)
+/* De noemer. Dit is wat het Overzicht niet heeft en deze pagina wel: hoeveel voorschrijfbare
+   producten telt de groep eigenlijk? Zonder dat getal is 12 gesignaleerde producten in een
+   groep van 14 niet te onderscheiden van 12 in een groep van 200. */
+let PRK_POOL = {};
+function leesNoemer(dek) {
+    const uit = {};
+    PRK_POOL = {};
+    ((dek && dek.pools) || []).forEach(p => {
+        // In welke pool een PRK valt, bepaalt de G-STANDAARD, niet de ATC van de bron. Anders
+        // komt een product in een groep terecht waar zijn eigen PRK niet in de noemer zit, en
+        // dan staat er "6 van 5 producten" -- een teller buiten zijn eigen noemer.
+        (p.prk || []).forEach(x => { if (x.prk) PRK_POOL[String(x.prk)] = p.atc4; });
+        uit[p.atc4] = {
+            n: (p.in_noemer && p.noemer) ? p.noemer.n_prk : null,
+            naam: p.naam || "",
+            eml: p.eml || "",
+            buiPrk: (p.buitenland || {}).n_prk_geraakt,
+            buiPrk3: (p.buitenland || {}).n_prk_min3landen,
+            nlPrk: (p.nl || {}).n_prk_geraakt,
         };
-        // Geen noemer -> geen enkele breuk, ook geen 0%.
-        q.pctWeg     = (q.weg != null && nPrk) ? q.weg / nPrk : null;
-        q.pctGeraakt = (q.geraakt != null && nPrk) ? q.geraakt / nPrk : null;
-        q.blok = (q.nPrk == null || q.nPrk === 0) ? "D"
-               : (q.weg != null && q.weg > 0) ? "A"
-               : (q.geraakt != null && q.geraakt > 0) ? "B" : "C";
-        return q;
     });
+    return uit;
 }
 
-/* ---------------------------------------------------------------------------
-   4. Cellen. Eén plek waar besloten wordt of er een getal mag komen te staan.
---------------------------------------------------------------------------- */
-const NIETGEMETEN = `<span class="nm-nietgemeten" title="Dit veld zit niet in de geladen data — dit is geen nul">niet gemeten</span>`;
-
-function breukCell(n, tot, opts) {
-    opts = opts || {};
-    if (n == null || tot == null) return NIETGEMETEN;
-    if (tot === 0) return `<span class="nm-nietgemeten" title="Deze pool heeft geen PRK in de G-standaard-noemer">n.v.t.</span>`;
-    const frac = `<span class="big">${nl(n)}</span> van ${nl(tot)}`;
-    // Onder de drempel alleen de kale breuk: bij 3 PRK springt een percentage 33 punt per product.
-    if (tot < (META.minprk || MIN_PRK_PCT)) {
-        return `${frac} <span class="nm-nietgemeten" title="Te weinig PRK in de pool voor een betekenisvol percentage">(te klein voor %)</span>`;
-    }
-    const pct = Math.round(n / tot * 100);
-    const meter = opts.meter ? `<div class="meter" aria-hidden="true"><i style="width:${Math.max(0, Math.min(100, n / tot * 100)).toFixed(1)}%"></i></div>` : "";
-    return `${frac} <span class="pct">(${pct}%)</span>${meter}`;
-}
-// Recentheid is alleen te tonen als de meerderheid van de meldingen in de pool een
-// echte brondatum heeft. Zeven landen leveren nul datums; anders zou een pool met
-// één gedateerde melding op 42 er "vers" uitzien.
-function recentheidBruikbaar(p) { return !(p.meldingen > 0 && p.gedateerd / p.meldingen < DATUM_DEKKING); }
-// NL-badge: staat altijd vóór het buitenlandse getal en wordt er nooit bij opgeteld.
-// Een Nederlands tekort van gisteren is voor deze bespreking het zwaarste signaal in
-// de kolom; dat mag niet wegvallen omdat het buitenland toevallig stil was.
-/* Mogelijk urgent: geen model en geen gewogen score, maar een poort op drie feiten.
-   1. de pool is groot genoeg om te meten (dezelfde drempel als voor elk percentage);
-   2. er is een BEVESTIGD buitenlandsignaal: minstens een PRK in >= MIN_LANDEN landen;
-   3. Nederland is nog grotendeels ongemoeid -- anders is het geen signaal maar nieuws.
-   Komt de pool er doorheen, dan telt het aandeel bevestigde PRK. Alles na te rekenen. */
-function urgentie(p) {
-    const drempel = META.minprk || MIN_PRK_PCT;
-    if (p.nPrk == null || p.nPrk < drempel) return null;
-    if (p.buitPrk3 == null || p.buitPrk3 < 1) return null;
-    if (p.geraakt == null) return null;
-    const nlA = p.geraakt / p.nPrk;
-    if (nlA >= URG_NL_MAX) return null;
-    return { aandeel: p.buitPrk3 / p.nPrk, bevestigd: p.buitPrk3, nlA,
-             solo: (p.nSolo || 0) / p.nPrk };
-}
-
-/* Alleen in de urgentiesortering, anders draagt tweeentwintig procent van de lijst een
-   badge en zegt hij niets meer. De tooltip noemt de drie feiten die de poort haalden. */
-function urgentBadge(p) {
-    if (S.sort !== "urgent") return "";
-    const u = urgentie(p);
-    if (!u) return "";
-    return ` <span class="b urgent" title="${nl(u.bevestigd)} van ${nl(p.nPrk)} PRK in ≥${MIN_LANDEN} landen in tekort; in Nederland ${nl(Math.round(u.nlA * 100))}% geraakt">vroegsignaal</span>`;
-}
-
-function nlBadge(p) {
-    if (!p.nlNieuw) return "";
-    const st = (p.nlNieuwDetail || []).map(x => `${x.stof || x.atc || ""} ${dmy(x.datum || "")}`.trim())
-        .filter(Boolean).slice(0, 4).join(", ");
-    return `<span class="b farm" title="Farmanco (KNMP): ${nl(p.nlNieuw)} Nederlandse melding${p.nlNieuw === 1 ? "" : "en"} in de laatste ${NIEUW_DAGEN} dagen${st ? " — " + esc(st) : ""}. Staat los van het buitenlandse getal.">NL ${nl(p.nlNieuw)}</span> `;
-}
-function nieuwCell(p) {
-    const nlb = nlBadge(p);
-    // Volgorde telt: het bouwscript zet "nieuw" bewust op null zodra de datumdekking te laag is.
-    // Die pool is dus niet ongemeten — er is gemeten dat het getal niet te geven valt.
-    if (!recentheidBruikbaar(p)) {
-        return `${nlb}<span class="nm-nietgemeten" title="Zeven landen leveren geen enkele datum; een recentheidsgetal zou hier op een kleine minderheid van de meldingen berusten">buitenland: recentheid onbekend voor ${nl(p.meldingen - p.gedateerd)} van ${nl(p.meldingen)}</span>`;
-    }
-    // Geen enkele buitenlandse melding in de pool: dan is "nieuw in 7 dagen" een echte nul.
-    if (p.nieuw == null) return nlb + (p.meldingen === 0
-        ? `<span class="nul" title="Geen buitenlandse melding in deze pool">0</span>` : NIETGEMETEN);
-    if (p.nieuw === 0) return `${nlb}<span class="nul" title="Geen buitenlandse melding met een echt bronsignaal in de laatste ${NIEUW_DAGEN} dagen">0</span>`;
-    return `${nlb}<span class="big">${nl(p.nieuw)}</span>`;
-}
-
-function poolNaam(p) {
-    if (p.naam) return esc(p.naam);
-    // Fallback: als de pool maar één ATC5 met een bekende naam heeft, is die naam informatief
-    // genoeg om te tonen; anders liever eerlijk "naam onbekend" dan een kale code die iets lijkt.
-    const kand = Object.keys(ATC5_NAMEN).filter(a => a.slice(0, 5) === p.code);
-    // Namen als "VARIOUS" of "COMBINATIEPREPARATEN" zeggen niets over de pool; dan liever eerlijk niets.
-    const leeg = /^(VARIOUS|COMBINATIONS?|COMBINATIEPREPARATEN|DIVERSE MIDDELEN|OVERIGE)$/i;
-    if (kand.length === 1 && ATC5_NAMEN[kand[0]] && !leeg.test(ATC5_NAMEN[kand[0]].trim()))
-        return `${esc(ATC5_NAMEN[kand[0]])} <span class="onbekend">(naam ATC4-groep onbekend)</span>`;
-    return `<span class="onbekend">naam onbekend</span>`;
-}
-
-function poolRow(p) {
-    // "Niet op de NL-markt" is iets anders dan "niet gemeten": bij een geladen noemer
-    // weten we van deze pool dat er geen PRK in de G-standaard staat. Een percentage
-    // kan daar per definitie niet staan — ook geen 0% en geen 100%.
-    const geenNoemer = p.nPrk == null || p.nPrk === 0;
-    // NIET "niet op de NL-markt": dat is aantoonbaar onjuist voor pools die in Nederland
-    // wel als apotheekbereiding bestaan (D02AE ureum: 20 bereidings-PRK) of waarvoor
-    // Farmanco een lopend NL-tekort meldt (A11CA retinol). De juiste, smallere uitspraak
-    // is: deze groep heeft geen specialité in de G-standaard-noemer.
-    const TITEL_NVT = "Deze ATC4-groep heeft geen specialité in de G-standaard-noemer. Dat is iets anders dan 'niet verkrijgbaar in Nederland': apotheekbereidingen, niet-geregistreerde middelen en parallelimport staan niet in deze noemer.";
-    const berNoot = p.nBer ? ` <span class="nm-nietgemeten" style="font-style:normal" title="Wel in Nederland beschikbaar als apotheekbereiding; die tellen bewust niet mee in noemer of percentage">(wel ${nl(p.nBer)} apotheekbereiding${p.nBer === 1 ? "" : "en"})</span>` : "";
-    const NVT_LANG = (geenNoemer && HAVE.noemer) ? `<span class="nm-nietgemeten" title="${TITEL_NVT}">n.v.t. — geen specialité in de G-standaard</span>${berNoot}` : NIETGEMETEN;
-    const NVT = (geenNoemer && HAVE.noemer) ? `<span class="nm-nietgemeten" title="${TITEL_NVT}">n.v.t.</span>` : NIETGEMETEN;
-    const omvang = geenNoemer ? NVT_LANG
-        : `<span class="big">${nl(p.nPrk)}</span> PRK${p.nArt != null ? ` · ${nl(p.nArt)} art.` : ""}`;
-    const diepte = geenNoemer ? NVT : (p.nSolo == null ? NIETGEMETEN
-        : `<span class="big">${nl(p.nSolo)}</span> van ${nl(p.nPrk)}`);
-    const farm = p.farmN == null ? NIETGEMETEN
-        : (p.farmN === 0 ? `<span class="nul">0</span>`
-            : `<span class="eml-dot ${p.farmEml || "none"}" style="display:inline-block;vertical-align:middle;margin-right:4px"></span><span class="big">${nl(p.farmN)}</span> ${p.farmN === 1 ? "stof" : "stoffen"}`);
-    // Pooldekking als die er is, met de stoffentelling eronder. Het percentage volgt
-    // dezelfde onderdrukking als de NL-kolom: onder de drempel levert het bouwscript null.
-    const buitTelling = p.buitN == null ? NIETGEMETEN
-        : (p.buitN === 0 ? `<span class="nul" title="Geen stof in deze pool is in ${MIN_LANDEN} of meer landen gemeld">0</span>`
-            : `<span class="big">${nl(p.buitN)}</span> ${p.buitN === 1 ? "stof" : "stoffen"}`);
-    const buit = (p.buitPrk == null || p.nPrk == null || geenNoemer) ? buitTelling
-        : `<span class="big">${nl(p.buitPrk)}</span> van ${nl(p.nPrk)} PRK`
-          + (p.buitPct != null ? ` <span class="pct" title="Deel van de Nederlandse groep dat in het buitenland in tekort staat">${nl(p.buitPct)}%</span>` : "")
-          + (p.buitPrk3 != null ? `<div class="sub" title="Strenger: alleen PRK die in ${MIN_LANDEN} of meer landen tegelijk gemeld worden">waarvan ${nl(p.buitPrk3)} in ≥${MIN_LANDEN} landen</div>` : "")
-          + (p.buitOverig ? `<div class="sub" title="Zonder PRK, dus niet in het percentage hierboven">+ ${nl(p.buitOverig)} zonder PRK (ATC overig)</div>` : "");
-
-    return `<div class="grp-wrap collapsed" id="${esc(p.code)}" data-code="${esc(p.code)}">
-        <div class="prow">
-            <span class="pool">
-                <span class="gcaret">▸</span>
-                <span class="eml-dot ${p.ems || "none"}" title="${p.ems ? "EMS " + p.ems + " (zwaarste beoordeling in deze pool)" : "Geen EMS-beoordeling in deze pool"}"></span>
-                <span><span class="nm">${poolNaam(p)}</span> <span class="cd">${esc(p.code)}</span>${urgentBadge(p)}</span>
-            </span>
-            <span class="cell"><span class="clbl">Omvang</span><span>${omvang}</span></span>
-            <span class="cell"><span class="clbl">Weg</span><span>${geenNoemer ? NVT : breukCell(p.weg, p.nPrk, { meter: true })}</span></span>
-            <span class="cell licht"><span class="clbl">Geraakt</span><span>${geenNoemer ? NVT : breukCell(p.geraakt, p.nPrk)}</span></span>
-            <span class="cell licht"><span class="clbl">Diepte</span><span>${diepte}${(!geenNoemer && p.nSolo != null) ? ` <span class="nm-nietgemeten" style="font-style:normal">met één leverancier</span>` : ""}</span></span>
-            <span class="cell"><span class="clbl">Farmanco</span><span>${farm}</span></span>
-            <span class="cell"><span class="clbl">Buitenland</span><span>${buit}</span></span>
-            <span class="cell"><span class="clbl">Nieuw ≤${NIEUW_DAGEN} d</span><span>${nieuwCell(p)}</span></span>
+function productRow(p, idx, a4) {
+    const typeLbl = { voorloper: "Alleen buitenland", convergerend: "Buitenland + NL", nl: "Alleen NL" };
+    const buiten = a4 && PRK_POOL[String(p.prk)] !== a4;
+    const flags = p.ccs.slice(0, 10).map(flagOf).join("") + (p.ccs.length > 10 ? ` +${p.ccs.length - 10}` : "");
+    const b = [`<span class="b type-${p.type}">${typeLbl[p.type]}</span>`];
+    if (p.nCc) b.push(`<span class="b land" title="${esc(p.ccs.join(", "))}">🌍 ${p.nCc} ${p.nCc === 1 ? "land" : "landen"}</span>`);
+    if (p.farm) b.push(`<span class="b farm">Farmanco</span>`);
+    if (p.sfk) b.push(`<span class="b sfk">SFK</span>`);
+    if (p.cbg) b.push(`<span class="b cbg">CBG-TAV</span>`);
+    if (p.eml) b.push(`<span class="b ${p.eml}">EMS ${p.eml}</span>`);
+    if (p.dossier) b.push(`<span class="b dossier">LCG-dossier</span>`);
+    if (buiten) b.push(`<span class="b" style="background:var(--text-muted)" title="Deze PRK staat niet als specialité in de noemer van deze groep — echt signaal, telt niet mee in het aandeel">buiten de noemer</span>`);
+    return `<div class="row">
+        <span class="rank">${idx}</span>
+        <span class="eml-dot ${p.eml || "none"}"></span>
+        <div class="prod">
+            <div class="nm">${esc(p.naam || ("PRK " + p.prk))}</div>
+            <div class="meta">PRK ${esc(p.prk)}${p.atc ? " · " + esc(p.atc) : ""}${p.first ? " · vroegste buitenlands signaal " + p.first : ""} <span class="flags">${flags}</span></div>
+            <div class="badges">${b.join("")}</div>
         </div>
-        <div class="gbody">${poolDetail(p)}</div>
+        <span class="score" title="Productscore, gelijk aan die op het Overzicht">${p.score}</span>
     </div>`;
 }
 
-function poolDetail(p) {
-    const d = [];
-    // PRK-detail: de enige plek waar te zien is wélke producten weg zijn.
-    if (p.prks && p.prks.length) {
-        // Rest sorteren op signaal. Zonder dit stonden de PRK's in PRK-volgorde en viel bij
-        // een grote pool juist het buitenlandsignaal achter de afkapgrens van 40 -- dan is de
-        // pooldekking in de kolom niet na te lopen in het detail eronder.
-        const weg = p.prks.filter(x => x.weg);
-        const rest = p.prks.filter(x => !x.weg).sort((a, b) =>
-            (b.geraakt ? 1 : 0) - (a.geraakt ? 1 : 0)
-            || (b.buitLanden || []).length - (a.buitLanden || []).length
-            || String(a.prk).localeCompare(String(b.prk)));
-        const rij = x => `<div class="prk-row">
-            <span class="prk-tag">PRK ${esc(x.prk)}</span>
-            <span class="pnm">${esc(x.naam || "")}</span>
-            ${x.weg ? `<span class="b weg">weg</span>` : x.geraakt ? `<span class="b geraakt">geraakt</span>` : ""}
-            ${x.solo ? `<span class="b solo">één leverancier</span>` : ""}
-            ${(x.buitLanden && x.buitLanden.length)
-                ? `<span class="b" title="Deze PRK staat in het buitenland in tekort: ${x.buitLanden.join(", ")}">${x.buitLanden.slice(0, 8).map(flagOf).join("")}${x.buitLanden.length > 8 ? " +" + (x.buitLanden.length - 8) : ""}</span>`
-                : ""}
-        </div>`;
-        d.push(`<div class="det"><div class="det-t">Producten in deze pool (${nl(p.prks.length)} PRK)</div></div>`
-            + weg.map(rij).join("") + rest.slice(0, 40).map(rij).join("")
-            + (rest.length > 40 ? `<div class="det"><span class="det-none">… en ${nl(rest.length - 40)} PRK met een zwakker of geen signaal</span></div>` : ""));
-    } else if (p.nPrk != null) {
-        d.push(`<div class="det"><span class="det-none">Geen PRK-detail in atc4_dekking.json — alleen de telling is beschikbaar.</span></div>`);
-    }
-    if (p.nBer) {
-        // Bereidingen zijn in de praktijk wel een uitwijk, maar horen niet in dezelfde breuk.
-        d.push(`<div class="det"><span class="det-none">+ ${nl(p.nBer)} apotheekbereiding${p.nBer === 1 ? "" : "en"} in deze pool — niet meegeteld in noemer of percentage.</span></div>`);
-    }
-    // Nederlandse meldingen eerst: dit is de enige NL-recentheid op deze pagina.
-    if (p.nlNieuwDetail && p.nlNieuwDetail.length) {
-        d.push(`<div class="det"><div class="det-t">Nieuw in Nederland, laatste ${NIEUW_DAGEN} dagen (Farmanco/KNMP, op stofniveau)</div>
-            <div class="det-l">${p.nlNieuwDetail.slice(0, 12).map(x =>
-                `<span class="it">${dmy(x.datum || "")} ${esc(x.stof || x.atc || "")}</span>`).join("")}</div></div>`);
-    }
-    const st = Object.entries(p.buitStoffen || {}).sort((a, b) => b[1] - a[1]);
-    if (st.length) {
-        d.push(`<div class="det"><div class="det-t">Buitenlandse meldingen per stof (actief/aankomend, na aftrek van JP-“normal” en AT-“verfügbar”)</div>
-            <div class="det-l">${st.slice(0, 12).map(([a, n]) =>
-                `<span class="it">${esc(a)}${ATC5_NAMEN[a] ? " " + esc(ATC5_NAMEN[a]) : ""} · ${nl(n)} ${n === 1 ? "land" : "landen"}${n >= MIN_LANDEN ? " ✓" : ""}</span>`).join("")}
-            ${st.length > 12 ? `<span class="it">… +${nl(st.length - 12)}</span>` : ""}</div>
-            <div class="det-l" style="margin-top:4px;color:var(--text-muted)">Landen: ${(p.buitLanden || []).map(flagOf).join("")} (${nl((p.buitLanden || []).length)})</div></div>`);
-    }
-    if (p.buitOverigAtc && p.buitOverigAtc.length) {
-        const rd = p.buitOverigReden || {};
-        const uitleg = [rd.geen_prk ? `${nl(rd.geen_prk)} zonder PRK in de bron` : "",
-                        rd.prk_niet_in_noemer ? `${nl(rd.prk_niet_in_noemer)} met een PRK die niet als specialité in deze pool staat` : ""]
-                       .filter(Boolean).join(", ");
-        d.push(`<div class="det"><div class="det-t">ATC overig — ${nl(p.buitOverig)} melding${p.buitOverig === 1 ? "" : "en"} die niet in de pooldekking meetellen${uitleg ? ` (${uitleg})` : ""}</div>
-            <div class="det-l">${p.buitOverigAtc.slice(0, 12).map(x =>
-                `<span class="it" title="${(x.landen || []).join(", ")}">${esc(x.atc)}${ATC5_NAMEN[x.atc] ? " " + esc(ATC5_NAMEN[x.atc]) : ""} · ${(x.landen || []).slice(0, 6).map(flagOf).join("")} ${nl(x.n_landen)} ${x.n_landen === 1 ? "land" : "landen"}</span>`).join("")}
-            ${p.buitOverigAtc.length > 12 ? `<span class="it">… +${nl(p.buitOverigAtc.length - 12)}</span>` : ""}</div></div>`);
-    }
-    if (p.farmNamen && p.farmNamen.length) {
-        d.push(`<div class="det"><div class="det-t">Farmanco (KNMP) — op ATC5-niveau, niet op PRK</div>
-            <div class="det-l">${p.farmNamen.slice(0, 12).map(n => `<span class="it">${esc(n)}</span>`).join("")}</div></div>`);
-    }
-    if (p.nieuwDetail && p.nieuwDetail.length) {
-        d.push(`<div class="det"><div class="det-t">Nieuw in de laatste ${NIEUW_DAGEN} dagen (echt bronsignaal, geen scrapedatum)</div>
-            <div class="det-l">${p.nieuwDetail.sort((a, b) => b.d.localeCompare(a.d)).map(x =>
-                `<span class="it">${dmy(x.d)} ${flagOf(x.cc)} ${esc(String(x.mn).slice(0, 60))}</span>`).join("")}</div></div>`);
-    }
-    d.push(`<div class="det"><div class="det-l"><a href="signaaloverzicht.html" title="Zelfde groep op productniveau">Deze groep op productniveau in het Vroegsignaal-overzicht →</a></div></div>`);
-    return d.join("") || `<div class="det"><span class="det-none">Geen detail beschikbaar voor deze pool.</span></div>`;
+/* Mogelijk urgent: breed in tekort in het buitenland terwijl Nederland nog nauwelijks
+   geraakt is. Een poort op feiten, geen voorspelling -- de volgorde waarin tekorten over
+   landen trekken is met deze data niet vast te stellen. */
+function urgentie(g) {
+    if (!g.nPool || g.nPool < MIN_PRK_PCT) return null;
+    if (!g.buiPrk3) return null;
+    const nlA = (g.nlPrk || 0) / g.nPool;
+    if (nlA >= URG_NL_MAX) return null;
+    return { aandeel: g.buiPrk3 / g.nPool, bevestigd: g.buiPrk3, nlA };
 }
 
-/* ---------------------------------------------------------------------------
-   5. Blokken. De volgorde van de blokken ligt vast; sorteren mag alleen bínnen
-   een blok, zodat "geraakt" nooit boven "weg" kan eindigen.
---------------------------------------------------------------------------- */
-// De lijst is EEN lijst. Eerder stonden hier vier uitklapbare blokken (A: product helemaal
-// weg, B: verpakkingen geraakt, C: geen NL-signaal, D: geen NL-noemer). Die hadden twee
-// problemen. De kopjes benoemden de datacategorie en niet de situatie, en belangrijker: er
-// werd BINNEN een blok gesorteerd. Daardoor kon geen enkele sortering over de hele lijst
-// gaan -- en juist de sterkste vroegsignalen zitten per definitie in blok C, want daar is
-// Nederland nog niet geraakt. Die konden dus nooit bovenaan komen, hoe je ook sorteerde.
-// De ladder zelf klopt en is nu de standaard sorteervolgorde; de letters staan nog in de
-// data en worden gebruikt als sorteersleutel en voor de KPI's.
-const SORTEER_KOP = {
-    standaard: "Alle groepen, ernstigste eerst",
-    geraakt:   "Alle groepen, meeste geraakte producten eerst",
-    omvang:    "Alle groepen, grootste eerst",
-    nieuw:     "Alle groepen, nieuwste meldingen eerst",
-    urgent:    "Alle groepen, mogelijk urgent eerst",
-};
-const SORTEER_UITLEG = {
-    standaard: "", omvang: "", nieuw: "",
-    urgent:    "Breed in tekort in het buitenland, Nederland nog nauwelijks geraakt.",
-};
+function poolVan(p) {
+    return PRK_POOL[String(p.prk)] || (p.atc || "").slice(0, 5) || "—";
+}
 
-function sorteer(list, blok) {
+function groepen(list) {
+    const G = {};
+    list.forEach(p => { (G[poolVan(p)] ||= []).push(p); });
+    return Object.entries(G).map(([a4, ps]) => {
+        ps.sort((a, b) => b.score - a.score || b.nCc - a.nCc || (b.first || "0").localeCompare(a.first || "0"));
+        const ref = POOL[a4] || {};
+        const nPool = ref.n || null;
+        // Niet elk gesignaleerd product zit in de noemer: een PRK kan een apotheekbereiding
+        // zijn of sinds de koppeling uit de handel. Die producten horen wel in de lijst --
+        // het zijn echte tekortsignalen -- maar niet in de breuk, want de noemer kent ze niet.
+        // Zonder deze scheiding stond er "6 van 5 producten".
+        const inN = ps.filter(p => PRK_POOL[String(p.prk)] === a4);
+        const buitenN = ps.filter(p => PRK_POOL[String(p.prk)] !== a4);
+        const som = inN.reduce((s, p) => s + p.score, 0);
+        const norm = nPool ? som / nPool : null;
+        const aandeel = nPool ? inN.length / nPool : null;
+        const nSfk = inN.filter(p => p.sfk).length;
+        const nFarm = inN.filter(p => p.farm).length;
+        const nBui = inN.filter(p => p.nCc > 0).length;
+        return {
+            a4, ps, inN, buitenN, som, nPool, norm, aandeel,
+            naam: ATC4_NAMES[a4] || ref.naam || "",
+            nSfk, nFarm, nBui,
+            nlPrk: ref.nlPrk, buiPrk: ref.buiPrk, buiPrk3: ref.buiPrk3,
+            nLand: new Set(ps.flatMap(p => p.ccs)).size,
+            eml: ps.some(p => p.eml === "rood") ? "rood" : ps.some(p => p.eml === "oranje") ? "oranje" : ps.some(p => p.eml === "geel") ? "geel" : "none",
+        };
+    });
+}
+
+function sorteer(gs) {
     const c = (x) => x == null ? -1 : x;
-    if (S.sort === "omvang") return list.sort((a, b) => c(b.nPrk) - c(a.nPrk) || a.code.localeCompare(b.code));
-    // Op geraakt: eerst het aantal, dan het aandeel. Aantal vóór percentage, net als in de
-    // kolom zelf -- anders staat een groep van 2 PRK waarvan er 1 geraakt is (50%) boven een
-    // groep van 40 waarvan er 15 geraakt zijn (38%).
-    if (S.sort === "geraakt") return list.sort((a, b) => c(b.geraakt) - c(a.geraakt) || c(b.pctGeraakt) - c(a.pctGeraakt) || a.code.localeCompare(b.code));
-    // Mogelijk urgent. Eerst de poort: alleen pools waar alle drie de feiten gelden, anders
-    // zegt de volgorde niets. Daarna rangschikken op het aandeel van de pool dat in het
-    // buitenland BEVESTIGD in tekort is -- bevestigd betekent in >= MIN_LANDEN landen
-    // tegelijk, zodat een enkel achterlopend register geen pool omhoog duwt.
-    // Pools die niet door de poort komen blijven in hun eigen volgorde staan (stabiele sort).
-    if (S.sort === "urgent") return list.sort((a, b) => {
+    // Een groep van 2 waarvan er 2 geraakt zijn staat op 100% en zou elke ranglijst aanvoeren,
+    // terwijl 2 waarnemingen niets meten. Zelfde drempel als voor het percentage: groepen
+    // eronder zakken naar achteren, ze verdwijnen niet.
+    const meet = (g) => (g.nPool && g.nPool >= MIN_PRK_PCT) ? 1 : 0;
+    const dl = (t, n) => (n ? t / n : -1);
+    if (S.sort === "som")     return gs.sort((a, b) => b.som - a.som || a.a4.localeCompare(b.a4));
+    if (S.sort === "aandeel") return gs.sort((a, b) => meet(b) - meet(a) || c(b.aandeel) - c(a.aandeel) || b.ps.length - a.ps.length || a.a4.localeCompare(b.a4));
+    if (S.sort === "sfk")     return gs.sort((a, b) => meet(b) - meet(a) || dl(b.nSfk, b.nPool) - dl(a.nSfk, a.nPool) || b.nSfk - a.nSfk || a.a4.localeCompare(b.a4));
+    if (S.sort === "buiten")  return gs.sort((a, b) => meet(b) - meet(a) || dl(b.nBui, b.nPool) - dl(a.nBui, a.nPool) || b.nBui - a.nBui || a.a4.localeCompare(b.a4));
+    if (S.sort === "urgent")  return gs.sort((a, b) => {
         const ua = urgentie(a), ub = urgentie(b);
         if (ua && !ub) return -1;
         if (!ua && ub) return 1;
         if (!ua && !ub) return 0;
-        return ub.aandeel - ua.aandeel || ub.bevestigd - ua.bevestigd
-            || ub.solo - ua.solo || a.nPrk - b.nPrk || a.code.localeCompare(b.code);
+        return ub.aandeel - ua.aandeel || ub.bevestigd - ua.bevestigd || a.nPool - b.nPool;
     });
-    // Sorteer op wat er in de cel staat: een pool waarvan de recentheid onbruikbaar is
-    // mag niet bovenaan komen op een getal dat de gebruiker niet te zien krijgt.
-    // NL eerst, dan buitenland: beide zijn "nieuwe meldingen", maar een Nederlands tekort
-    // weegt voor deze bespreking zwaarder. Hiërarchisch sorteren, nooit optellen.
-    if (S.sort === "nieuw")  return list.sort((a, b) => c(b.nlNieuw) - c(a.nlNieuw) || c(recentheidBruikbaar(b) ? b.nieuw : null) - c(recentheidBruikbaar(a) ? a.nieuw : null) || c(b.buitN) - c(a.buitN) || a.code.localeCompare(b.code));
-    // Standaard: de oude vier blokken, nu als sorteersleutel in EEN lijst. De blokken waren
-    // vaste kopjes waarbinnen gesorteerd werd, en dat brak elke sortering die over de hele
-    // lijst hoort te gaan: alle zes de sterkste vroegsignalen zitten in blok C (Nederland
-    // nog niet geraakt), dus ze konden per definitie nooit bovenaan komen. De ladder zelf
-    // klopt wel en blijft de leesvolgorde -- alleen niet meer als muur.
-    const rang = { A: 0, B: 1, C: 2, D: 3 };
-    return list.sort((a, b) =>
-        (rang[a.blok] ?? 3) - (rang[b.blok] ?? 3)
-        || c(b.weg) - c(a.weg) || c(b.pctWeg) - c(a.pctWeg)
-        || c(b.geraakt) - c(a.geraakt) || c(b.pctGeraakt) - c(a.pctGeraakt)
-        || c(b.nPrk) - c(a.nPrk) || a.code.localeCompare(b.code));
-}
-
-function filterList() {
-    let l = POOLS.slice();
-    if (S.col !== "all") l = l.filter(p => p.ems === S.col);
-    if (S.minprk) l = l.filter(p => p.nPrk != null && p.nPrk >= (META.minprk || MIN_PRK_PCT));
-    // Ook een pool met alleen een NEDERLANDSE melding hoort onder "nieuw signaal".
-    if (S.nieuw) l = l.filter(p => (p.nieuw != null && p.nieuw > 0 && recentheidBruikbaar(p)) || p.nlNieuw > 0);
-    if (S.buitenland) l = l.filter(p => p.buitN != null && p.buitN > 0);
-    if (S.q) {
-        const q = S.q.toUpperCase();
-        l = l.filter(p => (p.code + " " + (p.naam || "") + " " + (p.farmNamen || []).join(" ") + " " + Object.keys(p.buitStoffen || {}).join(" ")).toUpperCase().includes(q)
-            || (p.prks || []).some(x => (x.prk + " " + (x.naam || "")).toUpperCase().includes(q)));
-    }
-    return l;
+    // Genormaliseerd: groepen zonder noemer kunnen niet meedoen aan de deling en zakken
+    // naar onderen, met hun som zichtbaar zodat ze niet onzichtbaar worden.
+    return gs.sort((a, b) => meet(b) - meet(a) || c(b.norm) - c(a.norm) || b.som - a.som || a.a4.localeCompare(b.a4));
 }
 
 function render() {
     const host = document.getElementById("rows");
-    const list = filterList();
-    if (!list.length) { host.innerHTML = `<div class="empty">Geen pools in deze selectie.</div>`; return; }
-    const head = `<div class="phead">
-        <span title="ATC4-groep met EMS-stip: de zwaarste EMS-beoordeling van een stof in deze pool">Pool</span>
-        <span title="Aantal unieke PRK in de G-standaard (specialités) en het aantal artikelen daaronder">Omvang</span>
-        <span>Weg <i class="ik" title="Alle verpakkingen van een product staan op de SFK Monitor leveringsproblemen${META.sfkPeil ? ` (peildatum ${META.sfkPeil})` : ""}. Die monitor meet of minimaal twee van de vier groothandels — Alliance, Brocacef, Mosadex en Pluripharm — een artikel die week niet direct konden leveren. Geen beschikbaarheidstoets: parallelimport, directe fabrikantlevering, kleine groothandels en apotheekvoorraad tellen niet mee, en de lijst wisselt wekelijks. Lees dit als 'die week niet via de groothandel te bestellen', niet als 'niet meer verkrijgbaar'.">i</i></span>
-        <span>Geraakt <i class="ik" title="Minstens één verpakking van het product staat op de SFK Monitor leveringsproblemen${META.sfkPeil ? ` (peildatum ${META.sfkPeil})` : ""} — de andere verpakkingen zijn die week nog wel via de groothandel te bestellen. Een signaal, geen beschikbaarheidsprobleem.">i</i></span>
-        <span title="PRK met maar één leverancier: hoe ondiep de pool is als er iets wegvalt">Diepte</span>
-        <span title="Farmanco (KNMP), geteld op ATC5-stofniveau omdat deze bron geen PRK levert">Farmanco</span>
-        <span title="Deel van de Nederlandse groep dat in het buitenland in tekort staat, geteld in PRK">Buitenland</span>
-        <span title="NL-badge = Farmanco. Het getal daarachter = buitenland. Niet opgeteld.">Nieuw ≤${NIEUW_DAGEN} d</span>
-    </div>`;
-    // Een lijst. Geen vier uitklapbare kopjes meer: die zeiden in welke datacategorie een
-    // pool viel en hielden tegelijk elke sortering gevangen binnen zo'n categorie.
-    const ps = sorteer(list.slice(), null);
-    if (!ps.length) { host.innerHTML = `<div class="empty">Geen pools in deze selectie.</div>`; return; }
-    const nWeg = ps.reduce((s, p) => s + (p.weg || 0), 0);
-    const nGeraakt = ps.reduce((s, p) => s + (p.geraakt || 0), 0);
-    const tel = [`${nl(ps.length)} ${ps.length === 1 ? "pool" : "pools"}`,
-                 `${nl(nWeg)} PRK volledig op de tekortenlijst`,
-                 `${nl(nGeraakt)} PRK geraakt`];
-    host.innerHTML = `<div class="blok"><div class="blok-head" style="cursor:default">
-            <span class="bt">${esc(SORTEER_KOP[S.sort] || "Alle groepen")}</span>
-            <span class="bs">${esc(SORTEER_UITLEG[S.sort] || "")}</span>
-            <span class="bn">${tel.join(" · ")}</span>
-        </div>
-        <div class="blok-body">${head}${ps.map(poolRow).join("")}</div></div>`;
+    let list = PRODUCTS.slice();
+    if (S.type !== "all") list = list.filter(p => p.type === S.type);
+    if (S.col !== "all") list = list.filter(p => p.eml === S.col);
+    if (S.q) {
+        const q = S.q.toUpperCase();
+        list = list.filter(p => {
+            const a4 = poolVan(p);
+            return (p.naam + " " + p.atc + " " + p.prk + " " + a4 + " " + (ATC4_NAMES[a4] || "")).toUpperCase().includes(q);
+        });
+    }
+    if (!list.length) { host.innerHTML = `<div class="empty">Geen producten in deze selectie.</div>`; return; }
+
+    const gs = sorteer(groepen(list));
+    const CAP = 200;
+    host.innerHTML = gs.slice(0, CAP).map(g => {
+        const u = urgentie(g);
+        const pctOk = g.nPool && g.nPool >= MIN_PRK_PCT;
+        const extra = g.buitenN.length ? ` +${nl(g.buitenN.length)} buiten de noemer` : "";
+        const stuks = g.nPool
+            ? `${nl(g.inN.length)} van ${nl(g.nPool)} producten${pctOk ? ` · ${Math.round(g.aandeel * 100)}%` : ""}${extra}`
+            : `${nl(g.ps.length)} ${g.ps.length === 1 ? "product" : "producten"} · geen noemer`;
+        const bar = g.aandeel != null
+            ? `<span class="gbar" title="Aandeel van de groep met een signaal"><span style="width:${Math.round(g.aandeel * 100)}%"></span></span>` : "";
+        const waarde = g.norm != null
+            ? `<span class="gval" title="Signaalwaarde per product: ${nl(g.som)} gedeeld door ${nl(g.nPool)} producten in de groep">${g.norm.toFixed(1).replace(".", ",")}</span>`
+            : `<span class="gval" title="Geen noemer in de G-standaard; dit is de som, niet genormaliseerd">${nl(g.som)}*</span>`;
+        const badges = [];
+        if (g.nSfk) badges.push(`<span class="b sfk" title="Producten uit de noemer op de SFK Monitor leveringsproblemen">SFK ${nl(g.nSfk)}${g.nPool ? "/" + nl(g.nPool) : ""}</span>`);
+        if (g.nFarm) badges.push(`<span class="b farm" title="Producten met een Farmanco-melding">Farmanco ${nl(g.nFarm)}${g.nPool ? "/" + nl(g.nPool) : ""}</span>`);
+        if (g.nBui) badges.push(`<span class="b land" title="Producten met een buitenlandse tekortmelding in de laatste ${WINDOW_DAYS} dagen">🌍 ${nl(g.nBui)}${g.nPool ? "/" + nl(g.nPool) : ""}</span>`);
+        if (u) badges.push(`<span class="b type-voorloper" title="${nl(u.bevestigd)} van ${nl(g.nPool)} producten in ≥${MIN_LANDEN} landen in tekort, in Nederland ${Math.round(u.nlA * 100)}% geraakt">vroegsignaal</span>`);
+        const header = `<div class="grp">
+            <span class="gcaret">▸</span><span class="eml-dot ${g.eml}"></span>
+            <span class="gname">${g.naam ? esc(g.naam) + " " : ""}<span class="gcode">${esc(g.a4)}</span>
+                <div class="badges">${badges.join("")}</div></span>
+            ${bar}<span class="gsub">${stuks}</span>${waarde}</div>`;
+        return `<div class="grp-wrap collapsed" id="${esc(g.a4)}">${header}<div class="gbody">${g.inN.concat(g.buitenN).map((p, i) => productRow(p, i + 1, g.a4)).join("")}</div></div>`;
+    }).join("") + (gs.length > CAP ? `<div class="empty">${nl(gs.length - CAP)} groepen meer — verfijn met de filters of zoek.</div>` : "");
 }
 
-function renderKpis() {
-    const metNoemer = POOLS.filter(p => p.nPrk != null && p.nPrk > 0).length;
-    const a = POOLS.filter(p => p.blok === "A").length;
-    const bq = POOLS.filter(p => p.blok === "B").length;
-    // Ontbreekt de landkaart, dan is dit getal niet nul maar onbekend.
-    const nieuwTot = POOLS.some(p => p.nieuw != null) ? POOLS.reduce((s, p) => s + (p.nieuw || 0), 0) : null;
-    const nlTot = POOLS.some(p => p.nlNieuw != null) ? POOLS.reduce((s, p) => s + (p.nlNieuw || 0), 0) : null;
-    const nlPools = POOLS.filter(p => p.nlNieuw > 0).length;
-    const kpi = (n, l, t) => `<div class="kpi" title="${esc(t)}"><div class="n">${n}</div><div class="l">${l}</div></div>`;
-    document.getElementById("kpis").innerHTML =
-        kpi(metNoemer ? nl(metNoemer) : "–", "Pools met NL-noemer", "ATC4-groepen met minstens één PRK in de G-standaard (specialités)") +
-        kpi(HAVE.noemer ? nl(a) : "–", "Pools met ≥1 PRK weg", "Pools met minstens één PRK waarvan alle artikelen in de Monitor leveringsproblemen staan. Dit zegt NIET dat de pool leeg is: in de meeste van deze pools blijven andere PRK over.") +
-        kpi(HAVE.noemer ? nl(bq) : "–", "Signaal, uitwijk aanwezig", "Pools met geraakte PRK's maar geen enkele PRK volledig weg") +
-        // NL apart van buitenland: dit is het getal waar de donderdagbespreking op stuurt.
-        kpi(nlTot == null ? "–" : nl(nlTot), `Nieuw ≤${NIEUW_DAGEN} d (NL, Farmanco)`, `Nederlandse Farmanco-meldingen in de laatste ${NIEUW_DAGEN} dagen, verdeeld over ${nl(nlPools)} pools. Staat los van het buitenlandse getal en wordt er nooit bij opgeteld.`) +
-        kpi(nieuwTot == null ? "–" : nl(nieuwTot), `Nieuw ≤${NIEUW_DAGEN} d (buitenland)`, `Buitenlandse meldingen met een echt bronsignaal (geen scrapedatum) in de laatste ${NIEUW_DAGEN} dagen, geteld vanaf de datadatum van de landkaart. Zegt niets over de Nederlandse beschikbaarheid.`);
+function renderKpis(scraped, dek) {
+    const gs = groepen(PRODUCTS).filter(g => g.nPool);
+    const half = gs.filter(g => g.aandeel >= 0.5).length;
+    const urg = gs.filter(urgentie).length;
+    const rood = PRODUCTS.filter(p => p.eml === "rood").length;
+    document.getElementById("kpis").innerHTML = `
+        <div class="kpi"><div class="n">${nl(gs.length)}</div><div class="l">ATC4-groepen met signaal</div></div>
+        <div class="kpi"><div class="n">${nl(half)}</div><div class="l">Helft of meer geraakt</div></div>
+        <div class="kpi"><div class="n">${nl(urg)}</div><div class="l">Mogelijk urgent</div></div>
+        <div class="kpi"><div class="n">${nl(rood)}</div><div class="l">EMS-rood (producten)</div></div>`;
+    const gstd = (dek && dek.bronnen && dek.bronnen.gstandaard && dek.bronnen.gstandaard.datum) || "";
+    document.getElementById("footer").innerHTML =
+        `Landelijk Coördinatiecentrum Geneesmiddelen · classificatie <b>Internal</b> · noemer: G-standaard${gstd ? " " + gstd.split("-").reverse().join("-") : ""}, alleen specialités · signalen: landkaart (${WINDOW_DAYS} d), Farmanco, SFK, CBG-TAV, EMS · ${esc(scraped)}`;
 }
 
-/* --------------------------- interactie --------------------------- */
-document.querySelectorAll(".srt").forEach(c => c.addEventListener("click", () => {
-    document.querySelectorAll(".srt").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.sort = c.dataset.sort; render();
-}));
-document.querySelectorAll(".col").forEach(c => c.addEventListener("click", () => {
-    document.querySelectorAll(".col").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.col = c.dataset.col; render();
-}));
-document.querySelectorAll(".flt").forEach(c => c.addEventListener("click", () => {
-    c.classList.toggle("active"); S[c.dataset.flt] = c.classList.contains("active"); render();
-}));
+document.querySelectorAll(".srt").forEach(c => c.addEventListener("click", () => { document.querySelectorAll(".srt").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.sort = c.dataset.sort; render(); }));
+document.querySelectorAll(".typ").forEach(c => c.addEventListener("click", () => { document.querySelectorAll(".typ").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.type = c.dataset.type; render(); }));
+document.querySelectorAll(".col").forEach(c => c.addEventListener("click", () => { document.querySelectorAll(".col").forEach(x => x.classList.remove("active")); c.classList.add("active"); S.col = c.dataset.col; render(); }));
 let _t;
 document.getElementById("q").addEventListener("input", e => { clearTimeout(_t); _t = setTimeout(() => { S.q = e.target.value; render(); }, 150); });
 document.getElementById("rows").addEventListener("click", e => {
-    if (e.target.closest("a")) return;                       // links in de uitklap niet kapen
-    const bh = e.target.closest(".blok-head");
-    // De lijstkop is geen uitklapper meer; er is nog maar een lijst.
-    if (bh) return;
-    const pr = e.target.closest(".prow");
-    if (pr) pr.closest(".grp-wrap").classList.toggle("collapsed");
+    if (e.target.closest("a")) return;
+    const h = e.target.closest(".grp");
+    if (!h) return;
+    const w = h.closest(".grp-wrap");
+    if (w) w.classList.toggle("collapsed");
 });
-// Deeplink atc4.html#C09CA — vanuit signaaloverzicht.html, zodat beide pagina's bij elkaar blijven.
-function openHash() {
-    const h = decodeURIComponent((location.hash || "").replace("#", "")).toUpperCase();
-    if (!/^[A-Z]\d{2}[A-Z]{2}$/.test(h)) return;
-    const el = document.getElementById(h);
-    if (!el) return;
-    const b = el.closest(".blok"); if (b) b.classList.remove("collapsed");
-    el.classList.remove("collapsed"); el.classList.add("hit");
-    el.scrollIntoView({ block: "center" });
-}
-window.addEventListener("hashchange", openHash);
 
-/* --------------------------- laden --------------------------- */
-const j = (u) => fetch(u).then(r => r.ok ? r.json() : null).catch(() => null);
-Promise.all([j("atc4_dekking.json"), j("atc4_pool.json"), j("data.json"), j("farmanco_eml.json"),
-             j("eml_atc5.json"), j("atc4_namen.json"), j("atc2name.json"), j("sfk_tekorten.json")])
-.then(([dek, pool, data, farm, ems, a4, a5, sfk]) => {
-    ATC4_NAMEN = a4 || {}; ATC5_NAMEN = a5 || {}; EML = (ems && ems.map) || {};
-    const { meta, pools } = readPools(dek || pool);
-    META = meta;
-    HAVE = {
-        // Niet "er zijn pools gelezen", maar "er is een noemer gelezen". Een bestand met een
-        // onbekende veldindeling levert wél pools en geen enkel aantal PRK; dan hoort de pagina
-        // te zeggen dat ze niets weet, en niet van elke pool "niet op de NL-markt" te maken.
-        noemer: pools.some(p => p.nPrk != null),
-        // Per kolom één keer bepalen waar hij vandaan komt, zodat binnen één kolom
-        // nooit twee rekenwijzen door elkaar lopen.
-        farm:  pools.some(p => p.farmN  != null),
-        buit:  pools.some(p => p.buitN  != null),
-        nieuw: pools.some(p => p.nieuw  != null)
-    };
-    POOLS = merge(pools, uitData(data), uitFarmanco(farm), !!(data && data.records), !!(farm && farm.items));
-    document.getElementById("minprk-note").textContent = String(META.minprk || MIN_PRK_PCT);
+const j = (u) => fetch(u).then(r => r.json()).catch(() => null);
+Promise.all([j("data.json"), j("farmanco_eml.json"), j("cbg_tav_eml.json"), j("sfk_tekorten.json"),
+             j("eml_atc5.json"), j("atc4_namen.json"), j("atc4_dekking.json")])
+    .then(([data, farm, cbg, sfk, ems, a4, dek]) => {
+        ATC4_NAMES = a4 || {};
+        POOL = leesNoemer(dek);
+        PRODUCTS = build(data, farm, cbg, sfk, ems);
+        renderKpis(data ? data.generated : "niet geladen", dek);
+        const lu = document.getElementById("lastup");
+        if (lu && data && data.generated) lu.innerHTML = `<span>Laatste update: ${data.generated.split("-").reverse().join("-")}</span>`;
+        render();
+        // Deeplink atc4.html#C09CA vanuit het Overzicht: die groep openklappen.
+        const h = (location.hash || "").replace("#", "").toUpperCase();
+        if (/^[A-Z]\d{2}[A-Z]{2}$/.test(h)) {
+            const el = document.getElementById(h);
+            if (el) { el.classList.remove("collapsed"); el.scrollIntoView({ block: "center" }); }
+        }
+    });
 
-    // Updatedatum bovenin: het meetingpunt van 22-09 was dat deze datum opvalt.
-    // Bewust de OUDSTE bron als kopdatum: deze pagina is niet verser dan haar traagste bron,
-    // en juist de SFK-lijst (teller "weg") en de G-standaard (noemer) lopen los van de landkaart.
-    // De G-standaard telt hier bewust NIET mee in de kopdatum. Dat is het referentiebestand
-    // waaruit de noemer komt (een kwartaalbestand), geen signaalbron die elke twee dagen ververst;
-    // een G-standaard van april maakt een SFK-melding van gisteren niet oud. Zou hij wél meetellen,
-    // dan staat er groot een datum van maanden terug boven data van vandaag. Hij staat daarom
-    // apart, met zijn eigen datum, zodat beide feiten zichtbaar blijven.
-    const dts = [data && data.generated, farm && farm.generated, sfk && sfk.generated, META.generated].filter(Boolean).sort();
-    const bron = (n, v) => v ? `<b>${esc(n)}</b> ${dmy(v)}` : `<b>${esc(n)}</b> niet geladen`;
-    // Het waarschuwingsblok boven de pagina is eruit (verzoek Joris, 24-09). Wat het zei
-    // staat nu achter de i bij de kolommen Weg en Geraakt: daar wordt het gelezen op het
-    // moment dat iemand zich afvraagt wat het getal betekent, in plaats van als banner die
-    // je wegkijkt voordat je bij de tabel bent.
-
-    document.getElementById("lastup").innerHTML =
-        `<span class="main">Alle signaalbronnen bijgewerkt t/m: ${dts.length ? dmy(dts[0]) : "onbekend"}</span>
-         <span class="subdates">${[
-            bron("landkaart", data && data.generated),
-            bron("Farmanco", farm && farm.generated),
-            bron("SFK", sfk && sfk.generated),
-            bron("pooldekking", META.generated)
-         ].join(" · ")}<br>referentie voor de noemer: <b>G-standaard</b> ${META.gstd ? dmy(META.gstd) + (META.gstdIsBestandsdatum ? " (bestandsdatum, geen exportdatum)" : "") : "datum onbekend"}</span>`;
-
-    const al = [];
-    // Onderscheid bewust: "niet opgehaald" en "opgehaald maar leeg" vragen om een ander
-    // onderzoek. Eén tekst voor beide zette de lezer bij een leeg bestand op het verkeerde spoor.
-    if (!pools.length) al.push(`<div class="note warn"><b>De noemer ontbreekt.</b> <code>atc4_dekking.json</code> ${(dek || pool) ? "is wél opgehaald, maar bevat geen enkele pool" : "is niet geladen (ontbrekend, leeg of geen geldige JSON)"}, dus er is geen aantal PRK per pool bekend.
-        De kolommen Omvang, Weg, Geraakt en Diepte blijven daarom leeg en er wordt geen enkel percentage getoond. Buitenland, Farmanco en “nieuw ≤${NIEUW_DAGEN} d” komen rechtstreeks uit de bronbestanden en kloppen wel.</div>`);
-    // Wel een bestand, geen enkel aantal PRK: dat is een veldindeling die deze pagina niet kent.
-    // Dit expliciet melden, want het alternatief is dat elke pool er als "niet op de NL-markt"
-    // uitziet — een fout die er van buiten precies uitziet als een uitkomst.
-    else if (!HAVE.noemer) al.push(`<div class="note warn"><b>De noemer is niet leesbaar.</b> <code>atc4_dekking.json</code> is geladen (${nl(pools.length)} pools),
-        maar er staat in geen enkele pool een aantal PRK op een veldnaam die deze pagina kent. Er wordt daarom géén enkel getal en géén percentage over de NL-markt getoond.
-        Controleer of het bouwscript nog schrijft volgens het datacontract bovenin deze pagina (<code>noemer.n_prk</code> of <code>n_prk</code>).</div>`);
-    if (!data) al.push(`<div class="note warn"><b>data.json is niet geladen</b> — open de pagina via de webserver, niet als los bestand. De kolommen Buitenland en Nieuw ≤${NIEUW_DAGEN} d ontbreken nu.</div>`);
-    if (pools.length && !META.gstd) al.push(`<div class="note warn">De exportdatum van de G-standaard staat niet in <code>atc4_dekking.json</code>. Zonder die datum is een percentage van deze week niet te vergelijken met dat van vorige week.</div>`);
-    document.getElementById("alerts").innerHTML = al.join("");
-
-    // ---- leeftijd van de noemer, met de gevolgen erbij -----------------------
-    // De kopdatum hierboven gaat alleen over de signaalbronnen. De noemer komt uit een
-    // los referentiebestand dat maanden ouder kan zijn, en dat verschil bepaalt of een
-    // percentage nog klopt. Daarom hier, tussen de KPI's en de tabel, en niet alleen
-    // als datum in de voettekst.
-    (function () {
-        const host = document.getElementById("noemer-leeftijd");
-        if (!host || !META.gstd || !pools.length) return;
-        const dagen = Math.round((Date.parse(META.generated || isoToday()) - Date.parse(META.gstd)) / 86400000);
-        if (!(dagen > 0)) return;
-        const mnd = (dagen / 30.44).toFixed(1).replace(".", ",");
-        // Eén regel. Hier stond een blok met drie bullets; de onderbouwing daarvan staat in
-        // de docstring van build_atc4_dekking.py en verandert niet per run.
-        host.innerHTML = `<div class="note warn">
-            Noemer is ${mnd} maanden oud (G-standaard ${dmy(META.gstd)}), de tekortsignalen zijn van vandaag.
-        </div>`;
-    })();
-
-    renderKpis();
-    render();
-    openHash();
-
-    const nRec = (data && data.records) ? data.records.length : 0;
-    // nRec is het TOTAAL in data.json, inclusief resolved/discontinued/inactive. De
-    // buitenlandkolom rust op de actieve+aankomende meldingen ná aftrek van JP-"normal"
-    // en AT-"verfügbar". Die twee getallen als één presenteren maakte de bewijsbasis
-    // ruim twee keer zo groot als hij is.
-    const buiGebruikt = num(((dek && dek.bronnen && dek.bronnen.landkaart) || {}).schoon);
-    const buiZin = buiGebruikt != null
-        ? `buitenland: ${nl(buiGebruikt)} actieve en aankomende meldingen, na aftrek van JP-“normal” en AT-“verfügbar” (van ${nl(nRec)} records in <code>data.json</code> in totaal; de rest is resolved, discontinued of inactive)`
-        : `buitenland: uit ${nl(nRec)} records in <code>data.json</code>, alleen de actieve en aankomende meldingen, exclusief JP-“normal” en AT-“verfügbar”`;
-    document.getElementById("footer").innerHTML =
-        `Landelijk Coördinatiecentrum Geneesmiddelen · classificatie <b>Internal</b> · noemer G-standaard${META.gstd ? ` ${dmy(META.gstd)}` : ""} · SFK Monitor leveringsproblemen · ${nl(buiGebruikt != null ? buiGebruikt : nRec)} buitenlandse meldingen.`;
-});
 </script>
 
 <div id="pw-gate">
