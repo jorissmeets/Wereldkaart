@@ -104,6 +104,9 @@ $UV python scrape_sfk_historie.py 2>&1 | tail -3
 # Slanke afgeleide voor de browser: verloop per PRK + trend. Moet NA scrape_sfk.py en
 # scrape_sfk_historie.py, want hij leest beide.
 kritiek "build_sfk_verloop" $UV python build_sfk_verloop.py
+# De LCG-dossierstatus zelf. Stond tot 24-09 hardgecodeerd in index.html en liep daardoor
+# zes weken achter: zes dossiers waren niet meer actueel en twee waren van fase gewisseld.
+kritiek "scrape_dossiers" $UV python scrape_dossiers.py
 
 # --- 4. Ontdubbelen en kaart bouwen ----------------------------------------
 echo; echo "### 4. Ontdubbelen en bouwen"
@@ -153,7 +156,7 @@ if [ "${1:-}" = "--deploy" ]; then
   # De vier tab-3-bestanden staan er expliciet bij. Ze werden wel ververst maar nooit
 # gepubliceerd: ze ontbraken in deze lijst, dus vroegsignalering.html laadde maandenlang
 # verouderde Farmanco-, CBG- en SFK-gegevens terwijl de run als geslaagd gold.
-git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json landkaart.html analyse/ output/ 2>/dev/null
+git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json dossiers.json analyse/ output/ 2>/dev/null
   git commit -q -m "Dataverversing $DATUM" && git push -q origin HEAD && echo "  live gezet"
 else
   echo; echo "NIET gepubliceerd. Controleer de cijfers en draai daarna:"

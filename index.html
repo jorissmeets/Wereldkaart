@@ -148,7 +148,13 @@
 // ═══════════════════════════════════════════════════════════
 // LCG dossiers — metadata (fase-status van lcg.nl) + WHO ATC
 // ═══════════════════════════════════════════════════════════
-const DOSSIERS = [
+// Terugvallijst. De ECHTE lijst komt uit dossiers.json, dat scrape_dossiers.py elke
+// verversing ophaalt van lcg.nl/actuele-tekortendossiers. Deze regels stonden hier
+// hardgecodeerd en liepen daardoor zes weken achter: zes dossiers waren niet meer actueel,
+// er was er een bijgekomen en twee waren van fase gewisseld. Ze blijven staan zodat de
+// pagina iets toont als dossiers.json ontbreekt, maar ze zijn niet leidend.
+let DOSSIER_BRON = "";
+let DOSSIERS = [
     { key:"ifosfamide",        title:"Ifosfamide (Holoxan)",                atc:"L01AA06", phase:"Therapeutische coördinatiefase", updated:"2026-07-07", url:"https://lcg.nl/medicijnentekort/ifosfamide-holoxan/" },
     { key:"quetiapine",        title:"Quetiapine",                          atc:"N05AH04", phase:"Therapeutische coördinatiefase", updated:"2026-07-13", url:"https://lcg.nl/medicijnentekort/quetiapine/" },
     { key:"prednisolon",       title:"DAF-prednisolon",                     atc:"H02AB06", phase:"Therapeutische coördinatiefase", updated:"2026-06-26", url:"https://lcg.nl/medicijnentekort/daf-prednisolon-2/" },
@@ -404,13 +410,23 @@ document.getElementById("search").addEventListener("input", e => {
 document.getElementById("show-resolved").addEventListener("change", e => { S.showResolved = e.target.checked; renderCards(); });
 
 // Load landkaart data
-fetch("data.json").then(r => r.json()).then(data => {
+// dossiers.json mag ontbreken: dan valt de pagina terug op de ingebakken lijst hierboven.
+// Daarom een aparte catch per bron in plaats van een gezamenlijke Promise.all die alles
+// laat vallen zodra een van beide faalt.
+Promise.all([
+    fetch("data.json").then(r => r.json()),
+    fetch("dossiers.json").then(r => r.ok ? r.json() : null).catch(() => null),
+]).then(([data, dos]) => {
+    if (dos && Array.isArray(dos.dossiers) && dos.dossiers.length) {
+        DOSSIERS = dos.dossiers;
+        DOSSIER_BRON = dos.generated || "";
+    }
     RAW = data;
     REASON_LABELS = data.reason_labels || {};
     BYATC = {};
     data.records.forEach(r => { (BYATC[r.atc] ||= []).push(r); });
     document.getElementById("footer").innerHTML =
-        `Landelijk Coördinatiecentrum Geneesmiddelen · LCG-status: snapshot lcg.nl · landkaart: ${esc(data.generated)} · ${data.records.length.toLocaleString("nl-NL")} meldingen`;
+        `Landelijk Coördinatiecentrum Geneesmiddelen · LCG-status: ${DOSSIER_BRON ? "lcg.nl " + esc(DOSSIER_BRON) : "ingebakken lijst"} · landkaart: ${esc(data.generated)} · ${data.records.length.toLocaleString("nl-NL")} meldingen`;
     const lu = document.getElementById("lastup");
     if (lu && data.generated) lu.innerHTML = `<span>Data bijgewerkt: ${esc(data.generated).split("-").reverse().join("-")}</span>`;
     render();

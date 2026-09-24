@@ -199,7 +199,9 @@ fi
 # analyse/ staat er expliciet bij: panel.csv groeit alleen als hij elke run wordt
 # meegecommit. Zonder die map blijft het panel een nulmeting en komt het volgorde-onderzoek
 # nooit van de grond.
-git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json sfk_historie.json analyse/ output/ 2>/dev/null
+# dossiers.json staat er expliciet bij: zonder dat blijft de Dossierstatuspagina op de
+# ingebakken terugvallijst hangen, ook al is hij netjes opgehaald.
+git add -A data.json atc4_dekking.json sfk_verloop.json sfk_tekorten.json eml_atc5.json cbg_tav_eml.json farmanco_eml.json sfk_historie.json dossiers.json analyse/ output/ 2>/dev/null
 if git diff --cached --quiet; then
   echo "Niets veranderd; niets te publiceren."
   echo "$(date '+%F %T')  GEEN WIJZIGING  $SAMENVATTING" > "$STATUS"

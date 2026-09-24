@@ -1,0 +1,87 @@
+{
+ "ifosfamide-holoxan": {
+  "key": "ifosfamide",
+  "atc": "L01AA06",
+  "title": "Ifosfamide (Holoxan)"
+ },
+ "quetiapine": {
+  "key": "quetiapine",
+  "atc": "N05AH04",
+  "title": "Quetiapine"
+ },
+ "daf-prednisolon-2": {
+  "key": "prednisolon",
+  "atc": "H02AB06",
+  "title": "DAF-prednisolon"
+ },
+ "gentamicine-i-v": {
+  "key": "gentamicine",
+  "atc": "J01GB03",
+  "title": "Gentamicine (i.v.)"
+ },
+ "praziquantel-biltricide": {
+  "key": "praziquantel",
+  "atc": "P02BA01",
+  "title": "Praziquantel (Biltricide)"
+ },
+ "capecitabine": {
+  "key": "capecitabine",
+  "atc": "L01BC06",
+  "title": "Capecitabine"
+ },
+ "mitoxantron-i-v": {
+  "key": "mitoxantron",
+  "atc": "L01DB07",
+  "title": "Mitoxantron (i.v.)"
+ },
+ "albendazol-eskazole-400mg-tablet": {
+  "key": "albendazol",
+  "atc": "P02CA03",
+  "title": "Albendazol (Eskazole)"
+ },
+ "folinezuur-capsules-oraal": {
+  "key": "folinezuur",
+  "atc": "V03AF03",
+  "title": "Folinezuur (capsules, oraal)"
+ },
+ "methylergometrine": {
+  "key": "methylergometrine",
+  "atc": "G02AB01",
+  "title": "Methylergometrine (i.v.)"
+ },
+ "hyaluronidase-hyason": {
+  "key": "hyaluronidase",
+  "atc": "B06AA03",
+  "title": "Hyaluronidase (Hyason)"
+ },
+ "fentolamine-ampul-10mg-ml": {
+  "key": "fentolamine",
+  "atc": "C04AB01",
+  "title": "Fentolamine (Regitine)"
+ },
+ "kenacort-a10": {
+  "key": "triamcinolon",
+  "atc": "H02AB08",
+  "title": "Triamcinolonacetonide (Kenacort)"
+ },
+ "visudyne": {
+  "key": "visudyne",
+  "atc": "S01LA01",
+  "title": "Visudyne (verteporfine)"
+ },
+ "clindamycine-i-v": {
+  "key": "clindamycine",
+  "atc": "J01FF01",
+  "title": "Clindamycine (i.v.)"
+ },
+ "mercapto-ethaansulfonzuur-uromitexan-100mg-ml": {
+  "key": "mesna",
+  "atc": "V03AF01",
+  "title": "Mesna (Uromitexan)"
+ },
+ "metamizol-i-v": {
+  "key": "metamizol",
+  "atc": "N02BB02",
+  "title": "Metamizol (i.v.)"
+ }
+}
