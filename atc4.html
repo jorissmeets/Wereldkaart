@@ -322,26 +322,32 @@ function render() {
     host.innerHTML = gs.slice(0, CAP).map(g => {
         const u = urgentie(g);
         const pctOk = g.nPool && g.nPool >= MIN_PRK_PCT;
-        // Zelfde opbouw als de groepskop op het Overzicht: caret, EMS-stip, naam met code,
-        // een link naar de andere pagina, de tellingen gescheiden door punten, en rechts een
-        // getal. Alleen de inhoud verschilt -- daar staat de som, hier de genormaliseerde waarde.
+        // Zelfde opbouw EN zelfde lengte als de groepskop op het Overzicht: caret, EMS-stip,
+        // naam met code, link, tellingen met punten ertussen, rechts een getal.
+        // De lengte doet ertoe: .gcount staat op white-space:nowrap, dus elke extra telling
+        // duwt de rij breder en daarmee de hele pagina. Met SFK, 'buiten de noemer' en
+        // 'vroegsignaal' erbij liep deze kop op tot 95 tekens waar het Overzicht er 33 heeft.
+        // Die drie staan nu in de tooltip; op het scherm blijft staan wat de kolom draagt.
         const tel = [];
         const nRood = g.ps.filter(p => p.eml === "rood").length;
         if (nRood) tel.push(`\u{1F534} ${nl(nRood)}`);
         tel.push(g.nPool
-            ? `${nl(g.inN.length)} van ${nl(g.nPool)} producten${pctOk ? ` · ${Math.round(g.aandeel * 100)}%` : ""}`
-            : `${nl(g.ps.length)} ${g.ps.length === 1 ? "product" : "producten"}, geen noemer`);
-        if (g.buitenN.length) tel.push(`+${nl(g.buitenN.length)} buiten de noemer`);
-        if (g.nSfk) tel.push(`SFK ${nl(g.nSfk)}`);
-        if (g.nLand) tel.push(`\u{1F30D} ${nl(g.nLand)} ${g.nLand === 1 ? "land" : "landen"}`);
-        if (u) tel.push("vroegsignaal");
+            ? `${nl(g.inN.length)} van ${nl(g.nPool)}${pctOk ? ` · ${Math.round(g.aandeel * 100)}%` : ""}`
+            : `${nl(g.ps.length)} zonder noemer`);
+        if (g.nLand) tel.push(`\u{1F30D} ${nl(g.nLand)}`);
+        const meer = [];
+        if (g.nSfk) meer.push(`${nl(g.nSfk)} op de SFK Monitor leveringsproblemen`);
+        if (g.nFarm) meer.push(`${nl(g.nFarm)} met een Farmanco-melding`);
+        if (g.nBui) meer.push(`${nl(g.nBui)} met een buitenlandse melding`);
+        if (g.buitenN.length) meer.push(`${nl(g.buitenN.length)} buiten de noemer`);
+        if (u) meer.push(`vroegsignaal: ${nl(u.bevestigd)} in ≥${MIN_LANDEN} landen, in Nederland ${Math.round(u.nlA * 100)}% geraakt`);
         const waarde = g.norm != null
-            ? `<span class="gval" title="Signaalwaarde per product: ${nl(g.som)} gedeeld door ${nl(g.nPool)} producten in de groep">${g.norm.toFixed(1).replace(".", ",")}</span>`
+            ? `<span class="gval" title="Signaalwaarde per product: ${nl(g.som)} gedeeld door ${nl(g.nPool)} producten">${g.norm.toFixed(1).replace(".", ",")}</span>`
             : `<span class="gval" title="Geen noemer in de G-standaard; dit is de som, niet genormaliseerd">${nl(g.som)}*</span>`;
         const header = `<div class="grp"><span class="gcaret">▸</span><span class="eml-dot ${g.eml}"></span>` +
             `<span class="gname">${g.naam ? esc(g.naam) + " " : ""}<span class="gcode">${esc(g.a4)}</span></span>` +
             `<a class="poollink" href="signaaloverzicht.html" title="Alle signalen op productniveau, niet genormaliseerd">overzicht →</a>` +
-            `<span class="gcount">${tel.join(" · ")}</span>${waarde}</div>`;
+            `<span class="gcount"${meer.length ? ` title="${esc(meer.join(" · "))}"` : ""}>${tel.join(" · ")}</span>${waarde}</div>`;
         return `<div class="grp-wrap collapsed" id="${esc(g.a4)}">${header}<div class="gbody">${g.inN.concat(g.buitenN).map((p, i) => productRow(p, i + 1, g.a4)).join("")}</div></div>`;
     }).join("") + (gs.length > CAP ? `<div class="empty">${nl(gs.length - CAP)} groepen meer — verfijn met de filters of zoek.</div>` : "");
 }
