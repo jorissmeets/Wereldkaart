@@ -219,11 +219,11 @@
     <div class="note warn" id="leeswijzer">
         <b>Lees dit vóór u hier een inkoop- of formulariumbeslissing op baseert.</b>
         <ul style="margin:6px 0 0 18px; padding:0">
-            <li><b>“Uitwijk verloren” geldt per product, niet per groep.</b> Blok A betekent: mínstens één PRK is volledig weg — niet dat de pool leeg is. In 40 van de 49 pools in blok A blijven ná dat verlies nog ≥5 andere PRK over (mediaan 10). V08AB staat in blok A met 2 weggevallen PRK van de 65.</li>
+            <li><b>“Uitwijk verloren” geldt per product, niet per groep.</b> Bovenaan in de standaardsortering staan groepen waarin mínstens één PRK volledig weg is — niet dat de pool leeg is. In 40 van de 49 pools In die groepen blijven ná dat verlies nog ≥5 andere PRK over (mediaan 10). V08AB staat in een groep met 2 weggevallen PRK van de 65.</li>
             <li><b>“Weg” is een lijststatus, geen beschikbaarheidstoets.</b> Het betekent: álle ZI-artikelen onder die PRK staan op de SFK Monitor leveringsproblemen. 56 van de 60 weggevallen PRK hebben er maar één; daar zijn “geraakt” en “weg” per definitie hetzelfde. Dat geldt voor 1.954 van de 4.692 PRK in de noemer (42%). Een leverbare parallelimport of een niet-gemelde verpakking ziet deze pagina niet.</li>
             <li><b>De ATC4-pool is een classificatie, geen therapeutische uitwijkgroep.</b> Bij combinatiepreparaten ligt het alternatief meestal búiten de pool (C09BA perindopril/indapamide, C10BA ezetimib/simvastatine, S01CA dexamethason/gentamicine). Omgekeerd staat er in een grote pool vaak een middel dat klinisch geen vervanger is. Beoordeel de uitwijk altijd op de uitgeklapte PRK-regels, nooit op het percentage alleen.</li>
             <li><b>“Mogelijk urgent” is een rangschikking, geen voorspelling.</b> De sortering zet bovenaan wat het bekijken waard is vóórdat Nederland het merkt, via een poort op drie feiten: de pool is groot genoeg om te meten (≥5 PRK), er is een in 3 of meer landen bevestigd buitenlandsignaal, en minder dan een kwart van de Nederlandse pool is geraakt. Daarbinnen telt het aandeel bevestigde PRK. Er zit geen model en geen gewogen score achter; elk van de drie feiten staat in de rij zelf en is na te rekenen. Dat een pool hier bovenaan staat betekent <i>niet</i> dat het tekort naar Nederland komt — de volgorde waarin tekorten over landen trekken is met deze data niet vast te stellen.</li>
-            <li><b>Buitenland zegt niets over de Nederlandse beschikbaarheid.</b> De pooldekking geeft aan welk deel van de Nederlandse pool ergens in het buitenland in tekort staat, geteld in PRK uit de G-standaard. Dat is bewust géén optelsom van landen — landen hanteren verschillende statusdefinities en zijn niet optelbaar tot een noemer — maar een breuk op de Nederlandse pool, waarin elke PRK één keer telt hoeveel landen hem ook melden. Een pool die in het buitenland op 100% staat, kan in Nederland gewoon leverbaar zijn; dat is juist het geval dat de moeite van het bekijken waard is. Meldingen zonder bruikbare PRK tellen <b>niet</b> mee in dat percentage — zonder PRK is niet vast te stellen om welk product het gaat, dus ze kunnen niet in de teller en niet in de noemer. Ze staan per ATC onder de pool als <i>ATC overig</i>, zodat ze niet stil verdwijnen. Pools in blok D hebben géén Nederlandse noemer: daar is geen enkele uitspraak over de NL-markt uit af te leiden.</li>
+            <li><b>Buitenland zegt niets over de Nederlandse beschikbaarheid.</b> De pooldekking geeft aan welk deel van de Nederlandse pool ergens in het buitenland in tekort staat, geteld in PRK uit de G-standaard. Dat is bewust géén optelsom van landen — landen hanteren verschillende statusdefinities en zijn niet optelbaar tot een noemer — maar een breuk op de Nederlandse pool, waarin elke PRK één keer telt hoeveel landen hem ook melden. Een pool die in het buitenland op 100% staat, kan in Nederland gewoon leverbaar zijn; dat is juist het geval dat de moeite van het bekijken waard is. Meldingen zonder bruikbare PRK tellen <b>niet</b> mee in dat percentage — zonder PRK is niet vast te stellen om welk product het gaat, dus ze kunnen niet in de teller en niet in de noemer. Ze staan per ATC onder de pool als <i>ATC overig</i>, zodat ze niet stil verdwijnen. Groepen die hier niet als handelsproduct bestaan hebben géén Nederlandse noemer: daar is geen enkele uitspraak over de NL-markt uit af te leiden.</li>
         </ul>
     </div>
 
@@ -243,7 +243,7 @@
 
     <div class="controls">
         <span class="ctl-lbl">Sortering binnen blok</span>
-        <div class="chip srt active" data-sort="standaard" title="Blok A op aantal weggevallen PRK, blok B op aantal geraakte PRK — de volgorde waarin deze lijst bedoeld is om gelezen te worden">Standaard</div>
+        <div class="chip srt active" data-sort="standaard" title="Ernstigste eerst: groepen waarin een heel product niet te bestellen was, dan waarin alleen verpakkingen geraakt zijn, dan zonder Nederlands tekortsignaal, dan de groepen die hier niet als handelsproduct bestaan">Standaard</div>
         <div class="chip srt" data-sort="omvang" title="Grootste pools eerst (aantal PRK in de noemer)">Omvang</div>
         <div class="chip srt" data-sort="nieuw" title="Hiërarchisch: eerst het aantal Nederlandse Farmanco-meldingen (de NL-badge), daarbinnen het buitenlandse aantal. Nooit opgeteld — de zichtbare buitenlandkolom loopt daardoor niet netjes af.">Nieuw ≤7 d (NL eerst)</div>
         <div class="chip srt" data-sort="urgent" title="Pools die het bekijken waard zijn vóórdat Nederland het merkt. Poort op drie feiten: de pool is groot genoeg om te meten, er is een in 3 of meer landen bevestigd buitenlandsignaal, en Nederland is nog grotendeels ongemoeid (minder dan een kwart van de pool geraakt). Daarna gerangschikt op het aandeel bevestigde PRK. Geen voorspelling en geen gewogen score — elk van de drie feiten staat in de rij zelf.">Mogelijk urgent</div>
@@ -481,7 +481,7 @@ function merge(poolsJson, mapData, farmData, okMap, okFarm) {
     const byCode = {};
     poolsJson.forEach(p => { byCode[p.code] = p; });
     // Pools die alleen in het buitenland of bij Farmanco voorkomen krijgen geen noemer
-    // en dus ook geen percentage — ze horen wel zichtbaar te zijn (blok D).
+    // en dus ook geen percentage — ze horen wel zichtbaar te zijn (onderaan de standaardsortering).
     Object.keys(mapData).forEach(c => { if (!byCode[c]) byCode[c] = { code: c, prks: [] }; });
     Object.keys(farmData).forEach(c => { if (!byCode[c]) byCode[c] = { code: c, prks: [] }; });
 
@@ -722,16 +722,26 @@ function poolDetail(p) {
    5. Blokken. De volgorde van de blokken ligt vast; sorteren mag alleen bínnen
    een blok, zodat "geraakt" nooit boven "weg" kan eindigen.
 --------------------------------------------------------------------------- */
-const BLOKKEN = [
-    // Titel bewust "minstens één PRK volledig weg" en niet "uitwijk verloren": het verlies
-    // zit op productniveau, en in de meeste van deze pools blijven andere PRK over.
-    { id: "A", titel: "Minstens één PRK volledig weg", sub: "Pools met minstens één PRK waarvan álle artikelen in de Monitor leveringsproblemen staan — dat product was die week bij de groothandel niet direct te bestellen. Of de pool als geheel nog uitwijk biedt, staat in de kolom Omvang en in de uitgeklapte PRK-regels.", open: true },
-    { id: "B", titel: "Signaal, uitwijk nog aanwezig", sub: "Pools met geraakte PRK's, maar geen enkele PRK volledig weg. Vroegsignaal, geen beschikbaarheidsprobleem.", open: false },
-    // Bewust niet "Geen NL-signaal": in dit blok kan wél een Farmanco-melding op stofniveau
-    // staan (kolom Farmanco). Alleen op PRK-niveau is er niets.
-    { id: "C", titel: "Geen tekortsignaal op PRK-niveau", sub: "Pools met een NL-noemer waarvan geen enkele PRK op de tekortenlijst staat. Een Farmanco-melding op stofniveau of een buitenlands signaal kan hier wél staan — zie de kolommen rechts.", open: false },
-    { id: "D", titel: "Geen NL-noemer", sub: "Wel een buitenlands of Farmanco-signaal, maar geen specialité in de G-standaard-noemer, dus per definitie geen percentage. Lees dit níét als 'niet verkrijgbaar in Nederland': een deel van deze groepen bestaat hier als apotheekbereiding of niet-geregistreerd middel — dat staat dan bij de regel zelf.", open: false }
-];
+// De lijst is EEN lijst. Eerder stonden hier vier uitklapbare blokken (A: product helemaal
+// weg, B: verpakkingen geraakt, C: geen NL-signaal, D: geen NL-noemer). Die hadden twee
+// problemen. De kopjes benoemden de datacategorie en niet de situatie, en belangrijker: er
+// werd BINNEN een blok gesorteerd. Daardoor kon geen enkele sortering over de hele lijst
+// gaan -- en juist de sterkste vroegsignalen zitten per definitie in blok C, want daar is
+// Nederland nog niet geraakt. Die konden dus nooit bovenaan komen, hoe je ook sorteerde.
+// De ladder zelf klopt en is nu de standaard sorteervolgorde; de letters staan nog in de
+// data en worden gebruikt als sorteersleutel en voor de KPI's.
+const SORTEER_KOP = {
+    standaard: "Alle groepen, ernstigste eerst",
+    omvang:    "Alle groepen, grootste eerst",
+    nieuw:     "Alle groepen, nieuwste meldingen eerst",
+    urgent:    "Alle groepen, mogelijk urgent eerst",
+};
+const SORTEER_UITLEG = {
+    standaard: "Eerst de groepen waarin een heel product niet te bestellen was, dan die waarin alleen verpakkingen geraakt zijn, dan die zonder Nederlands tekortsignaal, en als laatste de groepen die hier niet als handelsproduct bestaan.",
+    omvang:    "Op het aantal voorschrijfbare producten (PRK) in de groep. Zegt niets over tekorten; handig om te zien hoeveel ruimte een groep überhaupt heeft.",
+    nieuw:     "Eerst het aantal Nederlandse Farmanco-meldingen van de laatste 7 dagen, daarbinnen het buitenlandse aantal. Nooit opgeteld.",
+    urgent:    "Groepen die het bekijken waard zijn vóórdat Nederland het merkt: minstens één product in 3 of meer landen tegelijk in tekort, terwijl minder dan een kwart van de Nederlandse groep geraakt is. Een rangschikking op feiten, geen voorspelling.",
+};
 
 function sorteer(list, blok) {
     const c = (x) => x == null ? -1 : x;
@@ -754,9 +764,17 @@ function sorteer(list, blok) {
     // NL eerst, dan buitenland: beide zijn "nieuwe meldingen", maar een Nederlands tekort
     // weegt voor deze bespreking zwaarder. Hiërarchisch sorteren, nooit optellen.
     if (S.sort === "nieuw")  return list.sort((a, b) => c(b.nlNieuw) - c(a.nlNieuw) || c(recentheidBruikbaar(b) ? b.nieuw : null) - c(recentheidBruikbaar(a) ? a.nieuw : null) || c(b.buitN) - c(a.buitN) || a.code.localeCompare(b.code));
-    if (blok === "A") return list.sort((a, b) => c(b.weg) - c(a.weg) || c(b.pctWeg) - c(a.pctWeg) || a.code.localeCompare(b.code));
-    if (blok === "B") return list.sort((a, b) => c(b.geraakt) - c(a.geraakt) || c(b.pctGeraakt) - c(a.pctGeraakt) || a.code.localeCompare(b.code));
-    return list.sort((a, b) => c(b.nPrk) - c(a.nPrk) || a.code.localeCompare(b.code));
+    // Standaard: de oude vier blokken, nu als sorteersleutel in EEN lijst. De blokken waren
+    // vaste kopjes waarbinnen gesorteerd werd, en dat brak elke sortering die over de hele
+    // lijst hoort te gaan: alle zes de sterkste vroegsignalen zitten in blok C (Nederland
+    // nog niet geraakt), dus ze konden per definitie nooit bovenaan komen. De ladder zelf
+    // klopt wel en blijft de leesvolgorde -- alleen niet meer als muur.
+    const rang = { A: 0, B: 1, C: 2, D: 3 };
+    return list.sort((a, b) =>
+        (rang[a.blok] ?? 3) - (rang[b.blok] ?? 3)
+        || c(b.weg) - c(a.weg) || c(b.pctWeg) - c(a.pctWeg)
+        || c(b.geraakt) - c(a.geraakt) || c(b.pctGeraakt) - c(a.pctGeraakt)
+        || c(b.nPrk) - c(a.nPrk) || a.code.localeCompare(b.code));
 }
 
 function filterList() {
@@ -774,7 +792,6 @@ function filterList() {
     return l;
 }
 
-const OPEN = {};  // onthoudt per blok of het open staat over een re-render heen
 function render() {
     const host = document.getElementById("rows");
     const list = filterList();
@@ -789,29 +806,21 @@ function render() {
         <span title="Welk deel van de Nederlandse pool ergens in het buitenland in tekort staat, geteld in PRK uit de G-standaard. Noemer is de Nederlandse pool, niet een optelsom van landen; elke PRK telt één keer hoeveel landen hem ook melden. Waar geen PRK-koppeling is, staat de oude stoffentelling (stoffen gemeld in ${MIN_LANDEN} of meer landen)">Buitenland</span>
         <span title="Blauwpaarse badge NL = Farmanco-meldingen in Nederland in de laatste ${NIEUW_DAGEN} dagen. Het getal daarachter = buitenlandse meldingen met een echt bronsignaal (geen scrapedatum) in dezelfde periode, geteld vanaf de datadatum. De twee worden nooit opgeteld.">Nieuw ≤${NIEUW_DAGEN} d</span>
     </div>`;
-    host.innerHTML = BLOKKEN.map(b => {
-        const ps = sorteer(list.filter(p => p.blok === b.id), b.id);
-        if (!ps.length) return "";
-        const open = OPEN[b.id] !== undefined ? OPEN[b.id] : b.open;
-        // Zonder geladen noemer klopt de uitleg bij blok D niet: dan is niet de pool,
-        // maar het hele bestand het probleem. Dat staat al in de melding erboven.
-        const sub = (b.id === "D" && !HAVE.noemer) ? "De noemer is niet geladen; deze pools staan hier omdat er geen PRK-telling beschikbaar is." : b.sub;
-        const nWeg = ps.reduce((s, p) => s + (p.weg || 0), 0);
-        const tel = [`${nl(ps.length)} ${ps.length === 1 ? "pool" : "pools"}`];
-        // Niet "zonder alternatief": het alternatief kan elders in de pool of in een
-        // andere ATC4-groep staan. De feitelijke uitspraak is smaller.
-        if (b.id === "A") tel.push(`${nl(nWeg)} PRK volledig op de tekortenlijst`);
-        if (b.id === "B") tel.push(`${nl(ps.reduce((s, p) => s + (p.geraakt || 0), 0))} PRK geraakt`);
-        return `<div class="blok ${open ? "" : "collapsed"}" data-blok="${b.id}">
-            <div class="blok-head">
-                <span class="gcaret">▸</span>
-                <span class="bt">${esc(b.titel)}</span>
-                <span class="bs">${esc(sub)}</span>
-                <span class="bn">${tel.join(" · ")}</span>
-            </div>
-            <div class="blok-body">${head}${ps.map(poolRow).join("")}</div>
-        </div>`;
-    }).join("") || `<div class="empty">Geen pools in deze selectie.</div>`;
+    // Een lijst. Geen vier uitklapbare kopjes meer: die zeiden in welke datacategorie een
+    // pool viel en hielden tegelijk elke sortering gevangen binnen zo'n categorie.
+    const ps = sorteer(list.slice(), null);
+    if (!ps.length) { host.innerHTML = `<div class="empty">Geen pools in deze selectie.</div>`; return; }
+    const nWeg = ps.reduce((s, p) => s + (p.weg || 0), 0);
+    const nGeraakt = ps.reduce((s, p) => s + (p.geraakt || 0), 0);
+    const tel = [`${nl(ps.length)} ${ps.length === 1 ? "pool" : "pools"}`,
+                 `${nl(nWeg)} PRK volledig op de tekortenlijst`,
+                 `${nl(nGeraakt)} PRK geraakt`];
+    host.innerHTML = `<div class="blok"><div class="blok-head" style="cursor:default">
+            <span class="bt">${esc(SORTEER_KOP[S.sort] || "Alle groepen")}</span>
+            <span class="bs">${esc(SORTEER_UITLEG[S.sort] || "")}</span>
+            <span class="bn">${tel.join(" · ")}</span>
+        </div>
+        <div class="blok-body">${head}${ps.map(poolRow).join("")}</div></div>`;
 }
 
 function renderKpis() {
@@ -847,7 +856,8 @@ document.getElementById("q").addEventListener("input", e => { clearTimeout(_t); 
 document.getElementById("rows").addEventListener("click", e => {
     if (e.target.closest("a")) return;                       // links in de uitklap niet kapen
     const bh = e.target.closest(".blok-head");
-    if (bh) { const b = bh.closest(".blok"); b.classList.toggle("collapsed"); OPEN[b.dataset.blok] = !b.classList.contains("collapsed"); return; }
+    // De lijstkop is geen uitklapper meer; er is nog maar een lijst.
+    if (bh) return;
     const pr = e.target.closest(".prow");
     if (pr) pr.closest(".grp-wrap").classList.toggle("collapsed");
 });
@@ -857,7 +867,7 @@ function openHash() {
     if (!/^[A-Z]\d{2}[A-Z]{2}$/.test(h)) return;
     const el = document.getElementById(h);
     if (!el) return;
-    const b = el.closest(".blok"); if (b) { b.classList.remove("collapsed"); OPEN[b.dataset.blok] = true; }
+    const b = el.closest(".blok"); if (b) b.classList.remove("collapsed");
     el.classList.remove("collapsed"); el.classList.add("hit");
     el.scrollIntoView({ block: "center" });
 }
