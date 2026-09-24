@@ -7,6 +7,15 @@
 "overig": 74,
 "items": [
 {
+"stof": "Capecitabine",
+"omschrijving": "Capecitabine tablet fo 150mg, capecitabine tablet fo 500mg",
+"vorm": "filmomhulde tablet",
+"preferent": false,
+"datum": "2026-09-23",
+"eml": "oranje",
+"atc": "L01BC06"
+},
+{
 "stof": "Sotalol",
 "omschrijving": "Sotalol injvlst 10mg/ml amp 4ml",
 "vorm": "injectievloeistof",
@@ -851,15 +860,6 @@
 "datum": "2026-09-16",
 "eml": "rood",
 "atc": "S01AA01"
-},
-{
-"stof": "Capecitabine",
-"omschrijving": "Capecitabine tablet fo 150mg, capecitabine tablet fo 300mg, capecitabine tablet fo 500mg",
-"vorm": "filmomhulde tablet",
-"preferent": false,
-"datum": "2026-09-16",
-"eml": "oranje",
-"atc": "L01BC06"
 },
 {
 "stof": "Buprenorfine/Naloxon",

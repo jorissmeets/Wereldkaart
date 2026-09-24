@@ -1,0 +1,850 @@
+country_code,country_name,source,medicine_name,active_substance,strength,package_size,authorisation_number,marketing_auth_holder,notification_date,shortage_start,estimated_end,shortage_period,status,reason,scraped_at,atc_code,prk
+HR,Croatia,HALMED,"Seroquel XR 50 mg tablete s produljenim oslobađanjem; 60
+tableta u blisteru, u kutiji",kvetiapinfumarat,,,HR-H-955743091-04,"Cheplapharm Arzneimittel
+GmbH, Njemačka",2016-12-21,2016-12-20,,20.12.2016. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547041,N05AH04,84182
+HR,Croatia,HALMED,"Priligy 60 mg filmom obložene tablete; 3 tablete u blisteru, u
+višestruko presavijenoj kutiji",dapoksetinklorid,,,HR-H-635589393-03,"Phoenix Labs Unlimited
+Company, Irska",2018-06-11,2018-06-11,,11.06.2018. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547056,G04BX14,106445
+HR,Croatia,HALMED,"Kiovig 100 mg/ml otopina za infuziju; 200 ml otopine u bočici
+(staklo tipa I) s čepom (bromobutil)","imunoglobulin normalni, ljudski,
+intravenski",,,EU/1/05/329/004,"Takeda Manufacturing Austria
+AG, Austrija",2018-12-07,2018-12-07,,07.12.2018. - 11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547161,,
+HR,Croatia,HALMED,"Kiovig 100 mg/ml otopina za infuziju; 50 ml otopine u bočici
+(staklo tipa I) s čepom (bromobutil)","imunoglobulin normalni, ljudski,
+intravenski",,,EU/1/05/329/003,"Takeda Manufacturing Austria
+AG, Austrija",2018-12-07,2018-12-07,,07.12.2018. - 11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547176,,
+HR,Croatia,HALMED,"Kiovig 100 mg/ml otopina za infuziju; 25 ml otopine u bočici
+(staklo tipa I) s čepom (bromobutil)","imunoglobulin normalni, ljudski,
+intravenski",,,EU/1/05/329/002,"Takeda Manufacturing Austria
+AG, Austrija",2018-12-07,2018-12-07,,07.12.2018. - 11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547186,,
+HR,Croatia,HALMED,"Physioneal 35 Clear-Flex glukoza 1,36% m/v / 13,6 mg/ml
+otopina za peritonejsku dijalizu; 2 jedvostruke vrećice s dva
+odjeljka s 5,0 l otopine, u kutiji","glukoza hidrat
+natrijev klorid
+kalcijev klorid dihidrat
+magnezijev klorid heksahidrat
+natrijev hidrogenkarbonat
+natrijev (S)-laktat, otopina",,,HR-H-286857758-16,"Vantive Belgium SRL, Belgija",2019-09-02,2019-09-02,,02.09.2019. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547194,,
+HR,Croatia,HALMED,"Physioneal 35 Clear-Flex glukoza 2,27% m/v / 22,7 mg/ml
+otopina za peritonejsku dijalizu; 2 jedvostruke vrećice s dva
+odjeljka s 5,0 l otopine, u kutiji","glukoza hidrat
+natrijev klorid
+kalcijev klorid dihidrat
+magnezijev klorid heksahidrat
+natrijev hidrogenkarbonat
+natrijev (S)-laktat, otopina",,,HR-H-662660437-16,"Vantive Belgium SRL, Belgija",2019-09-02,2019-09-02,,02.09.2019. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547201,,
+HR,Croatia,HALMED,"Physioneal 35 Clear-Flex glukoza 3,86% m/v / 38,6 mg/ml
+otopina za peritonejsku dijalizu; 2 jedvostruke vrećice s dva
+odjeljka s 5,0 l otopine, u kutiji","glukoza hidrat
+natrijev klorid
+kalcijev klorid dihidrat
+magnezijev klorid heksahidrat
+natrijev hidrogenkarbonat
+natrijev (S)-laktat, otopina",,,HR-H-029849797-16,"Vantive Belgium SRL, Belgija",2019-09-02,2019-09-02,,02.09.2019. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547207,,
+HR,Croatia,HALMED,"Physioneal 40 Clear-Flex glukoza 3,86% m/v / 38,6 mg/ml
+otopina za peritonejsku dijalizu; 2 jedvostruke vrećice s dva
+odjeljka s 5,0 l otopine, u kutiji","glukoza hidrat
+natrijev klorid
+kalcijev klorid dihidrat
+magnezijev klorid heksahidrat
+natrijev hidrogenkarbonat
+natrijev (S)-laktat, otopina",,,HR-H-260841618-16,"Vantive Belgium SRL, Belgija",2019-09-02,2019-09-02,,02.09.2019. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547214,,
+HR,Croatia,HALMED,"Sevofluran Baxter para inhalata, tekućina; 6 boca od 250 ml pare
+inhalata, tekućine, u kutiji",sevofluran,,,HR-H-196335635-02,"Baxter d.o.o., Slovenija",2020-01-27,2020-01-27,2026-12-31,27.01.2020. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547224,N01AB08,
+HR,Croatia,HALMED,"Kaspofungin PharmaS 50 mg prašak za koncentrat za otopinu za
+infuziju; 1 bočica s praškom, u kutiji",kaspofunginacetat,,,HR-H-271238324-01,PharmaS d.o.o.,2020-06-08,2020-06-01,2027-02-28,01.06.2020. - 28.02.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547233,J02AX04,70300
+HR,Croatia,HALMED,"Minirin 10 mikrograma po potisku, sprej za nos; 5 ml otopine u
+bočici s odmjernim sustavom za raspršivanje, u kutiji",desmopresinacetat,,,HR-H-794064519-01,"Ferring GmbH, Njemačka",2020-07-09,2020-07-09,2026-09-28,09.07.2020. - 28.09.2026.,shortage,neispravnost u kakvoći,2026-09-23T20:59:53.547243,H01BA02,31399
+HR,Croatia,HALMED,"Metadon Alkaloid 5 mg/ml oralna otopina; 1 boca s 1000 ml
+otopine i mjerna čašica, u kutiji",metadonklorid,,,HR-H-714939187-02,"Alkaloid - INT d.o.o., Slovenija",2020-12-04,2020-12-04,,04.12.2020. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547250,N07BC02,73261
+HR,Croatia,HALMED,"Veregen 100 mg/g mast; 15 g masti u tubi, u kutiji",ekstrakt lista zelenog čaja,,,HR-H-677936277-01,Corapharm d.o.o.,2021-03-12,2021-03-12,2026-12-31,12.03.2021. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547259,,
+HR,Croatia,HALMED,"Octagam 50 mg/ml otopina za infuziju; 1 boca s 50 ml otopine, u
+kutiji","imunoglobulin normalni, ljudski,
+intravenski",,,HR-H-315670569-02,Jana Pharm d.o.o.,2021-05-06,2021-05-05,,05.05.2021. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547266,,
+HR,Croatia,HALMED,"Rameam 5 mg/10 mg tvrde kapsule; 30 kapsula u blisteru, u
+kutiji","ramipril
+amlodipinbesilat",,,HR-H-459256324-01,Krka - farma d.o.o.,2021-10-21,2021-10-15,,15.10.2021. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547272,,
+HR,Croatia,HALMED,"Rameam 10 mg/5 mg tvrde kapsule; 30 kapsula u blisteru, u
+kutiji","ramipril
+amlodipinbesilat",,,HR-H-232568101-01,Krka - farma d.o.o.,2021-10-21,2021-10-15,,15.10.2021. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547280,,
+HR,Croatia,HALMED,"Rameam 10 mg/10 mg tvrde kapsule; 30 kapsula u blisteru, u
+kutiji","ramipril
+amlodipinbesilat",,,HR-H-830032291-01,Krka - farma d.o.o.,2021-10-21,2021-10-15,,15.10.2021. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547286,,
+HR,Croatia,HALMED,"Priligy 30 mg filmom obložene tablete; 3 tablete u blisteru, u
+višestruko presavijenoj kutiji",dapoksetinklorid,,,HR-H-674827417-03,"Phoenix Labs Unlimited
+Company, Irska",2021-11-16,2021-11-16,,16.11.2021. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547293,G04BX14,106437
+HR,Croatia,HALMED,"Olimel N7E, emulzija za infuziju; 1 vrećica s tri odvojena odjeljka
+za pripremu 2000 ml emulzije u zaštitnoj vrećici, 4 vrećice u
+kutiji","maslinovo ulje, rafinirano i sojino
+ulje, rafinirano
+alanin
+arginin
+aspartatna kiselina
+glutamatna kiselina
+glicin
+histidin
+izoleucin
+leucin
+lizinacetat
+metionin
+fenilalanin
+prolin
+serin
+treonin
+triptofan
+tirozin
+valin
+natrijev acetat trihidrat
+natrijev glicerofosfat, hidratizirani
+kalijev klorid
+magnezijev klorid heksahidrat
+kalcijev klorid dihidrat
+glukoza hidrat",,,HR-H-325155164-01,"Baxter d.o.o., Slovenija",2021-11-25,2021-11-25,2026-12-31,25.11.2021. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547302,,
+HR,Croatia,HALMED,"Temelor 4 mg/ml otopina za injekciju; 10 ampula s 1 ml otopine,
+u kutiji",lorazepam,,,HR-H-641923492-02,"Medochemie Ltd., Cipar",2021-12-07,2021-12-07,,07.12.2021. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547308,N05BA06,26557
+HR,Croatia,HALMED,"Acipan 40 mg želučanootporne tablete; 14 tableta u blisteru, u
+kutiji",pantoprazolnatrij seskvihidrat,,,HR-H-020409538-01,Sandoz d.o.o.,2021-12-07,2021-11-25,,25.11.2021. - nepoznato,shortage,razlozi povezani s kakvoćom,2026-09-23T20:59:53.547315,A02BC02,43044
+HR,Croatia,HALMED,"Dalvocans 50 mg prašak za koncentrat za otopinu za infuziju; 1
+bočica s praškom, u kutiji",kaspofunginacetat,,,HR-H-241627075-01,"Zentiva k.s., Češka",2021-12-10,2021-11-04,2026-12-31,04.11.2021. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547327,J02AX04,70300
+HR,Croatia,HALMED,"Voramol 200 mg filmom obložene tablete; 30 tableta u blisteru,
+u kutiji",vorikonazol,,,HR-H-846062199-06,"Zentiva k.s., Češka",2021-12-10,2020-10-01,2026-12-31,01.10.2020. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547336,J02AC03,63614
+HR,Croatia,HALMED,"Fromilid 125 mg/5 ml granule za oralnu suspenziju; 25 g granula
+u bočici za pripremu 60 ml oralne suspenzije, štrcaljka za usta, u
+kutiji",klaritromicin,,,HR-H-148376472-01,Krka - farma d.o.o.,2021-12-29,2021-12-29,,29.12.2021. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547343,J01FA09,38431
+HR,Croatia,HALMED,"Gefitinib Sandoz 250 mg filmom obložene tablete; 30 tableta u
+blisteru s jediničnom dozom, u kutiji",gefitinib,,,HR-H-844090380-02,Sandoz d.o.o.,2022-01-18,2022-01-18,,18.01.2022. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547349,L01EB01,90778
+HR,Croatia,HALMED,"Bupensanduo 8mg/2mg sublingvalne tablete; 7 tableta u
+blisteru u kutiji","buprenorfinklorid
+naloksonklorid dihidrat",,,HR-H-413154573-01,"G.L. Pharma GmbH, Austrija",2022-03-02,2022-03-01,,01.03.2022. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547356,,
+HR,Croatia,HALMED,"Ivabradin Accord 5 mg filmom obložene tablete; 56 tableta u
+blisteru, u kutiji",ivabradinklorid,,,EU/1/17/1190/003,"Accord Healthcare S.L.U.,
+Španjolska",2022-03-09,2022-03-09,2027-01-01,09.03.2022. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547366,C01EB17,198161
+HR,Croatia,HALMED,"Ivabradin Accord 7,5 mg filmom obložene tablete; 56 tableta u
+blisteru, u kutiji",ivabradinklorid,,,EU/1/17/1190/010,"Accord Healthcare S.L.U.,
+Španjolska",2022-03-09,2022-03-09,2027-01-01,09.03.2022. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547376,C01EB17,198188
+HR,Croatia,HALMED,"Feksofenadinklorid Cipla 180 mg filmom obložene tablete; 30
+tableta u blisteru, u kutiji",feksofenadinklorid,,,HR-H-648409006-04,"Cipla Europe NV, Belgija",2022-03-09,2022-03-09,2027-01-01,09.03.2022. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547385,R06AX26,48747
+HR,Croatia,HALMED,"Helex 2 mg tablete; 30 tableta u blisteru, u kutiji",alprazolam,,,HR-H-662933581-03,Krka - farma d.o.o.,2022-05-05,2022-05-05,,05.05.2022. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547392,N05BA12,49611
+HR,Croatia,HALMED,"Atordapin 5 mg/10 mg filmom obložene tablete; 60 tableta u
+blisteru, u kutiji","amlodipinbesilat
+atorvastatinkalcij",,,HR-H-710797951-08,Krka - farma d.o.o.,2022-06-02,2022-06-02,,02.06.2022. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547399,,
+HR,Croatia,HALMED,"Atordapin 10 mg/10 mg filmom obložene tablete; 60 tableta u
+blisteru, u kutiji","amlodipinbesilat
+atorvastatinkalcij",,,HR-H-594090785-08,Krka - farma d.o.o.,2022-06-02,2022-06-02,,02.06.2022. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547406,,
+HR,Croatia,HALMED,"Tolucombi 40 mg/12,5 mg tablete; 60 tableta u blisteru, u kutiji","telmisartan
+hidroklorotiazid",,,EU/1/13/821/007,"Krka d.d., Novo Mesto, Slovenija",2022-06-02,2022-06-02,,02.06.2022. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547414,,
+HR,Croatia,HALMED,"Tolucombi 80 mg/12,5 mg tablete; 60 tableta u blisteru, u kutiji","telmisartan
+hidroklorotiazid",,,EU/1/13/821/017,"Krka d.d., Novo Mesto, Slovenija",2022-06-02,2022-06-02,,02.06.2022. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547420,,
+HR,Croatia,HALMED,"Tolucombi 80 mg/25 mg tablete; 60 tableta u blisteru, u kutiji","telmisartan
+hidroklorotiazid",,,EU/1/13/821/027,"Krka d.d., Novo Mesto, Slovenija",2022-06-02,2022-06-02,,02.06.2022. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547427,,
+HR,Croatia,HALMED,"Daleron 500 mg tablete; 12 tableta u blisteru, u kutiji",paracetamol,,,HR-H-312411800-01,Krka - farma d.o.o.,2022-06-09,2022-06-09,,09.06.2022. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547433,N02BE01,67903
+HR,Croatia,HALMED,"Daleron 120 mg/5 ml oralna suspenzija; 1 bočica s 100 ml
+suspenzije i štrcaljka, u kutiji",paracetamol,,,HR-H-170487520-01,Krka - farma d.o.o.,2022-06-09,2022-06-09,,09.06.2022. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547440,N02BE01,
+HR,Croatia,HALMED,"Betazon 0,5 mg/g mast; 25 g masti u tubi, u kutiji",betametazondipropionat,,,HR-H-863506262-01,Jadran-Galenski laboratorij d.d.,2022-07-14,,,07.2022. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547447,D07AC01,75515
+HR,Croatia,HALMED,"Dolokain 20 mg/g gel; 25 g gela u tubi, u kutiji",lidokainklorid,,,HR-H-337711437-01,Jadran-Galenski laboratorij d.d.,2022-07-14,,,07.2022. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547453,N01BB02,81973
+HR,Croatia,HALMED,"Elonva 100 mikrograma otopina za injekciju; 1 napunjena
+štrcaljka s 0,5 ml otopine + 1 igla, u kutiji",korifolitropin alfa,,,EU/1/09/609/001,"N.V. Organon, Nizozemska",2022-07-20,2022-08-31,,31.08.2022. - nepoznato,shortage,globalna alokacija,2026-09-23T20:59:53.547461,G03GA09,138126
+HR,Croatia,HALMED,"Plivatinib 100 mg filmom obložene tablete; 60 tableta u blisteru,
+u kutiji",imatinibmesilat,,,HR-H-546437338-01,Pliva Hrvatska d.o.o.,2022-09-16,2022-09-15,2026-09-30,15.09.2022. - 30.09.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547470,L01EA01,
+HR,Croatia,HALMED,"Pemetrexed Fresenius Kabi 25 mg/ml koncentrat za otopinu za
+infuziju; 1 bočica s 20 ml koncentrata, u kutiji",pemetreksed,,,EU/1/16/1115/004,"Fresenius Kabi Deutschland
+GmbH, Njemačka",2022-10-17,2022-10-05,2026-12-31,05.10.2022. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547479,L01BA04,142611
+HR,Croatia,HALMED,"Vizarsin 50 mg filmom obložene tablete; 1 tableta u blisteru, u
+kutiji",sildenafilcitrat,,,EU/1/09/551/005,"Krka d.d., Novo Mesto, Slovenija",2022-10-17,2022-10-17,,17.10.2022. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547485,G04BE03,
+HR,Croatia,HALMED,"Ertapenem Fresenius Kabi 1 g prašak za koncentrat za otopinu
+za infuziju; 10 bočica s praškom, u kutiji",ertapenemnatrij,,,HR-H-808882188-01,Fresenius Kabi d.o.o.,2022-11-07,2022-11-04,2026-12-31,04.11.2022. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547494,J01DH51,23493
+HR,Croatia,HALMED,"Oktreotid Teva 20 mg prašak i otapalo za suspenziju za injekciju
+s produljenim oslobađanjem; 1 bočica s praškom, 1 napunjena
+štrcaljka s otapalom, 1 nastavak za bočicu i 1 sigurnosna igla, u
+plastičnom spremniku, u kutiji",oktreotidacetat,,,HR-H-487108635-01,"Teva B.V., Nizozemska",2022-12-08,2023-01-10,2026-12-31,10.01.2023. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547503,H01CB02,70459
+HR,Croatia,HALMED,"Adolax 20 mg/10 mg tablete s produljenim oslobađanjem; 30
+tableta u blisteru, u kutiji","oksikodonklorid
+naloksonklorid dihidrat",,,HR-H-345330993-04,Krka - farma d.o.o.,2023-02-01,2023-02-01,,01.02.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547510,,
+HR,Croatia,HALMED,"Adolax 40 mg/20 mg tablete s produljenim oslobađanjem; 30
+tableta u blisteru, u kutiji","oksikodonklorid
+naloksonklorid dihidrat",,,HR-H-745266269-04,Krka - farma d.o.o.,2023-02-01,2023-02-01,,01.02.2023. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547516,,
+HR,Croatia,HALMED,"Pentilin 20 mg/ml koncentrat za otopinu za infuziju; 5 ampula s
+5 ml koncentrata, u kutiji",pentoksifilin,,,HR-H-922451366-01,Krka - farma d.o.o.,2023-02-01,2023-02-01,,01.02.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547523,C04AD03,24414
+HR,Croatia,HALMED,"Ferant 250 mikrograma otopina za injekciju; 1 ampula s 5 ml
+otopine, u kutiji",palonozetronklorid,,,HR-H-981029016-01,"Medochemie Ltd., Cipar",2023-03-06,2023-03-10,,10.03.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547530,A04AA05,
+HR,Croatia,HALMED,"Ciprinol 400 mg/200 ml otopina za infuziju; 1 bočica sa 200 ml
+otopine, u kutiji",ciprofloksacin laktat,,,HR-H-464109512-01,Krka - farma d.o.o.,2023-03-07,2023-03-07,,07.03.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547537,J01MA02,138215
+HR,Croatia,HALMED,"Lortanda 2,5 mg filmom obložene tablete; 30 tableta u blisteru,
+u kutiji",letrozol,,,HR-H-056513355-04,Krka - farma d.o.o.,2023-03-07,2023-03-07,,07.03.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547543,L02BG04,47724
+HR,Croatia,HALMED,"Meaxin 100 mg filmom obložene tablete; 90 tableta u blisteru, u
+kutiji",imatinibmesilat,,,HR-H-443418023-04,Krka - farma d.o.o.,2023-03-07,2023-03-07,,07.03.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547550,L01EA01,71293
+HR,Croatia,HALMED,"Meaxin 400 mg filmom obložene tablete; 60 tableta u blisteru, u
+kutiji",imatinibmesilat,,,HR-H-756891398-03,Krka - farma d.o.o.,2023-03-07,2023-03-07,,07.03.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547556,L01EA01,71307
+HR,Croatia,HALMED,"Torendo 1 mg filmom obložene tablete; 20 tableta u blisteru, u
+kutiji",risperidon,,,HR-H-570513281-01,Krka - farma d.o.o.,2023-03-07,2023-03-07,,07.03.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547565,N05AX08,37710
+HR,Croatia,HALMED,"Dutrys 0,5 mg meke kapsule; 30 kapsula u blisteru, u kutiji",dutasterid,,,HR-H-020313732-02,Krka - farma d.o.o.,2023-03-07,2023-03-07,,07.03.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547571,G04CB02,68195
+HR,Croatia,HALMED,"Salmeterol/flutikazon Cipla 25 mikrograma + 125 mikrograma u
+jednoj dozi, stlačeni inhalat, suspenzija; 1 inhalator sa 120 doza,
+u kutiji","salmeterolksinafoat
+flutikazonpropionat",,,HR-H-607845986-01,"Cipla Europe NV, Belgija",2023-03-15,2023-03-15,2027-01-01,15.03.2023. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547581,,
+HR,Croatia,HALMED,"Salmeterol/flutikazon Cipla 25 mikrograma + 250 mikrograma u
+jednoj dozi, stlačeni inhalat, suspenzija; 1 inhalator sa 120 doza,
+u kutiji","salmeterolksinafoat
+flutikazonpropionat",,,HR-H-705296771-01,"Cipla Europe NV, Belgija",2023-03-15,2023-03-15,2027-01-01,15.03.2023. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547589,,
+HR,Croatia,HALMED,"Vorikonazol Fresenius Kabi 200 mg prašak za otopinu za infuziju;
+1 bočica s praškom, u kutiji",vorikonazol,,,HR-H-004683415-01,Fresenius Kabi d.o.o.,2023-03-21,2023-03-21,2026-12-31,21.03.2023. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547598,J02AC03,63622
+HR,Croatia,HALMED,"Adolax 10 mg/5 mg tablete s produljenim oslobađanjem; 30
+tableta u blisteru, u kutiji","oksikodonklorid
+naloksonklorid dihidrat",,,HR-H-789740967-05,Krka - farma d.o.o.,2023-04-19,2023-04-19,,19.04.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547605,,
+HR,Croatia,HALMED,"Albunorm 50 g/l otopina za infuziju; 1 boca s 250 ml otopine, u
+kutiji","albumin, ljudski",,,HR-H-587485812-02,Jana Pharm d.o.o.,2023-04-21,2023-04-18,2026-12-31,18.04.2023. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547614,,
+HR,Croatia,HALMED,"Noradrenalin Kabi 1 mg/ml koncentrat za otopinu za infuziju; 10
+ampula s 1 ml koncentrata, u kutiji","noradrenalintartarat
+(norepinefrintartarat)",,,HR-H-758861224-02,Fresenius Kabi d.o.o.,2023-06-02,2023-06-01,2026-12-31,01.06.2023. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547623,,
+HR,Croatia,HALMED,"Berlithion 600 mg koncentrat za otopinu za infuziju; 5 ampula s
+24 ml koncentrata, u kutiji",tioktatna kiselina,,,HR-H-882057376-01,"Berlin-Chemie Menarini Hrvatska
+d.o.o.",2023-06-07,2023-06-07,,07.06.2023. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547629,A16AX01,
+HR,Croatia,HALMED,"Finpros 5 mg filmom obložene tablete; 28 tableta u blisteru, u
+kutiji",finasterid,,,HR-H-787201157-01,Krka - farma d.o.o.,2023-06-19,2023-06-19,,19.06.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547636,G04CB01,34975
+HR,Croatia,HALMED,"Torendo 2 mg filmom obložene tablete; 60 tableta u blisteru, u
+kutiji",risperidon,,,HR-H-532788983-03,Krka - farma d.o.o.,2023-06-19,2023-06-19,,19.06.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547642,N05AX08,
+HR,Croatia,HALMED,"Torendo 3 mg filmom obložene tablete; 60 tableta u blisteru, u
+kutiji",risperidon,,,HR-H-583443406-03,Krka - farma d.o.o.,2023-06-19,2023-06-19,,19.06.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547649,N05AX08,37737
+HR,Croatia,HALMED,"Torendo 4 mg filmom obložene tablete; 60 tableta u blisteru, u
+kutiji",risperidon,,,HR-H-920493657-03,Krka - farma d.o.o.,2023-06-19,2023-06-19,,19.06.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547656,N05AX08,37745
+HR,Croatia,HALMED,"Moloxin 400 mg/250 ml otopina za infuziju; 1 boca s 250 ml
+otopine, u kutiji",moksifloksacinklorid,,,HR-H-269339288-01,Krka - farma d.o.o.,2023-06-19,2023-06-19,,19.06.2023. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547663,J01MA14,67636
+HR,Croatia,HALMED,"Rabipur prašak i otapalo za otopinu za injekciju u napunjenoj
+štrcaljki, cjepivo protiv bjesnoće, inaktivirano; 1 bočica s
+praškom, 1 napunjena štrcaljka s otapalom, 1 igla za injiciranje i
+1 igla za rekonstituciju, u kutiji","virus bjesnoće, soj Flury LEP
+(inaktiviran)",,,HR-H-512237923-01,"Bavarian Nordic A/S, Danska",2023-06-20,2021-01-29,,29.01.2021. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547669,,
+HR,Croatia,HALMED,"Bupensanduo 2 mg/0,5 mg sublingvalne tablete; 7 tableta u
+blisteru, u kutiji","buprenorfinklorid
+naloksonklorid dihidrat",,,HR-H-735309760-01,"G.L. Pharma GmbH, Austrija",2023-07-05,2023-07-01,,01.07.2023. - nepoznato,shortage,povezano uz distribuciju,2026-09-23T20:59:53.547676,,
+HR,Croatia,HALMED,"Bupensanduo 4 mg/1 mg sublingvalne tablete; 7 tableta u
+blisteru, u kutiji","buprenorfinklorid
+naloksonklorid dihidrat",,,HR-H-125576373-01,"G.L. Pharma GmbH, Austrija",2023-07-05,2023-07-01,,01.07.2023. - nepoznato,shortage,povezano uz distribuciju,2026-09-23T20:59:53.547682,,
+HR,Croatia,HALMED,"Furocef 500 mg filmom obložene tablete; 14 tableta u blisteru, u
+kutiji",cefuroksimaksetil,,,HR-H-197886716-03,Krka - farma d.o.o.,2023-07-12,2023-07-07,,07.07.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547688,J01DC02,27340
+HR,Croatia,HALMED,"Q-Pin SR 300 mg tablete s produljenim oslobađanjem; 60
+tableta u blisteru, u kutiji",kvetiapinfumarat,,,HR-H-402567482-03,Belupo lijekovi i kozmetika d.d.,2023-07-18,2023-07-18,2026-11-24,18.07.2023. - 24.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547698,N05AH04,84204
+HR,Croatia,HALMED,"Bonviva 3 mg otopina za injekciju; 1 napunjena štrcaljka s 3 ml
+otopine, u kutiji",natrijev ibandronat hidrat,,,EU/1/03/265/005,"Atnahs Pharma Netherlands B.V.,
+Danska",2023-09-12,2023-09-12,,12.09.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547704,M05BA06,80675
+HR,Croatia,HALMED,"Alveofact 45 mg/ml prašak i otapalo za suspenziju za
+endotraheopulmonalno ukapavanje; 1 bočica sa 54 mg praška,
+štrcaljka sa 1,2 ml otapala i igla, u kutiji","fosfolipidna frakcija iz goveđih
+pluća",,,HR-H-384673340-01,"Lyomark Pharma GmbH,
+Njemačka",2023-10-05,2023-01-01,2026-12-31,01.01.2023. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547714,,
+HR,Croatia,HALMED,"Alveofact 45 mg/ml prašak i otapalo za suspenziju za
+endotraheopulmonalno ukapavanje; 1 bočica sa 108 mg praška,
+štrcaljka sa 2,4 ml otapala i igla, u kutiji","fosfolipidna frakcija iz goveđih
+pluća",,,HR-H-384673340-02,"Lyomark Pharma GmbH,
+Njemačka",2023-10-05,2021-11-30,2026-12-31,30.11.2021. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547724,,
+HR,Croatia,HALMED,"Lanzul 30 mg tvrde kapsule; 14 kapsula u blisteru, u kutiji",lanzoprazol,,,HR-H-768580684-01,Krka - farma d.o.o.,2023-10-12,2023-10-12,,12.10.2023. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547731,A02BC03,79391
+HR,Croatia,HALMED,"Q-Pin SR 200 mg tablete s produljenim oslobađanjem; 60
+tableta u blisteru, u kutiji",kvetiapinfumarat,,,HR-H-254538950-03,Belupo lijekovi i kozmetika d.d.,2023-10-31,,,30.10.2023. -24.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547739,N05AH04,84190
+HR,Croatia,HALMED,"Fulvestrant AptaPharma 250 mg otopina za injekciju u
+napunjenoj štrcaljki; 2 napunjene štrcaljke s 5 ml otopine, 2 igle,
+u kutiji",fulvestrant,,,HR-H-804002250-02,"Apta Medica Internacional d.o.o.,
+Slovenija",2023-11-14,,2026-12-31,09.2023. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547748,L02BA03,74934
+HR,Croatia,HALMED,"Deksmedetomidin Kabi 100 mikrograma/ml koncentrat za
+otopinu za infuziju; 10 bočica s 2 ml koncentrata, u kutiji",deksmedetomidinklorid,,,HR-H-989230458-01,Fresenius Kabi d.o.o.,2023-11-15,2023-11-15,2026-12-31,15.11.2023. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547758,N05CM18,
+HR,Croatia,HALMED,"Ciprinol 200 mg/100 ml otopina za infuziju; 1 bočica sa 100 ml
+otopine, u kutiji",ciprofloksacin laktat,,,HR-H-380458364-01,Krka - farma d.o.o.,2023-11-16,2023-11-16,,16.11.2023. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547765,J01MA02,138207
+HR,Croatia,HALMED,"Ig Vena 50 g/l otopina za infuziju; 100 ml otopine u bočici i držač
+za bočicu, u kutiji","imunoglobulin normalni, ljudski,
+intravenski",,,HR-H-528000748-03,"Kedrion S.p.A., Italija",2023-12-28,2023-12-28,2026-12-31,28.12.2023. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547773,,
+HR,Croatia,HALMED,"Dermitopic 0,1 % mast; 30 g masti u tubi, u kutiji",takrolimus hidrat,,,HR-H-789897918-02,"Bausch Health Ireland Limited,
+Irska",2024-01-12,2024-04-30,,30.04.2024. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547780,L04AD02,
+HR,Croatia,HALMED,"Vizarsin 100 mg filmom obložene tablete; 1 tableta u blisteru, u
+kutiji",sildenafilcitrat,,,EU/1/09/551/009,"Krka d.d., Novo Mesto, Slovenija",2024-01-15,2024-01-31,,31.01.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547787,G04BE03,
+HR,Croatia,HALMED,"Dexomen 50 mg/2 ml otopina za injekciju/infuziju; 5 ampula s 2
+ml otopine, u kutiji",deksketoprofentrometamol,,,HR-H-013277039-01,"Berlin-Chemie Menarini Hrvatska
+d.o.o.",2024-02-14,2024-02-14,2027-02-28,14.02.2024. - 28.02.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547796,N02AJ13,69183
+HR,Croatia,HALMED,"Levalox 5 mg/ml otopina za infuziju; 1 bočica s otopinom, u kutiji",levofloksacin hemihidrat,,,HR-H-198326235-01,Krka - farma d.o.o.,2024-02-29,2024-03-04,,04.03.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547802,J01MA12,97500
+HR,Croatia,HALMED,"SmofKabiven extra Nitrogen bez elektrolita, emulzija za infuziju;
+4 vrećice s 1518 ml otopine, u kutiji","alanin
+arginin
+glicin
+histidin
+izoleucin
+leucin
+lizinacetat
+metionin
+fenilalanin
+prolin
+serin
+taurin
+treonin
+triptofan
+tirozin
+valin
+glukoza hidrat
+sojino ulje, rafinirano
+trigliceridi, srednje duljine lanca
+maslinovo ulje, rafinirano
+riblje ulje, obogaćeno omega-3
+kiselinama",,,HR-H-967446225-06,Fresenius Kabi d.o.o.,2024-03-05,2024-03-05,2026-12-31,05.03.2024. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547813,,
+HR,Croatia,HALMED,"Xorox 30 mg/g mast za oko; 1 tuba s 4,5 g masti, u kutiji",aciklovir,,,HR-H-736041311-01,"Agepha Pharma s.r.o., Slovačka",2024-03-11,2024-04-30,2026-10-16,30.04.2024. - 16.10.2026,shortage,komercijalni razlozi,2026-09-23T20:59:53.547822,J05AB01,
+HR,Croatia,HALMED,"Monoclox 1 g prašak za otopinu za infuziju; 50 bočica s praškom,
+u kutiji",kloksacilinnatrij,,,HR-H-384678860-01,"Medochemie Ltd., Cipar",2024-03-21,2024-03-22,,22.03.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547828,J01CF01,
+HR,Croatia,HALMED,"Moventig 25 mg filmom obložene tablete; 30 x 1 filmom
+obložena tableta (jedinična doza), u kutiji",naloksegoloksalat,,,EU/1/14/962/010,"Grünenthal GmbH, Njemačka",2024-03-26,2024-04-01,2026-11-30,01.04.2024. - 30.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547837,A06AH03,147222
+HR,Croatia,HALMED,"Attoxem 10 mg tvrde kapsule; 7 kapsula u blisteru, u kutiji",atomoksetinklorid,,,HR-H-078206345-01,Makpharm d.o.o.,2024-05-24,2024-05-27,2026-10-30,27.05.2024. - 30.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547846,N06BA09,76708
+HR,Croatia,HALMED,"Cipromed 500 mg filmom obložene tablete; 10 tableta u
+blisteru, u kutiji",ciprofloksacinklorid,,,HR-H-113996527-01,Pliva Hrvatska d.o.o.,2024-06-12,2024-07-15,2026-12-31,15.07.2024. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547855,J01MA02,138932
+HR,Croatia,HALMED,"Nazol 1 mg/ml kapi za nos, otopina; 1 bočica s 10 ml otopine i
+nastavkom za kapanje, u kutiji",nafazolinnitrat,,,HR-H-292569763-01,Jadran-Galenski laboratorij d.d.,2024-06-27,2024-06-27,,27.06.2024. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547862,R01AA08,
+HR,Croatia,HALMED,"Nalgesin forte 550 mg filmom obložene tablete; 10 tableta u
+blisteru",naproksennatrij,,,HR-H-245055909-01,Krka - farma d.o.o.,2024-07-03,2024-07-03,,03.07.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547869,M01AE02,33820
+HR,Croatia,HALMED,"Aubagio 7 mg filmom obložene tablete; 28 tableta u blisteru, u
+kutiji",teriflunomid,,,EU/1/13/838/006,"Sanofi Winthrop Industrie,
+Francuska",2024-07-09,2024-08-01,,01.08.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547876,L04AK02,213543
+HR,Croatia,HALMED,"Monkasta 4 mg tablete za žvakanje; 28 tableta u blisteru, u kutiji",montelukastnatrij,,,HR-H-054532530-01,Krka - farma d.o.o.,2024-09-03,2024-09-03,2026-12-31,03.09.2024. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547885,R03DC03,67857
+HR,Croatia,HALMED,"Amicor H 20 mg/12,5 mg tablete; 20 tableta u blisteru, u kutiji",lizinopril dihidrat hidroklorotiazid,,,HR-H-509637593-01,Jadran-Galenski laboratorij d.d.,2024-09-25,2024-09-25,,25.09.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547892,C09BA03,30090
+HR,Croatia,HALMED,"Cinakalcet Accordpharma 30 mg filmom obložene tablete; 28
+tableta u blisteru, u kutiji",cinakalcetklorid,,,EU/1/20/1429/002,"Accord Healthcare S.L.U.,
+Španjolska",2024-09-26,2024-09-30,2027-01-01,30.09.2024. - 01.01.2027.,shortage,neispravnost u kakvoći,2026-09-23T20:59:53.547901,H05BX01,77100
+HR,Croatia,HALMED,"Cinakalcet Accordpharma 60 mg filmom obložene tablete; 28
+tableta u blisteru, u kutiji",cinakalcetklorid,,,EU/1/20/1429/006,"Accord Healthcare S.L.U.,
+Španjolska",2024-09-26,2024-09-30,2027-01-01,30.09.2024. - 01.01.2027.,shortage,neispravnost u kakvoći,2026-09-23T20:59:53.547910,H05BX01,77119
+HR,Croatia,HALMED,"Timalen 2,5 mg/ml kapi za oko, otopina; 1 bočica s nastavkom
+za kapanje s 5 ml otopine, u kutiji",timololmaleat,,,HR-H-890931943-01,Jadran-Galenski laboratorij d.d.,2024-10-04,2024-10-04,,04.10.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547917,S01ED01,214051
+HR,Croatia,HALMED,"Lirona XL 4 mg tablete s produljenim oslobađanjem; 28 tableta u
+blisteru, u kutiji",ropinirolklorid,,,HR-H-747295632-01,Pliva Hrvatska d.o.o.,2024-10-07,2024-11-18,2026-11-30,18.11.2024. - 30.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547926,N04BC04,85634
+HR,Croatia,HALMED,"Lirona XL 8 mg tablete s produljenim oslobađanjem; 28 tableta u
+blisteru, u kutiji",ropinirolklorid,,,HR-H-957203545-01,Pliva Hrvatska d.o.o.,2024-10-07,2024-12-16,2026-11-30,16.12.2024. - 30.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.547937,N04BC04,85642
+HR,Croatia,HALMED,"Salofalk 500 mg granule s produljenim oslobađanjem; 100
+vrećica s granulama, u kutiji",mesalazin,,,HR-H-842627661-02,"Dr. Falk Pharma GmbH,
+Njemačka",2024-10-08,2024-10-15,2026-12-31,15.10.2024. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547946,A07EC02,
+HR,Croatia,HALMED,"Kvetiapin XR PharmaS 200 mg tablete s produljenim
+oslobađanjem; 60 tableta u blisteru, u kutiji",kvetiapinfumarat,,,HR-H-931238699-01,PharmaS d.o.o.,2024-11-20,2024-11-20,2027-06-30,20.11.2024. - 30.06.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547954,N05AH04,84190
+HR,Croatia,HALMED,"Kvetiapin XR PharmaS 300 mg tablete s produljenim
+oslobađanjem; 60 tableta u blisteru, u kutiji",kvetiapinfumarat,,,HR-H-478380533-01,PharmaS d.o.o.,2024-11-20,2024-11-20,2027-06-30,20.11.2024. - 30.06.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547963,N05AH04,84204
+HR,Croatia,HALMED,"Sildenafil Alpha-Medical 20 mg filmom obložene tablete; 90
+tableta u bočici, u kutiji",sildenafilcitrat,,,HR-H-193404304-01,Alpha-Medical d.o.o.,2024-11-29,2025-01-01,2026-09-30,01.01.2025. - 30.09.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.547972,G04BE03,80365
+HR,Croatia,HALMED,"Meropenem Ligula Pharma 1000 mg prašak za otopinu za
+injekciju/infuziju; 1 bočica s praškom, u kutiji",meropenem trihidrat,,,HR-H-432057427-01,Ligula Pharma d.o.o.,2024-11-29,2024-11-30,,30.11.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547978,J01DH02,94838
+HR,Croatia,HALMED,"Kalijev jodid Sandoz 65 mg tablete; 2 tablete u blisteru, u kutiji",kalijev jodid,,,HR-H-316006942-01,Sandoz d.o.o.,2024-12-02,2024-12-02,,02.12.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.547985,V03AB21,147273
+HR,Croatia,HALMED,"Natrijev klorid Alkaloid 9 mg/ml otopina za infuziju; 1 boca s 500
+ml otopine, 20 boca u podlošku omotano zaštitnom plastičnom
+folijom",natrijev klorid,,,HR-H-236766892-01,"Alkaloid - INT d.o.o., Slovenija",2024-12-02,2024-12-02,2026-09-30,02.12.2024. - 30.09.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.547995,B05BB01,27685
+HR,Croatia,HALMED,"Sugamadeks Teva 100 mg/ml otopina za injekciju; 10 bočica s 5
+ml otopine, u kutiji",sugamadeksnatrij,,,HR-H-336447679-02,"Teva B.V., Nizozemska",2024-12-02,2024-12-02,2026-09-30,02.12.2024. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548004,V03AB15,
+HR,Croatia,HALMED,"Androcur 50 mg tablete; 50 tableta u blisteru, u kutiji",ciproteronacetat,,,HR-H-843981106-01,"Advanz Pharma Limited, Irska",2024-12-04,2025-02-28,,28.02.2025. - nepoznato,shortage,regulatorni razlozi,2026-09-23T20:59:53.548010,G03HA01,2712
+HR,Croatia,HALMED,"Lirona XL 2 mg tablete s produljenim oslobađanjem; 28 tableta u
+blisteru, u kutiji",ropinirolklorid,,,HR-H-394324006-01,Pliva Hrvatska d.o.o.,2024-12-09,2025-01-13,2026-11-30,13.01.2025. - 30.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548019,N04BC04,
+HR,Croatia,HALMED,"Aclasta 5 mg otopina za infuziju; 1 bočica sa 100 ml otopine, u
+kutiji",zoledronatna kiselina hidrat,,,EU/1/05/308/001,"Sandoz Pharmaceuticals d.d.,
+Slovenija",2024-12-30,2024-12-30,,30.12.2024. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548026,M05BX07,
+HR,Croatia,HALMED,"Meralys 0,5 mg/ml sprej za nos, otopina; 10 ml otopine u bočici
+s odmjernim sustavom za raspršivanje, u kutiji",ksilometazolinklorid,,,HR-H-733330491-01,Jadran-Galenski laboratorij d.d.,2025-01-09,2025-01-09,,09.01.2025. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548033,R01AA07,29238
+HR,Croatia,HALMED,"Nasoryl M 0,5 mg/ml + 0,6 mg/ml sprej za nos, otopina; 10 ml
+otopine u bočici s odmjernim sustavom za raspršivanje, u kutiji","ksilometazolinklorid
+ipratropijev bromid",,,HR-H-942729742-01,Jadran-Galenski laboratorij d.d.,2025-01-09,2025-01-09,,09.01.2025. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548039,,
+HR,Croatia,HALMED,"Nazol N 0,5 mg/ml kapi za nos, otopina; 10 ml otopine u bočici s
+nastavkom za kapanje, u kutiji",ksilometazolinklorid,,,HR-H-933243092-01,Jadran-Galenski laboratorij d.d.,2025-01-09,2025-01-09,,09.01.2025. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548045,R01AA07,6661
+HR,Croatia,HALMED,"Nazol N 1 mg/ml kapi za nos, otopina; 10 ml otopine u bočici s
+nastavkom za kapanje, u kutiji",ksilometazolinklorid,,,HR-H-808215734-01,Jadran-Galenski laboratorij d.d.,2025-01-09,2025-01-09,,09.01.2025. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548054,R01AA07,6688
+HR,Croatia,HALMED,"Albunorm 200 g/l otopina za infuziju; 1 boca s 50 ml otopine, u
+kutiji","albumin, ljudski",,,HR-H-152403256-01,Jana Pharm d.o.o.,2025-01-10,2024-11-15,2026-12-31,15.11.2024. - 31.12.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.548063,,
+HR,Croatia,HALMED,"Abirateron Zentiva 500 mg filmom obložene tablete; 60 tableta
+u blisteru, u kutiji",abirateronacetat,,,HR-H-598941461-02,"Zentiva k.s., Češka",2025-01-15,2025-01-15,2026-12-31,15.01.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548072,L02BX03,136913
+HR,Croatia,HALMED,"SmofKabiven extra Nitrogen bez elektrolita, emulzija za infuziju;
+4 vrećice s 2025 ml otopine, u kutiji","alanin
+arginin
+glicin
+histidin
+izoleucin
+leucin
+lizinacetat
+metionin
+fenilalanin
+prolin
+serin
+taurin
+treonin
+triptofan
+tirozin
+valin
+glukoza hidrat
+sojino ulje, rafinirano
+trigliceridi, srednje duljine lanca
+maslinovo ulje, rafinirano
+riblje ulje, obogaćeno omega-3
+kiselinama",,,HR-H-967446225-08,Fresenius Kabi d.o.o.,2025-01-27,2025-01-27,2026-12-31,27.01.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548081,,
+HR,Croatia,HALMED,"Piperacilin/Tazobactam Fresenius Kabi 2g/0,25g prašak za
+otopinu za infuziju; 10 bočica s praškom, u kutiji","piperacilinnatrij
+tazobaktamnatrij
+alanin",,,HR-H-771157107-01,Fresenius Kabi d.o.o.,2025-01-27,2025-01-27,2026-12-31,27.01.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548091,,
+HR,Croatia,HALMED,"Smofkabiven emulzija za infuziju; 2463 ml emulzije u vrećici s tri
+odjeljka, u zaštitnoj vrećici, 3 vrećice u kutiji","arginin
+glicin
+histidin
+izoleucin
+leucin
+lizinacetat
+metionin
+fenilalanin
+prolin
+serin
+taurin
+treonin
+triptofan
+tirozin
+valin
+kalcijev klorid dihidrat
+natrijev glicerofosfat hidrat
+magnezijev sulfat heptahidrat
+kalijev klorid
+natrijev acetat trihidrat
+cinkov sulfat heptahidrat
+glukoza hidrat
+sojino ulje, pročišćeno
+trigliceridi, srednje duljine lanca
+maslinovo ulje
+riblje ulje, obogaćeno omega-3
+kiselinama",,,HR-H-521669305-04,Fresenius Kabi d.o.o.,2025-01-27,2025-01-27,2026-12-31,27.01.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548100,,
+HR,Croatia,HALMED,"Doxorubicin Pliva 2 mg/ml otopina za injekciju/infuziju; 1 bočica
+s 5 ml otopine, u kutiji",doksorubicinklorid,,,HR-H-144429570-01,Pliva Hrvatska d.o.o.,2025-02-03,2025-02-04,2026-12-31,04.02.2025. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548109,L01DB01,30694
+HR,Croatia,HALMED,"Eleber 60 mg koncentrat i otapalo za otopinu za infuziju; 1
+bočica s koncentratom i 1 bočica s otapalom, u kutiji",kabazitaksel,,,HR-H-561829137-01,"Zentiva k.s., Češka",2025-02-04,2025-02-04,2026-12-31,04.02.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548118,L01CD04,
+HR,Croatia,HALMED,"Verquvo 10 mg filmom obložene tablete; 14 tableta u blisteru, u
+kutiji",vericigvat,,,EU/1/21/1561/023,"Bayer AG, Njemačka",2025-02-07,2025-02-07,2027-01-01,07.02.2025. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548128,C02KX01,
+HR,Croatia,HALMED,"Verquvo 5 mg filmom obložene tablete; 14 tableta u blisteru, u
+kutiji",vericigvat,,,EU/1/21/1561/012,"Bayer AG, Njemačka",2025-02-07,2025-03-01,2027-01-01,01.03.2025. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548136,C02KX01,
+HR,Croatia,HALMED,"Linezolid Kabi 2 mg/ml otopina za infuziju; 10 vrećica sa 300 ml
+otopine, u kutiji",linezolid,,,HR-H-690522814-01,Fresenius Kabi d.o.o.,2025-02-28,2025-02-26,2026-12-31,26.02.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548147,J01XX08,60151
+HR,Croatia,HALMED,"Glukoza Fresenius Kabi 5% otopina za infuziju; 50 ml otopine u
+vreći, 60 vreća u kutiji",glukoza hidrat,,,HR-H-238420460-04,Fresenius Kabi d.o.o.,2025-02-28,2025-02-26,2026-12-31,26.02.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548156,,
+HR,Croatia,HALMED,"Glukoza Fresenius Kabi 5% otopina za infuziju; 100 ml otopine u
+vreći, 50 vreća u kutiji",glukoza hidrat,,,HR-H-238420460-05,Fresenius Kabi d.o.o.,2025-02-28,2025-02-26,2026-12-31,26.02.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548165,,
+HR,Croatia,HALMED,"Glukoza Fresenius Kabi 5% otopina za infuziju; 250 ml otopine u
+vreći, 30 vreća u kutiji",glukoza hidrat,,,HR-H-238420460-06,Fresenius Kabi d.o.o.,2025-02-28,2025-02-26,2026-12-31,26.02.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548173,,
+HR,Croatia,HALMED,"Glukoza Fresenius Kabi 5% otopina za infuziju; 1000 ml otopine
+u vreći, 10 vreća u kutiji",glukoza hidrat,,,HR-H-238420460-08,Fresenius Kabi d.o.o.,2025-02-28,2025-02-26,2026-12-31,26.02.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548182,,
+HR,Croatia,HALMED,"Eminens SR 8 mg tablete s produljenim oslobađanjem; 28
+tableta u blisteru, u kutiji",ropinirolklorid,,,HR-H-568403155-01,Belupo lijekovi i kozmetika d.d.,2025-03-14,2025-03-14,2026-11-16,14.03.2025. - 16.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548190,N04BC04,85642
+HR,Croatia,HALMED,"OsvaRen 435 mg/235 mg filmom obložene tablete; 180 tableta u
+spremniku, u kutiji","kalcijev acetat
+magnezijev subkarbonat, teški",,,HR-H-130861711-01,"Fresenius Medical Care Hrvatska
+d.o.o.",2025-03-24,2025-03-24,2027-03-31,24.03.2025. - 31.03.2027.,shortage,razlozi povezani s kakvoćom,2026-09-23T20:59:53.548199,,
+HR,Croatia,HALMED,"Irinotekan Kabi 20 mg/ml koncentrat za otopinu za infuziju; 1
+bočica s 2 ml koncentrata, u kutiji",irinotekanklorid trihidrat,,,HR-H-885268744-01,Fresenius Kabi d.o.o.,2025-04-07,2025-04-04,2026-12-31,04.04.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548207,,
+HR,Croatia,HALMED,"Tyenne 162 mg otopina za injekciju u napunjenoj štrcaljki; 4
+napunjene štrcaljke s 0,9 ml otopine, u kutiji",tocilizumab,,,EU/1/23/1754/008,"Fresenius Kabi Deutschland
+GmbH, Njemačka",2025-04-10,2025-04-09,2026-12-31,09.04.2025. - 31.12.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.548216,L04AC07,116475
+HR,Croatia,HALMED,"Eminens SR 4 mg tablete s produljenim oslobađanjem; 28
+tableta u blisteru, u kutiji",ropinirolklorid,,,HR-H-987915502-01,Belupo lijekovi i kozmetika d.d.,2025-04-30,2025-04-29,2026-11-16,29.04.2025. - 16.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548224,N04BC04,85634
+HR,Croatia,HALMED,"Phan 62,5 mg filmom obložene tablete; 56 tableta u blisteru, u
+kutiji",bosentan hidrat,,,HR-H-311046390-02,Alpha-Medical d.o.o.,2025-05-20,2025-05-20,2026-12-31,20.05.2025. - 31.12.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.548233,C02KA01,
+HR,Croatia,HALMED,"Rokuronijev bromid hameln 10 mg/ml otopina za
+injekciju/infuziju; 10 bočica s 5 ml otopine, u kutiji",rokuronijev bromid,,,HR-H-304102701-04,"hameln pharma gmbH, Njemačka",2025-05-21,2025-05-20,2026-10-01,20.05.2025. - 01.10.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.548241,M03AC09,46280
+HR,Croatia,HALMED,"Rokuronijev bromid Kalceks 10 mg/ml otopina za
+injekciju/infuziju; 10 bočica s 5 ml otopine, u kutiji",rokuronijev bromid,,,HR-H-854187659-01,"AS Kalceks, Latvija",2025-05-23,2025-05-15,2026-09-30,15.05.2025. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548250,M03AC09,46280
+HR,Croatia,HALMED,"Detralex Venohem 500 mg filmom obložene tablete; 36 tableta
+u blisteru, u kutiji","mikronizirana, pročišćena smjesa
+flavonoida koja se sastoji od 90%
+diosmina i 10% flavonoida izraženih
+kao hesperidin",,,HR-H-607242204-01,Servier Pharma d.o.o.,2025-05-27,2025-08-01,2027-08-01,01.08.2025. - 01.08.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548259,,
+HR,Croatia,HALMED,"Detralex 500 mg filmom obložene tablete; 30 tableta u blisteru,
+u kutiji","mikronizirana, pročišćena smjesa
+flavonoida koja se sastoji od 90%
+diosmina i 10% flavonoida izraženih
+kao hesperidin",,,HR-H-639382683-01,Servier Pharma d.o.o.,2025-05-27,2025-08-01,2027-08-01,01.08.2025. - 01.08.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548267,,
+HR,Croatia,HALMED,"Glukoza Fresenius Kabi 5% otopina za infuziju; 500 ml otopine u
+vreći, 20 vreća u kutiji",glukoza hidrat,,,HR-H-238420460-07,Fresenius Kabi d.o.o.,2025-06-12,2025-06-11,2026-12-31,11.06.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548276,,
+HR,Croatia,HALMED,"Furosemid hameln 10 mg/ml otopina za injekciju; 10 ampula s
+25 ml otopine, u kutiji",furosemid,,,HR-H-711394667-06,"hameln pharma gmbH, Njemačka",2025-06-13,2025-06-09,2026-09-30,09.06.2025. - 30.09.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548284,C03CA01,5959
+HR,Croatia,HALMED,"Hypnomidate 2 mg/ml otopina za injekciju; 5 ampula s 10 ml
+otopine, u kutiji",etomidat,,,HR-H-990410340-01,"Piramal Critical Care B.V.,
+Nizozemska",2025-07-08,2025-07-03,2026-12-31,03.07.2025. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548293,N01AX07,3492
+HR,Croatia,HALMED,"Razagilin Belupo 1 mg tablete; 28 tableta u blisteru, u kutiji",razagilin hemitartarat,,,HR-H-844440776-01,Belupo lijekovi i kozmetika d.d.,2025-07-08,2025-07-08,2026-11-18,08.07.2025. - 18.11.2026.,shortage,razlozi povezani s kakvoćom,2026-09-23T20:59:53.548301,N04BD02,129852
+HR,Croatia,HALMED,"Razagilin Belupo 1 mg tablete; 56 tableta u blisteru, u kutiji",razagilin hemitartarat,,,HR-H-844440776-02,Belupo lijekovi i kozmetika d.d.,2025-07-08,2025-07-08,2026-11-18,08.07.2025. - 18.11.2026.,shortage,razlozi povezani s kakvoćom,2026-09-23T20:59:53.548309,N04BD02,129852
+HR,Croatia,HALMED,"Furextil 500 mg filmom obložene tablete; 10 tableta u blisteru, u
+kutiji",cefuroksimaksetil,,,HR-H-816131041-04,"Alkaloid - INT d.o.o., Slovenija",2025-07-11,2025-07-11,2026-09-30,11.07.2025. - 30.09.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548318,J01DC02,27340
+HR,Croatia,HALMED,"Midazolam hameln 5 mg/ml otopina za injekciju/infuziju; 10
+ampula s 10 ml otopine, u kutiji",midazolamklorid,,,HR-H-799453923-22,"hameln pharma gmbH, Njemačka",2025-07-21,2025-07-18,2026-10-01,18.07.2025. - 01.10.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548327,N05CD08,93653
+HR,Croatia,HALMED,"Pinox 10 mg filmom obložene tablete; 56 tableta u blisteru, u
+kutiji",lerkanidipinklorid,,,HR-H-259619737-02,Belupo lijekovi i kozmetika d.d.,2025-07-25,2025-07-24,2026-11-16,24.07.2025. - 16.11.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548335,C08CA13,
+HR,Croatia,HALMED,"Dolyxan 60 mg tvrde želučanootporne kapsule; 28 kapsula u
+blisteru, u kutiji",duloksetinklorid,,,HR-H-263079706-01,Belupo lijekovi i kozmetika d.d.,2025-07-28,2025-07-25,2026-10-08,25.07.2025. - 08.10.2026.,shortage,razlozi povezani sa kakvoćom,2026-09-23T20:59:53.548344,N06AX21,79065
+HR,Croatia,HALMED,"Semquest 6 mg/0,4 mg tablete s prilagođenim oslobađanjem;
+30 tableta u blisteru, u kutiji","solifenacinsukcinat
+tamsulozinklorid",,,HR-H-189973461-03,"Bausch Health Ireland Limited,
+Irska",2025-07-29,2025-09-30,2026-12-31,30.09.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548353,,
+HR,Croatia,HALMED,"Tarka 180 mg/2 mg tablete s prilagođenim oslobađanjem; 28
+tableta u blisteru, u kutiji","verapamilklorid
+trandolapril",,,HR-H-037957008-01,Viatris Hrvatska d.o.o.,2025-07-31,2025-08-10,2026-10-31,10.08.2025. - 31.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548362,,
+HR,Croatia,HALMED,"Rivaroksaban Zentiva 15 mg tvrde kapsule; 28 kapsula u blisteru,
+u kutiji",rivaroksaban,,,HR-H-565925472-02,"Zentiva k.s., Češka",2025-07-31,2025-07-31,2026-12-31,31.07.2025. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548370,B01AF01,100145
+HR,Croatia,HALMED,"Rivaroksaban Zentiva 20 mg tvrde kapsule; 28 kapsula u blisteru,
+u kutiji",rivaroksaban,,,HR-H-349502128-02,"Zentiva k.s., Češka",2025-07-31,2025-07-31,2026-12-31,31.07.2025. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548379,B01AF01,100153
+HR,Croatia,HALMED,"Metadon Alkaloid 5 mg/ml oralna otopina; 1 bočica s 20 ml
+otopine, u kutiji",metadonklorid,,,HR-H-714939187-01,"Alkaloid - INT d.o.o., Slovenija",2025-08-07,2025-08-20,2026-09-30,20.08.2025. - 30.09.2026.,shortage,regulatorni razlozi,2026-09-23T20:59:53.548387,N07BC02,73261
+HR,Croatia,HALMED,"Oftidorix PF 20 mg/ml + 5 mg/ml, kapi za oko, otopina; 1 bočica
+s 5 ml otopine, u kutiji","dorzolamidklorid
+timololmaleat",,,HR-H-458197035-01,"Bausch + Lomb Ireland Limited,
+Irska",2025-08-13,2025-08-15,2027-03-01,15.08.2025. - 01.03.2027.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548395,,
+HR,Croatia,HALMED,"Syntocinon 5 IU/ml otopina za injekciju/infuziju; 10 ampula s 1
+ml otopine, u kutiji",oksitocin,,,HR-H-207633940-01,"CD Pharmaceuticals AB, Švedska",2025-08-14,2025-08-21,2026-10-01,21.08.2025. - 01.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548405,H01BB02,7536
+HR,Croatia,HALMED,"Scintimun 1 mg set za pripravu radiofarmaceutika; 2 bočice s
+praškom i 2 bočica s otapalom, u kutiji",besilesomab,,,EU/1/09/602/002,"Telix Innovations, Belgija",2025-08-27,2025-09-17,2028-06-26,17.09.2025. - 26.06.2028.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548414,,
+HR,Croatia,HALMED,"Lekoklar XL 500 mg tablete s prilagođenim oslobađanjem; 7
+tableta u blisteru, u kutiji",klaritromicin,,,HR-H-039762541-01,Sandoz d.o.o.,2025-09-05,2025-09-05,2026-10-01,05.09.2025. - 01.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548423,J01FA09,49425
+HR,Croatia,HALMED,"Glukoza HZTM 5% otopina za infuziju; 100 ml otopine u boci, 20
+boca u kutiji",glukoza hidrat,,,HR-H-686695433-01,"Hrvatski zavod za transfuzijsku
+medicinu",2025-09-09,2025-09-15,2028-09-15,15.09.2025. - 15.09.2028.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548432,,
+HR,Croatia,HALMED,"Glukoza HZTM 10% otopina za infuziju; 100 ml otopine u boci,
+20 boca u kutiji",glukoza hidrat,,,HR-H-038647453-01,"Hrvatski zavod za transfuzijsku
+medicinu",2025-09-09,2025-12-15,2028-12-15,15.12.2025. - 15.12.2028.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548440,,
+HR,Croatia,HALMED,"Idacio 40 mg otopina za injekciju u napunjenoj štrcaljki; 2
+napunjene štrcaljke s 0,8 ml otopine + 2 jastučica natopljena
+alkoholom, u kutiji",adalimumab,,,EU/1/19/1356/002,"Fresenius Kabi Deutschland
+GmbH, Njemačka",2025-09-11,2025-09-12,2026-12-31,12.09.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548449,L04AB04,84492
+HR,Croatia,HALMED,"Prostin E2 2 mg gel za rodnicu; jedna štrcaljka sa 3 g gela, u
+kutiji",dinoproston,,,HR-H-721133137-01,Pfizer Croatia d.o.o.,2025-09-24,2026-01-16,2026-10-19,16.01.2026. - 19.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548458,G02AD02,32328
+HR,Croatia,HALMED,"NeoRecormon 2000 IU otopina za injekciju; 6 napunjenih
+štrcaljki s 0,3 ml otopine, u kutiji",epoetin beta,,,EU/1/97/031/030,"Roche Registration GmbH,
+Njemačka",2025-09-24,2025-10-01,,01.10.2025. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548464,B03XA01,60313
+HR,Croatia,HALMED,"Kvetiapin XR PharmaS 50 mg tablete s produljenim
+oslobađanjem; 60 tableta u blisteru, u kutiji",kvetiapinfumarat,,,HR-H-760751440-02,PharmaS d.o.o.,2025-09-26,2025-09-23,2027-01-01,23.09.2025. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548472,N05AH04,84182
+HR,Croatia,HALMED,"Kvetiapin XR PharmaS 400 mg tablete s produljenim
+oslobađanjem; 60 tableta u blisteru, u kutiji",kvetiapinfumarat,,,HR-H-435981012-01,PharmaS d.o.o.,2025-09-26,2025-09-23,2027-01-01,23.09.2025. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548481,N05AH04,84212
+HR,Croatia,HALMED,"Plubir 18 mikrograma, prašak inhalata, tvrde kapsule; 30
+kapsula u blisteru i inhalator, u kutiji",tiotropijev bromid,,,HR-H-761192159-01,"Zentiva k.s., Češka",2025-10-06,2025-10-06,2026-12-31,06.10.2025. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548494,R03BB04,59927
+HR,Croatia,HALMED,"Hidrasec 10 mg granule za oralnu suspenziju; 16 vrećica s
+granulama, u kutiji",racekadotril,,,HR-H-944929327-01,"Bioprojet Pharma, Francuska",2025-10-27,2024-12-31,,31.12.2024. - nepoznato,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.548500,A07XA04,
+HR,Croatia,HALMED,"Hidrasec 30 mg granule za oralnu suspenziju; 16 vrećica s
+granulama, u kutiji",racekadotril,,,HR-H-113623607-01,"Bioprojet Pharma, Francuska",2025-10-27,2024-12-31,,31.12.2024. - nepoznato,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.548506,A07XA04,
+HR,Croatia,HALMED,"Hidrasec effect 100 mg tvrde kapsule; 10 kapsula u blisteru, u
+kutiji",racekadotril,,,HR-H-006305834-01,"Bioprojet Pharma, Francuska",2025-10-27,2025-01-02,,02.01.2025. - nepoznato,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.548513,A07XA04,
+HR,Croatia,HALMED,"Cisatrakurij Accordpharma 2 mg/ml otopina za injekciju/infuziju;
+5 bočica s 5 ml otopine, u kutiji",cisatrakurijev besilat,,,HR-H-250543709-02,"Accord Healthcare Polska Sp. z
+o.o., Poljska",2025-10-28,2025-10-28,2026-10-30,28.10.2025. - 30.10.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548523,,
+HR,Croatia,HALMED,"Cisatrakurij Accordpharma 5 mg/ml otopina za injekciju/infuziju;
+1 bočica s 30 ml otopine, u kutiji",cisatrakurijev besilat,,,HR-H-400799381-01,"Accord Healthcare Polska Sp. z
+o.o., Poljska",2025-10-28,2025-10-28,2026-10-30,28.10.2025. - 30.10.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548531,,
+HR,Croatia,HALMED,"Iasibon 50 mg filmom obložene tablete; 28 tableta u blisteru, u
+kutiji",natrijev ibandronat hidrat,,,EU/1/10/659/001,"Pharmathen S.A., Grčka",2025-10-29,2025-10-28,2027-07-01,28.10.2025. - 01.07.2027.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548540,M05BA06,76945
+HR,Croatia,HALMED,"Kaspofungin Pliva 70 mg prašak za koncentrat za otopinu za
+infuziju; 1 bočica s praškom, u kutiji",kaspofunginacetat,,,HR-H-680998323-01,Pliva Hrvatska d.o.o.,2025-10-30,2025-10-30,2026-10-30,30.10.2025. - 30.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548549,J02AX04,70319
+HR,Croatia,HALMED,"Oktreotid Teva 30 mg prašak i otapalo za suspenziju za injekciju
+s produljenim oslobađanjem; 1 bočica s praškom, 1 napunjena
+štrcaljka s otapalom, 1 nastavak za bočicu i 1 sigurnosna igla, u
+plastičnom spremniku, u kutiji",oktreotidacetat,,,HR-H-168254025-01,"Teva B.V., Nizozemska",2025-12-04,2026-01-09,2026-12-31,09.01.2026. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548557,H01CB02,70467
+HR,Croatia,HALMED,"NeoRecormon 4000 IU otopina za injekciju; 6 napunjenih
+štrcaljki s 0,3 ml otopine, u kutiji",epoetin beta,,,EU/1/97/031/042,"Roche Registration GmbH,
+Njemačka",2025-12-16,2025-12-17,2027-12-31,17.12.2025. - 31.12.2027.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548565,B03XA01,60348
+HR,Croatia,HALMED,"Piperacilin/Tazobactam Fresenius Kabi 4g/0,5g prašak za
+otopinu za infuziju; 10 bočica s praškom, u kutiji","piperacilinnatrij
+tazobaktamnatrij",,,HR-H-890076802-01,Fresenius Kabi d.o.o.,2025-12-17,2025-12-17,2026-10-31,17.12.2025. - 31.10.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548575,,
+HR,Croatia,HALMED,"Rudakol 200 mg tvrde kapsule s produljenim oslobađanjem; 60
+kapsula u blisteru, u kutiji",mebeverinklorid,,,HR-H-878028593-02,Belupo lijekovi i kozmetika d.d.,2025-12-18,2025-12-18,2026-11-16,18.12.2025. - 16.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548584,A03AA04,25100
+HR,Croatia,HALMED,"Prepidil 0,5 mg/3 g endocervikalni gel; 1 štrcaljka s 3 g gela i
+kateter, u kutiji",dinoproston,,,HR-H-599786838-01,Pfizer Croatia d.o.o.,2025-12-18,2025-12-19,2026-11-02,19.12.2025. - 02.11.2026.,shortage,"razlozi povezani s proizvodnjom i
+neočekivano povećana potražnja",2026-09-23T20:59:53.548592,G02AD02,71943
+HR,Croatia,HALMED,"Kordobis 5 mg tablete; 30 tableta u blisteru, u kutiji",bisoprololfumarat,,,HR-H-584474974-01,Pliva Hrvatska d.o.o.,2025-12-23,2025-12-25,2026-09-18,25.12.2025. - 18.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548601,C07AB07,25534
+HR,Croatia,HALMED,"Deferasiroks Pliva 180 mg filmom obložene tablete; 30 tableta u
+blisteru s jediničnom dozom, u kutiji",deferasiroks,,,HR-H-852730370-04,Pliva Hrvatska d.o.o.,2025-12-23,2026-01-02,2026-09-25,02.01.2026 - 25.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548610,V03AC03,137197
+HR,Croatia,HALMED,"Opsumit 10 mg filmom obložene tablete; 30 tableta u blisteru, u
+kutiji",macitentan,,,"EU/1/13/893/002
+EMA/PD/0000122498","Janssen-Cilag International N.V.,
+Belgija
+(Paralelni distributer: Delecto
+Firmus d.o.o.)",2026-01-07,2026-01-07,2026-09-06,07.01.2026. - 06.09.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548619,C02KX04,115452
+HR,Croatia,HALMED,"Kalydeco 75 mg filmom obložene tablete; 28 tableta u blisteru, u
+kutiji",ivakaftor,,,"EU/1/12/782/007
+EMA/PD/0000265660","Vertex Pharmaceuticals (Ireland)
+Limited
+(Paralelni distributer: Delecto
+Firmus d.o.o.)",2026-01-07,2026-01-07,2026-11-30,07.01.2026. - 30.11.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548628,R07AX02,212903
+HR,Croatia,HALMED,"Kalydeco 150 mg filmom obložene tablete; 28 tableta u blisteru,
+u kutiji",ivakaftor,,,"EU/1/12/782/005
+EMA/PD/0000265538","Vertex Pharmaceuticals (Ireland)
+Limited
+(Paralelni distributer: Delecto
+Firmus d.o.o.)",2026-01-07,2026-01-07,2026-11-30,07.01.2026. - 30.11.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548637,R07AX02,115134
+HR,Croatia,HALMED,"Sufentanil hameln 5 mikrograma/ml otopina za
+injekciju/infuziju; 10 ampula s 10 ml otopine, u kutiji",sufentanilcitrat,,,HR-H-080211397-04,"hameln pharma gmbH, Njemačka",2026-01-27,2026-01-27,2026-09-30,27.01.2026. - 30.09.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548646,N01AH01,
+HR,Croatia,HALMED,"Rosacol 20 mg filmom obložene tablete; 28 tableta u blisteru, u
+kutiji",rosuvastatinkalcij,,,HR-H-862516273-03,"Viatris Limited, Irska",2026-02-05,2026-02-09,2026-12-15,09.02.2026. - 15.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548655,C10AA07,201057
+HR,Croatia,HALMED,"Deksametazon Sandoz 4 mg/ml otopina za injekciju; 10 ampula s
+1 ml otopine, u kutiji",natrijev deksametazonfosfat,,,HR-H-499072469-02,Sandoz d.o.o.,2026-02-06,2026-02-05,2026-10-01,05.02.2026. - 01.10.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.548663,H02AB02,21385
+HR,Croatia,HALMED,"Deksametazon hameln 4 mg/ml otopina za injekciju; 10 ampula
+s 1 ml otopine, u kutiji",natrijev deksametazonfosfat,,,HR-H-420625303-02,"hameln pharma gmbH, Njemačka",2026-02-09,2026-02-09,2026-12-01,09.02.2026. - 01.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548672,H02AB02,21385
+HR,Croatia,HALMED,"Ibandronat Sandoz 150 mg filmom obložene tablete; 1 tableta u
+blisteru, u kutiji",natrijev ibandronat hidrat,,,HR-H-758910209-01,Sandoz d.o.o.,2026-02-12,2026-02-12,2026-10-01,12.02.2026. - 01.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548680,M05BA06,79685
+HR,Croatia,HALMED,"Imuran 50 mg filmom obložene tablete; 100 tableta u blisteru, u
+kutiji",azatioprin,,,HR-H-628872163-01,"Aspen Pharma Trading Limited,
+Irska",2026-02-19,2026-03-30,2026-10-31,30.03.2026. - 31.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548689,L04AX01,5681
+HR,Croatia,HALMED,"Abuxar 80 mg filmom obložene tablete; 28 tableta u blisteru, u
+kutiji",febuksostat,,,HR-H-347159881-01,Belupo lijekovi i kozmetika d.d.,2026-02-20,2026-02-19,2026-10-29,19.02.2026. - 29.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548698,M04AA03,101788
+HR,Croatia,HALMED,"Trandolapril PharmaS 0,5 mg tvrde kapsule; 56 kapsula u
+blisteru, u kutiji",trandolapril,,,HR-H-124179389-01,PharmaS d.o.o.,2026-02-24,2026-02-24,2027-02-28,24.02.2026. - 28.02.2027.,shortage,razlozi povezani s kakvoćom,2026-09-23T20:59:53.548706,C09AA10,
+HR,Croatia,HALMED,"Irinotesin 20 mg/ml koncentrat za otopinu za infuziju; 1 bočica s
+5 ml koncentrata za otopinu, u kutiji",irinotekanklorid trihidrat,,,HR-H-810518111-02,"Teva B.V., Nizozemska",2026-03-02,2026-03-02,2026-10-31,02.03.2026. - 31.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548715,,
+HR,Croatia,HALMED,"Kordobis 1,25 mg tablete; 20 tableta u blisteru, u kutiji",bisoprololfumarat,,,HR-H-732086654-01,Pliva Hrvatska d.o.o.,2026-03-02,2026-03-02,2026-09-30,02.03.2026. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548723,C07AB07,96946
+HR,Croatia,HALMED,"Brufen 400 mg šumeće granule; 30 vrećica s granulama, u kutiji",ibuprofen,,,HR-H-496875141-01,Viatris Hrvatska d.o.o.,2026-03-06,2026-03-05,2026-12-01,05.03.2026. - 01.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548732,C01EB16,81213
+HR,Croatia,HALMED,"Lenalidomid Grindeks 10 mg tvrde kapsule; 21 kapsula u
+blisteru, u kutiji",lenalidomid amonijev klorid,,,HR-H-934554536-02,"AS Grindeks, Latvija",2026-03-06,2026-04-01,2026-12-31,01.04.2026. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548740,L04AX04,83917
+HR,Croatia,HALMED,"Lenalidomid Grindeks 5 mg tvrde kapsule; 21 kapsula u blisteru,
+u kutiji",lenalidomid amonijev klorid,,,HR-H-448325115-02,"AS Grindeks, Latvija",2026-03-06,2026-04-01,2026-12-31,01.04.2026. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548749,L04AX04,83909
+HR,Croatia,HALMED,"Pomalidomide Zentiva 3 mg tvrde kapsule; 21 kapsula u blisteru
+djeljivom na jedinične doze, u kutiji",pomalidomid,,,EU/1/24/1830/012,"Zentiva k.s., Češka",2026-03-16,2026-03-16,2027-01-31,16.03.2026. - 31.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548757,L04AX06,107530
+HR,Croatia,HALMED,"Pomalidomide Zentiva 4 mg tvrde kapsule; 21 kapsula u blisteru
+djeljivom na jedinične doze, u kutiji",pomalidomid,,,EU/1/24/1830/016,"Zentiva k.s., Češka",2026-03-16,2026-03-16,2027-01-31,16.03.2026. - 31.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548766,L04AX06,107549
+HR,Croatia,HALMED,"Rosacol 40 mg filmom obložene tablete; 28 tableta u blisteru, u
+kutiji",rosuvastatinkalcij,,,HR-H-898983777-03,"Viatris Limited, Irska",2026-03-17,2026-03-23,2026-09-30,23.03.2026. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548774,C10AA07,201065
+HR,Croatia,HALMED,"Tresuvi 1 mg/ml otopina za infuziju; 1 bočica s 10 ml otopine, u
+kutiji",treprostinil,,,HR-H-579967087-01,"Orpha-Devel Handels und
+Vertriebs GmbH, Austrija",2026-03-17,2026-01-01,2026-12-31,01.01.2026. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548783,B01AC21,230960
+HR,Croatia,HALMED,"Tresuvi 10 mg/ml otopina za infuziju; 1 bočica s 10 ml otopine, u
+kutiji",treprostinil,,,HR-H-816101187-01,"Orpha-Devel Handels und
+Vertriebs GmbH, Austrija",2026-03-17,2026-01-01,2026-12-31,01.01.2026. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548791,B01AC21,82457
+HR,Croatia,HALMED,"Optiray 300 mg joda/ml otopina za injekciju/infuziju; 10 bočica
+sa 50 ml otopine, u kutiji",joversol,,,HR-H-975335989-01,Pharmacol d.o.o.,2026-03-19,2026-03-01,2026-12-31,01.03.2026. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548800,V08AB07,34681
+HR,Croatia,HALMED,"Optiray 300 mg joda/ml otopina za injekciju/infuziju; 10 bočica
+sa 100 ml otopine, u kutiji",joversol,,,HR-H-975335989-02,Pharmacol d.o.o.,2026-03-19,2026-03-01,2026-12-31,01.03.2026. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548808,V08AB07,34703
+HR,Croatia,HALMED,"Sutent 50 mg tvrde kapsule; 28 kapsula u blisteru, u kutiji",sunitinibmalat,,,EU/1/06/347/006,"Pfizer Europe MA EEIG, Belgija",2026-03-24,2026-03-26,2026-12-01,26.03.2026. - 01.12.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.548816,,
+HR,Croatia,HALMED,"Buvidal 8 mg otopina za injekciju s produljenim oslobađanjem; 1
+napunjena štrcaljka s 0,16 ml otopine, u kutiji",buprenorfin,,,EU/1/18/1336/001,"Camurus AB, Švedska",2026-03-27,2026-03-23,,23.03.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548823,N02AE01,
+HR,Croatia,HALMED,"Buvidal 24 mg otopina za injekciju s produljenim oslobađanjem;
+1 napunjena štrcaljka s 0,48 ml otopine, u kutiji",buprenorfin,,,EU/1/18/1336/003,"Camurus AB, Švedska",2026-03-27,2026-03-23,,23.03.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548833,N02AE01,
+HR,Croatia,HALMED,"Buvidal 32 mg otopina za injekciju s produljenim oslobađanjem;
+1 napunjena štrcaljka s 0,64 ml otopine, u kutiji",buprenorfin,,,EU/1/18/1336/004,"Camurus AB, Švedska",2026-03-27,2026-03-23,,23.03.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548840,N02AE01,
+HR,Croatia,HALMED,"Buvidal 96 mg otopina za injekciju s produljenim oslobađanjem;
+1 napunjena štrcaljka s 0,27 ml otopine, u kutiji",buprenorfin,,,EU/1/18/1336/006,"Camurus AB, Švedska",2026-03-27,2026-03-23,,23.03.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548846,N02AE01,
+HR,Croatia,HALMED,"Buvidal 128 mg otopina za injekciju s produljenim
+oslobađanjem; 1 napunjena štrcaljka s 0,36 ml otopine, u kutiji",buprenorfin,,,EU/1/18/1336/007,"Camurus AB, Švedska",2026-03-27,2026-03-23,,23.03.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548853,N02AE01,
+HR,Croatia,HALMED,"Buvidal 160 mg otopina za injekciju s produljenim
+oslobađanjem; 1 napunjena štrcaljka s 0,45 ml otopine, u kutiji",buprenorfin,,,EU/1/18/1336/009,"Camurus AB, Švedska",2026-03-27,2026-03-23,,23.03.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548859,N02AE01,
+HR,Croatia,HALMED,"Noflox 400 mg filmom obložene tablete; 20 tableta u blisteru, u
+kutiji",norfloksacin,,,HR-H-133783079-01,Belupo lijekovi i kozmetika d.d.,2026-03-31,2026-03-31,2027-01-25,31.03.2026. - 25.01.2027.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548867,J01MA06,22101
+HR,Croatia,HALMED,"Ikatibant Teva 30 mg otopina za injekciju u napunjenoj štrcaljki;
+1 napunjena štrcaljka s otopinom, 1 igla, u kutiji",ikatibantacetat,,,HR-H-164726004-01,"Teva B.V., Nizozemska",2026-04-03,2026-03-30,2026-12-31,30.03.2026. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548880,B06AC02,128635
+HR,Croatia,HALMED,"Isocard 60 mg tablete s produljenim oslobađanjem; 50 tableta u
+blisteru, u kutiji",izosorbidmononitrat,,,HR-H-963724025-01,Belupo lijekovi i kozmetika d.d.,2026-04-08,2026-04-08,,08.04.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548886,C01DA08,
+HR,Croatia,HALMED,"Moloxin 400 mg filmom obložene tablete; 5 tableta u blisteru, u
+kutiji",moksifloksacinklorid,,,HR-H-006367113-01,Krka - farma d.o.o.,2026-04-14,2026-04-10,2026-09-15,10.04.2026. - 15.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548895,J01MA14,67628
+HR,Croatia,HALMED,"Moloxin 400 mg filmom obložene tablete; 7 tableta u blisteru, u
+kutiji",moksifloksacinklorid,,,HR-H-006367113-02,Krka - farma d.o.o.,2026-04-14,2026-04-10,2026-09-15,10.04.2026. - 15.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548903,J01MA14,67628
+HR,Croatia,HALMED,"Deksmedetomidin EVER Pharma 100 mikrograma/ml koncentrat
+za otopinu za infuziju; 5 ampula s 10 ml koncentrata, u kutiji",deksmedetomidinklorid,,,HR-H-639074952-11,"EVER Valinject GmbH, Njemačka",2026-04-15,2026-04-15,,15.04.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.548909,N05CM18,213586
+HR,Croatia,HALMED,"Veculex 10 mg prašak za otopinu za injekciju/infuziju; 10 bočica
+s praškom, u kutiji",vekuronijev bromid,,,HR-H-530549370-01,Altamedics d.o.o.,2026-04-17,2026-04-17,2026-09-30,17.04.2026. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548918,M03AC03,
+HR,Croatia,HALMED,"Icatibant Accord 30 mg otopina za injekciju u napunjenoj
+štrcaljki; 1 napunjena štrcaljka s 3 ml otopine + 1 igla, u kutiji",ikatibantacetat,,,EU/1/21/1567/001,"Accord Healthcare S.L.U.,
+Španjolska",2026-04-22,2026-04-15,2027-01-01,15.04.2026. - 01.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548926,B06AC02,128635
+HR,Croatia,HALMED,"Lenalidomid Grindeks 15 mg tvrde kapsule; 21 kapsula u
+blisteru, u kutiji",lenalidomid amonijev klorid,,,HR-H-033073683-02,"AS Grindeks, Latvija",2026-04-24,2026-04-24,2026-12-31,24.04.2026. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548935,L04AX04,83925
+HR,Croatia,HALMED,"Duloksetin STADA 30 mg tvrde želučanootporne kapsule; 28
+kapsula u blisteru, u kutiji",duloksetinklorid,,,HR-H-962019790-04,Stada d.o.o.,2026-04-27,2026-03-30,2026-11-30,30.03.2026. - 30.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548943,N06AX21,79057
+HR,Croatia,HALMED,"Busulfan Pliva 6 mg/ml koncentrat za otopinu za infuziju; 8
+bočica s 10 ml koncentrata, u kutiji",busulfan,,,HR-H-118626262-01,Pliva Hrvatska d.o.o.,2026-04-29,2026-04-29,2026-09-30,29.04.2026. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548951,L01AB01,129232
+HR,Croatia,HALMED,"Midza 100 mg filmom obložene tablete; 56 tableta u blisteru, u
+kutiji",lakozamid,,,HR-H-870197086-01,Belupo lijekovi i kozmetika d.d.,2026-05-05,2026-05-05,2026-10-15,05.05.2026. - 15.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548960,N03AX18,217875
+HR,Croatia,HALMED,"Duloksetin STADA 60 mg tvrde želučanootporne kapsule; 28
+kapsula u blisteru, u kutiji",duloksetinklorid,,,HR-H-658704827-04,Stada d.o.o.,2026-05-05,2026-04-30,2026-11-30,30.04.2026. - 30.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548968,N06AX21,79065
+HR,Croatia,HALMED,"Aripiprazole 5 mg; 30 tableta u blisteru, u kutiji",aripiprazol,,,HR-H-753269451-05,Pliva Hrvatska d.o.o.,2026-05-06,2026-09-06,,06.09.2026. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.548974,N05AX12,117633
+HR,Croatia,HALMED,"Sutent 12,5 mg tvrde kapsule; 28 kapsula u blisteru, u kutiji",sunitinibmalat,,,EU/1/06/347/004,"Pfizer Europe MA EEIG, Belgija",2026-05-07,2026-05-07,2026-12-01,07.05.2026. - 01.12.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.548982,,
+HR,Croatia,HALMED,"Klindamicin hameln 150 mg/ml otopina za injekciju / infuziju; 10
+ampula s 2 ml otopine, u kutiji",klindamicinfosfat,,,HR-H-115926948-02,"hameln pharma gmbH, Njemačka",2026-05-07,2026-05-07,2026-09-30,07.05.2026. - 30.09.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548991,A07AA02,
+HR,Croatia,HALMED,"Klindamicin hameln 150 mg/ml otopina za injekciju / infuziju; 10
+ampula s 4 ml otopine, u kutiji",klindamicinfosfat,,,HR-H-115926948-05,"hameln pharma gmbH, Njemačka",2026-05-07,2026-05-07,2026-09-30,07.05.2026. - 30.09.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.548999,A07AA02,
+HR,Croatia,HALMED,"Trizolin URO 400 mg filmom obložene tablete; 20 tableta u
+blisteru, u kutiji",norfloksacin,,,HR-H-501776505-01,Alpha-Medical d.o.o.,2026-05-11,2026-05-11,2026-09-30,11.05.2026. - 30.09.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.549008,J01MA06,22101
+HR,Croatia,HALMED,"Ciprinol 250 mg filmom obložene tablete; 10 tableta u blisteru, u
+kutiji",ciprofloksacinklorid,,,HR-H-263610706-01,Krka - farma d.o.o.,2026-05-12,2026-05-10,2026-09-24,10.05.2026. - 24.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549016,J01MA02,138924
+HR,Croatia,HALMED,"Entekavir Viatris 0,5 mg filmom obložene tablete; 30 tableta u
+blisteru, u kutiji",entekavir hidrat,,,EU/1/17/1227/002,"Viatris Limited, Irska",2026-05-14,2026-05-20,2026-09-30,20.05.2026. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549024,J05AF05,
+HR,Croatia,HALMED,"Syntocinon 40 IU/ml sprej za nos, otopina; 1 bočica s 5 ml
+otopine s odmjernim sustavom za raspršivanje, u kutiji",oksitocin,,,HR-H-314643174-01,"CD Pharmaceuticals AB, Švedska",2026-05-20,2026-05-18,2026-10-01,18.05.2026. - 01.10.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549033,H01BB02,7544
+HR,Croatia,HALMED,"Ceftriaxon-MIP 1 g prašak za otopinu za injekciju/infuziju; 10
+bočica s praškom, u kutiji",ceftriaksonnatrij,,,HR-H-528279698-02,MIP Pharma Croatia d.o.o.,2026-05-20,2026-05-20,2026-09-28,20.05.2026. - 28.09.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.549041,J01DD01,
+HR,Croatia,HALMED,"Aprepitant Alpha-Medical 125 mg + 80 mg tvrde kapsule; 1
+kapsula od 125 mg i 2 kapsule od 80 mg u džepnom blisteru s
+kartonskim pojačanjem, u kutiji",aprepitant,,,HR-H-359140886-01,Alpha-Medical d.o.o.,2026-05-22,2026-05-22,2026-09-30,22.05.2026. - 30.09.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.549050,A04AD12,
+HR,Croatia,HALMED,"Rosacol 5 mg filmom obložene tablete; 28 tableta u blisteru, u
+kutiji",rosuvastatinkalcij,,,HR-H-693317326-03,"Viatris Limited, Irska",2026-05-22,2026-05-25,2026-10-31,25.05.2026. - 31.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549059,C10AA07,201030
+HR,Croatia,HALMED,"Rosacol 10 mg filmom obložene tablete; 28 tableta u blisteru, u
+kutiji",rosuvastatinkalcij,,,HR-H-938478163-03,"Viatris Limited, Irska",2026-05-22,2026-05-25,2026-10-31,25.05.2026. - 31.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549067,C10AA07,201049
+HR,Croatia,HALMED,"Tanyz ERAS 0,4 mg tablete s produljenim oslobađanjem; 60
+tableta u blisteru, u kutiji",tamsulozinklorid,,,HR-H-612679230-07,Krka - farma d.o.o.,2026-05-25,2026-05-20,2026-11-24,20.05.2026. - 24.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549075,G04CA02,76236
+HR,Croatia,HALMED,"Tanyz ERAS 0,4 mg tablete s produljenim oslobađanjem; 30
+tableta u blisteru, u kutiji",tamsulozinklorid,,,HR-H-612679230-05,Krka - farma d.o.o.,2026-05-25,2026-05-20,2026-09-24,20.05.2026. - 24.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549084,G04CA02,76236
+HR,Croatia,HALMED,"Salofalk 250 mg čepići; 30 čepića u stripu, u kutiji",mesalazin,,,HR-H-717303526-01,"Dr. Falk Pharma GmbH,
+Njemačka",2026-05-26,2026-03-31,2026-12-31,31.03.2026. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549092,A07EC02,
+HR,Croatia,HALMED,"Sutent 25 mg tvrde kapsule; 28 kapsula u blisteru, u kutiji",sunitinibmalat,,,EU/1/06/347/005,"Pfizer Europe MA EEIG, Belgija",2026-06-02,2026-06-03,2026-12-01,03.06.2026. - 01.12.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.549100,,
+HR,Croatia,HALMED,"Dutasterid Genericon 0,5 mg meke kapsule; 30 kapsula u
+blisteru, u kutiji",dutasterid,,,HR-H-632191824-02,"Genericon Pharma Gesellschaft
+m.b.H., Austrija",2026-06-02,2026-06-02,,02.06.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.549107,G04CB02,68195
+HR,Croatia,HALMED,"Ramicomp Genericon 2,5 mg/12,5 mg tablete; 30 tableta u
+blisteru, u kutiji","ramipril
+hidroklorotiazid",,,HR-H-706034929-01,"Genericon Pharma Gesellschaft
+m.b.H., Austrija",2026-06-02,2026-04-30,,30.04.2026. - nepoznato,shortage,komercijalni razlozi,2026-09-23T20:59:53.549113,,
+HR,Croatia,HALMED,"Klotrimazol Pliva 200 mg tablete za rodnicu; 3 tablete u blisteru,
+u kutiji",klotrimazol,,,HR-H-718710441-01,Pliva Hrvatska d.o.o.,2026-06-03,2026-06-17,2026-10-20,17.06.2026. - 20.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549121,G01AF01,5207
+HR,Croatia,HALMED,"Karmustin Teva 100 mg prašak i otapalo za koncentrat za
+otopinu za infuziju; 1 bočica s praškom i 1 bočica s otapalom, u
+kutiji",karmustin,,,HR-H-333238133-01,"Teva B.V., Nizozemska",2026-06-03,2026-06-08,2026-12-30,08.06.2026. - 30.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549130,L01AD01,37788
+HR,Croatia,HALMED,"Brufen Effect 200 mg šumeće granule; 12 vrećica s granulama, u
+kutiji",ibuprofen,,,HR-H-053171042-01,Viatris Hrvatska d.o.o.,2026-06-05,2026-06-12,2026-11-30,12.06.2026. - 30.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549138,C01EB16,81213
+HR,Croatia,HALMED,"Sortis 80 mg filmom obložene tablete; 30 tableta u blisteru, u
+kutiji",atorvastatinkalcij trihidrat,,,HR-H-611144692-01,Viatris Hrvatska d.o.o.,2026-06-05,2026-06-08,2026-09-30,08.06.2026. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549147,C10AA05,98639
+HR,Croatia,HALMED,"Dorvis 20 mg/ml kapi za oko, otopina; 1 bočica s kapaljkom s 5
+ml otopine, u kutiji",dorzolamidklorid,,,HR-H-948759733-01,"Zentiva k.s., Češka",2026-06-05,2026-06-05,2026-09-30,05.06.2026. - 30.09.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.549157,S01EC03,203319
+HR,Croatia,HALMED,"Synopen 20 mg/2 ml otopina za injekciju; 10 ampula s 2 ml
+otopine, u kutiji",kloropiraminklorid,,,HR-H-068837229-01,Pliva Hrvatska d.o.o.,2026-06-08,2026-07-15,2027-02-01,15.07.2026. - 01.02.2027.,shortage,razlozi povezani s kakvoćom,2026-09-23T20:59:53.549165,D04AA09,
+HR,Croatia,HALMED,"Zeldox 60 mg kapsule; 30 kapsula u blisteru, u kutiji",ziprasidonklorid hidrat,,,HR-H-834050107-01,Viatris Hrvatska d.o.o.,2026-06-08,2026-06-12,2026-10-10,12.06.2026. - 10.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549174,N05AX12,
+HR,Croatia,HALMED,"Tilobrastil 60 mg filmom obložene tablete; 56 tableta u blisteru,
+u kutiji",tikagrelor,,,HR-H-078770207-02,Sandoz d.o.o.,2026-06-10,2026-06-30,2026-11-01,30.06.2026. - 01.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549182,B01AC24,
+HR,Croatia,HALMED,"Xabogard 50 mg/ml disperzija za injekciju/infuziju; 1 bočica s 10
+ml disperzije, u kutiji",željezova karboksimaltoza,,,HR-H-025204700-04,Sandoz d.o.o.,2026-06-10,2026-06-10,2026-12-31,10.06.2026. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549191,,
+HR,Croatia,HALMED,"Xabogard 50 mg/ml disperzija za injekciju/infuziju; 1 bočica s 20
+ml disperzije, u kutiji",željezova karboksimaltoza,,,HR-H-025204700-07,Sandoz d.o.o.,2026-06-10,2026-06-10,2026-12-31,10.06.2026. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549199,,
+HR,Croatia,HALMED,"Carmustine medac 100 mg prašak i otapalo za koncentrat za
+otopinu za infuziju; 1 bočica s praškom i 1 ampula s 3 ml
+otapala, u kutiji",karmustin,,,EU/1/18/1278/001,"medac Gesellschaft für klinische
+Spezialpräparate mbH, Njemačka",2026-06-10,2026-06-10,2028-02-29,10.06.2026. - 29.02.2028.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549208,L01AD01,37788
+HR,Croatia,HALMED,"Pemetrexed EVER Pharma 25 mg/ml koncentrat za otopinu za
+infuziju; 1 bočica s 20 ml koncentrata, u kutiji",pemetrekseddinatrij,,,HR-H-120964063-02,"EVER Valinject GmbH, Austrija",2026-06-12,2026-07-01,2026-11-01,01.07.2026. - 01.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549216,L01BA04,142611
+HR,Croatia,HALMED,"Pemetrexed EVER Pharma 25 mg/ml koncentrat za otopinu za
+infuziju; 1 bočica s 40 ml koncentrata, u kutiji",pemetrekseddinatrij,,,HR-H-120964063-03,"EVER Valinject GmbH, Austrija",2026-06-12,2026-07-01,2026-11-01,01.07.2026. - 01.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549225,L01BA04,142638
+HR,Croatia,HALMED,"Pemetrexed EVER Pharma 25 mg/ml koncentrat za otopinu za
+infuziju; 1 bočica s 4 ml koncentrata, u kutiji",pemetrekseddinatrij,,,HR-H-120964063-01,"EVER Valinject GmbH, Austrija",2026-06-12,2026-07-01,2026-11-01,01.07.2026. - 01.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549233,L01BA04,142603
+HR,Croatia,HALMED,"Imuldosa 130 mg koncentrat za otopinu za infuziju; 1 bočica s 26
+ml otopine, u kutiji",ustekinumab,,,EU/1/24/1872/003,"Accord Healthcare S.L.U.,
+Španjolska",2026-06-17,2026-06-12,2027-12-31,12.06.2026. - 31.12.2027.,shortage,razlozi povezani s kakvoćom,2026-09-23T20:59:53.549241,L04AC05,138274
+HR,Croatia,HALMED,"Lenalidomid Grindeks 25 mg tvrde kapsule; 21 kapsula u
+blisteru, u kutiji",lenalidomid amonijev klorid,,,HR-H-823780929-02,"AS Grindeks, Latvija",2026-06-19,2026-06-20,2026-12-31,20.06.2026. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549250,L04AX04,83933
+HR,Croatia,HALMED,"Cagluen 60 mg filmom obložene tablete; 30 tableta u blisteru s
+jediničnom dozom, u kutji",edoksabantosilat hidrat,,,HR-H-103565333-02,"Viatris Limited, Irska",2026-06-19,2026-06-23,2026-10-10,23.06.2026. - 10.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549258,B01AF03,128201
+HR,Croatia,HALMED,"Tigeciklin Accord 50 mg prašak za otopinu za infuziju; 10 bočica
+s praškom, u kutiji",tigeciklin,,,EU/1/19/1394/001,"Accord Healthcare S.L.U.,
+Španjolska",2026-07-06,2026-07-06,2026-10-15,06.07.2026. - 15.10.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.549267,J01AA12,80500
+HR,Croatia,HALMED,"Zypadhera 210 mg prašak i otapalo za suspenziju za injekciju s
+produljenim oslobađanjem; 1 bočica s praškom i 1 bočica s 3 ml
+otapala + 1 štrcaljka s pričvršćenom zaštićenom iglom + 3
+zaštićene igle, u kutiji",olanzapin,,,EU/1/08/479/001,"CHEPLAPHARM Registration
+GmbH, Njemačka",2026-07-06,2026-09-24,2026-12-11,24.09.2026. - 11.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549275,N05AH03,90190
+HR,Croatia,HALMED,"Temelor 1 mg tablete; 30 tableta u blisteru, u kutiji",lorazepam,,,HR-H-956450782-06,"Medochemie Ltd., Cipar",2026-07-08,2026-06-30,2026-09-30,30.06.2026. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549284,N05BA06,2445
+HR,Croatia,HALMED,"Temelor 2,5 mg tablete; 20 tableta u blisteru, u kutiji",lorazepam,,,HR-H-199858664-04,"Medochemie Ltd., Cipar",2026-07-08,2026-06-30,2026-09-30,30.06.2026. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549292,N05BA06,7587
+HR,Croatia,HALMED,"Gribero 150 mg tvrde kapsule; 60 kapsula u blisteru, u kutiji",dabigatraneteksilatmesilat,,,HR-H-083930069-03,Sandoz d.o.o.,2026-07-17,2026-08-01,2026-10-01,01.08.2026. - 01.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549300,B01AE07,98361
+HR,Croatia,HALMED,"Kogrel 75 mg filmom obložene tablete; 30 tableta u blisteru, u
+kutiji",klopidogrelhidrogensulfat,,,HR-H-319098079-01,Sandoz d.o.o.,2026-07-17,2026-07-20,2026-11-01,20.07.2026. - 01.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549308,B01AC04,124559
+HR,Croatia,HALMED,"Kogrel 75 mg filmom obložene tablete; 60 tableta u blisteru, u
+kutiji",klopidogrelhidrogensulfat,,,HR-H-319098079-02,Sandoz d.o.o.,2026-07-17,2026-07-20,2026-11-01,20.07.2026. - 01.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549317,B01AC04,124559
+HR,Croatia,HALMED,"Lakozamid Accord 10 mg/ml otopina za infuziju; 1 bočica s 20 ml
+otopine, u kutiji",lakozamid,,,EU/1/17/1230/026,"Accord Healthcare S.L.U.,
+Španjolska",2026-07-18,2026-07-20,2026-09-18,20.07.2026. - 18.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549326,N03AX18,89060
+HR,Croatia,HALMED,"Retacrit 4000 IU/0,6 ml otopina za injekciju u napunjenoj
+štrcaljki; 6 napunjenih štrcaljki s 0,4 ml otopine, u kutiji",epoetin zeta,,,EU/1/07/431/008,"Pfizer Europe MA EEIG, Belgija",2026-07-22,2026-07-24,2026-11-20,24.07.2026. - 20.11.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.549334,B03XA01,86347
+HR,Croatia,HALMED,"Zofran 8 mg filmom obložene tablete; 10 tableta u blisteru, u
+kutiji",ondanzetronklorid dihidrat,,,HR-H-774416957-01,Sandoz d.o.o.,2026-07-23,2026-07-23,2026-10-01,23.07.2026. - 01.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549343,A04AA01,31518
+HR,Croatia,HALMED,"Pregabalin Accord 25 mg tvrde kapsule; 56 kapsula u blisteru, u
+kutiji",pregabalin,,,EU/1/15/1027/003,"Accord Healthcare S.L.U.,
+Španjolska",2026-07-24,2026-07-24,2027-01-24,24.07.2026. - 24.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549351,N02BF02,75698
+HR,Croatia,HALMED,"Rivaroxaban Accord 2,5 mg filmom obložene tablete; 56 tableta
+u blisteru, u kutiji",rivaroksaban,,,EU/1/20/1488/002,"Accord Healthcare S.L.U.,
+Španjolska",2026-07-24,2026-07-24,2027-01-24,24.07.2026. - 24.01.2027.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549359,B01AF01,117250
+HR,Croatia,HALMED,"Trabektedin Teva 0,25 mg prašak za koncentrat za otopinu za
+infuziju; 1 bočica s praškom, u kutiji",trabektedin,,,HR-H-420410111-01,"Teva B.V., Nizozemska",2026-07-27,2026-07-27,2026-12-30,27.07.2026. - 30.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549368,L01CX01,107654
+HR,Croatia,HALMED,"Ikatibant Alpha-Medical 30 mg otopina za injekciju u napunjenoj
+štrcaljki; 1 napunjena štrcaljka s 3 ml otopine i jednom iglom, u
+kutiji",ikatibantacetat,,,HR-H-345249326-01,Alpha-Medical d.o.o.,2026-07-27,2026-07-27,2026-12-01,27.07.2026. - 01.12.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.549376,B06AC02,128635
+HR,Croatia,HALMED,"Inlyta 1 mg filmom obložene tablete; 56 tableta u blisteru, u
+kutiji",aksitinib,,,EU/1/12/777/002,"Pfizer Europe MA EEIG, Belgija",2026-07-30,2026-07-30,2026-11-09,30.07.2026. - 09.11.2026.,shortage,"razlozi povezani s proizvodnjom;
+neočekivano povećana potražnja",2026-09-23T20:59:53.549386,L01EK01,104442
+HR,Croatia,HALMED,"Esmocard 10 mg/ml otopina za injekciju; 5 bočica s 10 ml
+otopine, u kutiji",esmololklorid,,,HR-H-243481564-01,"Amomed Pharma GmbH, Austrija",2026-08-03,2026-07-27,2026-09-30,27.07.2026. - 30.09.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549394,C07AB09,39640
+HR,Croatia,HALMED,"Depakine Chrono 500 mg tablete s prilagođenim oslobađanjem;
+30 tableta u spremniku, u kutiji","valproatna kiselina
+natrijev valproat",,,HR-H-202764510-01,"Sanofi Winthrop Industrie,
+Francuska",2026-08-06,2026-09-15,2026-11-01,15.09.2026. - 01.11.2026.,shortage,razlozi povezani sa kakvoćom,2026-09-23T20:59:53.549402,,
+HR,Croatia,HALMED,"Edicin 500 mg prašak za koncentrat za otopinu za infuziju; 1
+bočica s praškom, u kutiji",vankomicinklorid,,,HR-H-475576925-01,Sandoz d.o.o.,2026-08-07,2026-08-07,2026-12-31,07.08.2026. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549411,J01XA01,23043
+HR,Croatia,HALMED,"Edicin 1000 mg prašak za koncentrat za otopinu za infuziju; 1
+bočica s praškom, u kutiji",vankomicinklorid,,,HR-H-286340692-01,Sandoz d.o.o.,2026-08-07,2026-08-07,2026-12-31,07.08.2026. - 31.12.2026.,shortage,komercijalni razlozi,2026-09-23T20:59:53.549419,J01XA01,32662
+HR,Croatia,HALMED,"Posakonazol Abdi 100 mg želučanootporne tablete; 24 tablete u
+blisteru, u kutiji",posakonazol,,,HR-H-033489167-01,"Abdi Farma GmbH, Njemačka",2026-08-11,2026-08-11,2026-10-15,11.08.2026. - 15.10.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.549427,J02AC04,117498
+HR,Croatia,HALMED,"Aksitinib Alpha-Medical 5 mg filmom obložene tablete; 56
+tableta u blisteru, u kutiji",aksitinib,,,HR-H-636549762-05,Alpha-Medical d.o.o.,2026-08-11,2026-08-11,2027-01-15,11.08.2026. - 15.01.2027,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.549436,L01EK01,104450
+HR,Croatia,HALMED,"Retacrit 2000 IU/0,6 ml otopina za injekciju u napunjenoj
+štrcaljki; 6 napunjenih štrcaljki s 0,6 ml otopine, u kutiji",epoetin zeta,,,EU/1/07/431/004,"Pfizer Europe MA EEIG, Belgija",2026-08-14,2026-08-21,2026-11-20,21.08.2026. - 20.11.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.549444,B03XA01,86320
+HR,Croatia,HALMED,"Imuldosa 45 mg otopina za injekciju u napunjenoj štrcaljki; 1
+štrcaljka s 0,5 ml otopine, u kutiji",ustekinumab,,,EU/1/24/1872/001,"Accord Healthcare S.L.U.,
+Španjolska",2026-08-17,2026-08-17,2027-12-31,17.08.2026. - 31.12.2027.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549453,L04AC05,102989
+HR,Croatia,HALMED,"Imuldosa 90 mg otopina za injekciju u napunjenoj štrcaljki; 1
+štrcaljka s 1 ml otopine, u kutiji",ustekinumab,,,EU/1/24/1872/002,"Accord Healthcare S.L.U.,
+Španjolska",2026-08-17,2026-08-17,2027-12-31,17.08.2026. - 31.12.2027.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549461,L04AC05,122017
+HR,Croatia,HALMED,"Pan Peni G 1 MIU prašak za otopinu za injekciju/infuziju; 10
+bočica s praškom, u kutiji",benzilpenicilinnatrij,,,HR-H-314045399-01,"Panpharma, Francuska",2026-08-19,2026-08-19,2026-11-18,19.08.2026. - 18.11.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549469,J01CE01,19402
+HR,Croatia,HALMED,"Haloperidol Krka 10 mg tablete; 30 tableta u bočici, u kutiji",haloperidol,,,HR-H-435067757-01,Krka - farma d.o.o.,2026-08-21,2026-08-17,2026-10-01,17.08.2026. - 01.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549478,N05AD01,16578
+HR,Croatia,HALMED,"Brufen Effect 400 mg šumeće granule; 20 vrećica s granulama, u
+kutiji",ibuprofen,,,HR-H-071108593-02,Viatris Hrvatska d.o.o.,2026-08-24,2026-08-26,2026-12-01,26.08.2026. - 01.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549486,C01EB16,81213
+HR,Croatia,HALMED,"Utrogestan 300 mg meke kapsule za rodnicu; 15 kapsula u
+bočici, u kutiji",progesteron,,,HR-H-677297904-01,"Besins Healthcare Ireland
+Limited, Irska",2026-08-25,2026-08-25,2026-10-30,25.08.2026. - 30.10.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.549495,G03DA04,215732
+HR,Croatia,HALMED,"Berlithion 600 mg meke kapsule; 30 kapsula u blisteru, u kutiji",tioktatna kiselina,,,HR-H-550943090-01,"Berlin-Chemie AG, Njemačka",2026-08-26,2026-08-27,2026-09-30,27.08.2026. - 30.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549504,A16AX01,
+HR,Croatia,HALMED,"Saxotin 50 mg tablete; 56 tableta u blisteru, u kutiji",vildagliptin,,,HR-H-032012922-05,Sandoz d.o.o.,2026-08-27,2026-08-27,2026-09-16,27.08.2026. - 16.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549512,A10BH02,85936
+HR,Croatia,HALMED,"Tobrex 3 mg/g mast za oko; 3,5 g masti u tubi, u kutiji",tobramicin,,,HR-H-257802614-01,Novartis Hrvatska d.o.o.,2026-08-28,2026-08-28,2026-10-30,28.08.2026. - 30.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549520,J01GB06,
+HR,Croatia,HALMED,"Bysimin 20 mg/ml otopina za injekciju; 5 ampula s 1 ml otopine
+u blisteru, u kutiji",hioscinijev butilbromid,,,HR-H-761806946-01,"Medochemie Ltd., Cipar",2026-08-31,2026-09-01,2026-10-09,01.09.2026. - 09.10.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.549529,A03BB01,2186
+HR,Croatia,HALMED,"Forvel 0,4 mg/ml otopina za injekciju/infuziju; 10 ampula s 1 ml
+otopine, u kutiji",naloksonklorid dihidrat,,,HR-H-408963010-02,"Medochemie Ltd., Cipar",2026-08-31,2026-09-01,2026-10-09,01.09.2026. - 09.10.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.549538,V03AB13,
+HR,Croatia,HALMED,"Plivadon tablete; 10 tableta u blisteru, u kutiji","paracetamol
+propifenazon
+kodeinfosfat hemihidrat
+kofein",,,HR-H-305690307-01,Pliva Hrvatska d.o.o.,2026-08-31,2026-09-01,2026-09-24,01.09.2026. - 24.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549547,,
+HR,Croatia,HALMED,"Bendamustin Teva 2,5 mg/ml prašak za koncentrat za otopinu za
+infuziju; 5 bočica od 26 ml s praškom, u kutiji",bendamustinklorid,,,HR-H-831944969-02,"Teva B.V., Nizozemska",2026-09-03,2026-08-28,,28.08.2026. - nepoznato,shortage,"razlozi povezani s proizvodnjom, problemi u
+kakvoći",2026-09-23T20:59:53.549553,L01AA09,
+HR,Croatia,HALMED,"Dalneva 4 mg/5 mg tablete; 30 tableta u blisteru, u kutiji","perindopril-tert-butilamin
+amlodipinbesilat",,,HR-H-963289860-07,Krka - farma d.o.o.,2026-09-04,2026-06-05,2026-09-24,05.06.2026. - 24.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549561,C09BB04,123544
+HR,Croatia,HALMED,"Ulcamed 120 mg filmom obložene tablete; 56 tableta u blisteru,
+u kutiji",bizmutov subcitrat,,,HR-H-123794053-06,Krka - farma d.o.o.,2026-09-04,2026-05-14,2026-10-21,14.05.2026. - 21.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549570,,
+HR,Croatia,HALMED,"Perineva 4 mg tablete; 30 tableta u blisteru, u kutiji",perindopril-tert-butilamin,,,HR-H-841697345-01,Krka - farma d.o.o.,2026-09-04,2026-08-27,2026-10-01,27.08.2026. - 01.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549578,C09AA04,29076
+HR,Croatia,HALMED,"Moviprep prašak za oralnu otopinu; dvije prozirne vrećice za
+jednokratnu primjenu, u kutiji svaka prozirna vrećica sadrži
+vrećicu A i vrećicu B vrećica A sadrži 112 g praška, vrećica B
+sadrži 11 g praška","makrogol 3350
+natrijev sulfat, bezvodni
+natrijev klorid
+kalijev klorid
+askorbatna kiselina
+natrijev askorbat",,,HR-H-033715132-01,"Norgine B.V., Nizozemska",2026-09-04,2026-09-04,2026-12-15,04.09.2026. - 15.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549587,,
+HR,Croatia,HALMED,"Risdonal 1 mg filmom obložene tablete; 20 tableta u blisteru, u
+kutiji",risperidon,,,HR-H-354897168-01,Alkaloid d.o.o.,2026-09-08,2026-09-08,2026-11-30,08.09.2026. - 30.11.2026.,shortage,neočekivano povećana potražnja,2026-09-23T20:59:53.549595,N05AX08,37710
+HR,Croatia,HALMED,"Pomalidomid Teva 3 mg tvrde kapsule; 21 kapsula u blisteru
+djeljivim na jedinične doze, u kutiji",pomalidomid,,,EU/1/24/1868/028,"TEVA GmbH, Njemačka",2026-09-08,2026-10-07,2027-03-01,07.10.2026. - 01.03.2027.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549604,L04AX06,107530
+HR,Croatia,HALMED,"Pomalidomid Teva 4 mg tvrde kapsule; 21 kapsula u blisteru
+djeljivim na jedinične doze, u kutiji",pomalidomid,,,EU/1/24/1868/040,"TEVA GmbH, Njemačka",2026-09-08,2026-10-07,2027-03-01,07.10.2026. - 01.03.2027.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549613,L04AX06,107549
+HR,Croatia,HALMED,"Ilaris 150 mg/ml otopina za injekciju; 1 bočica s 1 ml otopine, u
+kutiji",kanakinumab,,,EU/1/09/564/004,"Novartis Europharm Limited,
+Irska",2026-09-08,2026-09-07,2026-10-05,07.09.2026. - 05.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549621,L04AC08,142794
+HR,Croatia,HALMED,"Celixib 200 mg tvrde kapsule; 10 kapsula u blisteru, u kutiji",celekoksib,,,HR-H-282049580-01,Pliva Hrvatska d.o.o.,2026-09-09,2026-09-20,2026-12-31,20.09.2026. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549630,M01AH01,59005
+HR,Croatia,HALMED,"Donepezil Pliva 10 mg filmom obložene tablete; 28 tableta u
+blisteru, u kutiji",donepezilklorid hidrat,,,HR-H-170495185-01,Pliva Hrvatska d.o.o.,2026-09-09,2026-09-15,2026-10-16,15.09.2026. - 16.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549638,N06DA02,106550
+HR,Croatia,HALMED,"Tovedeso 7 mg tablete sa produljenim oslobađanjem; 28 tableta
+u blisteru, u kutiji",desfesoterodinsukcinat,,,HR-H-862475317-02,"Teva B.V., Nizozemska",2026-09-09,2026-09-15,2026-10-26,15.09.2026. - 26.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549646,G04BD12,112305
+HR,Croatia,HALMED,"Tonocardin 2 mg tablete; 20 tableta u blisteru, u kutiji",doksazosinmesilat,,,HR-H-106125034-01,Pliva Hrvatska d.o.o.,2026-09-09,2026-09-15,2026-10-05,15.09.2026. - 05.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549655,C02CA04,
+HR,Croatia,HALMED,"Melfalan Pliva 50 mg prašak i otapalo za otopinu za
+injekciju/infuziju; 1 bočica s praškom i 1 bočica s otapalom, u
+kutiji",melfalanklorid,,,HR-H-477535936-01,Pliva Hrvatska d.o.o.,2026-09-10,2026-09-08,,08.09.2026. - nepoznato,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549661,L01AA03,35254
+HR,Croatia,HALMED,"Duloksetin Pliva 60 mg želučanootporne tvrde kapsule; 28
+kapsula u blisteru, u kutiji",duloksetinklorid,,,HR-H-406299508-03,Pliva Hrvatska d.o.o.,2026-09-11,2026-09-21,2026-10-15,21.09.2026. - 15.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549669,N06AX21,79065
+HR,Croatia,HALMED,"Fluvascol 80 mg tablete s produljenim oslobađanjem; 28 tableta
+u blisteru, u kutiji",fluvastatinnatrij,,,HR-H-066854703-01,Sandoz d.o.o.,2026-09-14,2026-09-14,2026-12-01,14.09.2026. - 01.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549678,C10AA05,
+HR,Croatia,HALMED,"Adempas 2,5 mg filmom obložene tablete; 42 tablete u blisteru,
+u kutiji",riocigvat,,,EU/1/13/907/013,"Bayer AG, Njemačka",2026-09-14,2026-09-15,2026-10-15,15.09.2026. - 15.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549687,C02KX01,
+HR,Croatia,HALMED,"Midza 150 mg filmom obložene tablete; 56 tableta u blisteru, u
+kutiji",lakozamid,,,HR-H-119076180-01,Belupo lijekovi i kozmetika d.d.,2026-09-15,2026-09-15,2026-10-15,15.09.2026. - 15.10.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549695,N03AX18,89044
+HR,Croatia,HALMED,"Target Plus 20 mg želučanootporne tvrde kapsule; 28 kapsula u
+bočici, u kutiji",omeprazol,,,HR-H-926340209-02,Belupo lijekovi i kozmetika d.d.,2026-09-15,2026-09-15,2026-09-28,15.09.2026. - 28.09.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549703,A02BC01,60062
+HR,Croatia,HALMED,"Hukyndra 40 mg otopina za injekciju u napunjenoj brizgalici; 2
+napunjene brizgalice s 0,4 ml otopine + 2 jastučića natopljena
+alkoholom, u kutiji",adalimumab,,,EU/1/21/1589/005,"Stada Arzneimittel AG, Njemačka",2026-09-16,2026-09-16,2026-10-01,16.09.2026. - 01.10.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.549712,L04AB04,
+HR,Croatia,HALMED,"Correctiron 50 mg/ml disperzija za injekciju/infuziju; 1 bočica s
+20 ml otopine, u kutiji",željezova karboksimaltoza,,,HR-H-962105831-07,"Viatris Limited, Irska",2026-09-18,2026-10-05,2026-12-31,05.10.2026. - 31.12.2026.,shortage,razlozi povezani s proizvodnjom,2026-09-23T20:59:53.549720,,
+HR,Croatia,HALMED,"Entekavir Accord 0,5 mg filmom obložene tablete; 30 tableta u
+blisteru, u kutiji",entekavir hidrat,,,EU/1/17/1211/002,"Accord Healthcare S.L.U.,
+Španjolska",2026-09-21,2026-09-23,2026-10-02,23.09.2026. - 02.10.2026.,shortage,razlozi povezani s kakvoćom,2026-09-23T20:59:53.549729,J05AF05,
+HR,Croatia,HALMED,"Utrogestan 100 mg meke kapsule; 30 kapsula u blisteru, u kutiji",progesteron,,,HR-H-979088283-01,"Besins Healthcare S.A., Belgija",2026-09-22,2026-09-22,2026-10-30,22.09.2026. - 30.10.2026.,shortage,razlozi povezani s distribucijom,2026-09-23T20:59:53.549737,G03DA04,29181
