@@ -125,8 +125,13 @@ sleutels = [tuple(sorted((k, str(v)) for k, v in x.items())) for x in rn]
 dubbel = len(sleutels) - len(set(sleutels))
 eis(dubbel == 0, f"{dubbel} duplicaten")
 
-# 7. Zwitserland en de andere uitgesloten landen mogen niet terugkeren (licentie).
-verboden = sorted({"CH", "PT", "LT", "TR", "ZA", "KR", "TW", "NL", "EU"} & set(cn))
+# 7. Uitgesloten landen mogen niet ongemerkt terugkeren. CH om de licentie, PT omdat de bron
+#    structureel te weinig meldt, LT/TR/ZA/KR/TW omdat het registers zijn en geen tekortenlijst,
+#    GB omdat het in geen enkele verversingslijst stond en daardoor bevroor. Komt er een land
+#    terug doordat iemand het bewust weer opneemt, dan hoort die persoon deze regel OOK aan te
+#    passen -- dat is de bedoeling, niet een obstakel. Sluipt het terug via een CSV die in
+#    output/ is blijven liggen, dan vangt deze toets het.
+verboden = sorted({"CH", "PT", "LT", "TR", "ZA", "KR", "TW", "NL", "EU", "GB"} & set(cn))
 eis(not verboden, f"uitgesloten landen staan er weer in: {verboden}")
 
 print("SAMENVATTING|"

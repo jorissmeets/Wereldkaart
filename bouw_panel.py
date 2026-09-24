@@ -81,6 +81,17 @@ def main() -> None:
             if x.get("ss") and (not vorig["start"] or x["ss"] < vorig["start"]):
                 vorig["start"] = x["ss"]
 
+    # Een land dat voor het eerst in de data opduikt, levert in een klap honderden 'nieuwe'
+    # combinaties op. Dat zijn geen nieuwe tekorten maar een nieuwe BRON -- ze liepen al toen
+    # wij begonnen te kijken, net als bij de nulmeting. Het Verenigd Koninkrijk deed dit op
+    # 24-09: 70 regels die als verse verschijningen in het panel kwamen. Zonder deze regel
+    # vervuilt elke gerepareerde of toegevoegde bron de volgorde-analyse met een neppiek.
+    bekende_landen = {r["land"] for r in bestaand.values()}
+    nieuwe_landen = {k[1] for k in nu} - bekende_landen
+    if nieuwe_landen and not eerste_run:
+        print(f"  nieuw in de data: {sorted(nieuwe_landen)} -> gemarkeerd als vanaf_begin,"
+              f" want die tekorten liepen al voordat wij dit land zagen")
+
     nieuw = weer_actief = 0
     for k, v in nu.items():
         r = bestaand.get(k)
@@ -91,7 +102,8 @@ def main() -> None:
                 "eerst_actief": vandaag if v["actief"] else "",
                 "gerapporteerde_start": v["start"], "stof": v["stof"],
                 # Bij de nulmeting weten we niet of het tekort net begon of al liep.
-                "vanaf_begin": "ja" if eerste_run else "nee",
+                # Bij een land dat we voor het eerst zien geldt precies hetzelfde.
+                "vanaf_begin": "ja" if (eerste_run or k[1] in nieuwe_landen) else "nee",
             }
             nieuw += 1
         else:

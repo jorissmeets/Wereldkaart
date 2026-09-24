@@ -467,7 +467,14 @@ def build():
             # integratie in systemen van derden zonder schriftelijke toestemming verbiedt.
             # Technisch publiek bereikbaar is niet hetzelfde als vrij te gebruiken. De scraper
             # blijft staan; zodra er toestemming is, is dit een regel terugdraaien.
-            if cc in ("NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT", "CH"):
+            # GB eruit (24-09, besluit Joris): het Verenigd Koninkrijk stond wel op de kaart
+            # maar in GEEN ENKELE verversingslijst -- niet in ververs_alles.sh en niet in de
+            # standaardlijst van _rerun_targeted.py. De 135 regels kwamen uit een losse
+            # reparatierun op 23-09 en zouden daar voor altijd blijven staan: het CSV-bestand
+            # in output/ wordt nooit herschreven, het aantal verandert dus niet, en de
+            # publicatierem ziet daarom niets. Bevroren data die er actueel uitziet is erger
+            # dan geen data. Terugzetten kan, maar dan ALLEEN samen met GB in beide lijsten.
+            if cc in ("NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT", "CH", "GB"):
                 continue
 
             cn = safe_str(row.get("country_name")) or cc

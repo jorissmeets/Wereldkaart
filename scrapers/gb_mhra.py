@@ -1,5 +1,17 @@
 """Scraper voor het Verenigd Koninkrijk — geneesmiddelentekorten (MSN / SSP / CAS).
 
+LET OP -- GB STAAT BEWUST NIET OP DE KAART (uitgesloten in landkaart/build_data.py).
+Besluit Joris, 24-09-2026. Niet omdat de bron slecht is -- hij is juist rijk -- maar omdat
+GB in geen enkele verversingslijst stond: niet in ververs_alles.sh, niet in de DEFAULT van
+_rerun_targeted.py. De 135 regels op de kaart kwamen uit een losse reparatierun en bevroren
+daar, zichtbaar als actuele tekorten, zonder dat de publicatierem iets kon merken (het
+aantal bleef immers gelijk). Terugzetten kan, maar dan in EEN keer: GB in LANDEN, GB in
+DEFAULT, GB uit de uitsluitingslijst en uit EXCLUDE in _merge_live.py. Half terugzetten
+levert precies dezelfde stille bevriezing op.
+
+Bij terugzetten staat er ook nog een inhoudelijke keuze open, zie "DRIE BRONNEN" hieronder:
+CPE is geen toezichthouder. Alleen toezichthoudersbronnen -> GB zakt van 135 naar ~30 rijen.
+
 WAAROM DEZE SCRAPER OPNIEUW IS GEBOUWD
 --------------------------------------
 De vorige versie haalde de GOV.UK-feed `drug-device-alerts.atom` op. Dat is een

@@ -76,17 +76,20 @@ vooraf**; lidstaten hebben dat verschillend aangescherpt.
 Een land met een strengere voorafmeldplicht loopt daardoor per definitie voor — en dat zegt
 niets over waar het tekort vandaan komt. **Dan meet je meldplicht, geen besmetting.**
 
-Dit is uitgezocht per land, in de brondocumentatie en de wetgeving. Uitkomst: **van de 28
+Dit is uitgezocht per land, in de brondocumentatie en de wetgeving. Uitkomst: **van de 27
 landen meten er 14 iets anders dan de feitelijke start.**
 
 | betekenis | landen |
 |---|---|
-| feitelijke start | AT BE DE EE FI GR HR HU LV NO SI SK (13) |
+| feitelijke start | AT BE DE EE FI FR GR HR HU LV NO SI SK (13) |
 | verwachte/geraamde start | AU IE IS IT MY SE (6) |
-| publicatiedatum | CA CZ DK GB US (5) |
+| publicatiedatum | CA CZ DK US (4) |
 | meldingsdatum | ES RO (2) |
 | registratiedatum | JP (1) |
 | onbekend | SA (1) |
+
+Het Verenigd Koninkrijk stond hier eerder bij en is op 24-09 van de kaart gehaald; het
+datumonderzoek voor GB staat nog wel in `datum_betekenis.json`, met een vlag.
 
 Alles staat met citaat en bron in `../../datum_betekenis.json`.
 
@@ -193,9 +196,14 @@ Elke wekelijkse run voegt een waarneming toe. Na een paar maanden is er een echt
 
 **Twee dingen om te weten.**
 
-De nulmeting van 23-09-2026 bevat 10.515 combinaties met vlag `vanaf_begin = ja`. Die zeggen
+De nulmeting van 23-09-2026 bevat 10.445 combinaties met vlag `vanaf_begin = ja`. Die zeggen
 niets over volgorde — die tekorten liepen al toen we begonnen te kijken. **Sluit ze uit.**
 Alleen rijen met `vanaf_begin = nee` zijn waarnemingen.
+
+Datzelfde geldt voor een land dat nieuw in de data komt: dat levert in één keer honderden
+'nieuwe' combinaties op die in werkelijkheid al liepen. `bouw_panel.py` vangt dat sinds 24-09
+af — een nieuw land krijgt `vanaf_begin = ja`. Het Verenigd Koninkrijk liet zien waarom: 70
+regels kwamen als verse verschijningen binnen terwijl er alleen een bron was bijgekomen.
 
 En de resolutie is een week. Een golf die in drie dagen over Europa trekt, zie je hiermee
 niet. Voor iets trager dan een week werkt het wel.

@@ -24,9 +24,13 @@ UV="uv run --python 3.13 --with typesafe-sdk --with python-dotenv --with openai 
 
 # De landen die daadwerkelijk op de kaart staan. Bewust niet de volledige scraperlijst:
 # LT/TR/EE-oud/ZA/KR/TW zijn registers of geen tekortbron, die worden in build_data uitgesloten.
-# CH en PT staan hier ook niet meer in. PT had geen bruikbare tekortbron; CH draagt een
+# CH, PT en GB staan hier ook niet in. PT had geen bruikbare tekortbron; CH draagt een
 # gebruiksvoorbehoud (zie scrapers/ch_drugshortage.py). Een bron die we niet mogen tonen,
 # blijven we ook niet elke twee dagen bevragen.
+# GB stond hier NOOIT in, maar de gegevens stonden wel op de kaart -- eenmalig binnengekomen
+# via een losse reparatierun en daarna bevroren. Van de kaart gehaald op 24-09. Zet GB niet
+# terug in deze lijst zonder ook de uitsluiting in landkaart/build_data.py weg te halen,
+# anders draait de scraper elke week voor niets.
 LANDEN="AT AU BE BG CA CO CZ DE DK EE ES FI FR GR HR HU IE IS IT JP LV MY NO RO SA SE SI SK US"
 
 export MATCH_LLM=typesafe

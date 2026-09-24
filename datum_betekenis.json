@@ -1,282 +1,284 @@
 {
- "SK": {
-  "land": "Slowakije (SK) — ŠÚKL, Štátny ústav pre kontrolu liečiv",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "Kolom `Účinnosť` uit de ŠÚKL-meldingen-CSV (portal.sukl.sk/PreruseniePublic/?act=PrerusenieOznList&export=csv), in de Engelse versie van diezelfde lijst gelabeld als \"Date from\". Pad in de code: /Users/karkara/Documents/LCG/Landkaart/scrapers/sk_sukl.py r. 267 (`self._tekst(ucinnost)` als eerste ele",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "IS": {
-  "land": "IJsland (IS) — Lyfjastofnun",
-  "betekenis": "verwachte_start",
-  "vergelijkbaar": true,
-  "zekerheid": "midden",
-  "bevestigd": true,
-  "bronveld": "`Áætlað upphaf` (\"geraamd begin\") van de detailkaart op lyfjastofnun.is/lyf/lyfjaskortur/tilkynntur-lyfjaskortur/. Pad: scrapers/is_lyfja.py:79 (`expected_start = self._get_field(item, \"Áætlað upphaf:\")`) -> regel 97 (`\"shortage_start\": self._parse_date(expected_start)`). GEEN terugval: staat het ve",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "NO": {
-  "land": "NO (Noorwegen) — DMP, Direktoratet for medisinske produkter",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "midden",
-  "bevestigd": true,
-  "bronveld": "Kolom \"Mangelperiode fra\" uit de excelData-JSON op de DMP-apotheekpagina → scrapers/no_dmp.py regel 95: \"shortage_start\": self._parse_date(row.get(\"Mangelperiode fra\", \"\")). GEEN terugval: 1520/1520 rijen zijn gevuld, de bron levert de kolom altijd. De naburige kolom \"Meldingsdato\" (1520/1520) en \"S",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "HU": {
-  "land": "Hongarije (HU) — OGYÉI / NNGYK",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "CSV-kolom \"A hiány kezdete\" (\"het begin van het tekort\") uit https://ogyei.gov.hu/generalt_listak/shortage_lista.csv, 1-op-1 gemapt op shortage_start in /Users/karkara/Documents/LCG/Landkaart/scrapers/hu_ogyei.py regel 72. GEEN terugval: de bron heeft geen tweede datumkolom (de 11 kolommen zijn Term",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "LV": {
-  "land": "LV (Letland) — ZVA, Zāļu valsts aģentūra",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "Kolom 4 (cells[3]) van de ZVA-tabel op https://dati.zva.gov.lv/zr-med-availability/ → rechtstreeks in shortage_start. Kolomkop live opgehaald: EN \"Interruption of supply from\", LV \"Pārtraukuma sākuma datums\" (= startdatum van de onderbreking). Code: /Users/karkara/Documents/LCG/Landkaart/scrapers/lv",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "ES": {
-  "land": "ES (Spanje) — AEMPS, via CIMA REST `GET /cima/rest/psuministro`",
-  "betekenis": "meldingsdatum",
-  "vergelijkbaar": true,
-  "zekerheid": "midden",
-  "bevestigd": true,
-  "bronveld": "`fini` (epoch-milliseconden) uit de CIMA REST-respons. In /Users/karkara/Documents/LCG/Landkaart/scrapers/es_aemps.py regel 90: `shortage_start = self._epoch_to_date(item.get(\"fini\"))`, met `_epoch_to_date` = `datetime.fromtimestamp(epoch_ms/1000).strftime(\"%Y-%m-%d\")` (regel 126-133).\n\nGEEN terugva",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "BE": {
-  "land": "BE (België) — FAGG/AFMPS, FarmaStatus",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "notARR[].startDate uit de publieke FarmaStatus-API (https://farmastatus.be/api/packs/info/public), van de notificatie waarvan notificationStatus == \"unavailable\". Zie /Users/karkara/Documents/LCG/Landkaart/scrapers/be_famhp.py regel 100: \"shortage_start\": self._parse_date(active_notif.get(\"startDate",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "FI": {
-  "land": "FI (Finland, Fimea)",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "RSS-veld \"Saatavuushäiriö alkaa: JJJJ-MM-DD\" uit <content:encoded> van de Fimea-RSS (https://fimea.fi/c/laakehaut_ja_luettelot/saatavuushairio-uusi/rss). In /Users/karkara/Documents/LCG/Landkaart/scrapers/fi_fimea.py regel 116 (`re.search(r\"alkaa:\\s*(\\d{4}-\\d{2}-\\d{2})\", content_text)` in `_parse_da",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "AT": {
-  "land": "Oostenrijk (AT) — BASG / AGES, Vertriebseinschränkungsregister (XML-ex",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "XML-attribuut `Beginn_Vertriebseinschraenkung` op `<Packung>`, met terugval op attribuut `Datum_Meldung` (/Users/karkara/Documents/LCG/Landkaart/scrapers/at_basg.py r.140-141: `self._datum(entry, \"Beginn_Vertriebseinschraenkung\", \"Datum_Meldung\")`). De terugval vuurt in de praktijk NIET: in de live ",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "DE": {
-  "land": "Duitsland (DE) — BfArM, PharmNet.Bund Lieferengpassmeldungen",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "CSV-kolom `Beginn` uit https://anwendungen.pharmnet-bund.de/lieferengpassmeldungen/public/csv → `shortage_start`. Zie /Users/karkara/Documents/LCG/Landkaart/scrapers/de_bfarm.py regel 47: `shortage_start = self._parse_date(row.get(\"Beginn\"))`. GEEN terugval in de scraper: is `Beginn` leeg, dan blijf",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "SI": {
-  "land": "Slovenië (SI) — bron CBZ (Centralna baza zdravil) + JAZMP meldingenbes",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "midden",
-  "bevestigd": true,
-  "bronveld": "`Datum začetka` uit het JAZMP-bestand Seznam_24_HUM_prenehanja_motnje.xlsx, blad \"Zadnja obvestila <datum>\" (si_cbz.py r.78-93, r.159). Koppeling: JAZMP `DŠ zdravila` = CBZ `Nacionalna šifra`, beide zfill(6); records gefilterd op `Vrsta obvestila` die \"motnj\" of \"prenehanj\" bevat; gesorteerd op `Dat",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "HR": {
-  "land": "HR (Kroatië — HALMED, Agencija za lijekove i medicinske proizvode)",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "Kolom 7 van de HALMED-PDF \"Nestasice-lijekova-tablica-za-objavu-WEB.pdf\", kopje \"Razdoblje trajanja nestašice\" (= periode van het tekort). De scraper /Users/karkara/Documents/LCG/Landkaart/scrapers/hr_halmed.py splitst die cel in `_parse_period()` op \" - \" en neemt het DEEL VOOR het streepje als `sh",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "GR": {
-  "land": "GR (Griekenland) — EOF / Εθνικός Οργανισμός Φαρμάκων",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "midden",
-  "bevestigd": true,
-  "bronveld": "Kolom 7 (index k[6]) uit de maandelijkse EOF-PDF \"ΛΙΣΤΑ ΦΑΡΜΑΚΕΥΤΙΚΩΝ ΣΚΕΥΑΣΜΑΤΩΝ ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΔΙΑΘΕΣΙΜΟΤΗΤΑΣ\", kopje \"Ημ. έναρξης διακοπής\" (datum van aanvang van de onderbreking). In /Users/karkara/Documents/LCG/Landkaart/scrapers/gr_eof.py regel 105: \"shortage_start\": self._parse_date(k[6]) — DD",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "EE": {
-  "land": "Estland (EE) — Ravimiamet, ravimiregister.ee",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": true,
-  "zekerheid": "midden",
-  "bevestigd": true,
-  "bronveld": "TarneraskusAlgus — uit de ASP.NET page-method https://www.ravimiregister.ee/PublicHomePage.aspx/GetPakend (per pakket-GUID, 38 JSON-velden). In /Users/karkara/Documents/LCG/Landkaart/scrapers/ee_ravimiamet.py regel 466: rec[\"shortage_start\"] = self._parse_date(d.get(\"TarneraskusAlgus\", \"\")). GEEN te",
-  "afwijking": "",
-  "meldtermijn": ""
- },
- "IT": {
-  "land": "IT",
-  "betekenis": "verwachte_start",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "Kolom \"Data inizio\" uit de AIFA-CSV elenco_medicinali_carenti.csv. Codespoor: /Users/karkara/Documents/LCG/Landkaart/scrapers/it_aifa.py regel 66 — `shortage_start = self._parse_date(row.get(\"Data inizio\"))`, geparsed als %d/%m/%Y. GEEN terugval: het veld is 2544/2544 (100%) gevuld, dus de generieke",
-  "afwijking": "IT loopt structureel VOOR op de feitelijke eerste dag, maar op een andere manier dan een land dat de melddatum publiceert. De datum zelf MIKT op de feitelijke ingangsdag (\"data di decorrenza\"), en niet op de dag van melden — dat is beter dan bijvoorbeeld een publicatiedatum. De voorsprong zit erin dat het een door de firma VOORAF opgegeven PLAN is dat AIFA nooit tegen de werkelijkheid toetst.\n\nMeetbaar, op de lijst van 21-09-2026 (2544 records): 344 records (13,5%) hebben een startdatum NA de publicatiedatum van de lijst. Mediane voorsprong 41 dagen, gemiddeld 62, p90 128 dagen, max 953 dagen ",
-  "meldtermijn": "Ten minste 2 maanden VOORAF, sinds 18-12-2025. D.Lgs. 219/2006 art. 34 comma 6, zoals vervangen door art. 61 Legge 2 dicembre 2025 n. 182 (\"Legge Semplificazioni\"): \"Detta comunicazione e effettuata non meno di due mesi prima dell'interruzione della commercializzazione del prodotto, anche in caso di comprovata emergenza sanitaria\". Daarvoor gold 4 maanden (D.L. n. 35/2019) — AIFA bevestigt dit expliciet: \"le comunicazioni da parte dei Titolari AIC ai sensi dell'art. 34, comma 6, devono avvenire con preavviso di almeno due mesi (non piu 4 mesi, come disposta dal D.L. n. 35/2019)\". Twee uitzonderingen op de termijn: (a) \"fatto salvo il caso di interruzione dovuta a circostanze imprevedibili che, in ogni caso, devono sempre essere tempestivamente comunicate\" — onvoorziene omstandigheden onverwijld melden; (b) \"Il termine non si applica alle sospensioni della commercializzazione connesse a motivi di sicurezza del prodotto\". Meldplicht geldt per verpakking (AIC 9 cijfers), niet per product. Sanctie bij te late of ontbrekende melding: 6.000-36.000 euro (art. 148 comma 1-bis), 36.000 bij verzuim en 18.000 bij te laat."
- },
- "JP": {
-  "land": "Japan (JP) — MHLW, 医療用医薬品供給状況報告",
-  "betekenis": "registratiedatum",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "Excel-kolomindex 12 = `⑬当該品目の⑫の情報を更新した日` (COL_STATUS_UPDATE), met terugval op kolomindex 19 = `⑳当該品目の⑫以外の情報を更新した日` (COL_OTHER_UPDATE_DATE). Regel 329 van /Users/karkara/Documents/LCG/Landkaart/scrapers/jp_mhlw.py: `shortage_start = self._parse_date(status_update_raw) or self._parse_date(other_update",
-  "afwijking": "JP loopt structureel ACHTER op de feitelijke start, met een onbekende en onbegrensde vertraging — de afwijking is niet te corrigeren met een vaste offset. Drie stapelende oorzaken. (1) Wettelijk kan JP nooit vooruitlopen: de openbare melding ontstaat pas NA de feitelijke stop (art. 18条の4 lid 1: \"その出荷の停止又は制限をしたときは、直ちに…届け出なければならない\"). De vooruitkijkende melding tot 6 maanden vooraf bestaat wel (art. 18条の3 lid 1) maar is expliciet 非公表 (niet openbaar) en belandt dus nooit in het bestand. (2) Het veld is geen startdatum maar een MUTATIEDATUM: het schuift mee bij elke statuswijziging. Een tekort dat ",
-  "meldtermijn": "Geen vooraf-melding in de openbare data. Art. 18条の4 lid 1 薬機法: melding \"直ちに\" (onverwijld) NADAT de stop of beperking is ingegaan. Art. 18条の3 lid 1 kent wel een vooruitkijkende meldplicht — onverwijld zodra de vergunninghouder besluit tot, of het risico ziet van, een stop/beperking binnen 6 maanden — maar die 供給不安報告 is 非公表 en wordt niet gepubliceerd. De EU-norm van 2 maanden vooraf (richtlijn 2001/83/EG art. 23bis) geldt hier niet."
- },
- "SE": {
-  "land": "Zweden (SE) — Läkemedelsverket, STS-dienst \"Sök anmälda försäljningsup",
-  "betekenis": "verwachte_start",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "`forecastStartDate` uit de STS-API (POST https://www.lakemedelsverket.se/api/sts/search), 1-op-1 overgenomen in `shortage_start` — /Users/karkara/Documents/LCG/Landkaart/scrapers/se_lv.py regel 121: `\"shortage_start\": self._parse_date(item.get(\"forecastStartDate\"))`. GEEN terugval: `_parse_date` gee",
-  "afwijking": "LOOPT VOOR, en is bovendien deels géén gebeurtenis maar een voorspelling. (1) Mechanisme: de datum is een door de vergunninghouder zelf ingediende prognose die uiterlijk 2 maanden vóór dat moment binnen moet zijn (4 kap. 18 §). De statusovergang \"kommande\" -> \"pågående\" gebeurt AUTOMATISCH als de kalenderdag aanbreekt, niet doordat iemand vaststelt dat de levering werkelijk stokt. (2) Gemeten op de live STS-set van 23-09-2026 (n=1061): shortage_start ligt mediaan 7 dagen ná de eerste publicatie (p25 = 0, p75 = +60); 276 records (26%) zijn ≥60 dagen vooraf gepubliceerd, conform de 2-maandenrege",
-  "meldtermijn": "Uiterlijk 2 maanden VOORAF, gekoppeld aan de geprognosticeerde startdatum: \"Anmälan ska göras så snart som möjligt men senast två månader innan försäljningsuppehållet beräknas starta. I undantagsfall kan informationen lämnas senare än två månader innan försäljningen upphör om det finns särskilda skäl.\" Wettelijke basis: läkemedelslag (2015:315) 4 kap. 18 § — \"ska också minst två månader i förväg meddela Läkemedelsverket om försäljningen av läkemedlet upphör tillfälligt eller permanent på den svenska marknaden. Om det finns särskilda skäl, får meddelandet lämnas senare än två månader i förväg.\" Dat is de letterlijke omzetting van art. 23bis 2001/83/EG, NIET aangescherpt. Sanctieheffing bij niet-melden is mogelijk (7 kap. 4 §), alleen voor humane geneesmiddelen. Naleving is aantoonbaar gebrekkig: 15,9% van de huidige records is pas ná de startdatum gepubliceerd."
- },
- "AU": {
-  "land": "AU (Australië) — TGA, Medicine Shortage Reports Database",
-  "betekenis": "verwachte_start",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "Veld `shortage_start` uit de ingebedde JSON `tabularData` op https://apps.tga.gov.au/Prod/msi/search. Gelezen in /Users/karkara/Documents/LCG/Landkaart/scrapers/au_tga.py regel 142: `\"shortage_start\": self._parse_date(rec.get(\"shortage_start\"))` — GEEN terugval, geen `or`-constructie. In /Users/kark",
-  "afwijking": "AU loopt structureel VOOR, maar onregelmatig, en het veld is bovendien niet homogeen. Drie meetbare effecten (eigen telling op de live TGA-bron, 984 records, peildatum 23-09-2026):\n\n(1) VOORLOOP bij verwachte tekorten. 92 records (9,3%) hebben status 'Anticipated'; 90 daarvan hebben een startdatum die nog moet komen. Voorloop t.o.v. vandaag: mediaan 42,5 dagen, p25 23 dagen, p75 90 dagen, max 226 dagen. Die landen in het dashboard als status 'upcoming' (95 stuks in data.json). Dit is geen feitelijk gestokte levering maar een aankondiging. Bron voor de aankondigplicht: \"You must submit a medici",
-  "meldtermijn": "Geen voorafmeldplicht voor tekorten; wel voor stopzetting. Verbatim uit de TGA-guidance (kop 'Mandatory reporting timeframes'): \"Critical impact shortages — You must report known shortages of critical impact to us within 2 working days. … You have a further 3 working days in which to provide the remaining required information about the shortage.\" / \"Non-critical shortages — You must report all non-critical shortages (those of low and medium impact) to us in full … within 10 working days.\" / \"Anticipated shortages — You must submit a medicines shortage notification if you anticipate that there is going to be a shortage at any time in the next 6 months.\" / \"Critical impact discontinuations — You must report discontinuations of critical impact medicines at least 12 months before the discontinuation is to occur or, if this is not possible, as soon as practicable after the decision.\" / \"Non-critical discontinuations — You must report non-critical discontinuations at least 6 months before the discontinuation is to occur…\". Wettelijke basis: Therapeutic Goods Act 1989 s 30EF (tekorten), s 30EG (stopzetting), s 30EFA (wijziging van de periode / oplossing). Publicatie volgt vrijwel direct: \"We publish all current shortages and discontinuations immediately after our review of the notification.\""
- },
- "RO": {
-  "land": "RO (Roemenië) — ANMDMR",
-  "betekenis": "meldingsdatum",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "PDF-kolom \"Data adresa\" (kolomindex 7) uit \"Notificari Sunset pt.postat incepand cu luna IUNIE 2016_.pdf\". In /Users/karkara/Documents/LCG/Landkaart/scrapers/ro_anm.py regel 109 gelezen als notif_date en op regel 132-133 IDENTIEK weggeschreven naar zowel notification_date als shortage_start (`\"notif",
-  "afwijking": "RO loopt structureel en fors VÓÓR op de feitelijke eerste dag van het tekort. Gemeten op de bron zelf: 425 van de 777 records noemen in \"Tip Notificare\" een expliciete ingangsmaand (\"... din <maand> <jaar>\"). Het verschil tussen \"Data adresa\" (= onze shortage_start) en de eerste dag van die ingangsmaand is: mediaan 296 dagen (~9,7 maanden), gemiddelde 241 dagen, p25 68 d, p75 357 d, p90 375 d, max 1.439 d. 99,8% van de meldingen ligt VOOR de ingangsmaand; 76,5% ligt 60 dagen of meer ervoor. Voor het recente cohort (meldingen 2024-2026, n=330) is de mediaan 192 dagen (p25 40, p75 350). Dat patr",
-  "meldtermijn": "Ten minste 6 maanden VOORAF; bij staking om commerciële redenen ten minste 12 maanden vooraf (Legea 95/2006 rep., art. 737 alin. (2)). Roemenië is daarmee fors strenger dan Richtlijn 2001/83/EG art. 23bis, die slechts 2 maanden eist — precies het verschil dat een volgorde-analyse vertekent."
- },
- "IE": {
-  "land": "Ierland (IE) — HPRA, Health Products Regulatory Authority",
-  "betekenis": "verwachte_start",
-  "vergelijkbaar": false,
-  "zekerheid": "midden",
-  "bevestigd": true,
-  "bronveld": "API-veld `expectedDateToImpact` uit de HPRA Shortages-API (sfapi.hpra.ie/api/Shortages), 1-op-1 gemapt op shortage_start in /Users/karkara/Documents/LCG/Landkaart/scrapers/ie_hpra.py regel 97: \"shortage_start\": self._parse_date(item.get(\"expectedDateToImpact\")). Gevuld in 359/360 records (23-09-2026",
-  "afwijking": "STRUCTUREEL VOOROP, maar met een spreiding die groter is dan de voorsprong — dat laatste is het echte probleem.\n\nGemeten op de 360 live records van 23-09-2026, door expectedDateToImpact af te zetten tegen websiteFirstUpdated (de eerste publicatiedatum uit dezelfde API):\n- 173 records (48%): startdatum ligt NA de publicatie = zuiver vooraf gemeld, mediaan 14 dagen voorsprong.\n- 31 records (9%): startdatum = publicatiedag.\n- 155 records (43%): startdatum ligt VOOR de publicatie = terugwerkend ingevuld (\"the date the shortage began\"), mediaan 11 dagen, p75 48 dagen, 53 records >30 dagen, 30 recor",
-  "meldtermijn": "Twee sporen, en ze zijn strenger dan de EU-bodem. (a) Tekortmelding via SUR-F0207: \"at least two months in advance of a potential medium or high impact shortage, and at least 30 days in advance of a confirmed low impact shortage\" — dus 2 MAANDEN VOORAF voor precies de categorie die ook gepubliceerd wordt (medium/high), 30 dagen vooraf voor low impact (die meestal niet gepubliceerd wordt). Het kaderdocument SUR-G0045-4 uit 2023 is op dit punt losser (\"as soon as possible\" voor medium/high, \"not less than one month in advance\" voor low); het formulier v2 is de concretere en strengere versie en is wat de vergunninghouder invult. (b) Staking van marktvoorziening: Reg. 15(6)(h) S.I. 540/2007, \"no less than 2 months before the interruption\", behoudens uitzonderlijke omstandigheden. Netto: Ierland is een 2-maanden-vooraf-land. Dat is dus precies het geval waar de opdracht voor waarschuwt."
- },
- "DK": {
-  "land": "DK (Denemarken) — Lægemiddelstyrelsen (LMST), \"Meddelelser om forsynin",
-  "betekenis": "publicatiedatum",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "API-veld `date` uit de Sitecore-dynamiclists-respons van LMST. In /Users/karkara/Documents/LCG/Landkaart/scrapers/dk_lmst.py regel 231 gelezen als `gepubliceerd = item.get(\"date\")`, op regel 244 via `_pub_to_date()` (regel 158-170, kapt af op 10 tekens, geeft \"\" bij de CMS-nuldatum 0001-01-01) in `s",
-  "afwijking": "DK loopt structureel ACHTER op de feitelijke start, met een enorme spreiding, en de datum is bovendien niet stabiel in de tijd. Drie bevindingen, alle gemeten op de live productiebestand /Users/karkara/Documents/LCG/Landkaart/output/DK_LMST_shortage_2026-09-23.csv (363 records, scrape 23-09-2026):\n\n(1) ACHTERSTAND. Voor 359 van de 363 records (99%) is uit het veld \"Forventet periode\" een feitelijke startmaand af te leiden. Vergelijking van onze shortage_start met die feitelijke start: publicatie ligt NA de feitelijke start bij 297 records (83%), ervoor bij 60 (17%). Mediaan +27 dagen, gemiddel",
-  "meldtermijn": "Humaan: \"mindst 2 måneder før forsyningsvanskeligheden forventes at opstå\" (LMST-beleidsregel) en wettelijk \"mindst 2 måneder før ophør af markedsføringen\" (lægemiddelloven § 22, stk. 2, met uitzondering \"medmindre der foreligger særlige omstændigheder\"). Dit is de EU-minimumnorm van richtlijn 2001/83/EG art. 23bis, niet aangescherpt — anders dan lidstaten die naar onverwijld/直 melden zijn gegaan. Belangrijk: de plicht dekt expliciet ook \"uforudsete\" tekorten, waarvoor 2 maanden vooraf per definitie onhaalbaar is. Veterinair: geen termijn in dagen, maar \"straks […] inden den træffer en sådan foranstaltning\" (Verordening (EU) 2019/6 art. 58(13)). CRUCIAAL: deze meldtermijn zit NIET in onze data. Wij nemen de datum waarop LMST de meddelelse publiceerde of laatst bijwerkte, niet de datum waarop de vergunninghouder meldde. De 2-maandentermijn zegt dus niets over de afwijking van ONS veld."
- },
- "CZ": {
-  "land": "Tsjechië (CZ) — SÚKL, Státní ústav pro kontrolu léčiv",
-  "betekenis": "publicatiedatum",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "`platOd` uit `GET https://prehledy.sukl.cz/hsz/v1/nedostupne-lp`. In /Users/karkara/Documents/LCG/Landkaart/scrapers/cz_sukl.py regel 232: `\"shortage_start\": item.get(\"platOd\", \"\")`. Er is GEEN terugval: platOd is bij alle 480 live records gevuld, er is geen tweede datumkandidaat in de lijst-API (ve",
-  "afwijking": "NIET systematisch vóór of ná — de afwijking is bidirectioneel en groot, wat erger is dan een vaste verschuiving (die had je kunnen corrigeren).\n\nWAT DE DATUM IS: platOd is de dag waarop een opatření obecné povahy (algemeen besluit) van SÚKL in werking treedt waarmee producten het příznak \"omezená dostupnost\" krijgen (§33b odst. 2/3, uitgevaardigd via §33c). Het is de dag ná publicatie op de elektronische úřední deska. Drie keer geverifieerd tegen het besluit zelf: (1) API platOd 2024-12-12 / cisloJednaciOd SUKL323580/2024 ↔ OOP \"Vyvěšeno dne: 11.12.2024\" + \"nabývá účinnosti dne 12.12.2024\"; (2",
-  "meldtermijn": "2 maanden vooraf (EU-minimum, NIET aangescherpt), met een ruime uitzondering. §33 odst. 2 zákona o léčivech, letterlijk: \"stejným způsobem rovněž oznámí Ústavu nebo Veterinárnímu ústavu nejméně 2 měsíce předem přerušení nebo ukončení uvádění léčivého přípravku na trh v České republice. V případě výjimečných okolností lze učinit takové oznámení nejpozději současně s přerušením nebo ukončením uvádění léčivého přípravku na trh v České republice.\" Hervatting: \"neprodleně\". Empirisch haalt bijna niemand de 2 maanden: in het SÚKL-meldingenregister (marketreport, n=1.342 meldingen type 'preruseni') is de mediaan tussen melding en feitelijke onderbrekingsdatum +4 dagen; 87,2% meldt op of vóór de startdag, maar slechts 18,5% meldt 60 dagen of meer vooraf (bij 'ukonceni', n=2.887: mediaan 0 dagen, 19,0% haalt de 60 dagen). LET OP: deze meldtermijn is hier grotendeels irrelevant, want de datum die het dashboard gebruikt is niet de melding maar het latere SÚKL-besluit."
- },
- "US": {
-  "land": "US — Verenigde Staten (FDA/CDER Drug Shortage Staff, via openFDA)",
-  "betekenis": "publicatiedatum",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "openFDA-veld `initial_posting_date` → `shortage_start`. Vindplaats: /Users/karkara/Documents/LCG/Landkaart/scrapers/us_fda.py r.130: `\"shortage_start\": self._parse_date(rec.get(\"initial_posting_date\"))`. Géén terugval in de scraper (leeg/onparseerbaar → None). Géén US-uitzondering in /Users/karkara/",
-  "afwijking": "STRUCTUREEL ACHTER op de feitelijke eerste dag. Richting is zeker, omvang niet officieel gekwantificeerd.\n\nWaarom achter — drie stapelende vertragingen, elk gedocumenteerd:\n1. De drempel is landelijk vraag>aanbod. Op het moment dat die is gehaald loopt het tekort in het veld al.\n2. FDA publiceert pas ná een verificatieronde bij álle fabrikanten (GAO-25-107110 p.8; FDA-guidance 2024 r.305-308).\n3. Pas daarna zet FDA het op de site — en precies díe dag is ons veld (\"Date the presentation was added to the public website\").\n\nBeste beschikbare kwantificering (één casus, niet generaliseerbaar): cisp",
-  "meldtermijn": "Wettelijk 6 maanden VOORAF (sectie 506C FD&C Act / 21 U.S.C. 356c), met terugval \"as soon as practicable\" en een harde bovengrens van 5 werkdagen NA het voorval. Cruciaal: die melding gaat naar FDA, niet naar het publieke register — en de meldingsdatum zit NIET in de openFDA-data. Er is geen veld voor. De 6 maanden voorsprong die de wet creëert is in onze dataset dus volledig onzichtbaar; wat wij zien is pas de publicatie ná verificatie. Zie ook `systematische_afwijking`."
- },
- "FR": {
-  "land": "Frankrijk (FR) — ANSM",
-  "betekenis": "feitelijke_start",
-  "vergelijkbaar": false,
-  "zekerheid": "midden",
-  "bevestigd": true,
-  "bronveld": "Kolom \"Date de début de situation\" uit de officiële Excel-export van de ANSM-pagina (https://ansm.sante.fr/disponibilites-des-produits-de-sante/medicaments/export). In /Users/karkara/Documents/LCG/Landkaart/scrapers/fr_ansm.py leest `_haal_export()` die kolom (regel 82: \"start\") en regel 152 zet hem",
-  "afwijking": "De FR-datum is niet één grootheid maar DRIE, afhankelijk van de status van de rij; dat is de kern van het probleem. Gemeten op de ANSM-export van 23-09-2026 (294 rijen, alle met begindatum):\n\n1. \"Rupture de stock\" (46 rijen, 16%) en \"Tension d'approvisionnement\" (137 rijen, 47%): hier is \"Date de début de situation\" een feitelijke startdatum van de lopende situatie, zoals de vergunninghouder die heeft verklaard. Bewijs: hij ligt systematisch VOOR de aanmaakdatum van de ANSM-pagina — mediaan 13 dagen (rupture) resp. 8 dagen (tension), bij 37/46 en 121/137 rijen. Hij is dus geen publicatie- of s",
-  "meldtermijn": "Voor tekorten: GEEN voorafgaande termijn, maar \"onverwijld\" — de exploitant informeert de ANSM \"dès qu'ils en ont connaissance\" (L. 5121-32 CSP) en moet ook een geanticipeerd tekort melden met opgave van \"les délais de survenue\" (R. 5124-49-1 II). ANSM vraagt te melden \"aussi précocement que possible\"; aanvullende gegevens (volet 2) binnen 48 uur voor onmisbare MITM en binnen 5 werkdagen voor overige MITM. Frankrijk kent dus GEEN verplichte melding van X dagen vóór het tekort. De 2-maandsregel van richtlijn 2001/83/EG art. 23bis is in Frankrijk alleen geïmplementeerd voor stopzetting van de handel (L. 5124-6): minstens 1 jaar vooraf voor een MITM, uiterlijk 2 maanden vooraf voor niet-MITM, bij urgentie onmiddellijk. Dat verklaart precies waarom de rijen met status \"Arrêt de commercialisation\" toekomstige begindatums kunnen dragen (gemeten: één rij op 2027-07-01)."
- },
- "GB": {
-  "land": "GB (Verenigd Koninkrijk) — bron in de Landkaart: DHSC/NHSBSA/MHRA via ",
-  "betekenis": "publicatiedatum",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "Geen enkel veld: DRIE verschillende velden uit drie verschillende bronnen vullen dezelfde kolom `shortage_start`. (1) CPE/DHSC Medicine Supply Notification — regex `Date of issue:\\s*([^\\n]+)` in de MSN-tekst, eerste datum (gb_mhra.py r.420-426); 95 van 207 ruwe rijen, ~76 van de 135 kaartrijen. (2) ",
-  "afwijking": "GB loopt structureel ACHTER op de feitelijke eerste dag, en is bovendien INTERN inconsistent — dat tweede is voor een golfanalyse het zwaarste bezwaar.\n\nRICHTING (hoge zekerheid). Het VK heeft wél een strenge vooraf-meldplicht (6 maanden, zie meldtermijn — drie keer zo streng als art. 23bis), maar die melding gaat via het besloten DaSH-portaal naar DHSC en wordt NOOIT gepubliceerd: \"DHSC recognises that the information submitted is confidential and commercially sensitive and must be handled in accordance with the statutory restrictions on disclosure in s264B of the National Health Service Act ",
-  "meldtermijn": "TEN MINSTE 6 MAANDEN VOORAF aan DHSC (drie keer strenger dan art. 23bis), maar niet-openbaar. Reg. 29(3) Health Service Products (Provision and Disclosure of Information) Regulations 2018: \"(b) where the producer considers there may be a supply shortage of the relevant presentation— (i) at least six months before any anticipated impact on any patient who takes the presentation is realised, or (ii) where the producer becomes aware of the likely supply shortage less than six months before the producer considers any anticipated impact will be realised, as soon as reasonably practicable after the producer becomes aware that there may be a supply shortage.\" Voor stopzetting: \"(i) at least six months before the day on which the manufacturing or supply will cease\". DAARNAAST, los hiervan, de UK-omzetting van art. 23bis: reg. 73(3)-(5) Human Medicines Regulations 2012 — melding aan de MHRA bij (tijdelijke of permanente) marktterugtrekking \"must be given before the beginning of the period of two months ending\" met de datum van terugtrekking, tenzij niet redelijkerwijs uitvoerbaar. BEIDE meldingen worden niet gepubliceerd; wat wij zien (MSN/SSP/NatPSA) is de communicatie ACHTERAF door DHSC."
- },
- "MY": {
-  "land": "Maleisië (MY) — NPRA, Medicine Shortage & Discontinuation Database",
-  "betekenis": "verwachte_start",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "Kolom \"Supply Impact Start Date\" uit het publieke NPRA Google Sheet (sheet-id 1wH8oW7PMUULnIvn2AnEmYliHQ_CJdn3VLUpYvhDVsyo), gelezen in /Users/karkara/Documents/LCG/Landkaart/scrapers/my_npra.py r.254: \"shortage_start\": self._parse_date(row.get(\"Supply Impact Start Date\")). GEEN TERUGVAL — dit is de",
-  "afwijking": "NIET VERGELIJKBAAR, met DRIE afwijkingen waarvan twee in tegengestelde richting. MY mag daarom niet ongesplitst in een warning-wave-analyse.\n\n(A) LOOPT VOOR — tot 6 maanden, en het veld is per definitie prospectief. De meldtermijn is 6 maanden vooraf (EU-norm: 2 maanden, richtlijn 2001/83/EG art. 23bis) en het veld heet letterlijk \"the ESTIMATED date that the supply IS IMPACTED\". Empirisch bevestigd in output/MY_NPRA_shortage_2026-09-23.csv: van de 28 records met source_status = \"Anticipated\" liggen ALLE 27 met een gevulde datum in de TOEKOMST (2026-10-21 t/m 2028-04-01, dus 1 tot 19 maanden v",
-  "meldtermijn": "Ten minste 6 maanden VOORAF (\"at least six (6) months in advance\", Guideline 4.6; \"dalam tempoh enam (6) bulan sebelum tarikh gangguan\", Direktif Bil.10/2025 art. 3.5). Verplicht sinds 1 juli 2026, vrijwillig van 1 aug 2025 t/m 30 juni 2026. Uitzondering voor het niet-voorzienbare geval: \"as soon as practicable thereafter\" / \"dengan segera\" (onverwijld). Dat is 3x de EU-norm van 2 maanden uit richtlijn 2001/83/EG art. 23bis."
- },
- "SA": {
-  "land": "Saudi-Arabië (SA) — SFDA",
-  "betekenis": "onbekend",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "GEEN. De bron levert helemaal geen datum en de scraper vult het veld hard leeg. In /Users/karkara/Documents/LCG/Landkaart/scrapers/sa_sfda.py regel 83 staat letterlijk `\"shortage_start\": \"\",` — een constante, geen bronveld. De scraper leest maar vier kolommen uit de HTML-tabel (stofnaam, beschikbaar",
-  "afwijking": "Niet uit te drukken als een verschuiving in dagen, want er IS geen datum — en dat is juist het gevaar. Twee dingen tegelijk:\n\n(1) FEITELIJK, in het dashboard: SA heeft 543/543 records met ss = null. Wie de startdatum uit het dashboard leest zoals de frontend dat doet (`r.ss || r.sa`), krijgt voor élk SA-tekort de scrapedatum, nu 2026-09-23. SA schuift dus bij iedere verversing mee met vandaag. In een volgorde-analyse komt Saudi-Arabië daardoor per constructie ALTIJD als laatste land uit de bus, ongeacht wat er werkelijk gebeurt — een afwijking van 100% artefact, 0% signaal. Omgekeerd: een teko",
-  "meldtermijn": "Ten minste zes maanden vóór het verwachte moment van onderbreking. Wettelijke basis: Uitvoeringsverordening van de Wet op farmaceutische en kruideninrichtingen en -producten, Artikel Eenentwintig (regeling 21.4 en de direct daarop volgende alinea). Deze termijn is NIET terug te zien in de gepubliceerde lijst — er staat geen enkele datum in."
- },
- "CA": {
-  "land": "Canada (CA) — bron in het dashboard: \"DSC\" / Health Canada",
-  "betekenis": "publicatiedatum",
-  "vergelijkbaar": false,
-  "zekerheid": "hoog",
-  "bevestigd": true,
-  "bronveld": "TWEE PADEN, en de LIVE data gebruikt de terugval.\n\n(a) LIVE PAD — `_scrape_tier3()` (ca_hpsc.py:228-276). Zonder DSC_EMAIL/DSC_PASSWORD valt de scraper terug op de publieke Tier 3-tabel op canada.ca. `shortage_start` = kolom 2 van die tabel = **\"Date of Tier 3 Determination\"** (regel 250-258 → 269).",
-  "afwijking": "NIET BRUIKBAAR VOOR EEN VOLGORDE-ANALYSE, om drie los van elkaar dodelijke redenen.\n\n1. DEKKING. 15.790 van 15.810 CA-records (99,87%) hebben helemaal geen startdatum. Die kunnen per definitie niet in een volgorde meedoen. Canada levert feitelijk 20 datapunten.\n\n2. VERKEERD SOORT DATUM, richting bekend, grootte onbekend. Die 20 datums zijn Tier 3-bepalingsdatums: een besluit van de Tier Assignment Committee, niet de dag dat de levering stokte. Richting: voor FEITELIJKE tekorten loopt de datum ACHTER, want TAC wordt pas ad hoc bijeengeroepen nadat een tekort is gemeld en er informatie is verzam",
-  "meldtermijn": "Food and Drug Regulations C.01.014.9(2): verwacht tekort >6 maanden → minstens 6 maanden vooraf; verwacht tekort ≤6 maanden → binnen 5 dagen na die vaststelling; niet-verwacht tekort → binnen 5 dagen na bekend worden. Wijzigingen binnen 2 dagen (lid 3), opgelost binnen 2 dagen (lid 4). Stopzetting (C.01.014.91(2)): minstens 12 maanden vooraf, of binnen 5 dagen na het besluit. LET OP: dit geldt voor de DSC-melding; de Tier 3-bepalingsdatum die nu in het dashboard staat kent geen enkele wettelijke termijn."
- }
+  "SK": {
+    "land": "Slowakije (SK) — ŠÚKL, Štátny ústav pre kontrolu liečiv",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "Kolom `Účinnosť` uit de ŠÚKL-meldingen-CSV (portal.sukl.sk/PreruseniePublic/?act=PrerusenieOznList&export=csv), in de Engelse versie van diezelfde lijst gelabeld als \"Date from\". Pad in de code: /Users/karkara/Documents/LCG/Landkaart/scrapers/sk_sukl.py r. 267 (`self._tekst(ucinnost)` als eerste ele",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "IS": {
+    "land": "IJsland (IS) — Lyfjastofnun",
+    "betekenis": "verwachte_start",
+    "vergelijkbaar": true,
+    "zekerheid": "midden",
+    "bevestigd": true,
+    "bronveld": "`Áætlað upphaf` (\"geraamd begin\") van de detailkaart op lyfjastofnun.is/lyf/lyfjaskortur/tilkynntur-lyfjaskortur/. Pad: scrapers/is_lyfja.py:79 (`expected_start = self._get_field(item, \"Áætlað upphaf:\")`) -> regel 97 (`\"shortage_start\": self._parse_date(expected_start)`). GEEN terugval: staat het ve",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "NO": {
+    "land": "NO (Noorwegen) — DMP, Direktoratet for medisinske produkter",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "midden",
+    "bevestigd": true,
+    "bronveld": "Kolom \"Mangelperiode fra\" uit de excelData-JSON op de DMP-apotheekpagina → scrapers/no_dmp.py regel 95: \"shortage_start\": self._parse_date(row.get(\"Mangelperiode fra\", \"\")). GEEN terugval: 1520/1520 rijen zijn gevuld, de bron levert de kolom altijd. De naburige kolom \"Meldingsdato\" (1520/1520) en \"S",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "HU": {
+    "land": "Hongarije (HU) — OGYÉI / NNGYK",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "CSV-kolom \"A hiány kezdete\" (\"het begin van het tekort\") uit https://ogyei.gov.hu/generalt_listak/shortage_lista.csv, 1-op-1 gemapt op shortage_start in /Users/karkara/Documents/LCG/Landkaart/scrapers/hu_ogyei.py regel 72. GEEN terugval: de bron heeft geen tweede datumkolom (de 11 kolommen zijn Term",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "LV": {
+    "land": "LV (Letland) — ZVA, Zāļu valsts aģentūra",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "Kolom 4 (cells[3]) van de ZVA-tabel op https://dati.zva.gov.lv/zr-med-availability/ → rechtstreeks in shortage_start. Kolomkop live opgehaald: EN \"Interruption of supply from\", LV \"Pārtraukuma sākuma datums\" (= startdatum van de onderbreking). Code: /Users/karkara/Documents/LCG/Landkaart/scrapers/lv",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "ES": {
+    "land": "ES (Spanje) — AEMPS, via CIMA REST `GET /cima/rest/psuministro`",
+    "betekenis": "meldingsdatum",
+    "vergelijkbaar": true,
+    "zekerheid": "midden",
+    "bevestigd": true,
+    "bronveld": "`fini` (epoch-milliseconden) uit de CIMA REST-respons. In /Users/karkara/Documents/LCG/Landkaart/scrapers/es_aemps.py regel 90: `shortage_start = self._epoch_to_date(item.get(\"fini\"))`, met `_epoch_to_date` = `datetime.fromtimestamp(epoch_ms/1000).strftime(\"%Y-%m-%d\")` (regel 126-133).\n\nGEEN terugva",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "BE": {
+    "land": "BE (België) — FAGG/AFMPS, FarmaStatus",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "notARR[].startDate uit de publieke FarmaStatus-API (https://farmastatus.be/api/packs/info/public), van de notificatie waarvan notificationStatus == \"unavailable\". Zie /Users/karkara/Documents/LCG/Landkaart/scrapers/be_famhp.py regel 100: \"shortage_start\": self._parse_date(active_notif.get(\"startDate",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "FI": {
+    "land": "FI (Finland, Fimea)",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "RSS-veld \"Saatavuushäiriö alkaa: JJJJ-MM-DD\" uit <content:encoded> van de Fimea-RSS (https://fimea.fi/c/laakehaut_ja_luettelot/saatavuushairio-uusi/rss). In /Users/karkara/Documents/LCG/Landkaart/scrapers/fi_fimea.py regel 116 (`re.search(r\"alkaa:\\s*(\\d{4}-\\d{2}-\\d{2})\", content_text)` in `_parse_da",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "AT": {
+    "land": "Oostenrijk (AT) — BASG / AGES, Vertriebseinschränkungsregister (XML-ex",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "XML-attribuut `Beginn_Vertriebseinschraenkung` op `<Packung>`, met terugval op attribuut `Datum_Meldung` (/Users/karkara/Documents/LCG/Landkaart/scrapers/at_basg.py r.140-141: `self._datum(entry, \"Beginn_Vertriebseinschraenkung\", \"Datum_Meldung\")`). De terugval vuurt in de praktijk NIET: in de live ",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "DE": {
+    "land": "Duitsland (DE) — BfArM, PharmNet.Bund Lieferengpassmeldungen",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "CSV-kolom `Beginn` uit https://anwendungen.pharmnet-bund.de/lieferengpassmeldungen/public/csv → `shortage_start`. Zie /Users/karkara/Documents/LCG/Landkaart/scrapers/de_bfarm.py regel 47: `shortage_start = self._parse_date(row.get(\"Beginn\"))`. GEEN terugval in de scraper: is `Beginn` leeg, dan blijf",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "SI": {
+    "land": "Slovenië (SI) — bron CBZ (Centralna baza zdravil) + JAZMP meldingenbes",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "midden",
+    "bevestigd": true,
+    "bronveld": "`Datum začetka` uit het JAZMP-bestand Seznam_24_HUM_prenehanja_motnje.xlsx, blad \"Zadnja obvestila <datum>\" (si_cbz.py r.78-93, r.159). Koppeling: JAZMP `DŠ zdravila` = CBZ `Nacionalna šifra`, beide zfill(6); records gefilterd op `Vrsta obvestila` die \"motnj\" of \"prenehanj\" bevat; gesorteerd op `Dat",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "HR": {
+    "land": "HR (Kroatië — HALMED, Agencija za lijekove i medicinske proizvode)",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "Kolom 7 van de HALMED-PDF \"Nestasice-lijekova-tablica-za-objavu-WEB.pdf\", kopje \"Razdoblje trajanja nestašice\" (= periode van het tekort). De scraper /Users/karkara/Documents/LCG/Landkaart/scrapers/hr_halmed.py splitst die cel in `_parse_period()` op \" - \" en neemt het DEEL VOOR het streepje als `sh",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "GR": {
+    "land": "GR (Griekenland) — EOF / Εθνικός Οργανισμός Φαρμάκων",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "midden",
+    "bevestigd": true,
+    "bronveld": "Kolom 7 (index k[6]) uit de maandelijkse EOF-PDF \"ΛΙΣΤΑ ΦΑΡΜΑΚΕΥΤΙΚΩΝ ΣΚΕΥΑΣΜΑΤΩΝ ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΔΙΑΘΕΣΙΜΟΤΗΤΑΣ\", kopje \"Ημ. έναρξης διακοπής\" (datum van aanvang van de onderbreking). In /Users/karkara/Documents/LCG/Landkaart/scrapers/gr_eof.py regel 105: \"shortage_start\": self._parse_date(k[6]) — DD",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "EE": {
+    "land": "Estland (EE) — Ravimiamet, ravimiregister.ee",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": true,
+    "zekerheid": "midden",
+    "bevestigd": true,
+    "bronveld": "TarneraskusAlgus — uit de ASP.NET page-method https://www.ravimiregister.ee/PublicHomePage.aspx/GetPakend (per pakket-GUID, 38 JSON-velden). In /Users/karkara/Documents/LCG/Landkaart/scrapers/ee_ravimiamet.py regel 466: rec[\"shortage_start\"] = self._parse_date(d.get(\"TarneraskusAlgus\", \"\")). GEEN te",
+    "afwijking": "",
+    "meldtermijn": ""
+  },
+  "IT": {
+    "land": "IT",
+    "betekenis": "verwachte_start",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "Kolom \"Data inizio\" uit de AIFA-CSV elenco_medicinali_carenti.csv. Codespoor: /Users/karkara/Documents/LCG/Landkaart/scrapers/it_aifa.py regel 66 — `shortage_start = self._parse_date(row.get(\"Data inizio\"))`, geparsed als %d/%m/%Y. GEEN terugval: het veld is 2544/2544 (100%) gevuld, dus de generieke",
+    "afwijking": "IT loopt structureel VOOR op de feitelijke eerste dag, maar op een andere manier dan een land dat de melddatum publiceert. De datum zelf MIKT op de feitelijke ingangsdag (\"data di decorrenza\"), en niet op de dag van melden — dat is beter dan bijvoorbeeld een publicatiedatum. De voorsprong zit erin dat het een door de firma VOORAF opgegeven PLAN is dat AIFA nooit tegen de werkelijkheid toetst.\n\nMeetbaar, op de lijst van 21-09-2026 (2544 records): 344 records (13,5%) hebben een startdatum NA de publicatiedatum van de lijst. Mediane voorsprong 41 dagen, gemiddeld 62, p90 128 dagen, max 953 dagen ",
+    "meldtermijn": "Ten minste 2 maanden VOORAF, sinds 18-12-2025. D.Lgs. 219/2006 art. 34 comma 6, zoals vervangen door art. 61 Legge 2 dicembre 2025 n. 182 (\"Legge Semplificazioni\"): \"Detta comunicazione e effettuata non meno di due mesi prima dell'interruzione della commercializzazione del prodotto, anche in caso di comprovata emergenza sanitaria\". Daarvoor gold 4 maanden (D.L. n. 35/2019) — AIFA bevestigt dit expliciet: \"le comunicazioni da parte dei Titolari AIC ai sensi dell'art. 34, comma 6, devono avvenire con preavviso di almeno due mesi (non piu 4 mesi, come disposta dal D.L. n. 35/2019)\". Twee uitzonderingen op de termijn: (a) \"fatto salvo il caso di interruzione dovuta a circostanze imprevedibili che, in ogni caso, devono sempre essere tempestivamente comunicate\" — onvoorziene omstandigheden onverwijld melden; (b) \"Il termine non si applica alle sospensioni della commercializzazione connesse a motivi di sicurezza del prodotto\". Meldplicht geldt per verpakking (AIC 9 cijfers), niet per product. Sanctie bij te late of ontbrekende melding: 6.000-36.000 euro (art. 148 comma 1-bis), 36.000 bij verzuim en 18.000 bij te laat."
+  },
+  "JP": {
+    "land": "Japan (JP) — MHLW, 医療用医薬品供給状況報告",
+    "betekenis": "registratiedatum",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "Excel-kolomindex 12 = `⑬当該品目の⑫の情報を更新した日` (COL_STATUS_UPDATE), met terugval op kolomindex 19 = `⑳当該品目の⑫以外の情報を更新した日` (COL_OTHER_UPDATE_DATE). Regel 329 van /Users/karkara/Documents/LCG/Landkaart/scrapers/jp_mhlw.py: `shortage_start = self._parse_date(status_update_raw) or self._parse_date(other_update",
+    "afwijking": "JP loopt structureel ACHTER op de feitelijke start, met een onbekende en onbegrensde vertraging — de afwijking is niet te corrigeren met een vaste offset. Drie stapelende oorzaken. (1) Wettelijk kan JP nooit vooruitlopen: de openbare melding ontstaat pas NA de feitelijke stop (art. 18条の4 lid 1: \"その出荷の停止又は制限をしたときは、直ちに…届け出なければならない\"). De vooruitkijkende melding tot 6 maanden vooraf bestaat wel (art. 18条の3 lid 1) maar is expliciet 非公表 (niet openbaar) en belandt dus nooit in het bestand. (2) Het veld is geen startdatum maar een MUTATIEDATUM: het schuift mee bij elke statuswijziging. Een tekort dat ",
+    "meldtermijn": "Geen vooraf-melding in de openbare data. Art. 18条の4 lid 1 薬機法: melding \"直ちに\" (onverwijld) NADAT de stop of beperking is ingegaan. Art. 18条の3 lid 1 kent wel een vooruitkijkende meldplicht — onverwijld zodra de vergunninghouder besluit tot, of het risico ziet van, een stop/beperking binnen 6 maanden — maar die 供給不安報告 is 非公表 en wordt niet gepubliceerd. De EU-norm van 2 maanden vooraf (richtlijn 2001/83/EG art. 23bis) geldt hier niet."
+  },
+  "SE": {
+    "land": "Zweden (SE) — Läkemedelsverket, STS-dienst \"Sök anmälda försäljningsup",
+    "betekenis": "verwachte_start",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "`forecastStartDate` uit de STS-API (POST https://www.lakemedelsverket.se/api/sts/search), 1-op-1 overgenomen in `shortage_start` — /Users/karkara/Documents/LCG/Landkaart/scrapers/se_lv.py regel 121: `\"shortage_start\": self._parse_date(item.get(\"forecastStartDate\"))`. GEEN terugval: `_parse_date` gee",
+    "afwijking": "LOOPT VOOR, en is bovendien deels géén gebeurtenis maar een voorspelling. (1) Mechanisme: de datum is een door de vergunninghouder zelf ingediende prognose die uiterlijk 2 maanden vóór dat moment binnen moet zijn (4 kap. 18 §). De statusovergang \"kommande\" -> \"pågående\" gebeurt AUTOMATISCH als de kalenderdag aanbreekt, niet doordat iemand vaststelt dat de levering werkelijk stokt. (2) Gemeten op de live STS-set van 23-09-2026 (n=1061): shortage_start ligt mediaan 7 dagen ná de eerste publicatie (p25 = 0, p75 = +60); 276 records (26%) zijn ≥60 dagen vooraf gepubliceerd, conform de 2-maandenrege",
+    "meldtermijn": "Uiterlijk 2 maanden VOORAF, gekoppeld aan de geprognosticeerde startdatum: \"Anmälan ska göras så snart som möjligt men senast två månader innan försäljningsuppehållet beräknas starta. I undantagsfall kan informationen lämnas senare än två månader innan försäljningen upphör om det finns särskilda skäl.\" Wettelijke basis: läkemedelslag (2015:315) 4 kap. 18 § — \"ska också minst två månader i förväg meddela Läkemedelsverket om försäljningen av läkemedlet upphör tillfälligt eller permanent på den svenska marknaden. Om det finns särskilda skäl, får meddelandet lämnas senare än två månader i förväg.\" Dat is de letterlijke omzetting van art. 23bis 2001/83/EG, NIET aangescherpt. Sanctieheffing bij niet-melden is mogelijk (7 kap. 4 §), alleen voor humane geneesmiddelen. Naleving is aantoonbaar gebrekkig: 15,9% van de huidige records is pas ná de startdatum gepubliceerd."
+  },
+  "AU": {
+    "land": "AU (Australië) — TGA, Medicine Shortage Reports Database",
+    "betekenis": "verwachte_start",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "Veld `shortage_start` uit de ingebedde JSON `tabularData` op https://apps.tga.gov.au/Prod/msi/search. Gelezen in /Users/karkara/Documents/LCG/Landkaart/scrapers/au_tga.py regel 142: `\"shortage_start\": self._parse_date(rec.get(\"shortage_start\"))` — GEEN terugval, geen `or`-constructie. In /Users/kark",
+    "afwijking": "AU loopt structureel VOOR, maar onregelmatig, en het veld is bovendien niet homogeen. Drie meetbare effecten (eigen telling op de live TGA-bron, 984 records, peildatum 23-09-2026):\n\n(1) VOORLOOP bij verwachte tekorten. 92 records (9,3%) hebben status 'Anticipated'; 90 daarvan hebben een startdatum die nog moet komen. Voorloop t.o.v. vandaag: mediaan 42,5 dagen, p25 23 dagen, p75 90 dagen, max 226 dagen. Die landen in het dashboard als status 'upcoming' (95 stuks in data.json). Dit is geen feitelijk gestokte levering maar een aankondiging. Bron voor de aankondigplicht: \"You must submit a medici",
+    "meldtermijn": "Geen voorafmeldplicht voor tekorten; wel voor stopzetting. Verbatim uit de TGA-guidance (kop 'Mandatory reporting timeframes'): \"Critical impact shortages — You must report known shortages of critical impact to us within 2 working days. … You have a further 3 working days in which to provide the remaining required information about the shortage.\" / \"Non-critical shortages — You must report all non-critical shortages (those of low and medium impact) to us in full … within 10 working days.\" / \"Anticipated shortages — You must submit a medicines shortage notification if you anticipate that there is going to be a shortage at any time in the next 6 months.\" / \"Critical impact discontinuations — You must report discontinuations of critical impact medicines at least 12 months before the discontinuation is to occur or, if this is not possible, as soon as practicable after the decision.\" / \"Non-critical discontinuations — You must report non-critical discontinuations at least 6 months before the discontinuation is to occur…\". Wettelijke basis: Therapeutic Goods Act 1989 s 30EF (tekorten), s 30EG (stopzetting), s 30EFA (wijziging van de periode / oplossing). Publicatie volgt vrijwel direct: \"We publish all current shortages and discontinuations immediately after our review of the notification.\""
+  },
+  "RO": {
+    "land": "RO (Roemenië) — ANMDMR",
+    "betekenis": "meldingsdatum",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "PDF-kolom \"Data adresa\" (kolomindex 7) uit \"Notificari Sunset pt.postat incepand cu luna IUNIE 2016_.pdf\". In /Users/karkara/Documents/LCG/Landkaart/scrapers/ro_anm.py regel 109 gelezen als notif_date en op regel 132-133 IDENTIEK weggeschreven naar zowel notification_date als shortage_start (`\"notif",
+    "afwijking": "RO loopt structureel en fors VÓÓR op de feitelijke eerste dag van het tekort. Gemeten op de bron zelf: 425 van de 777 records noemen in \"Tip Notificare\" een expliciete ingangsmaand (\"... din <maand> <jaar>\"). Het verschil tussen \"Data adresa\" (= onze shortage_start) en de eerste dag van die ingangsmaand is: mediaan 296 dagen (~9,7 maanden), gemiddelde 241 dagen, p25 68 d, p75 357 d, p90 375 d, max 1.439 d. 99,8% van de meldingen ligt VOOR de ingangsmaand; 76,5% ligt 60 dagen of meer ervoor. Voor het recente cohort (meldingen 2024-2026, n=330) is de mediaan 192 dagen (p25 40, p75 350). Dat patr",
+    "meldtermijn": "Ten minste 6 maanden VOORAF; bij staking om commerciële redenen ten minste 12 maanden vooraf (Legea 95/2006 rep., art. 737 alin. (2)). Roemenië is daarmee fors strenger dan Richtlijn 2001/83/EG art. 23bis, die slechts 2 maanden eist — precies het verschil dat een volgorde-analyse vertekent."
+  },
+  "IE": {
+    "land": "Ierland (IE) — HPRA, Health Products Regulatory Authority",
+    "betekenis": "verwachte_start",
+    "vergelijkbaar": false,
+    "zekerheid": "midden",
+    "bevestigd": true,
+    "bronveld": "API-veld `expectedDateToImpact` uit de HPRA Shortages-API (sfapi.hpra.ie/api/Shortages), 1-op-1 gemapt op shortage_start in /Users/karkara/Documents/LCG/Landkaart/scrapers/ie_hpra.py regel 97: \"shortage_start\": self._parse_date(item.get(\"expectedDateToImpact\")). Gevuld in 359/360 records (23-09-2026",
+    "afwijking": "STRUCTUREEL VOOROP, maar met een spreiding die groter is dan de voorsprong — dat laatste is het echte probleem.\n\nGemeten op de 360 live records van 23-09-2026, door expectedDateToImpact af te zetten tegen websiteFirstUpdated (de eerste publicatiedatum uit dezelfde API):\n- 173 records (48%): startdatum ligt NA de publicatie = zuiver vooraf gemeld, mediaan 14 dagen voorsprong.\n- 31 records (9%): startdatum = publicatiedag.\n- 155 records (43%): startdatum ligt VOOR de publicatie = terugwerkend ingevuld (\"the date the shortage began\"), mediaan 11 dagen, p75 48 dagen, 53 records >30 dagen, 30 recor",
+    "meldtermijn": "Twee sporen, en ze zijn strenger dan de EU-bodem. (a) Tekortmelding via SUR-F0207: \"at least two months in advance of a potential medium or high impact shortage, and at least 30 days in advance of a confirmed low impact shortage\" — dus 2 MAANDEN VOORAF voor precies de categorie die ook gepubliceerd wordt (medium/high), 30 dagen vooraf voor low impact (die meestal niet gepubliceerd wordt). Het kaderdocument SUR-G0045-4 uit 2023 is op dit punt losser (\"as soon as possible\" voor medium/high, \"not less than one month in advance\" voor low); het formulier v2 is de concretere en strengere versie en is wat de vergunninghouder invult. (b) Staking van marktvoorziening: Reg. 15(6)(h) S.I. 540/2007, \"no less than 2 months before the interruption\", behoudens uitzonderlijke omstandigheden. Netto: Ierland is een 2-maanden-vooraf-land. Dat is dus precies het geval waar de opdracht voor waarschuwt."
+  },
+  "DK": {
+    "land": "DK (Denemarken) — Lægemiddelstyrelsen (LMST), \"Meddelelser om forsynin",
+    "betekenis": "publicatiedatum",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "API-veld `date` uit de Sitecore-dynamiclists-respons van LMST. In /Users/karkara/Documents/LCG/Landkaart/scrapers/dk_lmst.py regel 231 gelezen als `gepubliceerd = item.get(\"date\")`, op regel 244 via `_pub_to_date()` (regel 158-170, kapt af op 10 tekens, geeft \"\" bij de CMS-nuldatum 0001-01-01) in `s",
+    "afwijking": "DK loopt structureel ACHTER op de feitelijke start, met een enorme spreiding, en de datum is bovendien niet stabiel in de tijd. Drie bevindingen, alle gemeten op de live productiebestand /Users/karkara/Documents/LCG/Landkaart/output/DK_LMST_shortage_2026-09-23.csv (363 records, scrape 23-09-2026):\n\n(1) ACHTERSTAND. Voor 359 van de 363 records (99%) is uit het veld \"Forventet periode\" een feitelijke startmaand af te leiden. Vergelijking van onze shortage_start met die feitelijke start: publicatie ligt NA de feitelijke start bij 297 records (83%), ervoor bij 60 (17%). Mediaan +27 dagen, gemiddel",
+    "meldtermijn": "Humaan: \"mindst 2 måneder før forsyningsvanskeligheden forventes at opstå\" (LMST-beleidsregel) en wettelijk \"mindst 2 måneder før ophør af markedsføringen\" (lægemiddelloven § 22, stk. 2, met uitzondering \"medmindre der foreligger særlige omstændigheder\"). Dit is de EU-minimumnorm van richtlijn 2001/83/EG art. 23bis, niet aangescherpt — anders dan lidstaten die naar onverwijld/直 melden zijn gegaan. Belangrijk: de plicht dekt expliciet ook \"uforudsete\" tekorten, waarvoor 2 maanden vooraf per definitie onhaalbaar is. Veterinair: geen termijn in dagen, maar \"straks […] inden den træffer en sådan foranstaltning\" (Verordening (EU) 2019/6 art. 58(13)). CRUCIAAL: deze meldtermijn zit NIET in onze data. Wij nemen de datum waarop LMST de meddelelse publiceerde of laatst bijwerkte, niet de datum waarop de vergunninghouder meldde. De 2-maandentermijn zegt dus niets over de afwijking van ONS veld."
+  },
+  "CZ": {
+    "land": "Tsjechië (CZ) — SÚKL, Státní ústav pro kontrolu léčiv",
+    "betekenis": "publicatiedatum",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "`platOd` uit `GET https://prehledy.sukl.cz/hsz/v1/nedostupne-lp`. In /Users/karkara/Documents/LCG/Landkaart/scrapers/cz_sukl.py regel 232: `\"shortage_start\": item.get(\"platOd\", \"\")`. Er is GEEN terugval: platOd is bij alle 480 live records gevuld, er is geen tweede datumkandidaat in de lijst-API (ve",
+    "afwijking": "NIET systematisch vóór of ná — de afwijking is bidirectioneel en groot, wat erger is dan een vaste verschuiving (die had je kunnen corrigeren).\n\nWAT DE DATUM IS: platOd is de dag waarop een opatření obecné povahy (algemeen besluit) van SÚKL in werking treedt waarmee producten het příznak \"omezená dostupnost\" krijgen (§33b odst. 2/3, uitgevaardigd via §33c). Het is de dag ná publicatie op de elektronische úřední deska. Drie keer geverifieerd tegen het besluit zelf: (1) API platOd 2024-12-12 / cisloJednaciOd SUKL323580/2024 ↔ OOP \"Vyvěšeno dne: 11.12.2024\" + \"nabývá účinnosti dne 12.12.2024\"; (2",
+    "meldtermijn": "2 maanden vooraf (EU-minimum, NIET aangescherpt), met een ruime uitzondering. §33 odst. 2 zákona o léčivech, letterlijk: \"stejným způsobem rovněž oznámí Ústavu nebo Veterinárnímu ústavu nejméně 2 měsíce předem přerušení nebo ukončení uvádění léčivého přípravku na trh v České republice. V případě výjimečných okolností lze učinit takové oznámení nejpozději současně s přerušením nebo ukončením uvádění léčivého přípravku na trh v České republice.\" Hervatting: \"neprodleně\". Empirisch haalt bijna niemand de 2 maanden: in het SÚKL-meldingenregister (marketreport, n=1.342 meldingen type 'preruseni') is de mediaan tussen melding en feitelijke onderbrekingsdatum +4 dagen; 87,2% meldt op of vóór de startdag, maar slechts 18,5% meldt 60 dagen of meer vooraf (bij 'ukonceni', n=2.887: mediaan 0 dagen, 19,0% haalt de 60 dagen). LET OP: deze meldtermijn is hier grotendeels irrelevant, want de datum die het dashboard gebruikt is niet de melding maar het latere SÚKL-besluit."
+  },
+  "US": {
+    "land": "US — Verenigde Staten (FDA/CDER Drug Shortage Staff, via openFDA)",
+    "betekenis": "publicatiedatum",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "openFDA-veld `initial_posting_date` → `shortage_start`. Vindplaats: /Users/karkara/Documents/LCG/Landkaart/scrapers/us_fda.py r.130: `\"shortage_start\": self._parse_date(rec.get(\"initial_posting_date\"))`. Géén terugval in de scraper (leeg/onparseerbaar → None). Géén US-uitzondering in /Users/karkara/",
+    "afwijking": "STRUCTUREEL ACHTER op de feitelijke eerste dag. Richting is zeker, omvang niet officieel gekwantificeerd.\n\nWaarom achter — drie stapelende vertragingen, elk gedocumenteerd:\n1. De drempel is landelijk vraag>aanbod. Op het moment dat die is gehaald loopt het tekort in het veld al.\n2. FDA publiceert pas ná een verificatieronde bij álle fabrikanten (GAO-25-107110 p.8; FDA-guidance 2024 r.305-308).\n3. Pas daarna zet FDA het op de site — en precies díe dag is ons veld (\"Date the presentation was added to the public website\").\n\nBeste beschikbare kwantificering (één casus, niet generaliseerbaar): cisp",
+    "meldtermijn": "Wettelijk 6 maanden VOORAF (sectie 506C FD&C Act / 21 U.S.C. 356c), met terugval \"as soon as practicable\" en een harde bovengrens van 5 werkdagen NA het voorval. Cruciaal: die melding gaat naar FDA, niet naar het publieke register — en de meldingsdatum zit NIET in de openFDA-data. Er is geen veld voor. De 6 maanden voorsprong die de wet creëert is in onze dataset dus volledig onzichtbaar; wat wij zien is pas de publicatie ná verificatie. Zie ook `systematische_afwijking`."
+  },
+  "FR": {
+    "land": "Frankrijk (FR) — ANSM",
+    "betekenis": "feitelijke_start",
+    "vergelijkbaar": false,
+    "zekerheid": "midden",
+    "bevestigd": true,
+    "bronveld": "Kolom \"Date de début de situation\" uit de officiële Excel-export van de ANSM-pagina (https://ansm.sante.fr/disponibilites-des-produits-de-sante/medicaments/export). In /Users/karkara/Documents/LCG/Landkaart/scrapers/fr_ansm.py leest `_haal_export()` die kolom (regel 82: \"start\") en regel 152 zet hem",
+    "afwijking": "De FR-datum is niet één grootheid maar DRIE, afhankelijk van de status van de rij; dat is de kern van het probleem. Gemeten op de ANSM-export van 23-09-2026 (294 rijen, alle met begindatum):\n\n1. \"Rupture de stock\" (46 rijen, 16%) en \"Tension d'approvisionnement\" (137 rijen, 47%): hier is \"Date de début de situation\" een feitelijke startdatum van de lopende situatie, zoals de vergunninghouder die heeft verklaard. Bewijs: hij ligt systematisch VOOR de aanmaakdatum van de ANSM-pagina — mediaan 13 dagen (rupture) resp. 8 dagen (tension), bij 37/46 en 121/137 rijen. Hij is dus geen publicatie- of s",
+    "meldtermijn": "Voor tekorten: GEEN voorafgaande termijn, maar \"onverwijld\" — de exploitant informeert de ANSM \"dès qu'ils en ont connaissance\" (L. 5121-32 CSP) en moet ook een geanticipeerd tekort melden met opgave van \"les délais de survenue\" (R. 5124-49-1 II). ANSM vraagt te melden \"aussi précocement que possible\"; aanvullende gegevens (volet 2) binnen 48 uur voor onmisbare MITM en binnen 5 werkdagen voor overige MITM. Frankrijk kent dus GEEN verplichte melding van X dagen vóór het tekort. De 2-maandsregel van richtlijn 2001/83/EG art. 23bis is in Frankrijk alleen geïmplementeerd voor stopzetting van de handel (L. 5124-6): minstens 1 jaar vooraf voor een MITM, uiterlijk 2 maanden vooraf voor niet-MITM, bij urgentie onmiddellijk. Dat verklaart precies waarom de rijen met status \"Arrêt de commercialisation\" toekomstige begindatums kunnen dragen (gemeten: één rij op 2027-07-01)."
+  },
+  "GB": {
+    "land": "GB (Verenigd Koninkrijk) — bron in de Landkaart: DHSC/NHSBSA/MHRA via ",
+    "betekenis": "publicatiedatum",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "Geen enkel veld: DRIE verschillende velden uit drie verschillende bronnen vullen dezelfde kolom `shortage_start`. (1) CPE/DHSC Medicine Supply Notification — regex `Date of issue:\\s*([^\\n]+)` in de MSN-tekst, eerste datum (gb_mhra.py r.420-426); 95 van 207 ruwe rijen, ~76 van de 135 kaartrijen. (2) ",
+    "afwijking": "GB loopt structureel ACHTER op de feitelijke eerste dag, en is bovendien INTERN inconsistent — dat tweede is voor een golfanalyse het zwaarste bezwaar.\n\nRICHTING (hoge zekerheid). Het VK heeft wél een strenge vooraf-meldplicht (6 maanden, zie meldtermijn — drie keer zo streng als art. 23bis), maar die melding gaat via het besloten DaSH-portaal naar DHSC en wordt NOOIT gepubliceerd: \"DHSC recognises that the information submitted is confidential and commercially sensitive and must be handled in accordance with the statutory restrictions on disclosure in s264B of the National Health Service Act ",
+    "meldtermijn": "TEN MINSTE 6 MAANDEN VOORAF aan DHSC (drie keer strenger dan art. 23bis), maar niet-openbaar. Reg. 29(3) Health Service Products (Provision and Disclosure of Information) Regulations 2018: \"(b) where the producer considers there may be a supply shortage of the relevant presentation— (i) at least six months before any anticipated impact on any patient who takes the presentation is realised, or (ii) where the producer becomes aware of the likely supply shortage less than six months before the producer considers any anticipated impact will be realised, as soon as reasonably practicable after the producer becomes aware that there may be a supply shortage.\" Voor stopzetting: \"(i) at least six months before the day on which the manufacturing or supply will cease\". DAARNAAST, los hiervan, de UK-omzetting van art. 23bis: reg. 73(3)-(5) Human Medicines Regulations 2012 — melding aan de MHRA bij (tijdelijke of permanente) marktterugtrekking \"must be given before the beginning of the period of two months ending\" met de datum van terugtrekking, tenzij niet redelijkerwijs uitvoerbaar. BEIDE meldingen worden niet gepubliceerd; wat wij zien (MSN/SSP/NatPSA) is de communicatie ACHTERAF door DHSC.",
+    "op_de_kaart": false,
+    "notitie_kaart": "GB is op 24-09-2026 van de kaart gehaald (besluit Joris): het land stond in geen enkele verversingslijst en bevroor daardoor op de gegevens van 23-09. Dit onderzoek naar de datumbetekenis blijft staan voor als GB terugkomt. Zie scrapers/gb_mhra.py."
+  },
+  "MY": {
+    "land": "Maleisië (MY) — NPRA, Medicine Shortage & Discontinuation Database",
+    "betekenis": "verwachte_start",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "Kolom \"Supply Impact Start Date\" uit het publieke NPRA Google Sheet (sheet-id 1wH8oW7PMUULnIvn2AnEmYliHQ_CJdn3VLUpYvhDVsyo), gelezen in /Users/karkara/Documents/LCG/Landkaart/scrapers/my_npra.py r.254: \"shortage_start\": self._parse_date(row.get(\"Supply Impact Start Date\")). GEEN TERUGVAL — dit is de",
+    "afwijking": "NIET VERGELIJKBAAR, met DRIE afwijkingen waarvan twee in tegengestelde richting. MY mag daarom niet ongesplitst in een warning-wave-analyse.\n\n(A) LOOPT VOOR — tot 6 maanden, en het veld is per definitie prospectief. De meldtermijn is 6 maanden vooraf (EU-norm: 2 maanden, richtlijn 2001/83/EG art. 23bis) en het veld heet letterlijk \"the ESTIMATED date that the supply IS IMPACTED\". Empirisch bevestigd in output/MY_NPRA_shortage_2026-09-23.csv: van de 28 records met source_status = \"Anticipated\" liggen ALLE 27 met een gevulde datum in de TOEKOMST (2026-10-21 t/m 2028-04-01, dus 1 tot 19 maanden v",
+    "meldtermijn": "Ten minste 6 maanden VOORAF (\"at least six (6) months in advance\", Guideline 4.6; \"dalam tempoh enam (6) bulan sebelum tarikh gangguan\", Direktif Bil.10/2025 art. 3.5). Verplicht sinds 1 juli 2026, vrijwillig van 1 aug 2025 t/m 30 juni 2026. Uitzondering voor het niet-voorzienbare geval: \"as soon as practicable thereafter\" / \"dengan segera\" (onverwijld). Dat is 3x de EU-norm van 2 maanden uit richtlijn 2001/83/EG art. 23bis."
+  },
+  "SA": {
+    "land": "Saudi-Arabië (SA) — SFDA",
+    "betekenis": "onbekend",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "GEEN. De bron levert helemaal geen datum en de scraper vult het veld hard leeg. In /Users/karkara/Documents/LCG/Landkaart/scrapers/sa_sfda.py regel 83 staat letterlijk `\"shortage_start\": \"\",` — een constante, geen bronveld. De scraper leest maar vier kolommen uit de HTML-tabel (stofnaam, beschikbaar",
+    "afwijking": "Niet uit te drukken als een verschuiving in dagen, want er IS geen datum — en dat is juist het gevaar. Twee dingen tegelijk:\n\n(1) FEITELIJK, in het dashboard: SA heeft 543/543 records met ss = null. Wie de startdatum uit het dashboard leest zoals de frontend dat doet (`r.ss || r.sa`), krijgt voor élk SA-tekort de scrapedatum, nu 2026-09-23. SA schuift dus bij iedere verversing mee met vandaag. In een volgorde-analyse komt Saudi-Arabië daardoor per constructie ALTIJD als laatste land uit de bus, ongeacht wat er werkelijk gebeurt — een afwijking van 100% artefact, 0% signaal. Omgekeerd: een teko",
+    "meldtermijn": "Ten minste zes maanden vóór het verwachte moment van onderbreking. Wettelijke basis: Uitvoeringsverordening van de Wet op farmaceutische en kruideninrichtingen en -producten, Artikel Eenentwintig (regeling 21.4 en de direct daarop volgende alinea). Deze termijn is NIET terug te zien in de gepubliceerde lijst — er staat geen enkele datum in."
+  },
+  "CA": {
+    "land": "Canada (CA) — bron in het dashboard: \"DSC\" / Health Canada",
+    "betekenis": "publicatiedatum",
+    "vergelijkbaar": false,
+    "zekerheid": "hoog",
+    "bevestigd": true,
+    "bronveld": "TWEE PADEN, en de LIVE data gebruikt de terugval.\n\n(a) LIVE PAD — `_scrape_tier3()` (ca_hpsc.py:228-276). Zonder DSC_EMAIL/DSC_PASSWORD valt de scraper terug op de publieke Tier 3-tabel op canada.ca. `shortage_start` = kolom 2 van die tabel = **\"Date of Tier 3 Determination\"** (regel 250-258 → 269).",
+    "afwijking": "NIET BRUIKBAAR VOOR EEN VOLGORDE-ANALYSE, om drie los van elkaar dodelijke redenen.\n\n1. DEKKING. 15.790 van 15.810 CA-records (99,87%) hebben helemaal geen startdatum. Die kunnen per definitie niet in een volgorde meedoen. Canada levert feitelijk 20 datapunten.\n\n2. VERKEERD SOORT DATUM, richting bekend, grootte onbekend. Die 20 datums zijn Tier 3-bepalingsdatums: een besluit van de Tier Assignment Committee, niet de dag dat de levering stokte. Richting: voor FEITELIJKE tekorten loopt de datum ACHTER, want TAC wordt pas ad hoc bijeengeroepen nadat een tekort is gemeld en er informatie is verzam",
+    "meldtermijn": "Food and Drug Regulations C.01.014.9(2): verwacht tekort >6 maanden → minstens 6 maanden vooraf; verwacht tekort ≤6 maanden → binnen 5 dagen na die vaststelling; niet-verwacht tekort → binnen 5 dagen na bekend worden. Wijzigingen binnen 2 dagen (lid 3), opgelost binnen 2 dagen (lid 4). Stopzetting (C.01.014.91(2)): minstens 12 maanden vooraf, of binnen 5 dagen na het besluit. LET OP: dit geldt voor de DSC-melding; de Tier 3-bepalingsdatum die nu in het dashboard staat kent geen enkele wettelijke termijn."
+  }
 }

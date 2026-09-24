@@ -91,6 +91,7 @@ fresh_ccatc = {(r.get("cc"), (r.get("atc") or "").upper()) for r in fr}
 # enige wat we hebben.
 EXCLUDE = {"NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT",      # geen bruikbare tekortbron
            "CH",   # licentievoorbehoud in de bron; zie build_data.py
+           "GB",   # stond in geen enkele verversingslijst en bevroor daardoor; zie build_data.py
            "GR", "DE", "JP", "AT",                              # bron gerepareerd, vers is leidend
            # AT: de datums stonden als XML-ATTRIBUTEN op <Packung> en werden daardoor nooit
            # gelezen (shortage_start stond hard op ""). Nu gerepareerd. De last-live-records
