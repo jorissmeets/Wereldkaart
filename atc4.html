@@ -107,6 +107,7 @@
     .eml-dot.rood { background: #e05555; } .eml-dot.oranje { background: #f0a020; } .eml-dot.geel { background: #e0c020; } .eml-dot.none { background: var(--border); }
     .prk-tag { font-size: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--text-muted); }
     .b { font-size: 9px; font-weight: 800; color: #fff; padding: 1px 6px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; }
+    .b.urgent { background: #b4541e; }
     .b.weg { background: var(--lcg-blue); } .b.geraakt { background: #6f8ca8; } .b.solo { background: #7a5195; } .b.farm { background: #7a5195; } .b.land { background: var(--lcg-cyan); }
     .empty { padding: 20px 14px; color: var(--text-muted); font-style: italic; }
     .footer { margin-top: 18px; font-size: 11px; color: var(--text-muted); }
@@ -221,6 +222,7 @@
             <li><b>“Uitwijk verloren” geldt per product, niet per groep.</b> Blok A betekent: mínstens één PRK is volledig weg — niet dat de pool leeg is. In 40 van de 49 pools in blok A blijven ná dat verlies nog ≥5 andere PRK over (mediaan 10). V08AB staat in blok A met 2 weggevallen PRK van de 65.</li>
             <li><b>“Weg” is een lijststatus, geen beschikbaarheidstoets.</b> Het betekent: álle ZI-artikelen onder die PRK staan op de SFK Monitor leveringsproblemen. 56 van de 60 weggevallen PRK hebben er maar één; daar zijn “geraakt” en “weg” per definitie hetzelfde. Dat geldt voor 1.954 van de 4.692 PRK in de noemer (42%). Een leverbare parallelimport of een niet-gemelde verpakking ziet deze pagina niet.</li>
             <li><b>De ATC4-pool is een classificatie, geen therapeutische uitwijkgroep.</b> Bij combinatiepreparaten ligt het alternatief meestal búiten de pool (C09BA perindopril/indapamide, C10BA ezetimib/simvastatine, S01CA dexamethason/gentamicine). Omgekeerd staat er in een grote pool vaak een middel dat klinisch geen vervanger is. Beoordeel de uitwijk altijd op de uitgeklapte PRK-regels, nooit op het percentage alleen.</li>
+            <li><b>“Mogelijk urgent” is een rangschikking, geen voorspelling.</b> De sortering zet bovenaan wat het bekijken waard is vóórdat Nederland het merkt, via een poort op drie feiten: de pool is groot genoeg om te meten (≥5 PRK), er is een in 3 of meer landen bevestigd buitenlandsignaal, en minder dan een kwart van de Nederlandse pool is geraakt. Daarbinnen telt het aandeel bevestigde PRK. Er zit geen model en geen gewogen score achter; elk van de drie feiten staat in de rij zelf en is na te rekenen. Dat een pool hier bovenaan staat betekent <i>niet</i> dat het tekort naar Nederland komt — de volgorde waarin tekorten over landen trekken is met deze data niet vast te stellen.</li>
             <li><b>Buitenland zegt niets over de Nederlandse beschikbaarheid.</b> De pooldekking geeft aan welk deel van de Nederlandse pool ergens in het buitenland in tekort staat, geteld in PRK uit de G-standaard. Dat is bewust géén optelsom van landen — landen hanteren verschillende statusdefinities en zijn niet optelbaar tot een noemer — maar een breuk op de Nederlandse pool, waarin elke PRK één keer telt hoeveel landen hem ook melden. Een pool die in het buitenland op 100% staat, kan in Nederland gewoon leverbaar zijn; dat is juist het geval dat de moeite van het bekijken waard is. Meldingen zonder bruikbare PRK tellen <b>niet</b> mee in dat percentage — zonder PRK is niet vast te stellen om welk product het gaat, dus ze kunnen niet in de teller en niet in de noemer. Ze staan per ATC onder de pool als <i>ATC overig</i>, zodat ze niet stil verdwijnen. Pools in blok D hebben géén Nederlandse noemer: daar is geen enkele uitspraak over de NL-markt uit af te leiden.</li>
         </ul>
     </div>
@@ -244,6 +246,7 @@
         <div class="chip srt active" data-sort="standaard" title="Blok A op aantal weggevallen PRK, blok B op aantal geraakte PRK — de volgorde waarin deze lijst bedoeld is om gelezen te worden">Standaard</div>
         <div class="chip srt" data-sort="omvang" title="Grootste pools eerst (aantal PRK in de noemer)">Omvang</div>
         <div class="chip srt" data-sort="nieuw" title="Hiërarchisch: eerst het aantal Nederlandse Farmanco-meldingen (de NL-badge), daarbinnen het buitenlandse aantal. Nooit opgeteld — de zichtbare buitenlandkolom loopt daardoor niet netjes af.">Nieuw ≤7 d (NL eerst)</div>
+        <div class="chip srt" data-sort="urgent" title="Pools die het bekijken waard zijn vóórdat Nederland het merkt. Poort op drie feiten: de pool is groot genoeg om te meten, er is een in 3 of meer landen bevestigd buitenlandsignaal, en Nederland is nog grotendeels ongemoeid (minder dan een kwart van de pool geraakt). Daarna gerangschikt op het aandeel bevestigde PRK. Geen voorspelling en geen gewogen score — elk van de drie feiten staat in de rij zelf.">Mogelijk urgent</div>
         <div class="search"><input type="text" id="q" placeholder="Zoek pool, ATC4-code of stof…" autocomplete="off"></div>
     </div>
     <div class="controls" style="margin-top:-4px">
@@ -270,6 +273,10 @@
 const MIN_PRK_PCT   = 5;   // onder 5 PRK springt het percentage in stappen van >=20 punt: dat is geen meting
 const MIN_LANDEN     = 3;  // drempel voor de buitenlandkolom
 const NIEUW_DAGEN    = 7;
+// Vroegsignaal: de drie feiten die samen maken dat een pool het bekijken waard is VOORDAT
+// Nederland hem merkt. Geen voorspelling en geen score -- een poort en daarna een volgorde,
+// allebei na te rekenen uit de cijfers die in de rij staan.
+const URG_NL_MAX     = 0.25;  // boven dit NL-aandeel is het geen vroegsignaal meer maar een tekort
 const DATUM_DEKKING  = 0.5; // <50% gedateerde meldingen in een pool -> geen recentheidsgetal
 
 const S = { sort: "standaard", col: "all", q: "", minprk: false, nieuw: false, buitenland: false };
@@ -535,6 +542,31 @@ function recentheidBruikbaar(p) { return !(p.meldingen > 0 && p.gedateerd / p.me
 // NL-badge: staat altijd vóór het buitenlandse getal en wordt er nooit bij opgeteld.
 // Een Nederlands tekort van gisteren is voor deze bespreking het zwaarste signaal in
 // de kolom; dat mag niet wegvallen omdat het buitenland toevallig stil was.
+/* Mogelijk urgent: geen model en geen gewogen score, maar een poort op drie feiten.
+   1. de pool is groot genoeg om te meten (dezelfde drempel als voor elk percentage);
+   2. er is een BEVESTIGD buitenlandsignaal: minstens een PRK in >= MIN_LANDEN landen;
+   3. Nederland is nog grotendeels ongemoeid -- anders is het geen signaal maar nieuws.
+   Komt de pool er doorheen, dan telt het aandeel bevestigde PRK. Alles na te rekenen. */
+function urgentie(p) {
+    const drempel = META.minprk || MIN_PRK_PCT;
+    if (p.nPrk == null || p.nPrk < drempel) return null;
+    if (p.buitPrk3 == null || p.buitPrk3 < 1) return null;
+    if (p.geraakt == null) return null;
+    const nlA = p.geraakt / p.nPrk;
+    if (nlA >= URG_NL_MAX) return null;
+    return { aandeel: p.buitPrk3 / p.nPrk, bevestigd: p.buitPrk3, nlA,
+             solo: (p.nSolo || 0) / p.nPrk };
+}
+
+/* Alleen in de urgentiesortering, anders draagt tweeentwintig procent van de lijst een
+   badge en zegt hij niets meer. De tooltip noemt de drie feiten die de poort haalden. */
+function urgentBadge(p) {
+    if (S.sort !== "urgent") return "";
+    const u = urgentie(p);
+    if (!u) return "";
+    return ` <span class="b urgent" title="${nl(u.bevestigd)} van ${nl(p.nPrk)} PRK in deze pool staan in ${MIN_LANDEN} of meer landen tegelijk in tekort (${nl(Math.round(u.aandeel * 100))}%), terwijl in Nederland ${nl(Math.round(u.nlA * 100))}% van de pool geraakt is. Dat is wat deze pool hier bovenaan zet — geen voorspelling.">vroegsignaal</span>`;
+}
+
 function nlBadge(p) {
     if (!p.nlNieuw) return "";
     const st = (p.nlNieuwDetail || []).map(x => `${x.stof || x.atc || ""} ${dmy(x.datum || "")}`.trim())
@@ -603,7 +635,7 @@ function poolRow(p) {
             <span class="pool">
                 <span class="gcaret">▸</span>
                 <span class="eml-dot ${p.ems || "none"}" title="${p.ems ? "EMS " + p.ems + " (zwaarste beoordeling in deze pool)" : "Geen EMS-beoordeling in deze pool"}"></span>
-                <span><span class="nm">${poolNaam(p)}</span> <span class="cd">${esc(p.code)}</span></span>
+                <span><span class="nm">${poolNaam(p)}</span> <span class="cd">${esc(p.code)}</span>${urgentBadge(p)}</span>
             </span>
             <span class="cell"><span class="clbl">Omvang</span><span>${omvang}</span></span>
             <span class="cell"><span class="clbl">Weg</span><span>${geenNoemer ? NVT : breukCell(p.weg, p.nPrk, { meter: true })}</span></span>
@@ -704,6 +736,19 @@ const BLOKKEN = [
 function sorteer(list, blok) {
     const c = (x) => x == null ? -1 : x;
     if (S.sort === "omvang") return list.sort((a, b) => c(b.nPrk) - c(a.nPrk) || a.code.localeCompare(b.code));
+    // Mogelijk urgent. Eerst de poort: alleen pools waar alle drie de feiten gelden, anders
+    // zegt de volgorde niets. Daarna rangschikken op het aandeel van de pool dat in het
+    // buitenland BEVESTIGD in tekort is -- bevestigd betekent in >= MIN_LANDEN landen
+    // tegelijk, zodat een enkel achterlopend register geen pool omhoog duwt.
+    // Pools die niet door de poort komen blijven in hun eigen volgorde staan (stabiele sort).
+    if (S.sort === "urgent") return list.sort((a, b) => {
+        const ua = urgentie(a), ub = urgentie(b);
+        if (ua && !ub) return -1;
+        if (!ua && ub) return 1;
+        if (!ua && !ub) return 0;
+        return ub.aandeel - ua.aandeel || ub.bevestigd - ua.bevestigd
+            || ub.solo - ua.solo || a.nPrk - b.nPrk || a.code.localeCompare(b.code);
+    });
     // Sorteer op wat er in de cel staat: een pool waarvan de recentheid onbruikbaar is
     // mag niet bovenaan komen op een getal dat de gebruiker niet te zien krijgt.
     // NL eerst, dan buitenland: beide zijn "nieuwe meldingen", maar een Nederlands tekort
