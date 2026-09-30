@@ -68,7 +68,7 @@ class FrAnsmScraper(BaseScraper):
             kop = [str(sh.cell_value(0, c)).strip() for c in range(sh.ncols)]
             idx = {naam: kop.index(naam) for naam in
                    ("Titre", "Date de début de situation", "Date de mise à jour",
-                    "Date de remise à disposition") if naam in kop}
+                    "Date de remise à disposition", "URL de la page") if naam in kop}
             if "Titre" not in idx or "Date de début de situation" not in idx:
                 print("  LET OP: ANSM-export heeft niet de verwachte kolommen; geen datums")
                 return {}
@@ -84,6 +84,7 @@ class FrAnsmScraper(BaseScraper):
                                   if "Date de mise à jour" in idx else "",
                     "eind": self._parse_date(str(sh.cell_value(rij, idx.get("Date de remise à disposition", 0))).strip())
                             if "Date de remise à disposition" in idx else "",
+                    "url": str(sh.cell_value(rij, idx["URL de la page"])).strip() if "URL de la page" in idx else "",
                 }
             print(f"  Export: {len(uit)} meldingen met begindatum")
             return uit
@@ -91,6 +92,56 @@ class FrAnsmScraper(BaseScraper):
             print(f"  LET OP: ANSM-export niet bruikbaar ({type(e).__name__}: {str(e)[:60]}); "
                   f"geen startdatums")
             return {}
+
+    FR_MAANDEN = {"janvier": 1, "février": 2, "fevrier": 2, "mars": 3, "avril": 4, "mai": 5,
+                  "juin": 6, "juillet": 7, "août": 8, "aout": 8, "septembre": 9, "octobre": 10,
+                  "novembre": 11, "décembre": 12, "decembre": 12}
+
+    @classmethod
+    def _remise_uit_tekst(cls, tekst: str) -> str:
+        """'Date de remise à disposition prévue : courant octobre 2026' -> 2026-10-15.
+
+        Deze verwachting staat ALLEEN in de vrije tekst van de detailpagina; het veld in de
+        export blijft leeg zolang er geen vaste datum is. Jesper zag bij Endoxan 50 mg op de
+        ANSM-site "courant octobre 2026" terwijl de kaart geen einddatum had (validatie 25-09).
+        "indéterminée" en alles wat we niet kunnen lezen -> leeg. Liever geen datum dan een
+        verzonnen datum.
+        """
+        import calendar
+        m = re.search(r"remise\s+à\s+disposition\s+prévue\s*:\s*([^.;\n]{1,60})", tekst or "", re.I)
+        if not m:
+            return ""
+        w = m.group(1).strip().lower()
+        # Alleen tot en met het jaartal: de tekst loopt daarna door met de volgende zin
+        # ("... courant octobre 2026 Afin de sécuriser ..."), en in "afin" zit "fin".
+        tot_jaar = re.match(r"^(.*?20\d{2})", w)
+        if tot_jaar:
+            w = tot_jaar.group(1)
+        if any(x in w for x in ("indétermin", "indetermin", "inconnu", "non commun", "non déterm", "à déterminer")):
+            return ""
+        d = re.search(r"(\d{1,2})/(\d{1,2})/(20\d{2})", w)
+        if d:
+            return f"{int(d.group(3)):04d}-{int(d.group(2)):02d}-{int(d.group(1)):02d}"
+        jaar = re.search(r"(20\d{2})", w)
+        maand = next((n for naam, n in cls.FR_MAANDEN.items() if naam in w), None)
+        if not (jaar and maand):
+            return ""
+        j = int(jaar.group(1))
+        dag = (5 if re.search(r"\bd[ée]but\b", w) else
+               calendar.monthrange(j, maand)[1] if re.search(r"\bfin\b", w) else 15)
+        return f"{j:04d}-{maand:02d}-{dag:02d}"
+
+    def _haal_remise(self, urls: list) -> dict:
+        """Detailpagina's parallel ophalen; url -> verwachte terugkeer (of '')."""
+        from concurrent.futures import ThreadPoolExecutor
+        def een(url):
+            try:
+                t = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"}).text
+                return url, self._remise_uit_tekst(BeautifulSoup(t, "lxml").get_text(" ", strip=True))
+            except Exception:                        # noqa: BLE001
+                return url, ""
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            return dict(ex.map(een, urls))
 
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
@@ -115,6 +166,10 @@ class FrAnsmScraper(BaseScraper):
         # halen de datums uit de export. Valt de export weg, dan draait de scraper door zoals
         # voorheen.
         extra = self._haal_export()
+        zonder_eind = [v["url"] for v in extra.values() if v.get("url") and not v.get("eind")]
+        remise = self._haal_remise(zonder_eind) if zonder_eind else {}
+        n_remise = sum(1 for v in remise.values() if v)
+        print(f"  Detailpagina's: {len(remise)} gelezen, {n_remise} met een verwachte terugkeer")
 
         for row in rows[1:]:  # Skip header
             cells = row.find_all("td")
@@ -151,7 +206,8 @@ class FrAnsmScraper(BaseScraper):
                 "product_no": "",
                 "shortage_start": extra.get(self._sleutel(medicine_name), {}).get("start", ""),
                 "estimated_end": (extra.get(self._sleutel(medicine_name), {}).get("eind")
-                                  or self._parse_date(remise_date)),
+                                  or self._parse_date(remise_date)
+                                  or remise.get(extra.get(self._sleutel(medicine_name), {}).get("url", ""), "")),
                 "last_updated": (extra.get(self._sleutel(medicine_name), {}).get("bijgewerkt")
                                  or self._parse_date(update_date)),
                 "status": status,

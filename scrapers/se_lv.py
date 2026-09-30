@@ -11,7 +11,13 @@ class SeLvScraper(BaseScraper):
     """Scraper for Läkemedelsverket STS (shortage tracking system) API."""
 
     API_URL = "https://www.lakemedelsverket.se/api/sts/search"
-    PAGE_SIZE = 100
+    # In een keer ophalen. Met 100 per pagina en zonder sorteerparameter gaf de API bij
+    # elke pagina een net andere volgorde, waardoor pagina's overlapten: in een dubbele
+    # testrun van 30-09 kwamen 44 meldingen twee keer terug en vielen 44 andere weg, bij
+    # hetzelfde totaal van 1.063 -- zonder enige foutmelding. Met take=2000 in een verzoek:
+    # 1.063 van 1.063 uniek. Het bladeren hieronder blijft als terugval voor als de bron
+    # ooit groter wordt dan dit.
+    PAGE_SIZE = 5000
 
     STATUS_MAP = {
         "1": "upcoming",
@@ -95,6 +101,23 @@ class SeLvScraper(BaseScraper):
             skip += len(items)
 
         print(f"  Downloaded {len(all_items)} records")
+
+        # Nooit een set met dubbelen wegschrijven: die telt meldingen dubbel en is er andere
+        # kwijt, terwijl het totaal klopt. Ontdubbelen op het pakket-id en tellen tegen wat de
+        # bron zelf zegt te hebben.
+        uniek, gezien = [], set()
+        for it in all_items:
+            sleutel = str(it.get("nplPackId") or it.get("id") or "")
+            if sleutel and sleutel in gezien:
+                continue
+            gezien.add(sleutel)
+            uniek.append(it)
+        if len(uniek) != len(all_items):
+            print(f"  LET OP: {len(all_items) - len(uniek)} dubbele meldingen uit de paginering verwijderd")
+        all_items = uniek
+        if total and len(all_items) < total:
+            raise RuntimeError(f"onvolledige set: {len(all_items)} unieke van {total} meldingen "
+                               f"(paginering overlapte) -- niet weggeschreven")
 
         # De reden staat NIET in de zoekrespons maar wel achter GET /api/sts/?id=<id>.
         # Zweden stond daardoor op 0 redenen. Parallel ophalen, want het zijn er ruim duizend;

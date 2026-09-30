@@ -169,13 +169,49 @@ class DkLmstScraper(BaseScraper):
             return ""
         return s[:10] if len(s) >= 10 and s[4:5] == "-" else ""
 
+    def _period_start(self, period: str, gepubliceerd: str) -> str:
+        """Leid de START van het tekort af uit de Deense periode-tekst.
+
+        Tot 30-09 stond hier de publicatiedatum. Jesper vergeleek met de Deense site en zag
+        "Slut august - start december 2026" bij Coversyl Novum terwijl de kaart 24-09 gaf:
+        de dag dat LMST de melding plaatste, niet de dag dat het tekort begon.
+
+        "Start juli - slut september 2026" -> 2026-07-01
+        "Midt september - midt oktober 2026" -> 2026-09-15
+        "Slut december - start februar 2027" -> 2026-12-25 (startmaand na eindmaand: jaar ervoor)
+        "Fra midt oktober 2026" -> 2026-10-15
+        Onleesbaar -> de publicatiedatum, zoals vroeger.
+        """
+        p = (period or "").strip().lower().replace("–", "-").replace("—", "-")  # ook gedachtestreepjes
+        terug = self._pub_to_date(gepubliceerd)
+        if not p:
+            return terug
+        start_part = p.split("-")[0].strip() if "-" in p else p
+        end_part = p.split("-")[-1].strip() if "-" in p else ""
+        m_start = next((num for name, num in self.DK_MONTHS.items() if name in start_part), None)
+        if not m_start:
+            return terug
+        j = re.search(r"(20\d{2})", start_part)
+        if j:
+            year = int(j.group(1))
+        else:
+            je = re.search(r"(20\d{2})", end_part)
+            if not je:
+                return terug
+            year = int(je.group(1))
+            m_end = next((num for name, num in self.DK_MONTHS.items() if name in end_part), None)
+            if m_end and m_start > m_end:
+                year -= 1
+        day = 1 if ("start" in start_part or "begynd" in start_part) else 15 if "midt" in start_part else 25 if "slut" in start_part else 1
+        return f"{year:04d}-{m_start:02d}-{day:02d}"
+
     def _period_end(self, period: str) -> str:
         """Leid een geschatte einddatum af uit de Deense periode-tekst.
 
         "Start juli - slut september 2026" -> 2026-09-25 ; "Fra midt oktober 2026" (alleen
         start) -> "" ; "... - ukendt" (einde onbekend) -> "".
         """
-        p = (period or "").strip().lower()
+        p = (period or "").strip().lower().replace("–", "-").replace("—", "-")  # ook gedachtestreepjes
         if not p:
             return ""
         end_part = p.split("-")[-1].strip() if "-" in p else p
@@ -190,7 +226,15 @@ class DkLmstScraper(BaseScraper):
         month = next((num for name, num in self.DK_MONTHS.items() if name in end_part), None)
         if not month:
             return ""
-        day = 5 if ("start" in end_part or "begynd" in end_part) else 15 if "midt" in end_part else 25
+        if "start" in end_part or "begynd" in end_part:
+            day = 5
+        elif "midt" in end_part:
+            day = 15
+        else:
+            # "slut september" is eind september. Dit stond op de 25e, waardoor een verwachte
+            # einddatum vijf dagen te vroeg verliep en van de kaart verdween (Sendoxan, 30-09).
+            import calendar
+            day = calendar.monthrange(year, month)[1]
         return f"{year:04d}-{month:02d}-{day:02d}"
 
     def scrape(self) -> pd.DataFrame:
@@ -241,7 +285,7 @@ class DkLmstScraper(BaseScraper):
                 "strength": "",
                 "package_size": "",
                 "product_no": "",
-                "shortage_start": self._pub_to_date(gepubliceerd),
+                "shortage_start": self._period_start(table_data.get(self.FIELD_PERIOD, ""), gepubliceerd),
                 "estimated_end": self._period_end(table_data.get(self.FIELD_PERIOD, "")),
                 "expected_period": table_data.get(self.FIELD_PERIOD, ""),
                 "status": "shortage",

@@ -72,12 +72,15 @@ def main() -> None:
         k = (atc, cc)
         actief = x.get("st") == "active"
         vorig = nu.get(k)
+        geleend = x.get("atc_src") == "vorige_run"
         if vorig is None:
             nu[k] = {"actief": actief,
                      "start": x.get("ss") or "",
-                     "stof": (x.get("sub") or x.get("mn") or "")[:60]}
+                     "stof": (x.get("sub") or x.get("mn") or "")[:60],
+                     "alleen_geleend": geleend}
         else:
             vorig["actief"] = vorig["actief"] or actief
+            vorig["alleen_geleend"] = vorig["alleen_geleend"] and geleend
             if x.get("ss") and (not vorig["start"] or x["ss"] < vorig["start"]):
                 vorig["start"] = x["ss"]
 
@@ -102,13 +105,20 @@ def main() -> None:
                 "eerst_actief": vandaag if v["actief"] else "",
                 "gerapporteerde_start": v["start"], "stof": v["stof"],
                 # Bij de nulmeting weten we niet of het tekort net begon of al liep.
-                # Bij een land dat we voor het eerst zien geldt precies hetzelfde.
-                "vanaf_begin": "ja" if (eerste_run or k[1] in nieuwe_landen) else "nee",
+                # Bij een land dat we voor het eerst zien geldt precies hetzelfde. En bij een
+                # combinatie die alleen zichtbaar wordt doordat build_data de ATC leende uit de
+                # vorige data (atc_src=vorige_run) ook: het product stond al in de bron, we
+                # zagen het alleen niet. Op 30-09 waren dat er 14.
+                "vanaf_begin": "ja" if (eerste_run or k[1] in nieuwe_landen or v.get("alleen_geleend")) else "nee",
             }
             nieuw += 1
         else:
+            # Een tweede run op dezelfde dag is geen tweede waarneming. Zonder deze regel telde
+            # een herbouw na een reparatie de dag dubbel, en keer_gezien is juist het getal
+            # waarmee je ziet hoe lang iets al loopt.
+            if r.get("laatst_gezien") != vandaag:
+                r["keer_gezien"] = str(int(r.get("keer_gezien") or 0) + 1)
             r["laatst_gezien"] = vandaag
-            r["keer_gezien"] = str(int(r.get("keer_gezien") or 0) + 1)
             if v["actief"] and not r.get("eerst_actief"):
                 r["eerst_actief"] = vandaag
                 weer_actief += 1

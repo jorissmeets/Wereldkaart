@@ -82,13 +82,14 @@ landen meten er 14 iets anders dan de feitelijke start.**
 | betekenis | landen |
 |---|---|
 | feitelijke start | AT BE DE EE FI FR GR HR HU LV NO SI SK (13) |
-| verwachte/geraamde start | AU IE IS IT MY SE (6) |
-| publicatiedatum | CA CZ DK US (4) |
+| verwachte/geraamde start | AU DK IE IS IT MY SE (7) |
+| publicatiedatum | CA CZ US (3) |
 | meldingsdatum | ES RO (2) |
 | registratiedatum | JP (1) |
 | onbekend | SA (1) |
 
-Het Verenigd Koninkrijk stond hier eerder bij en is op 24-09 van de kaart gehaald; het
+Denemarken stond tot 30-09 onder publicatiedatum; sinds die datum is de start het begin van de
+Deense periode. Het Verenigd Koninkrijk stond hier eerder bij en is op 24-09 van de kaart gehaald; het
 datumonderzoek voor GB staat nog wel in `datum_betekenis.json`, met een vlag.
 
 Alles staat met citaat en bron in `../../datum_betekenis.json`.
@@ -204,6 +205,12 @@ Datzelfde geldt voor een land dat nieuw in de data komt: dat levert in één kee
 'nieuwe' combinaties op die in werkelijkheid al liepen. `bouw_panel.py` vangt dat sinds 24-09
 af — een nieuw land krijgt `vanaf_begin = ja`. Het Verenigd Koninkrijk liet zien waarom: 70
 regels kwamen als verse verschijningen binnen terwijl er alleen een bron was bijgekomen.
+
+**Langlopend is geen actief.** Sinds 30-09-2026 bestaat de status `langlopend`: de bron
+zegt dat het tekort nog loopt, maar de melding is meer dan een jaar oud en heeft geen einddatum.
+Italië en Letland hebben er honderden van, deels meldingen die de vergunninghouder nooit heeft
+afgesloten (AIFA zegt dat zelf boven zijn lijst). Het panel telt ze niet als actief, en dat is
+bewust: `eerst_actief` gaat alleen over meldingen waarvan de bron recent iets zei.
 
 En de resolutie is een week. Een golf die in drie dagen over Europa trekt, zie je hiermee
 niet. Voor iets trager dan een week werkt het wel.

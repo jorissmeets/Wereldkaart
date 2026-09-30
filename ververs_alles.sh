@@ -19,6 +19,10 @@ PRKD="${LCG_PRK:-/Users/karkara/Documents/LCG/Matchen_prk}"
 export LCG_BASE="$BASE" LCG_PRK="$PRKD"
 LOGDIR="$BASE/logs"
 DATUM=$(date +%Y-%m-%d)
+# De samenvoegstap moet weten welke landen DEZE run vers binnenkwamen; die worden niet meer
+# aangevuld uit de momentopname. Expliciet doorgeven: een run die om 19:37 begint, loopt
+# soms over middernacht, en dan klopt date.today() in Python niet meer met de bestandsnamen.
+export LCG_DATUM="$DATUM"
 LOG="$LOGDIR/ververs_$DATUM.log"
 UV="uv run --python 3.13 --with typesafe-sdk --with python-dotenv --with openai --with pandas --with requests --with beautifulsoup4 --with lxml --with openpyxl --with xlrd --with pdfplumber"
 
@@ -129,6 +133,11 @@ kritiek "merge_live" $UV python _merge_live.py
 echo; echo "### 5b. ATC-codes toetsen aan de stofnaam"
 $UV python corrigeer_atc_stofnaam.py --schrijf 2>&1 | tail -3
 kritiek "corrigeer_atc_data" $UV python corrigeer_atc_stofnaam.py --data --schrijf
+# Een PRK die in de G-standaard bij een andere stof hoort dan de melding, is fout -- hoe hij
+# er ook in kwam. Op 30-09 waren dat er 835: albendazol aan ibuprofen, insuline aan
+# clopidogrel. Na de ATC-correctie, want die verandert welke PRK de goede is. --koppeltabel
+# haalt ze ook uit de cache, anders legt de koppelaar ze volgende week gewoon terug.
+kritiek "toets_prk_atc" $UV python toets_prk_atc.py --data --koppeltabel --schrijf
 
 # --- 5c. Volgorde-onderzoek: panel bijwerken en dataset bouwen -------------
 # Het panel legt vast WANNEER wij een molecuul voor het eerst in een land zagen. Dat is het

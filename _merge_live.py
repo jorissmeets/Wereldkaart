@@ -31,6 +31,10 @@ old = json.load(open(OLD))
 fr = fresh["records"]
 orl = old["records"]
 
+# Vormcontrole bij het lenen: zie vorm.py (gedeeld met toets_prk_atc.py).
+from vorm import vorm_botst  # noqa: E402
+
+
 def stofsleutel(r):
     """Land + molecuul + STOFNAAM, zonder de productnaam.
 
@@ -60,6 +64,7 @@ old_stof = {k: next(iter(v)) for k, v in old_stof.items() if len(v) == 1}
 fresh_keys = set()
 borrowed = 0
 borrowed_stof = 0
+geweigerd_vorm = 0
 for r in fr:
     k = key(r)
     fresh_keys.add(k)
@@ -72,6 +77,11 @@ for r in fr:
             borrowed_stof += 1
     else:
         borrowed += 1
+    if bron is not None and vorm_botst(r, bron[1]):
+        # Een lening die over de vormgrens gaat is erger dan geen lening: hij wijst een
+        # specifiek Nederlands product aan dat niet geraakt is.
+        geweigerd_vorm += 1
+        bron = None
     if bron is not None:
         r["prk"], nm = bron[0], bron[1]
         if nm:
@@ -109,14 +119,49 @@ EXCLUDE = {"NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT",      # geen bruikbare
            # die het niet dekt vult last-live aan.
            "EE"}    # filterfout hersteld (Mõlemad -> Tarneraskusega); oude 400 records waren
                     # vervuild met 'marketing beëindigd' en mogen niet terugkomen
+# ── Alleen aanvullen voor landen waarvan deze run GEEN verse scrape heeft ──────────
+# Het vangnet werkte per molecuul, ook als het land zelf compleet binnenkwam. Dan haalt het
+# tekorten terug die de bron inmiddels heeft laten vallen, en omdat de momentopname
+# bevroren is, blijven ze voor altijd staan. Op 30-09 kwamen zo 2.659 meldingen op de live
+# kaart uit geen enkele verse scrape, waarvan 1.444 als actief. Spaanse capecitabine was er
+# een van: CIMA had hem al laten vallen, onze scrape ook, de kaart toonde hem nog.
+# Een land met een verse scrape van deze run is compleet; alleen landen waarvan de scrape
+# faalde vallen nog terug op de momentopname.
+def _verse_landen():
+    import glob
+    dagen = {}
+    for p in glob.glob(os.path.join(_B, "output", "*_shortage_*.csv")):
+        m = re.search(r"/([A-Z]{2})_[^/]*_shortage_(\d{4}-\d{2}-\d{2})\.csv$", p)
+        if m:
+            dagen.setdefault(m.group(2), set()).add(m.group(1))
+    if not dagen:
+        return set(), None
+    # De rundatum komt van buiten als die bekend is; anders de jongste datum in output/.
+    # Een run die over middernacht loopt, schrijft al zijn bestanden met de startdatum.
+    dag = os.environ.get("LCG_DATUM") or max(dagen)
+    return dagen.get(dag, set()), dag
+
+VERS_DEZE_RUN, RUNDAG = _verse_landen()
+# Canada is de uitzondering, en een bewuste. De Tier 3-terugval levert maar een handvol
+# meldingen terwijl de momentopname er ruim duizend heeft. Die zijn oud (maart) en deels
+# opgelost -- precies Jespers klacht -- maar zonder account is er niets beters. Zolang dat
+# zo is, blijft Canada aanvullen; zet hem hier weg zodra er een volledige bron is.
+ALTIJD_AANVULLEN = {"CA"}
 merged = list(fr)
 added = 0
+overgeslagen_vers = 0
+aangevuld_landen = set()
 for r in orl:
-    if r.get("cc") in EXCLUDE:
+    cc = r.get("cc")
+    if cc in EXCLUDE:
         continue
-    if (r.get("cc"), (r.get("atc") or "").upper()) not in fresh_ccatc:
+    if cc in VERS_DEZE_RUN and cc not in ALTIJD_AANVULLEN:
+        overgeslagen_vers += 1
+        continue
+    if (cc, (r.get("atc") or "").upper()) not in fresh_ccatc:
         merged.append(r)
         added += 1
+        aangevuld_landen.add(cc)
 
 # Ontdubbelen NA de samenvoeging. build_data ontdubbelt zijn eigen uitvoer al, maar de
 # last-live-data komt uit een eerdere draai die dat nog niet deed; die sleept zijn kopieen
@@ -152,4 +197,9 @@ out["atc_country_count"] = acc
 json.dump(out, open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
 prk_n = sum(1 for r in merged if r.get("prk"))
 print(f"vers: {len(fr)} | last-live: {len(orl)} | toegevoegd uit last-live: {added} | MERGED: {len(merged)}")
-print(f"landen: {len(ccs)} | ATC5: {len(atcs)} | met PRK: {prk_n} | PRK geleend: {borrowed} op naam + {borrowed_stof} op stofnaam")
+print(f"landen: {len(ccs)} | ATC5: {len(atcs)} | met PRK: {prk_n} | PRK geleend: {borrowed} op naam + {borrowed_stof} op stofnaam"
+      f" | geweigerd op vorm: {geweigerd_vorm}")
+print(f"verse scrape van {RUNDAG}: {len(VERS_DEZE_RUN)} landen -> niet aangevuld uit de momentopname"
+      f" ({overgeslagen_vers} oude records overgeslagen)")
+if aangevuld_landen:
+    print(f"  wel aangevuld (geen verse scrape, of bewust): {sorted(aangevuld_landen)}")

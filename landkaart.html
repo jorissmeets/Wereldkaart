@@ -284,6 +284,8 @@
         .med-tag { font-size: 9px; padding: 1px 5px; border-radius: 3px; font-weight: 600; }
         .med-tag.active { background: var(--status-active-bg); color: var(--status-active); }
         .med-tag.upcoming { background: var(--status-upcoming-bg); color: var(--status-upcoming); }
+        .med-tag.langlopend { background: var(--border); color: var(--text-secondary); }
+        .med-card.langlopend { opacity: .78; }
         .med-tag.resolved { background: var(--status-resolved-bg); color: var(--status-resolved); }
         .med-tag.undated { background: var(--status-undated-bg); color: var(--status-undated-soft); }
         .med-tag.date { background: rgba(0,66,139,0.06); color: var(--text-secondary); font-weight: 400; }
@@ -507,6 +509,7 @@ const CC = {
     AT: { name: "Oostenrijk", lat: 47.52, lng: 14.55, flag: "\u{1F1E6}\u{1F1F9}" },
     AU: { name: "Australië", lat: -25.27, lng: 133.78, flag: "\u{1F1E6}\u{1F1FA}" },
     BE: { name: "België", lat: 50.85, lng: 4.35, flag: "\u{1F1E7}\u{1F1EA}" },
+    BG: { name: "Bulgarije", lat: 42.73, lng: 25.49, flag: "\u{1F1E7}\u{1F1EC}" },
     BR: { name: "Brazilië", lat: -14.24, lng: -51.93, flag: "\u{1F1E7}\u{1F1F7}" },
     CA: { name: "Canada", lat: 56.13, lng: -106.35, flag: "\u{1F1E8}\u{1F1E6}" },
     CH: { name: "Zwitserland", lat: 46.95, lng: 7.45, flag: "\u{1F1E8}\u{1F1ED}" },
@@ -762,7 +765,7 @@ let GEO = null; // country GeoJSON features
 
 // ISO 3166-1 numeric → alpha-2 for our countries
 const NUM2A2 = {
-    "040":"AT","036":"AU","056":"BE","076":"BR","124":"CA","152":"CL",
+    "040":"AT","036":"AU","056":"BE","100":"BG","076":"BR","124":"CA","152":"CL",
     "756":"CH","170":"CO","203":"CZ","276":"DE","208":"DK","818":"EG",
     "233":"EE","724":"ES","246":"FI","250":"FR","300":"GR","191":"HR",
     "348":"HU","356":"IN","372":"IE","376":"IL","352":"IS","380":"IT",
@@ -1244,8 +1247,11 @@ function countryStyle(cc) {
     const rN = recs.filter(r => r.st === "resolved").length;
 
     let fill, opacity;
-    if (!CC[cc]) { fill = "#c0d4e0"; opacity = 0.7; }
-    else if (!isMon) { fill = "#9abcd0"; opacity = 0.6; }
+    // Een land zonder data krijgt dezelfde kleur als een land dat we nooit volgden. Eerder
+    // kregen Zwitserland, Portugal, Zuid-Afrika en Zuid-Korea een eigen tint en bleven ze
+    // klikbaar, omdat ze nog in de landentabel CC staan -- terwijl de data er al weken uit
+    // was. Klikbaar is nu: er IS data voor dit land (monitored_countries in data.json).
+    if (!CC[cc] || !isMon) { fill = "#c0d4e0"; opacity = 0.7; }
     else if (aN > 0) { fill = "#e85050"; opacity = 0.6 + Math.min(aN * 0.015, 0.25); }
     else if (uN > 0) { fill = "#f0a020"; opacity = 0.65; }
     else if (rN > 0) { fill = "#a8c04d"; opacity = 0.6; }
@@ -1257,7 +1263,7 @@ function countryStyle(cc) {
 
     let borderColor, weight;
     if (isSel) { borderColor = "#00428b"; weight = 2; }
-    else if (CC[cc]) { borderColor = "rgba(255,255,255,0.45)"; weight = 0.3; }
+    else if (CC[cc] && isMon) { borderColor = "rgba(255,255,255,0.45)"; weight = 0.3; }
     else { borderColor = "rgba(0,66,139,0.08)"; weight = 0.3; }
 
     return { fillColor: fill, fillOpacity: opacity, color: borderColor, weight, data: { cc, aN, uN, rN, isMon } };
@@ -1292,6 +1298,8 @@ function renderMap() {
         onEachFeature: (feature, layer) => {
             const cc = feature.properties.a2;
             if (!cc || !CC[cc]) return;
+            // Geen data -> geen tooltip, geen klik. Zelfde gedrag als een land dat we nooit volgden.
+            if (!new Set(RAW.monitored_countries).has(cc)) return;
 
             const info = CC[cc];
             const st = countryStyle(cc).data;
@@ -1300,6 +1308,8 @@ function renderMap() {
             const lines = [`<b>${info.flag} ${countryName(cc)}</b>`];
             if (st.aN) { const atcCount = new Set((D.countryIndex[cc]||[]).filter(r => r.st === "active").map(r => r.atc)).size; lines.push(`${st.aN} ${t("active")} (${atcCount} ATC)`); }
             if (st.uN) lines.push(`${st.uN} ${t("st_upcoming")}`);
+            const lN = (D.countryIndex[cc] || []).filter(r => r.st === "langlopend").length;
+            if (lN) lines.push(`<span style="opacity:.75">${lN} ${S.lang === "en" ? "long-running (not counted)" : "langlopend (niet meegeteld)"}</span>`);
             if (st.rN) lines.push(`${st.rN} ${t("st_resolved")}`);
             if (!st.isMon) lines.push(`<i>${t("legend_nodata")}</i>`);
             else if (!st.aN && !st.uN && !st.rN) lines.push(t("legend_noshortage"));
@@ -1409,11 +1419,15 @@ function renderDetail() {
     const aRecs = recs.filter(r => r.st === "active");
     const uRecs = recs.filter(r => r.st === "upcoming");
     const rRecs = recs.filter(r => r.st === "resolved");
+    // Langlopend hoort bij het tabblad actief -- daar zoekt iemand naar een lopend tekort --
+    // maar staat onderaan en telt niet mee in het getal op het tabblad.
+    const lRecs = recs.filter(r => r.st === "langlopend");
 
     // Summary mini KPIs
     summary.innerHTML = `
         <div class="detail-summary-item"><div class="detail-summary-dot" style="background:var(--status-active)"></div>${aRecs.length} actief</div>
         <div class="detail-summary-item"><div class="detail-summary-dot" style="background:var(--status-upcoming)"></div>${uRecs.length} aankomend</div>
+        ${lRecs.length ? `<div class="detail-summary-item" title="Meer dan een jaar oud, einde onbekend, volgens de bron nog lopend. Niet meegeteld."><div class="detail-summary-dot" style="background:var(--border)"></div>${lRecs.length} langlopend</div>` : ""}
     `;
 
     // Tab counts + dimming
@@ -1425,16 +1439,16 @@ function renderDetail() {
     });
 
     // Auto-switch to first non-empty tab if current tab is empty
-    const currentCount = S.detailTab === "active" ? aRecs.length : S.detailTab === "upcoming" ? uRecs.length : rRecs.length;
+    const currentCount = S.detailTab === "active" ? aRecs.length + lRecs.length : S.detailTab === "upcoming" ? uRecs.length : rRecs.length;
     if (currentCount === 0) {
-        if (aRecs.length > 0) S.detailTab = "active";
+        if (aRecs.length + lRecs.length > 0) S.detailTab = "active";
         else if (uRecs.length > 0) S.detailTab = "upcoming";
         else if (rRecs.length > 0) S.detailTab = "resolved";
     }
     document.querySelectorAll(".detail-tab").forEach(t => t.classList.toggle("active", t.dataset.tab === S.detailTab));
 
     let tabRecs;
-    if (S.detailTab === "active") tabRecs = aRecs;
+    if (S.detailTab === "active") tabRecs = aRecs.concat(lRecs);
     else if (S.detailTab === "upcoming") tabRecs = uRecs;
     else tabRecs = rRecs;
 
@@ -1643,7 +1657,11 @@ function medCard(r, groupBy) {
     const origLine = translated
         ? `<div class="med-substance" style="color:var(--text-muted)" title="Oorspronkelijke productnaam uit de bron">${escHtml(rawName)}</div>`
         : "";
-    const stLabel = r.st === "active" ? t("st_active") : r.st === "upcoming" ? t("st_upcoming") : t("st_resolved");
+    // Langlopend: de bron zegt dat het nog loopt, maar de melding is meer dan een jaar oud en
+    // heeft geen einddatum. Tonen wat de bron zegt, zonder het als vers tekort te tellen.
+    const stLabel = r.st === "active" ? t("st_active") : r.st === "upcoming" ? t("st_upcoming")
+        : r.st === "langlopend" ? (S.lang === "en" ? "long-running · end unknown" : "langlopend · einde onbekend")
+        : t("st_resolved");
 
     let dates = "";
     if (r.ss) dates += `<span class="med-tag date">${t("med_start")} ${r.ss}</span>`;
@@ -1662,7 +1680,9 @@ function medCard(r, groupBy) {
         link = `<span class="med-country-link" data-select-atc="${r.atc}">${r.atc}</span>`;
     }
 
-    return `<div class="med-card">
+    const lTitel = r.st === "langlopend"
+        ? ` title="${S.lang === "en" ? "The source still lists this as ongoing, but it is over a year old and has no end date. Shown, not counted as an active shortage." : "De bron noemt dit nog lopend, maar de melding is meer dan een jaar oud en heeft geen einddatum. Getoond, niet meegeteld als actief tekort."}"` : "";
+    return `<div class="med-card${r.st === "langlopend" ? " langlopend" : ""}"${lTitel}>
         <div class="med-name">${escHtml(name)}</div>
         ${substance ? `<div class="med-substance">${escHtml(substance)}</div>` : ""}
         ${r.co ? `<div class="med-substance" style="opacity:.82">${S.lang === "en" ? "MAH" : "Vergunninghouder"}: ${escHtml(r.co)}</div>` : ""}

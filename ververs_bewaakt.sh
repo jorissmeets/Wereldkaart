@@ -134,6 +134,15 @@ eis(dubbel == 0, f"{dubbel} duplicaten")
 verboden = sorted({"CH", "PT", "LT", "TR", "ZA", "KR", "TW", "NL", "EU", "GB"} & set(cn))
 eis(not verboden, f"uitgesloten landen staan er weer in: {verboden}")
 
+# 8. De EMS-rood-lijst en de toedieningsvorm mogen niet wegvallen. Op 30-09 bleek dat een
+#    run zonder het bestand 'Achtergrondlijst 2025' een kaart opleverde met 0 in plaats van
+#    182 EMS-rode moleculen en bij 22.507 meldingen geen toedieningsvorm -- en geen van de
+#    toetsen hierboven zag dat, want ze tellen alleen records en statussen.
+ev, en = len(voor.get("ems_rood_atcs") or []), len(na.get("ems_rood_atcs") or [])
+eis(not (ev and en < ev * 0.8), f"EMS-rood gekrompen: {ev}->{en} moleculen")
+tv_v = sum(1 for x in rv if x.get("tv")); tv_n = sum(1 for x in rn if x.get("tv"))
+eis(not (tv_v and tv_n < tv_v * 0.8), f"toedieningsvorm weggevallen: {tv_v}->{tv_n} meldingen")
+
 print("SAMENVATTING|"
       f"{len(rv)}->{len(rn)} records, {len(cv)}->{len(cn)} landen, {av}->{an} actief")
 print("GOED" if not bezwaren else "FOUT|" + " ; ".join(bezwaren))

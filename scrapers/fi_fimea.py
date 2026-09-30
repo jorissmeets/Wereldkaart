@@ -44,7 +44,13 @@ class FiFimeaScraper(BaseScraper):
 
         Geeft {} terug zodra er iets niet klopt; de RSS blijft dan de enige bron.
         Het endpoint weigert zonder de DataTables-parameters (het serveert dan de
-        cookiebanner in plaats van JSON), en accepteert maximaal ~100 rijen per pagina.
+        cookiebanner in plaats van JSON).
+
+        In een keer ophalen (length=2000). Hier stond "maximaal ~100 rijen per pagina", en
+        met pagina's van 100 op een sorteerkolom die niet uniek is schoof de volgorde tussen
+        pagina's: in een dubbele testrun van 30-09 viel Sumatriptan Accord 100 mg (398653) in
+        de ene run tussen twee pagina's, en kreeg die melding geen stof, sterkte en vorm.
+        length=2000 geeft 736 van 736 in een verzoek; length=-1 wordt niet ondersteund.
         """
         index: dict[str, dict] = {}
         try:
@@ -74,7 +80,7 @@ class FiFimeaScraper(BaseScraper):
             start, totaal, draw = 0, None, 1
             while True:
                 resp = sessie.get(url, timeout=60, headers=kop, params={
-                    "draw": draw, "start": start, "length": 100, "search": "",
+                    "draw": draw, "start": start, "length": 2000, "search": "",
                     "startDate": "", "endDate": "",
                     "order[0][column]": 0, "order[0][dir]": "desc",
                 })
@@ -97,7 +103,7 @@ class FiFimeaScraper(BaseScraper):
                         "dosage_form": str(rij[self.COL_FORM] or "").strip(),
                         "atc": str(rij[self.COL_ATC] or "").strip().upper(),
                     })
-                start += 100
+                start += len(rijen) or 2000
                 draw += 1
                 if not rijen or (totaal is not None and start >= totaal):
                     break

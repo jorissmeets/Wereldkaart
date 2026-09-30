@@ -5,6 +5,7 @@ met schone ATC5-codes, tijdvelden, afgeleide status en KPI-data.
 from __future__ import annotations
 
 import json
+import os
 import re
 import ast
 from datetime import date, datetime, timedelta
@@ -154,13 +155,86 @@ def parse_date(val) -> str | None:
     return None
 
 
+def naamsleutel(naam) -> str:
+    """Genormaliseerde productnaam: accenten weg, alleen letters/cijfers, enkele spaties."""
+    import unicodedata
+    t = unicodedata.normalize("NFKD", str(naam or "")).encode("ascii", "ignore").decode().upper()
+    return re.sub(r"\s+", " ", re.sub(r"[^A-Z0-9 ]", " ", t)).strip()
+
+
+def laad_vorige_atc() -> dict:
+    """(land, productnaam) -> ATC5, uit de vorige gepubliceerde data en de momentopname.
+
+    Alleen EENDUIDIGE gevallen: kent de vorige data voor dezelfde naam in hetzelfde land
+    meer dan een ATC, dan lenen we niets. Q-codes (diergeneesmiddelen) doen niet mee.
+    """
+    import json as _json
+    basis = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    bronnen = [os.path.join(basis, "data.json"),
+               os.path.join(basis, "referentie", "lastlive_2026-09-21.json")]
+    kaart = {}
+    for pad in bronnen:
+        if not os.path.exists(pad):
+            continue
+        try:
+            d = _json.load(open(pad, encoding="utf-8"))
+        except Exception:
+            continue
+        for r in (d.get("records") if isinstance(d, dict) else d) or []:
+            atc = (r.get("atc") or "").upper()
+            if not ATC5_RE.match(atc) or atc.startswith("Q"):
+                continue
+            k = (r.get("cc"), naamsleutel(r.get("mn")))
+            if k[1]:
+                kaart.setdefault(k, set()).add(atc)
+    return {k: next(iter(v)) for k, v in kaart.items() if len(v) == 1}
+
+
+# Bronstatussen die ZELF zeggen dat het tekort nog loopt. Een melding van meer dan een jaar
+# oud met zo'n status wordt 'langlopend': zichtbaar in het detail, NIET meegeteld als actief.
+#
+# Waarom niet gewoon 'actief': op 30-09 werd dat eerst geprobeerd en het was fout. Italie en
+# Letland blijken bedrijfsmeldingen die niemand afsluit. AIFA zet het zelf boven zijn lijst:
+# een tekort blijft staan tot de vergunninghouder de werkelijke einddatum doorgeeft, "ook na
+# de oorspronkelijk opgegeven einddatum". Letland heeft 790 open meldingen terug tot 2016 en
+# geen enkele afgesloten. Als actief tellen maakte Letland vier keer zo rood (200 -> 652).
+#
+# Waarom niet 'inactief' (verborgen): dan verdwijnt ook wat echt nog loopt. Jesper vond de
+# Letse capecitabine op de Letse site mét onderbrekingsdatum, terwijl de kaart hem verborg.
+# Wat de bron zegt, tonen we; wat we niet kunnen controleren, tellen we niet mee.
+#
+# Canada staat er bewust niet in: daar zijn "Actual shortage"-meldingen al jaren niet
+# afgesloten en Jesper ziet er juist te veel opgeloste tussen. Zichtbaar maken zou dat erger
+# maken.
+EXPLICIET_LOPEND = {
+    "LV": {"shortage - end date unknown"},
+    "IT": {"shortage - end date unknown"},
+    "SA": {"currently in shortage"},
+    "US": {"current"},
+    "AU": {"current"},
+    "AT": {"nicht verfügbar", "eingeschränkt verfügbar"},
+    # ES: onze scraper zet 'shortage' alleen als AEMPS zelf activo=True zegt en de verwachte
+    # einddatum niet voorbij is (scrapers/es_aemps.py). Dat is een verklaring van de
+    # toezichthouder, geen achtergebleven bedrijfsmelding. Op 30-09 verborg de leeftijdsregel
+    # zo o.a. Orkambi en Cosduo, die CIMA als lopend tekort toont.
+    "ES": {"shortage"},
+    # DK: de lijst van Lægemiddelstyrelsen bevat de ACTUELE meldingen. Sinds 30-09 is de
+    # startdatum het begin van de Deense periode in plaats van de publicatiedatum; een
+    # melding als "Start marts 2024 - ukendt" is daardoor ouder dan een jaar en zou onder de
+    # leeftijdsregel van de kaart verdwijnen -- terwijl de bron hem vandaag noemt. Dat raakte
+    # op 30-09 twintig meldingen (o.a. Cinacalcet Teva, Risperidone Teva, Fusidinsyre).
+    "DK": {"shortage"},
+}
+
+
 def derive_status(raw_status: str, shortage_start: str | None,
                   estimated_end: str | None, actual_end: str | None,
-                  last_updated: str | None = None) -> str:
+                  last_updated: str | None = None, cc: str | None = None) -> str:
     """Leid een gestandaardiseerde status af.
 
-    Statussen: active, upcoming, resolved, discontinued, inactive
-    'inactive' = zou actief zijn, maar al > 1 jaar geen update/start (verouderde bron-data)
+    Statussen: active, upcoming, resolved, discontinued, inactive, langlopend
+    'inactive'   = zou actief zijn, maar al > 1 jaar geen update/start (verouderde bron-data)
+    'langlopend' = idem, maar de bron zegt zelf dat het nog loopt (zie EXPLICIET_LOPEND)
     """
     today = date.today().isoformat()
     cutoff_1yr = (date.today() - timedelta(days=365)).isoformat()
@@ -187,6 +261,8 @@ def derive_status(raw_status: str, shortage_start: str | None,
     last_known = last_updated or shortage_start
     end_in_future = (estimated_end and estimated_end >= today) or (actual_end and actual_end >= today)
     if last_known and last_known < cutoff_1yr and not end_in_future:
+        if lower in EXPLICIET_LOPEND.get(cc or "", set()):
+            return "langlopend"
         return "inactive"
 
     return "active"
@@ -294,8 +370,19 @@ def load_ems_data() -> tuple[list[str], dict[str, list[str]], dict[str, str]]:
                          met precies 1 unieke toedieningsvorm (unambiguous)
     """
     if not EMS_FILE.exists():
-        print(f"EMS-bestand niet gevonden: {EMS_FILE}")
-        return [], {}, {}
+        # Hard stoppen, niet stil doorgaan. Zonder dit bestand publiceerde een run een kaart
+        # zonder een enkele EMS-rode markering en met de toedieningsvorm bij 22.507 meldingen
+        # weg -- en de negen toetsen van de bewaker keken niet naar EMS. Zo zou de eerste
+        # geslaagde GitHub-run het live hebben gezet: de workflow kopieerde alleen
+        # 'Stofnamen 2025', niet deze achtergrondlijst (gevonden 30-09 met een schone checkout).
+        import sys as _sys
+        if os.environ.get("EMS_MAG_ONTBREKEN") == "1":
+            print(f"LET OP: EMS-bestand ontbreekt ({EMS_FILE}); doorgegaan omdat EMS_MAG_ONTBREKEN=1")
+            return [], {}, {}
+        _sys.exit(f"EMS-bestand niet gevonden: {EMS_FILE}\n"
+                  f"Zonder dit bestand geen EMS-rood en geen toedieningsvorm via ATC. Kopieer het "
+                  f"(in GitHub Actions: referentie/LijstenEMS in de pijplijnrepo) of zet "
+                  f"EMS_MAG_ONTBREKEN=1 als dat bewust is.")
 
     df = pd.read_csv(EMS_FILE, sep=";", skiprows=1, encoding="utf-8",
                      on_bad_lines="skip", low_memory=False)
@@ -394,6 +481,8 @@ def build():
     # JP substance → ATC mapping (voor JP-records zonder eigen ATC)
     jp_atc_map = load_jp_atc_map()
     jp_enriched = 0
+    vorige_atc = laad_vorige_atc()
+    atc_geleend = 0
 
     # PRK-namen (G-standaard) voor records die via de OpenAI-matcher een PRK-code kregen
     prk_namen = {}
@@ -443,6 +532,25 @@ def build():
                         if ATC5_RE.match(candidate):
                             atc5 = candidate
                             jp_enriched += 1
+
+            # Terugval: dezelfde productnaam in hetzelfde land had in de vorige data een ATC.
+            # Zonder deze stap valt een product dat de bron VANDAAG als tekort noemt van de
+            # kaart, alleen omdat de verrijking deze keer geen ATC vond. Op 30-09 ging het om
+            # ruim honderd echte tekorten (IT, ES, IE, RO, HR, LV), o.a. solifenacine/
+            # tamsulosine en danaparoide in Spanje: CIMA 'activo', scrape had de rij, ATC leeg.
+            # Het oude vangnet maskeerde dit met een kopie uit een momentopname -- mét de oude
+            # datums en status. Dit leent alleen de ATC; datums en status blijven vers.
+            # Nooit bij een Q-code: dat is een diergeneesmiddel en hoort niet op deze kaart.
+            geleend_atc = False
+            if not atc5:
+                ruw = safe_str(row.get(atc_col)).strip()
+                if not ruw:
+                    kandidaat = vorige_atc.get((safe_str(row.get("country_code")).upper(),
+                                                naamsleutel(row.get("medicine_name"))))
+                    if kandidaat:
+                        atc5 = kandidaat
+                        geleend_atc = True
+                        atc_geleend += 1
 
             if not atc5:
                 continue
@@ -530,7 +638,7 @@ def build():
 
             # Bereken resolved_date
             resolved_date = None
-            derived = derive_status(status_raw, shortage_start, estimated_end, actual_end, last_updated)
+            derived = derive_status(status_raw, shortage_start, estimated_end, actual_end, last_updated, cc)
             if derived == "resolved":
                 resolved_date = actual_end or estimated_end or scraped_at
 
@@ -597,6 +705,8 @@ def build():
             if "tv" not in rec and atc5 in atc_tv_map:
                 rec["tv"] = atc_tv_map[atc5]
                 rec["tv_src"] = "atc"
+            if geleend_atc:
+                rec["atc_src"] = "vorige_run"   # traceerbaar: ATC niet uit deze verrijking
 
             records.append(rec)
 
@@ -609,6 +719,16 @@ def build():
     from collections import Counter
     atc_sub_counts: dict[str, Counter] = {}
     for r in records:
+        # Een record waarvan de ATC geleend is uit de vorige data, stemt NIET mee. De ATC is
+        # niet in deze run vastgesteld, dus de koppeling stofnaam <-> ATC is dat ook niet.
+        # Op 30-09 kantelde de stemming bij A12BA01 (kaliumchloride) naar "Sodium acetate"
+        # doordat een paar geleende Amerikaanse natriumacetaat-injecties -- die in de bron al
+        # onder A12BA01 staan -- meestemden; 147 Canadese kaliuminfusen kregen daardoor de
+        # verkeerde stofnaam. De stemming zelf blijft fragiel (een handvol verkeerd gecodeerde
+        # records kan een hele groep omlabelen); vervangen door de officiele naam per ATC is
+        # een aparte keuze, omdat het duizenden labels verandert.
+        if r.get("atc_src") == "vorige_run":
+            continue
         sub = r.get("sub", "").strip()
         if sub:
             atc_sub_counts.setdefault(r["atc"], Counter())[sub] += 1
@@ -693,13 +813,15 @@ def build():
     resolved = sum(1 for r in records if r["st"] == "resolved")
     discontinued = sum(1 for r in records if r["st"] == "discontinued")
     inactive = sum(1 for r in records if r["st"] == "inactive")
+    langlopend = sum(1 for r in records if r["st"] == "langlopend")
     # Toedieningsvorm stats
     tv_via_df = sum(1 for r in records if "tv" in r and r.get("tv_src") != "atc")
     tv_via_atc = sum(1 for r in records if r.get("tv_src") == "atc")
     tv_none = sum(1 for r in records if "tv" not in r)
     print(f"Data geschreven naar {DATA_FILE}")
     print(f"  {len(records)} records, {len(all_atcs)} ATC5-codes, {len(all_countries)} landen")
-    print(f"  Status: {active} actief, {upcoming} upcoming, {resolved} opgelost, {discontinued} discontinued, {inactive} inactief (>1 jaar)")
+    print(f"  ATC geleend uit de vorige data (verse rij zonder ATC): {atc_geleend}")
+    print(f"  Status: {active} actief, {upcoming} upcoming, {resolved} opgelost, {discontinued} discontinued, {inactive} inactief (>1 jaar), {langlopend} langlopend (>1 jaar, bron zegt nog lopend)")
     print(f"  Toedieningsvorm: {tv_via_df} via dosage_form, {tv_via_atc} via ATC-lookup, {tv_none} onbekend")
 
 
