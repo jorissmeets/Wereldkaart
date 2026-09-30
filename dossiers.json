@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24",
+ "generated": "2026-09-30",
  "bron": "https://lcg.nl/actuele-tekortendossiers/",
  "dossiers": [
   {
@@ -38,7 +38,7 @@
    "title": "Gentamicine (i.v.)",
    "atc": "J01GB03",
    "phase": "Logistieke coördinatiefase",
-   "updated": "2026-08-27",
+   "updated": "2026-09-24",
    "published": "2026-05-18",
    "url": "https://lcg.nl/medicijnentekort/gentamicine-i-v/"
   },
@@ -68,7 +68,7 @@
    "title": "Clindamycine (i.v.)",
    "atc": "J01FF01",
    "phase": "Monitoring",
-   "updated": "2026-09-07",
+   "updated": "2026-09-24",
    "published": "2026-08-03",
    "url": "https://lcg.nl/medicijnentekort/clindamycine-i-v/"
   },
@@ -81,6 +81,16 @@
    "updated": "2026-08-06",
    "published": "2026-07-16",
    "url": "https://lcg.nl/medicijnentekort/folinezuur-capsules-oraal/"
+  },
+  {
+   "key": "metamizol",
+   "slug": "metamizol-i-v",
+   "title": "Metamizol (i.v.)",
+   "atc": "N02BB02",
+   "phase": "Monitoring",
+   "updated": "2026-09-24",
+   "published": "2026-09-09",
+   "url": "https://lcg.nl/medicijnentekort/metamizol-i-v/"
   },
   {
    "key": "mitoxantron",
@@ -101,16 +111,6 @@
    "updated": "2026-05-18",
    "published": "2024-01-25",
    "url": "https://lcg.nl/medicijnentekort/visudyne/"
-  },
-  {
-   "key": "metamizol",
-   "slug": "metamizol-i-v",
-   "title": "Metamizol (i.v.)",
-   "atc": "N02BB02",
-   "phase": "Inventarisatie",
-   "updated": "2026-09-21",
-   "published": "2026-09-09",
-   "url": "https://lcg.nl/medicijnentekort/metamizol-i-v/"
   }
  ]
 }

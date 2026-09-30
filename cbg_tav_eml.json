@@ -1,9 +1,18 @@
 {
-"generated": "2026-09-23",
+"generated": "2026-09-30",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 196,
-"on_eml": 93,
+"count": 197,
+"on_eml": 94,
 "items": [
+{
+"product": "Triamcinolonacetonide Addimed suspensie voor injectie 40 mg/ml",
+"mah": "Addimed Pharma B.V.",
+"reg": "130697//05341",
+"reg_type": "RVG",
+"datum": "2026-09-25",
+"atc": "H02AB08",
+"eml": "oranje"
+},
 {
 "product": "Xarelto 1 mg/ml granulaat voor orale suspensie",
 "mah": "Bayer B.V.",
