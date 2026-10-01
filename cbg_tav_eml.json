@@ -1,9 +1,18 @@
 {
-"generated": "2026-09-30",
+"generated": "2026-10-01",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 197,
+"count": 198,
 "on_eml": 94,
 "items": [
+{
+"product": "Metamizol Kalceks 500 mg/ml oplossing voor injectie",
+"mah": "AS Kalceks",
+"reg": "114598",
+"reg_type": "RVG",
+"datum": "2026-10-01",
+"atc": "N02BB02",
+"eml": ""
+},
 {
 "product": "Triamcinolonacetonide Addimed suspensie voor injectie 40 mg/ml",
 "mah": "Addimed Pharma B.V.",

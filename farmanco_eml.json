@@ -1,11 +1,65 @@
 {
-"generated": "2026-09-30",
+"generated": "2026-10-01",
 "source": "https://farmanco.knmp.nl/",
-"total_scraped": 292,
-"count": 292,
-"on_eml": 217,
-"overig": 75,
+"total_scraped": 287,
+"count": 287,
+"on_eml": 214,
+"overig": 73,
 "items": [
+{
+"stof": "Tobramycine",
+"omschrijving": "Tobramycine oogzalf 3mg/g tube 3,5g",
+"vorm": "oogzalf",
+"preferent": false,
+"datum": "2026-10-01",
+"eml": "rood",
+"atc": "S01AA12"
+},
+{
+"stof": "Dexamethason",
+"omschrijving": "Dexamethason oogdr 1mg/ml (fosfaat) fl 6ml z benz",
+"vorm": "oogdruppels",
+"preferent": true,
+"datum": "2026-10-01",
+"eml": "rood",
+"atc": "S02CA06"
+},
+{
+"stof": "Insuline aspart",
+"omschrijving": "Insuline aspart injvlst 100e/ml patr 1,6ml",
+"vorm": "injectievloeistof",
+"preferent": false,
+"datum": "2026-10-01",
+"eml": "rood",
+"atc": "A10AB05"
+},
+{
+"stof": "Clopidogrel",
+"omschrijving": "Clopidogrel tablet   75mg",
+"vorm": "tablet",
+"preferent": false,
+"datum": "2026-10-01",
+"eml": "rood",
+"atc": "B01AC04"
+},
+{
+"stof": "Hydroxychloroquine",
+"omschrijving": "Hydroxychloroquine tablet omhuld 200mg",
+"vorm": "omhulde tablet",
+"preferent": true,
+"datum": "2026-10-01",
+"eml": "",
+"atc": "P01BA02"
+},
+{
+"stof": "Difterievaccin/Poliomyelitisvaccin/Tetanusvaccin",
+"omschrijving": "Dtp vaccin (bilthoven biologicals) wwsp 1ml",
+"vorm": "suspensie voor injectie",
+"preferent": false,
+"datum": "2026-10-01",
+"eml": "rood",
+"atc": "J07CA01"
+},
 {
 "stof": "Carbomeer",
 "omschrijving": "Carbomeer ooggel 2mg/g (carbomeer 980) minim 0,6g",
@@ -154,7 +208,7 @@
 "stof": "Lanthaancarbonaat",
 "omschrijving": "Lanthaancarbonaat kauwtablet  500mg, lanthaancarbonaat kauwtablet  750mg",
 "vorm": "kauwtablet",
-"preferent": true,
+"preferent": false,
 "datum": "2026-09-29",
 "eml": "",
 "atc": "V03AE03"
@@ -961,15 +1015,6 @@
 "atc": "N02BB02"
 },
 {
-"stof": "Natriumseleniet",
-"omschrijving": "Natriumseleniet drank 50ug se/ml",
-"vorm": "drank",
-"preferent": false,
-"datum": "2026-09-21",
-"eml": "",
-"atc": "B05XA31"
-},
-{
 "stof": "Cabergoline",
 "omschrijving": "Cabergoline tablet 0,5mg",
 "vorm": "tablet",
@@ -1114,15 +1159,6 @@
 "atc": "R03DC03"
 },
 {
-"stof": "Clopidogrel",
-"omschrijving": "Clopidogrel tablet   75mg",
-"vorm": "tablet",
-"preferent": false,
-"datum": "2026-09-17",
-"eml": "rood",
-"atc": "B01AC04"
-},
-{
 "stof": "Ezetimib/Simvastatine",
 "omschrijving": "Ezetimib/simvastatine tablet 10/20mg, ezetimib/simvastatine tablet 10/40mg, ezetimib/simvastatine tablet 10/80mg",
 "vorm": "tablet",
@@ -1231,15 +1267,6 @@
 "atc": "N02AE01"
 },
 {
-"stof": "Dexamethason",
-"omschrijving": "Dexamethason oogdr 1mg/ml (fosfaat) fl 6ml z benz",
-"vorm": "oogdruppels",
-"preferent": true,
-"datum": "2026-09-15",
-"eml": "rood",
-"atc": "S02CA06"
-},
-{
 "stof": "Clobazam",
 "omschrijving": "Clobazam tablet 20mg",
 "vorm": "tablet",
@@ -1337,15 +1364,6 @@
 "datum": "2026-09-15",
 "eml": "rood",
 "atc": "N05BA01"
-},
-{
-"stof": "Tobramycine",
-"omschrijving": "Tobramycine oogzalf 3mg/g tube 3,5g",
-"vorm": "oogzalf",
-"preferent": false,
-"datum": "2026-09-14",
-"eml": "rood",
-"atc": "S01AA12"
 },
 {
 "stof": "Furosemide",
@@ -1729,7 +1747,7 @@
 "stof": "Oxazepam",
 "omschrijving": "Oxazepam tablet 10mg",
 "vorm": "tablet",
-"preferent": true,
+"preferent": false,
 "datum": "2026-08-31",
 "eml": "geel",
 "atc": "N05BA04"
@@ -1825,15 +1843,6 @@
 "atc": "N01AX10"
 },
 {
-"stof": "Hydroxychloroquine",
-"omschrijving": "Hydroxychloroquine tablet omhuld 200mg",
-"vorm": "omhulde tablet",
-"preferent": true,
-"datum": "2026-08-21",
-"eml": "",
-"atc": "P01BA02"
-},
-{
 "stof": "Midazolam",
 "omschrijving": "Midazolam neusspray 2,5mg, midazolam neusspray 2,5mg/do fl  55do, midazolam neusspray 3,75mg, midazolam neusspray 5mg",
 "vorm": "neusspray",
@@ -1859,15 +1868,6 @@
 "datum": "2026-08-20",
 "eml": "rood",
 "atc": "H01BB02"
-},
-{
-"stof": "Emtricitabine/Tenofovir disoproxil",
-"omschrijving": "Emtricitabine/tenofovirdiso tablet 200/245mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-08-19",
-"eml": "oranje",
-"atc": "J05AF09"
 },
 {
 "stof": "Ropivacaine",
@@ -1958,15 +1958,6 @@
 "datum": "2026-08-11",
 "eml": "oranje",
 "atc": "A07EA07"
-},
-{
-"stof": "Difterievaccin/Poliomyelitisvaccin/Tetanusvaccin",
-"omschrijving": "Dtp vaccin (bilthoven biologicals) wwsp 1ml",
-"vorm": "suspensie voor injectie",
-"preferent": false,
-"datum": "2026-08-10",
-"eml": "rood",
-"atc": "J07CA01"
 },
 {
 "stof": "Dorzolamide",
@@ -2075,15 +2066,6 @@
 "datum": "2026-07-16",
 "eml": "rood",
 "atc": "C01DA02"
-},
-{
-"stof": "Insuline aspart",
-"omschrijving": "Insuline aspart injvlst 100e/ml patr 1,6ml",
-"vorm": "injectievloeistof",
-"preferent": false,
-"datum": "2026-07-10",
-"eml": "rood",
-"atc": "A10AB05"
 },
 {
 "stof": "Insuline aspart/Insuline aspart, protamine",
@@ -2201,15 +2183,6 @@
 "datum": "2026-06-29",
 "eml": "geel",
 "atc": "G04CA01"
-},
-{
-"stof": "Azelastine",
-"omschrijving": "Azelastine oogdruppels 0,5mg/ml m 0,6ml zonder ben",
-"vorm": "oogdruppels",
-"preferent": false,
-"datum": "2026-06-29",
-"eml": "geel",
-"atc": "R01AC03"
 },
 {
 "stof": "Fluticason",
@@ -2338,15 +2311,6 @@
 "atc": "S01EE04"
 },
 {
-"stof": "Desloratadine",
-"omschrijving": "Desloratadine drank 0,5mg/ml, desloratadine orodisp tablet 2,5mg",
-"vorm": "drank, orodispergeerbare tablet",
-"preferent": false,
-"datum": "2026-06-16",
-"eml": "geel",
-"atc": "R06AX27"
-},
-{
 "stof": "Acrivastine",
 "omschrijving": "Acrivastine capsule 8mg",
 "vorm": "capsule",
@@ -2372,15 +2336,6 @@
 "datum": "2026-06-11",
 "eml": "",
 "atc": "L01EK03"
-},
-{
-"stof": "Lacidipine",
-"omschrijving": "Lacidipine tablet 4mg",
-"vorm": "tablet",
-"preferent": false,
-"datum": "2026-06-10",
-"eml": "",
-"atc": "C08CA09"
 },
 {
 "stof": "Methylergometrine",
