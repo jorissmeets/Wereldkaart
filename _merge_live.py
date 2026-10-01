@@ -127,21 +127,32 @@ EXCLUDE = {"NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT",      # geen bruikbare
 # een van: CIMA had hem al laten vallen, onze scrape ook, de kaart toonde hem nog.
 # Een land met een verse scrape van deze run is compleet; alleen landen waarvan de scrape
 # faalde vallen nog terug op de momentopname.
+#
+# Maar "vers" is niet "van vandaag". Viel een bron een dag uit (OGYEI en ANM op 01-10), dan
+# gebruikt build_data gewoon het complete bestand van gisteren -- en vulde deze stap dat land
+# daarna toch aan uit 21-09: 51 spookmeldingen voor Hongarije, 38 als actief. Dat is precies
+# het mechanisme van 30-09, alleen via de achterdeur van een mislukte scrape. _dedup_output
+# laat per bron een bestand staan, en dat is het bestand dat build_data leest. Is dat nieuwer
+# dan de momentopname, dan weet de momentopname niets wat dat bestand niet ook weet.
+SNAPDAG = re.search(r"(\d{4}-\d{2}-\d{2})", os.path.basename(OLD)).group(1)
+
 def _verse_landen():
     import glob
-    dagen = {}
+    nieuwste = {}
     for p in glob.glob(os.path.join(_B, "output", "*_shortage_*.csv")):
         m = re.search(r"/([A-Z]{2})_[^/]*_shortage_(\d{4}-\d{2}-\d{2})\.csv$", p)
-        if m:
-            dagen.setdefault(m.group(2), set()).add(m.group(1))
-    if not dagen:
-        return set(), None
+        if m and m.group(2) > nieuwste.get(m.group(1), ""):
+            nieuwste[m.group(1)] = m.group(2)
+    if not nieuwste:
+        return set(), set(), None
     # De rundatum komt van buiten als die bekend is; anders de jongste datum in output/.
     # Een run die over middernacht loopt, schrijft al zijn bestanden met de startdatum.
-    dag = os.environ.get("LCG_DATUM") or max(dagen)
-    return dagen.get(dag, set()), dag
+    dag = os.environ.get("LCG_DATUM") or max(nieuwste.values())
+    vandaag = {cc for cc, d in nieuwste.items() if d == dag}
+    na_snap = {cc for cc, d in nieuwste.items() if d > SNAPDAG}
+    return na_snap, vandaag, dag
 
-VERS_DEZE_RUN, RUNDAG = _verse_landen()
+VERS_DEZE_RUN, VANDAAG_GESCRAPET, RUNDAG = _verse_landen()
 # Canada is de uitzondering, en een bewuste. De Tier 3-terugval levert maar een handvol
 # meldingen terwijl de momentopname er ruim duizend heeft. Die zijn oud (maart) en deels
 # opgelost -- precies Jespers klacht -- maar zonder account is er niets beters. Zolang dat
@@ -199,7 +210,10 @@ prk_n = sum(1 for r in merged if r.get("prk"))
 print(f"vers: {len(fr)} | last-live: {len(orl)} | toegevoegd uit last-live: {added} | MERGED: {len(merged)}")
 print(f"landen: {len(ccs)} | ATC5: {len(atcs)} | met PRK: {prk_n} | PRK geleend: {borrowed} op naam + {borrowed_stof} op stofnaam"
       f" | geweigerd op vorm: {geweigerd_vorm}")
-print(f"verse scrape van {RUNDAG}: {len(VERS_DEZE_RUN)} landen -> niet aangevuld uit de momentopname"
-      f" ({overgeslagen_vers} oude records overgeslagen)")
+print(f"verse scrape van {RUNDAG}: {len(VANDAAG_GESCRAPET)} landen; met een bestand nieuwer dan de momentopname"
+      f" ({SNAPDAG}): {len(VERS_DEZE_RUN)} -> niet aangevuld ({overgeslagen_vers} oude records overgeslagen)")
+_terug = sorted(VERS_DEZE_RUN - VANDAAG_GESCRAPET)
+if _terug:
+    print(f"  scrape van vandaag ontbreekt, eerder compleet bestand gebruikt: {_terug}")
 if aangevuld_landen:
     print(f"  wel aangevuld (geen verse scrape, of bewust): {sorted(aangevuld_landen)}")

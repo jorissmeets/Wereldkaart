@@ -469,7 +469,7 @@
             <div class="legend-row"><div class="legend-dot" style="background:var(--status-active-soft)"></div> <span data-i18n="legend_active">Actief tekort</span></div>
             <div class="legend-row"><div class="legend-dot" style="background:var(--status-upcoming-soft)"></div> <span data-i18n="legend_upcoming">Aankomend</span></div>
             <div class="legend-row"><div class="legend-dot" style="background:var(--lcg-cyan);opacity:0.3"></div> <span data-i18n="legend_noshortage">Geen tekort</span></div>
-            <div class="legend-row"><div class="legend-dot" style="background:#9abcd0"></div> <span data-i18n="legend_nodata">Geen data</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:#c0d4e0;opacity:0.9;box-sizing:border-box;border:1.5px solid #00428b"></div> <span data-i18n="legend_nodata">Geen data</span></div>
         </div>
         <div class="map-legend-reason" id="map-legend-reason" style="display:none">
             <div class="legend-title">Reden tekort</div>
@@ -1251,20 +1251,29 @@ function countryStyle(cc) {
     // kregen Zwitserland, Portugal, Zuid-Afrika en Zuid-Korea een eigen tint en bleven ze
     // klikbaar, omdat ze nog in de landentabel CC staan -- terwijl de data er al weken uit
     // was. Klikbaar is nu: er IS data voor dit land (monitored_countries in data.json).
-    if (!CC[cc] || !isMon) { fill = "#c0d4e0"; opacity = 0.7; }
-    else if (aN > 0) { fill = "#e85050"; opacity = 0.6 + Math.min(aN * 0.015, 0.25); }
+    // Landen zonder data: allemaal zoals Servie. Dat uiterlijk (dekkend grijsblauw, donkere
+    // grens) ontstond per ongeluk: een land buiten de tabel heeft cc = null, en zonder selectie
+    // is S.selectedCountry ook null, dus gold het als geselecteerd. Portugal en Zwitserland staan
+    // wel in de tabel en kregen daardoor de bleke variant. Nu bewust en voor elk land gelijk;
+    // bij een geselecteerd land dimmen ze, zoals Servie al deed.
+    if (!CC[cc] || !isMon) {
+        const dim = !!S.selectedCountry;
+        return { fillColor: "#c0d4e0", fillOpacity: dim ? 0.7 * 0.45 : 0.9,
+                 color: dim ? "rgba(0,66,139,0.08)" : "#00428b", weight: dim ? 0.3 : 2,
+                 data: { cc, aN, uN, rN, isMon } };
+    }
+    if (aN > 0) { fill = "#e85050"; opacity = 0.6 + Math.min(aN * 0.015, 0.25); }
     else if (uN > 0) { fill = "#f0a020"; opacity = 0.65; }
     else if (rN > 0) { fill = "#a8c04d"; opacity = 0.6; }
     else { fill = "#60ccf0"; opacity = 0.5; }
 
-    const isSel = S.selectedCountry === cc;
+    const isSel = !!cc && S.selectedCountry === cc;
     if (hasSelection && !isSel && S.selectedCountry) opacity *= 0.45;
     if (isSel) opacity = Math.min(opacity * 1.3, 0.9);
 
     let borderColor, weight;
     if (isSel) { borderColor = "#00428b"; weight = 2; }
-    else if (CC[cc] && isMon) { borderColor = "rgba(255,255,255,0.45)"; weight = 0.3; }
-    else { borderColor = "rgba(0,66,139,0.08)"; weight = 0.3; }
+    else { borderColor = "rgba(255,255,255,0.45)"; weight = 0.3; }
 
     return { fillColor: fill, fillOpacity: opacity, color: borderColor, weight, data: { cc, aN, uN, rN, isMon } };
 }
