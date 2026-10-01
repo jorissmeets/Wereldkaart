@@ -17,3 +17,6 @@ referentie/
 # Het volgorde-panel MOET meegecommit worden, anders groeit het niet en blijft het
 # eeuwig een nulmeting. Zelfde voor de afgeleide analysebestanden.
 !analyse/volgorde/*.csv
+
+# WHO-ATC-namen (WHOCC-auteursrecht): alleen lokaal en in de prive-pijplijnrepo
+atc_who.json

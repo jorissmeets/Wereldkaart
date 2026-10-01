@@ -1,5 +1,6 @@
 """Scraper for Italy AIFA (Agenzia Italiana del Farmaco) via CSV download."""
 
+import re
 import requests
 import pandas as pd
 from datetime import datetime
@@ -20,6 +21,14 @@ class ItAifaScraper(BaseScraper):
             source_name="AIFA",
             base_url="https://www.aifa.gov.it",
         )
+
+    @staticmethod
+    def _atc5(waarde) -> str:
+        """Alleen een geldige ATC5 (L01BC06); leeg of een hoger niveau laat de verrijking invullen."""
+        if waarde is None or pd.isna(waarde):
+            return ""
+        code = str(waarde).strip().upper()
+        return code if re.fullmatch(r"[A-Z]\d{2}[A-Z]{2}\d{2}", code) else ""
 
     def _parse_date(self, date_str) -> str | None:
         if not date_str or pd.isna(date_str):
@@ -82,6 +91,10 @@ class ItAifaScraper(BaseScraper):
                 "strength": str(row.get("Forma farmaceutica e dosaggio", "")).strip(),
                 "package_size": "",
                 "product_no": str(row.get("Codice AIC", "")).strip(),
+                # AIFA levert de ATC zelf, in de laatste kolom. Die werd niet ingelezen, waarna
+                # de verrijking hem uit de Italiaanse stofnaam raadde -- vaak een buur in dezelfde
+                # groep: eletriptan op almotriptan, galantamine op tacrine. De bron is leidend.
+                "atc_code": self._atc5(row.get("Codice ATC")),
                 "shortage_start": shortage_start,
                 "estimated_end": estimated_end,
                 "status": status,

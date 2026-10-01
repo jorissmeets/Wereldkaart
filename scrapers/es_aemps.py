@@ -1,5 +1,6 @@
 """Scraper for Spain AEMPS (Agencia Española de Medicamentos) via CIMA REST API."""
 
+import re
 import time
 import requests
 import pandas as pd
@@ -33,10 +34,15 @@ class EsAempsScraper(BaseScraper):
             base_url="https://cima.aemps.es",
         )
 
-    def _lookup_substance(self, cn: str) -> str:
-        """Look up active substance via CIMA medicines API using código nacional."""
+    def _lookup_substance(self, cn: str) -> tuple[str, str]:
+        """(werkzame stof, ATC5) via de CIMA-medicijnen-API op código nacional.
+
+        De ATC komt uit hetzelfde antwoord ('atcs', niveau 3 t/m 5) en werd tot 01-10 genegeerd;
+        de verrijking raadde hem daarna uit de Spaanse stofnaam, met fouten als pravastatine op
+        fluvastatine en entecavir op lamivudine. Twee ATC5-codes in een antwoord: leeg laten.
+        """
         if not cn:
-            return ""
+            return "", ""
         try:
             resp = requests.get(
                 self.DRUG_API_URL,
@@ -45,18 +51,20 @@ class EsAempsScraper(BaseScraper):
                 headers={"User-Agent": "Mozilla/5.0"},
             )
             if resp.status_code != 200:
-                return ""
+                return "", ""
             data = resp.json()
             principios = data.get("principiosActivos", [])
-            if principios:
-                return ", ".join(
-                    p.get("nombre", "").strip()
-                    for p in principios
-                    if p.get("nombre", "").strip()
-                )
+            stof = ", ".join(
+                p.get("nombre", "").strip()
+                for p in principios
+                if p.get("nombre", "").strip()
+            )
+            atc5 = {str(a.get("codigo") or "").strip().upper() for a in data.get("atcs") or []}
+            atc5 = [a for a in atc5 if re.fullmatch(r"[A-Z]\d{2}[A-Z]{2}\d{2}", a)]
+            return stof, (atc5[0] if len(atc5) == 1 else "")
         except Exception:
             pass
-        return ""
+        return "", ""
 
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
@@ -76,13 +84,15 @@ class EsAempsScraper(BaseScraper):
         unique_cns = {str(item.get("cn", "")).strip() for item in results if item.get("cn")}
         print(f"  Looking up active substances for {len(unique_cns)} unique products...")
         cn_substance_map: dict[str, str] = {}
+        cn_atc_map: dict[str, str] = {}
         for i, cn in enumerate(unique_cns):
-            cn_substance_map[cn] = self._lookup_substance(cn)
+            cn_substance_map[cn], cn_atc_map[cn] = self._lookup_substance(cn)
             if (i + 1) % 50 == 0:
                 print(f"    ... {i + 1}/{len(unique_cns)} lookups done")
             time.sleep(0.1)  # Rate limit
         found = sum(1 for v in cn_substance_map.values() if v)
-        print(f"  Substance found for {found}/{len(unique_cns)} products")
+        print(f"  Substance found for {found}/{len(unique_cns)} products, "
+              f"ATC from CIMA for {sum(1 for v in cn_atc_map.values() if v)}")
 
         records = []
         for item in results:
@@ -108,6 +118,7 @@ class EsAempsScraper(BaseScraper):
                 "source": self.source_name,
                 "medicine_name": item.get("nombre", ""),
                 "active_substance": cn_substance_map.get(cn, ""),
+                "atc_code": cn_atc_map.get(cn, ""),
                 "strength": "",
                 "package_size": "",
                 "product_no": cn,
