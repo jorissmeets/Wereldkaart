@@ -3,7 +3,7 @@ FR,France,ANSM,"Mytélase 10 mg, comprimé",Chlorure d'ambénonium,,,,2026-09-17
 FR,France,ANSM,"Atgam 50 mg/mL, solution à diluer pour perfusion",immunoglobuline équine anti-lymphocyte T humain,,,,2026-03-23,,2026-09-30,supply tension,2026-10-01T09:50:13.673752,L04AA03,216704
 FR,France,ANSM,"Tuberculine PPD RT 23 AJV 2T.U. / 0,1 mL, solution injectable",tuberculine PPD RT 23,,,,2026-09-30,2026-09-30,2026-09-30,resolved,2026-10-01T09:50:13.673773,,
 FR,France,ANSM,"Métoprolol Sandoz 50 mg, comprimé",métoprolol (tartrate de),,,,2026-09-29,2026-09-29,2026-09-29,resolved,2026-10-01T09:50:13.673789,C07AB02,3158
-FR,France,ANSM,"Kétoprofène Pharmy II 100 mg/2 ml, solution injectable intramusculaire (I.M.)",kétoprofène,,,,2026-09-24,2026-12-15,2026-09-28,supply tension,2026-10-01T09:50:13.673809,M01AE02,
+FR,France,ANSM,"Kétoprofène Pharmy II 100 mg/2 ml, solution injectable intramusculaire (I.M.)",kétoprofène,,,,2026-09-24,2026-12-15,2026-09-28,supply tension,2026-10-01T09:50:13.673809,M01AE03,
 FR,France,ANSM,Spécialités à base de furosémide 20 mg et 40 mg en comprimés - [Furosémide ],,,,,,,2026-09-28,supply tension,2026-10-01T09:50:13.673840,,
 FR,France,ANSM,Malocide 50 mg comprimé pelliculé,pyriméthamine,,,,2023-10-27,,2026-09-25,shortage,2026-10-01T09:50:13.673856,P01BD01,744
 FR,France,ANSM,"Dectancyl 0,5 mg, comprimé",dexaméthasone (acétate de),,,,2026-06-05,2026-10-05,2026-09-25,supply tension,2026-10-01T09:50:13.673869,H02AB02,42285
@@ -32,7 +32,7 @@ FR,France,ANSM,"Diprostene, suspension injectable en seringue pré-remplie","bé
 FR,France,ANSM,"Dépakote 500 mg, comprimé gastro-résistant",valproate semisodique,,,,2026-07-23,,2026-09-18,supply tension,2026-10-01T09:50:13.674263,N03AG01,4812
 FR,France,ANSM,"Solumedrol 120 mg/2 mL, lyophilisat et solution pour usage parentéral",méthylprednisolone (hémisuccinate de),,,,2026-09-15,2026-12-31,2026-09-17,supply tension,2026-10-01T09:50:13.674284,H02AB04,
 FR,France,ANSM,"Yellox 0,9 mg/ml, collyre en solution",bromfénac sodique sesquihydraté,,,,2026-08-06,2026-11-16,2026-09-17,supply tension,2026-10-01T09:50:13.674299,S01BC11,219010
-FR,France,ANSM,"Negaban 1 g, poudre pour solution injectable/pour perfusion",témocilline disodique,,,,2026-07-15,2026-10-15,2026-09-16,shortage,2026-10-01T09:50:13.674319,J01CA06,
+FR,France,ANSM,"Negaban 1 g, poudre pour solution injectable/pour perfusion",témocilline disodique,,,,2026-07-15,2026-10-15,2026-09-16,shortage,2026-10-01T09:50:13.674319,J01CA17,
 FR,France,ANSM,"Fluorouracile Accord 50 mg/ml, solution à diluer pour perfusion, flacon de 100 ml",fluorouracile,,,,2026-02-25,,2026-09-16,supply tension,2026-10-01T09:50:13.674337,L01BC02,33138
 FR,France,ANSM,"Depo Prodasone 500 mg, suspension injectable",médroxyprogestérone,,,,2025-08-08,,2026-09-16,supply tension,2026-10-01T09:50:13.674351,G03AC06,67121
 FR,France,ANSM,"Cufence 200 mg, gélule",trientine (dichlorhydrate de),,,,2026-06-10,2026-06-10,2026-09-16,resolved,2026-10-01T09:50:13.674363,A16AX12,207535
@@ -45,8 +45,8 @@ FR,France,ANSM,"Gardénal 50 mg, comprimé",phénobarbital,,,,2026-09-15,2026-09
 FR,France,ANSM,"Emylif 50 mg, film orodispersible",riluzole,,,,2026-09-02,2026-11-15,2026-09-14,supply tension,2026-10-01T09:50:13.674472,N07XX02,225126
 FR,France,ANSM,"Kaleorid LP 600 mg et 1000 mg, comprimés à libération prolongée",potassium (chlorure de),,,,2026-08-21,,2026-09-11,shortage,2026-10-01T09:50:13.674494,A12BA01,2313
 FR,France,ANSM,"Tofranil 10 mg, comprimé enrobé",imipramine,,,,2022-07-31,,2026-09-11,supply tension,2026-10-01T09:50:13.674508,N06AA02,227420
-FR,France,ANSM,"Néosynéphrine 10 % Faure, collyre en récipient unidose",phényléphrine,,,,2025-10-13,,2026-09-11,supply tension,2026-10-01T09:50:13.674524,C01CA24,
-FR,France,ANSM,"Indocollyre 0,1 %, collyre en solution",indométacine,,,,2026-09-08,,2026-09-11,supply tension,2026-10-01T09:50:13.674538,M01AC01,
+FR,France,ANSM,"Néosynéphrine 10 % Faure, collyre en récipient unidose",phényléphrine,,,,2025-10-13,,2026-09-11,supply tension,2026-10-01T09:50:13.674524,C01CA06,
+FR,France,ANSM,"Indocollyre 0,1 %, collyre en solution",indométacine,,,,2026-09-08,,2026-09-11,supply tension,2026-10-01T09:50:13.674538,M01AB01,
 FR,France,ANSM,"Emblaveo 1,5 g/0,5 g, poudre pour solution à diluer pour perfusion","avibactam sodique, aztréonam",,,,2026-02-13,,2026-09-10,shortage,2026-10-01T09:50:13.674553,,
 FR,France,ANSM,"Prevymis 120 mg, granulés en sachet",létermovir,,,,2026-09-04,2027-01-15,2026-09-09,supply tension,2026-10-01T09:50:13.674571,J05AX18,
 FR,France,ANSM,"Tadalafil Quiver 20 mg, comprimé pelliculé",tadalafil,,,,2026-09-08,2026-09-08,2026-09-09,resolved,2026-10-01T09:50:13.674584,G04BE08,68241
@@ -58,7 +58,7 @@ FR,France,ANSM,"Chlorhydrate d'oxybuprocaïne Thea 1,6 mg/0,4 ml, collyre en ré
 FR,France,ANSM,"Tenormine 5 mg/10 ml, solution injectable IV en ampoule",aténolol,,,,2026-04-14,2026-10-15,2026-09-07,supply tension,2026-10-01T09:50:13.674703,C07AB03,
 FR,France,ANSM,"Linézolide 600 mg, comprimé pelliculé",linezolide,,,,2026-07-21,,2026-09-07,supply tension,2026-10-01T09:50:13.674718,J01XX08,60186
 FR,France,ANSM,"Clindamycine 600 mg/4ml, solution injectable",clindamycine (phosphate de),,,,2026-06-05,2026-10-15,2026-09-07,supply tension,2026-10-01T09:50:13.674731,J01FF01,4707
-FR,France,ANSM,"Nilemdo 180 mg, comprimé pelliculé",bempédoïque (acide),,,,2026-07-24,,2026-09-07,supply tension,2026-10-01T09:50:13.674745,C10AX14,
+FR,France,ANSM,"Nilemdo 180 mg, comprimé pelliculé",bempédoïque (acide),,,,2026-07-24,,2026-09-07,supply tension,2026-10-01T09:50:13.674745,C10AX15,
 FR,France,ANSM,Spécialités à base de fluoxétine 20 mg en gélule et en comprimé dispersible sécable,fluoxétine,,,,2026-09-02,2026-09-30,2026-09-04,supply tension,2026-10-01T09:50:13.674768,N06AB03,
 FR,France,ANSM,"Téralithe 250 mg, comprimé sécable",lithium (carbonate de),,,,2026-09-02,2026-09-02,2026-09-02,resolved,2026-10-01T09:50:13.674782,D11AX04,
 FR,France,ANSM,"Varilrix, poudre et solvant pour solution injectable en seringue préremplie. Vaccin varicelleux (vivant)","virus de la varicelle souche Oka (vivant, atténué) ((mammifères/humain/cellules diploïdes MRC-5))",,,,2026-09-02,2026-09-02,2026-09-02,resolved,2026-10-01T09:50:13.674799,,
@@ -104,7 +104,7 @@ FR,France,ANSM,"Rapibloc 20 mg/2 ml, solution à diluer injectable",landiolol (c
 FR,France,ANSM,"Alyostal venin de guêpe polistes 110 microgrammes et 550 microgrammes, poudre et solvant pour solution injectable",guêpe polistes (venin de),,,,2018-03-26,,2026-08-05,discontinued,2026-10-01T09:50:13.675422,,
 FR,France,ANSM,"Burinex 1 mg et 5 mg, comprimé",bumétanide,,,,2026-08-05,2026-08-05,2026-08-05,resolved,2026-10-01T09:50:13.675436,C03CA02,
 FR,France,ANSM,"Concerta LP, comprimé à libération prolongée",méthylphénidate (chlorhydrate de),,,,2026-07-17,,2026-08-05,supply tension,2026-10-01T09:50:13.675451,N06BA04,
-FR,France,ANSM,"Néosynéphrine 2,5 % Faure, collyre en solution en récipient unidose",phényléphrine,,,,2026-05-13,,2026-08-05,supply tension,2026-10-01T09:50:13.675467,C01CA24,
+FR,France,ANSM,"Néosynéphrine 2,5 % Faure, collyre en solution en récipient unidose",phényléphrine,,,,2026-05-13,,2026-08-05,supply tension,2026-10-01T09:50:13.675467,C01CA06,
 FR,France,ANSM,"Ixiaro, suspension injectable. Vaccin de l'encéphalite japonaise (inactivé, adsorbé) - [virus de l'encéphalite japonaise inactivé, souche SA(14)-14-2 ((mammifère/singe/cellules vero))]",,,,,,,2026-07-31,supply tension,2026-10-01T09:50:13.675504,,
 FR,France,ANSM,"Befizal L.P. 400 mg, comprimé enrobé à libération prolongée",bézafibrate,,,,2026-07-08,2026-11-30,2026-07-31,supply tension,2026-10-01T09:50:13.675520,C10AB02,43435
 FR,France,ANSM,"Tibéral 1 g, solution injectable pour perfusion",ornidazole,,,,2025-11-05,2026-10-05,2026-07-31,shortage,2026-10-01T09:50:13.675534,G01AF06,
@@ -153,7 +153,7 @@ FR,France,ANSM,"Zyvoxid 100 mg/5 ml, granulés pour suspension buvable",linézol
 FR,France,ANSM,"Rifinah 300 mg/150 mg, comprimé enrobé","isoniazide, rifampicine",,,,2025-09-23,,2026-06-22,supply tension,2026-10-01T09:50:13.676231,,
 FR,France,ANSM,"Cardioxane 500 mg, poudre pour solution pour perfusion",dexrazoxane (chlorhydrate de),,,,2026-06-18,2026-06-18,2026-06-19,resolved,2026-10-01T09:50:13.676245,V03AF02,82090
 FR,France,ANSM,Trandolapril 2 mg et 4 mg,trandolapril,,,,2024-07-04,,2026-06-18,supply tension,2026-10-01T09:50:13.676257,C09AA10,
-FR,France,ANSM,"Alkonatrem 150 mg, gélule",chlorhydrate de déméclocycline,,,,2013-12-11,,2026-06-17,shortage,2026-10-01T09:50:13.676269,J01AA06,
+FR,France,ANSM,"Alkonatrem 150 mg, gélule",chlorhydrate de déméclocycline,,,,2013-12-11,,2026-06-17,shortage,2026-10-01T09:50:13.676269,J01AA01,
 FR,France,ANSM,"Méthylphénidate Viatris LP, comprimé à libération prolongée",méthylphénidate (chlorhydrate de),,,,2026-06-16,2026-06-16,2026-06-17,resolved,2026-10-01T09:50:13.676283,N06BA04,
 FR,France,ANSM,"Spécialités à base de propranolol 40 mg, comprimé",chlorhydrate de propranolol,,,,2025-11-27,,2026-06-17,supply tension,2026-10-01T09:50:13.676297,C07AA05,5711
 FR,France,ANSM,"Rispéridone 0,5 mg, 1 mg, 2 mg et 4 mg, comprimé orodispersible - [rispéridone]",,,,,,,2026-06-16,supply tension,2026-10-01T09:50:13.676334,,
@@ -178,7 +178,7 @@ FR,France,ANSM,"Izalgi 500 mg/25 mg, gélule","opium (poudre d'), paracétamol",
 FR,France,ANSM,"Acide acétylsalicylique 75 mg, , comprimé gastro-résistant",acide acétylsalicylique,,,,2026-05-18,,2026-05-21,supply tension,2026-10-01T09:50:13.676647,B01AC06,
 FR,France,ANSM,"Tranxène 20 mg/2 ml, lyophilisat et solution pour usage parentéral",clorazépate dipotassique,,,,2024-10-02,,2026-05-21,shortage,2026-10-01T09:50:13.676662,N05BA02,
 FR,France,ANSM,"Hydrocortisone Upjohn 100 mg, préparation injectable",hydrocortisone (hydrogénosuccinate sodique d'),,,,2026-05-21,2026-05-21,2026-05-21,resolved,2026-10-01T09:50:13.676677,A01AC03,
-FR,France,ANSM,"Tétracaïne 1% Théa, collyre en solution en récipient unidose",chlorhydrate de tétracaïne,,,,2025-10-22,,2026-05-20,shortage,2026-10-01T09:50:13.676699,N01BA02,
+FR,France,ANSM,"Tétracaïne 1% Théa, collyre en solution en récipient unidose",chlorhydrate de tétracaïne,,,,2025-10-22,,2026-05-20,shortage,2026-10-01T09:50:13.676699,N01BA03,
 FR,France,ANSM,"Norfloxacine EG 400 mg, comprimé pelliculé",norfloxacine,,,,2026-05-20,2026-05-20,2026-05-20,resolved,2026-10-01T09:50:13.676713,J01MA06,22101
 FR,France,ANSM,"Endoxan 50 mg, comprimé enrobé",cyclophosphamide,,,,2025-07-07,2026-10-15,2026-05-19,supply tension,2026-10-01T09:50:13.676727,L01AA01,957
 FR,France,ANSM,"Vancomycine Viatris 125 mg, poudre pour solution à diluer pour perfusion-vancomycine",chlorhydrate de,,,,2026-05-07,2026-05-07,2026-05-19,resolved,2026-10-01T09:50:13.676742,,
@@ -242,10 +242,10 @@ FR,France,ANSM,"Vitamine A Dulcis 25 000 U.I. pour 100 g, pommade ophtalmique - 
 FR,France,ANSM,"Ioméron 250, 350 et 400 mg Iode/mL, solution injectable en 50-100-200 et 500 mL - [ioméprol]",,,,,,,2026-01-15,supply tension,2026-10-01T09:50:13.677676,,
 FR,France,ANSM,"Rispéridone L.P. 25 mg/2 ml, 37,5 mg/2 ml et 50 mg/2 ml, poudre et solvant pour suspension injectable à libération prolongée en seringue préremplie",rispéridone,,,,2025-05-12,,2026-01-07,shortage,2026-10-01T09:50:13.677700,N05AX08,
 FR,France,ANSM,"Atropine 0,3%, collyre",atropine (sulfate),,,,2025-12-29,,2026-01-06,discontinued,2026-10-01T09:50:13.677717,S01FA01,
-FR,France,ANSM,"Colofoam, mousse rectale",acétate d'hydrocortisone,,,,2024-02-29,,2025-12-22,shortage,2026-10-01T09:50:13.677727,H02AB01,
+FR,France,ANSM,"Colofoam, mousse rectale",acétate d'hydrocortisone,,,,2024-02-29,,2025-12-22,shortage,2026-10-01T09:50:13.677727,H02AB09,
 FR,France,ANSM,Immunoglobuline humaine normale IV et SC (à base de),Immunoglobuline humaine normale (IgG),,,,2021-04-01,,2025-12-08,supply tension,2026-10-01T09:50:13.677742,J06BA01,
-FR,France,ANSM,"Néosynéphrine 10 % Faure, collyre en solution",phényléphrine,,,,2025-11-12,,2025-11-19,supply tension,2026-10-01T09:50:13.677758,C01CA24,
-FR,France,ANSM,"Néosynéphrine 5 % Faure, collyre en solution",phényléphrine,,,,2025-11-12,,2025-11-19,supply tension,2026-10-01T09:50:13.677775,C01CA24,
+FR,France,ANSM,"Néosynéphrine 10 % Faure, collyre en solution",phényléphrine,,,,2025-11-12,,2025-11-19,supply tension,2026-10-01T09:50:13.677758,C01CA06,
+FR,France,ANSM,"Néosynéphrine 5 % Faure, collyre en solution",phényléphrine,,,,2025-11-12,,2025-11-19,supply tension,2026-10-01T09:50:13.677775,C01CA06,
 FR,France,ANSM,"Tildiem 100 mg, poudre pour solution injectable (IV)",diltiazem (chlorhydrate de),,,,2025-09-30,,2025-11-07,discontinued,2026-10-01T09:50:13.677788,C05AE03,
 FR,France,ANSM,"Pentasa 1 g et 2 g, granulés en sachet et Pentasa 1 g, suppositoire",mésalazine,,,,2025-10-30,,2025-10-31,supply tension,2026-10-01T09:50:13.677812,A07EC02,
 FR,France,ANSM,"Gamme NeoRecormon, solution injectable en seringue préremplie",époétine béta,,,,2025-05-01,,2025-10-28,supply tension,2026-10-01T09:50:13.677826,B03XA01,
@@ -280,7 +280,7 @@ FR,France,ANSM,"Ribarivine Biogaran 200 mg/400 mg, comprimé pelliculé",Ribavir
 FR,France,ANSM,"Atropine 1%, collyre",atropine (sulfate),,,,2024-09-22,,2024-10-16,supply tension,2026-10-01T09:50:13.678324,S01FA01,216208
 FR,France,ANSM,"Ropinirole LP 2 mg, 4 mg et 8 mg comprimé pelliculé",ropinirole (chlorhydrate de),,,,2024-09-25,,2024-10-01,supply tension,2026-10-01T09:50:13.678339,N04BC04,85634
 FR,France,ANSM,"Atropine 0,5%, collyre",atropine (sulfate),,,,2024-06-28,,2024-07-18,supply tension,2026-10-01T09:50:13.678349,S01FA01,216186
-FR,France,ANSM,"Eldisine 5 mg, poudre pour solution injectable",sulfate de vindésine,,,,2023-10-27,,2024-06-19,shortage,2026-10-01T09:50:13.678363,L01CD01,
+FR,France,ANSM,"Eldisine 5 mg, poudre pour solution injectable",sulfate de vindésine,,,,2023-10-27,,2024-06-19,shortage,2026-10-01T09:50:13.678363,L01CA03,
 FR,France,ANSM,"Cidermex, pommade ophtalmique","néomycine (sulfate de), triamcinolone (acétonide de)",,,,2024-05-22,,2024-05-24,supply tension,2026-10-01T09:50:13.678374,,
 FR,France,ANSM,"Creon 35 000 U, gélule gastrorésistante",pancréatine,,,,2024-03-13,,2024-03-20,supply tension,2026-10-01T09:50:13.678387,A09AA02,204056
 FR,France,ANSM,"Creon 5 000 U, granulés gastro-résistants",pancréatine,,,,2024-03-08,,2024-03-12,supply tension,2026-10-01T09:50:13.678408,A09AA02,77135
