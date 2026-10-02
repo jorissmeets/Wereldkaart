@@ -32,6 +32,10 @@ DE REGEL
   melding met alleen ATC4 (5 tekens): de PRK moet in die ATC4-groep vallen.
   PRK die niet in de G-standaard staat (sinds de koppeling uit de handel): blijft staan.
   Dat is geen fout, alleen historisch, en de pooldekking telt hem al niet mee.
+  Sinds 01-10 ook de STERKTE (sterkte.py): noemen meldingsnaam en PRK-naam elk precies een
+  sterkte, van dezelfde soort, en verschillen die meer dan een factor 1,25, dan wijst de PRK een
+  ander Nederlands product aan (Sloveense Ecansya 150 mg hing aan de 500 mg-PRK, Duitse
+  metoprolol 50 mg aan 200 mg). Op 01-10 265 meldingen.
 
     uv run --python 3.13 python toets_prk_atc.py --data --koppeltabel --schrijf
 """
@@ -47,6 +51,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lcg_paden import BASE, GSTD  # noqa: E402
 from vorm import vorm_botst  # noqa: E402
+from sterkte import sterkte_botst  # noqa: E402
 
 DATA = os.path.join(BASE, "data.json")
 KOPPEL = os.path.join(BASE, "prk_koppeltabel.csv")
@@ -117,12 +122,19 @@ def past(atc, prk, prk_atc):
 
 def toets_data(prk_atc, schrijf):
     d = json.load(open(DATA, encoding="utf-8"))
-    fout, n_vorm, conflict = [], 0, []
+    fout, n_vorm, n_sterkte, conflict = [], 0, 0, []
     for r in d["records"]:
         if not r.get("prk"):
             continue
         if past(r.get("atc"), r["prk"], prk_atc) is False:
             if naam_noemt_stof(r, r["prk"]):
+                if r.get("prk_naam") and sterkte_botst(r.get("mn") or "", r["prk_naam"]):
+                    # Ook als de ATC van de melding de verdachte is: een andere sterkte
+                    # maakt het hoe dan ook een ander Nederlands product (morfine 30 mg/ml
+                    # aan de 10 mg/ml-ampul).
+                    fout.append(r)
+                    n_sterkte += 1
+                    continue
                 conflict.append(r)          # vermoedelijk verkeerde ATC op de melding
                 continue
             fout.append(r)
@@ -131,9 +143,13 @@ def toets_data(prk_atc, schrijf):
             # een Nederlands product als geraakt aan dat het niet is.
             fout.append(r)
             n_vorm += 1
+        elif r.get("prk_naam") and sterkte_botst(r.get("mn") or "", r["prk_naam"]):
+            # Goede stof en vorm, andere sterkte: de PRK is een ander Nederlands product.
+            fout.append(r)
+            n_sterkte += 1
     per = collections.Counter(r["cc"] for r in fout)
-    print(f"data.json: {len(fout) - n_vorm} PRK-koppelingen bij een andere stof, "
-          f"{n_vorm} bij de goede stof maar een andere toedieningsvorm")
+    print(f"data.json: {len(fout) - n_vorm - n_sterkte} PRK-koppelingen bij een andere stof, "
+          f"{n_vorm} bij de goede stof maar een andere toedieningsvorm, {n_sterkte} bij een andere sterkte")
     print(f"  {len(conflict)} blijven staan: de meldingsnaam noemt de stof van de PRK, dus waarschijnlijk"
           f" is de ATC van de melding fout, niet de PRK -> {CONFLICT}")
     os.makedirs(os.path.dirname(CONFLICT), exist_ok=True)

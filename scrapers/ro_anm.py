@@ -39,6 +39,29 @@ class RoAnmScraper(BaseScraper):
 
         raise ValueError("Could not find discontinuation PDF on ANMDMR page")
 
+    _LUNI = {"IAN": 1, "FEB": 2, "MAR": 3, "APR": 4, "MAI": 5, "IUN": 6, "IUL": 7, "AUG": 8,
+             "SEP": 9, "OCT": 10, "NOI": 11, "NOV": 11, "DEC": 12}
+    _KWARTAAL = {"I": 2, "II": 5, "III": 8, "IV": 11}
+
+    def _luna_an(self, tekst) -> str | None:
+        """Verwachte hervatting op maand- of kwartaalniveau, zoals ANM hem schrijft.
+
+        'oct.-26', 'oct.26', 'mai-27', 'sept.-26' -> de 15e van die maand; 'trimestrul IV 2026'
+        -> 15 november (midden van het kwartaal). De bron noemt geen dag; het midden is dezelfde
+        keuze als bij Frankrijk ('courant octobre' -> 15 oktober). Tot 01-10 werd dit veld niet
+        gelezen en ontbrak bij ~240 meldingen de verwachte hervatting."""
+        if not tekst or not isinstance(tekst, str):
+            return None
+        t = tekst.strip().upper()
+        m = re.match(r"^([A-Z]{3,4})\.?\s*-?\s*(\d{2}|\d{4})$", t)
+        if m and m.group(1)[:3] in self._LUNI:
+            jaar = int(m.group(2)) + (2000 if len(m.group(2)) == 2 else 0)
+            return f"{jaar:04d}-{self._LUNI[m.group(1)[:3]]:02d}-15"
+        m = re.match(r"^TRIMESTRUL\s+(I{1,3}|IV)\s+(\d{4})$", t)
+        if m:
+            return f"{int(m.group(2)):04d}-{self._KWARTAAL[m.group(1)]:02d}-15"
+        return None
+
     def _parse_date(self, date_str) -> str | None:
         if not date_str or not isinstance(date_str, str):
             return None
@@ -131,7 +154,8 @@ class RoAnmScraper(BaseScraper):
                 "mah_country": mah_country,
                 "notification_date": self._parse_date(notif_date),
                 "shortage_start": self._parse_date(notif_date),
-                "estimated_end": self._parse_date(resume_date) if resume_date and resume_date.lower() != "nan" else None,
+                "estimated_end": (self._parse_date(resume_date) or self._luna_an(resume_date))
+                                 if resume_date and resume_date.lower() != "nan" else None,
                 "status": status,
                 "notification_type": notif_type,
                 "reason": observations if observations.lower() != "nan" else "",

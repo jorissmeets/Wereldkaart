@@ -1,6 +1,7 @@
 """Scraper for Slovenia CBZ (Centralna baza zdravil) medicine shortage data."""
 
 import io
+import re
 import requests
 import pandas as pd
 from io import BytesIO
@@ -140,14 +141,21 @@ class SiCbzScraper(BaseScraper):
             code = int(row.get("Šifra prisotnosti na trgu", 5))
             status = self.STATUS_MAP.get(code, "shortage")
 
+            # De korte naam ("Ecansya") zegt niet welke sterkte in tekort is; de volledige
+            # naam wel ("Ecansya 150 mg filmsko obložene tablete"). Met alleen de korte naam
+            # stonden 150 en 500 mg als twee identieke kaartjes op de kaart, en koppelde de
+            # PRK-matcher allebei aan de 500 mg-PRK.
+            volledig = str(row.get("Poimenovanje zdravila", "")).strip().replace("nan", "")
+            m_sterkte = re.search(r"\d+(?:[.,]\d+)?\s*(?:mg|g|mikrogram\w*|µg|mcg|i\.?e\.?|%)(?:\s*/\s*\d*(?:[.,]\d+)?\s*(?:ml|g|h|odmerek))?",
+                                  volledig, re.I)
             records.append({
                 "country_code": self.country_code,
                 "country_name": self.country_name,
                 "source": self.source_name,
-                "medicine_name": name,
-                "full_name": str(row.get("Poimenovanje zdravila", "")).strip().replace("nan", ""),
+                "medicine_name": volledig or name,
+                "full_name": volledig,
                 "active_substance": str(row.get("Latinski opis ATC", "")).strip().replace("nan", ""),
-                "strength": "",
+                "strength": m_sterkte.group(0) if m_sterkte else "",
                 "package_size": str(row.get("Pakiranje", "")).strip().replace("nan", ""),
                 "dosage_form": str(row.get("Slovenski naziv farmacevtske oblike", "")).strip().replace("nan", ""),
                 "atc_code": atc,
