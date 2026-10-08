@@ -1,9 +1,18 @@
 {
-"generated": "2026-10-01",
+"generated": "2026-10-08",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 198,
+"count": 199,
 "on_eml": 94,
 "items": [
+{
+"product": "Visudyne, poeder voor oplossing voor intraveneuze infusie 15 mg",
+"mah": "CHEPLAPHARM Arzneimittel GmbH",
+"reg": "EU/1/00/140",
+"reg_type": "EU",
+"datum": "2026-10-06",
+"atc": "C09BB04",
+"eml": ""
+},
 {
 "product": "Metamizol Kalceks 500 mg/ml oplossing voor injectie",
 "mah": "AS Kalceks",

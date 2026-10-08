@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01",
+ "generated": "2026-10-08",
  "bron": "https://lcg.nl/actuele-tekortendossiers/",
  "dossiers": [
   {
@@ -28,7 +28,7 @@
    "title": "Quetiapine",
    "atc": "N05AH04",
    "phase": "Therapeutische coördinatiefase",
-   "updated": "2026-09-04",
+   "updated": "2026-10-02",
    "published": "2025-11-20",
    "url": "https://lcg.nl/medicijnentekort/quetiapine/"
   },
@@ -38,29 +38,9 @@
    "title": "Gentamicine (i.v.)",
    "atc": "J01GB03",
    "phase": "Logistieke coördinatiefase",
-   "updated": "2026-09-24",
+   "updated": "2026-10-01",
    "published": "2026-05-18",
    "url": "https://lcg.nl/medicijnentekort/gentamicine-i-v/"
-  },
-  {
-   "key": "albendazol",
-   "slug": "albendazol-eskazole-400mg-tablet",
-   "title": "Albendazol (Eskazole)",
-   "atc": "P02CA03",
-   "phase": "Monitoring",
-   "updated": "2026-08-06",
-   "published": "2026-07-16",
-   "url": "https://lcg.nl/medicijnentekort/albendazol-eskazole-400mg-tablet/"
-  },
-  {
-   "key": "capecitabine",
-   "slug": "capecitabine",
-   "title": "Capecitabine",
-   "atc": "L01BC06",
-   "phase": "Monitoring",
-   "updated": "2026-09-15",
-   "published": "2026-07-27",
-   "url": "https://lcg.nl/medicijnentekort/capecitabine/"
   },
   {
    "key": "clindamycine",
@@ -68,7 +48,7 @@
    "title": "Clindamycine (i.v.)",
    "atc": "J01FF01",
    "phase": "Monitoring",
-   "updated": "2026-09-24",
+   "updated": "2026-10-01",
    "published": "2026-08-03",
    "url": "https://lcg.nl/medicijnentekort/clindamycine-i-v/"
   },
@@ -78,7 +58,7 @@
    "title": "Folinezuur (capsules, oraal)",
    "atc": "V03AF03",
    "phase": "Monitoring",
-   "updated": "2026-08-06",
+   "updated": "2026-10-01",
    "published": "2026-07-16",
    "url": "https://lcg.nl/medicijnentekort/folinezuur-capsules-oraal/"
   },
@@ -88,7 +68,7 @@
    "title": "Metamizol (i.v.)",
    "atc": "N02BB02",
    "phase": "Monitoring",
-   "updated": "2026-09-24",
+   "updated": "2026-10-01",
    "published": "2026-09-09",
    "url": "https://lcg.nl/medicijnentekort/metamizol-i-v/"
   },
@@ -98,19 +78,19 @@
    "title": "Mitoxantron (i.v.)",
    "atc": "L01DB07",
    "phase": "Monitoring",
-   "updated": "2026-09-07",
+   "updated": "2026-10-01",
    "published": "2026-07-16",
    "url": "https://lcg.nl/medicijnentekort/mitoxantron-i-v/"
   },
   {
-   "key": "visudyne",
-   "slug": "visudyne",
-   "title": "Visudyne",
-   "atc": "S01LA01",
-   "phase": "Monitoring",
-   "updated": "2026-05-18",
-   "published": "2024-01-25",
-   "url": "https://lcg.nl/medicijnentekort/visudyne/"
+   "key": "arseentrioxide-i-v",
+   "slug": "arseentrioxide-i-v",
+   "title": "Arseentrioxide (i.v.)",
+   "atc": "",
+   "phase": "Inventarisatie",
+   "updated": "2026-10-05",
+   "published": "2026-10-05",
+   "url": "https://lcg.nl/medicijnentekort/arseentrioxide-i-v/"
   }
  ]
 }
