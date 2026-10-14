@@ -1,9 +1,36 @@
 {
-"generated": "2026-10-08",
+"generated": "2026-10-14",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 199,
-"on_eml": 94,
+"count": 203,
+"on_eml": 97,
 "items": [
+{
+"product": "Isotretinoïne SUN 20 mg, zachte capsules",
+"mah": "Sun Pharmaceutical Industries Europe B.V.",
+"reg": "119053",
+"reg_type": "RVG",
+"datum": "2026-10-17",
+"atc": "D10BA01",
+"eml": "geel"
+},
+{
+"product": "Isotretinoïne SUN 10 mg, zachte capsules",
+"mah": "Sun Pharmaceutical Industries Europe B.V.",
+"reg": "119052",
+"reg_type": "RVG",
+"datum": "2026-10-10",
+"atc": "D10BA01",
+"eml": "geel"
+},
+{
+"product": "Diazepam Allgen rektiole 5 mg, oplossing voor rectaal gebruik 5 mg/2,5 ml",
+"mah": "All-Gen Pharmaceuticals & Generics B.V. RVG nummer: 19798",
+"reg": "",
+"reg_type": "",
+"datum": "2026-10-08",
+"atc": "N05BA01",
+"eml": "rood"
+},
 {
 "product": "Visudyne, poeder voor oplossing voor intraveneuze infusie 15 mg",
 "mah": "CHEPLAPHARM Arzneimittel GmbH",
@@ -11,6 +38,15 @@
 "reg_type": "EU",
 "datum": "2026-10-06",
 "atc": "C09BB04",
+"eml": ""
+},
+{
+"product": "Ropivacaïne HCl Fresenius Kabi 7,5 mg/ml oplossing voor injectie",
+"mah": "Fresenius Kabi Nederland B.V.",
+"reg": "104944 datum van goedkeuring: 5 oktober 2026 (loopt tot 5 januari 2026)",
+"reg_type": "RVG",
+"datum": "2026-10-05",
+"atc": "",
 "eml": ""
 },
 {
