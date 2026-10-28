@@ -24,7 +24,9 @@ DATUM=$(date +%Y-%m-%d)
 # soms over middernacht, en dan klopt date.today() in Python niet meer met de bestandsnamen.
 export LCG_DATUM="$DATUM"
 LOG="$LOGDIR/ververs_$DATUM.log"
-UV="uv run --python 3.13 --with typesafe-sdk --with python-dotenv --with openai --with pandas --with requests --with beautifulsoup4 --with lxml --with openpyxl --with xlrd --with pdfplumber"
+# certifi-ondergrens: eMudhra/emSign CA-incident (okt 2026). ZONDER aanhalingstekens: $UV wordt
+# ongequote uitgebreid, en dan krijgt uv de quotes letterlijk mee en weigert hij elke stap.
+UV="uv run --python 3.13 --with certifi>=2026.10.19 --with typesafe-sdk --with python-dotenv --with openai --with pandas --with requests --with beautifulsoup4 --with lxml --with openpyxl --with xlrd --with pdfplumber"
 
 # De landen die daadwerkelijk op de kaart staan. Bewust niet de volledige scraperlijst:
 # LT/TR/EE-oud/ZA/KR/TW zijn registers of geen tekortbron, die worden in build_data uitgesloten.

@@ -5,3 +5,5 @@ lxml>=4.9.0
 tabula-py>=2.9.0
 streamlit>=1.28.0
 plotly>=5.18.0
+# eMudhra/emSign CA-incident (okt 2026): certifi mag de ingetrokken CA's niet meer vertrouwen, zie https://discuss.python.org/t/109576
+certifi>=2026.10.19
