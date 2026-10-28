@@ -1,9 +1,45 @@
 {
-"generated": "2026-10-14",
+"generated": "2026-10-28",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 203,
-"on_eml": 97,
+"count": 208,
+"on_eml": 98,
 "items": [
+{
+"product": "Doxycycline Macure 20 mg/ml, oplossing voor injectie",
+"mah": "Macure Healthcare Limited",
+"reg": "133272",
+"reg_type": "RVG",
+"datum": "2026-10-23",
+"atc": "J01AA02",
+"eml": "rood"
+},
+{
+"product": "Emblaveo 1,5 g/0,5 g poeder voor concentraat voor oplossing voor infusie",
+"mah": "Pfizer Europe MA EEIG",
+"reg": "EU/1/24/1808/001",
+"reg_type": "EU",
+"datum": "2026-10-23",
+"atc": "J01DF51",
+"eml": ""
+},
+{
+"product": "Duvyzat 8,86 mg/ml suspensie voor oraal gebruik",
+"mah": "Italfarmaco S.p.A.",
+"reg": "EU/1/25/1930/001",
+"reg_type": "EU",
+"datum": "2026-10-22",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Caelyx, 2 mg/ml concentraat voor oplossing voor intraveneuze infusie",
+"mah": "Baxter B.V.",
+"reg": "EU/1/96/011",
+"reg_type": "EU",
+"datum": "2026-10-19",
+"atc": "",
+"eml": ""
+},
 {
 "product": "Isotretinoïne SUN 20 mg, zachte capsules",
 "mah": "Sun Pharmaceutical Industries Europe B.V.",
@@ -12,6 +48,15 @@
 "datum": "2026-10-17",
 "atc": "D10BA01",
 "eml": "geel"
+},
+{
+"product": "Ziextenzo 6 mg/0.6ml, oplossing voor injectie in voorgevulde spuit",
+"mah": "Sandoz GmbH",
+"reg": "EU/1/18/1327",
+"reg_type": "EU",
+"datum": "2026-10-15",
+"atc": "",
+"eml": ""
 },
 {
 "product": "Isotretinoïne SUN 10 mg, zachte capsules",

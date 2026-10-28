@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14",
+ "generated": "2026-10-28",
  "bron": "https://lcg.nl/actuele-tekortendossiers/",
  "dossiers": [
   {
@@ -33,26 +33,6 @@
    "url": "https://lcg.nl/medicijnentekort/quetiapine/"
   },
   {
-   "key": "gentamicine",
-   "slug": "gentamicine-i-v",
-   "title": "Gentamicine (i.v.)",
-   "atc": "J01GB03",
-   "phase": "Logistieke coördinatiefase",
-   "updated": "2026-10-01",
-   "published": "2026-05-18",
-   "url": "https://lcg.nl/medicijnentekort/gentamicine-i-v/"
-  },
-  {
-   "key": "clindamycine",
-   "slug": "clindamycine-i-v",
-   "title": "Clindamycine (i.v.)",
-   "atc": "J01FF01",
-   "phase": "Monitoring",
-   "updated": "2026-10-01",
-   "published": "2026-08-03",
-   "url": "https://lcg.nl/medicijnentekort/clindamycine-i-v/"
-  },
-  {
    "key": "folinezuur",
    "slug": "folinezuur-capsules-oraal",
    "title": "Folinezuur (capsules, oraal)",
@@ -61,6 +41,16 @@
    "updated": "2026-10-01",
    "published": "2026-07-16",
    "url": "https://lcg.nl/medicijnentekort/folinezuur-capsules-oraal/"
+  },
+  {
+   "key": "gentamicine",
+   "slug": "gentamicine-i-v",
+   "title": "Gentamicine (i.v.)",
+   "atc": "J01GB03",
+   "phase": "Monitoring",
+   "updated": "2026-10-23",
+   "published": "2026-05-18",
+   "url": "https://lcg.nl/medicijnentekort/gentamicine-i-v/"
   },
   {
    "key": "metamizol",
@@ -83,14 +73,14 @@
    "url": "https://lcg.nl/medicijnentekort/mitoxantron-i-v/"
   },
   {
-   "key": "arseentrioxide-i-v",
-   "slug": "arseentrioxide-i-v",
-   "title": "Arseentrioxide (i.v.)",
-   "atc": "",
+   "key": "methylergometrine",
+   "slug": "methylergometrine",
+   "title": "Methylergometrine (i.v.)",
+   "atc": "G02AB01",
    "phase": "Inventarisatie",
-   "updated": "2026-10-05",
-   "published": "2026-10-05",
-   "url": "https://lcg.nl/medicijnentekort/arseentrioxide-i-v/"
+   "updated": "2026-10-23",
+   "published": "2026-06-04",
+   "url": "https://lcg.nl/medicijnentekort/methylergometrine/"
   }
  ]
 }

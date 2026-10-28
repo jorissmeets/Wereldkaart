@@ -1,9 +1,9 @@
 {
-"generated": "2026-10-14",
+"generated": "2026-10-28",
 "source": "https://www3.sfk.nl/tekorten/?soort=totaal",
-"peildatum": "week 41 2026",
-"count": 655,
-"gekoppeld": 655,
+"peildatum": "week 43 2026",
+"count": 664,
+"gekoppeld": 664,
 "items": [
 {
 "zi": "15702944",
@@ -14,6 +14,16 @@
 "prk": "85782",
 "prk_naam": "CHLOROQUINE TABLET 100MG (ALS DIFOSFAAT)",
 "atc": "P01BA01"
+},
+{
+"zi": "15775453",
+"naam": "A-QS 200 KININESULFAAT DIHYDRAAT TABLET OMH 200MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "101605",
+"prk_naam": "KININE TABLET 200MG",
+"atc": "P01BC01"
 },
 {
 "zi": "13484230",
@@ -46,24 +56,14 @@
 "atc": "B01AC06"
 },
 {
-"zi": "15115461",
-"naam": "ACLASTA INFUSIEVLOEISTOF 0,05MG/ML FLACON 100ML",
+"zi": "15270424",
+"naam": "ACTIQ ZUIGTABLET  200MCG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "79790",
-"prk_naam": "ZOLEDRONINEZUUR INFVLST 0,05MG/ML FL 100ML",
-"atc": "M05BA08"
-},
-{
-"zi": "13733370",
-"naam": "ACTILYSE INFUSIEPOEDER FLACON 20MG + SOLVENS 20ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "36870",
-"prk_naam": "ALTEPLASE INFUSIEPOEDER 20MG FL",
-"atc": "B01AD02"
+"prk": "84662",
+"prk_naam": "FENTANYL ZUIGTABLET  200UG",
+"atc": "N02AB03"
 },
 {
 "zi": "17232449",
@@ -110,7 +110,7 @@
 "naam": "ALLOPURINOL AMAROX TABLET 100MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 43",
+"opmerking": "Beschikbaar",
 "prk": "671",
 "prk_naam": "ALLOPURINOL TABLET 100MG",
 "atc": "M04AA01"
@@ -173,16 +173,6 @@
 "opmerking": "",
 "prk": "123315",
 "prk_naam": "AMLODIPINE TABLET   5MG",
-"atc": "C08CA01"
-},
-{
-"zi": "15730166",
-"naam": "AMLODIPINE PCH TABLET 10MG (ALS BESILAAT)",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "123323",
-"prk_naam": "AMLODIPINE TABLET 10MG",
 "atc": "C08CA01"
 },
 {
@@ -336,16 +326,6 @@
 "atc": "L02BG03"
 },
 {
-"zi": "15362647",
-"naam": "ANDROCUR TABLET 50MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "2712",
-"prk_naam": "CYPROTERON TABLET 50MG",
-"atc": "G03HA01"
-},
-{
 "zi": "16811143",
 "naam": "APREPITANT AUROBINDO CAPSULE 125MG",
 "status": "",
@@ -396,6 +376,16 @@
 "atc": "A04AD12"
 },
 {
+"zi": "15504689",
+"naam": "ARANESP   80 INJVLST 200MCG/ML WWSP 0,4ML",
+"status": "",
+"preferent": [],
+"opmerking": "Geen tekorten en/of leveringsproblemen",
+"prk": "59757",
+"prk_naam": "DARBEPOETINE ALFA INJV WWSP  80UG=0,4ML (200UG/ML)",
+"atc": "B03XA02"
+},
+{
 "zi": "16208528",
 "naam": "ARIPIPRAZOL ACCORD TABLET  5MG",
 "status": "",
@@ -403,16 +393,6 @@
 "opmerking": "",
 "prk": "117633",
 "prk_naam": "ARIPIPRAZOL TABLET  5MG",
-"atc": "N05AX12"
-},
-{
-"zi": "16174348",
-"naam": "ARIPIPRAZOL SANDOZ TABLET 10MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "75248",
-"prk_naam": "ARIPIPRAZOL TABLET 10MG",
 "atc": "N05AX12"
 },
 {
@@ -446,23 +426,23 @@
 "atc": "L01XX27"
 },
 {
-"zi": "17332060",
-"naam": "ATOMOXETINE AMAROX CAPSULE 100MG",
+"zi": "17155630",
+"naam": "ATAZANAVIR AUROBINDO CAPSULE 300MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 43",
-"prk": "105309",
-"prk_naam": "ATOMOXETINE CAPSULE 100MG",
-"atc": "N06BA09"
+"opmerking": "",
+"prk": "86479",
+"prk_naam": "ATAZANAVIR CAPSULE 300MG",
+"atc": "J05AE08"
 },
 {
-"zi": "17332052",
-"naam": "ATOMOXETINE AMAROX CAPSULE 60MG",
+"zi": "17361117",
+"naam": "ATOMOXETINE AMAROX CAPSULE 10MG",
 "status": "",
 "preferent": [],
-"opmerking": "Beschi",
-"prk": "76740",
-"prk_naam": "ATOMOXETINE CAPSULE  60MG",
+"opmerking": "Week 50",
+"prk": "76708",
+"prk_naam": "ATOMOXETINE CAPSULE  10MG",
 "atc": "N06BA09"
 },
 {
@@ -530,19 +510,9 @@
 "naam": "ATOMOXETINE HCL AUROBINDO CAPSULE 10MG",
 "status": "",
 "preferent": [],
-"opmerking": "",
+"opmerking": "Beschikbaar",
 "prk": "76708",
 "prk_naam": "ATOMOXETINE CAPSULE  10MG",
-"atc": "N06BA09"
-},
-{
-"zi": "16811674",
-"naam": "ATOMOXETINE HCL AUROBINDO CAPSULE 25MG",
-"status": "",
-"preferent": [],
-"opmerking": "Niet preferent",
-"prk": "76724",
-"prk_naam": "ATOMOXETINE CAPSULE  25MG",
 "atc": "N06BA09"
 },
 {
@@ -573,6 +543,26 @@
 "opmerking": "",
 "prk": "98604",
 "prk_naam": "ATORVASTATINE TABLET 10MG",
+"atc": "C10AA05"
+},
+{
+"zi": "15796507",
+"naam": "ATORVASTATINE MYLAN TABLET FILMOMHULD 10MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "98604",
+"prk_naam": "ATORVASTATINE TABLET 10MG",
+"atc": "C10AA05"
+},
+{
+"zi": "15753743",
+"naam": "ATORVASTATINE SANDOZ TABLET FILMOMHULD 20MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "98612",
+"prk_naam": "ATORVASTATINE TABLET 20MG",
 "atc": "C10AA05"
 },
 {
@@ -626,16 +616,6 @@
 "atc": "L04AX01"
 },
 {
-"zi": "17355583",
-"naam": "AZELASTINE/FLUTICAS SDZ NEUSSP 137/50MCG/DO FL120D",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "122939",
-"prk_naam": "AZELASTINE/FLUTICASON NEUSSPRAY 137/50UG/DO 120 DO",
-"atc": "R01AD58"
-},
-{
 "zi": "17376602",
 "naam": "AZELASTINE/FLUTICAS VIA NEUSSP 137/50MCG/DO FL120D",
 "status": "",
@@ -644,16 +624,6 @@
 "prk": "122939",
 "prk_naam": "AZELASTINE/FLUTICASON NEUSSPRAY 137/50UG/DO 120 DO",
 "atc": "R01AD58"
-},
-{
-"zi": "16951239",
-"naam": "BAQSIMI NEUSPOEDER 3MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "205079",
-"prk_naam": "GLUCAGON NEUSPOEDER 3MG",
-"atc": "H04AA01"
 },
 {
 "zi": "15500373",
@@ -676,16 +646,6 @@
 "atc": "L02BB03"
 },
 {
-"zi": "15860353",
-"naam": "BISOPROLOLFUMARAAT ACCORD TABLET FILMOMHULD 10MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "25542",
-"prk_naam": "BISOPROLOL TABLET  10MG",
-"atc": "C07AB07"
-},
-{
 "zi": "17337259",
 "naam": "BOSUTINIB CF TABLET FILMOMHULD 400MG",
 "status": "",
@@ -696,6 +656,16 @@
 "atc": "L01EA04"
 },
 {
+"zi": "17437172",
+"naam": "BRIVARACETAM XIROMED TABLET FILMOMHULD 50MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "131962",
+"prk_naam": "BRIVARACETAM TABLET  50MG",
+"atc": "N03AX23"
+},
+{
 "zi": "15824373",
 "naam": "BUDESONIDE SANDOZ VERNEVELSUSP 0,25MG/ML AMP 2ML",
 "status": "",
@@ -703,16 +673,6 @@
 "opmerking": "",
 "prk": "34452",
 "prk_naam": "BUDESONIDE VERNEVELVLST 0,25MG/ML PATR 2ML",
-"atc": "R03BA02"
-},
-{
-"zi": "15824365",
-"naam": "BUDESONIDE SANDOZ VERNEVELSUSP 0,5MG/ML AMP 2ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "35424",
-"prk_naam": "BUDESONIDE VERNEVELVLST 0,5MG/ML PATR 2ML",
 "atc": "R03BA02"
 },
 {
@@ -736,14 +696,14 @@
 "atc": "N07BC01"
 },
 {
-"zi": "15548848",
-"naam": "BUPRENORFINE MYLAN TABLET SUBLINGUAAL 8MG",
+"zi": "16212959",
+"naam": "BUPRENORFINE TEVA PLEISTER TRANSDERM 52,5MCG/UUR",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "80292",
-"prk_naam": "BUPRENORFINE TABLET SUBLINGUAAL 8MG",
-"atc": "N07BC01"
+"prk": "228982",
+"prk_naam": "BUPRENORFINE PLEISTER 52,5UG/UUR 4 DAGEN",
+"atc": "N02AE01"
 },
 {
 "zi": "16373855",
@@ -846,16 +806,6 @@
 "atc": "C09CA06"
 },
 {
-"zi": "15759350",
-"naam": "CAPTOPRIL MYLAN TABLET 50MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "16063",
-"prk_naam": "CAPTOPRIL TABLET 50MG",
-"atc": "C09AA01"
-},
-{
 "zi": "16605756",
 "naam": "CARBIDOPA/LEVODOPA FAIR-MED 110 TABLET 10/100MG",
 "status": "",
@@ -896,16 +846,6 @@
 "atc": "S01ED05"
 },
 {
-"zi": "15155765",
-"naam": "CARVEDILOL SANDOZ TABLET  6,25MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "47864",
-"prk_naam": "CARVEDILOL TABLET  6,25MG",
-"atc": "C07AG02"
-},
-{
 "zi": "14649233",
 "naam": "CELEBREX CAPSULE 100MG",
 "status": "",
@@ -913,16 +853,6 @@
 "opmerking": "",
 "prk": "58998",
 "prk_naam": "CELECOXIB CAPSULE 100MG",
-"atc": "M01AH01"
-},
-{
-"zi": "17271444",
-"naam": "CELECOXIB KRKA CAPSULE 200MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "59005",
-"prk_naam": "CELECOXIB CAPSULE 200MG",
 "atc": "M01AH01"
 },
 {
@@ -936,6 +866,26 @@
 "atc": "M01AH01"
 },
 {
+"zi": "14965488",
+"naam": "CERTICAN DISPER TABLET 0,25MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "75078",
+"prk_naam": "EVEROLIMUS DISPERTABLET 0,25MG",
+"atc": "L04AH02"
+},
+{
+"zi": "14965461",
+"naam": "CERTICAN TABLET 0,75MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "75094",
+"prk_naam": "EVEROLIMUS TABLET  0,75MG",
+"atc": "L04AH02"
+},
+{
 "zi": "15775895",
 "naam": "CETURA TABLET 0,5MG",
 "status": "",
@@ -946,16 +896,6 @@
 "atc": "G03CA03"
 },
 {
-"zi": "17393965",
-"naam": "CHLOORTALIDON GLENMARK TABLET 12,5MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "75132",
-"prk_naam": "CHLOORTALIDON TABLET 12,5MG",
-"atc": "C03BA04"
-},
-{
 "zi": "17307716",
 "naam": "CICLESONIDE SDZ AEROSOL 80MCG/DO SPBS 120DO + INH",
 "status": "",
@@ -964,6 +904,16 @@
 "prk": "87041",
 "prk_naam": "CICLESONIDE AEROSOL  80UG/DO 120DO INH",
 "atc": "R03BA08"
+},
+{
+"zi": "16981146",
+"naam": "CICLOSPORINE TEVA CAPSULE  25MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "96245",
+"prk_naam": "CICLOSPORINE CAPSULE ZACHT  25MG",
+"atc": "L04AD01"
 },
 {
 "zi": "14879794",
@@ -1006,16 +956,6 @@
 "atc": "J01MA02"
 },
 {
-"zi": "15419401",
-"naam": "CITALOPRAM CF TABLET OMHULD 10MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "61077",
-"prk_naam": "CITALOPRAM TABLET OMHULD 10MG",
-"atc": "N06AB04"
-},
-{
 "zi": "14881497",
 "naam": "CITALOPRAM MYLAN TABLET OMHULD 20MG",
 "status": "",
@@ -1033,6 +973,16 @@
 "opmerking": "",
 "prk": "44083",
 "prk_naam": "CITALOPRAM TABLET OMHULD 20MG",
+"atc": "N06AB04"
+},
+{
+"zi": "14881500",
+"naam": "CITALOPRAM MYLAN TABLET OMHULD 40MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "44091",
+"prk_naam": "CITALOPRAM TABLET OMHULD 40MG",
 "atc": "N06AB04"
 },
 {
@@ -1056,26 +1006,6 @@
 "atc": "J01FA09"
 },
 {
-"zi": "14997118",
-"naam": "CLARITROMYCINE SANDOZ GRAN V SUSPENSIE 250MG/5ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "47333",
-"prk_naam": "CLARITROMYCINE SUSP ORAAL 50MG/ML",
-"atc": "J01FA09"
-},
-{
-"zi": "15410226",
-"naam": "CLINDAMYCINE KABI INJVLST 150MG/ML AMPUL 4ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "4707",
-"prk_naam": "CLINDAMYCINE INJVLST 150MG/ML AMP 4ML",
-"atc": "J01FF01"
-},
-{
 "zi": "17286093",
 "naam": "CLOBAZAM AUROBINDO TABLET 20MG",
 "status": "",
@@ -1084,6 +1014,16 @@
 "prk": "17124",
 "prk_naam": "CLOBAZAM TABLET 20MG",
 "atc": "N05BA09"
+},
+{
+"zi": "15759296",
+"naam": "CLOMIPRAMINE HCL MYLAN TABLET OMHULD 25MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "38873",
+"prk_naam": "CLOMIPRAMINE TABLET OMHULD 25MG",
+"atc": "N06AA04"
 },
 {
 "zi": "17139988",
@@ -1146,16 +1086,6 @@
 "atc": "C09DA04"
 },
 {
-"zi": "15584801",
-"naam": "COMBODART CAPSULE 0,5/0,4MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "93661",
-"prk_naam": "DUTASTERIDE/TAMSULOSINE CAPSULE 0,5/0,4MG",
-"atc": "G04CA52"
-},
-{
 "zi": "13184946",
 "naam": "CONDYLINE APPLICATIEVLOEISTOF 5MG/ML",
 "status": "",
@@ -1206,14 +1136,14 @@
 "atc": "H03AA02"
 },
 {
-"zi": "16869737",
-"naam": "DAILIPORT CAPSULE MVA 5MG",
+"zi": "15654974",
+"naam": "CYTOMEL TABLET 25MCG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "96172",
-"prk_naam": "TACROLIMUS CAPSULE MGA 5MG (DAILIP/ADVAGR/GENER)",
-"atc": "L04AD02"
+"prk": "4634",
+"prk_naam": "LIOTHYRONINE TABLET 25UG (ALS NA-ZOUT)",
+"atc": "H03AA02"
 },
 {
 "zi": "17110130",
@@ -1246,21 +1176,11 @@
 "atc": "J05AE10"
 },
 {
-"zi": "13533738",
-"naam": "DECAPEPTYL CR FERRING INJPDR 3,75MG WWSP+SOLV 1ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "70084",
-"prk_naam": "TRIPTORELINE (ACETAAT) INJECTIEPOEDER WWSP 3,75MG",
-"atc": "L02AE04"
-},
-{
 "zi": "17260345",
 "naam": "DEFERASIROX AMAROX TABLET FILMOMHULD 360MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 43",
+"opmerking": "Week 47",
 "prk": "137200",
 "prk_naam": "DEFERASIROX TABLET 360MG",
 "atc": "V03AC03"
@@ -1276,14 +1196,14 @@
 "atc": "V03AC03"
 },
 {
-"zi": "15071103",
-"naam": "DEPAKINE CHRONOSPHERE GRANULAAT MGA  100MG IN SACH",
+"zi": "17038812",
+"naam": "DEFERASIROX TEVA TABLET FILMOMHULD 180MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "79634",
-"prk_naam": "VALPROINEZUUR GRANULAAT MGA  100MG (ZUUR+NA-ZOUT)",
-"atc": "N03AG01"
+"prk": "137197",
+"prk_naam": "DEFERASIROX TABLET 180MG",
+"atc": "V03AC03"
 },
 {
 "zi": "15071111",
@@ -1356,16 +1276,6 @@
 "atc": "M01AB05"
 },
 {
-"zi": "17387876",
-"naam": "DIMETHYLFUMARAAT ACCORD CAPSULE MSR 120MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "117870",
-"prk_naam": "DIMETHYLFUMARAAT CAPSULE MSR 120MG",
-"atc": "L04AX07"
-},
-{
 "zi": "16135008",
 "naam": "DIPENTUM TABLET 500MG",
 "status": "",
@@ -1374,16 +1284,6 @@
 "prk": "32697",
 "prk_naam": "OLSALAZINE TABLET 500MG",
 "atc": "A07EC03"
-},
-{
-"zi": "12116181",
-"naam": "DIPROSONE CREME 0,5MG/G",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "2933",
-"prk_naam": "BETAMETHASON CREME 0,5MG/G",
-"atc": "D07AC01"
 },
 {
 "zi": "12116289",
@@ -1406,21 +1306,21 @@
 "atc": "B01AC07"
 },
 {
-"zi": "16931580",
-"naam": "DORZO/TIM STULLN OOGD 20/5MG/ML Z CONS MINIM 0,3ML",
+"zi": "13870610",
+"naam": "DOSTINEX TABLET 0,5MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "213977",
-"prk_naam": "TIMOLOL/DORZOLAMIDE OOGDR 5/20MG/ML M 0,3ML Z BENZ",
-"atc": "S01ED51"
+"prk": "37206",
+"prk_naam": "CABERGOLINE TABLET 0,5MG",
+"atc": "G02CB03"
 },
 {
 "zi": "17334764",
 "naam": "DOXYCYCLINE ADDIMED INJVLST 20MG/ML AMPUL 5ML",
 "status": "",
 "preferent": [],
-"opmerking": "",
+"opmerking": "Dit product is op dit moment uit de handel.",
 "prk": "612",
 "prk_naam": "DOXYCYCLINE INJVLST 20MG/ML AMP 5ML",
 "atc": "J01AA02"
@@ -1473,6 +1373,26 @@
 "opmerking": "Is GDS verp. Niet pref. 16175085 is pref. en beschikbaar",
 "prk": "79065",
 "prk_naam": "DULOXETINE CAPSULE MSR 60MG",
+"atc": "N06AX21"
+},
+{
+"zi": "16775430",
+"naam": "DULOXETINE TEVA CAPSULE MSR 60MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "79065",
+"prk_naam": "DULOXETINE CAPSULE MSR 60MG",
+"atc": "N06AX21"
+},
+{
+"zi": "16827414",
+"naam": "DULOXETINE VIATRIS CAPSULE MSR 30MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "79057",
+"prk_naam": "DULOXETINE CAPSULE MSR 30MG",
 "atc": "N06AX21"
 },
 {
@@ -1536,24 +1456,34 @@
 "atc": "N02AB03"
 },
 {
-"zi": "17086000",
-"naam": "ELVANSE CAPSULE 40MG",
+"zi": "15868168",
+"naam": "EKLIRA GENUAIR INHALPDR 322MCG 60DO",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "213535",
-"prk_naam": "LISDEXAMFETAMINE CAPSULE 40MG",
-"atc": "N06BA12"
+"prk": "104787",
+"prk_naam": "ACLIDINIUM INHALATIEPOEDER 322UG/DO FL 60DO INH",
+"atc": "R03BB05"
 },
 {
-"zi": "16815408",
-"naam": "ELVANSE CAPSULE 70MG",
+"zi": "15804046",
+"naam": "ELIQUIS TABLET FILMOMHULD 5MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "198412",
-"prk_naam": "LISDEXAMFETAMINE CAPSULE 70MG",
-"atc": "N06BA12"
+"prk": "105678",
+"prk_naam": "APIXABAN TABLET 5MG",
+"atc": "B01AF02"
+},
+{
+"zi": "16089332",
+"naam": "ELIQUIS TABLET FILMOMHULD 5MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "105678",
+"prk_naam": "APIXABAN TABLET 5MG",
+"atc": "B01AF02"
 },
 {
 "zi": "14721902",
@@ -1596,6 +1526,16 @@
 "atc": "C09AA02"
 },
 {
+"zi": "14327112",
+"naam": "ENALAPRIL MALEAAT VIATRIS TABLET  5MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "23698",
+"prk_naam": "ENALAPRIL TABLET  5MG",
+"atc": "C09AA02"
+},
+{
 "zi": "15450813",
 "naam": "ENALAPRIL MALEAAT VIATRIS TABLET  5MG",
 "status": "",
@@ -1616,21 +1556,21 @@
 "atc": "C09AA02"
 },
 {
-"zi": "15825558",
-"naam": "ENTACAPONE TEVA TABLET FILMOMHULD 200MG",
+"zi": "16636562",
+"naam": "ENTECAVIR ACCORD TABLET FILMOMHULD 0,5MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "52035",
-"prk_naam": "ENTACAPON TABLET FO 200MG",
-"atc": "N04BX02"
+"prk": "81388",
+"prk_naam": "ENTECAVIR TABLET 0,5MG",
+"atc": "J05AF10"
 },
 {
 "zi": "16922417",
 "naam": "ENTECAVIR AMAROX TABLET FILMOMHULD 0,5MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 50",
+"opmerking": "Week 10 2027",
 "prk": "81388",
 "prk_naam": "ENTECAVIR TABLET 0,5MG",
 "atc": "J05AF10"
@@ -1640,7 +1580,7 @@
 "naam": "ENTECAVIR AMAROX TABLET FILMOMHULD 1MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 50",
+"opmerking": "Week 10 2027",
 "prk": "81396",
 "prk_naam": "ENTECAVIR TABLET 1MG",
 "atc": "J05AF10"
@@ -1648,6 +1588,26 @@
 {
 "zi": "16592190",
 "naam": "ENTECAVIR AUROBINDO TABLET FILMOMHULD 0,5MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "81388",
+"prk_naam": "ENTECAVIR TABLET 0,5MG",
+"atc": "J05AF10"
+},
+{
+"zi": "16550862",
+"naam": "ENTECAVIR GLENMARK TABLET FILMOMHULD 0,5MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "81388",
+"prk_naam": "ENTECAVIR TABLET 0,5MG",
+"atc": "J05AF10"
+},
+{
+"zi": "16374347",
+"naam": "ENTECAVIR TEVA TABLET FILMOMHULD 0,5MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
@@ -1664,16 +1624,6 @@
 "prk": "81388",
 "prk_naam": "ENTECAVIR TABLET 0,5MG",
 "atc": "J05AF10"
-},
-{
-"zi": "15348768",
-"naam": "EPIPEN INJVLST 1MG/ML PEN 0,3ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "145262",
-"prk_naam": "ADRENALINE INJVLST PEN 0,3MG=0,3ML (1MG/ML)",
-"atc": "C01CA24"
 },
 {
 "zi": "16189868",
@@ -1716,14 +1666,34 @@
 "atc": "C03DA04"
 },
 {
-"zi": "15600033",
-"naam": "EQUASYM XL CAPSULE MGA 10MG",
+"zi": "16152417",
+"naam": "EPLERENON MYLAN TABLET FILMOMHULD 25MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "82228",
-"prk_naam": "METHYLFENIDAAT CAPSULE MGA 10MG",
-"atc": "N06BA04"
+"prk": "73431",
+"prk_naam": "EPLERENON TABLET 25MG",
+"atc": "C03DA04"
+},
+{
+"zi": "17241456",
+"naam": "EPLERENON VIVANTA TABLET FILMOMHULD 50MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "73458",
+"prk_naam": "EPLERENON TABLET 50MG",
+"atc": "C03DA04"
+},
+{
+"zi": "15248003",
+"naam": "ERBITUX INFVLST 5MG/ML FLACON  20ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "83275",
+"prk_naam": "CETUXIMAB INFVLST 5MG/ML FL 20ML",
+"atc": "L01FE01"
 },
 {
 "zi": "15324788",
@@ -1756,6 +1726,26 @@
 "atc": "N06AB10"
 },
 {
+"zi": "13674811",
+"naam": "ESKAZOLE TABLET 400MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "35300",
+"prk_naam": "ALBENDAZOL TABLET 400MG",
+"atc": "P02CA03"
+},
+{
+"zi": "16193415",
+"naam": "ESOMEPRAZOL ARISTO CAPSULE MSR 40MG",
+"status": "",
+"preferent": [],
+"opmerking": "Beschikbaar",
+"prk": "94870",
+"prk_naam": "ESOMEPRAZOL CAPSULE MSR 40MG",
+"atc": "A02BC05"
+},
+{
 "zi": "15623955",
 "naam": "ESOMEPRAZOL PCH CAPSULE MSR 20MG",
 "status": "",
@@ -1776,7 +1766,7 @@
 "atc": "A02BC05"
 },
 {
-"zi": "15624005",
+"zi": "15623971",
 "naam": "ESOMEPRAZOL PCH CAPSULE MSR 40MG",
 "status": "",
 "preferent": [],
@@ -1810,7 +1800,7 @@
 "naam": "ESOMEPRAZOL SUN CAPSULE MSR 20MG",
 "status": "",
 "preferent": [],
-"opmerking": "Geen nieuwe batch voor week 52; tabletten wel beschikbaar ZI 16751639;",
+"opmerking": "Geen nieuwe batch voor week 52;",
 "prk": "94862",
 "prk_naam": "ESOMEPRAZOL CAPSULE MSR 20MG",
 "atc": "A02BC05"
@@ -1823,6 +1813,26 @@
 "opmerking": "Geen nieuwe batch voor week 52; tabletten wel beschikbaar ZI 16751647",
 "prk": "94870",
 "prk_naam": "ESOMEPRAZOL CAPSULE MSR 40MG",
+"atc": "A02BC05"
+},
+{
+"zi": "17349923",
+"naam": "ESOMEPRAZOL SUN PHARMA INJECTIEPOEDER FLACON 40MG",
+"status": "",
+"preferent": [],
+"opmerking": "Beschikbaar",
+"prk": "100137",
+"prk_naam": "ESOMEPRAZOL PDR INJ/INFOPL 40MG FL",
+"atc": "A02BC05"
+},
+{
+"zi": "16751639",
+"naam": "ESOMEPRAZOL SUN TABLET MSR 20MG",
+"status": "",
+"preferent": [],
+"opmerking": "Geen nieuwe batch voor week 52;",
+"prk": "57851",
+"prk_naam": "ESOMEPRAZOL TABLET MSR 20MG",
 "atc": "A02BC05"
 },
 {
@@ -1876,16 +1886,6 @@
 "atc": "L01CB01"
 },
 {
-"zi": "17132126",
-"naam": "ETOPOSIDE HIKMA INFVLST CONC 20MG/ML FL 10ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "39381",
-"prk_naam": "ETOPOSIDE INFOPL CONC 20MG/ML FL 10ML",
-"atc": "L01CB01"
-},
-{
 "zi": "16531760",
 "naam": "ETORICOXIB AUROBINDO TABLET FILMOMHULD  90MG",
 "status": "",
@@ -1926,16 +1926,6 @@
 "atc": "M01AH05"
 },
 {
-"zi": "16311051",
-"naam": "ETORICOXIB TEVA TABLET FILMOMHULD  60MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "66745",
-"prk_naam": "ETORICOXIB TABLET FO  60MG",
-"atc": "M01AH05"
-},
-{
 "zi": "16311078",
 "naam": "ETORICOXIB TEVA TABLET FILMOMHULD  90MG",
 "status": "",
@@ -1954,6 +1944,26 @@
 "prk": "85766",
 "prk_naam": "ETORICOXIB TABLET FO  30MG",
 "atc": "M01AH05"
+},
+{
+"zi": "15768864",
+"naam": "EVIPLERA TABLET FILMOMHULD",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "146552",
+"prk_naam": "EMTRICITABINE/RILPI/TENOFOVIRDISO TAB 200/25/245MG",
+"atc": "J05AR08"
+},
+{
+"zi": "15698114",
+"naam": "EXEMESTAAN MYLAN TABLET FILMOMHULD 25MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "54917",
+"prk_naam": "EXEMESTAAN TABLET OMHULD 25MG",
+"atc": "L02BG06"
 },
 {
 "zi": "16782224",
@@ -2036,26 +2046,6 @@
 "atc": "A02BA03"
 },
 {
-"zi": "14562553",
-"naam": "FAMOTIDINE CF TABLET 20MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "24252",
-"prk_naam": "FAMOTIDINE TABLET 20MG",
-"atc": "A02BA03"
-},
-{
-"zi": "17476267",
-"naam": "FAMPRIDINE TEVA TABLET MVA 10MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "101826",
-"prk_naam": "FAMPRIDINE TABLET MGA 10MG",
-"atc": "N07XX07"
-},
-{
 "zi": "16751345",
 "naam": "FEBUXOSTAT TEVA TABLET FILMOMHULD 120MG",
 "status": "",
@@ -2086,16 +2076,6 @@
 "atc": "N03AA02"
 },
 {
-"zi": "15920348",
-"naam": "FENTANYL MATRIX VIATRIS PLEISTER 25MCG/UUR",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "225746",
-"prk_naam": "FENTANYL PLEISTER 25 UG/UUR",
-"atc": "N02AB03"
-},
-{
 "zi": "15704866",
 "naam": "FENTANYL TEVA PLEISTER  12MCG/UUR",
 "status": "",
@@ -2120,7 +2100,7 @@
 "naam": "FEXOFENADINE HCL AMAROX TABLET OMHULD 120MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 43",
+"opmerking": "Week 47",
 "prk": "48739",
 "prk_naam": "FEXOFENADINE TABLET OMHULD 120MG",
 "atc": "R06AX26"
@@ -2130,7 +2110,7 @@
 "naam": "FEXOFENADINE HCL AMAROX TABLET OMHULD 180MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 43",
+"opmerking": "Beschikbaar",
 "prk": "48747",
 "prk_naam": "FEXOFENADINE TABLET OMHULD 180MG",
 "atc": "R06AX26"
@@ -2206,6 +2186,16 @@
 "atc": "S01ED51"
 },
 {
+"zi": "17271665",
+"naam": "FINASTERIDE ACCORD TABLET FILMOMHULD 1MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "212202",
+"prk_naam": "FINASTERIDE TABLET 1MG",
+"atc": "D11AX10"
+},
+{
 "zi": "16409434",
 "naam": "FINASTERIDE AUROBINDO TABLET FILMOMHULD 1MG",
 "status": "",
@@ -2256,6 +2246,16 @@
 "atc": "C01BC04"
 },
 {
+"zi": "15450805",
+"naam": "FLECAINIDEACETAAT MYLAN TABLET  50MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "38253",
+"prk_naam": "FLECAINIDE TABLET  50MG",
+"atc": "C01BC04"
+},
+{
 "zi": "14832380",
 "naam": "FLECAINIDEACETAAT MYLAN TABLET 100MG",
 "status": "",
@@ -2286,16 +2286,6 @@
 "atc": "J02AC01"
 },
 {
-"zi": "17187915",
-"naam": "FLUDRACE TABLET 31,25MCG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "135623",
-"prk_naam": "FLUDROCORTISON TABLET 31,25UG",
-"atc": "H02AA02"
-},
-{
 "zi": "14213222",
 "naam": "FLUNITRAZEPAM TEVA TABLET 2MG",
 "status": "",
@@ -2324,26 +2314,6 @@
 "prk": "28444",
 "prk_naam": "FLUOXETINE CAPSULE 20MG",
 "atc": "N06AB03"
-},
-{
-"zi": "15373363",
-"naam": "FLUVASTATINE PCH CAPSULE 40MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "39144",
-"prk_naam": "FLUVASTATINE CAPSULE 40MG",
-"atc": "C10AA04"
-},
-{
-"zi": "14850885",
-"naam": "FLUVOXAMINE MALEAAT MYLAN TABLET  50MG",
-"status": "U",
-"preferent": [],
-"opmerking": "",
-"prk": "42013",
-"prk_naam": "FLUVOXAMINE TABLET   50MG",
-"atc": "N06AB08"
 },
 {
 "zi": "17351782",
@@ -2436,14 +2406,14 @@
 "atc": "N02CC07"
 },
 {
-"zi": "17029015",
-"naam": "FULVESTRANT ACCORD INJVLST 50MG/ML WWSP 5ML",
+"zi": "12121592",
+"naam": "FUNGIZONE POEDER AD PERFUSIONEM FLACON 50MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "74934",
-"prk_naam": "FULVESTRANT INJVLST WWSP 250MG=5ML (50MG/ML)",
-"atc": "L02BA03"
+"prk": "1058",
+"prk_naam": "AMFOTERICINE B INFUSIEPOEDER  50MG FL",
+"atc": "J02AA01"
 },
 {
 "zi": "12337528",
@@ -2473,6 +2443,16 @@
 "opmerking": "Niet preferent",
 "prk": "52817",
 "prk_naam": "GABAPENTINE CAPSULE 100MG",
+"atc": "N02BF01"
+},
+{
+"zi": "16592069",
+"naam": "GABAPENTINE AUROBINDO CAPSULE 300MG",
+"status": "",
+"preferent": [],
+"opmerking": "Niet preferent. Beschikbaar",
+"prk": "52825",
+"prk_naam": "GABAPENTINE CAPSULE 300MG",
 "atc": "N02BF01"
 },
 {
@@ -2546,16 +2526,6 @@
 "atc": "L01BC05"
 },
 {
-"zi": "14029758",
-"naam": "GENTAMICINE CF INJVLST 10MG/ML AMPUL   2ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "1074",
-"prk_naam": "GENTAMICINE INJVLST 10MG/ML AMP 2ML",
-"atc": "J01GB03"
-},
-{
 "zi": "14029782",
 "naam": "GENTAMICINE CF INJVLST 40MG/ML AMPUL   2ML",
 "status": "",
@@ -2586,14 +2556,14 @@
 "atc": "N04BC05"
 },
 {
-"zi": "15670635",
-"naam": "GLEPARK TABLET 1MG (0,7MG BASE)",
+"zi": "14846640",
+"naam": "GLICLAZIDE MYLAN RETARD TABLET MGA 80MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "49433",
-"prk_naam": "PRAMIPEXOL TABLET 1MG (0,7MG BASE)",
-"atc": "N04BC05"
+"prk": "2992",
+"prk_naam": "GLICLAZIDE TABLET MGA 80MG",
+"atc": "A10BB09"
 },
 {
 "zi": "16253914",
@@ -2606,16 +2576,6 @@
 "atc": "A10BB12"
 },
 {
-"zi": "16253949",
-"naam": "GLIMEPIRIDE ACCORD TABLET 4MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "44466",
-"prk_naam": "GLIMEPIRIDE TABLET 4MG",
-"atc": "A10BB12"
-},
-{
 "zi": "15364399",
 "naam": "GLIMEPIRIDE SANDOZ TABLET 2MG",
 "status": "",
@@ -2623,6 +2583,16 @@
 "opmerking": "",
 "prk": "44431",
 "prk_naam": "GLIMEPIRIDE TABLET 2MG",
+"atc": "A10BB12"
+},
+{
+"zi": "15364429",
+"naam": "GLIMEPIRIDE SANDOZ TABLET 4MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "44466",
+"prk_naam": "GLIMEPIRIDE TABLET 4MG",
 "atc": "A10BB12"
 },
 {
@@ -2656,6 +2626,16 @@
 "atc": "N05AD01"
 },
 {
+"zi": "14051397",
+"naam": "HALOPERIDOL CF TABLET  5MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "5576",
+"prk_naam": "HALOPERIDOL TABLET  5MG",
+"atc": "N05AD01"
+},
+{
 "zi": "14880105",
 "naam": "HALOPERIDOL CF TABLET  5MG",
 "status": "",
@@ -2674,6 +2654,26 @@
 "prk": "14826",
 "prk_naam": "IFOSFAMIDE INJECTIEPOEDER 2G FL",
 "atc": "L01AA06"
+},
+{
+"zi": "14002221",
+"naam": "HUMALOG INJVLST 100E/ML FLACON 10ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "65838",
+"prk_naam": "INSULINE LISPRO 100E/ML INJVLST FL 10ML",
+"atc": "A10AB04"
+},
+{
+"zi": "14125226",
+"naam": "HUMALOG INJVLST 100E/ML PATROON   3ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "65846",
+"prk_naam": "INSULINE LISPRO 100E/ML INJVLST PATR 3ML",
+"atc": "A10AB04"
 },
 {
 "zi": "15838579",
@@ -2736,6 +2736,16 @@
 "atc": "M05BA06"
 },
 {
+"zi": "17305195",
+"naam": "IJZER(III)CARBOXYMALTOSE TEVA INJV 50MG/ML FL 20ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "115088",
+"prk_naam": "FERRICARBOXYMALTOSE INJVLST 50MGFE/ML FL 20ML",
+"atc": "B03AC"
+},
+{
 "zi": "17095859",
 "naam": "IJZER(III)CARBOXYMALTOSE VIA INJV 50MG/ML FL 20ML",
 "status": "",
@@ -2766,26 +2776,6 @@
 "atc": "N02CC01"
 },
 {
-"zi": "13784129",
-"naam": "IMIGRAN INJVLST 12MG/ML PENFILLPATR 0,5ML+GLAXOPEN",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "62359",
-"prk_naam": "SUMATRIPTAN INJVLST 12MG/ML PAT 0,5ML+PEN",
-"atc": "N02CC01"
-},
-{
-"zi": "14266377",
-"naam": "IMPLANON NXT IMPLANTAAT IN APPLICATOR 68MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "52353",
-"prk_naam": "ETONOGESTREL IMPLANTAAT 68MG APPL",
-"atc": "G03AC08"
-},
-{
 "zi": "14009331",
 "naam": "INDOMETACINE CF ZETPIL  50MG",
 "status": "",
@@ -2804,6 +2794,16 @@
 "prk": "5789",
 "prk_naam": "INDOMETACINE ZETPIL 100MG",
 "atc": "M01AB01"
+},
+{
+"zi": "17460956",
+"naam": "INFLUVAC INJSUSP 2026/2027 WWSP 0,5ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "240192",
+"prk_naam": "INFLUENZAVACCIN 2026/2027 SUBUNIT WWSP 0,5ML",
+"atc": "J07BB02"
 },
 {
 "zi": "14316900",
@@ -2826,16 +2826,6 @@
 "atc": "B05BB01"
 },
 {
-"zi": "17122813",
-"naam": "INJEXATE INJVLST 10MG/0,2ML (50MG/ML) INJECTOR",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "141437",
-"prk_naam": "METHOTREXAAT INJ PEN 10MG=0,2ML (50MG/ML)",
-"atc": "L04AX03"
-},
-{
 "zi": "17122821",
 "naam": "INJEXATE INJVLST 17,5MG/0,35ML (50MG/ML) INJECTOR",
 "status": "",
@@ -2856,34 +2846,34 @@
 "atc": "L04AX03"
 },
 {
-"zi": "17132010",
-"naam": "INJEXATE INJVLST 25MG/0,5ML (50MG/ML) INJECTOR",
+"zi": "14161907",
+"naam": "INNOHEP INJVLST 20000 IE/ML WWSP 0,5ML",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "141518",
-"prk_naam": "METHOTREXAAT INJ PEN 25MG=0,5ML (50MG/ML)",
-"atc": "L04AX03"
+"prk": "49247",
+"prk_naam": "TINZAPARINE INJVL WWSP 10000IE=0,5ML (20.000IE/ML)",
+"atc": "B01AB10"
 },
 {
-"zi": "15768902",
-"naam": "INOVELON SUSPENSIE 40MG/ML",
+"zi": "14161915",
+"naam": "INNOHEP INJVLST 20000 IE/ML WWSP 0,7ML",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "101222",
-"prk_naam": "RUFINAMIDE SUSP ORAAL 40MG/ML",
-"atc": "N03AF03"
+"prk": "49255",
+"prk_naam": "TINZAPARINE INJVL WWSP 14000IE=0,7ML (20.000IE/ML)",
+"atc": "B01AB10"
 },
 {
-"zi": "14931583",
-"naam": "INSPRA TABLET 50MG",
+"zi": "14161923",
+"naam": "INNOHEP INJVLST 20000 IE/ML WWSP 0,9ML",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "73458",
-"prk_naam": "EPLERENON TABLET 50MG",
-"atc": "C03DA04"
+"prk": "49263",
+"prk_naam": "TINZAPARINE INJVL WWSP 18000IE=0,9ML (20.000IE/ML)",
+"atc": "B01AB10"
 },
 {
 "zi": "13968904",
@@ -2910,7 +2900,7 @@
 "naam": "IRBESARTAN SUN TABLET FILMOMHULD  75MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 44",
+"opmerking": "Week 45",
 "prk": "92606",
 "prk_naam": "IRBESARTAN TABLET  75MG",
 "atc": "C09CA04"
@@ -2966,6 +2956,16 @@
 "atc": "D10BA01"
 },
 {
+"zi": "15638243",
+"naam": "JEXT INJVLST 1MG/ML PEN 0,15ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "145440",
+"prk_naam": "ADRENALINE INJVLST PEN 0,15MG=0,15ML (1MG/ML)",
+"atc": "C01CA24"
+},
+{
 "zi": "17404576",
 "naam": "KALIUMLOSARTAN/HCT AUROBINDO TAB FILMOM 100/12,5MG",
 "status": "",
@@ -2984,6 +2984,16 @@
 "prk": "107085",
 "prk_naam": "TRIAMCINOLONACETONIDE INJSUSP 40MG/ML FL 1ML (PAR)",
 "atc": "H02AB08"
+},
+{
+"zi": "14630109",
+"naam": "KESTINE TABLET 10MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "46922",
+"prk_naam": "EBASTINE TABLET OMHULD 10MG",
+"atc": "R06AX22"
 },
 {
 "zi": "17184916",
@@ -3026,16 +3036,6 @@
 "atc": "N03AX18"
 },
 {
-"zi": "17133858",
-"naam": "LACOSAMIDE SANDOZ TABLET FILMOMHULD 150MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "89044",
-"prk_naam": "LACOSAMIDE TABLET 150MG",
-"atc": "N03AX18"
-},
-{
 "zi": "17116775",
 "naam": "LACOSAMIDE TEVA TABLET FILMOMHULD 150MG",
 "status": "",
@@ -3066,24 +3066,14 @@
 "atc": "N03AX09"
 },
 {
-"zi": "15868885",
-"naam": "LAMOTRIGINE MYLAN DISPERS TABLET 200MG",
+"zi": "17010187",
+"naam": "LANTHAAN VIATRIS KAUWTABLET 1000MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "76198",
-"prk_naam": "LAMOTRIGINE DISPERTABLET 200MG",
-"atc": "N03AX09"
-},
-{
-"zi": "15097188",
-"naam": "LANSOPRAZOL MYLAN CAPSULE MSR 30MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "79391",
-"prk_naam": "LANSOPRAZOL CAPSULE MSR 30MG",
-"atc": "A02BC03"
+"prk": "86843",
+"prk_naam": "LANTHAANCARBONAAT KAUWTABLET 1000MG",
+"atc": "V03AE03"
 },
 {
 "zi": "17010160",
@@ -3116,26 +3106,6 @@
 "atc": "L04AK01"
 },
 {
-"zi": "15406156",
-"naam": "LEVODOPA/BENSERAZIDE PCH CAPSULE 100/25MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "91499",
-"prk_naam": "LEVODOPA/BENSERAZIDE CAPSULE 100/25MG",
-"atc": "N04BA02"
-},
-{
-"zi": "15835456",
-"naam": "LEVODOPA/CARBIDOPA MYLAN 125 TABLET 100/25MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "15644",
-"prk_naam": "LEVODOPA/CARBIDOPA TABLET  100/25MG",
-"atc": "N04BA02"
-},
-{
 "zi": "15835464",
 "naam": "LEVODOPA/CARBIDOPA MYLAN 125 TABLET 100/25MG",
 "status": "",
@@ -3154,6 +3124,26 @@
 "prk": "15644",
 "prk_naam": "LEVODOPA/CARBIDOPA TABLET  100/25MG",
 "atc": "N04BA02"
+},
+{
+"zi": "16225104",
+"naam": "LEVODOPA/CARBIDOPA/ENTACAP MYL T F 200/50/200MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "86703",
+"prk_naam": "LEVODOPA/CARBIDOPA/ENTACAPON TABLET 200/50/200MG",
+"atc": "N04BA03"
+},
+{
+"zi": "16052846",
+"naam": "LEVODOPA/CARBIDOPA/ENTACAP TEV T F 100/25/200MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "72699",
+"prk_naam": "LEVODOPA/CARBIDOPA/ENTACAPON TABLET 100/25/200MG",
+"atc": "N04BA03"
 },
 {
 "zi": "16052811",
@@ -3184,6 +3174,26 @@
 "prk": "23469",
 "prk_naam": "LEVOTHYROXINE TABLET 150UG (NATRIUM)",
 "atc": "H03AA01"
+},
+{
+"zi": "16220315",
+"naam": "LIDOCAINE/PRILOCAINE TEVA CREME 25/25MG/G",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "25321",
+"prk_naam": "LIDOCAINE/PRILOCAINE CREME 25/25MG/G",
+"atc": "N01BB20"
+},
+{
+"zi": "14785854",
+"naam": "LIGNOSPAN 2% SPECIAL INJVLST PATROON 1,8ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "145793",
+"prk_naam": "LIDOCAINE/ADRENALINE INJVL 20MG/12,5UG/ML PATR 1,8",
+"atc": "N01BB52"
 },
 {
 "zi": "14857049",
@@ -3246,13 +3256,13 @@
 "atc": "C09AA03"
 },
 {
-"zi": "16164490",
-"naam": "LIXIANA TABLET FILMOMHULD 30MG",
+"zi": "16164482",
+"naam": "LIXIANA TABLET FILMOMHULD 15MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "128198",
-"prk_naam": "EDOXABAN TABLET 30MG",
+"prk": "128171",
+"prk_naam": "EDOXABAN TABLET 15MG",
 "atc": "B01AF03"
 },
 {
@@ -3263,36 +3273,6 @@
 "opmerking": "",
 "prk": "128198",
 "prk_naam": "EDOXABAN TABLET 30MG",
-"atc": "B01AF03"
-},
-{
-"zi": "16164598",
-"naam": "LIXIANA TABLET FILMOMHULD 30MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "128198",
-"prk_naam": "EDOXABAN TABLET 30MG",
-"atc": "B01AF03"
-},
-{
-"zi": "17379733",
-"naam": "LIXIANA TABLET FILMOMHULD 30MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "128198",
-"prk_naam": "EDOXABAN TABLET 30MG",
-"atc": "B01AF03"
-},
-{
-"zi": "16164571",
-"naam": "LIXIANA TABLET FILMOMHULD 60MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "128201",
-"prk_naam": "EDOXABAN TABLET 60MG",
 "atc": "B01AF03"
 },
 {
@@ -3316,6 +3296,26 @@
 "atc": "D07XB01"
 },
 {
+"zi": "12130699",
+"naam": "LOCOID SCALP LOTION 1MG/ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "6076",
+"prk_naam": "HYDROCORTISON-BUTYRAAT OPL CUTAAN 1MG/ML",
+"atc": "D07AB02"
+},
+{
+"zi": "14043459",
+"naam": "LONNOTEN TABLET 10MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "22004",
+"prk_naam": "MINOXIDIL TABLET 10MG",
+"atc": "C02DC01"
+},
+{
 "zi": "16820452",
 "naam": "LOPINAVIR/RITONAVIR VIATRIS TABLET FILMOM 200/50MG",
 "status": "",
@@ -3326,6 +3326,16 @@
 "atc": "J05AR10"
 },
 {
+"zi": "13868802",
+"naam": "LOSFERRON BRUISTABLET 695MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "39942",
+"prk_naam": "FERROGLUCONAAT BRUISTABLET 695MG",
+"atc": "B03AA03"
+},
+{
 "zi": "17265940",
 "naam": "LUMOBRY OOGDRUPPELS 0,25MG/ML FLACON 7,5ML",
 "status": "",
@@ -3334,6 +3344,16 @@
 "prk": "226300",
 "prk_naam": "BRIMONIDINE OOGDRUPPELS 0,25MG/ML FL 7,5ML BENZALK",
 "atc": "S01GA07"
+},
+{
+"zi": "14965895",
+"naam": "LYRICA CAPSULE 150MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "75728",
+"prk_naam": "PREGABALINE CAPSULE 150MG",
+"atc": "N02BF02"
 },
 {
 "zi": "13939882",
@@ -3376,36 +3396,6 @@
 "atc": "J05AX09"
 },
 {
-"zi": "15248917",
-"naam": "MEDIKINET CR CAPSULE MGA 10MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "82228",
-"prk_naam": "METHYLFENIDAAT CAPSULE MGA 10MG",
-"atc": "N06BA04"
-},
-{
-"zi": "15248925",
-"naam": "MEDIKINET CR CAPSULE MGA 20MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "82236",
-"prk_naam": "METHYLFENIDAAT CAPSULE MGA 20MG",
-"atc": "N06BA04"
-},
-{
-"zi": "15248933",
-"naam": "MEDIKINET CR CAPSULE MGA 30MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "82244",
-"prk_naam": "METHYLFENIDAAT CAPSULE MGA 30MG",
-"atc": "N06BA04"
-},
-{
 "zi": "16160169",
 "naam": "METAMIZOL KALCEKS INJVLST 500MG/ML AMPUL 2ML",
 "status": "",
@@ -3414,6 +3404,16 @@
 "prk": "1953",
 "prk_naam": "METAMIZOL INJVLST 500MG/ML AMP 2ML",
 "atc": "N02BB02"
+},
+{
+"zi": "17426421",
+"naam": "METFORMINE HCL AUROBINDO TABLET MVA 500MG",
+"status": "",
+"preferent": [],
+"opmerking": "Niet preferent.",
+"prk": "164836",
+"prk_naam": "METFORMINE TABLET MGA  500MG",
+"atc": "A10BA02"
 },
 {
 "zi": "16909437",
@@ -3434,16 +3434,6 @@
 "prk": "68004",
 "prk_naam": "METHYLFENIDAAT TABLET MGA 18MG",
 "atc": "N06BA04"
-},
-{
-"zi": "15485080",
-"naam": "METOPROLOLTARTRAAT ACCORD TABLET  50MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "3158",
-"prk_naam": "METOPROLOL TABLET   50MG",
-"atc": "C07AB02"
 },
 {
 "zi": "16198581",
@@ -3486,14 +3476,14 @@
 "atc": "C01CE02"
 },
 {
-"zi": "13930656",
-"naam": "MIOSTAT INJECTIEVLOEISTOF 0,1MG/ML FLACON 1,5ML",
+"zi": "13632019",
+"naam": "MINIMS FENYLEFRINE HCL OOGDR 25MG/ML TUBE 0,5ML",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "132438",
-"prk_naam": "CARBACHOL INJVLST 0,1MG/ML FL 1,5ML",
-"atc": "S01EB02"
+"prk": "221600",
+"prk_naam": "FENYLEFRINE OOGDR  25MG/ML MINIM 0,5ML ZONDER BENZ",
+"atc": "S01FB01"
 },
 {
 "zi": "14318423",
@@ -3536,11 +3526,21 @@
 "atc": "R03DC03"
 },
 {
+"zi": "16902394",
+"naam": "MORFINE HCL EXPHARMA TABLET 10MG",
+"status": "",
+"preferent": [],
+"opmerking": "Beschikbaar",
+"prk": "202312",
+"prk_naam": "MORFINE TABLET 10MG (HCL)",
+"atc": "N02AA01"
+},
+{
 "zi": "14655594",
 "naam": "MORFINESULFAAT AUROBINDO RETARD TABLET MGA  10MG",
 "status": "",
 "preferent": [],
-"opmerking": "Niet preferent",
+"opmerking": "Niet preferent. Beschikbaar",
 "prk": "23418",
 "prk_naam": "MORFINE TABLET MGA  10MG (SULFAAT)",
 "atc": "N02AA01"
@@ -3566,14 +3566,24 @@
 "atc": "N02AA01"
 },
 {
-"zi": "15619125",
-"naam": "MYCOFENOLAAT MOFETIL ACCORD TABLET FILMOMH 500MG",
+"zi": "16638891",
+"naam": "MOVENTIG TABLET FILMOMHULD 12,5MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "44369",
-"prk_naam": "MYCOFENOLAAT MOFETIL TABLET 500MG",
-"atc": "L04AA06"
+"prk": "147214",
+"prk_naam": "NALOXEGOL TABLET 12,5MG",
+"atc": "A06AH03"
+},
+{
+"zi": "16638867",
+"naam": "MOVENTIG TABLET FILMOMHULD 25MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "147222",
+"prk_naam": "NALOXEGOL TABLET 25MG",
+"atc": "A06AH03"
 },
 {
 "zi": "15862887",
@@ -3583,6 +3593,16 @@
 "opmerking": "",
 "prk": "41823",
 "prk_naam": "MYCOFENOLAAT MOFETIL CAPSULE 250MG",
+"atc": "L04AA06"
+},
+{
+"zi": "15651789",
+"naam": "MYFENAX TABLET FILMOMHULD 500MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "44369",
+"prk_naam": "MYCOFENOLAAT MOFETIL TABLET 500MG",
 "atc": "L04AA06"
 },
 {
@@ -3663,6 +3683,16 @@
 "opmerking": "",
 "prk": "32441",
 "prk_naam": "NAPROXEN TABLET MSR 500MG",
+"atc": "M01AE02"
+},
+{
+"zi": "15244490",
+"naam": "NAPROXEN MYLAN TABLET 250MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "6378",
+"prk_naam": "NAPROXEN TABLET 250MG",
 "atc": "M01AE02"
 },
 {
@@ -3766,6 +3796,26 @@
 "atc": "B03XA01"
 },
 {
+"zi": "15347877",
+"naam": "NEUPRO PLEISTER 2MG/24UUR",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "230189",
+"prk_naam": "ROTIGOTINE PLEISTER 2MG/24UUR",
+"atc": "N04BC09"
+},
+{
+"zi": "16031474",
+"naam": "NEUPRO PLEISTER 3MG/24UUR",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "230197",
+"prk_naam": "ROTIGOTINE PLEISTER 3MG/24UUR",
+"atc": "N04BC09"
+},
+{
 "zi": "15347931",
 "naam": "NEUPRO PLEISTER 8MG/24UUR",
 "status": "",
@@ -3794,6 +3844,16 @@
 "prk": "99015",
 "prk_naam": "NEVIRAPINE TABLET MGA 400MG",
 "atc": "J05AG01"
+},
+{
+"zi": "14611163",
+"naam": "NEXIUM TABLET MSR 40MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "57878",
+"prk_naam": "ESOMEPRAZOL TABLET MSR 40MG",
+"atc": "A02BC05"
 },
 {
 "zi": "15659399",
@@ -3836,14 +3896,14 @@
 "atc": "C01CA03"
 },
 {
-"zi": "16737415",
-"naam": "NORTRIPTYLINE MILSTEIN TABLET 50MG",
+"zi": "17073723",
+"naam": "NORADRENALINE KABI INFVLS CONC 1MG/ML AMPUL 5ML",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "25623",
-"prk_naam": "NORTRIPTYLINE TABLET 50MG",
-"atc": "N06AA10"
+"prk": "48259",
+"prk_naam": "NORADRENALINE INFOPL CONC 1MG/ML AMP  5ML",
+"atc": "C01CA03"
 },
 {
 "zi": "16799860",
@@ -3906,14 +3966,14 @@
 "atc": "N06AA10"
 },
 {
-"zi": "15563901",
-"naam": "NPLATE INJPDR FLACON 250MCG + SOLV + TOEBEH",
-"status": "",
+"zi": "15563944",
+"naam": "NORVIR TABLET FILMOMHULD 100MG",
+"status": "U",
 "preferent": [],
-"opmerking": "Geen tekorten en/of leveringsproblemen",
-"prk": "92312",
-"prk_naam": "ROMIPLOSTIM INJECTIEPOEDER 250UG FL TOEB",
-"atc": "B02BX04"
+"opmerking": "",
+"prk": "94064",
+"prk_naam": "RITONAVIR TABLET 100MG",
+"atc": "J05AE03"
 },
 {
 "zi": "15563928",
@@ -3976,14 +4036,14 @@
 "atc": "H01CB02"
 },
 {
-"zi": "15854787",
-"naam": "OFLOXACINE POS OOGDRUPPELS 3MG/ML FLACON 5ML",
+"zi": "16279840",
+"naam": "ODEFSEY TABLET FILMOMHULD",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "220582",
-"prk_naam": "OFLOXACINE OOGDRUPPELS 3MG/ML FL 5ML BENZALKONIUM",
-"atc": "S01AE01"
+"prk": "134694",
+"prk_naam": "EMTRICITABINE/RILPI/TENOFOVIRALAF TAB 200/25/25MG",
+"atc": "J05AR19"
 },
 {
 "zi": "15827739",
@@ -4006,13 +4066,23 @@
 "atc": "N05AH03"
 },
 {
-"zi": "15716163",
-"naam": "OLANZAPINE SANDOZ ORODISP TABLET 20MG",
+"zi": "15716139",
+"naam": "OLANZAPINE SANDOZ ORODISP TABLET  5MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "69612",
-"prk_naam": "OLANZAPINE ORODISP TABLET 20MG",
+"prk": "60941",
+"prk_naam": "OLANZAPINE ORODISP TABLET 5MG",
+"atc": "N05AH03"
+},
+{
+"zi": "15718743",
+"naam": "OLANZAPINE SANDOZ TABLET FILMOMHULD  5MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "45543",
+"prk_naam": "OLANZAPINE TABLET  5MG",
 "atc": "N05AH03"
 },
 {
@@ -4073,6 +4143,16 @@
 "opmerking": "Vervanging beschikbaar onder Z-index 17361699 - bekend bij zorgverz.",
 "prk": "45543",
 "prk_naam": "OLANZAPINE TABLET  5MG",
+"atc": "N05AH03"
+},
+{
+"zi": "15723755",
+"naam": "OLANZAPINE VIATRIS TABLET FILMOMHULD 10MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "45578",
+"prk_naam": "OLANZAPINE TABLET 10MG",
 "atc": "N05AH03"
 },
 {
@@ -4146,16 +4226,6 @@
 "atc": "C09DB02"
 },
 {
-"zi": "17080010",
-"naam": "OLMESARTANMEDOXOMIL/AMLODIPINE AUROB T FO 40/10MG",
-"status": "",
-"preferent": [],
-"opmerking": "Beschikbaar",
-"prk": "123749",
-"prk_naam": "OLMESARTAN/AMLODIPINE TABLET 40/10MG",
-"atc": "C09DB02"
-},
-{
 "zi": "17080002",
 "naam": "OLMESARTANMEDOXOMIL/AMLODIPINE AUROB T FO 40/5MG",
 "status": "",
@@ -4176,16 +4246,6 @@
 "atc": "C09DB02"
 },
 {
-"zi": "16636066",
-"naam": "OLMESARTANMEDOXOMIL/AMLODIPINE TEVA TAB FO 40/10MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "123749",
-"prk_naam": "OLMESARTAN/AMLODIPINE TABLET 40/10MG",
-"atc": "C09DB02"
-},
-{
 "zi": "17091160",
 "naam": "OLMESARTANMEDOXOMIL/HCT TEVA TAB FILMOM 40/25MG",
 "status": "",
@@ -4203,26 +4263,6 @@
 "opmerking": "",
 "prk": "25259",
 "prk_naam": "JOHEXOL INJVLST 140MGI/ML FL 200ML",
-"atc": "V08AB02"
-},
-{
-"zi": "14162903",
-"naam": "OMNIPAQUE INJVLST 240MGI/ML FLACON  50ML KUNSTSTOF",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "18465",
-"prk_naam": "JOHEXOL INJVLST 240MGI/ML FL 50ML",
-"atc": "V08AB02"
-},
-{
-"zi": "14938928",
-"naam": "OMNIPAQUE INJVLST 300MGI/ML FLACON 500ML KUNSTSTOF",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "49395",
-"prk_naam": "JOHEXOL INJVLST 300MGI/ML FL 500ML",
 "atc": "V08AB02"
 },
 {
@@ -4274,16 +4314,6 @@
 "prk": "56871",
 "prk_naam": "OXCARBAZEPINE TABLET FO 600MG",
 "atc": "N03AF02"
-},
-{
-"zi": "15724883",
-"naam": "OXYBUTYNINE HCL ACCORD TABLET 5MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "24279",
-"prk_naam": "OXYBUTYNINE TABLET 5MG",
-"atc": "G04BD04"
 },
 {
 "zi": "14289431",
@@ -4386,6 +4416,36 @@
 "atc": "N05AX13"
 },
 {
+"zi": "15193411",
+"naam": "PAMORELIN INJPDR FLACON  3,75MG + SOLVENS 2ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "82554",
+"prk_naam": "TRIPTORELINE PDR V INJSUSP  3,75MG (EMBONAAT) FL",
+"atc": "L02AE04"
+},
+{
+"zi": "15046648",
+"naam": "PAMORELIN INJPDR FLACON 11,25MG + SOLVENS 2ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "77615",
+"prk_naam": "TRIPTORELINE PDR V INJSUSP 11,25MG FL",
+"atc": "L02AE04"
+},
+{
+"zi": "15533212",
+"naam": "PAMORELIN INJPDR FLACON 22,5MG + SOLVENS 2ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "91820",
+"prk_naam": "TRIPTORELINE PDR V INJSUSP 22,5MG FL",
+"atc": "L02AE04"
+},
+{
 "zi": "17332230",
 "naam": "PANTOPRAZOL AMAROX INJPDR FLACON 40MG",
 "status": "",
@@ -4396,21 +4456,21 @@
 "atc": "A02BC02"
 },
 {
-"zi": "17084865",
-"naam": "PAOSONELLE TABLET FILMOMHULD 1/2MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "68748",
-"prk_naam": "ESTRADIOL/DROSPIRENON TABLET FO 1/2MG",
-"atc": "G03FA17"
-},
-{
 "zi": "15627306",
 "naam": "PARACETAMOL MYLAN TABLET 1000MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
+"prk": "81442",
+"prk_naam": "PARACETAMOL TABLET 1000MG",
+"atc": "N02BE01"
+},
+{
+"zi": "16779657",
+"naam": "PARACETAMOL SANIAS TABLET 1000MG",
+"status": "",
+"preferent": [],
+"opmerking": "Niet preferent",
 "prk": "81442",
 "prk_naam": "PARACETAMOL TABLET 1000MG",
 "atc": "N02BE01"
@@ -4433,26 +4493,6 @@
 "opmerking": "",
 "prk": "105740",
 "prk_naam": "PEGINTERFERON ALFA 2A IN SP  90UG=0,5ML (180UG/ML)",
-"atc": "L03AB11"
-},
-{
-"zi": "14753588",
-"naam": "PEGASYS 135 INJVLST 270MCG/ML WWSP 0,5ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "63533",
-"prk_naam": "PEGINTERFERON ALFA 2A IN SP 135UG=0,5ML (270UG/ML)",
-"atc": "L03AB11"
-},
-{
-"zi": "14753596",
-"naam": "PEGASYS 180 INJVLST 360MCG/ML WWSP 0,5ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "63541",
-"prk_naam": "PEGINTERFERON ALFA 2A IN SP 180UG=0,5ML (360UG/ML)",
 "atc": "L03AB11"
 },
 {
@@ -4616,6 +4656,16 @@
 "atc": "H02AB06"
 },
 {
+"zi": "14051702",
+"naam": "PREDNISOLON CF TABLET 5MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "30449",
+"prk_naam": "PREDNISOLON TABLET  5MG",
+"atc": "H02AB06"
+},
+{
 "zi": "16181859",
 "naam": "PREGABALINE ACCORD CAPSULE  75MG",
 "status": "",
@@ -4626,31 +4676,11 @@
 "atc": "N02BF02"
 },
 {
-"zi": "16922506",
-"naam": "PREGABALINE AMAROX CAPSULE 25MG",
+"zi": "16165896",
+"naam": "PREGABALINE AUROBINDO CAPSULE  75MG",
 "status": "",
 "preferent": [],
-"opmerking": "Beschikbaar",
-"prk": "75698",
-"prk_naam": "PREGABALINE CAPSULE  25MG",
-"atc": "N02BF02"
-},
-{
-"zi": "16882253",
-"naam": "PREGABALINE SUN CAPSULE 75MG",
-"status": "",
-"preferent": [],
-"opmerking": "week 44",
-"prk": "75701",
-"prk_naam": "PREGABALINE CAPSULE  75MG",
-"atc": "N02BF02"
-},
-{
-"zi": "16142748",
-"naam": "PREGABALINE TEVA CAPSULE  75MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
+"opmerking": "Niet preferent. Beschikbaar",
 "prk": "75701",
 "prk_naam": "PREGABALINE CAPSULE  75MG",
 "atc": "N02BF02"
@@ -4673,16 +4703,6 @@
 "opmerking": "",
 "prk": "75728",
 "prk_naam": "PREGABALINE CAPSULE 150MG",
-"atc": "N02BF02"
-},
-{
-"zi": "17241332",
-"naam": "PREGABALINE VIVANTA CAPSULE 75MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "75701",
-"prk_naam": "PREGABALINE CAPSULE  75MG",
 "atc": "N02BF02"
 },
 {
@@ -4726,16 +4746,6 @@
 "atc": "N01AX10"
 },
 {
-"zi": "15593479",
-"naam": "PROPRANOLOL HCL ACCORD TABLET 40MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "5711",
-"prk_naam": "PROPRANOLOL TABLET 40MG",
-"atc": "C07AA05"
-},
-{
 "zi": "13659421",
 "naam": "PROSCAR TABLET 5MG",
 "status": "",
@@ -4756,13 +4766,13 @@
 "atc": "G02AD02"
 },
 {
-"zi": "15774201",
-"naam": "QUETIAPINE ACCORD TABLET FILMOMHULD 200MG",
+"zi": "16049012",
+"naam": "QUETIAPINE ACCORD RETARD TABLET MVA  50MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "50776",
-"prk_naam": "QUETIAPINE TABLET FO 200MG",
+"prk": "84182",
+"prk_naam": "QUETIAPINE TABLET MGA  50MG",
 "atc": "N05AH04"
 },
 {
@@ -4790,7 +4800,7 @@
 "naam": "QUETIAPINE AUROBINDO TABLET MVA 200MG",
 "status": "",
 "preferent": [],
-"opmerking": "Niet preferent. Beschikbaar",
+"opmerking": "Niet preferent.",
 "prk": "84190",
 "prk_naam": "QUETIAPINE TABLET MGA 200MG",
 "atc": "N05AH04"
@@ -4826,16 +4836,6 @@
 "atc": "N05AH04"
 },
 {
-"zi": "15772772",
-"naam": "QUETIAPINE MYLAN TABLET FILMOMHULD 100MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "50768",
-"prk_naam": "QUETIAPINE TABLET FO 100MG",
-"atc": "N05AH04"
-},
-{
 "zi": "17441048",
 "naam": "QUETIAPINE TEVA RETARD TABLET MVA 400MG",
 "status": "",
@@ -4853,6 +4853,16 @@
 "opmerking": "",
 "prk": "50741",
 "prk_naam": "QUETIAPINE TABLET FO  25MG",
+"atc": "N05AH04"
+},
+{
+"zi": "15741214",
+"naam": "QUETIAPINE TEVA TABLET FILMOMHULD 300MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "60283",
+"prk_naam": "QUETIAPINE TABLET FO 300MG",
 "atc": "N05AH04"
 },
 {
@@ -4876,14 +4886,14 @@
 "atc": "R03BA01"
 },
 {
-"zi": "15521761",
-"naam": "RAPYDAN MEDICINALE PLEISTER 70MG/70MG",
+"zi": "15787095",
+"naam": "RAMIPRIL MYLAN TABLET  5MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "85456",
-"prk_naam": "LIDOCAINE/TETRACAINE PLEISTER 70/70MG",
-"atc": "N01BB20"
+"prk": "50563",
+"prk_naam": "RAMIPRIL TABLET  5MG",
+"atc": "C09AA05"
 },
 {
 "zi": "15587754",
@@ -4906,11 +4916,21 @@
 "atc": "N07BB01"
 },
 {
+"zi": "15725502",
+"naam": "REMIFENTANIL HCL VIATRIS INJECTIEPOEDER FLACON 2MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "45721",
+"prk_naam": "REMIFENTANIL INJECTIEPOEDER 2MG FL",
+"atc": "N01AH06"
+},
+{
 "zi": "15500659",
 "naam": "REQUIP TABLET OMHULD 0,25MG",
 "status": "",
 "preferent": [],
-"opmerking": "",
+"opmerking": "beschikbaar",
 "prk": "80551",
 "prk_naam": "ROPINIROL TABLET OMHULD 0,25MG PARKINSON",
 "atc": "N04BC04"
@@ -4933,6 +4953,16 @@
 "opmerking": "",
 "prk": "7064",
 "prk_naam": "RIFAMPICINE CAPSULE 300MG",
+"atc": "J04AB02"
+},
+{
+"zi": "14044269",
+"naam": "RIFADIN SUSPENSIE 20MG/ML (2%)",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "7072",
+"prk_naam": "RIFAMPICINE SUSP ORAAL 20MG/ML",
 "atc": "J04AB02"
 },
 {
@@ -5026,16 +5056,6 @@
 "atc": "J05AE03"
 },
 {
-"zi": "16787277",
-"naam": "RITONAVIR SANDOZ TABLET FILMOMHULD 100MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "94064",
-"prk_naam": "RITONAVIR TABLET 100MG",
-"atc": "J05AE03"
-},
-{
 "zi": "16668847",
 "naam": "RITONAVIR VIATRIS TABLET FILMOMHULD 100MG",
 "status": "",
@@ -5060,19 +5080,9 @@
 "naam": "RIVAROXABAN AMAROX TABLET FILMOMHULD 10MG",
 "status": "",
 "preferent": [],
-"opmerking": "Beschikbaar",
+"opmerking": "Week 50",
 "prk": "88862",
 "prk_naam": "RIVAROXABAN TABLET 10MG",
-"atc": "B01AF01"
-},
-{
-"zi": "17423716",
-"naam": "RIVAROXABAN CF TABLET FILMOMHULD 15MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "100145",
-"prk_naam": "RIVAROXABAN TABLET 15MG",
 "atc": "B01AF01"
 },
 {
@@ -5094,6 +5104,16 @@
 "prk": "88862",
 "prk_naam": "RIVAROXABAN TABLET 10MG",
 "atc": "B01AF01"
+},
+{
+"zi": "16969197",
+"naam": "RIVASTIGMINE AUR PLEISTER TRANSDERM 13,3MG/24UUR",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "228680",
+"prk_naam": "RIVASTIGMINE PLEISTER 13,3MG/24 UUR",
+"atc": "N06DA03"
 },
 {
 "zi": "15690687",
@@ -5126,13 +5146,13 @@
 "atc": "N06DA03"
 },
 {
-"zi": "15655652",
-"naam": "RIVASTIGMINE SANDOZ CAPSULE 1,5MG",
+"zi": "15690733",
+"naam": "RIVASTIGMINE MYLAN CAPSULE 6MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "50164",
-"prk_naam": "RIVASTIGMINE CAPSULE 1,5MG",
+"prk": "50199",
+"prk_naam": "RIVASTIGMINE CAPSULE 6MG",
 "atc": "N06DA03"
 },
 {
@@ -5196,16 +5216,6 @@
 "atc": "N06DA03"
 },
 {
-"zi": "15933520",
-"naam": "RIZATRIPTAN SANDOZ ORODISP TABLET 10MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "50520",
-"prk_naam": "RIZATRIPTAN ORODISP TABLET 10MG",
-"atc": "N02CC04"
-},
-{
 "zi": "15934713",
 "naam": "RIZATRIPTAN SMELTTAB VIATRIS ORODISP TABLET 10MG",
 "status": "",
@@ -5224,6 +5234,16 @@
 "prk": "50520",
 "prk_naam": "RIZATRIPTAN ORODISP TABLET 10MG",
 "atc": "N02CC04"
+},
+{
+"zi": "14849763",
+"naam": "ROCALTROL CAPSULE 0,50MCG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "16616",
+"prk_naam": "CALCITRIOL CAPSULE 0,5UG",
+"atc": "A11CC04"
 },
 {
 "zi": "15625400",
@@ -5306,21 +5326,31 @@
 "atc": "N01BB09"
 },
 {
-"zi": "16604725",
-"naam": "ROSUVASTATINE AUROBINDO TABLET FILMOMHULD  5MG",
+"zi": "16922646",
+"naam": "ROSUVASTATINE AMAROX TABLET FILMOMHULD  5MG",
 "status": "",
 "preferent": [],
-"opmerking": "Niet preferent",
+"opmerking": "Week 44",
 "prk": "201030",
 "prk_naam": "ROSUVASTATINE TABLET  5MG",
 "atc": "C10AA07"
 },
 {
-"zi": "16604733",
+"zi": "17332273",
+"naam": "ROSUVASTATINE AMAROX TABLET FILMOMHULD 20MG",
+"status": "",
+"preferent": [],
+"opmerking": "Week 44",
+"prk": "201057",
+"prk_naam": "ROSUVASTATINE TABLET 20MG",
+"atc": "C10AA07"
+},
+{
+"zi": "16604725",
 "naam": "ROSUVASTATINE AUROBINDO TABLET FILMOMHULD  5MG",
 "status": "",
 "preferent": [],
-"opmerking": "Is GDS verpakking. Niet preferent.",
+"opmerking": "Niet preferent",
 "prk": "201030",
 "prk_naam": "ROSUVASTATINE TABLET  5MG",
 "atc": "C10AA07"
@@ -5346,21 +5376,11 @@
 "atc": "C10AA07"
 },
 {
-"zi": "16604792",
-"naam": "ROSUVASTATINE AUROBINDO TABLET FILMOMHULD 20MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "201057",
-"prk_naam": "ROSUVASTATINE TABLET 20MG",
-"atc": "C10AA07"
-},
-{
 "zi": "16604806",
 "naam": "ROSUVASTATINE AUROBINDO TABLET FILMOMHULD 20MG",
 "status": "",
 "preferent": [],
-"opmerking": "Is GDS verp. Niet pref. 16604792 is preferent",
+"opmerking": "Is GDS verp. Niet pref. 16604792 is preferent en beschikbaar",
 "prk": "201057",
 "prk_naam": "ROSUVASTATINE TABLET 20MG",
 "atc": "C10AA07"
@@ -5476,6 +5496,16 @@
 "atc": "A07EC02"
 },
 {
+"zi": "15466922",
+"naam": "SALVACYL INJECTIEPOEDER 11,25MG + SOLVENS 2ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "77615",
+"prk_naam": "TRIPTORELINE PDR V INJSUSP 11,25MG FL",
+"atc": "L02AE04"
+},
+{
 "zi": "17215315",
 "naam": "SAPROPTERINE DIPHARMA TABLET OPLOSBAAR 100MG",
 "status": "",
@@ -5516,6 +5546,16 @@
 "atc": "N05AH04"
 },
 {
+"zi": "17260272",
+"naam": "SERTRALINE AMAROX TABLET FILMOMHULD 100MG",
+"status": "",
+"preferent": [],
+"opmerking": "Week 50",
+"prk": "39411",
+"prk_naam": "SERTRALINE TABLET 100MG",
+"atc": "N06AB06"
+},
+{
 "zi": "17153859",
 "naam": "SERTRALINE AUROBINDO TABLET FILMOMHULD 100MG",
 "status": "",
@@ -5544,6 +5584,16 @@
 "prk": "39403",
 "prk_naam": "SERTRALINE TABLET  50MG",
 "atc": "N06AB06"
+},
+{
+"zi": "16902327",
+"naam": "SHINGRIX INJPDR FLACON + SOLV 0,5ML",
+"status": "U",
+"preferent": [],
+"opmerking": "nieuwe prestentatie beschikbaar",
+"prk": "202843",
+"prk_naam": "ZOSTERVACCIN INJPDR 50UG (RECOMBINANT) FL",
+"atc": "J07BK03"
 },
 {
 "zi": "16840925",
@@ -5636,6 +5686,46 @@
 "atc": "A10BH01"
 },
 {
+"zi": "16620852",
+"naam": "SMOFKABIVEN EXTRA AMINO INFUSIE EMULSIE ZAK 2025ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "149608",
+"prk_naam": "SMOFKABIVEN EXTRA AMINO INF EMULSIE ZAK 2025ML",
+"atc": "B05BA10"
+},
+{
+"zi": "13560115",
+"naam": "SOFRADEX OORDRUPPELS FLACON  8ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "80691",
+"prk_naam": "DEXAMETHASON/FRAMYCETINE/GRAMICIDINE OORDR",
+"atc": "S02CA06"
+},
+{
+"zi": "17388406",
+"naam": "SOLIFENACINESUC/TAMSUL HCL AUROB TABL MGA 6/0,4MG",
+"status": "",
+"preferent": [],
+"opmerking": "Is GDS verpakking. Niet pref. 17272491 is preferent en beschikbaar",
+"prk": "105724",
+"prk_naam": "SOLIFENACINE/TAMSULOSINE TABLET MGA 6/0,4MG",
+"atc": "G04CA53"
+},
+{
+"zi": "16820142",
+"naam": "SOLIFENACINESUCCINAAT AUROBINDO TABL FILMOMH 10MG",
+"status": "",
+"preferent": [],
+"opmerking": "Is GDS verpakking. Niet pref. Beschikbaar. 16820134 is pref. en beschi",
+"prk": "75345",
+"prk_naam": "SOLIFENACINE TABLET 10MG",
+"atc": "G04BD08"
+},
+{
 "zi": "13873695",
 "naam": "SOLUVIT N INFUSIEPOEDER FLACON 10ML + ZAK",
 "status": "",
@@ -5656,28 +5746,8 @@
 "atc": "C07AA07"
 },
 {
-"zi": "15446948",
-"naam": "SPIRONOLACTON ACCORD TABLET OMHULD  25MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "3662",
-"prk_naam": "SPIRONOLACTON TABLET 25MG",
-"atc": "C03DA01"
-},
-{
 "zi": "15135799",
 "naam": "SUMATRIPTAN MYLAN TABLET OMHULD 100MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "32476",
-"prk_naam": "SUMATRIPTAN TABLET 100MG",
-"atc": "N02CC01"
-},
-{
-"zi": "15131807",
-"naam": "SUMATRIPTAN TEVA TABLET OMHULD 100MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
@@ -5726,16 +5796,6 @@
 "atc": "G03CA03"
 },
 {
-"zi": "14001195",
-"naam": "SYSTEN 100 PLEISTER MGA 100MCG/24UUR",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "226238",
-"prk_naam": "ESTRADIOL PLEISTER 100UG/24UUR",
-"atc": "G03CA03"
-},
-{
 "zi": "16580729",
 "naam": "TADALAFIL MYLAN TABLET FILMOMHULD  5MG",
 "status": "",
@@ -5766,8 +5826,8 @@
 "atc": "D11AH01"
 },
 {
-"zi": "14303000",
-"naam": "TAMOXIFEN PCH TABLET 20MG",
+"zi": "15989828",
+"naam": "TAMOXIFEN MYLAN TABLET 20MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
@@ -5916,26 +5976,6 @@
 "atc": "C09DA07"
 },
 {
-"zi": "16022297",
-"naam": "TIBOLINIA TABLET 2,5MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "25690",
-"prk_naam": "TIBOLON TABLET 2,5MG",
-"atc": "G03CX01"
-},
-{
-"zi": "17356989",
-"naam": "TICAGRELOR VIATRIS TABLET FILMOMHULD 60MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "130680",
-"prk_naam": "TICAGRELOR TABLET 60MG",
-"atc": "B01AC24"
-},
-{
 "zi": "17381738",
 "naam": "TICAGRELOR XIROMED TABLET FILMOMHULD 60MG",
 "status": "",
@@ -5946,34 +5986,14 @@
 "atc": "B01AC24"
 },
 {
-"zi": "17385156",
-"naam": "TICAGRELOR XIROMED TABLET FILMOMHULD 60MG",
+"zi": "12557676",
+"naam": "TOBREX OOGZALF TUBE 3,5G",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "130680",
-"prk_naam": "TICAGRELOR TABLET 60MG",
-"atc": "B01AC24"
-},
-{
-"zi": "17385164",
-"naam": "TICAGRELOR XIROMED TABLET FILMOMHULD 90MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "97446",
-"prk_naam": "TICAGRELOR TABLET 90MG",
-"atc": "B01AC24"
-},
-{
-"zi": "15705552",
-"naam": "TOBI PODHALER INHALPDR 28MG MET PODHALER",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "98248",
-"prk_naam": "TOBRAMYCINE INHALATIECAPSULE 28MG PODHALER",
-"atc": "J01GB01"
+"prk": "22373",
+"prk_naam": "TOBRAMYCINE OOGZALF 3MG/G TUBE 3,5G",
+"atc": "S01AA12"
 },
 {
 "zi": "15841626",
@@ -6036,23 +6056,13 @@
 "atc": "N03AX11"
 },
 {
-"zi": "15269914",
-"naam": "TOSTRAN GEL 20MG/G",
+"zi": "15200132",
+"naam": "TRAMADOL HCL TEVA RETARD TABLET MGA 100MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "83321",
-"prk_naam": "TESTOSTERON GEL 20MG/G POMP 0,5G(10MG TEST)/DOSIS",
-"atc": "G03BA03"
-},
-{
-"zi": "14761718",
-"naam": "TRAMADOL HCL CF DRUPPELS 100MG/ML",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "40967",
-"prk_naam": "TRAMADOL DRUPPELS 100MG/ML",
+"prk": "50431",
+"prk_naam": "TRAMADOL TABLET MGA 100MG",
 "atc": "N02AX02"
 },
 {
@@ -6076,6 +6086,16 @@
 "atc": "N02AX02"
 },
 {
+"zi": "13890239",
+"naam": "TRAMAL DRUPPELVLOEISTOF 100MG/ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "40967",
+"prk_naam": "TRAMADOL DRUPPELS 100MG/ML",
+"atc": "N02AX02"
+},
+{
 "zi": "13678388",
 "naam": "TRAMAL INJVLST 50MG/ML AMPUL 2ML",
 "status": "",
@@ -6084,6 +6104,26 @@
 "prk": "35203",
 "prk_naam": "TRAMADOL INJVLST 50MG/ML AMP 2ML",
 "atc": "N02AX02"
+},
+{
+"zi": "15290972",
+"naam": "TRANSTEC 52,5MCG/UUR MATRIXPLEISTER 4 DAGEN",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "228982",
+"prk_naam": "BUPRENORFINE PLEISTER 52,5UG/UUR 4 DAGEN",
+"atc": "N02AE01"
+},
+{
+"zi": "17097886",
+"naam": "TRANYLCYPROMINE DOUBLE-E PHARMA TABLET FILMOM 10MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "37834",
+"prk_naam": "TRANYLCYPROMINE TABLET 10MG",
+"atc": "N06AF04"
 },
 {
 "zi": "17157811",
@@ -6096,14 +6136,34 @@
 "atc": "N06AF04"
 },
 {
-"zi": "17248515",
-"naam": "TRIAMCINOLONACET ADDIMED INJSUSP 40MG/ML FLAC 1ML",
+"zi": "15994260",
+"naam": "TRECLINAC GEL 0,25/10MG/G",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "107085",
-"prk_naam": "TRIAMCINOLONACETONIDE INJSUSP 40MG/ML FL 1ML (PAR)",
-"atc": "H02AB08"
+"prk": "113476",
+"prk_naam": "CLINDAMYCINE/TRETINOINE GEL 10/0,25MG/G",
+"atc": "D10AF51"
+},
+{
+"zi": "16252039",
+"naam": "TREVICTA 263 INJSUSP 200MG/ML WWSP 1,315ML",
+"status": "",
+"preferent": [],
+"opmerking": "Product is op voorraad",
+"prk": "136204",
+"prk_naam": "PALIPERIDON INJSUSP WWSP 263MG=1,315ML (200MG/ML)",
+"atc": "N05AX13"
+},
+{
+"zi": "16252047",
+"naam": "TREVICTA 350 INJSUSP 200MG/ML WWSP 1,75ML",
+"status": "",
+"preferent": [],
+"opmerking": "Product is op voorraad",
+"prk": "132578",
+"prk_naam": "PALIPERIDON INJSUSP WWSP 350MG=1,75ML (200MG/ML)",
+"atc": "N05AX13"
 },
 {
 "zi": "16923839",
@@ -6156,6 +6216,16 @@
 "atc": "A05AA02"
 },
 {
+"zi": "16753828",
+"naam": "URSODEOXYCHOLZUUR GLENMARK TABLET 450MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "77771",
+"prk_naam": "URSODEOXYCHOLZUUR TABLET 450MG",
+"atc": "A05AA02"
+},
+{
 "zi": "16921445",
 "naam": "URSODEOXYCHOLZUUR STRIDES CAPSULE 250MG",
 "status": "",
@@ -6176,6 +6246,16 @@
 "atc": "A05AA02"
 },
 {
+"zi": "17096871",
+"naam": "VAGIRUX VAGINAALTABLET 10MCG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "105023",
+"prk_naam": "ESTRADIOL TABLET VAGINAAL 10UG",
+"atc": "G03CA03"
+},
+{
 "zi": "15457117",
 "naam": "VALACICLOVIR PCH TABLET 500MG",
 "status": "",
@@ -6186,8 +6266,18 @@
 "atc": "J05AB11"
 },
 {
-"zi": "15607739",
-"naam": "VALSARTAN PCH TABLET FILMOMHULD  80MG",
+"zi": "15538494",
+"naam": "VALACICLOVIR SANDOZ TABLET 250MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "51306",
+"prk_naam": "VALACICLOVIR TABLET  250MG",
+"atc": "J05AB11"
+},
+{
+"zi": "16792033",
+"naam": "VALSARTAN KRKA TABLET FILMOMHULD  80MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
@@ -6196,13 +6286,13 @@
 "atc": "C09CA03"
 },
 {
-"zi": "15736091",
-"naam": "VALSARTAN VIATRIS TABLET FILMOMHULD 160MG",
+"zi": "15607739",
+"naam": "VALSARTAN PCH TABLET FILMOMHULD  80MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "61239",
-"prk_naam": "VALSARTAN TABLET OMHULD 160MG",
+"prk": "61220",
+"prk_naam": "VALSARTAN TABLET OMHULD  80MG",
 "atc": "C09CA03"
 },
 {
@@ -6256,14 +6346,14 @@
 "atc": "J01XA01"
 },
 {
-"zi": "16224949",
-"naam": "VENLAFAXINE HCL SANDOZ XR CAPSULE MVA  75MG",
+"zi": "16774485",
+"naam": "VARDENAFIL TEVA TABLET FILMOMHULD 10MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "47511",
-"prk_naam": "VENLAFAXINE CAPSULE MGA  75MG",
-"atc": "N06AX16"
+"prk": "69205",
+"prk_naam": "VARDENAFIL TABLET FO 10MG",
+"atc": "G04BE09"
 },
 {
 "zi": "17003377",
@@ -6310,7 +6400,7 @@
 "naam": "VERAPAMIL HCL AUROBINDO RETARD TABLET MGA 240MG",
 "status": "",
 "preferent": [],
-"opmerking": "Niet preferent",
+"opmerking": "Niet preferent. Beschikbaar",
 "prk": "26832",
 "prk_naam": "VERAPAMIL TABLET MGA 240MG",
 "atc": "C08DA01"
@@ -6326,16 +6416,6 @@
 "atc": "C08DA01"
 },
 {
-"zi": "14155907",
-"naam": "VERAPAMIL HCL TEVA RETARD TABLET MGA 240MG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "26832",
-"prk_naam": "VERAPAMIL TABLET MGA 240MG",
-"atc": "C08DA01"
-},
-{
 "zi": "17214971",
 "naam": "VERQUVO TABLET FILMOMHULD 2,5MG",
 "status": "",
@@ -6344,6 +6424,16 @@
 "prk": "223476",
 "prk_naam": "VERICIGUAT TABLET 2,5MG",
 "atc": "C01DX22"
+},
+{
+"zi": "16008030",
+"naam": "VERSATIS PLEISTER 700MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "115924",
+"prk_naam": "LIDOCAINE PLEISTER 700MG",
+"atc": "N01BB02"
 },
 {
 "zi": "15642259",
@@ -6356,6 +6446,16 @@
 "atc": "S01XA20"
 },
 {
+"zi": "15642275",
+"naam": "VIDISIC PVP OPHTIOLE OOGDRUPPELS 50MG/ML FLAC 10ML",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "217204",
+"prk_naam": "POVIDON OOGDRUPPELS 50MG/ML FL 10ML ZONDER BENZ",
+"atc": "S01XA20"
+},
+{
 "zi": "15612090",
 "naam": "VIMOVO TABLET MGA 500/20MG",
 "status": "",
@@ -6364,16 +6464,6 @@
 "prk": "95710",
 "prk_naam": "NAPROXEN/ESOMEPRAZOL TABLET MGA 500/20MG",
 "atc": "M01AE52"
-},
-{
-"zi": "16969766",
-"naam": "VITAMINE D WILL CAPSULE 50000IE",
-"status": "",
-"preferent": [],
-"opmerking": "beschikbaar vanaf week 43",
-"prk": "140252",
-"prk_naam": "COLECALCIFEROL CAPSULE  50.000IE",
-"atc": "A11CC05"
 },
 {
 "zi": "16347234",
@@ -6404,16 +6494,6 @@
 "prk": "48356",
 "prk_naam": "PODOFYLLOTOXINE CREME 1,5MG/G",
 "atc": "D06BB04"
-},
-{
-"zi": "17024749",
-"naam": "XARELTO GRANULAAT VOOR SUSPENSIE 1MG/ML <4KG",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "209872",
-"prk_naam": "RIVAROXABAN SUSP ORAAL 1MG/ML",
-"atc": "B01AF01"
 },
 {
 "zi": "16314514",
@@ -6464,16 +6544,6 @@
 "prk": "201456",
 "prk_naam": "CLOZAPINE ORODISP TABLET 50MG",
 "atc": "N05AH02"
-},
-{
-"zi": "14169223",
-"naam": "ZILVERSULFADIAZINE CF CREME 10MG/G",
-"status": "",
-"preferent": [],
-"opmerking": "",
-"prk": "2828",
-"prk_naam": "ZILVERSULFADIAZINE CREME 10MG/G",
-"atc": "D06BA01"
 },
 {
 "zi": "17136067",
@@ -6546,14 +6616,34 @@
 "atc": "N02CC03"
 },
 {
-"zi": "15638545",
-"naam": "ZONEGRAN CAPSULE 100MG",
+"zi": "15044416",
+"naam": "ZOMIG ZIP ORODISP TABLET 2,5MG",
 "status": "",
 "preferent": [],
 "opmerking": "",
-"prk": "95311",
-"prk_naam": "ZONISAMIDE CAPSULE 100MG",
-"atc": "N03AX15"
+"prk": "55727",
+"prk_naam": "ZOLMITRIPTAN ORODISP TABLET 2,5MG",
+"atc": "N02CC03"
+},
+{
+"zi": "14325411",
+"naam": "ZOPICLON VIATRIS TABLET 7,5MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "24732",
+"prk_naam": "ZOPICLON TABLET 7,5MG",
+"atc": "N05CF01"
+},
+{
+"zi": "14846888",
+"naam": "ZOPICLON VIATRIS TABLET 7,5MG",
+"status": "",
+"preferent": [],
+"opmerking": "",
+"prk": "24732",
+"prk_naam": "ZOPICLON TABLET 7,5MG",
+"atc": "N05CF01"
 }
 ]
 }
