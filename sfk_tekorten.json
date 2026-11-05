@@ -1,7 +1,7 @@
 {
-"generated": "2026-10-28",
+"generated": "2026-11-05",
 "source": "https://www3.sfk.nl/tekorten/?soort=totaal",
-"peildatum": "week 43 2026",
+"peildatum": "week 44 2026",
 "count": 664,
 "gekoppeld": 664,
 "items": [
@@ -1370,7 +1370,7 @@
 "naam": "DULOXETINE AUROBINDO CAPSULE MSR 60MG",
 "status": "",
 "preferent": [],
-"opmerking": "Is GDS verp. Niet pref. 16175085 is pref. en beschikbaar",
+"opmerking": "Is GDS verp. Niet pref. 16175085 is pref.",
 "prk": "79065",
 "prk_naam": "DULOXETINE CAPSULE MSR 60MG",
 "atc": "N06AX21"
@@ -1590,7 +1590,7 @@
 "naam": "ENTECAVIR AUROBINDO TABLET FILMOMHULD 0,5MG",
 "status": "",
 "preferent": [],
-"opmerking": "",
+"opmerking": "Beschikbaar",
 "prk": "81388",
 "prk_naam": "ENTECAVIR TABLET 0,5MG",
 "atc": "J05AF10"
@@ -2110,7 +2110,7 @@
 "naam": "FEXOFENADINE HCL AMAROX TABLET OMHULD 180MG",
 "status": "",
 "preferent": [],
-"opmerking": "Beschikbaar",
+"opmerking": "Week 49",
 "prk": "48747",
 "prk_naam": "FEXOFENADINE TABLET OMHULD 180MG",
 "atc": "R06AX26"
@@ -2130,7 +2130,7 @@
 "naam": "FEXOFENADINE HCL AUROBINDO TABLET OMHULD 180MG",
 "status": "",
 "preferent": [],
-"opmerking": "",
+"opmerking": "Beschikbaar",
 "prk": "48747",
 "prk_naam": "FEXOFENADINE TABLET OMHULD 180MG",
 "atc": "R06AX26"
@@ -2450,7 +2450,7 @@
 "naam": "GABAPENTINE AUROBINDO CAPSULE 300MG",
 "status": "",
 "preferent": [],
-"opmerking": "Niet preferent. Beschikbaar",
+"opmerking": "Niet preferent",
 "prk": "52825",
 "prk_naam": "GABAPENTINE CAPSULE 300MG",
 "atc": "N02BF01"
@@ -2520,7 +2520,7 @@
 "naam": "GEMCITABINE EUGIA INFVLST CONC 40MG/ML FL 5ML",
 "status": "",
 "preferent": [],
-"opmerking": "Kliniekverpakking. Niet preferent",
+"opmerking": "Niet preferent",
 "prk": "95478",
 "prk_naam": "GEMCITABINE INFOPL CONC  40MG/ML FL  5ML",
 "atc": "L01BC05"
@@ -2890,7 +2890,7 @@
 "naam": "IRBESARTAN AMAROX TABLET FILMOMHULD 75MG",
 "status": "",
 "preferent": [],
-"opmerking": "Beschikbaar",
+"opmerking": "Week 50",
 "prk": "92606",
 "prk_naam": "IRBESARTAN TABLET  75MG",
 "atc": "C09CA04"
@@ -2900,7 +2900,7 @@
 "naam": "IRBESARTAN SUN TABLET FILMOMHULD  75MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 45",
+"opmerking": "Week 47",
 "prk": "92606",
 "prk_naam": "IRBESARTAN TABLET  75MG",
 "atc": "C09CA04"
@@ -2970,7 +2970,7 @@
 "naam": "KALIUMLOSARTAN/HCT AUROBINDO TAB FILMOM 100/12,5MG",
 "status": "",
 "preferent": [],
-"opmerking": "Is GDS verp. Niet preferent. 16308506 is pref. en beschikbaar",
+"opmerking": "Is GDS verp. Niet pref. Beschikbaar. 16308506 is pref. en beschikbaar",
 "prk": "81337",
 "prk_naam": "LOSARTAN/HYDROCHLOORTHIAZIDE TABLET 100/12,5MG",
 "atc": "C09DA01"
@@ -3100,7 +3100,7 @@
 "naam": "LEFLUNOMIDE AUROBINDO TABLET FILMOMHULD 20MG",
 "status": "",
 "preferent": [],
-"opmerking": "",
+"opmerking": "Beschikbaar",
 "prk": "53619",
 "prk_naam": "LEFLUNOMIDE TABLET  20MG",
 "atc": "L04AK01"
@@ -4450,7 +4450,7 @@
 "naam": "PANTOPRAZOL AMAROX INJPDR FLACON 40MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 46",
+"opmerking": "Week 49",
 "prk": "50482",
 "prk_naam": "PANTOPRAZOL INJECTIEPOEDER 40MG FL",
 "atc": "A02BC02"
@@ -4600,7 +4600,7 @@
 "naam": "PRAMIPEXOL AUROBINDO TABLET 0,125MG (0,088MG BASE)",
 "status": "",
 "preferent": [],
-"opmerking": "",
+"opmerking": "Beschikbaar",
 "prk": "49468",
 "prk_naam": "PRAMIPEXOL TABLET 0,125MG (0,088MG BASE)",
 "atc": "N04BC05"
@@ -5330,7 +5330,7 @@
 "naam": "ROSUVASTATINE AMAROX TABLET FILMOMHULD  5MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 44",
+"opmerking": "Beschikbaar",
 "prk": "201030",
 "prk_naam": "ROSUVASTATINE TABLET  5MG",
 "atc": "C10AA07"
@@ -5340,7 +5340,7 @@
 "naam": "ROSUVASTATINE AMAROX TABLET FILMOMHULD 20MG",
 "status": "",
 "preferent": [],
-"opmerking": "Week 44",
+"opmerking": "Week 49",
 "prk": "201057",
 "prk_naam": "ROSUVASTATINE TABLET 20MG",
 "atc": "C10AA07"
@@ -5350,7 +5350,7 @@
 "naam": "ROSUVASTATINE AUROBINDO TABLET FILMOMHULD  5MG",
 "status": "",
 "preferent": [],
-"opmerking": "Niet preferent",
+"opmerking": "Niet preferent. Beschikbaar",
 "prk": "201030",
 "prk_naam": "ROSUVASTATINE TABLET  5MG",
 "atc": "C10AA07"
