@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05",
+ "generated": "2026-11-12",
  "bron": "https://lcg.nl/actuele-tekortendossiers/",
  "dossiers": [
   {
@@ -81,6 +81,16 @@
    "updated": "2026-11-05",
    "published": "2026-06-04",
    "url": "https://lcg.nl/medicijnentekort/methylergometrine/"
+  },
+  {
+   "key": "ritonavir",
+   "slug": "ritonavir",
+   "title": "Ritonavir",
+   "atc": "J05AE03",
+   "phase": "Inventarisatie",
+   "updated": "2026-11-05",
+   "published": "2026-11-05",
+   "url": "https://lcg.nl/medicijnentekort/ritonavir/"
   }
  ]
 }

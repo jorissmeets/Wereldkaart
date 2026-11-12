@@ -1,9 +1,36 @@
 {
-"generated": "2026-11-05",
+"generated": "2026-11-12",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 208,
+"count": 211,
 "on_eml": 98,
 "items": [
+{
+"product": "Jylamvo 2mg/ml, drank",
+"mah": "Oresund Pharma ApS",
+"reg": "117277",
+"reg_type": "RVG",
+"datum": "2026-11-02",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Carmustine Accord 100 mg poeder en oplosmiddel voor concentraat voor oplossing voor infusie",
+"mah": "Accord Healthcare SLU",
+"reg": "125824",
+"reg_type": "RVG",
+"datum": "2026-11-01",
+"atc": "L01AD01",
+"eml": ""
+},
+{
+"product": "REZUROCK 200 mg, filmomhulde tabletten",
+"mah": "Sanofi Winthrop Industrie",
+"reg": "EU/1/26/2015/002",
+"reg_type": "EU",
+"datum": "2026-11-01",
+"atc": "",
+"eml": ""
+},
 {
 "product": "Doxycycline Macure 20 mg/ml, oplossing voor injectie",
 "mah": "Macure Healthcare Limited",

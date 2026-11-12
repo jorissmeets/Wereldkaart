@@ -83,5 +83,10 @@
   "key": "metamizol",
   "atc": "N02BB02",
   "title": "Metamizol (i.v.)"
+ },
+ "ritonavir": {
+  "key": "ritonavir",
+  "atc": "J05AE03",
+  "title": "Ritonavir"
  }
 }
