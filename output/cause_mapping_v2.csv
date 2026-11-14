@@ -274,3 +274,6 @@ CZ,reason,nízká výše ceny a nízká výše úhrady,commercial,Commerciële r
 CZ,reason,Rationalization project,commercial,Commerciële reden,Commercial,"toegevoegd 23-09-2026, uit het SUKL-meldingenregister",
 CZ,reason,Insolvence výrobce primárního obalu,commercial,Commerciële reden,Commercial,"toegevoegd 23-09-2026, uit het SUKL-meldingenregister",
 CZ,reason,neuvedeno,none,Geen reden opgegeven,None given,"toegevoegd 23-09-2026, uit het SUKL-meldingenregister",
+BA,reason,komercijalni razlozi,commercial,Commerciele redenen,Commercial reasons,ALMBIH Razlog obustave,
+BA,reason,"razlozi povezani sa: kvalitetom, sigurnosti ili efikasnosti lijeka",quality,"Kwaliteit, veiligheid of werkzaamheid","Quality, safety or efficacy",ALMBIH Razlog obustave,
+BA,reason,drugo,other,Andere reden,Other,"ALMBIH Razlog obustave; de toelichting staat in de kolom notes",

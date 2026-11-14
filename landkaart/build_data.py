@@ -37,6 +37,7 @@ PER_COUNTRY_REASON_COL: dict[str, str] = {
     "DK": "reason",
     "GR": "reason",
     "HR": "reason",
+    "BA": "reason",  # toegevoegd 14-11-2026 met de ALMBIH-bron
     "HU": "reason",
     "IE": "reason",
     "MY": "reason",

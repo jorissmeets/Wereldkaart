@@ -17,6 +17,7 @@ from scrapers.ie_hpra import IeHpraScraper
 from scrapers.is_lyfja import IsLyfjaScraper
 from scrapers.gr_eof import GrEofScraper
 from scrapers.hr_halmed import HrHalmedScraper
+from scrapers.ba_almbih import BaAlmbihScraper
 from scrapers.ro_anm import RoAnmScraper
 from scrapers.sk_sukl import SkSuklScraper
 from scrapers.nl_igj import NlIgjScraper
