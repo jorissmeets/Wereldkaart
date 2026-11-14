@@ -77,13 +77,17 @@ class NzPharmacScraper(BaseScraper):
     REQUEST_PAUSE_S = 0.2
 
     # Na dit aantal seconden worden de resterende detailpagina's overgeslagen, zodat de
-    # scraper binnen de 150s van de runner klaar is met een VOLLEDIGE meldingenlijst in
+    # scraper binnen de time-out van de runner klaar is met een VOLLEDIGE meldingenlijst in
     # plaats van dood te gaan met nul rijen. Zie de uitleg bij het budget in scrape().
-    DETAIL_BUDGET_S = 120
+    # Was 120s bij een runner-limiet van 150s. Op 14-11-2026 sloegen twee opeenvolgende runs
+    # daardoor 37 en 13 van de 77 detailpagina's over (116 tegen 142 rijen, 94 zonder stof):
+    # zo'n land kan niet op de kaart. Daarom staat NZ nu op 360s in RUIMER van
+    # _rerun_targeted.py en is het budget meegegroeid.
+    DETAIL_BUDGET_S = 300
 
     # Boven deze looptijd waarschuwen we in de log. Anders zie je pas dat deze scraper tegen
-    # de 150s-time-out aan kruipt op het moment dat hij er overheen gaat en stilvalt.
-    SLOW_RUN_WARN_S = 110
+    # de time-out aan kruipt op het moment dat hij er overheen gaat en stilvalt.
+    SLOW_RUN_WARN_S = 280
 
     HEADERS = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36",
@@ -405,7 +409,11 @@ class NzPharmacScraper(BaseScraper):
                 # dezelfde melding nog steeds uit elkaar te houden zijn.
                 "medicine_name": title_medicine,
                 "brand": block.get("brand", ""),
-                "active_substance": block.get("chemical", ""),
+                # Veel detailpagina's hebben geen "Chemical:"-regel (110 van de 146 rijen op
+                # 14-11-2026); zonder stof krijgt de rij geen ATC en telt hij op de kaart niet
+                # mee. Dan de stof uit de titel, maar alleen voor een echt productblok: een
+                # melding zonder productblok (Midden-Oosten) blijft leeg.
+                "active_substance": block.get("chemical") or (self._stof_uit_titel(title_medicine) if block else ""),
                 "strength": presentation,
                 "dosage_form": self._dosage_form(presentation),
                 "package_size": block.get("measure / qty", ""),
@@ -414,6 +422,14 @@ class NzPharmacScraper(BaseScraper):
         return rows
 
     # ─── Main ───────────────────────────────────────────────────────────────
+
+    @staticmethod
+    def _stof_uit_titel(titel: str) -> str:
+        """'Mesalazine (Asacol) 800 mg tablets' -> 'Mesalazine'; 'Olanzapine depot injections' -> 'Olanzapine'."""
+        s = (titel or "").split(" (", 1)[0]
+        s = re.split(r"\s\d|\s(?:tablets?|tabs?|capsules?|caps?|inj|injections?|soln|oral|ampoules?|vials?|depot"
+                     r"|nebuliser|patch|ointment|suppositories|dispersible|orodispersible)\b", s, maxsplit=1, flags=re.I)[0]
+        return s.strip(" ,")
 
     def scrape(self) -> pd.DataFrame:
         print(f"Scraping {self.country_name} ({self.source_name})...")
@@ -477,6 +493,6 @@ class NzPharmacScraper(BaseScraper):
                   "is de detailpagina overgeslagen wegens het tijdbudget; die rijen hebben lege "
                   "productvelden en staan op detail_fetched=False. Datums en status kloppen wel.")
         if elapsed > self.SLOW_RUN_WARN_S:
-            print(f"  WAARSCHUWING: {elapsed:.0f}s is dicht bij de 150s-time-out van de "
+            print(f"  WAARSCHUWING: {elapsed:.0f}s is dicht bij de time-out van de "
                   "batchrunner. Zie REQUEST_PAUSE_S voor wat je hier wel en niet aan moet doen.")
         return df

@@ -53,9 +53,9 @@ B01AC09,DK,2027-12-25,406,Epoprostenol (epoprostenolnatrium) ATC-kode: B01AC09 F
 L01EH01,AU,2026-11-15,1,lapatinib ditosilate monohydrate,3,nee,production_delay
 R01AX06,FI,2026-11-15,1,レボカバスチン塩酸塩,3,nee,
 J01DF01,FI,2026-11-15,1,aztreonam,7,nee,
-N06AX16,FI,2026-11-15,1,venlafaxine,14,nee,
+N06AX16,FI,2026-11-15,1,venlafaxine,15,nee,
 N07AX01,GR,2026-11-15,1,PILOCARPINE HYDROCHLORIDE,3,nee,regulatory
-N03AE01,IE,2026-11-15,1,Clonazepam,6,nee,regulatory
+N03AE01,IE,2026-11-15,1,Clonazepam,7,nee,regulatory
 C08CA01,IT,2026-11-15,1,AMLODIPINA BESILATO,9,nee,discontinuation
 N02BA01,IT,2026-11-15,1,ACIDO ACETILSALICILICO + ACIDO ASCORBICO,5,nee,increased_demand
 C07AB07,IT,2026-11-15,1,BISOPROLOLO FUMARATO,16,nee,production_delay
@@ -68,23 +68,23 @@ A07EA06,NO,2026-11-15,1,budesonid,4,nee,increased_demand
 C09AA03,NO,2026-11-15,1,lisinoprildihydrat,8,nee,production_delay
 C09AA03,NO,2026-11-15,1,lisinoprildihydrat,8,nee,production_delay
 C09CA04,SE,2026-11-15,1,irbesartan,8,nee,production_delay
-N05AH04,SE,2026-11-15,1,kvetiapinfumarat,25,nee,production_delay
+N05AH04,SE,2026-11-15,1,kvetiapinfumarat,26,nee,production_delay
 A12BA01,SE,2026-11-15,1,kaliumklorid,9,nee,
 L04AD01,SE,2026-11-15,1,ciklosporin,11,nee,increased_demand
-N02CC01,SE,2026-11-15,1,sumatriptansuccinat,17,nee,
+N02CC01,SE,2026-11-15,1,sumatriptansuccinat,19,nee,
 A02BC05,SE,2026-11-15,1,esomeprazolmagnesium,15,nee,
 R06AX26,SE,2026-11-15,1,fexofenadinhydroklorid,8,nee,
-J01CA04,SE,2026-11-15,1,amoxicillintrihydrat,9,nee,
-R06AX27,SE,2026-11-15,1,desloratadin,8,nee,
-N05AH04,SE,2026-11-15,1,kvetiapinfumarat,25,nee,production_delay
+J01CA04,SE,2026-11-15,1,amoxicillintrihydrat,10,nee,
+R06AX27,SE,2026-11-15,1,desloratadin,9,nee,
+N05AH04,SE,2026-11-15,1,kvetiapinfumarat,26,nee,production_delay
 G04BE08,SE,2026-11-15,1,tadalafil,14,nee,
 L04AX01,SE,2026-11-15,1,azatioprin,4,nee,
 M04AA01,SE,2026-11-15,1,allopurinol,10,nee,increased_demand
 D11AH02,SK,2026-11-15,1,Pimekrolimus,3,nee,
 J07BB02,SK,2026-11-15,1,"Očkovacia látka proti chrípke, inaktivovaná, štiepený vírus ",10,nee,
 N02CC06,SK,2026-11-15,1,Eletriptán,8,nee,
-G04BE03,SK,2026-11-15,1,Sildenafil,16,nee,
-G04BE03,SK,2026-11-15,1,Sildenafil,16,nee,
+G04BE03,SK,2026-11-15,1,Sildenafil,17,nee,
+G04BE03,SK,2026-11-15,1,Sildenafil,17,nee,
 N03AX09,SK,2026-11-15,1,Lamotrigín,10,nee,
 N03AF02,BA,2026-11-16,2,okskarbazepin,2,nee,other
 B01AF03,BE,2026-11-16,2,Edoxaban,14,nee,production_delay
@@ -93,14 +93,14 @@ N01AB06,DE,2026-11-16,2,Isofluran,1,nee,other
 N05AX13,EE,2026-11-16,2,Paliperidone,19,nee,
 N05AX12,FI,2026-11-16,2,Aripiprazol,17,nee,
 P02CF01,FI,2026-11-16,2,Ivermectin,2,nee,
-M01AH05,FI,2026-11-16,2,Etoricoxib,11,nee,
+M01AH05,FI,2026-11-16,2,Etoricoxib,12,nee,
 C01DX22,FI,2026-11-16,2,vericiguat,7,nee,
-M01AH05,FI,2026-11-16,2,Etoricoxib,11,nee,
+M01AH05,FI,2026-11-16,2,Etoricoxib,12,nee,
 B02BD04,FI,2026-11-16,2,Koagulačný faktor IX,6,nee,
 A04AA01,GR,2026-11-16,2,ONDANSETRON HYDROCHLORIDE,13,nee,supply_problem
-B03XA01,GR,2026-11-16,2,EPOETIN THETA,12,nee,supply_problem
-B03XA01,GR,2026-11-16,2,EPOETIN ALFA (RECOMBINANT),12,nee,production_delay
-B03XA01,GR,2026-11-16,2,EPOETIN ALFA (RECOMBINANT),12,nee,production_delay
+B03XA01,GR,2026-11-16,2,EPOETIN THETA,13,nee,supply_problem
+B03XA01,GR,2026-11-16,2,EPOETIN ALFA (RECOMBINANT),13,nee,production_delay
+B03XA01,GR,2026-11-16,2,EPOETIN ALFA (RECOMBINANT),13,nee,production_delay
 V03AF07,GR,2026-11-16,2,RASBURICASE,4,nee,supply_problem
 G03CA03,HR,2026-11-16,2,estradiol hemihidrat,17,nee,production_delay
 C01CA24,IE,2026-11-16,2,Adrenaline,13,nee,production_delay
@@ -112,7 +112,7 @@ S01HA02,IT,2026-11-16,2,OXIBUPROCAINA CLORIDRATO,2,nee,production_delay
 J01MA02,IT,2026-11-16,2,CIPROFLOXACINA CLORIDRATO MONOIDRATO,17,nee,production_delay
 S01ED51,IT,2026-11-16,2,DORZOLAMIDE + TIMOLOLO,17,nee,production_delay
 D10AF51,IT,2026-11-16,2,BENZOILPEROSSIDO + CLINDAMICINA FOSFATO,3,nee,production_delay
-L01DB03,IT,2026-11-16,2,EPIRUBICINA CLORIDRATO,10,nee,production_delay
+L01DB03,IT,2026-11-16,2,EPIRUBICINA CLORIDRATO,11,nee,production_delay
 V03AB25,IT,2026-11-16,2,FLUMAZENIL,3,nee,discontinuation
 C03CA01,IT,2026-11-16,2,FUROSEMIDE,16,nee,production_delay
 N02BF01,IT,2026-11-16,2,GABAPENTINA,17,nee,production_delay
@@ -136,10 +136,10 @@ L04AX03,IT,2026-11-16,2,METOTREXATO,7,nee,production_delay
 D11AH05,NO,2026-11-16,2,dupilumab,2,nee,production_delay
 D07AC01,NO,2026-11-16,2,betametasonvalerat,5,nee,commercial
 R05DA01,NO,2026-11-16,2,"etylmorfinhydroklorid, purshianabark",1,nee,production_delay
-C01CA03,SE,2026-11-16,2,noradrenalintartrat (monohydrat),10,nee,increased_demand
-G04BE03,SE,2026-11-16,2,sildenafilcitrat,16,nee,increased_demand
+C01CA03,SE,2026-11-16,2,noradrenalintartrat (monohydrat),11,nee,increased_demand
+G04BE03,SE,2026-11-16,2,sildenafilcitrat,17,nee,increased_demand
 D01AC02,SE,2026-11-16,2,mikonazolnitrat,1,nee,increased_demand
-M01AH05,SE,2026-11-16,2,etoricoxib,11,nee,
+M01AH05,SE,2026-11-16,2,etoricoxib,12,nee,
 N07BA01,SE,2026-11-16,2,nikotinditartratdihydrat,5,nee,increased_demand
 N03AX14,SE,2026-11-16,2,levetiracetam,14,nee,
 B05BA10,SE,2026-11-16,2,"alanin, arginin, fenylalanin, fiskolja, rik på omega-3-syror",6,nee,production_delay
@@ -147,32 +147,32 @@ N02AJ13,SK,2026-11-16,2,Tramadol a paracetamol,6,nee,
 M01AB05,SK,2026-11-16,2,Diklofenak,8,nee,
 M01AB05,SK,2026-11-16,2,Diklofenak,8,nee,
 N06BX03,SK,2026-11-16,2,Piracetam,2,nee,
-N03AX11,SK,2026-11-16,2,Topiramát,12,nee,
+N03AX11,SK,2026-11-16,2,Topiramát,13,nee,
 C09AA03,SK,2026-11-16,2,Lizinopril,8,nee,
 R03BA05,NO,2026-11-17,3,flutikasonpropionat,5,nee,increased_demand
 J07AL02,SE,2026-11-17,3,"pneumokockpolysackarid typ 1, pneumokockpolysackarid typ 10a",3,nee,
 N02AA03,FI,2026-11-18,4,HYDROMORPHONE HYDROCHLORIDE,6,nee,
-R03DA05,IT,2026-11-18,4,AMINOFILLINA,4,nee,production_delay
+R03DA05,IT,2026-11-18,4,AMINOFILLINA,5,nee,production_delay
 N03AF01,IT,2026-11-18,4,CARBAMAZEPINA,5,nee,production_delay
 N01BB03,IT,2026-11-18,4,MEPIVACAINA CLORIDRATO,5,nee,production_delay
-N02CC04,IT,2026-11-18,4,RIZATRIPTAN,7,nee,production_delay
+N02CC04,IT,2026-11-18,4,RIZATRIPTAN,8,nee,production_delay
 H02AB01,NO,2026-11-18,4,betametason,5,nee,production_delay
 V08AB09,SE,2026-11-18,4,jodixanol,8,nee,logistics
 N06BA02,SE,2026-11-18,4,dexamfetaminsulfat,1,nee,production_delay
 D07AC01,SE,2026-11-18,4,betametasonvalerat,5,nee,
 M03AC09,SE,2026-11-18,4,rokuroniumbromid,8,nee,production_delay
-N06BA04,SE,2026-11-18,4,metylfenidathydroklorid,13,nee,
+N06BA04,SE,2026-11-18,4,metylfenidathydroklorid,14,nee,
 M01AH01,FI,2026-11-19,5,Celecoxibum INN,12,nee,
 C10AA01,FI,2026-11-19,5,simvastatin,15,nee,
-A10BA02,IE,2026-11-19,5,Metformin Hydrochloride,15,nee,production_delay
+A10BA02,IE,2026-11-19,5,Metformin Hydrochloride,16,nee,production_delay
 R06AE09,IE,2026-11-19,5,Levocetirizine dihydrochloride,3,nee,logistics
 N05BA08,IT,2026-11-19,5,BROMAZEPAM,4,nee,production_delay
 N03AF01,IT,2026-11-19,5,CARBAMAZEPINA,5,nee,increased_demand
 C10AA04,IT,2026-11-19,5,FLUVASTATINA SODICA,3,nee,production_delay
-J01XX08,IT,2026-11-19,5,LINEZOLID,11,nee,production_delay
+J01XX08,IT,2026-11-19,5,LINEZOLID,12,nee,production_delay
 C01DA02,IT,2026-11-19,5,NITROGLICERINA,6,nee,production_delay
 P02CA03,AU,2026-11-20,6,albendazole,9,nee,production_delay
-N03AX11,AU,2026-11-20,6,topiramate,12,nee,production_delay
+N03AX11,AU,2026-11-20,6,topiramate,13,nee,production_delay
 J01MA14,FI,2026-11-20,6,moxifloxacin,13,nee,
 A10AE04,FI,2026-11-20,6,Insulinum glarginum INN,9,nee,
 D01AC08,FI,2026-11-20,6,ケトコナゾール,6,nee,
@@ -182,21 +182,21 @@ H02AB13,IT,2026-11-20,6,DEFLAZACORT,2,nee,increased_demand
 B02BD02,IT,2026-11-20,6,DAMOCTOCOG ALFA PEGOL,8,nee,production_delay
 M03AC10,IT,2026-11-20,6,MIVACURIO CLORURO,5,nee,production_delay
 N02AA01,IT,2026-11-20,6,MORFINA CLORIDRATO,7,nee,production_delay
-A02BC02,IT,2026-11-20,6,PANTOPRAZOLO SODICO SESQUIDRATO,15,nee,temporary_discontinuation
+A02BC02,IT,2026-11-20,6,PANTOPRAZOLO SODICO SESQUIDRATO,16,nee,temporary_discontinuation
 A03AD01,IT,2026-11-20,6,PAPAVERINA CLORIDRATO,2,nee,temporary_discontinuation
 B01AB06,IT,2026-11-20,6,NADROPARINA CALCICA,1,nee,discontinuation
 N05AX13,MY,2026-11-20,6,Paliperidone,19,nee,
 M04AB01,SE,2026-11-20,6,probenecid,1,nee,
-G04BE03,SE,2026-11-20,6,sildenafilcitrat,16,nee,
+G04BE03,SE,2026-11-20,6,sildenafilcitrat,17,nee,
 L01EX09,SE,2026-11-20,6,nintedanibesilat,5,nee,
 C02KX05,SE,2026-11-20,6,riociguat,10,nee,
 L02BG04,IE,2026-11-21,7,Letrozole,5,nee,production_delay
-A10BA02,IE,2026-11-22,8,Metformin Hydrochloride,15,nee,
+A10BA02,IE,2026-11-22,8,Metformin Hydrochloride,16,nee,
 R06AE09,IT,2026-11-22,8,LEVOCETIRIZINA DICLORIDRATO,3,nee,production_delay
 C09CA07,IT,2026-11-22,8,TELMISARTAN,11,nee,production_delay
 N05BA01,SE,2026-11-22,8,diazepam,8,nee,production_delay
-N02CC01,SE,2026-11-22,8,sumatriptansuccinat,17,nee,production_delay
-G03AC06,AU,2026-11-23,9,medroxyprogesterone acetate,1,nee,production_delay
+N02CC01,SE,2026-11-22,8,sumatriptansuccinat,19,nee,production_delay
+G03AC06,AU,2026-11-23,9,medroxyprogesterone acetate,2,nee,production_delay
 H05BX01,AU,2026-11-23,9,cinacalcet hydrochloride,15,nee,production_delay
 J01CR02,BE,2026-11-23,9,"Clavulanic Acid, Amoxicillin",6,nee,production_delay
 A03FA03,GR,2026-11-23,9,DOMPERIDONE,8,nee,production_delay
@@ -215,21 +215,21 @@ N01AX03,NO,2026-11-23,9,ketaminhydroklorid,2,nee,logistics
 N06BA12,NO,2026-11-23,9,lisdeksamfetamindimesilat,6,nee,increased_demand
 C09AA02,SE,2026-11-23,9,enalaprilmaleat,10,nee,
 J01MA14,SE,2026-11-23,9,moxifloxacinhydroklorid,13,nee,
-A10AB05,SE,2026-11-23,9,"insulin, aspart (lösligt)",9,nee,logistics
-G04BE03,SE,2026-11-23,9,sildenafilcitrat,16,nee,
+A10AB05,SE,2026-11-23,9,"insulin, aspart (lösligt)",10,nee,logistics
+G04BE03,SE,2026-11-23,9,sildenafilcitrat,17,nee,
 D11AX01,SE,2026-11-23,9,minoxidil,3,nee,production_delay
-N02CC01,SE,2026-11-23,9,sumatriptansuccinat,17,nee,
+N02CC01,SE,2026-11-23,9,sumatriptansuccinat,19,nee,
 B01AA03,SE,2026-11-23,9,warfarinnatrium,3,nee,
-G04BE03,SE,2026-11-23,9,sildenafilcitrat,16,nee,
+G04BE03,SE,2026-11-23,9,sildenafilcitrat,17,nee,
 M04AA01,SE,2026-11-23,9,allopurinol,10,nee,
 B05BB01,SE,2026-11-23,9,natriumklorid,13,nee,increased_demand
 N07BA01,SE,2026-11-23,9,nikotinresinat,5,nee,production_delay
-N06AX11,SK,2026-11-23,9,Mirtazapín,12,nee,
+N06AX11,SK,2026-11-23,9,Mirtazapín,13,nee,
 M01AH01,SK,2026-11-23,9,Celekoxib,12,nee,
 N05AX13,SK,2026-11-23,9,Paliperidón,19,nee,
 C10AA01,BE,2026-11-24,10,Simvastatin,15,nee,raw_material
 N03AX15,FI,2026-11-24,10,Zonisamid,6,nee,
-N06AX16,IT,2026-11-24,10,VENLAFAXINA CLORIDRATO,14,nee,production_delay
+N06AX16,IT,2026-11-24,10,VENLAFAXINA CLORIDRATO,15,nee,production_delay
 V08CA10,SI,2026-11-24,10,acidum gadoxeticum,2,nee,
 C08CA01,AU,2026-11-25,11,amlodipine besilate,9,nee,increased_demand
 B01AE07,DK,2026-11-25,11,Dabigatranetexilat (Dabigatranetexilatmesilat) ATC-kode: B01,15,nee,commercial
@@ -245,13 +245,13 @@ N06AB10,FI,2026-11-25,11,Escitalopram,17,nee,
 L03AX16,GR,2026-11-25,11,PLERIXAFOR,10,nee,supply_problem
 N05AH02,IE,2026-11-25,11,Clozapine,8,nee,production_delay
 C10AA05,IT,2026-11-25,11,ATORVASTATINA,19,nee,production_delay
-L01DB03,IT,2026-11-25,11,EPIRUBICINA CLORIDRATO,10,nee,production_delay
+L01DB03,IT,2026-11-25,11,EPIRUBICINA CLORIDRATO,11,nee,production_delay
 D11AX10,IT,2026-11-25,11,FINASTERIDE,6,nee,production_delay
 C08CA13,IT,2026-11-25,11,LERCANIDIPINA CLORIDRATO,10,nee,production_delay
 R03DX09,IT,2026-11-25,11,MEPOLIZUMAB,2,nee,
 B01AB10,SE,2026-11-25,11,tinzaparinnatrium,3,nee,raw_material
 J01MA14,SE,2026-11-25,11,moxifloxacinhydroklorid,13,nee,increased_demand
-N06BA04,SE,2026-11-25,11,metylfenidathydroklorid,13,nee,
+N06BA04,SE,2026-11-25,11,metylfenidathydroklorid,14,nee,
 H05BX01,SK,2026-11-25,11,Cinakalcet,15,nee,
 N02BF02,FI,2026-11-26,12,pregabalin,20,nee,
 C10AA07,FI,2026-11-26,12,ロスバスタチンカルシウム,15,nee,
@@ -259,7 +259,7 @@ G02CB03,NO,2026-11-26,12,kabergolin,5,nee,increased_demand
 H01AC08,SE,2026-11-26,12,somatrogon,1,nee,
 C09AA04,AU,2026-11-27,13,perindopril erbumine,11,nee,production_delay
 L01EA02,AU,2026-11-27,13,dasatinib,8,nee,production_delay
-N06AX11,AU,2026-11-27,13,mirtazapine,12,nee,production_delay
+N06AX11,AU,2026-11-27,13,mirtazapine,13,nee,production_delay
 N02BF02,FI,2026-11-27,13,pregabalin,20,nee,
 C09DB01,FI,2026-11-27,13,テルミサルタン・アムロジピンベシル酸塩,4,nee,
 M04AA03,FI,2026-11-27,13,FEBUXOSTAT,12,nee,
@@ -267,9 +267,9 @@ H02AB02,IT,2026-11-27,13,DESAMETASONE,11,nee,increased_demand
 N03AF04,IT,2026-11-27,13,ESLICARBAZEPINA ACETATO,2,nee,increased_demand
 L01BC02,IT,2026-11-27,13,FLUOROURACILE,9,nee,production_delay
 L01BC05,IT,2026-11-27,13,GEMCITABINA CLORIDRATO,12,nee,increased_demand
-L01CE02,IT,2026-11-27,13,IRINOTECAN CLORIDRATO TRIIDRATO,6,nee,production_delay
+L01CE02,IT,2026-11-27,13,IRINOTECAN CLORIDRATO TRIIDRATO,7,nee,production_delay
 N03AX14,IT,2026-11-27,13,LEVETIRACETAM,14,nee,increased_demand
-J01XX08,IT,2026-11-27,13,LINEZOLID,11,nee,
+J01XX08,IT,2026-11-27,13,LINEZOLID,12,nee,
 A07DA03,IT,2026-11-27,13,LOPERAMIDE CLORIDRATO,8,nee,increased_demand
 N05AE05,IT,2026-11-27,13,LURASIDONE CLORIDRATO,2,nee,production_delay
 C10AX15,IT,2026-11-27,13,ACIDO BEMPEDOICO,4,nee,production_delay
@@ -282,16 +282,16 @@ V08AB02,SI,2026-11-27,13,iohexolum,10,nee,
 C08CA06,GR,2026-11-29,15,NIMODIPINE,5,nee,supply_problem
 C02AC05,SK,2026-11-29,15,Moxonidín,6,nee,
 A03FA01,AU,2026-11-30,16,metoclopramide hydrochloride monohydrate,9,nee,production_delay
-N05AH04,AU,2026-11-30,16,quetiapine fumarate,25,nee,increased_demand
+N05AH04,AU,2026-11-30,16,quetiapine fumarate,26,nee,increased_demand
 L04AB04,GR,2026-11-30,16,ADALIMUMAB,13,nee,increased_demand
 L04AX05,GR,2026-11-30,16,PIRFENIDONE,6,nee,supply_problem
 N05BA06,GR,2026-11-30,16,LORAZEPAM,9,nee,supply_problem
-N05AH04,HR,2026-11-30,16,kvetiapinfumarat,25,nee,production_delay
+N05AH04,HR,2026-11-30,16,kvetiapinfumarat,26,nee,production_delay
 H05BX01,IT,2026-11-30,16,CINACALCET,15,nee,production_delay
 A11CC05,IT,2026-11-30,16,COLECALCIFEROLO,8,nee,production_delay
 A11CC05,IT,2026-11-30,16,COLECALCIFEROLO,8,nee,commercial
-A04AD12,IT,2026-11-30,16,APREPITANT + APREPITANT,14,nee,discontinuation
-A02BC03,IT,2026-11-30,16,LANSOPRAZOLO,8,nee,discontinuation
+A04AD12,IT,2026-11-30,16,APREPITANT + APREPITANT,15,nee,discontinuation
+A02BC03,IT,2026-11-30,16,LANSOPRAZOLO,9,nee,discontinuation
 M01AE03,IT,2026-11-30,16,KETOPROFENE SALE DI LISINA,5,nee,increased_demand
 L04AA06,IT,2026-11-30,16,MICOFENOLATO MOFETILE,8,nee,
 M01AX17,IT,2026-11-30,16,NIMESULIDE,3,nee,discontinuation
@@ -303,7 +303,7 @@ C09CA08,IT,2026-11-30,16,OLMESARTAN MEDOXOMIL,8,nee,production_delay
 C09CA08,IT,2026-11-30,16,OLMESARTAN MEDOXOMIL,8,nee,production_delay
 C09CA08,IT,2026-11-30,16,OLMESARTAN MEDOXOMIL,8,nee,production_delay
 C09AA04,IT,2026-11-30,16,PERINDOPRIL TERT-BUTILAMINA,11,nee,production_delay
-N05AH04,IT,2026-11-30,16,QUETIAPINA FUMARATO,25,nee,increased_demand
+N05AH04,IT,2026-11-30,16,QUETIAPINA FUMARATO,26,nee,increased_demand
 V03AE02,IT,2026-11-30,16,SEVELAMER,5,nee,discontinuation
 C10BX05,IT,2026-11-30,16,ACIDO ACETILSALICILICO + ROSUVASTATINA,1,nee,temporary_discontinuation
 S02AA15,IT,2026-11-30,16,CIPROFLOXACINA CLORIDRATO,1,nee,increased_demand
@@ -312,7 +312,7 @@ J01XA01,IT,2026-11-30,16,VANCOMICINA CLORIDRATO,8,nee,production_delay
 L04AA24,SE,2026-11-30,16,abatacept,1,nee,production_delay
 C09AA05,SE,2026-11-30,16,ramipril,14,nee,
 J01CE02,SE,2026-11-30,16,fenoximetylpenicillinkalium,6,nee,
-R06AX27,SE,2026-11-30,16,desloratadin,8,nee,
+R06AX27,SE,2026-11-30,16,desloratadin,9,nee,
 N07BA01,SK,2026-11-30,16,Nikotín,5,nee,
 B05BA10,SK,2026-11-30,16,Kombinácie,6,nee,
 C09CA07,SK,2026-11-30,16,Telmisartan,11,nee,
@@ -325,15 +325,15 @@ C10AA05,GR,2026-12-01,17,ATORVASTATIN CALCIUM TRIHYDRATE,19,nee,supply_problem
 J01DC10,GR,2026-12-01,17,CEFPROZIL MONOHYDRATE,4,nee,supply_problem
 L04AX04,GR,2026-12-01,17,LENALIDOMIDE HYDROCHLORIDE,18,nee,supply_problem
 S02AA15,GR,2026-12-01,17,CIPROFLOXACIN HYDROCHLORIDE MONOHYDRATE,1,nee,supply_problem
-N05BA12,IT,2026-12-01,17,ALPRAZOLAM,11,nee,discontinuation
-N05BA12,IT,2026-12-01,17,ALPRAZOLAM,11,nee,production_delay
+N05BA12,IT,2026-12-01,17,ALPRAZOLAM,12,nee,discontinuation
+N05BA12,IT,2026-12-01,17,ALPRAZOLAM,12,nee,production_delay
 L04AA32,IT,2026-12-01,17,APREMILAST,6,nee,increased_demand
 N07CA01,IT,2026-12-01,17,BETAISTINA DICLORIDRATO,7,nee,discontinuation
 J01DD13,IT,2026-12-01,17,CEFPODOXIMA,2,nee,discontinuation
 B01AC04,IT,2026-12-01,17,CLOPIDOGREL IDROGENO SOLFATO,11,nee,production_delay
 B05BB02,IT,2026-12-01,17,CALCIO GLUCONATO + GLUCOSIO (DESTROSIO) MONOIDRATO + MAGNESI,5,nee,temporary_discontinuation
 G03CA03,IT,2026-12-01,17,ESTRADIOLO,17,nee,increased_demand
-L01DB03,IT,2026-12-01,17,EPIRUBICINA CLORIDRATO,10,nee,production_delay
+L01DB03,IT,2026-12-01,17,EPIRUBICINA CLORIDRATO,11,nee,production_delay
 D11AX10,IT,2026-12-01,17,FINASTERIDE,6,nee,production_delay
 D07CC01,IT,2026-12-01,17,BETAMETASONE,1,nee,temporary_discontinuation
 L04AB06,IT,2026-12-01,17,GOLIMUMAB,6,nee,increased_demand
@@ -343,7 +343,7 @@ B02BD02,IT,2026-12-01,17,OCTOCOG ALFA,8,nee,discontinuation
 N03AX14,IT,2026-12-01,17,LEVETIRACETAM,14,nee,production_delay
 C09AA03,IT,2026-12-01,17,LISINOPRIL DIIDRATO,8,nee,discontinuation
 N05BA06,IT,2026-12-01,17,LORAZEPAM,9,nee,production_delay
-A10BA02,IT,2026-12-01,17,METFORMINA CLORIDRATO,15,nee,discontinuation
+A10BA02,IT,2026-12-01,17,METFORMINA CLORIDRATO,16,nee,discontinuation
 R03DX09,IT,2026-12-01,17,MEPOLIZUMAB,2,nee,discontinuation
 A04AA01,IT,2026-12-01,17,ONDANSETRON CLORIDRATO DIIDRATO,13,nee,production_delay
 J01CR05,IT,2026-12-01,17,PIPERACILLINA + TAZOBACTAM,7,nee,increased_demand
@@ -358,9 +358,9 @@ L04AC05,IT,2026-12-01,17,USTEKINUMAB,10,nee,production_delay
 C09DA03,IT,2026-12-01,17,IDROCLOROTIAZIDE + VALSARTAN,12,nee,production_delay
 C09CA03,IT,2026-12-01,17,VALSARTAN,11,nee,production_delay
 L04AX03,IT,2026-12-01,17,METOTREXATO,7,nee,production_delay
-A02BC02,IT,2026-12-01,17,PANTOPRAZOLO SODICO SESQUIDRATO,15,nee,production_delay
-A02BC02,IT,2026-12-01,17,PANTOPRAZOLO SODICO SESQUIDRATO,15,nee,production_delay
-S01XA18,NO,2026-12-01,17,ciklosporin,10,nee,production_delay
+A02BC02,IT,2026-12-01,17,PANTOPRAZOLO SODICO SESQUIDRATO,16,nee,production_delay
+A02BC02,IT,2026-12-01,17,PANTOPRAZOLO SODICO SESQUIDRATO,16,nee,production_delay
+S01XA18,NO,2026-12-01,17,ciklosporin,11,nee,production_delay
 S01EE01,NO,2026-12-01,17,latanoprost,6,nee,production_delay
 R03BB07,NO,2026-12-01,17,umeklidiniumbromid,1,nee,production_delay
 L04AX06,NO,2026-12-01,17,pomalidomid,9,nee,production_delay
@@ -372,7 +372,7 @@ P01BB51,NO,2026-12-01,17,"atovakvon, proguanilhydroklorid",6,nee,production_dela
 B01AB05,NO,2026-12-01,17,enoksaparinnatrium,9,nee,production_delay
 N06AB10,SE,2026-12-01,17,escitalopramoxalat,17,nee,increased_demand
 J01CE02,SE,2026-12-01,17,fenoximetylpenicillinkalium,6,nee,
-N05AH03,SE,2026-12-01,17,olanzapin,23,nee,
+N05AH03,SE,2026-12-01,17,olanzapin,25,nee,
 S01BA01,SE,2026-12-01,17,dexametasonnatriumfosfat,4,nee,
 J01CE02,SE,2026-12-01,17,fenoximetylpenicillinkalium,6,nee,
 L01EA02,SE,2026-12-01,17,dasatinib (vattenfri),8,nee,
@@ -384,12 +384,12 @@ L01EA02,SE,2026-12-01,17,dasatinib (vattenfri),8,nee,
 A12AA04,SE,2026-12-01,17,kalciumkarbonat,2,nee,
 H02AB04,SK,2026-12-01,17,Metylprednizolón,8,nee,
 G04BD08,SK,2026-12-01,17,Solifenacín,9,nee,
-A04AD12,SK,2026-12-01,17,Aprepitant,14,nee,
+A04AD12,SK,2026-12-01,17,Aprepitant,15,nee,
 N04BC04,SK,2026-12-01,17,Ropinirol,13,nee,
 N03AX09,SK,2026-12-01,17,Lamotrigín,10,nee,
-G04BE03,AU,2026-12-02,18,sildenafil citrate,16,nee,production_delay
+G04BE03,AU,2026-12-02,18,sildenafil citrate,17,nee,production_delay
 V08CA09,IT,2026-12-02,18,GADOBUTROLO,5,nee,
-G04BE03,IT,2026-12-02,18,SILDENAFIL CITRATO,16,nee,increased_demand
+G04BE03,IT,2026-12-02,18,SILDENAFIL CITRATO,17,nee,increased_demand
 N06BA12,SE,2026-12-02,18,lisdexamfetamindimesilat,6,nee,
 N05AX12,IT,2026-12-03,19,ARIPIPRAZOLO,17,nee,
 B05XA05,IT,2026-12-03,19,MAGNESIO SOLFATO EPTAIDRATO,4,nee,production_delay
@@ -404,12 +404,12 @@ L04AC05,SE,2026-12-06,22,ustekinumab,10,nee,production_delay
 D07AC13,SE,2026-12-06,22,mometasonfuroat,6,nee,
 N06AB10,SK,2026-12-06,22,Escitalopram,17,nee,
 L02BG04,GR,2026-12-07,23,LETROZOLE,5,nee,supply_problem
-M01AB16,IT,2026-12-07,23,ACECLOFENAC,4,nee,increased_demand
+M01AB16,IT,2026-12-07,23,ACECLOFENAC,5,nee,increased_demand
 C10BX09,IT,2026-12-07,23,AMLODIPINA + ROSUVASTATINA,1,nee,discontinuation
 B01AE07,IT,2026-12-07,23,DABIGATRAN ETEXILATO,15,nee,commercial
 B01AE07,IT,2026-12-07,23,DABIGATRAN ETEXILATO,15,nee,production_delay
 J01FF01,IT,2026-12-07,23,CLINDAMICINA CLORIDRATO,12,nee,production_delay
-B03XA01,IT,2026-12-07,23,EPOETINA TETA,12,nee,production_delay
+B03XA01,IT,2026-12-07,23,EPOETINA TETA,13,nee,production_delay
 L04AX04,IT,2026-12-07,23,LENALIDOMIDE,18,nee,production_delay
 C09DA03,IT,2026-12-07,23,IDROCLOROTIAZIDE + VALSARTAN,12,nee,production_delay
 N01AX14,NO,2026-12-07,23,esketaminhydroklorid,1,nee,logistics
@@ -419,14 +419,14 @@ L02BG03,SK,2026-12-07,23,Anastrozol,6,nee,
 C09AA05,SK,2026-12-07,23,Ramipril,14,nee,
 L01BC01,AU,2026-12-08,24,cytarabine,10,nee,production_delay
 J01DC02,IT,2026-12-08,24,CEFUROXIMA SODICA,9,nee,temporary_discontinuation
-R03DX05,IT,2026-12-08,24,OMALIZUMAB,3,nee,increased_demand
-R03DX05,IT,2026-12-08,24,OMALIZUMAB,3,nee,increased_demand
+R03DX05,IT,2026-12-08,24,OMALIZUMAB,4,nee,increased_demand
+R03DX05,IT,2026-12-08,24,OMALIZUMAB,4,nee,increased_demand
 D11AX10,SE,2026-12-08,24,finasterid,6,nee,
 D01AE15,GR,2026-12-09,25,TERBINAFINE HYDROCHLORIDE,5,nee,production_delay
 C09CA08,IT,2026-12-09,25,OLMESARTAN MEDOXOMIL,8,nee,production_delay
-A07EC02,AU,2026-12-10,26,mesalazine,15,nee,logistics
-B03XA01,GR,2026-12-10,26,EPOETIN ALFA (RECOMBINANT),12,nee,production_delay
-N03AX11,GR,2026-12-10,26,TOPIRAMATE,12,nee,production_delay
+A07EC02,AU,2026-12-10,26,mesalazine,17,nee,logistics
+B03XA01,GR,2026-12-10,26,EPOETIN ALFA (RECOMBINANT),13,nee,production_delay
+N03AX11,GR,2026-12-10,26,TOPIRAMATE,13,nee,production_delay
 C10AA01,SE,2026-12-10,26,simvastatin,15,nee,quality
 L01CE01,SE,2026-12-10,26,topotekanhydroklorid,9,nee,
 N03AX14,SK,2026-12-10,26,Levetiracetam,14,nee,
@@ -434,7 +434,7 @@ J06BA02,SK,2026-12-10,26,Normálne ľudské imunoglobulíny na intravenózne pou
 G04BE08,AU,2026-12-11,27,tadalafil,14,nee,production_delay
 N05AX12,AU,2026-12-11,27,aripiprazole,17,nee,production_delay
 N05AX12,AU,2026-12-11,27,aripiprazole,17,nee,production_delay
-N03AX11,AU,2026-12-11,27,topiramate,12,nee,commercial
+N03AX11,AU,2026-12-11,27,topiramate,13,nee,commercial
 C07AB12,AU,2026-12-11,27,nebivolol hydrochloride,3,nee,production_delay
 N01AH06,AU,2026-12-11,27,remifentanil hydrochloride,9,nee,production_delay
 B05AA06,IT,2026-12-11,27,CLORURO DI CALCIO + GELATINA + MAGNESIO + POTASSIO CLORURO +,1,nee,discontinuation
@@ -448,7 +448,7 @@ N06BA09,AU,2026-12-14,30,atomoxetine hydrochloride,19,nee,production_delay
 J01CR02,IT,2026-12-14,30,ACIDO CLAVULANICO + AMOXICILLINA,6,nee,
 L01BC06,IT,2026-12-14,30,CAPECITABINA,10,nee,increased_demand
 L04AX04,IT,2026-12-14,30,LENALIDOMIDE,18,nee,production_delay
-N05AH03,IT,2026-12-14,30,OLANZAPINA,23,nee,production_delay
+N05AH03,IT,2026-12-14,30,OLANZAPINA,25,nee,production_delay
 L04AC05,IT,2026-12-14,30,USTEKINUMAB,10,nee,production_delay
 N02BE01,NO,2026-12-14,30,paracetamol,15,nee,production_delay
 G04BE08,SE,2026-12-14,30,tadalafil,14,nee,
@@ -458,18 +458,18 @@ S01EE01,SK,2026-12-14,30,Latanoprost,6,nee,
 L04AA06,SK,2026-12-14,30,Kyselina mykofenolová,8,nee,
 N06AG02,AU,2026-12-15,31,moclobemide,2,nee,production_delay
 N06AF04,AU,2026-12-15,31,tranylcypromine sulfate,1,nee,production_delay
-N01AX10,AU,2026-12-15,31,propofol,10,nee,production_delay
+N01AX10,AU,2026-12-15,31,propofol,12,nee,production_delay
 C09DB02,GR,2026-12-15,31,"OLMESARTAN MEDOXOMIL, AMLODIPINE BESYLATE",4,nee,supply_problem
 G04BD11,GR,2026-12-15,31,FESOTERODINE FUMARATE,4,nee,production_delay
 G04BD11,GR,2026-12-15,31,FESOTERODINE FUMARATE,4,nee,production_delay
 J01XA04,GR,2026-12-15,31,DALBAVANCIN HYDROCHLORIDE,2,nee,increased_demand
 L01BC06,GR,2026-12-15,31,CAPECITABINE,10,nee,supply_problem
 L02AE02,GR,2026-12-15,31,LEUPRORELIN ACETATE,8,nee,production_delay
-N05BA12,IT,2026-12-15,31,ALPRAZOLAM,11,nee,production_delay
+N05BA12,IT,2026-12-15,31,ALPRAZOLAM,12,nee,production_delay
 N02BA51,IT,2026-12-15,31,ACIDO ACETILSALICILICO + ACIDO ASCORBICO,1,nee,increased_demand
 N03AG01,IT,2026-12-15,31,SODIO VALPROATO,12,nee,production_delay
 L01BC05,IT,2026-12-15,31,GEMCITABINA CLORIDRATO,12,nee,production_delay
-B05BC01,IT,2026-12-15,31,MANNITOLO,3,nee,discontinuation
+B05BC01,IT,2026-12-15,31,MANNITOLO,4,nee,discontinuation
 A06AD65,IT,2026-12-15,31,ACIDO ASCORBICO + MACROGOL 3350 + POTASSIO CLORURO + SODIO A,14,nee,regulatory
 N02BE01,IT,2026-12-15,31,PARACETAMOLO,15,nee,production_delay
 A10BJ06,IT,2026-12-15,31,SEMAGLUTIDE,4,nee,discontinuation
@@ -488,24 +488,24 @@ J02AX04,SK,2026-12-15,31,Kaspofungín,7,nee,
 J01DC10,SK,2026-12-15,31,Cefprozil,4,nee,
 L03AA02,SK,2026-12-16,32,Filgrastim,11,nee,
 C09DX01,IT,2026-12-17,33,AMLODIPINA + IDROCLOROTIAZIDE + VALSARTAN,5,nee,production_delay
-G04BE03,AU,2026-12-18,34,sildenafil citrate,16,nee,production_delay
+G04BE03,AU,2026-12-18,34,sildenafil citrate,17,nee,production_delay
 N07BA03,AU,2026-12-18,34,varenicline tartrate,5,nee,production_delay
-N02AE01,SE,2026-12-18,34,buprenorfin,11,nee,
-M01AH05,IT,2026-12-20,36,ETORICOXIB,11,nee,production_delay
+N02AE01,SE,2026-12-18,34,buprenorfin,12,nee,
+M01AH05,IT,2026-12-20,36,ETORICOXIB,12,nee,production_delay
 N06DA03,IT,2026-12-20,36,RIVASTIGMINA,13,nee,production_delay
 C01CA24,SE,2026-12-20,36,adrenalin,13,nee,
-A10BA02,SE,2026-12-20,36,metforminhydroklorid,15,nee,
-N03AX11,AU,2026-12-21,37,topiramate,12,nee,production_delay
+A10BA02,SE,2026-12-20,36,metforminhydroklorid,16,nee,
+N03AX11,AU,2026-12-21,37,topiramate,13,nee,production_delay
 B03BA03,AU,2026-12-21,37,hydroxocobalamin chloride,4,nee,increased_demand
 C01CA24,IT,2026-12-21,37,EPINEFRINA,13,nee,production_delay
-C07AG02,IT,2026-12-21,37,CARVEDILOLO,12,nee,discontinuation
+C07AG02,IT,2026-12-21,37,CARVEDILOLO,13,nee,discontinuation
 N02CC06,IT,2026-12-21,37,ELETRIPTAN BROMIDRATO,8,nee,production_delay
 J02AC01,IT,2026-12-21,37,FLUCONAZOLO,8,nee,production_delay
 H01AC01,IT,2026-12-21,37,SOMATROPINA,5,nee,discontinuation
-J02AC02,IT,2026-12-21,37,ITRACONAZOLO,9,nee,production_delay
+J02AC02,IT,2026-12-21,37,ITRACONAZOLO,10,nee,production_delay
 C09AA03,IT,2026-12-21,37,LISINOPRIL,8,nee,production_delay
 N02AA05,IT,2026-12-21,37,OSSICODONE CLORIDRATO,9,nee,production_delay
-L01CD01,IT,2026-12-21,37,PACLITAXEL,10,nee,discontinuation
+L01CD01,IT,2026-12-21,37,PACLITAXEL,11,nee,discontinuation
 B05BB01,IT,2026-12-21,37,SODIO CLORURO,13,nee,production_delay
 L04AK02,IT,2026-12-21,37,TERIFLUNOMIDE,8,nee,production_delay
 N06DA03,SE,2026-12-21,37,rivastigmin,13,nee,
@@ -516,25 +516,25 @@ J07AL02,SE,2026-12-21,37,"pneumokockpolysackarid typ 1, pneumokockpolysackarid t
 N06DA02,SE,2026-12-21,37,donepezilhydroklorid (vattenfri),14,nee,
 B01AF02,SE,2026-12-21,37,apixaban,6,nee,increased_demand
 L02BB03,SE,2026-12-21,37,bikalutamid,4,nee,
-G04BE03,SE,2026-12-21,37,sildenafilcitrat,16,nee,
+G04BE03,SE,2026-12-21,37,sildenafilcitrat,17,nee,
 L01DC01,AU,2026-12-22,38,bleomycin sulfate,1,nee,production_delay
 C09AA02,AU,2026-12-22,38,enalapril maleate,10,nee,production_delay
 S01HA02,IT,2026-12-22,38,OXIBUPROCAINA CLORIDRATO,2,nee,production_delay
 B05BB02,IT,2026-12-22,38,GLUCOSIO (DESTROSIO) ANIDRO + POTASSIO CLORURO + POTASSIO FO,5,nee,commercial
 B05BB02,IT,2026-12-22,38,GLUCOSIO (DESTROSIO) ANIDRO + MAGNESIO CLORURO ESAIDRATO + P,5,nee,commercial
-J01FA01,IT,2026-12-22,38,ERITROMICINA LATTOBIONATO,10,nee,production_delay
-J01FA01,IT,2026-12-22,38,ERITROMICINA LATTOBIONATO,10,nee,production_delay
-M01AH05,IT,2026-12-22,38,ETORICOXIB,11,nee,production_delay
+J01FA01,IT,2026-12-22,38,ERITROMICINA LATTOBIONATO,11,nee,production_delay
+J01FA01,IT,2026-12-22,38,ERITROMICINA LATTOBIONATO,11,nee,production_delay
+M01AH05,IT,2026-12-22,38,ETORICOXIB,12,nee,production_delay
 M01AE01,IT,2026-12-22,38,IBUPROFENE,12,nee,production_delay
-R03DC03,IT,2026-12-22,38,MONTELUKAST,15,nee,production_delay
+R03DC03,IT,2026-12-22,38,MONTELUKAST,16,nee,production_delay
 A10BH01,IT,2026-12-22,38,SITAGLIPTIN,12,nee,production_delay
 C09DA03,IT,2026-12-22,38,IDROCLOROTIAZIDE + VALSARTAN,12,nee,production_delay
 P01AB01,SE,2026-12-22,38,metronidazol,3,nee,
 H05BX01,AU,2026-12-23,39,cinacalcet hydrochloride,15,nee,production_delay
-D04AA10,IT,2026-12-23,39,PROMETAZINA CLORIDRATO,3,nee,temporary_discontinuation
-N01AX10,IT,2026-12-23,39,PROPOFOL,10,nee,production_delay
+D04AA10,IT,2026-12-23,39,PROMETAZINA CLORIDRATO,4,nee,temporary_discontinuation
+N01AX10,IT,2026-12-23,39,PROPOFOL,12,nee,production_delay
 V09DX01,SE,2026-12-23,39,tauroselcholsyra(Se-75),4,nee,production_delay
-J01XA02,SK,2026-12-23,39,Teikoplanín,11,nee,
+J01XA02,SK,2026-12-23,39,Teikoplanín,12,nee,
 A07EA06,GR,2026-12-24,40,BUDESONIDE,4,nee,supply_problem
 M01AB15,IT,2026-12-24,40,KETOROLAC TROMETAMOLO,3,nee,increased_demand
 V09DX01,NO,2026-12-24,40,tauroselkolsyre,4,nee,
@@ -546,7 +546,7 @@ J01DD01,IT,2026-12-28,44,CEFOTAXIMA SODICA,11,nee,commercial
 C07AB07,IT,2026-12-28,44,BISOPROLOLO FUMARATO,16,nee,production_delay
 G03AA07,IT,2026-12-28,44,ETINILESTRADIOLO + LEVONORGESTREL,2,nee,production_delay
 N02AA01,IT,2026-12-28,44,MORFINA CLORIDRATO,7,nee,production_delay
-A02BC01,IT,2026-12-28,44,OMEPRAZOLO SODICO,10,nee,commercial
+A02BC01,IT,2026-12-28,44,OMEPRAZOLO SODICO,11,nee,commercial
 J01DD04,IT,2026-12-28,44,CEFTRIAXONE DISODICO,7,nee,commercial
 G04CA52,NO,2026-12-28,44,"dutasterid, tamsulosinhydroklorid",5,nee,increased_demand
 N02BE01,SE,2026-12-28,44,paracetamol,15,nee,
@@ -562,18 +562,18 @@ L01CA01,SE,2026-12-29,45,vinblastinsulfat,6,nee,
 C09DA08,IT,2026-12-30,46,OLMESARTAN MEDOXOMIL,4,nee,production_delay
 C09DA08,IT,2026-12-30,46,IDROCLOROTIAZIDE + OLMESARTAN MEDOXOMIL,4,nee,production_delay
 C09DA08,IT,2026-12-30,46,IDROCLOROTIAZIDE + OLMESARTAN MEDOXOMIL,4,nee,production_delay
-L01CD01,IT,2026-12-30,46,PACLITAXEL,10,nee,production_delay
+L01CD01,IT,2026-12-30,46,PACLITAXEL,11,nee,production_delay
 C03CA02,GR,2026-12-31,47,BUMETANIDE,1,nee,supply_problem
 D01AC08,GR,2026-12-31,47,KETOCONAZOLE,6,nee,supply_problem
 C02KX02,IT,2026-12-31,47,AMBRISENTAN,6,nee,commercial
 L01BC07,IT,2026-12-31,47,AZACITIDINA,15,nee,temporary_discontinuation
 L01AB01,IT,2026-12-31,47,BUSULFAN,6,nee,commercial
-L01CE02,IT,2026-12-31,47,IRINOTECAN CLORIDRATO TRIIDRATO,6,nee,production_delay
+L01CE02,IT,2026-12-31,47,IRINOTECAN CLORIDRATO TRIIDRATO,7,nee,production_delay
 V03AB04,IT,2026-12-31,47,PRALIDOXIMA METILSOLFATO,1,nee,discontinuation
 J01XX09,IT,2026-12-31,47,DAPTOMICINA,5,nee,discontinuation
 J01XX09,IT,2026-12-31,47,DAPTOMICINA,5,nee,discontinuation
 S01EC03,IT,2026-12-31,47,DORZOLAMIDE,5,nee,commercial
-L01DB01,IT,2026-12-31,47,DOXORUBICINA CLORIDRATO,16,nee,commercial
+L01DB01,IT,2026-12-31,47,DOXORUBICINA CLORIDRATO,17,nee,commercial
 N06AB05,IT,2026-12-31,47,PAROXETINA,10,nee,production_delay
 J05AF05,IT,2026-12-31,47,LAMIVUDINA,4,nee,discontinuation
 N02AB03,IT,2026-12-31,47,FENTANIL,10,nee,discontinuation
@@ -583,17 +583,17 @@ B02BD02,IT,2026-12-31,47,OCTOCOG ALFA,8,nee,discontinuation
 M05BA07,IT,2026-12-31,47,RISEDRONATO SODICO,3,nee,production_delay
 J01DD04,IT,2026-12-31,47,CEFTRIAXONE SODICO,7,nee,discontinuation
 R03AK06,IT,2026-12-31,47,FLUTICASONE PROPIONATO + SALMETEROLO XINAFOATO,6,nee,regulatory
-J05AB11,IT,2026-12-31,47,VALACICLOVIR CLORIDRATO MONOIDRATO,10,nee,increased_demand
+J05AB11,IT,2026-12-31,47,VALACICLOVIR CLORIDRATO MONOIDRATO,12,nee,increased_demand
 J07BP01,NO,2026-12-31,47,"chikungunyavirus, stamme chikv lr2006-opy1, helt, attenuert",1,nee,commercial
 J07BP01,NO,2026-12-31,47,"chikungunyavirus, stamme chikv lr2006-opy1, helt, attenuert",1,nee,commercial
 M01AB05,SE,2026-12-31,47,diklofenaknatrium,8,nee,production_delay
-C07AG02,SE,2026-12-31,47,karvedilol,12,nee,
-C07AG02,SE,2026-12-31,47,karvedilol,12,nee,
+C07AG02,SE,2026-12-31,47,karvedilol,13,nee,
+C07AG02,SE,2026-12-31,47,karvedilol,13,nee,
 N04BC04,AU,2027-01-01,48,ropinirole hydrochloride,13,nee,production_delay
 N05AX12,AU,2027-01-01,48,aripiprazole,17,nee,production_delay
 R05CB05,AU,2027-01-01,48,mesna,2,nee,production_delay
 V03AB35,AU,2027-01-01,48,sugammadex sodium,12,nee,increased_demand
-A07EC02,GR,2027-01-01,48,MESALAZINE,15,nee,production_delay
+A07EC02,GR,2027-01-01,48,MESALAZINE,17,nee,production_delay
 C09DX03,GR,2027-01-01,48,"OLMESARTAN MEDOXOMIL, AMLODIPINE BESYLATE, HYDROCHLOROTHIAZI",4,nee,supply_problem
 C09DX03,GR,2027-01-01,48,"OLMESARTAN MEDOXOMIL, AMLODIPINE BESYLATE, HYDROCHLOROTHIAZI",4,nee,supply_problem
 J05AB01,IT,2027-01-01,48,ACICLOVIR,8,nee,production_delay
@@ -605,11 +605,11 @@ C03CA04,IT,2027-01-01,48,TORASEMIDE,3,nee,discontinuation
 G04CB02,IT,2027-01-01,48,DUTASTERIDE,7,nee,production_delay
 L01EB02,IT,2027-01-01,48,ERLOTINIB CLORIDRATO,6,nee,production_delay
 M01AB15,IT,2027-01-01,48,KETOROLAC TROMETAMOLO,3,nee,temporary_discontinuation
-V03AC03,IT,2027-01-01,48,DEFERASIROX,14,nee,discontinuation
-V03AC03,IT,2027-01-01,48,DEFERASIROX,14,nee,discontinuation
-V03AC03,IT,2027-01-01,48,DEFERASIROX,14,nee,discontinuation
+V03AC03,IT,2027-01-01,48,DEFERASIROX,15,nee,discontinuation
+V03AC03,IT,2027-01-01,48,DEFERASIROX,15,nee,discontinuation
+V03AC03,IT,2027-01-01,48,DEFERASIROX,15,nee,discontinuation
 C10BA05,IT,2027-01-01,48,ATORVASTATINA + EZETIMIBE,8,nee,production_delay
-D06AX07,IT,2027-01-01,48,GENTAMICINA SOLFATO,2,nee,temporary_discontinuation
+D06AX07,IT,2027-01-01,48,GENTAMICINA SOLFATO,3,nee,temporary_discontinuation
 L01CA05,IT,2027-01-01,48,VINFLUNINE,7,nee,production_delay
 N04BA03,IT,2027-01-01,48,CARBIDOPA + ENTACAPONE + LEVODOPA,4,nee,production_delay
 N04BA03,IT,2027-01-01,48,CARBIDOPA + ENTACAPONE + LEVODOPA,4,nee,production_delay
@@ -617,7 +617,7 @@ B05BA02,IT,2027-01-01,48,ACIDI OMEGA-3 TRIGLICERIDI + OLIO DI SOIA + TRIGLICERID
 G03AA12,IT,2027-01-01,48,DROSPIRENONE + ETINILESTRADIOLO,7,nee,discontinuation
 N04BC01,IT,2027-01-01,48,BROMOCRIPTINA,1,nee,discontinuation
 N02BF02,IT,2027-01-01,48,PREGABALIN,20,nee,production_delay
-N05AH04,IT,2027-01-01,48,QUETIAPINA,25,nee,production_delay
+N05AH04,IT,2027-01-01,48,QUETIAPINA,26,nee,production_delay
 R03AC12,IT,2027-01-01,48,SALMETEROLO XINAFOATO,3,nee,discontinuation
 N07CA02,IT,2027-01-01,48,CINNARIZINA,1,nee,discontinuation
 G04BE09,IT,2027-01-01,48,VARDENAFIL CLORIDRATO TRIIDRATO,5,nee,production_delay
@@ -634,13 +634,13 @@ J01CE02,SE,2027-01-01,48,fenoximetylpenicillinkalium,6,nee,
 S01LA05,SE,2027-01-01,48,aflibercept,5,nee,
 N02AA55,SE,2027-01-01,48,"naloxonhydrokloriddihydrat, oxikodonhydroklorid",5,nee,
 A07DA03,SE,2027-01-01,48,loperamidhydroklorid,8,nee,
-B02BB01,SE,2027-01-01,48,"fibrinogen, humant",8,nee,
+B02BB01,SE,2027-01-01,48,"fibrinogen, humant",9,nee,
 L04AX06,SE,2027-01-01,48,pomalidomid,9,nee,
 L04AX06,SE,2027-01-01,48,pomalidomid,9,nee,
 L04AX06,SE,2027-01-01,48,pomalidomid,9,nee,
-L01DB01,SI,2027-01-01,48,doxorubicinum,16,nee,
-L01CD01,SI,2027-01-01,48,paclitaxelum,10,nee,
-D06BB03,IT,2027-01-02,49,ACICLOVIR,7,nee,production_delay
+L01DB01,SI,2027-01-01,48,doxorubicinum,17,nee,
+L01CD01,SI,2027-01-01,48,paclitaxelum,11,nee,
+D06BB03,IT,2027-01-02,49,ACICLOVIR,8,nee,production_delay
 G04CA01,IT,2027-01-02,49,ALFUZOSINA CLORIDRATO,5,nee,production_delay
 C09AA02,IT,2027-01-02,49,ENALAPRIL MALEATO,10,nee,production_delay
 C09DA03,IT,2027-01-02,49,IDROCLOROTIAZIDE + VALSARTAN,12,nee,production_delay
@@ -650,13 +650,13 @@ A11CC05,IT,2027-01-03,50,COLECALCIFEROLO,8,nee,
 N02BF01,SE,2027-01-03,50,gabapentin,17,nee,
 N04BC05,AU,2027-01-04,51,pramipexole dihydrochloride monohydrate,11,nee,production_delay
 J05AF05,AU,2027-01-04,51,lamivudine,4,nee,production_delay
-L01DB07,AU,2027-01-04,51,mitozantrone hydrochloride,1,nee,production_delay
+L01DB07,AU,2027-01-04,51,mitozantrone hydrochloride,2,nee,production_delay
 N07AX01,GR,2027-01-04,51,PILOCARPINE HYDROCHLORIDE,3,nee,supply_problem
 C09CA03,IT,2027-01-04,51,VALSARTAN,11,nee,discontinuation
 C09CA03,IT,2027-01-04,51,VALSARTAN,11,nee,discontinuation
 C09CA03,IT,2027-01-04,51,VALSARTAN,11,nee,discontinuation
 J07BC02,NO,2027-01-04,51,"hepatitt a-virus, inaktivert",2,nee,increased_demand
-R03AC02,NO,2027-01-04,51,salbutamolsulfat,7,nee,production_delay
+R03AC02,NO,2027-01-04,51,salbutamolsulfat,8,nee,production_delay
 N07BC51,SE,2027-01-04,51,"buprenorfinhydroklorid, naloxonhydrokloriddihydrat",7,nee,
 C10AB02,SE,2027-01-04,51,bezafibrat,2,nee,production_delay
 N02AB03,SE,2027-01-04,51,fentanyl,10,nee,
@@ -667,36 +667,36 @@ C02KX02,SE,2027-01-04,51,ambrisentan,6,nee,
 N06AB04,SE,2027-01-04,51,citalopramhydrobromid,12,nee,
 L01EX02,SK,2027-01-04,51,Sorafenib,9,nee,
 N05AX13,GR,2027-01-05,52,PALIPERIDONE PALMITATE,19,nee,supply_problem
-J01CA04,IT,2027-01-05,52,AMOXICILLINA,9,nee,production_delay
+J01CA04,IT,2027-01-05,52,AMOXICILLINA,10,nee,production_delay
 N02AJ13,IT,2027-01-05,52,PARACETAMOLO + TRAMADOLO CLORIDRATO,6,nee,production_delay
 C09BX01,SK,2027-01-05,52,"Perindopril,amlodipín a indapamid",2,nee,
-J01GB01,AU,2027-01-07,54,tobramycin,6,nee,production_delay
+J01GB01,AU,2027-01-07,54,tobramycin,7,nee,production_delay
 L01AX03,GR,2027-01-07,54,TEMOZOLOMIDE,12,nee,increased_demand
 P01BC01,IT,2027-01-07,54,CHININA CLORIDRATO,3,nee,temporary_discontinuation
-L01DB06,IT,2027-01-07,54,IDARUBICINA CLORIDRATO,4,nee,production_delay
+L01DB06,IT,2027-01-07,54,IDARUBICINA CLORIDRATO,5,nee,production_delay
 N07BB03,SE,2027-01-07,54,akamprosatkalcium,1,nee,
 N07CA01,AU,2027-01-08,55,betahistine dihydrochloride,7,nee,production_delay
 J01CR05,GR,2027-01-08,55,"PIPERACILLIN SODIUM, TAZOBACTAM SODIUM",7,nee,supply_problem
 L04AA32,GR,2027-01-08,55,APREMILAST,6,nee,supply_problem
 L04AA32,GR,2027-01-08,55,APREMILAST,6,nee,supply_problem
-N05AH04,GR,2027-01-08,55,QUETIAPINE FUMARATE,25,nee,supply_problem
+N05AH04,GR,2027-01-08,55,QUETIAPINE FUMARATE,26,nee,supply_problem
 C05AE01,NO,2027-01-08,55,glyseryltrinitrat,1,nee,increased_demand
 C09BX01,SK,2027-01-08,55,"Perindopril,amlodipín a indapamid",2,nee,
-N03AX11,IT,2027-01-09,56,TOPIRAMATO,12,nee,production_delay
+N03AX11,IT,2027-01-09,56,TOPIRAMATO,13,nee,production_delay
 J01XA01,GR,2027-01-11,58,VANCOMYCIN HYDROCHLORIDE,8,nee,supply_problem
 C09BB04,IT,2027-01-11,58,AMLODIPINA + PERINDOPRIL TERT-BUTILAMINA,4,nee,production_delay
-R03DX05,IT,2027-01-11,58,OMALIZUMAB,3,nee,discontinuation
-R03DX05,IT,2027-01-11,58,OMALIZUMAB,3,nee,discontinuation
-J05AB11,SE,2027-01-11,58,valaciklovirhydrokloridhydrat,10,nee,
+R03DX05,IT,2027-01-11,58,OMALIZUMAB,4,nee,discontinuation
+R03DX05,IT,2027-01-11,58,OMALIZUMAB,4,nee,discontinuation
+J05AB11,SE,2027-01-11,58,valaciklovirhydrokloridhydrat,12,nee,
 N02BF02,SE,2027-01-11,58,pregabalin,20,nee,
-L01DB03,IT,2027-01-12,59,EPIRUBICINA CLORIDRATO,10,nee,production_delay
+L01DB03,IT,2027-01-12,59,EPIRUBICINA CLORIDRATO,11,nee,production_delay
 C08CA01,AU,2027-01-13,60,amlodipine besilate,9,nee,increased_demand
 C07AB12,IT,2027-01-13,60,NEBIVOLOLO,3,nee,production_delay
-C07AG02,AU,2027-01-15,62,carvedilol,12,nee,production_delay
+C07AG02,AU,2027-01-15,62,carvedilol,13,nee,production_delay
 C10AB04,AU,2027-01-15,62,gemfibrozil,1,nee,production_delay
 N06AB10,GR,2027-01-15,62,ESCITALOPRAM OXALATE,17,nee,supply_problem
 C07BB12,IT,2027-01-15,62,IDROCLOROTIAZIDE + NEBIVOLOLO,1,nee,production_delay
-N03AX11,IT,2027-01-15,62,TOPIRAMATO,12,nee,production_delay
+N03AX11,IT,2027-01-15,62,TOPIRAMATO,13,nee,production_delay
 N05AX13,SE,2027-01-15,62,paliperidonpalmitat,19,nee,
 N07AA02,SE,2027-01-15,62,pyridostigminbromid,1,nee,
 C03DA04,SE,2027-01-15,62,eplerenon,6,nee,
@@ -705,28 +705,28 @@ N05AX13,SE,2027-01-15,62,paliperidonpalmitat,19,nee,increased_demand
 G03CA03,SK,2027-01-15,62,Estradiol,17,nee,
 L01BA03,AU,2027-01-18,65,raltitrexed,2,nee,production_delay
 V08CA10,SE,2027-01-18,65,dinatriumgadoxetat,2,nee,excipient
-L01DB01,IT,2027-01-19,66,DOXORUBICINA CLORIDRATO,16,nee,production_delay
+L01DB01,IT,2027-01-19,66,DOXORUBICINA CLORIDRATO,17,nee,production_delay
 L01BA03,IT,2027-01-19,66,RALTITREXED,2,nee,production_delay
 C09BA04,SK,2027-01-20,67,Perindopril a diuretiká,6,nee,
 L01CD02,AU,2027-01-21,68,docetaxel,13,nee,production_delay
-V03AC01,AU,2027-01-21,68,desferrioxamine mesilate,2,nee,production_delay
-A02BC01,IT,2027-01-21,68,OMEPRAZOLO,10,nee,discontinuation
-S01XA18,AU,2027-01-23,70,ciclosporin,10,nee,production_delay
+V03AC01,AU,2027-01-21,68,desferrioxamine mesilate,3,nee,production_delay
+A02BC01,IT,2027-01-21,68,OMEPRAZOLO,11,nee,discontinuation
+S01XA18,AU,2027-01-23,70,ciclosporin,11,nee,production_delay
 C10AX14,GR,2027-01-25,72,ALIROCUMAB,4,nee,supply_problem
 C10AX14,GR,2027-01-25,72,ALIROCUMAB,4,nee,supply_problem
-J05AB11,SE,2027-01-25,72,valaciklovirhydrokloridhydrat,10,nee,
+J05AB11,SE,2027-01-25,72,valaciklovirhydrokloridhydrat,12,nee,
 N06BA09,SK,2027-01-25,72,Atomoxetín,19,nee,
-L01DB01,GR,2027-01-29,76,DOXORUBICIN HYDROCHLORIDE,16,nee,production_delay
-L01CE02,IT,2027-01-29,76,IRINOTECAN CLORIDRATO TRIIDRATO,6,nee,production_delay
+L01DB01,GR,2027-01-29,76,DOXORUBICIN HYDROCHLORIDE,17,nee,production_delay
+L01CE02,IT,2027-01-29,76,IRINOTECAN CLORIDRATO TRIIDRATO,7,nee,production_delay
 N06DA03,IT,2027-01-29,76,RIVASTIGMINA,13,nee,discontinuation
 N05AX13,SE,2027-01-29,76,paliperidonpalmitat,19,nee,
-A07EC02,GR,2027-01-30,77,MESALAZINE,15,nee,increased_demand
+A07EC02,GR,2027-01-30,77,MESALAZINE,17,nee,increased_demand
 G04CB02,IT,2027-01-30,77,DUTASTERIDE,7,nee,production_delay
 C07AB02,MY,2027-01-30,77,METOPROLOL TARTRATE,15,nee,commercial
 C10AB05,GR,2027-01-31,78,FENOFIBRATE,3,nee,supply_problem
-N06AX21,IT,2027-01-31,78,DULOXETINA CLORIDRATO,17,nee,discontinuation
+N06AX21,IT,2027-01-31,78,DULOXETINA CLORIDRATO,18,nee,discontinuation
 C08CA01,IT,2027-01-31,78,AMLODIPINA BESILATO,9,nee,discontinuation
-A02BC01,IT,2027-01-31,78,OMEPRAZOLO,10,nee,discontinuation
+A02BC01,IT,2027-01-31,78,OMEPRAZOLO,11,nee,discontinuation
 D11AX01,IT,2027-01-31,78,MINOXIDIL,3,nee,discontinuation
 M05BA07,IT,2027-01-31,78,RISEDRONATO SODICO,3,nee,production_delay
 C09BB07,IT,2027-01-31,78,AMLODIPINA + RAMIPRIL,5,nee,discontinuation
@@ -739,7 +739,7 @@ L01EA01,AU,2027-02-01,79,imatinib mesilate,10,nee,production_delay
 L01XA03,AU,2027-02-01,79,oxaliplatin,15,nee,production_delay
 L01XX17,GR,2027-02-01,79,TOPOTECAN,2,nee,production_delay
 J01DD01,IT,2027-02-01,79,CEFOTAXIMA SODICA,11,nee,
-V03AC03,IT,2027-02-01,79,DEFERASIROX,14,nee,production_delay
+V03AC03,IT,2027-02-01,79,DEFERASIROX,15,nee,production_delay
 B05BB01,NO,2027-02-01,79,natriumklorid,13,nee,commercial
 V08CA10,NO,2027-02-01,79,gadoksetatdinatrium,2,nee,production_delay
 J01CE02,SE,2027-02-01,79,fenoximetylpenicillinkalium,6,nee,
@@ -750,13 +750,13 @@ C01DX16,AU,2027-02-05,83,nicorandil,2,nee,production_delay
 L01BC01,AU,2027-02-08,86,cytarabine,10,nee,increased_demand
 D06AX01,AU,2027-02-18,96,sodium fusidate,6,nee,production_delay
 G04BE08,SE,2027-02-20,98,tadalafil,14,nee,
-A10BJ02,DK,2027-02-25,103,Liraglutid ATC-kode: A10BJ02 Forventet periode: Fra slut feb,5,nee,commercial
+A10BJ02,DK,2027-02-25,103,Liraglutid ATC-kode: A10BJ02 Forventet periode: Fra slut feb,6,nee,commercial
 L01BC05,AU,2027-02-26,104,gemcitabine hydrochloride,12,nee,increased_demand
 H05BX01,AU,2027-02-26,104,cinacalcet hydrochloride,15,nee,production_delay
 L04AX07,IT,2027-02-28,106,DIMETILFUMARATO,7,nee,production_delay
 J02AC04,IT,2027-02-28,106,POSACONAZOLO,9,nee,discontinuation
 J04AK02,AU,2027-03-01,107,ethambutol hydrochloride,1,nee,commercial
-L01CD01,AU,2027-03-01,107,paclitaxel,10,nee,production_delay
+L01CD01,AU,2027-03-01,107,paclitaxel,11,nee,production_delay
 L01XX08,DE,2027-03-01,107,Pentostatin,3,nee,other
 L01XX08,GR,2027-03-01,107,PENTOSTATIN,3,nee,production_delay
 L02BG04,GR,2027-03-01,107,LETROZOLE,5,nee,production_delay
@@ -767,22 +767,22 @@ C09DA03,IT,2027-03-01,107,IDROCLOROTIAZIDE + VALSARTAN,12,nee,discontinuation
 C09DA03,IT,2027-03-01,107,IDROCLOROTIAZIDE + VALSARTAN,12,nee,discontinuation
 C09DA03,IT,2027-03-01,107,IDROCLOROTIAZIDE + VALSARTAN,12,nee,discontinuation
 C09CA03,IT,2027-03-01,107,VALSARTAN,11,nee,discontinuation
-L01DB01,MY,2027-03-01,107,Doxorubicin Hydrochloride,16,nee,
+L01DB01,MY,2027-03-01,107,Doxorubicin Hydrochloride,17,nee,
 C01EA01,AU,2027-03-08,114,alprostadil,3,nee,production_delay
 C08CA13,IT,2027-03-08,114,LERCANIDIPINA CLORIDRATO,10,nee,regulatory
 L04AX07,AU,2027-03-12,118,dimethyl fumarate,7,nee,production_delay
 C03CA01,AU,2027-03-15,121,furosemide,16,nee,production_delay
 N06BA09,AU,2027-03-15,121,atomoxetine hydrochloride,19,nee,production_delay
-A04AD12,NO,2027-03-15,121,aprepitant,14,nee,increased_demand
+A04AD12,NO,2027-03-15,121,aprepitant,15,nee,increased_demand
 N06BA09,AU,2027-03-22,128,atomoxetine hydrochloride,19,nee,production_delay
 J05AR10,DK,2027-03-25,131,Lopinavir og ritonavir ATC-kode: J05AR10 Forventet periode: ,2,nee,commercial
-N05BA12,SE,2027-03-25,131,alprazolam,11,nee,
-B01AB01,IT,2027-03-30,136,EPARINA SODICA,9,nee,discontinuation
+N05BA12,SE,2027-03-25,131,alprazolam,12,nee,
+B01AB01,IT,2027-03-30,136,EPARINA SODICA,10,nee,discontinuation
 V03AB35,IT,2027-03-31,137,SUGAMMADEX,12,nee,discontinuation
 C10BX09,IT,2027-03-31,137,AMLODIPINA + ROSUVASTATINA,1,nee,discontinuation
 D01AE16,IT,2027-03-31,137,AMOROLFINA,6,nee,discontinuation
 N05AD01,AU,2027-04-01,138,haloperidol decanoate,5,nee,commercial
-A06AD16,AU,2027-04-01,138,mannitol,3,nee,commercial
+A06AD16,AU,2027-04-01,138,mannitol,4,nee,commercial
 C09BB04,IT,2027-04-01,138,AMLODIPINA + PERINDOPRIL TERT-BUTILAMINA,4,nee,production_delay
 C09BB04,IT,2027-04-01,138,AMLODIPINA + PERINDOPRIL TERT-BUTILAMINA,4,nee,production_delay
 C09BB04,IT,2027-04-01,138,AMLODIPINA + PERINDOPRIL TERT-BUTILAMINA,4,nee,production_delay
@@ -792,12 +792,12 @@ N06DA03,IT,2027-04-01,138,RIVASTIGMINA,13,nee,discontinuation
 N06DA03,IT,2027-04-01,138,RIVASTIGMINA,13,nee,discontinuation
 N06DA03,IT,2027-04-01,138,RIVASTIGMINA,13,nee,discontinuation
 J01CE02,SE,2027-04-01,138,fenoximetylpenicillinkalium,6,nee,
-N05AH04,AU,2027-04-02,139,quetiapine fumarate,25,nee,production_delay
+N05AH04,AU,2027-04-02,139,quetiapine fumarate,26,nee,production_delay
 N06BA09,AU,2027-04-05,142,atomoxetine hydrochloride,19,nee,production_delay
 L01XX27,DK,2027-04-25,162,Arseniktrioxid ATC-kode: L01XX27 Forventet periode: Slut apr,4,nee,production_delay
 L01BC05,AU,2027-04-26,163,gemcitabine hydrochloride,12,nee,production_delay
 N06BA09,AU,2027-04-30,167,atomoxetine hydrochloride,19,nee,production_delay
-N06AX21,IT,2027-04-30,167,DULOXETINA CLORIDRATO,17,nee,production_delay
+N06AX21,IT,2027-04-30,167,DULOXETINA CLORIDRATO,18,nee,production_delay
 D08AC02,IT,2027-04-30,167,CLOREXIDINA GLUCONATO,6,nee,discontinuation
 C01EA01,AU,2027-05-01,168,alprostadil,3,nee,production_delay
 C07AB09,DE,2027-05-01,168,Esmololhydrochlorid,5,nee,production_delay
@@ -807,12 +807,12 @@ G04BD04,SK,2027-05-01,168,Oxybutynín,2,nee,
 N06AB03,IT,2027-05-03,170,FLUOXETINA CLORIDRATO,13,nee,production_delay
 L04AX06,IT,2027-06-01,199,POMALIDOMIDE,9,nee,discontinuation
 J01CE02,SE,2027-06-01,199,fenoximetylpenicillinkalium,6,nee,
-L01DB01,GR,2027-06-02,200,DOXORUBICIN HYDROCHLORIDE,16,nee,production_delay
+L01DB01,GR,2027-06-02,200,DOXORUBICIN HYDROCHLORIDE,17,nee,production_delay
 N06BA09,AU,2027-06-18,216,atomoxetine hydrochloride,19,nee,production_delay
 D11AX01,IT,2027-06-30,228,MINOXIDIL,3,nee,discontinuation
-A02BC01,IT,2027-07-01,229,OMEPRAZOLO,10,nee,commercial
+A02BC01,IT,2027-07-01,229,OMEPRAZOLO,11,nee,commercial
 C07AB09,SE,2027-07-01,229,esmololhydroklorid,5,nee,raw_material
-B01AB01,IT,2027-07-31,259,EPARINA SODICA,9,nee,discontinuation
+B01AB01,IT,2027-07-31,259,EPARINA SODICA,10,nee,discontinuation
 C07AB09,SE,2027-08-01,260,esmololhydroklorid,5,nee,raw_material
 B03AA07,NO,2027-09-01,291,"jern(ii)sulfat, tørret",7,nee,increased_demand
 L01BA04,IT,2027-11-30,381,PEMETREXED DISODICO,12,nee,discontinuation
@@ -822,7 +822,7 @@ N04BC01,IT,2028-01-01,413,BROMOCRIPTINA,1,nee,discontinuation
 J02AC01,IT,2028-01-31,443,FLUCONAZOLO,8,nee,discontinuation
 C10BA05,SK,2028-02-20,463,Atorvastatín a ezetimib,8,nee,
 J01DF01,SE,2028-02-25,468,aztreonam,7,nee,
-N01BB01,IT,2028-04-01,504,BUPIVACAINA CLORIDRATO,9,nee,commercial
-J06BB04,IT,2028-04-28,531,IMMUNOGLOBULINA UMANA ANTIEPATITE B,4,nee,temporary_discontinuation
+N01BB01,IT,2028-04-01,504,BUPIVACAINA CLORIDRATO,10,nee,commercial
+J06BB04,IT,2028-04-28,531,IMMUNOGLOBULINA UMANA ANTIEPATITE B,5,nee,temporary_discontinuation
 M09AX01,IT,2028-07-01,595,SODIO IALURONATO,3,nee,discontinuation
 C10AA08,IT,2029-05-01,899,PITAVASTATINA CALCICA,3,nee,temporary_discontinuation

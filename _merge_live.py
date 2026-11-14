@@ -99,7 +99,9 @@ fresh_ccatc = {(r.get("cc"), (r.get("atc") or "").upper()) for r in fr}
 #     naast de augustuslijst, waardoor allang opgeloste tekorten actief blijven staan.
 # Landen waarvan de scraper juist FAALDE (CA, MY) horen hier NIET in: daar is last-live het
 # enige wat we hebben.
-EXCLUDE = {"NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT",      # geen bruikbare tekortbron
+EXCLUDE = {"NL", "EU", "LT", "TR", "ZA", "KR", "PT",            # geen bruikbare tekortbron
+           "TW",   # sinds 14-11-2026 terug via TFDA-open data; vers is leidend, een oude
+                   # momentopname mag de vroegere DSMS-persberichtkoppen niet terugzetten
            "CH",   # licentievoorbehoud in de bron; zie build_data.py
            "GB",   # stond in geen enkele verversingslijst en bevroor daardoor; zie build_data.py
            "GR", "DE", "JP", "AT",                              # bron gerepareerd, vers is leidend

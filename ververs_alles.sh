@@ -37,7 +37,7 @@ UV="uv run --python 3.13 --with certifi>=2026.10.19 --with typesafe-sdk --with p
 # via een losse reparatierun en daarna bevroren. Van de kaart gehaald op 24-09. Zet GB niet
 # terug in deze lijst zonder ook de uitsluiting in landkaart/build_data.py weg te halen,
 # anders draait de scraper elke week voor niets.
-LANDEN="AT AU BA BE BG CA CO CZ DE DK EE ES FI FR GR HR HU IE IS IT JP LV MY NO RO SA SE SI SK US"
+LANDEN="AT AU BA BE BG CA CO CZ DE DK EE ES FI FR GR HR HU IE IS IT JP LV MY NO NZ RO SA SE SI SK TW US"
 
 export MATCH_LLM=typesafe
 export PRK_MIN_CONFIDENCE=90

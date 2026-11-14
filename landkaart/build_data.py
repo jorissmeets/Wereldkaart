@@ -38,6 +38,7 @@ PER_COUNTRY_REASON_COL: dict[str, str] = {
     "GR": "reason",
     "HR": "reason",
     "BA": "reason",  # toegevoegd 14-11-2026 met de ALMBIH-bron
+    "TW": "reason",  # idem, TFDA; de scraper zet de vrije tekst om in vaste categorieën
     "HU": "reason",
     "IE": "reason",
     "MY": "reason",
@@ -583,7 +584,9 @@ def build():
             # in output/ wordt nooit herschreven, het aantal verandert dus niet, en de
             # publicatierem ziet daarom niets. Bevroren data die er actueel uitziet is erger
             # dan geen data. Terugzetten kan, maar dan ALLEEN samen met GB in beide lijsten.
-            if cc in ("NL", "EU", "LT", "TR", "ZA", "KR", "TW", "PT", "CH", "GB"):
+            # TW staat sinds 14-11-2026 weer op de kaart, nu via de open data van TFDA in
+            # plaats van DSMS (zie scrapers/tw_tfda.py).
+            if cc in ("NL", "EU", "LT", "TR", "ZA", "KR", "PT", "CH", "GB"):
                 continue
 
             cn = safe_str(row.get("country_name")) or cc
@@ -635,6 +638,11 @@ def build():
             # Let op: de scraper filtert '通常出荷' (normale levering) er al uit -- zonder dat
             # filter zou ruim 80% van het bestand als tekort binnenkomen.
             if cc == "JP":
+                last_updated = scraped_at
+            # TW/TFDA: datasets 104/105 zijn de lijst van NU lopende tekorten; opgeheven
+            # tekorten verhuizen naar 106 (status resolved). Een melding uit 2023 die nog in
+            # 104 staat, loopt dus nog. Zelfde redenering als CZ en JP.
+            if cc == "TW" and status_raw != "resolved":
                 last_updated = scraped_at
 
             # Bereken resolved_date

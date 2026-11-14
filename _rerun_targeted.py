@@ -21,6 +21,7 @@ RUIMER = {
     "CZ": 300,   # SUKL-CZ doet een detailaanroep per melding
     "SE": 300,   # sinds de reden per melding wordt opgehaald (1.061 extra GETs)
     "BG": 300,   # APEX-app, traag bij elke stap
+    "NZ": 360,   # 77 detailpagina's sequentieel; met 150s viel een deel weg (14-11)
 }
 
 
