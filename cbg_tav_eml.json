@@ -1,9 +1,27 @@
 {
-"generated": "2026-11-14",
+"generated": "2026-11-20",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 211,
-"on_eml": 98,
+"count": 213,
+"on_eml": 100,
 "items": [
+{
+"product": "Bleomycine Accord 15000 IE poeder voor oplossing voor injectie/infusie",
+"mah": "Accord Healthcare B.V.",
+"reg": "117383",
+"reg_type": "EU",
+"datum": "2026-11-15",
+"atc": "L01DC01",
+"eml": "oranje"
+},
+{
+"product": "Rocuroniumbromide Aguettant 10 mg/ml oplossing voor injectie in een voorgevulde spuit",
+"mah": "Laboratoire Aguettant",
+"reg": "129706",
+"reg_type": "EU",
+"datum": "2026-11-15",
+"atc": "M03AC09",
+"eml": "rood"
+},
 {
 "product": "Jylamvo 2mg/ml, drank",
 "mah": "Oresund Pharma ApS",

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14",
+ "generated": "2026-11-20",
  "bron": "https://lcg.nl/actuele-tekortendossiers/",
  "dossiers": [
   {
@@ -31,6 +31,16 @@
    "updated": "2026-10-02",
    "published": "2025-11-20",
    "url": "https://lcg.nl/medicijnentekort/quetiapine/"
+  },
+  {
+   "key": "methylergometrine",
+   "slug": "methylergometrine",
+   "title": "Methylergometrine (i.v.)",
+   "atc": "G02AB01",
+   "phase": "Logistieke coördinatiefase",
+   "updated": "2026-11-19",
+   "published": "2026-06-04",
+   "url": "https://lcg.nl/medicijnentekort/methylergometrine/"
   },
   {
    "key": "folinezuur",
@@ -71,16 +81,6 @@
    "updated": "2026-10-01",
    "published": "2026-07-16",
    "url": "https://lcg.nl/medicijnentekort/mitoxantron-i-v/"
-  },
-  {
-   "key": "methylergometrine",
-   "slug": "methylergometrine",
-   "title": "Methylergometrine (i.v.)",
-   "atc": "G02AB01",
-   "phase": "Inventarisatie",
-   "updated": "2026-11-05",
-   "published": "2026-06-04",
-   "url": "https://lcg.nl/medicijnentekort/methylergometrine/"
   },
   {
    "key": "ritonavir",
