@@ -1,9 +1,36 @@
 {
-"generated": "2026-11-20",
+"generated": "2026-11-25",
 "source": "https://www.cbg-meb.nl/onderwerpen/handelsvergunning-productinformatie-vereisten/hv-tijdelijk-afwijkende-verpakking",
-"count": 213,
+"count": 216,
 "on_eml": 100,
 "items": [
+{
+"product": "Vaxigrip, suspensie voor injectie in een voorgevulde spuit",
+"mah": "Sanofi Winthrop Industrie",
+"reg": "133236",
+"reg_type": "RVG",
+"datum": "2026-11-24",
+"atc": "",
+"eml": ""
+},
+{
+"product": "Trandate injectie, oplossing voor injectie 5 mg/ml",
+"mah": "Aspen Pharma",
+"reg": "07879",
+"reg_type": "RVG",
+"datum": "2026-11-24",
+"atc": "",
+"eml": ""
+},
+{
+"product": "MYNZEPLI 40 mg/ml oplossing voor injectie in een voorgevulde spuit",
+"mah": "Advanz Pharma Limited",
+"reg": "EU/1/25/1964/002",
+"reg_type": "EU",
+"datum": "2026-11-23",
+"atc": "",
+"eml": ""
+},
 {
 "product": "Bleomycine Accord 15000 IE poeder voor oplossing voor injectie/infusie",
 "mah": "Accord Healthcare B.V.",
@@ -17,7 +44,7 @@
 "product": "Rocuroniumbromide Aguettant 10 mg/ml oplossing voor injectie in een voorgevulde spuit",
 "mah": "Laboratoire Aguettant",
 "reg": "129706",
-"reg_type": "EU",
+"reg_type": "RVG",
 "datum": "2026-11-15",
 "atc": "M03AC09",
 "eml": "rood"

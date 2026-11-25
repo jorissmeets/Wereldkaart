@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20",
+ "generated": "2026-11-25",
  "bron": "https://lcg.nl/actuele-tekortendossiers/",
  "dossiers": [
   {
@@ -43,6 +43,16 @@
    "url": "https://lcg.nl/medicijnentekort/methylergometrine/"
   },
   {
+   "key": "carmustine",
+   "slug": "carmustine-i-v",
+   "title": "Carmustine i.v.",
+   "atc": "L01AD01",
+   "phase": "Monitoring",
+   "updated": "2026-11-20",
+   "published": "2026-11-20",
+   "url": "https://lcg.nl/medicijnentekort/carmustine-i-v/"
+  },
+  {
    "key": "folinezuur",
    "slug": "folinezuur-capsules-oraal",
    "title": "Folinezuur (capsules, oraal)",
@@ -81,6 +91,16 @@
    "updated": "2026-10-01",
    "published": "2026-07-16",
    "url": "https://lcg.nl/medicijnentekort/mitoxantron-i-v/"
+  },
+  {
+   "key": "natriumperchloraat",
+   "slug": "natriumperchloraat",
+   "title": "Natriumperchloraat",
+   "atc": "",
+   "phase": "Inventarisatie",
+   "updated": "2026-11-23",
+   "published": "2026-11-23",
+   "url": "https://lcg.nl/medicijnentekort/natriumperchloraat/"
   },
   {
    "key": "ritonavir",
