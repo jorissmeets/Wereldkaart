@@ -22,6 +22,7 @@ RUIMER = {
     "SE": 300,   # sinds de reden per melding wordt opgehaald (1.061 extra GETs)
     "BG": 300,   # APEX-app, traag bij elke stap
     "NZ": 360,   # 77 detailpagina's sequentieel; met 150s viel een deel weg (14-11)
+    "TW": 300,   # vergunningen-zip van ~10 MB; 25-11 en 26-11 net over de 150s, los wel gelukt
 }
 
 

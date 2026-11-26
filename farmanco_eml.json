@@ -1,11 +1,65 @@
 {
-"generated": "2026-11-25",
+"generated": "2026-11-26",
 "source": "https://farmanco.knmp.nl/",
 "total_scraped": 265,
 "count": 265,
 "on_eml": 201,
 "overig": 64,
 "items": [
+{
+"stof": "Oxybutynine",
+"omschrijving": "Oxybutynine tablet 2,5mg, oxybutynine tablet 5mg",
+"vorm": "tablet",
+"preferent": true,
+"datum": "2026-11-26",
+"eml": "geel",
+"atc": "G04BD04"
+},
+{
+"stof": "Povidon",
+"omschrijving": "Povidon oogdruppels 50mg/ml fl 10ml zonder benz",
+"vorm": "oogdruppels",
+"preferent": false,
+"datum": "2026-11-25",
+"eml": "",
+"atc": "S01XA20"
+},
+{
+"stof": "Broomfenac",
+"omschrijving": "Broomfenac oogdruppels 0,9mg/ml fl 5ml benzalkoni",
+"vorm": "oogdruppels",
+"preferent": false,
+"datum": "2026-11-25",
+"eml": "geel",
+"atc": "S01BC11"
+},
+{
+"stof": "Carbomeer",
+"omschrijving": "Carbomeer ooggel 2mg/g (carbomeer 980) minim 0,6g",
+"vorm": "ooggel",
+"preferent": false,
+"datum": "2026-11-25",
+"eml": "",
+"atc": "S01XA20"
+},
+{
+"stof": "Rivastigmine",
+"omschrijving": "Rivastigmine capsule 1,5mg, rivastigmine capsule 3mg",
+"vorm": "capsule",
+"preferent": false,
+"datum": "2026-11-25",
+"eml": "oranje",
+"atc": "N06DA03"
+},
+{
+"stof": "Octreotide",
+"omschrijving": "Octreotide injvlst 200ug/ml fl 5ml, octreotide injvlst wwsp  50ug=1ml (50ug/ml), octreotide injvlst wwsp 100ug=1ml (100ug/ml), octreotide pdr v injsusp 10mg fl toeb, octreotide pdr v injsusp 20mg fl toeb, octreotide pdr v injsusp 30mg fl toeb",
+"vorm": "injectievloeistof, poeder voor suspensie voor injectie",
+"preferent": true,
+"datum": "2026-11-25",
+"eml": "oranje",
+"atc": "H01CB02"
+},
 {
 "stof": "Choriongonadotrofine",
 "omschrijving": "Choriongonadotrofine injectiepoeder  5000ie fl",
@@ -493,15 +547,6 @@
 "atc": "C09DA03"
 },
 {
-"stof": "Rivastigmine",
-"omschrijving": "Rivastigmine capsule 1,5mg, rivastigmine capsule 3mg",
-"vorm": "capsule",
-"preferent": false,
-"datum": "2026-11-20",
-"eml": "oranje",
-"atc": "N06DA03"
-},
-{
 "stof": "Pregabaline",
 "omschrijving": "Pregabaline capsule  25mg, pregabaline capsule  75mg, pregabaline capsule 150mg, pregabaline capsule 300mg",
 "vorm": "capsule",
@@ -581,15 +626,6 @@
 "datum": "2026-11-19",
 "eml": "oranje",
 "atc": "N02BF01"
-},
-{
-"stof": "Oxybutynine",
-"omschrijving": "Oxybutynine tablet 2,5mg, oxybutynine tablet 5mg",
-"vorm": "tablet",
-"preferent": true,
-"datum": "2026-11-19",
-"eml": "geel",
-"atc": "G04BD04"
 },
 {
 "stof": "Rivaroxaban",
@@ -853,15 +889,6 @@
 "atc": "N05BA01"
 },
 {
-"stof": "Carbomeer",
-"omschrijving": "Carbomeer ooggel 2mg/g (carbomeer 980) minim 0,6g",
-"vorm": "ooggel",
-"preferent": false,
-"datum": "2026-11-17",
-"eml": "",
-"atc": "S01XA20"
-},
-{
 "stof": "Nifedipine",
 "omschrijving": "Nifedipine tablet mga 30mg, nifedipine tablet mga 60mg",
 "vorm": "tablet met gereguleerde afgifte",
@@ -887,15 +914,6 @@
 "datum": "2026-11-17",
 "eml": "geel",
 "atc": "M04AA03"
-},
-{
-"stof": "Povidon",
-"omschrijving": "Povidon oogdruppels 50mg/ml fl 10ml zonder benz",
-"vorm": "oogdruppels",
-"preferent": false,
-"datum": "2026-11-17",
-"eml": "",
-"atc": "S01XA20"
 },
 {
 "stof": "Methenamine",
@@ -1067,15 +1085,6 @@
 "datum": "2026-11-12",
 "eml": "",
 "atc": "S01HA03"
-},
-{
-"stof": "Octreotide",
-"omschrijving": "Octreotide injvlst 200ug/ml fl 5ml, octreotide injvlst wwsp 100ug=1ml (100ug/ml), octreotide pdr v injsusp 10mg fl toeb, octreotide pdr v injsusp 20mg fl toeb, octreotide pdr v injsusp 30mg fl toeb",
-"vorm": "injectievloeistof, poeder voor suspensie voor injectie",
-"preferent": true,
-"datum": "2026-11-12",
-"eml": "oranje",
-"atc": "H01CB02"
 },
 {
 "stof": "Paliperidon",
@@ -1364,15 +1373,6 @@
 "datum": "2026-11-02",
 "eml": "oranje",
 "atc": "A03FA01"
-},
-{
-"stof": "Broomfenac",
-"omschrijving": "Broomfenac oogdruppels 0,9mg/ml fl 5ml benzalkoni",
-"vorm": "oogdruppels",
-"preferent": false,
-"datum": "2026-11-02",
-"eml": "geel",
-"atc": "S01BC11"
 },
 {
 "stof": "Pegvisomant",

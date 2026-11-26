@@ -1,0 +1,58 @@
+country_code,country_name,source,medicine_name,active_substance,strength,dosage_form,package_size,product_no,shortage_start,estimated_end,status,scraped_at,atc_code,prk
+BG,Bulgaria,SESPA,Glimegamma,Glimepiride,3 mg,Tablet,30,1504,,,shortage,2026-11-26T08:53:56.943559,A10BB12,44458
+BG,Bulgaria,SESPA,Glimegamma,Glimepiride,4 mg,Tablet,30,1505,,,shortage,2026-11-26T08:53:56.943575,A10BB12,44466
+BG,Bulgaria,SESPA,Jardiance,Empagliflozin,10 mg,Film-coated tablet,30,4043,,,shortage,2026-11-26T08:53:56.943582,A10BK03,119407
+BG,Bulgaria,SESPA,Forxiga,Dapagliflozin,10 mg,Film-coated tablet,30,3444,,,shortage,2026-11-26T08:53:56.943589,A10BK01,104779
+BG,Bulgaria,SESPA,Transmetil,Ademetionine,500 mg,Gastro-resistant tablet,10,3049,,,shortage,2026-11-26T08:53:56.943595,A16AA02,
+BG,Bulgaria,SESPA,Alprolix,Coagulation factor IX,1000 IU,Powder and solvent for solution for injection,1,15906,,,shortage,2026-11-26T08:53:56.943602,B02BD01,
+BG,Bulgaria,SESPA,BeneFIX,Coagulation factor IX (nonacog alfa),500 IU (100 mg/ml - 5 ml),Powder and solvent for solution for injection,1,1849,,,shortage,2026-11-26T08:53:56.943608,B02BD01,
+BG,Bulgaria,SESPA,Dipperam,"Amlodipine, Valsartan",5 mg/160 mg,Film-coated tablet,28,16030,,,shortage,2026-11-26T08:53:56.943615,,
+BG,Bulgaria,SESPA,Olmezide AM,"Olmesartan medoxomil, Amlodipine",20 mg/5 mg,Film-coated tablet,30,16353,,,shortage,2026-11-26T08:53:56.943621,,
+BG,Bulgaria,SESPA,Cimzia,Certolizumab pegol,200 mg,Solution for injection,2,3583,,,shortage,2026-11-26T08:53:56.943626,L04AB05,92584
+BG,Bulgaria,SESPA,Human Albumin 50 g/l Baxalta,Albumin,50 g/l - 250 ml,Solution for infusion,1,1664,,,shortage,2026-11-26T08:53:56.943633,B05AA01,69663
+BG,Bulgaria,SESPA,Olimel N9E,Combinations,2000 ml,Emulsion for infusion,1,1002,,,shortage,2026-11-26T08:53:56.943639,A01AA30,
+BG,Bulgaria,SESPA,Keytruda,Pembrolizumab,25 mg/ml - 4 ml,Concentrate for solution for infusion,1,15839,,,shortage,2026-11-26T08:53:56.943645,L01FF02,136328
+BG,Bulgaria,SESPA,Zytiga,Abiraterone,500 mg,Film-coated tablet,60,16148,,,shortage,2026-11-26T08:53:56.943651,L02BX03,136913
+BG,Bulgaria,SESPA,Accofil,Filgrastim,30 MU (300 mcg/0.5 ml),Solution for injection/infusion,5,16007,,,shortage,2026-11-26T08:53:56.943657,L03AA02,
+BG,Bulgaria,SESPA,Profol,Propofol,10 mg/ml - 50 ml,Emulsion for infusion,1,385,,,shortage,2026-11-26T08:53:56.943663,N01AX10,80322
+BG,Bulgaria,SESPA,Miglustat Gen.Orph,Miglustat,100 mg,"Capsule, hard",84,16542,,,shortage,2026-11-26T08:53:56.943669,A16AX06,69620
+BG,Bulgaria,SESPA,Sotagamma,Sotalol,80 mg,Tablet,50,16650,,,shortage,2026-11-26T08:53:56.943675,C07AA07,2879
+BG,Bulgaria,SESPA,Valtricom,"Amlodipine, Valsartan, Hydrochlorothiazide",5 mg/160 mg/12.5 mg,Film-coated tablet,30,16666,,,shortage,2026-11-26T08:53:56.943681,,
+BG,Bulgaria,SESPA,Kopaq,Iohexol,300 mg I/ml - 100 ml,Solution for injection,1,16810,,,shortage,2026-11-26T08:53:56.943687,V08AB02,18503
+BG,Bulgaria,SESPA,Alunbrig,Brigatinib,90 mg,Film-coated tablet,28,16832,,,shortage,2026-11-26T08:53:56.943693,L01ED04,196061
+BG,Bulgaria,SESPA,Alunbrig,Brigatinib,90 mg + 180 mg,Film-coated tablet,28,16976,,,shortage,2026-11-26T08:53:56.943699,L01ED04,
+BG,Bulgaria,SESPA,Natrium Chlorid Braun,Sodium chloride,0.9% - 500 ml,Solution for infusion,10,17041,,,shortage,2026-11-26T08:53:56.943705,A12BA01,
+BG,Bulgaria,SESPA,Cisplatin Ebewe,Cisplatin,1 mg/ml - 50 ml,Concentrate for solution for infusion,1,17026,,,shortage,2026-11-26T08:53:56.943711,L01XA01,36331
+BG,Bulgaria,SESPA,Refixia,Coagulation factor IX (nonacog beta pegol),500 IU,Powder and solvent for solution for injection,1,17127,,,shortage,2026-11-26T08:53:56.943717,B02BD01,
+BG,Bulgaria,SESPA,Vpriv,Velaglucerase alfa,400 U,Powder for solution for infusion,1,17169,,,shortage,2026-11-26T08:53:56.943723,A16AB10,91618
+BG,Bulgaria,SESPA,Fulvestrant Teva,Fulvestrant,250 mg/5 ml,Solution for injection in pre-filled syringe,2,17225,,,shortage,2026-11-26T08:53:56.943728,L02BA03,74934
+BG,Bulgaria,SESPA,Aminosteril N-Hepa 8%,Amino acids,500 ml,Solution for infusion,10,17294,,,shortage,2026-11-26T08:53:56.943734,B05BA01,
+BG,Bulgaria,SESPA,Strensiq,Asfotase alfa,40 mg/ml – 1.0 ml,Solution for injection,12,18059,,,shortage,2026-11-26T08:53:56.943740,A16AB13,201871
+BG,Bulgaria,SESPA,Uptravi,Selexipag,200 mcg,Film-coated tablet,60,17571,,,shortage,2026-11-26T08:53:56.943746,B01AC27,134260
+BG,Bulgaria,SESPA,Polivy,Polatuzumab vedotin,30 mg,Powder for concentrate for solution for infusion,1,18061,,,shortage,2026-11-26T08:53:56.943752,L01FX14,207195
+BG,Bulgaria,SESPA,Pazopanib Pharmascience,Pazopanib,200 mg,Film-coated tablet,30,58353,,,shortage,2026-11-26T08:53:56.943758,L01EX03,95265
+BG,Bulgaria,SESPA,Ganirelix Gedeon Richter,Ganirelix,0.25 mg/0.5 ml,Solution for injection in pre-filled syringe,1,59686,,,shortage,2026-11-26T08:53:56.943764,H01CC01,59048
+BG,Bulgaria,SESPA,Abiraterone Teva,Abiraterone,500 mg,Film-coated tablet,60,59205,,,shortage,2026-11-26T08:53:56.943770,L02BX03,136913
+BG,Bulgaria,SESPA,Meropenem Enexi,Meropenem,1000 mg - 20 ml,Powder for solution for injection/infusion,10,59249,,,shortage,2026-11-26T08:53:56.943776,J01DH02,94838
+BG,Bulgaria,SESPA,Ultomiris,Ravulizumab,300 mg  (100 mg/ml - 3 ml),Concentrate for solution for infusion,1,55130,,,shortage,2026-11-26T08:53:56.943782,L04AJ02,211133
+BG,Bulgaria,SESPA,Amvuttra,Vutrisiran,25 mg (50 mg/ml - 0.5 ml),Solution for injection,1,62590,,,shortage,2026-11-26T08:53:56.943788,N07XX18,225967
+BG,Bulgaria,SESPA,Scemblix,Asciminib,20 mg,Film-coated tablet,60,60790,,,shortage,2026-11-26T08:53:56.943794,L01EA06,217972
+BG,Bulgaria,SESPA,Veyvondi,Von Willebrand factor (vonicog alfa),1300 IU,Powder and solvent for solution for injection,1,55313,,,shortage,2026-11-26T08:53:56.943800,B02BD10,195960
+BG,Bulgaria,SESPA,Vyvgart,Efgartigimod alfa,20 mg/ml - 20 ml,Concentrate for solution for infusion,1,62632,,,shortage,2026-11-26T08:53:56.943806,L04AL01,
+BG,Bulgaria,SESPA,Rystiggo,Rozanolixizumab,140 mg/ml - 2 ml,Solution for injection,1,63613,,,shortage,2026-11-26T08:53:56.943812,L04AL02,
+BG,Bulgaria,SESPA,Azaciticon,Azacitidine,25 mg/ml (1 vial x 100 mg),Powder for suspension for injection,1,66216,,,shortage,2026-11-26T08:53:56.943818,L01BC07,88692
+BG,Bulgaria,SESPA,Nilotinib Stada,Nilotinib,200 mg,"Capsule, hard",28,65943,,,shortage,2026-11-26T08:53:56.943824,L01EA03,230723
+BG,Bulgaria,SESPA,Omeprazole Polpharma,Omeprazole,40 mg,Powder for solution for infusion,5,62799,,,shortage,2026-11-26T08:53:56.943830,A02BC01,126578
+BG,Bulgaria,SESPA,Gaxenim,Fingolimod,0.5 mg,"Capsule, hard",28,60637,,,shortage,2026-11-26T08:53:56.943836,L04AE01,100129
+BG,Bulgaria,SESPA,Cagluen,Edoxaban,30 mg,Film-coated tablet,30,67542,,,shortage,2026-11-26T08:53:56.943842,B01AF03,128198
+BG,Bulgaria,SESPA,Ossica,Ibandronic acid,150 mg,Film-coated tablet,1,66643,,,shortage,2026-11-26T08:53:56.943848,M05BA06,79685
+BG,Bulgaria,SESPA,Fluenz,"Influenza vaccine (live attenuated, nasal)",0.2 ml (dose),"Nasal spray, suspension",1,64907,,,shortage,2026-11-26T08:53:56.943854,,
+BG,Bulgaria,SESPA,Osenvelt,Denosumab,120 mg (70 mg/ml - 1.7 ml),Solution for injection,1,67619,,,shortage,2026-11-26T08:53:56.943860,M05BX04,100420
+BG,Bulgaria,SESPA,Krusaxyl,Ticagrelor,60 mg,Film-coated tablet,56,66410,,,shortage,2026-11-26T08:53:56.943866,B01AC24,130680
+BG,Bulgaria,SESPA,Cufence,Trientine,200 mg,"Capsule, hard",100,47111,,,shortage,2026-11-26T08:53:56.943872,A16AX12,207535
+BG,Bulgaria,SESPA,Kiovig,"Immunoglobulins, normal human, for intravascular adm.",100 mg/ml - 200 ml,Solution for infusion,1,1171,,,shortage,2026-11-26T08:53:56.943878,,
+BG,Bulgaria,SESPA,Alyftrek,"Deutivacaftor, Tezacaftor, Vanzacaftor",125 mg/50 mg/10 mg,Film-coated tablet,56,68611,,,shortage,2026-11-26T08:53:56.943884,,
+BG,Bulgaria,SESPA,Nilotinib Pharmascience,Nilotinib,150 mg,"Capsule, hard",112,65546,,,shortage,2026-11-26T08:53:56.943890,L01EA03,230715
+BG,Bulgaria,SESPA,Kiovig,"Immunoglobulins, normal human, for intravascular adm.",100 mg/ml - 10 ml,Solution for infusion,1,1167,,,shortage,2026-11-26T08:53:56.943896,,
+BG,Bulgaria,SESPA,Atosiban EVER Pharma,Atosiban,6.75 mg/0.9 ml,Solution for injection,1,70768,,,shortage,2026-11-26T08:53:56.943902,G02CX01,52582
+BG,Bulgaria,SESPA,Ranexa,Ranolazine,750 mg,Prolonged-release tablet,60,15401,,,shortage,2026-11-26T08:53:56.943908,C01EB18,

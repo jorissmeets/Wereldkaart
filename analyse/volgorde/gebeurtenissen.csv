@@ -33,7 +33,6 @@ A01AC02,AU,2026-10-15,resolved,dexamethasone sodium phosphate,2,verwachte_start,
 A01AC02,US,2019-02-08,active,DEXAMETHASONE SODIUM PHOSPHATE,7,publicatiedatum,False,nee,ja,nee
 A01AC03,ES,2026-03-24,active,HIDROCORTISONA HEMISUCCINATO,1,meldingsdatum,True,nee,nee,nee
 A01AC03,FR,2026-06-30,discontinued,hydrocortisone (hydrogénosuccinate d'),2,feitelijke_start,False,ja,nee,nee
-A01AC03,NZ,2026-10-07,resolved,Colifoam,3,onbekend,,nee,nee,nee
 A01AC03,US,2026-07-23,discontinued,HYDROCORTISONE ACETATE,1,publicatiedatum,False,nee,nee,nee
 A01AC04,IE,2025-07-18,active,Prednisolone,1,verwachte_start,False,nee,nee,nee
 A01AC54,DE,2026-06-01,active,Prednisolonacetat,2,feitelijke_start,True,ja,nee,nee
@@ -60,7 +59,6 @@ A02BA02,SK,2019-09-18,inactive,Ranitidín,6,feitelijke_start,True,ja,ja,nee
 A02BA03,CA,2025-04-29,inactive,Famotidine Injection,1,publicatiedatum,False,nee,nee,nee
 A02BA03,DE,2026-10-29,active,Famotidin,1,feitelijke_start,True,ja,nee,nee
 A02BA03,HU,2026-01-06,active,famotidine,2,feitelijke_start,True,ja,nee,nee
-A02BA03,IE,2026-09-08,active,Famotidine,1,verwachte_start,False,nee,nee,nee
 A02BA03,IT,2026-11-01,active,FAMOTIDINA,1,verwachte_start,False,nee,nee,nee
 A02BA03,JP,2025-04-16,active,ファモチジン,25,registratiedatum,False,nee,nee,nee
 A02BA03,LV,2026-01-01,active,Famotidinum,3,feitelijke_start,True,ja,nee,nee
@@ -77,8 +75,8 @@ A02BB01,IS,2025-12-15,resolved,Misoprostolum INN,1,verwachte_start,True,nee,nee,
 A02BB01,NO,2025-09-01,resolved,misoprostol,2,feitelijke_start,True,ja,nee,nee
 A02BC01,ES,2021-01-29,langlopend,OMEPRAZOL SODICO,4,meldingsdatum,True,nee,ja,nee
 A02BC01,FI,2025-03-01,active,OMEPRAZOLO,2,feitelijke_start,True,ja,nee,nee
-A02BC01,IE,2026-11-26,upcoming,Omeprazole magnesium,1,verwachte_start,False,nee,nee,ja
-A02BC01,IS,2024-01-31,discontinued,OMEPRAZOLO,4,verwachte_start,True,nee,ja,nee
+A02BC01,IE,2026-11-26,active,Omeprazole magnesium,1,verwachte_start,False,nee,nee,nee
+A02BC01,IS,2024-01-31,discontinued,OMEPRAZOLO,5,verwachte_start,True,nee,ja,nee
 A02BC01,IT,2023-01-31,langlopend,OMEPRAZOLO,20,verwachte_start,False,nee,ja,nee
 A02BC01,JP,2025-04-16,active,オメプラゾール,4,registratiedatum,False,nee,nee,nee
 A02BC01,LV,2016-08-09,langlopend,Omeprazolum,3,feitelijke_start,True,ja,ja,nee
@@ -98,7 +96,7 @@ A02BC02,NO,2023-09-19,resolved,pantoprazolnatriumsesquihydrat,14,feitelijke_star
 A02BC02,RO,2026-08-26,active,PANTOPRAZOLUM,2,meldingsdatum,False,nee,nee,nee
 A02BC02,SE,2026-02-05,active,pantoprazolnatriumseskvihydrat,2,verwachte_start,False,nee,nee,nee
 A02BC02,SI,2026-02-01,active,pantoprazolum,1,feitelijke_start,True,ja,nee,nee
-A02BC02,SK,2019-07-26,inactive,Pantoprazol,11,feitelijke_start,True,ja,ja,nee
+A02BC02,SK,2019-09-30,discontinued,Pantoprazol,11,feitelijke_start,True,ja,ja,nee
 A02BC03,AU,2025-10-08,active,lansoprazole,5,verwachte_start,False,nee,nee,nee
 A02BC03,CZ,2026-08-26,active,LANSOPRAZOLE,4,publicatiedatum,False,nee,nee,nee
 A02BC03,ES,2025-09-08,active,LANSOPRAZOL,8,meldingsdatum,True,nee,nee,nee
@@ -266,7 +264,6 @@ A04AD12,SK,2022-06-01,discontinued,Aprepitant,4,feitelijke_start,True,ja,ja,nee
 A04AD12,US,2026-04-08,discontinued,APREPITANT,2,publicatiedatum,False,nee,nee,nee
 A04AD81,EE,2026-10-31,active,Fosaprepitant,1,feitelijke_start,True,ja,nee,nee
 A05AA01,JP,2026-04-03,active,ケノデオキシコール酸,1,registratiedatum,False,nee,nee,nee
-A05AA02,AT,2025-09-02,active,URSODEOXYCHOLSÄURE,1,feitelijke_start,True,ja,nee,nee
 A05AA02,DK,2025-11-01,langlopend,Ursodeoxycholsyre ATC-kode: A05AA02 Forventet periode: Fra s,1,verwachte_start,False,nee,nee,nee
 A05AA02,ES,2026-10-06,active,URSODEOXICOLICO ACIDO,2,meldingsdatum,True,nee,nee,nee
 A05AA02,HU,2015-01-12,inactive,ursodeoxycholic acid,2,feitelijke_start,True,ja,ja,nee
@@ -364,7 +361,7 @@ A06AX05,AU,2026-11-17,active,prucalopride succinate,1,verwachte_start,False,nee,
 A06AX05,FI,2026-10-09,active,prucalopride succinate,2,feitelijke_start,True,ja,nee,nee
 A06AX05,IS,2026-10-13,resolved,Prucalopridum INN,1,verwachte_start,True,nee,nee,nee
 A07AA02,AU,2026-07-01,resolved,nystatin,1,verwachte_start,False,nee,nee,nee
-A07AA02,HR,2026-05-07,active,klindamicinfosfat,2,feitelijke_start,True,ja,nee,nee
+A07AA02,HR,2026-05-07,active,klindamicinfosfat,3,feitelijke_start,True,ja,nee,nee
 A07AA02,IS,2025-04-30,resolved,Nystatinum INN,2,verwachte_start,True,nee,nee,nee
 A07AA09,AU,2026-09-16,resolved,vancomycin hydrochloride,1,verwachte_start,False,nee,nee,nee
 A07AA11,IT,2018-04-15,langlopend,RIFAXIMINA,1,verwachte_start,False,nee,ja,nee
@@ -383,7 +380,6 @@ A07BA51,SK,2021-12-23,inactive,"Aktívne uhlie, kombinácie",1,feitelijke_start,
 A07CA91,ES,2026-06-30,active,"LACTATO CALCIO, MAGNESIO SULFATO, CITRATO SODIO, CITRICO ACI",1,meldingsdatum,True,nee,nee,nee
 A07DA01,JP,2026-08-21,active,次硝酸ビスマス,1,registratiedatum,False,nee,nee,nee
 A07DA02,BE,2026-09-14,active,Morphine,1,feitelijke_start,True,ja,nee,nee
-A07DA03,AT,2026-10-19,active,LOPERAMID HYDROCHLORID,1,feitelijke_start,True,ja,nee,nee
 A07DA03,ES,2026-04-21,active,LOPERAMIDA HIDROCLORURO,1,meldingsdatum,True,nee,nee,nee
 A07DA03,HU,2023-05-01,inactive,loperamide,3,feitelijke_start,True,ja,ja,nee
 A07DA03,IS,2024-11-30,resolved,Loperamidum INN hýdróklóríð,4,verwachte_start,True,nee,ja,nee
@@ -512,9 +508,9 @@ A10AD04,SK,2019-08-31,discontinued,Inzulín-lispro,2,feitelijke_start,True,ja,ja
 A10AD05,CZ,2024-11-15,active,INSULIN ASPART + PROTAMINE INSULIN ASPART (CRYSTALLINE),2,publicatiedatum,False,nee,ja,nee
 A10AD05,IS,2025-08-11,resolved,"Insulinum aspartum prótamínsúlfat, Insulinum aspartum INN",1,verwachte_start,True,nee,nee,nee
 A10AD05,IT,2026-12-31,upcoming,INSULINA ASPART,1,verwachte_start,False,nee,nee,ja
-A10AD06,DK,2025-11-25,active,"Insulin aspart, insulin degludec ATC-kode: A10AD06 Forventet",1,verwachte_start,False,nee,nee,nee
+A10AD06,DK,2025-11-25,langlopend,"Insulin aspart, insulin degludec ATC-kode: A10AD06 Forventet",1,verwachte_start,False,nee,nee,nee
 A10AE04,AT,2026-07-17,active,INSULIN GLARGIN,1,feitelijke_start,True,ja,nee,nee
-A10AE04,DE,2026-09-21,active,Insulin glargin,1,feitelijke_start,True,ja,nee,nee
+A10AE04,DE,2026-09-21,resolved,Insulin glargin,1,feitelijke_start,True,ja,nee,nee
 A10AE04,FI,2026-11-20,active,Insulinum glarginum INN,1,feitelijke_start,True,ja,nee,nee
 A10AE04,FR,2026-03-25,active,insuline glargine,1,feitelijke_start,False,ja,nee,nee
 A10AE04,HU,2026-01-01,active,insulin glargine,1,feitelijke_start,True,ja,nee,nee
@@ -599,7 +595,7 @@ A10BD07,LV,2019-06-03,langlopend,"Vildagliptinum, Metformini hydrochloridum",6,f
 A10BD07,SK,2024-05-20,inactive,Metformín a sitagliptín,22,feitelijke_start,True,ja,ja,nee
 A10BD08,EE,2026-08-10,active,Metformin+Vildagliptin,2,feitelijke_start,True,ja,nee,nee
 A10BD08,ES,2026-10-22,active,"VILDAGLIPTINA, METFORMINA HIDROCLORURO",4,meldingsdatum,True,nee,nee,nee
-A10BD08,FI,2026-07-22,active,Metformín a vildagliptín,4,feitelijke_start,True,ja,nee,nee
+A10BD08,FI,2026-07-22,active,Metformín a vildagliptín,5,feitelijke_start,True,ja,nee,nee
 A10BD08,GR,2025-06-30,active,"VILDAGLIPTIN, METFORMIN HYDROCHLORIDE",2,feitelijke_start,True,ja,nee,nee
 A10BD08,HU,2024-09-06,inactive,vildagliptin;metformin hydrochloride,3,feitelijke_start,True,ja,ja,nee
 A10BD08,IS,2026-03-24,resolved,"Metforminum INN hýdróklóríð, Vildagliptinum INN",2,verwachte_start,True,nee,nee,nee
@@ -882,7 +878,7 @@ B01AB06,SK,2020-12-09,discontinued,Nadroparín,1,feitelijke_start,True,ja,ja,nee
 B01AB09,AT,2026-08-18,active,DANAPAROID,1,feitelijke_start,True,ja,nee,nee
 B01AB09,ES,2026-06-30,active,DANAPAROIDE DE SODIO,1,meldingsdatum,True,nee,nee,nee
 B01AB10,FI,2026-10-23,active,tinzaparinnatrium,1,feitelijke_start,True,ja,nee,nee
-B01AB10,SE,2026-11-12,active,tinzaparinnatrium,3,verwachte_start,False,nee,nee,nee
+B01AB10,SE,2026-11-12,active,tinzaparinnatrium,2,verwachte_start,False,nee,nee,nee
 B01AB11,SK,2020-09-16,discontinued,Sulodexid,1,feitelijke_start,True,ja,ja,nee
 B01AB12,AT,2026-07-21,active,BEMIPARIN NATRIUM,1,feitelijke_start,True,ja,nee,nee
 B01AB12,LV,2018-04-03,langlopend,Bemiparinum natricum,1,feitelijke_start,True,ja,ja,nee
@@ -988,7 +984,7 @@ B01AE07,CZ,2025-08-08,active,DABIGATRAN ETEXILATE MESILATE,2,publicatiedatum,Fal
 B01AE07,DE,2026-08-06,active,Dabigatranetexilatmesilat,1,feitelijke_start,True,ja,nee,nee
 B01AE07,DK,2026-11-25,active,Dabigatranetexilat (Dabigatranetexilatmesilat) ATC-kode: B01,6,verwachte_start,False,nee,nee,nee
 B01AE07,ES,2025-10-31,langlopend,DABIGATRAN ETEXILATO,5,meldingsdatum,True,nee,nee,nee
-B01AE07,FI,2026-07-03,active,Dabigatran-etexilát,6,feitelijke_start,True,ja,nee,nee
+B01AE07,FI,2026-07-03,active,DABIGATRAN ETEXILATO MESILATO,6,feitelijke_start,True,ja,nee,nee
 B01AE07,GR,2026-10-06,active,DABIGATRAN ETEXILATE MESILATE,1,feitelijke_start,True,ja,nee,nee
 B01AE07,IS,2026-05-01,resolved,Dabigatranum etexilatum INN mesílat,11,verwachte_start,True,nee,nee,nee
 B01AE07,IT,2026-01-02,active,DABIGATRAN ETEXILATO,9,verwachte_start,False,nee,nee,nee
@@ -1002,6 +998,7 @@ B01AF01,AT,2026-03-16,active,RIVAROXABAN,14,feitelijke_start,True,ja,nee,nee
 B01AF01,AU,2026-08-14,resolved,rivaroxaban,6,verwachte_start,False,nee,nee,nee
 B01AF01,BE,2025-11-19,active,Rivaroxaban,4,feitelijke_start,True,ja,nee,nee
 B01AF01,DE,2026-06-15,active,Rivaroxaban,2,feitelijke_start,True,ja,nee,nee
+B01AF01,DK,2026-11-01,active,Rivaroxaban ATC-kode: B01AF01 Forventet periode: Start novem,1,verwachte_start,False,nee,nee,nee
 B01AF01,EE,2026-09-28,active,Rivaroxaban,1,feitelijke_start,True,ja,nee,nee
 B01AF01,ES,2026-10-27,active,RIVAROXABAN,2,meldingsdatum,True,nee,nee,nee
 B01AF01,FI,2026-10-01,active,RIVAROXABAN,4,feitelijke_start,True,ja,nee,nee
@@ -1022,11 +1019,11 @@ B01AF02,AU,2026-10-14,active,apixaban,2,verwachte_start,False,nee,nee,nee
 B01AF02,BE,2024-02-14,active,Apixaban,2,feitelijke_start,True,ja,ja,nee
 B01AF02,DK,2025-09-25,langlopend,Apixaban ATC-kode: B01AF02 Forventet periode: Slut september,2,verwachte_start,False,nee,nee,nee
 B01AF02,FI,2026-11-23,active,Apixabanum INN,3,feitelijke_start,True,ja,nee,nee
-B01AF02,IS,2025-01-10,resolved,Apixabanum INN,11,verwachte_start,True,nee,nee,nee
+B01AF02,IS,2025-01-10,resolved,Apixabanum INN,12,verwachte_start,True,nee,nee,nee
 B01AF02,IT,2027-01-29,upcoming,APIXABAN,2,verwachte_start,False,nee,nee,ja
 B01AF02,LV,2023-03-31,langlopend,Apixabanum,1,feitelijke_start,True,ja,ja,nee
 B01AF02,SE,2026-12-21,upcoming,apixaban,1,verwachte_start,False,nee,nee,ja
-B01AF02,SK,2024-02-12,discontinued,Apixabán,7,feitelijke_start,True,ja,ja,nee
+B01AF02,SK,2024-02-12,discontinued,Apixabán,4,feitelijke_start,True,ja,ja,nee
 B01AF03,AT,2026-09-17,active,EDOXABANTOSILAT,1,feitelijke_start,True,ja,nee,nee
 B01AF03,EE,2026-10-08,active,Edoxaban,1,feitelijke_start,True,ja,nee,nee
 B01AF03,FI,2026-09-15,active,Edoxabán,4,feitelijke_start,True,ja,nee,nee
@@ -1146,7 +1143,7 @@ B03BA03,FR,2026-05-12,resolved,hydroxocobalamine,1,feitelijke_start,False,ja,nee
 B03BA03,IS,2026-04-23,resolved,Hydroxocobalaminum INN hýdróklóríð,1,verwachte_start,True,nee,nee,nee
 B03BA03,JP,2024-03-07,active,ヒドロキソコバラミン酢酸塩,2,registratiedatum,False,nee,ja,nee
 B03BA03,NO,2025-12-30,resolved,hydroksokobalaminklorid,1,feitelijke_start,True,ja,nee,nee
-B03BA03,US,2024-11-04,active,HYDROXOCOBALAMIN ACETATE,3,publicatiedatum,False,nee,ja,nee
+B03BA03,US,2024-11-04,active,HYDROXOCOBALAMIN,3,publicatiedatum,False,nee,ja,nee
 B03BA04,JP,2024-03-04,active,コバマミド,7,registratiedatum,False,nee,ja,nee
 B03BB01,BA,2026-02-01,resolved,folna kiselina,1,onbekend,,nee,nee,nee
 B03BB01,CZ,2026-11-03,active,FOLIC ACID,1,publicatiedatum,False,nee,nee,nee
@@ -1215,7 +1212,6 @@ B05BA03,SE,2026-09-30,active,glukosmonohydrat,2,verwachte_start,False,nee,nee,ne
 B05BA03,SI,2021-12-31,active,carbohydrata,1,feitelijke_start,True,ja,ja,nee
 B05BA03,SK,2021-03-04,discontinued,Sacharidy,7,feitelijke_start,True,ja,ja,nee
 B05BA10,AT,2026-10-22,active,"L-CYSTEIN, HISTIDIN, LEUCIN, ASPARAGINSÄURE, ARGININ, ISOLEU",1,feitelijke_start,True,ja,nee,nee
-B05BA10,ES,2026-11-17,active,"ALANINA, ARGININA, GLICINA, HISTIDINA, ISOLEUCINA, LISINA AC",1,meldingsdatum,True,nee,nee,nee
 B05BA10,HR,2025-01-27,active,"arginin
 glicin
 histidin
@@ -1300,7 +1296,7 @@ B05XB02,SE,2026-06-03,active,alanyl-glutamin,1,verwachte_start,False,nee,nee,nee
 B05XB02,SK,2026-10-21,active,Alanylglutamín,1,feitelijke_start,True,ja,nee,nee
 B06AC02,AT,2026-10-12,active,ICATIBANT-ACETAT,1,feitelijke_start,True,ja,nee,nee
 B06AC02,ES,2026-06-22,active,ICATIBANTO ACETATO,3,meldingsdatum,True,nee,nee,nee
-B06AC02,FI,2026-06-30,active,ikatibantacetat,1,feitelijke_start,True,ja,nee,nee
+B06AC02,FI,2026-06-30,active,ICATIBANTO ACETATO,1,feitelijke_start,True,ja,nee,nee
 B06AC02,FR,2026-04-20,active,icatibant (acétate d'),1,feitelijke_start,False,ja,nee,nee
 B06AC02,HR,2026-03-30,active,ikatibantacetat,2,feitelijke_start,True,ja,nee,nee
 B06AC02,IE,2026-10-15,active,Icatibant,1,verwachte_start,False,nee,nee,nee
@@ -1379,7 +1375,6 @@ C01CA03,IE,2026-05-04,active,Noradrenaline acid tartrate,1,verwachte_start,False
 C01CA03,IS,2023-08-15,resolved,Noradrenalinum tartrat (norepinephrinum INN tartrat),5,verwachte_start,True,nee,ja,nee
 C01CA03,IT,2026-11-12,active,NORADRENALINA TARTRATO,1,verwachte_start,False,nee,nee,nee
 C01CA03,LV,2022-06-01,langlopend,Norepinephrinum,3,feitelijke_start,True,ja,ja,nee
-C01CA03,NZ,2026-07-09,active,Noradrenaline,1,onbekend,,nee,nee,nee
 C01CA03,SE,2025-11-28,active,noradrenalintartrat (monohydrat),1,verwachte_start,False,nee,nee,nee
 C01CA03,SI,2026-01-01,active,norepinephrinum,1,feitelijke_start,True,ja,nee,nee
 C01CA03,SK,2023-01-11,inactive,Norepinefrín (Noradrenalín),4,feitelijke_start,True,ja,ja,nee
@@ -1566,10 +1561,10 @@ C02DB01,JP,2025-11-21,active,ヒドララジン塩酸塩,1,registratiedatum,Fals
 C02DB02,AU,2025-08-08,active,hydralazine hydrochloride,1,verwachte_start,False,nee,nee,nee
 C02DB02,NZ,2026-05-04,active,Hydralazine hydrochloride,1,onbekend,,nee,nee,nee
 C02DB02,US,2020-04-07,active,HYDRALAZINE HYDROCHLORIDE,1,publicatiedatum,False,nee,ja,nee
+C02DC01,DE,2026-11-26,active,Minoxidil,1,feitelijke_start,True,ja,nee,nee
 C02DC01,ES,2026-04-28,active,MINOXIDIL,1,meldingsdatum,True,nee,nee,nee
 C02DC01,IE,2026-10-26,active,Minoxidil,1,verwachte_start,False,nee,nee,nee
 C02DD01,DE,2026-08-01,active,Dinatrium-pentacyanonitrosylferrat(2-),1,feitelijke_start,True,ja,nee,nee
-C02KX01,AT,2026-09-14,active,BOSENTAN MONOHYDRAT,1,feitelijke_start,True,ja,nee,nee
 C02KX01,AU,2026-10-29,active,bosentan monohydrate,2,verwachte_start,False,nee,nee,nee
 C02KX01,FI,2026-08-19,active,BOSENTAN,1,feitelijke_start,True,ja,nee,nee
 C02KX01,FR,2026-03-17,active,bosentan monohydraté,1,feitelijke_start,False,ja,nee,nee
@@ -1608,7 +1603,7 @@ C03AA06,JP,2025-04-16,active,トリクロルメチアジド,2,registratiedatum,F
 C03AB01,DK,2026-08-25,active,"Bendroflumethiazid, kaliumchlorid ATC-kode: C03AB01 Forvente",1,verwachte_start,False,nee,nee,nee
 C03AB01,IS,2025-03-20,resolved,"Kalii chloridum, Bendroflumethiazidum INN",7,verwachte_start,True,nee,nee,nee
 C03AB01,NO,2026-11-17,active,"bendroflumetiazid, kaliumklorid",1,feitelijke_start,True,ja,nee,nee
-C03AB01,SE,2026-07-28,active,"bendroflumetiazid, kaliumklorid",2,verwachte_start,False,nee,nee,nee
+C03AB01,SE,2026-07-28,active,"bendroflumetiazid, kaliumklorid",1,verwachte_start,False,nee,nee,nee
 C03BA03,JP,2026-06-02,active,ヒドロクロロチアジド,1,registratiedatum,False,nee,nee,nee
 C03BA04,AT,2022-10-19,langlopend,CHLORTALIDON,1,feitelijke_start,True,ja,ja,nee
 C03BA11,AT,2026-07-07,resolved,INDAPAMID,2,feitelijke_start,True,ja,nee,nee
@@ -1627,7 +1622,7 @@ C03CA01,FI,2026-04-24,active,FUROSEMIDE,2,feitelijke_start,True,ja,nee,nee
 C03CA01,FR,2025-09-30,discontinued,furosémide,3,feitelijke_start,False,ja,nee,nee
 C03CA01,HR,2025-06-09,active,furosemid,1,feitelijke_start,True,ja,nee,nee
 C03CA01,HU,2020-06-19,inactive,furosemide,5,feitelijke_start,True,ja,ja,nee
-C03CA01,IE,2025-05-15,active,Furosemide,5,verwachte_start,False,nee,nee,nee
+C03CA01,IE,2025-05-15,active,Furosemide,4,verwachte_start,False,nee,nee,nee
 C03CA01,IS,2025-12-29,resolved,Furosemidum INN,3,verwachte_start,True,nee,nee,nee
 C03CA01,IT,2025-10-10,langlopend,FUROSEMIDE,7,verwachte_start,False,nee,nee,nee
 C03CA01,JP,2025-11-10,active,フロセミド,6,registratiedatum,False,nee,nee,nee
@@ -1635,7 +1630,7 @@ C03CA01,MY,2025-12-02,active,FRUSEMIDE,1,verwachte_start,False,nee,nee,nee
 C03CA01,NO,2025-10-10,resolved,furosemid,6,feitelijke_start,True,ja,nee,nee
 C03CA01,RO,2025-11-25,discontinued,FUROSEMIDUM,1,meldingsdatum,False,nee,nee,nee
 C03CA01,SE,2023-10-16,active,furosemid,1,verwachte_start,False,nee,ja,nee
-C03CA01,US,2020-04-07,active,FUROSEMIDE,13,publicatiedatum,False,nee,ja,nee
+C03CA01,US,2020-04-07,active,FUROSEMIDE,11,publicatiedatum,False,nee,ja,nee
 C03CA02,BE,2026-09-16,active,Bumetanide,2,feitelijke_start,True,ja,nee,nee
 C03CA02,FR,2026-08-05,resolved,bumétanide,1,feitelijke_start,False,ja,nee,nee
 C03CA02,GR,2026-12-31,upcoming,BUMETANIDE,1,feitelijke_start,True,ja,nee,ja
@@ -1689,8 +1684,8 @@ C04AD03,NO,2024-10-01,discontinued,pentoksyfyllin,1,feitelijke_start,True,ja,ja,
 C04AD03,RO,2026-06-23,active,PENTOXIFYLLINUM,1,meldingsdatum,False,nee,nee,nee
 C04AD03,SK,2019-12-31,discontinued,Pentoxifylín,1,feitelijke_start,True,ja,ja,nee
 C04AE02,LV,2026-01-14,discontinued,Nicergolinum,1,feitelijke_start,True,ja,nee,nee
-C04AX02,AU,2008-10-01,resolved,phenoxybenzamine hydrochloride,1,verwachte_start,False,nee,ja,nee
 C04AX21,SK,2021-03-05,inactive,Naftidrofuryl,2,feitelijke_start,True,ja,ja,nee
+C04AX32,JP,2025-09-30,active,ファスジル塩酸塩水和物,1,registratiedatum,False,nee,nee,nee
 C05AA01,ES,2026-11-24,active,"HIDROCORTISONA, CINCOCAINA HIDROCLORURO",1,meldingsdatum,True,nee,nee,nee
 C05AA01,IS,2025-08-27,resolved,"Hydrocortisonum INN acetat, Lidocainum INN",1,verwachte_start,True,nee,nee,nee
 C05AA08,GR,2026-08-01,active,"FLUOCORTOLONE PIVALATE, LIDOCAINE HYDROCHLORIDE",1,feitelijke_start,True,ja,nee,nee
@@ -1721,8 +1716,8 @@ C05CX03,IT,2026-04-29,active,ESCINA,1,verwachte_start,False,nee,nee,nee
 C07AA03,US,2026-01-30,discontinued,PINDOLOL,1,publicatiedatum,False,nee,nee,nee
 C07AA05,AU,2025-10-01,discontinued,propranolol hydrochloride,2,verwachte_start,False,nee,nee,nee
 C07AA05,BE,2026-07-09,active,Propranolol Hydrochloride,1,feitelijke_start,True,ja,nee,nee
-C07AA05,DE,2026-02-25,active,Propranololhydrochlorid,1,feitelijke_start,True,ja,nee,nee
-C07AA05,EE,2025-11-25,active,Propranolol,1,feitelijke_start,True,ja,nee,nee
+C07AA05,DE,2026-02-25,active,Propranololhydrochlorid,2,feitelijke_start,True,ja,nee,nee
+C07AA05,EE,2025-11-25,inactive,Propranolol,1,feitelijke_start,True,ja,nee,nee
 C07AA05,ES,2026-07-24,active,PROPRANOLOL HIDROCLORURO,1,meldingsdatum,True,nee,nee,nee
 C07AA05,FR,2026-11-09,resolved,chlorhydrate de propranolol,1,feitelijke_start,False,ja,nee,nee
 C07AA05,HU,2026-02-01,active,propranolol,1,feitelijke_start,True,ja,nee,nee
@@ -1737,6 +1732,7 @@ C07AA07,RO,2026-04-07,discontinued,SOTALOLUM,1,meldingsdatum,False,nee,nee,nee
 C07AA12,IT,2026-06-23,active,NADOLOLO,1,verwachte_start,False,nee,nee,nee
 C07AB02,AU,2026-11-09,active,metoprolol succinate,2,verwachte_start,False,nee,nee,nee
 C07AB02,BA,2026-02-17,active,metoprolol,1,onbekend,,nee,nee,nee
+C07AB02,BE,2026-11-20,active,Metoprolol Succinate,1,feitelijke_start,True,ja,nee,nee
 C07AB02,DE,2026-05-07,active,Metoprololsuccinat (Ph.Eur.),4,feitelijke_start,True,ja,nee,nee
 C07AB02,DK,2026-07-15,active,Metoprolol (Metoprololtartrat) ATC-kode: C07AB02 Forventet p,1,verwachte_start,False,nee,nee,nee
 C07AB02,EE,2025-05-19,inactive,Metoprolol,2,feitelijke_start,True,ja,nee,nee
@@ -1862,7 +1858,7 @@ C08CA05,SI,2026-02-24,active,nifedipinum,1,feitelijke_start,True,ja,nee,nee
 C08CA05,SK,2020-06-01,discontinued,Nifedipín,1,feitelijke_start,True,ja,ja,nee
 C08CA06,CZ,2026-09-11,active,NIMODIPINE,1,publicatiedatum,False,nee,nee,nee
 C08CA06,ES,2026-10-30,active,NIMODIPINO,2,meldingsdatum,True,nee,nee,nee
-C08CA06,FI,2026-01-09,active,NIMODIPINE,1,feitelijke_start,True,ja,nee,nee
+C08CA06,FI,2026-01-09,active,NIMODIPINO,1,feitelijke_start,True,ja,nee,nee
 C08CA06,GR,2026-11-29,upcoming,NIMODIPINE,1,feitelijke_start,True,ja,nee,ja
 C08CA06,LV,2026-02-13,active,Nimodipinum,2,feitelijke_start,True,ja,nee,nee
 C08CA06,RO,2026-07-28,discontinued,NIMODIPINUM,2,meldingsdatum,False,nee,nee,nee
@@ -1910,7 +1906,7 @@ C09AA01,SK,2021-12-22,inactive,Kaptopril,4,feitelijke_start,True,ja,ja,nee
 C09AA02,AU,2026-07-29,resolved,enalapril maleate,4,verwachte_start,False,nee,nee,nee
 C09AA02,BA,2026-02-17,active,enalapril,7,onbekend,,nee,nee,nee
 C09AA02,ES,2026-05-18,active,ENALAPRIL MALEATO,5,meldingsdatum,True,nee,nee,nee
-C09AA02,FI,2025-04-25,active,enalaprilmaleat,7,feitelijke_start,True,ja,nee,nee
+C09AA02,FI,2025-04-25,active,ENALAPRIL MALEATO,7,feitelijke_start,True,ja,nee,nee
 C09AA02,IS,2025-06-06,resolved,Enalaprilum INN maleat,7,verwachte_start,True,nee,nee,nee
 C09AA02,IT,2024-02-12,langlopend,ENALAPRIL MALEATO,7,verwachte_start,False,nee,ja,nee
 C09AA02,JP,2024-02-07,active,エナラプリルマレイン酸塩,6,registratiedatum,False,nee,ja,nee
@@ -1998,7 +1994,7 @@ C09BA04,HU,2015-01-01,active,indapamide;perindopril tert-butylamine,1,feitelijke
 C09BA04,IT,2026-07-31,active,INDAPAMIDE + PERINDOPRIL TERT-BUTILAMINA,4,verwachte_start,False,nee,nee,nee
 C09BA04,SI,2013-05-31,upcoming,perindoprilum et diuretica,2,feitelijke_start,True,ja,ja,nee
 C09BA04,SK,2022-03-01,discontinued,Perindopril a diuretiká,7,feitelijke_start,True,ja,ja,nee
-C09BA05,AT,2026-10-13,active,"HYDROCHLOROTHIAZID, RAMIPRIL",3,feitelijke_start,True,ja,nee,nee
+C09BA05,AT,2026-10-13,active,"HYDROCHLOROTHIAZID, RAMIPRIL",2,feitelijke_start,True,ja,nee,nee
 C09BA05,ES,2026-11-18,active,"RAMIPRIL, HIDROCLOROTIAZIDA",1,meldingsdatum,True,nee,nee,nee
 C09BA05,HR,2026-04-30,active,"ramipril
 hidroklorotiazid",1,feitelijke_start,True,ja,nee,nee
@@ -2017,14 +2013,14 @@ C09BB03,SK,2019-12-31,discontinued,lizinopril a amlodipín,3,feitelijke_start,Tr
 C09BB04,BE,2026-08-24,active,"Amlodipine, Perindopril",2,feitelijke_start,True,ja,nee,nee
 C09BB04,DE,2025-07-16,active,Amlodipinbesilat; Perindopril-tert-butylamin,1,feitelijke_start,True,ja,nee,nee
 C09BB04,IT,2025-07-03,langlopend,AMLODIPINA + PERINDOPRIL TERT-BUTILAMINA,7,verwachte_start,False,nee,nee,nee
-C09BB04,SK,2020-01-31,discontinued,Perindopril a amlodipín,11,feitelijke_start,True,ja,ja,nee
+C09BB04,SK,2020-01-31,discontinued,Perindopril a amlodipín,10,feitelijke_start,True,ja,ja,nee
 C09BB05,BE,2026-11-30,upcoming,"Felodipine, Ramipril",1,feitelijke_start,True,ja,nee,ja
 C09BB05,CZ,2026-11-10,active,FELODIPINE + RAMIPRIL,1,publicatiedatum,False,nee,nee,nee
 C09BB07,EE,2026-01-12,active,Ramipril+Amlodipine,1,feitelijke_start,True,ja,nee,nee
 C09BB07,ES,2026-05-29,active,"RAMIPRIL, AMLODIPINO BESILATO",3,meldingsdatum,True,nee,nee,nee
 C09BB07,FI,2026-08-14,active,Ramipril a amlodipín,2,feitelijke_start,True,ja,nee,nee
 C09BB07,IT,2023-12-31,langlopend,AMLODIPINA + RAMIPRIL,9,verwachte_start,False,nee,ja,nee
-C09BB07,SK,2022-01-31,discontinued,Ramipril a amlodipín,15,feitelijke_start,True,ja,ja,nee
+C09BB07,SK,2022-01-31,discontinued,Ramipril a amlodipín,16,feitelijke_start,True,ja,ja,nee
 C09BB10,CZ,2025-05-13,active,TRANDOLAPRIL + VERAPAMIL HYDROCHLORIDE,4,publicatiedatum,False,nee,nee,nee
 C09BB10,DE,2026-08-06,active,Trandolapril; Verapamilhydrochlorid,1,feitelijke_start,True,ja,nee,nee
 C09BB10,EE,2026-05-11,active,Trandolapril+Verapamil,2,feitelijke_start,True,ja,nee,nee
@@ -2036,7 +2032,7 @@ C09BX01,SK,2022-03-10,inactive,"Perindopril,amlodipín a indapamid",7,feitelijke
 C09BX02,HU,2018-11-21,inactive,perindopril arginine;bisoprolol fumarate,4,feitelijke_start,True,ja,ja,nee
 C09BX02,SK,2026-11-05,active,Perindopril a bisoprolol,2,feitelijke_start,True,ja,nee,nee
 C09CA01,BE,2026-08-07,active,Losartan Potassium,2,feitelijke_start,True,ja,nee,nee
-C09CA01,FI,2026-10-08,active,ロサルタンカリウム,2,feitelijke_start,True,ja,nee,nee
+C09CA01,FI,2026-10-08,active,ロサルタンカリウム,3,feitelijke_start,True,ja,nee,nee
 C09CA01,HU,2017-08-05,inactive,losartan potassium,5,feitelijke_start,True,ja,ja,nee
 C09CA01,IS,2024-10-31,resolved,Losartanum INN kalíum,8,verwachte_start,True,nee,ja,nee
 C09CA01,IT,2025-12-01,active,LOSARTAN POTASSICO,2,verwachte_start,False,nee,nee,nee
@@ -2112,12 +2108,12 @@ C09DA01,NO,2025-12-15,resolved,"hydroklortiazid, losartankalium",1,feitelijke_st
 C09DA01,SK,2019-12-23,discontinued,Losartan a diuretiká,9,feitelijke_start,True,ja,ja,nee
 C09DA02,FI,2026-11-30,upcoming,Eprosartán a diuretiká,1,feitelijke_start,True,ja,nee,ja
 C09DA02,SK,2020-12-31,discontinued,Eprosartán a diuretiká,1,feitelijke_start,True,ja,ja,nee
-C09DA03,AT,2026-11-09,active,"HYDROCHLOROTHIAZID, VALSARTAN",2,feitelijke_start,True,ja,nee,nee
+C09DA03,AT,2026-11-09,active,"HYDROCHLOROTHIAZID, VALSARTAN",1,feitelijke_start,True,ja,nee,nee
 C09DA03,BA,2026-02-17,active,"hidrohlorotiazid, valsartan",1,onbekend,,nee,nee,nee
 C09DA03,BE,2026-10-30,active,"Valsartan, Hydrochlorothiazide",2,feitelijke_start,True,ja,nee,nee
 C09DA03,CZ,2026-10-21,active,VALSARTAN + HYDROCHLOROTHIAZIDE,1,publicatiedatum,False,nee,nee,nee
 C09DA03,DE,2018-07-01,active,Hydrochlorothiazid; Valsartan,6,feitelijke_start,True,ja,ja,nee
-C09DA03,ES,2026-05-29,active,"VALSARTAN, HIDROCLOROTIAZIDA",6,meldingsdatum,True,nee,nee,nee
+C09DA03,ES,2026-08-24,active,"VALSARTAN, HIDROCLOROTIAZIDA",5,meldingsdatum,True,nee,nee,nee
 C09DA03,FI,2026-09-22,active,IDROCLOROTIAZIDE + VALSARTAN,1,feitelijke_start,True,ja,nee,nee
 C09DA03,HU,2025-01-20,active,valsartan;hydrochlorothiazide,6,feitelijke_start,True,ja,nee,nee
 C09DA03,IS,2025-03-25,resolved,"Valsartanum INN, Hydrochlorothiazide",5,verwachte_start,True,nee,nee,nee
@@ -2134,17 +2130,17 @@ C09DA06,AT,2025-12-06,active,"HYDROCHLOROTHIAZID, CANDESARTAN CILEXETIL",2,feite
 C09DA06,BE,2026-11-10,active,"Candesartan Cilexetil, Hydrochlorothiazide",1,feitelijke_start,True,ja,nee,nee
 C09DA06,CZ,2026-10-01,active,CANDESARTAN CILEXETIL + HYDROCHLOROTHIAZIDE,5,publicatiedatum,False,nee,nee,nee
 C09DA06,ES,2026-04-06,active,"CANDESARTAN CILEXETILO, HIDROCLOROTIAZIDA",3,meldingsdatum,True,nee,nee,nee
-C09DA06,FI,2026-11-30,upcoming,CANDESARTAN CILEXETIL + HYDROCHLOROTHIAZIDE,1,feitelijke_start,True,ja,nee,ja
+C09DA06,FI,2026-11-30,upcoming,"CANDESARTAN CILEXETILO, HIDROCLOROTIAZIDA",1,feitelijke_start,True,ja,nee,ja
 C09DA06,IT,2022-12-12,langlopend,CANDESARTAN CILEXETIL + IDROCLOROTIAZIDE,4,verwachte_start,False,nee,ja,nee
 C09DA06,SE,2027-01-25,upcoming,"hydroklortiazid, kandesartancilexetil",1,verwachte_start,False,nee,nee,ja
 C09DA06,SK,2025-07-31,discontinued,Kandesartan a diuretiká,4,feitelijke_start,True,ja,nee,nee
 C09DA07,CZ,2026-09-23,active,TELMISARTAN + HYDROCHLOROTHIAZIDE,2,publicatiedatum,False,nee,nee,nee
-C09DA07,ES,2026-03-18,active,"TELMISARTAN, HIDROCLOROTIAZIDA",3,meldingsdatum,True,nee,nee,nee
-C09DA07,FI,2026-11-03,active,テルミサルタン・ヒドロクロロチアジド,1,feitelijke_start,True,ja,nee,nee
+C09DA07,ES,2026-03-18,active,"TELMISARTAN, HIDROCLOROTIAZIDA",4,meldingsdatum,True,nee,nee,nee
+C09DA07,FI,2026-11-03,active,Telmisartan a diuretiká,1,feitelijke_start,True,ja,nee,nee
 C09DA07,HU,2026-09-25,active,telmisartan;hydrochlorothiazide,1,feitelijke_start,True,ja,nee,nee
 C09DA07,IT,2023-06-26,langlopend,IDROCLOROTIAZIDE + TELMISARTAN,1,verwachte_start,False,nee,ja,nee
 C09DA07,JP,2025-11-25,active,テルミサルタン・ヒドロクロロチアジド,9,registratiedatum,False,nee,nee,nee
-C09DA07,SK,2019-04-30,discontinued,Telmisartan a diuretiká,9,feitelijke_start,True,ja,ja,nee
+C09DA07,SK,2019-04-30,discontinued,Telmisartan a diuretiká,10,feitelijke_start,True,ja,ja,nee
 C09DA08,BE,2026-08-13,active,"Hydrochlorothiazide, Olmesartan Medoxomil",3,feitelijke_start,True,ja,nee,nee
 C09DA08,ES,2026-10-06,active,"OLMESARTAN MEDOXOMILO, HIDROCLOROTIAZIDA",3,meldingsdatum,True,nee,nee,nee
 C09DA08,GR,2026-06-29,active,"OLMESARTAN MEDOXOMIL, HYDROCHLOROTHIAZID E",3,feitelijke_start,True,ja,nee,nee
@@ -2205,7 +2201,7 @@ C10AA01,NO,2025-11-30,resolved,simvastatin,1,feitelijke_start,True,ja,nee,nee
 C10AA01,SE,2024-09-25,active,simvastatin,7,verwachte_start,False,nee,ja,nee
 C10AA01,SK,2019-11-25,discontinued,Simvastatín,3,feitelijke_start,True,ja,ja,nee
 C10AA02,SK,2021-05-19,inactive,Lovastatín,1,feitelijke_start,True,ja,ja,nee
-C10AA03,AT,2026-10-27,active,PRAVASTATIN NATRIUM,2,feitelijke_start,True,ja,nee,nee
+C10AA03,AT,2026-10-27,active,PRAVASTATIN NATRIUM,1,feitelijke_start,True,ja,nee,nee
 C10AA03,AU,2026-03-16,active,pravastatin sodium,3,verwachte_start,False,nee,nee,nee
 C10AA03,BE,2026-01-16,active,Pravastatin Sodium,4,feitelijke_start,True,ja,nee,nee
 C10AA03,ES,2025-11-03,active,PRAVASTATINA SODICA,4,meldingsdatum,True,nee,nee,nee
@@ -2246,12 +2242,12 @@ C10AA07,BA,2026-02-17,active,rosuvastatin,4,onbekend,,nee,nee,nee
 C10AA07,BE,2025-11-26,active,Rosuvastatin,9,feitelijke_start,True,ja,nee,nee
 C10AA07,DE,2023-03-06,active,Rosuvastatin-Hemicalcium,7,feitelijke_start,True,ja,ja,nee
 C10AA07,ES,2026-05-26,active,ROSUVASTATINA  CALCICA,6,meldingsdatum,True,nee,nee,nee
-C10AA07,FI,2026-11-26,upcoming,ロスバスタチンカルシウム,2,feitelijke_start,True,ja,nee,ja
+C10AA07,FI,2026-11-26,active,ロスバスタチンカルシウム,2,feitelijke_start,True,ja,nee,nee
 C10AA07,GR,2025-12-12,active,ROSUVASTATIN CALCIUM,4,feitelijke_start,True,ja,nee,nee
 C10AA07,HU,2023-12-21,inactive,rosuvastatin,9,feitelijke_start,True,ja,ja,nee
 C10AA07,IE,2026-01-09,active,Rosuvastatin,4,verwachte_start,False,nee,nee,nee
 C10AA07,IT,2023-04-30,langlopend,ROSUVASTATINA SALE DI CALCIO,10,verwachte_start,False,nee,ja,nee
-C10AA07,JP,2024-10-29,active,ロスバスタチンカルシウム,26,registratiedatum,False,nee,ja,nee
+C10AA07,JP,2025-03-11,active,ロスバスタチンカルシウム,26,registratiedatum,False,nee,nee,nee
 C10AA07,LV,2018-12-28,langlopend,Rosuvastatinum,17,feitelijke_start,True,ja,ja,nee
 C10AA07,NO,2026-02-19,resolved,rosuvastatinkalsium,1,feitelijke_start,True,ja,nee,nee
 C10AA07,RO,2025-08-19,discontinued,ROSUVASTATINUM,2,meldingsdatum,False,nee,nee,nee
@@ -2310,7 +2306,6 @@ C10AX14,MY,2026-02-23,resolved,Alirocumab,1,verwachte_start,False,nee,nee,nee
 C10AX14,NO,2026-06-01,resolved,alirokumab,2,feitelijke_start,True,ja,nee,nee
 C10AX14,SE,2026-11-18,active,alirokumab,1,verwachte_start,False,nee,nee,nee
 C10AX14,SK,2026-09-30,discontinued,Alirocumab,3,feitelijke_start,True,ja,nee,nee
-C10AX15,BE,2026-10-26,active,Bempedoic Acid,1,feitelijke_start,True,ja,nee,nee
 C10AX15,CZ,2026-09-03,active,BEMPEDOIC ACID,1,publicatiedatum,False,nee,nee,nee
 C10AX15,FR,2026-07-24,active,bempédoïque (acide),1,feitelijke_start,False,ja,nee,nee
 C10AX15,IS,2026-09-15,resolved,Acidum bempedoicum INN,1,verwachte_start,True,nee,nee,nee
@@ -2319,7 +2314,7 @@ C10AX15,NO,2026-07-14,resolved,bempedoinsyre,1,feitelijke_start,True,ja,nee,nee
 C10AX16,IS,2025-12-04,resolved,Inclisiranum INN natríum,2,verwachte_start,True,nee,nee,nee
 C10AX16,LV,2023-09-01,langlopend,Inclisiranum,1,feitelijke_start,True,ja,ja,nee
 C10AX16,SK,2024-01-31,discontinued,Inklisiran,1,feitelijke_start,True,ja,ja,nee
-C10BA02,BE,2025-10-21,active,"Simvastatin, Ezetimibe",5,feitelijke_start,True,ja,nee,nee
+C10BA02,BE,2025-10-21,active,"Simvastatin, Ezetimibe",6,feitelijke_start,True,ja,nee,nee
 C10BA02,DE,2025-09-01,active,Ezetimib; Simvastatin,4,feitelijke_start,True,ja,nee,nee
 C10BA02,ES,2026-03-18,active,"SIMVASTATINA, EZETIMIBA",2,meldingsdatum,True,nee,nee,nee
 C10BA02,GR,2026-01-30,active,"SIMVASTATIN, EZETIMIBE",3,feitelijke_start,True,ja,nee,nee
@@ -2403,10 +2398,9 @@ D01AC18,JP,2026-02-10,active,ルリコナゾール,2,registratiedatum,False,nee,
 D01AC20,HU,2020-03-10,inactive,isoconazole;diflucortolone,1,feitelijke_start,True,ja,ja,nee
 D01AC20,IS,2024-09-09,resolved,"Miconazolum INN nítrat, Hydrocortisonum INN",6,verwachte_start,True,nee,ja,nee
 D01AC20,NO,2025-11-17,resolved,"hydrokortison, mikonazolnitrat",1,feitelijke_start,True,ja,nee,nee
-D01AC20,SE,2026-08-28,active,"hydrokortison, mikonazolnitrat",1,verwachte_start,False,nee,nee,nee
+D01AC20,SE,2026-08-28,active,"hydrokortison, mikonazolnitrat",2,verwachte_start,False,nee,nee,nee
 D01AC22,JP,2025-06-12,active,ラノコナゾール,4,registratiedatum,False,nee,nee,nee
 D01AC60,HU,2023-09-01,inactive,bifonazole;urea,1,feitelijke_start,True,ja,ja,nee
-D01AC60,SK,2026-11-02,active,"Bifonazol, kombinácie",1,feitelijke_start,True,ja,nee,nee
 D01AE12,LV,2022-06-30,langlopend,Acidum salicylicum,1,feitelijke_start,True,ja,ja,nee
 D01AE14,CZ,2026-10-20,active,CICLOPIROX OLAMINE,2,publicatiedatum,False,nee,nee,nee
 D01AE14,ES,2026-08-24,active,CICLOPIROX OLAMINA,1,meldingsdatum,True,nee,nee,nee
@@ -2423,7 +2417,7 @@ D01AE16,IE,2026-03-05,active,Amorolfine hydrochloride,1,verwachte_start,False,ne
 D01AE16,IS,2025-11-13,resolved,Amorolfinum INN hýdróklóríð,2,verwachte_start,True,nee,nee,nee
 D01AE16,IT,2026-07-24,active,AMOROLFINA CLORIDRATO,2,verwachte_start,False,nee,nee,nee
 D01AE16,JP,2026-06-01,active,アモロルフィン塩酸塩,1,registratiedatum,False,nee,nee,nee
-D01AE16,LV,2026-09-29,active,Amorolfinum,1,feitelijke_start,True,ja,nee,nee
+D01AE16,LV,2026-11-26,active,Amorolfinum,1,feitelijke_start,True,ja,nee,nee
 D01AE21,FR,2022-05-31,discontinued,Flucytosine,1,feitelijke_start,False,ja,ja,nee
 D01AE22,HU,2025-05-28,inactive,naftifine,1,feitelijke_start,True,ja,nee,nee
 D01BA02,AU,2025-08-27,active,terbinafine hydrochloride,4,verwachte_start,False,nee,nee,nee
@@ -2442,6 +2436,7 @@ D01BA03,JP,2025-10-01,active,ブテナフィン塩酸塩,5,registratiedatum,Fals
 D02AE01,JP,2024-12-06,active,尿素,8,registratiedatum,False,nee,ja,nee
 D02AE01,NO,2026-01-26,resolved,urea,2,feitelijke_start,True,ja,nee,nee
 D02AE01,SK,2022-12-07,inactive,Močovina,1,feitelijke_start,True,ja,ja,nee
+D02AE51,SE,2026-11-24,active,"glycerol, urea",1,verwachte_start,False,nee,nee,nee
 D02AE51,SK,2021-05-10,discontinued,"Močovina, kombinácie",1,feitelijke_start,True,ja,ja,nee
 D03AX03,AT,2023-03-06,langlopend,DEXPANTHENOL,1,feitelijke_start,True,ja,ja,nee
 D03AX03,FI,2026-10-13,active,パンテノール,2,feitelijke_start,True,ja,nee,nee
@@ -2490,6 +2485,7 @@ D06AX07,IT,2024-11-30,langlopend,GENTAMICINA SOLFATO,4,verwachte_start,False,nee
 D06AX09,DK,2026-01-15,active,Mupirocin (mupirocincalcium) ATC-kode: D06AX09 Forventet per,1,verwachte_start,False,nee,nee,nee
 D06AX09,IS,2025-08-13,resolved,Mupirocinum INN,2,verwachte_start,True,nee,nee,nee
 D06AX12,AU,2020-05-07,active,amikacin sulfate,2,verwachte_start,False,nee,ja,nee
+D06BA01,ES,2026-11-25,active,SULFADIAZINA ARGENTICA,1,meldingsdatum,True,nee,nee,nee
 D06BA01,GR,2026-09-30,active,SULFADIAZINE SILVER,1,feitelijke_start,True,ja,nee,nee
 D06BA01,NZ,2026-10-08,discontinued,Sulfadiazine silver 1%,1,onbekend,,nee,nee,nee
 D06BA01,SK,2021-09-20,inactive,"Sulfadiazín, strieborná soľ",1,feitelijke_start,True,ja,ja,nee
@@ -2522,9 +2518,10 @@ D06BX01,IS,2026-11-03,resolved,Metronidazolum INN,1,verwachte_start,True,nee,nee
 D06BX01,NO,2026-04-30,resolved,metronidazol,2,feitelijke_start,True,ja,nee,nee
 D06BX01,SK,2011-12-19,discontinued,Metronidazol,1,feitelijke_start,True,ja,ja,nee
 D07AA01,US,2021-12-15,active,METHYLPREDNISOLONE ACETATE,8,publicatiedatum,False,nee,ja,nee
-D07AA02,FI,2026-12-09,upcoming,Hydrocortisonum INN,1,feitelijke_start,True,ja,nee,ja
+D07AA02,FI,2026-11-25,active,Hydrocortisonum INN,1,feitelijke_start,True,ja,nee,nee
 D07AA02,IS,2024-04-15,resolved,Hydrocortisonum INN,4,verwachte_start,True,nee,ja,nee
 D07AA02,NO,2025-11-18,resolved,hydrokortison,1,feitelijke_start,True,ja,nee,nee
+D07AB02,BE,2026-11-25,active,Hydrocortisone Butyrate,1,feitelijke_start,True,ja,nee,nee
 D07AB02,DK,2025-08-01,langlopend,Hydrocortisonbutyrat ATC-kode: D07AB02 Forventet periode: St,1,verwachte_start,False,nee,nee,nee
 D07AB02,FI,2026-10-19,active,Hydrocortisonum INN bútýrat,1,feitelijke_start,True,ja,nee,nee
 D07AB02,HU,2020-03-10,inactive,hydrocortisone butyrate,2,feitelijke_start,True,ja,ja,nee
@@ -2557,6 +2554,7 @@ D07AC13,NO,2026-03-25,resolved,mometasonfuroat,1,feitelijke_start,True,ja,nee,ne
 D07AC13,SE,2026-11-14,active,mometasonfuroat,2,verwachte_start,False,nee,nee,nee
 D07AC14,AU,2027-03-01,upcoming,methylprednisolone aceponate,1,verwachte_start,False,nee,nee,ja
 D07AC14,SK,2020-05-18,discontinued,Metylprednizolónaceponát,2,feitelijke_start,True,ja,ja,nee
+D07AC17,ES,2026-11-25,active,FLUTICASONA PROPIONATO,1,meldingsdatum,True,nee,nee,nee
 D07AC18,ES,2025-09-01,active,PREDNICARBATO,3,meldingsdatum,True,nee,nee,nee
 D07AD01,BE,2026-11-17,active,Clobetasol Propionate,1,feitelijke_start,True,ja,nee,nee
 D07AD01,HU,2019-10-04,inactive,clobetasol,3,feitelijke_start,True,ja,ja,nee
@@ -2593,6 +2591,7 @@ D08AC02,NO,2025-06-04,resolved,klorheksidindiglukonat,5,feitelijke_start,True,ja
 D08AC02,SE,2026-04-01,active,klorhexidindiglukonat,1,verwachte_start,False,nee,nee,nee
 D08AC52,ES,2026-05-21,active,"CLORHEXIDINA DIGLUCONATO, ETANOL (70%)",1,meldingsdatum,True,nee,nee,nee
 D08AC52,IT,2026-02-01,active,CETRIMIDE + CLOREXIDINA GLUCONATO,3,verwachte_start,False,nee,nee,nee
+D08AC52,NZ,2026-10-19,active,Chlorhexidine with cetrimide,3,onbekend,,nee,nee,nee
 D08AC52,SE,2026-06-12,active,"isopropylalkohol, klorhexidindiglukonat",1,verwachte_start,False,nee,nee,nee
 D08AC52,SK,2024-11-26,inactive,"Chlóhexidín, kombinácie",1,feitelijke_start,True,ja,ja,nee
 D08AE03,JP,2025-04-30,active,消毒用フェノール,1,registratiedatum,False,nee,nee,nee
@@ -3080,7 +3079,7 @@ G04BE03,SI,2018-09-03,active,sildenafilum,1,feitelijke_start,True,ja,ja,nee
 G04BE03,SK,2021-01-27,discontinued,Sildenafil,13,feitelijke_start,True,ja,ja,nee
 G04BE07,CA,2023-11-14,inactive,Apomorphine Hydrochloride,1,publicatiedatum,False,nee,ja,nee
 G04BE08,AT,2026-10-13,active,TADALAFIL,2,feitelijke_start,True,ja,nee,nee
-G04BE08,AU,2025-12-01,discontinued,tadalafil,15,verwachte_start,False,nee,nee,nee
+G04BE08,AU,2025-12-01,discontinued,tadalafil,14,verwachte_start,False,nee,nee,nee
 G04BE08,BE,2026-05-05,active,Tadalafil,10,feitelijke_start,True,ja,nee,nee
 G04BE08,EE,2026-06-11,active,Tadalafil,1,feitelijke_start,True,ja,nee,nee
 G04BE08,ES,2026-03-20,active,TADALAFILO,5,meldingsdatum,True,nee,nee,nee
@@ -3106,6 +3105,7 @@ G04BE10,BE,2026-06-25,active,Avanafil,1,feitelijke_start,True,ja,nee,nee
 G04BE10,DK,2026-07-01,active,Avanafil ATC-kode: G04BE10 Forventet periode: Start juli 202,3,verwachte_start,False,nee,nee,nee
 G04BE10,SI,2017-10-31,active,avanafilum,3,feitelijke_start,True,ja,ja,nee
 G04BE10,SK,2020-12-30,discontinued,Avanafil,2,feitelijke_start,True,ja,ja,nee
+G04BE30,DK,2027-03-15,upcoming,"Aviptadil, phentolaminmesilat ATC-kode: G04BE30 Forventet pe",1,verwachte_start,False,nee,nee,ja
 G04BE30,NO,2027-01-09,upcoming,"aviptadil, fentolaminmesilat",2,feitelijke_start,True,ja,nee,ja
 G04BE30,SE,2026-12-28,upcoming,"aviptadil, fentolaminmesilat",2,verwachte_start,False,nee,nee,ja
 G04BX14,AU,2026-11-02,active,dapoxetine hydrochloride,1,verwachte_start,False,nee,nee,nee
@@ -3121,7 +3121,7 @@ G04CA01,IS,2026-11-11,active,Alfuzosinum INN hýdróklóríð,1,verwachte_start,
 G04CA01,IT,2022-07-15,langlopend,ALFUZOSINA CLORIDRATO,3,verwachte_start,False,nee,ja,nee
 G04CA01,LV,2025-03-01,langlopend,Alfuzosini hydrochloridum,1,feitelijke_start,True,ja,nee,nee
 G04CA01,SK,2025-07-31,discontinued,Alfuzosín,3,feitelijke_start,True,ja,nee,nee
-G04CA02,BE,2026-01-13,active,Tamsulosin Hydrochloride,4,feitelijke_start,True,ja,nee,nee
+G04CA02,BE,2026-01-13,active,Tamsulosin Hydrochloride,5,feitelijke_start,True,ja,nee,nee
 G04CA02,FI,2026-06-17,active,タムスロシン塩酸塩,5,feitelijke_start,True,ja,nee,nee
 G04CA02,HR,2026-05-20,active,tamsulozinklorid,2,feitelijke_start,True,ja,nee,nee
 G04CA02,IE,2026-11-02,active,Tamsulosin hydrochloride,2,verwachte_start,False,nee,nee,nee
@@ -3138,7 +3138,7 @@ G04CA03,IT,2024-11-30,langlopend,TERAZOSINA,2,verwachte_start,False,nee,ja,nee
 G04CA03,SK,2020-02-28,inactive,Terazozín,1,feitelijke_start,True,ja,ja,nee
 G04CA04,GR,2026-04-06,active,SILODOSIN,1,feitelijke_start,True,ja,nee,nee
 G04CA04,IT,2024-03-29,langlopend,SILODOSINA,2,verwachte_start,False,nee,ja,nee
-G04CA04,JP,2026-07-09,active,シロドシン,4,registratiedatum,False,nee,nee,nee
+G04CA04,JP,2026-07-09,active,シロドシン,5,registratiedatum,False,nee,nee,nee
 G04CA52,HU,2026-09-15,active,dutasteride;tamsulosin hydrochloride,1,feitelijke_start,True,ja,nee,nee
 G04CA52,IS,2023-11-29,resolved,"Dutasteridum INN, Tamsulosinum INN hýdróklóríð",5,verwachte_start,True,nee,ja,nee
 G04CA52,NO,2026-01-22,resolved,"dutasterid, tamsulosinhydroklorid",2,feitelijke_start,True,ja,nee,nee
@@ -3151,7 +3151,7 @@ G04CA53,HU,2026-08-31,active,solifenacin succinate;tamsulosin hydrochloride,2,fe
 G04CA53,IT,2026-10-01,active,SOLIFENACINA SUCCINATO + TAMSULOSINA CLORIDRATO,1,verwachte_start,False,nee,nee,nee
 G04CA90,JP,2026-08-06,active,ナフトピジル,1,registratiedatum,False,nee,nee,nee
 G04CB01,BA,2026-10-27,active,finasterid,1,onbekend,,nee,nee,nee
-G04CB01,BE,2026-06-18,active,Finasteride,4,feitelijke_start,True,ja,nee,nee
+G04CB01,BE,2026-06-18,active,Finasteride,3,feitelijke_start,True,ja,nee,nee
 G04CB01,FI,2026-05-04,active,finasterid,2,feitelijke_start,True,ja,nee,nee
 G04CB01,HR,2023-06-19,inactive,finasterid,1,feitelijke_start,True,ja,ja,nee
 G04CB01,HU,2026-10-21,active,finasteride,1,feitelijke_start,True,ja,nee,nee
@@ -3184,7 +3184,7 @@ H01AC01,IT,2026-06-30,active,SOMATROPINA,2,verwachte_start,False,nee,nee,nee
 H01AC01,LV,2018-05-03,langlopend,Follitropinum beta,1,feitelijke_start,True,ja,ja,nee
 H01AC01,NO,2025-06-23,resolved,somatropin,10,feitelijke_start,True,ja,nee,nee
 H01AC01,SK,2022-03-01,discontinued,Somatropín,6,feitelijke_start,True,ja,ja,nee
-H01AC01,US,2026-11-13,discontinued,somatropin,1,publicatiedatum,False,nee,nee,nee
+H01AC01,US,2026-11-13,discontinued,SOMATROPINA,1,publicatiedatum,False,nee,nee,nee
 H01AC03,AU,2026-05-01,active,Mecasermin,1,verwachte_start,False,nee,nee,nee
 H01AC03,JP,2024-03-04,active,メカセルミン（遺伝子組換え）,1,registratiedatum,False,nee,ja,nee
 H01AC08,RO,2026-07-29,active,SOMATROGONUM,1,meldingsdatum,False,nee,nee,nee
@@ -3204,7 +3204,7 @@ H01BA02,MY,2026-02-05,resolved,Desmopressin Acetate,1,verwachte_start,False,nee,
 H01BA02,NO,2020-07-10,resolved,desmopressin,5,feitelijke_start,True,ja,ja,nee
 H01BA02,SE,2025-09-02,active,desmopressinacetat,3,verwachte_start,False,nee,nee,nee
 H01BA02,SK,2021-04-20,discontinued,Dezmopresín,8,feitelijke_start,True,ja,ja,nee
-H01BA02,US,2021-03-12,active,Desmopressinum INN acetat,2,publicatiedatum,False,nee,ja,nee
+H01BA02,US,2021-03-12,active,DESMOPRESSIN ACETATE TRIHYDRATE,2,publicatiedatum,False,nee,ja,nee
 H01BA04,IS,2024-09-06,resolved,Terlipressinum INN  acetat,4,verwachte_start,True,nee,ja,nee
 H01BA04,IT,2024-04-30,langlopend,TERLIPRESSINA,1,verwachte_start,False,nee,ja,nee
 H01BA04,NO,2025-11-28,resolved,terlipressindiacetat,1,feitelijke_start,True,ja,nee,nee
@@ -3300,6 +3300,7 @@ H02AB04,JP,2025-06-12,active,メチルプレドニゾロン酢酸エステル,2,
 H02AB04,NO,2026-07-27,resolved,metylprednisolonnatriumsuksinat,1,feitelijke_start,True,ja,nee,nee
 H02AB04,SK,2020-08-14,discontinued,Metylprednizolón,4,feitelijke_start,True,ja,ja,nee
 H02AB05,JP,2024-06-18,active,プレドニゾロン酢酸エステル,1,registratiedatum,False,nee,ja,nee
+H02AB06,DE,2026-11-20,active,Prednisolon,1,feitelijke_start,True,ja,nee,nee
 H02AB06,HU,2025-11-13,inactive,prednisolone,1,feitelijke_start,True,ja,nee,nee
 H02AB06,IS,2026-07-24,resolved,Prednisolone,1,verwachte_start,True,nee,nee,nee
 H02AB06,JP,2024-10-16,active,プレドニゾロンコハク酸エステルナトリウム,6,registratiedatum,False,nee,ja,nee
@@ -3349,7 +3350,7 @@ H03BA03,JP,2024-02-29,active,テストステロンエナント酸エステル,4,
 H03BB01,DK,2024-06-01,langlopend,Carbimazol ATC-kode: H03BB01 Forventet periode: Start juni 2,1,verwachte_start,False,nee,ja,nee
 H03BB02,IS,2025-07-01,resolved,Thiamazolum INN,1,verwachte_start,True,nee,nee,nee
 H04AA01,DE,2026-09-21,active,Glucagon,1,feitelijke_start,True,ja,nee,nee
-H04AA01,DK,2026-03-15,active,Glucagon ATC-kode: H04AA01 Forventet periode: Midt marts 202,1,verwachte_start,False,nee,nee,nee
+H04AA01,DK,2026-03-15,active,Glucagon ATC-kode: H04AA01 Forventet periode: Midt marts 202,2,verwachte_start,False,nee,nee,nee
 H04AA01,FR,2022-04-11,inactive,glucagon,1,feitelijke_start,False,ja,ja,nee
 H04AA01,IS,2024-06-28,resolved,Glucagonum INN hýdróklóríð,5,verwachte_start,True,nee,ja,nee
 H04AA01,MY,2027-05-30,upcoming,Glucagon,1,verwachte_start,False,nee,nee,ja
@@ -3454,6 +3455,7 @@ J01CA04,SK,2020-06-23,discontinued,Amoxicilín,8,feitelijke_start,True,ja,ja,nee
 J01CA08,IS,2024-12-17,resolved,Pivmecillinamum INN hýdróklóríð,5,verwachte_start,True,nee,ja,nee
 J01CA08,IT,2022-09-16,active,PIVMECILLINA CLORIDRATO,1,verwachte_start,False,nee,ja,nee
 J01CA08,NO,2025-06-30,resolved,pivmecillinamhydroklorid,2,feitelijke_start,True,ja,nee,nee
+J01CA08,SE,2027-01-15,upcoming,pivmecillinamhydroklorid,1,verwachte_start,False,nee,nee,ja
 J01CA11,DK,2020-11-25,langlopend,Mecillinam ATC-kode: J01CA11 Forventet periode: Slut novembe,1,verwachte_start,False,nee,ja,nee
 J01CA11,NO,2021-02-08,resolved,mecillinam,1,feitelijke_start,True,ja,ja,nee
 J01CA12,JP,2026-08-31,active,ピペラシリンナトリウム,1,registratiedatum,False,nee,nee,nee
@@ -3597,7 +3599,7 @@ J01DD02,RO,2025-05-14,discontinued,CEFTAZIDIMUM,1,meldingsdatum,False,nee,nee,ne
 J01DD02,SI,2021-06-30,active,ceftazidimum,1,feitelijke_start,True,ja,ja,nee
 J01DD04,ES,2026-03-02,active,CEFTRIAXONA SODICA,1,meldingsdatum,True,nee,nee,nee
 J01DD04,HU,2025-01-01,active,ceftriaxone,2,feitelijke_start,True,ja,nee,nee
-J01DD04,IS,2024-11-28,resolved,Ceftriaxonum INN dínatríum,13,verwachte_start,True,nee,ja,nee
+J01DD04,IS,2024-11-28,resolved,Ceftriaxonum INN dínatríum,14,verwachte_start,True,nee,ja,nee
 J01DD04,IT,2026-12-28,upcoming,CEFTRIAXONE DISODICO,2,verwachte_start,False,nee,nee,ja
 J01DD04,JP,2025-01-08,active,セフトリアキソンナトリウム水和物,1,registratiedatum,False,nee,nee,nee
 J01DD04,LV,2018-05-03,langlopend,Ceftriaxonum,3,feitelijke_start,True,ja,ja,nee
@@ -3610,7 +3612,7 @@ J01DD08,DE,2018-10-01,active,Cefixim 3 H<2>O,3,feitelijke_start,True,ja,ja,nee
 J01DD08,IE,2026-10-10,active,Cefixime,1,verwachte_start,False,nee,nee,nee
 J01DD08,IT,2026-10-07,active,CEFIXIMA,1,verwachte_start,False,nee,nee,nee
 J01DD08,JP,2025-06-03,active,セフィキシム水和物,2,registratiedatum,False,nee,nee,nee
-J01DD08,SK,2024-08-12,discontinued,Cefixím,3,feitelijke_start,True,ja,ja,nee
+J01DD08,SK,2024-08-12,discontinued,Cefixím,4,feitelijke_start,True,ja,ja,nee
 J01DD12,SK,2021-10-29,discontinued,Cefoperazón,1,feitelijke_start,True,ja,ja,nee
 J01DD13,IT,2026-09-15,active,CEFPODOXIMA,3,verwachte_start,False,nee,nee,nee
 J01DD13,JP,2024-03-01,active,セフポドキシム　プロキセチル,10,registratiedatum,False,nee,ja,nee
@@ -3712,12 +3714,12 @@ J01FA09,IT,2022-03-15,langlopend,CLARITROMICINA,10,verwachte_start,False,nee,ja,
 J01FA09,JP,2023-05-12,active,クラリスロマイシン,6,registratiedatum,False,nee,ja,nee
 J01FA09,LV,2025-01-20,langlopend,Clarithromycinum,2,feitelijke_start,True,ja,nee,nee
 J01FA09,RO,2021-03-31,discontinued,CLARITHROMYCINUM,3,meldingsdatum,False,nee,ja,nee
-J01FA09,SK,2020-02-24,discontinued,Klaritromycín,3,feitelijke_start,True,ja,ja,nee
+J01FA09,SK,2020-02-24,discontinued,Klaritromycín,2,feitelijke_start,True,ja,ja,nee
 J01FA10,AU,2023-04-28,active,azithromycin,2,verwachte_start,False,nee,ja,nee
 J01FA10,CZ,2026-08-04,active,AZITHROMYCIN DIHYDRATE,1,publicatiedatum,False,nee,nee,nee
 J01FA10,EE,2024-01-02,inactive,Azithromycin,2,feitelijke_start,True,ja,ja,nee
 J01FA10,ES,2026-03-02,active,AZITROMICINA DIHIDRATO,6,meldingsdatum,True,nee,nee,nee
-J01FA10,FI,2026-09-24,active,Azithromycinum INN mónóhýdrat,2,feitelijke_start,True,ja,nee,nee
+J01FA10,FI,2026-09-24,active,AZITROMICINA DIHIDRATO,2,feitelijke_start,True,ja,nee,nee
 J01FA10,HU,2026-09-24,active,azithromycin,1,feitelijke_start,True,ja,nee,nee
 J01FA10,IE,2026-07-27,active,Azithromycin dihydrate,1,verwachte_start,False,nee,nee,nee
 J01FA10,IS,2025-11-05,resolved,Azithromycinum INN mónóhýdrat,6,verwachte_start,True,nee,nee,nee
@@ -3833,7 +3835,7 @@ J01XA01,IT,2026-07-13,active,VANCOMICINA CLORIDRATO,3,verwachte_start,False,nee,
 J01XA01,JP,2023-05-12,active,ホスホマイシンカルシウム水和物,5,registratiedatum,False,nee,ja,nee
 J01XA01,LV,2020-12-22,langlopend,Vancomycinum,2,feitelijke_start,True,ja,ja,nee
 J01XA01,RO,2019-11-26,discontinued,VANCOMYCINUM,5,meldingsdatum,False,nee,ja,nee
-J01XA01,SK,2020-06-01,discontinued,Vankomycín,3,feitelijke_start,True,ja,ja,nee
+J01XA01,SK,2020-06-01,discontinued,Vankomycín,2,feitelijke_start,True,ja,ja,nee
 J01XA02,AT,2026-10-19,active,TEICOPLANIN,2,feitelijke_start,True,ja,nee,nee
 J01XA02,AU,2027-01-31,discontinued,teicoplanin,1,verwachte_start,False,nee,nee,ja
 J01XA02,BE,2026-11-19,active,Teicoplanin,1,feitelijke_start,True,ja,nee,nee
@@ -3970,7 +3972,7 @@ J02AC04,LV,2017-12-21,langlopend,Posaconazolum,1,feitelijke_start,True,ja,ja,nee
 J02AC04,NO,2025-12-17,discontinued,posakonazol,3,feitelijke_start,True,ja,nee,nee
 J02AC04,RO,2024-09-18,discontinued,POSACONAZOLUM,2,meldingsdatum,False,nee,ja,nee
 J02AC04,SE,2026-07-09,active,posakonazol,3,verwachte_start,False,nee,nee,nee
-J02AC04,SK,2021-09-01,discontinued,Posakonazol,4,feitelijke_start,True,ja,ja,nee
+J02AC04,SK,2021-09-01,discontinued,Posakonazol,5,feitelijke_start,True,ja,ja,nee
 J02AC04,US,2025-12-02,discontinued,POSACONAZOLE,1,publicatiedatum,False,nee,nee,nee
 J02AX01,GR,2026-11-03,active,FLUCYTOSINE,1,feitelijke_start,True,ja,nee,nee
 J02AX01,IT,2021-04-30,langlopend,FLUCITOSINA,1,verwachte_start,False,nee,ja,nee
@@ -4073,7 +4075,7 @@ J05AB11,SK,2021-05-19,discontinued,Valaciklovir,1,feitelijke_start,True,ja,ja,ne
 J05AB14,AT,2026-08-06,active,VALGANCICLOVIR HYDROCHLORID,1,feitelijke_start,True,ja,nee,nee
 J05AB14,DE,2026-09-17,active,Valganciclovirhydrochlorid,1,feitelijke_start,True,ja,nee,nee
 J05AB14,ES,2026-07-31,active,VALGANCICLOVIR HIDROCLORURO,1,meldingsdatum,True,nee,nee,nee
-J05AB14,FI,2026-06-12,active,VALGANCICLOVIR HYDROCHLORID,1,feitelijke_start,True,ja,nee,nee
+J05AB14,FI,2026-06-12,active,VALGANCICLOVIR HIDROCLORURO,1,feitelijke_start,True,ja,nee,nee
 J05AB14,IS,2025-04-03,resolved,Valganciclovirum INN hýdróklóríð,2,verwachte_start,True,nee,nee,nee
 J05AB14,NO,2026-05-01,resolved,valganciklovirhydroklorid,1,feitelijke_start,True,ja,nee,nee
 J05AB16,ES,2026-10-01,active,REMDESIVIR,1,meldingsdatum,True,nee,nee,nee
@@ -4395,7 +4397,7 @@ J07BF01,RO,2017-10-09,active,VACCIN BCG,1,meldingsdatum,False,nee,ja,nee
 J07BF02,JP,2026-05-13,active,乾燥細胞培養日本脳炎ワクチン,1,registratiedatum,False,nee,nee,nee
 J07BF03,DE,2022-06-01,resolved,"Japanischer Enzephalitis Virus Impfstoff (inaktiviert, adsor",5,feitelijke_start,True,ja,ja,nee
 J07BF03,DK,2025-05-25,langlopend,"Poliovirus type 2, stamme MEF-1 (inaktiveret), Poliovirus ty",1,verwachte_start,False,nee,nee,nee
-J07BF03,ES,2025-11-25,active,POLIOVIRUS INACTIVADO TIPO 1 (MAHONEY) PRODUCIDO EN CELULAS ,1,meldingsdatum,True,nee,nee,nee
+J07BF03,ES,2025-11-25,langlopend,POLIOVIRUS INACTIVADO TIPO 1 (MAHONEY) PRODUCIDO EN CELULAS ,1,meldingsdatum,True,nee,nee,nee
 J07BF03,HU,2017-08-18,inactive,"Poliomyelitis Vaccines, inactivated, type 1;Poliomyelitis Va",1,feitelijke_start,True,ja,ja,nee
 J07BG01,AU,2026-08-17,resolved,Rabies virus,1,verwachte_start,False,nee,nee,nee
 J07BG01,CZ,2025-12-16,active,"RABIES VIRUS, INACTIVATED",1,publicatiedatum,False,nee,nee,nee
@@ -4429,7 +4431,7 @@ J07BK03,SE,2026-01-23,active,"varicella-zostervirus, glykoprotein E (gE), rekomb
 J07BM02,HU,2020-03-01,inactive,vakcina (virális),1,feitelijke_start,True,ja,ja,nee
 J07BM02,SI,2020-07-31,active,"vaccina papilomaviris humanis stirpis 16, 18",1,feitelijke_start,True,ja,ja,nee
 J07BM02,SK,2024-03-12,discontinued,"Očkovacia látka proti papilomavírusu (ľudské typy 16, 18)",1,feitelijke_start,True,ja,ja,nee
-J07BN01,LV,2025-06-20,langlopend,COVID-19 mRNA vaccine (nucleoside modified),6,feitelijke_start,True,ja,nee,nee
+J07BN01,LV,2025-08-14,langlopend,COVID-19 mRNA vaccine (nucleoside modified),5,feitelijke_start,True,ja,nee,nee
 J07BN01,SK,2025-08-15,discontinued,"Očkovacia látka proti Covid-19, na báze RNA",5,feitelijke_start,True,ja,nee,nee
 J07BP01,BE,2026-02-01,active,"Chikungunya Virus, Strain delta5nsP3, Live, Attenuated",1,feitelijke_start,True,ja,nee,nee
 J07BP01,DK,2026-12-25,upcoming,"Chikungunya virus, levende svækket ATC-kode: J07BP01 Forvent",1,verwachte_start,False,nee,nee,ja
@@ -4512,7 +4514,7 @@ L01AA09,SK,2019-07-15,discontinued,Bendamustín,9,feitelijke_start,True,ja,ja,ne
 L01AA09,US,2026-07-23,discontinued,BENDAMUSTINE HYDROCHLORIDE,2,publicatiedatum,False,nee,nee,nee
 L01AB01,AU,2026-06-18,resolved,busulfan,2,verwachte_start,False,nee,nee,nee
 L01AB01,BE,2026-09-11,active,Busulfan,1,feitelijke_start,True,ja,nee,nee
-L01AB01,DE,2026-01-01,resolved,Busulfan,1,feitelijke_start,True,ja,nee,nee
+L01AB01,DE,2026-01-01,active,Busulfan,1,feitelijke_start,True,ja,nee,nee
 L01AB01,HR,2026-04-29,active,busulfan,1,feitelijke_start,True,ja,nee,nee
 L01AB01,HU,2025-12-04,active,busulfan,1,feitelijke_start,True,ja,nee,nee
 L01AB01,IT,2026-12-31,upcoming,BUSULFAN,1,verwachte_start,False,nee,nee,ja
@@ -4708,7 +4710,7 @@ L01CA03,GR,2026-11-03,active,VINDESINE SULPHATE,1,feitelijke_start,True,ja,nee,n
 L01CA03,IT,2023-03-01,langlopend,VINDESINA SOLFATO,1,verwachte_start,False,nee,ja,nee
 L01CA04,AU,2026-02-12,active,vinorelbine tartrate,1,verwachte_start,False,nee,nee,nee
 L01CA04,DE,2025-10-15,active,Vinorelbintartrat,1,feitelijke_start,True,ja,nee,nee
-L01CA04,FI,2026-10-23,active,Vinorelbín,1,feitelijke_start,True,ja,nee,nee
+L01CA04,FI,2026-10-23,active,Vinorelbín,2,feitelijke_start,True,ja,nee,nee
 L01CA04,FR,2026-10-30,resolved,vinorelbine (tartrate de),1,feitelijke_start,False,ja,nee,nee
 L01CA04,HU,2024-06-19,inactive,vinorelbine,1,feitelijke_start,True,ja,ja,nee
 L01CA04,IS,2025-01-15,resolved,Vinorelbinum INN tvítartrat,4,verwachte_start,True,nee,nee,nee
@@ -4754,6 +4756,7 @@ L01CD02,BE,2026-05-22,active,Docetaxel,3,feitelijke_start,True,ja,nee,nee
 L01CD02,ES,2026-08-17,active,DOCETAXEL,3,meldingsdatum,True,nee,nee,nee
 L01CD02,FI,2026-05-25,active,DOCETAXEL,1,feitelijke_start,True,ja,nee,nee
 L01CD02,GR,2026-07-27,active,DOCETAXEL,2,feitelijke_start,True,ja,nee,nee
+L01CD02,HR,2026-11-25,active,docetaksel,1,feitelijke_start,True,ja,nee,nee
 L01CD02,HU,2013-11-18,inactive,docetaxel,6,feitelijke_start,True,ja,ja,nee
 L01CD02,IS,2025-09-13,resolved,Docetaxelum INN,5,verwachte_start,True,nee,nee,nee
 L01CD02,IT,2025-10-03,langlopend,DOCETAXEL,4,verwachte_start,False,nee,nee,nee
@@ -4801,7 +4804,7 @@ L01CX01,SE,2026-09-10,active,trabektedin,2,verwachte_start,False,nee,nee,nee
 L01DB01,AT,2026-09-09,active,DOXORUBICIN HYDROCHLORID,1,feitelijke_start,True,ja,nee,nee
 L01DB01,BE,2026-08-19,active,Doxorubicin Hydrochloride,3,feitelijke_start,True,ja,nee,nee
 L01DB01,CZ,2026-07-10,active,DOXORUBICIN HYDROCHLORIDE,5,publicatiedatum,False,nee,nee,nee
-L01DB01,DE,2024-08-16,active,Doxorubicinhydrochlorid,3,feitelijke_start,True,ja,ja,nee
+L01DB01,DE,2024-08-16,active,Doxorubicinhydrochlorid,4,feitelijke_start,True,ja,ja,nee
 L01DB01,FI,2026-05-30,active,DOXORUBICIN HYDROCHLORIDE,4,feitelijke_start,True,ja,nee,nee
 L01DB01,GR,2026-09-18,active,DOXORUBICIN HYDROCHLORIDE,3,feitelijke_start,True,ja,nee,nee
 L01DB01,HR,2025-02-04,active,doksorubicinklorid,1,feitelijke_start,True,ja,nee,nee
@@ -4815,7 +4818,7 @@ L01DB01,MY,2025-11-01,active,DOXORUBICIN HYDROCHLORIDE,2,verwachte_start,False,n
 L01DB01,RO,2026-10-20,discontinued,DOXORUBICINUM,1,meldingsdatum,False,nee,nee,nee
 L01DB01,SE,2025-01-01,active,doxorubicinhydroklorid,5,verwachte_start,False,nee,nee,nee
 L01DB01,SI,2026-06-02,active,doxorubicinum,6,feitelijke_start,True,ja,nee,nee
-L01DB01,SK,2021-05-01,discontinued,Doxorubicín,5,feitelijke_start,True,ja,ja,nee
+L01DB01,SK,2021-05-01,discontinued,Doxorubicín,4,feitelijke_start,True,ja,ja,nee
 L01DB03,AT,2021-11-04,active,EPIRUBICIN HYDROCHLORID,2,feitelijke_start,True,ja,ja,nee
 L01DB03,BE,2023-02-17,active,Epirubicin,3,feitelijke_start,True,ja,ja,nee
 L01DB03,CZ,2026-06-03,active,EPIRUBICIN HYDROCHLORIDE,3,publicatiedatum,False,nee,nee,nee
@@ -4848,7 +4851,7 @@ L01DC03,BE,2025-03-28,active,Mitomycin,1,feitelijke_start,True,ja,nee,nee
 L01DC03,CZ,2026-02-10,active,MITOMYCIN,1,publicatiedatum,False,nee,nee,nee
 L01DC03,DE,2025-11-18,active,Mitomycin,1,feitelijke_start,True,ja,nee,nee
 L01DC03,ES,2019-11-08,langlopend,MITOMICINA,2,meldingsdatum,True,nee,ja,nee
-L01DC03,FI,2026-10-19,active,Mitomycin,1,feitelijke_start,True,ja,nee,nee
+L01DC03,FI,2026-10-19,active,MITOMICINA,1,feitelijke_start,True,ja,nee,nee
 L01DC03,FR,2025-05-31,active,mitomycine,2,feitelijke_start,False,ja,nee,nee
 L01DC03,IS,2025-07-30,resolved,Mitomycinum INN,2,verwachte_start,True,nee,nee,nee
 L01DC03,IT,2019-11-15,langlopend,MITOMICINA,1,verwachte_start,False,nee,ja,nee
@@ -4893,10 +4896,9 @@ L01EB01,HR,2022-01-18,inactive,gefitinib,1,feitelijke_start,True,ja,ja,nee
 L01EB01,IT,2026-03-20,active,GEFITINIB,1,verwachte_start,False,nee,nee,nee
 L01EB01,JP,2023-11-06,active,ゲフィチニブ,2,registratiedatum,False,nee,ja,nee
 L01EB01,LV,2019-09-01,langlopend,Gefitinibum,1,feitelijke_start,True,ja,ja,nee
-L01EB01,MY,2025-12-01,resolved,Gefitinib,1,verwachte_start,False,nee,nee,nee
 L01EB01,RO,2024-07-24,discontinued,GEFITINIBUM,2,meldingsdatum,False,nee,ja,nee
 L01EB02,BE,2022-02-14,active,Erlotinib,2,feitelijke_start,True,ja,ja,nee
-L01EB02,ES,2026-11-13,active,ERLOTINIB HIDROCLORURO,2,meldingsdatum,True,nee,nee,nee
+L01EB02,ES,2026-11-13,active,ERLOTINIB,2,meldingsdatum,True,nee,nee,nee
 L01EB02,HU,2023-07-23,active,erlotinib,2,feitelijke_start,True,ja,ja,nee
 L01EB02,IE,2026-11-02,active,Erlotinib hydrochloride,1,verwachte_start,False,nee,nee,nee
 L01EB02,IT,2027-01-01,upcoming,ERLOTINIB CLORIDRATO,1,verwachte_start,False,nee,nee,ja
@@ -5014,7 +5016,7 @@ L01EX04,SK,2021-11-30,inactive,Vandetanib,2,feitelijke_start,True,ja,ja,nee
 L01EX05,RO,2026-09-24,discontinued,REGORAFENIBUM,1,meldingsdatum,False,nee,nee,nee
 L01EX08,IS,2025-10-25,resolved,Lenvatinibum INN mesýlat,5,verwachte_start,True,nee,nee,nee
 L01EX09,ES,2026-09-10,active,NINTEDANIB ESILATO,2,meldingsdatum,True,nee,nee,nee
-L01EX09,FI,2026-10-30,active,Nintedanibum INN,2,feitelijke_start,True,ja,nee,nee
+L01EX09,FI,2026-10-30,active,NINTEDANIB ESILATO,2,feitelijke_start,True,ja,nee,nee
 L01EX09,IS,2025-11-03,resolved,Nintedanibum INN,4,verwachte_start,True,nee,nee,nee
 L01EX09,IT,2026-09-17,active,NINTEDANIB,2,verwachte_start,False,nee,nee,nee
 L01EX09,LV,2023-03-02,langlopend,Nintedanibum,1,feitelijke_start,True,ja,ja,nee
@@ -5030,7 +5032,7 @@ L01EX22,JP,2026-06-25,active,セルペルカチニブ,2,registratiedatum,False,n
 L01EX22,SK,2022-08-31,discontinued,Selperkatinib,4,feitelijke_start,True,ja,ja,nee
 L01FA01,EE,2026-10-09,active,Rituximab,1,feitelijke_start,True,ja,nee,nee
 L01FA01,ES,2025-10-03,langlopend,RITUXIMAB,2,meldingsdatum,True,nee,nee,nee
-L01FA01,FI,2026-10-09,active,Rituximab,2,feitelijke_start,True,ja,nee,nee
+L01FA01,FI,2026-10-09,active,RITUXIMAB,2,feitelijke_start,True,ja,nee,nee
 L01FA01,IS,2026-11-20,active,Rituximabum INN,1,verwachte_start,True,nee,nee,nee
 L01FA01,IT,2025-11-26,active,RITUXIMAB,3,verwachte_start,False,nee,nee,nee
 L01FA01,JP,2024-03-11,active,リツキシマブ（遺伝子組換え）,1,registratiedatum,False,nee,ja,nee
@@ -5081,7 +5083,7 @@ L01XA01,IT,2026-02-28,active,CISPLATINO,2,verwachte_start,False,nee,nee,nee
 L01XA01,JP,2024-02-01,active,シスプラチン,2,registratiedatum,False,nee,ja,nee
 L01XA02,BA,2026-07-09,active,karboplatin,2,onbekend,,nee,nee,nee
 L01XA02,BE,2026-03-10,active,Carboplatin,2,feitelijke_start,True,ja,nee,nee
-L01XA02,DE,2026-05-15,active,Carboplatin,1,feitelijke_start,True,ja,nee,nee
+L01XA02,DE,2026-05-15,active,Carboplatin,2,feitelijke_start,True,ja,nee,nee
 L01XA02,ES,2025-11-17,langlopend,CARBOPLATINO,2,meldingsdatum,True,nee,nee,nee
 L01XA02,FI,2026-05-17,active,CARBOPLATIN,1,feitelijke_start,True,ja,nee,nee
 L01XA02,HR,2026-11-05,active,karboplatin,1,feitelijke_start,True,ja,nee,nee
@@ -5131,7 +5133,7 @@ L01XE47,HU,2023-11-01,inactive,dacomitinib,3,feitelijke_start,True,ja,ja,nee
 L01XF03,FI,2026-01-23,active,Targretin 75 mg,1,feitelijke_start,True,ja,nee,nee
 L01XG01,AU,2026-09-30,discontinued,bortezomib,3,verwachte_start,False,nee,nee,nee
 L01XG01,DE,2026-11-02,active,Bortezomibmannitol,1,feitelijke_start,True,ja,nee,nee
-L01XG01,DK,2025-11-25,active,Bortezomib ATC-kode: L01XG01 Forventet periode: Fra slut nov,1,verwachte_start,False,nee,nee,nee
+L01XG01,DK,2025-11-25,langlopend,Bortezomib ATC-kode: L01XG01 Forventet periode: Fra slut nov,1,verwachte_start,False,nee,nee,nee
 L01XG01,ES,2026-08-17,active,BORTEZOMIB,1,meldingsdatum,True,nee,nee,nee
 L01XG01,GR,2025-04-09,active,BORTEZOMIB,1,feitelijke_start,True,ja,nee,nee
 L01XG01,HU,2019-02-27,active,bortezomib,1,feitelijke_start,True,ja,ja,nee
@@ -5316,6 +5318,7 @@ L02BX03,SI,2026-09-17,active,abirateronum,2,feitelijke_start,True,ja,nee,nee
 L02BX03,SK,2021-12-31,discontinued,Abirateron,4,feitelijke_start,True,ja,ja,nee
 L03AA02,BE,2026-08-28,active,Filgrastim,2,feitelijke_start,True,ja,nee,nee
 L03AA02,CZ,2026-05-07,active,FILGRASTIM,3,publicatiedatum,False,nee,nee,nee
+L03AA02,DE,2026-11-24,active,Filgrastim,1,feitelijke_start,True,ja,nee,nee
 L03AA02,ES,2026-10-21,active,FILGRASTIM,3,meldingsdatum,True,nee,nee,nee
 L03AA02,FI,2026-11-27,upcoming,FILGRASTIM,1,feitelijke_start,True,ja,nee,ja
 L03AA02,HU,2017-10-06,inactive,filgrastim,3,feitelijke_start,True,ja,ja,nee
@@ -5390,7 +5393,7 @@ L04AA03,AU,2026-08-05,resolved,rabbit antithymocyte immunoglobulin,2,verwachte_s
 L04AA03,FR,2026-11-10,resolved,immunoglobuline équine anti-lymphocyte T humain,1,feitelijke_start,False,ja,nee,nee
 L04AA03,LV,2025-12-01,active,Immunoglobulinum antithymocytorum ex equini ad usum humanum,1,feitelijke_start,True,ja,nee,nee
 L04AA03,NO,2026-02-23,resolved,"immunglobulin anti-t-lymfocytt, animalsk, til human bruk",3,feitelijke_start,True,ja,nee,nee
-L04AA06,AU,2026-08-17,resolved,mycophenolate mofetil,6,verwachte_start,False,nee,nee,nee
+L04AA06,AU,2026-08-17,resolved,mycophenolate mofetil,7,verwachte_start,False,nee,nee,nee
 L04AA06,ES,2026-03-23,active,MICOFENOLATO DE MOFETILO,2,meldingsdatum,True,nee,nee,nee
 L04AA06,IE,2026-11-02,active,Mycophenolate mofetil,1,verwachte_start,False,nee,nee,nee
 L04AA06,IS,2024-08-01,resolved,Mycophenolatum INN natríum,5,verwachte_start,True,nee,ja,nee
@@ -5398,6 +5401,7 @@ L04AA06,IT,2026-04-24,active,ACIDO MICOFENOLICO,3,verwachte_start,False,nee,nee,
 L04AA06,NO,2022-02-14,active,mykofenolatmofetilhydroklorid,1,feitelijke_start,True,ja,ja,nee
 L04AA06,SE,2026-04-13,active,mykofenolatmofetil,2,verwachte_start,False,nee,nee,nee
 L04AA06,SK,2019-10-18,inactive,Kyselina mykofenolová,3,feitelijke_start,True,ja,ja,nee
+L04AA06,US,2026-11-24,discontinued,MYCOPHENOLATE MOFETIL,1,publicatiedatum,False,nee,nee,nee
 L04AA13,HU,2025-05-17,inactive,leflunomide,2,feitelijke_start,True,ja,nee,nee
 L04AA13,MY,2026-09-11,resolved,Leflunomide,1,verwachte_start,False,nee,nee,nee
 L04AA24,IT,2027-01-04,upcoming,ABATACEPT,1,verwachte_start,False,nee,nee,ja
@@ -5409,9 +5413,10 @@ L04AA32,GR,2027-01-08,upcoming,APREMILAST,2,feitelijke_start,True,ja,nee,ja
 L04AA32,IS,2025-04-01,resolved,Apremilastum INN,3,verwachte_start,True,nee,nee,nee
 L04AA32,IT,2026-06-05,active,APREMILAST,3,verwachte_start,False,nee,nee,nee
 L04AA32,SK,2026-08-24,active,Apremilast,1,feitelijke_start,True,ja,nee,nee
+L04AA40,FI,2026-11-25,active,Cladribinum INN,1,feitelijke_start,True,ja,nee,nee
 L04AA40,IS,2025-08-31,resolved,Cladribinum INN,2,verwachte_start,True,nee,nee,nee
 L04AB01,CA,2026-11-12,active,"Etanercept  for Injection, 25 mg/0.5 mL",1,publicatiedatum,False,nee,nee,nee
-L04AB01,ES,2026-11-20,active,ETANERCEPT,1,meldingsdatum,True,nee,nee,nee
+L04AB01,ES,2026-11-20,active,ETANERCEPT,2,meldingsdatum,True,nee,nee,nee
 L04AB01,HU,2023-11-28,inactive,etanercept,1,feitelijke_start,True,ja,ja,nee
 L04AB01,IS,2024-08-29,resolved,Etanerceptum INN,9,verwachte_start,True,nee,ja,nee
 L04AB01,IT,2026-09-25,active,ETANERCEPT,1,verwachte_start,False,nee,nee,nee
@@ -5435,7 +5440,7 @@ L04AB04,AU,2026-02-01,discontinued,Adalimumab,5,verwachte_start,False,nee,nee,ne
 L04AB04,BE,2026-03-11,active,Adalimumab,3,feitelijke_start,True,ja,nee,nee
 L04AB04,DE,2025-11-01,active,Adalimumab,2,feitelijke_start,True,ja,nee,nee
 L04AB04,ES,2026-05-28,active,ADALIMUMAB,1,meldingsdatum,True,nee,nee,nee
-L04AB04,FI,2026-09-28,active,Adalimumab,3,feitelijke_start,True,ja,nee,nee
+L04AB04,FI,2026-09-28,active,Adalimumab,4,feitelijke_start,True,ja,nee,nee
 L04AB04,GR,2026-11-30,upcoming,ADALIMUMAB,1,feitelijke_start,True,ja,nee,ja
 L04AB04,HR,2025-09-12,active,adalimumab,1,feitelijke_start,True,ja,nee,nee
 L04AB04,HU,2024-01-01,active,adalimumab,6,feitelijke_start,True,ja,ja,nee
@@ -5444,7 +5449,7 @@ L04AB04,IT,2026-08-06,active,ADALIMUMAB,4,verwachte_start,False,nee,nee,nee
 L04AB04,LV,2017-01-01,langlopend,Adalimumabum,6,feitelijke_start,True,ja,ja,nee
 L04AB04,NO,2025-12-14,discontinued,adalimumab,2,feitelijke_start,True,ja,nee,nee
 L04AB04,RO,2026-09-23,discontinued,ADALIMUMABUM,2,meldingsdatum,False,nee,nee,nee
-L04AB04,SE,2026-07-21,active,adalimumab,4,verwachte_start,False,nee,nee,nee
+L04AB04,SE,2026-07-21,active,adalimumab,3,verwachte_start,False,nee,nee,nee
 L04AB04,SI,2026-07-09,active,adalimumabum,2,feitelijke_start,True,ja,nee,nee
 L04AB04,SK,2019-10-01,discontinued,Adalimumab,8,feitelijke_start,True,ja,ja,nee
 L04AB04,US,2026-01-13,discontinued,ADALIMUMAB,2,publicatiedatum,False,nee,nee,nee
@@ -5532,7 +5537,7 @@ L04AE01,AU,2025-11-14,active,fingolimod hydrochloride,1,verwachte_start,False,ne
 L04AE01,DE,2026-06-01,active,Fingolimodhydrochlorid,2,feitelijke_start,True,ja,nee,nee
 L04AE01,EE,2026-10-21,active,Fingolimod,1,feitelijke_start,True,ja,nee,nee
 L04AE01,ES,2024-04-01,active,FINGOLIMOD HIDROCLORURO,6,meldingsdatum,True,nee,ja,nee
-L04AE01,FI,2024-05-31,active,fingolimodhydroklorid,3,feitelijke_start,True,ja,ja,nee
+L04AE01,FI,2024-05-31,active,FINGOLIMOD HIDROCLORURO,3,feitelijke_start,True,ja,ja,nee
 L04AE01,HU,2026-07-01,active,fingolimod,1,feitelijke_start,True,ja,nee,nee
 L04AE01,IE,2025-12-19,active,Fingolimod,1,verwachte_start,False,nee,nee,nee
 L04AE01,IS,2025-10-09,resolved,Fingolimodum INN hýdróklóríð,2,verwachte_start,True,nee,nee,nee
@@ -5625,7 +5630,7 @@ L04AX04,SK,2026-10-20,active,Lenalidomid,2,feitelijke_start,True,ja,nee,nee
 L04AX05,ES,2025-07-07,langlopend,PIRFENIDONA,3,meldingsdatum,True,nee,nee,nee
 L04AX05,FI,2026-10-01,active,PIRFENIDONE,2,feitelijke_start,True,ja,nee,nee
 L04AX05,GR,2026-11-30,upcoming,PIRFENIDONE,1,feitelijke_start,True,ja,nee,ja
-L04AX05,IE,2026-08-18,active,Pirfenidone,2,verwachte_start,False,nee,nee,nee
+L04AX05,IE,2026-08-18,active,Pirfenidone,1,verwachte_start,False,nee,nee,nee
 L04AX05,IS,2024-09-02,resolved,Pirfenidonum INN,3,verwachte_start,True,nee,ja,nee
 L04AX05,IT,2024-02-15,langlopend,PIRFENIDONE,10,verwachte_start,False,nee,ja,nee
 L04AX05,LV,2024-07-01,langlopend,Pirfenidonum,3,feitelijke_start,True,ja,ja,nee
@@ -5677,7 +5682,7 @@ M01AB15,IT,2026-12-24,upcoming,KETOROLAC TROMETAMOLO,2,verwachte_start,False,nee
 M01AB15,LV,2020-02-14,langlopend,Ketorolacum trometamolum,1,feitelijke_start,True,ja,ja,nee
 M01AB15,NO,2025-04-24,resolved,ketorolaktrometamol,3,feitelijke_start,True,ja,nee,nee
 M01AB15,SE,2024-08-01,active,ketorolaktrometamol,1,verwachte_start,False,nee,ja,nee
-M01AB15,US,2018-03-23,active,KETOROLAC TROMETHAMINE,14,publicatiedatum,False,nee,ja,nee
+M01AB15,US,2018-03-23,active,KETOROLAC TROMETHAMINE,10,publicatiedatum,False,nee,ja,nee
 M01AB16,ES,2026-08-03,active,ACECLOFENACO,1,meldingsdatum,True,nee,nee,nee
 M01AB16,IE,2025-04-01,active,Aceclofenac,1,verwachte_start,False,nee,nee,nee
 M01AB16,IT,2026-03-31,active,ACECLOFENAC,2,verwachte_start,False,nee,nee,nee
@@ -5702,7 +5707,7 @@ M01AC06,JP,2023-09-04,active,メロキシカム,4,registratiedatum,False,nee,ja,
 M01AC06,LV,2023-12-21,langlopend,Meloxicamum,1,feitelijke_start,True,ja,ja,nee
 M01AC06,NO,2025-10-01,resolved,meloksikam,2,feitelijke_start,True,ja,nee,nee
 M01AC06,SK,2019-08-15,discontinued,Meloxikam,6,feitelijke_start,True,ja,ja,nee
-M01AE01,AT,2026-07-13,resolved,IBUPROFEN LYSIN,3,feitelijke_start,True,ja,nee,nee
+M01AE01,AT,2026-10-12,active,IBUPROFEN LYSIN,1,feitelijke_start,True,ja,nee,nee
 M01AE01,BA,2026-02-04,active,ibuprofen,3,onbekend,,nee,nee,nee
 M01AE01,BE,2026-11-02,active,Ibuprofen,1,feitelijke_start,True,ja,nee,nee
 M01AE01,ES,2025-11-07,langlopend,IBUPROFENO,4,meldingsdatum,True,nee,nee,nee
@@ -5715,7 +5720,7 @@ M01AE01,NO,2025-11-10,resolved,ibuprofen,3,feitelijke_start,True,ja,nee,nee
 M01AE01,RO,2020-07-16,inactive,IBUPROFENUM,10,meldingsdatum,False,nee,ja,nee
 M01AE01,SE,2026-07-15,active,ibuprofen,3,verwachte_start,False,nee,nee,nee
 M01AE01,SI,2024-08-07,active,ibuprofenum,3,feitelijke_start,True,ja,ja,nee
-M01AE01,SK,2021-03-30,discontinued,Ibuprofén,16,feitelijke_start,True,ja,ja,nee
+M01AE01,SK,2021-03-30,discontinued,Ibuprofén,17,feitelijke_start,True,ja,ja,nee
 M01AE02,AT,2026-11-09,active,NAPROXEN,2,feitelijke_start,True,ja,nee,nee
 M01AE02,DK,2024-02-01,langlopend,Naproxen ATC-kode: M01AE02 Forventet periode: Start februar ,2,verwachte_start,False,nee,ja,nee
 M01AE02,ES,2026-10-15,active,NAPROXENO SODICO,1,meldingsdatum,True,nee,nee,nee
@@ -5773,7 +5778,7 @@ M01AH04,NO,2025-01-27,resolved,parekoksibnatrium,1,feitelijke_start,True,ja,nee,
 M01AH05,BE,2026-07-02,active,Etoricoxib,8,feitelijke_start,True,ja,nee,nee
 M01AH05,DE,2026-07-01,active,Etoricoxib,5,feitelijke_start,True,ja,nee,nee
 M01AH05,ES,2026-05-11,active,ETORICOXIB,8,meldingsdatum,True,nee,nee,nee
-M01AH05,FI,2026-10-22,active,Etoricoxib,5,feitelijke_start,True,ja,nee,nee
+M01AH05,FI,2026-10-22,active,ETORICOXIB,5,feitelijke_start,True,ja,nee,nee
 M01AH05,HU,2015-09-10,inactive,etoricoxib,4,feitelijke_start,True,ja,ja,nee
 M01AH05,IE,2025-12-10,active,Etoricoxib,4,verwachte_start,False,nee,nee,nee
 M01AH05,IS,2023-09-18,resolved,Etoricoxibum INN,9,verwachte_start,True,nee,ja,nee
@@ -5838,7 +5843,7 @@ M03AC06,LV,2021-06-30,langlopend,Pipecuronii bromidum,1,feitelijke_start,True,ja
 M03AC09,AU,2026-08-26,resolved,rocuronium bromide,1,verwachte_start,False,nee,nee,nee
 M03AC09,BE,2026-11-03,active,Rocuronium Bromide,1,feitelijke_start,True,ja,nee,nee
 M03AC09,ES,2026-11-16,active,ROCURONIO BROMURO,1,meldingsdatum,True,nee,nee,nee
-M03AC09,HR,2025-05-15,active,rokuronijev bromid,2,feitelijke_start,True,ja,nee,nee
+M03AC09,HR,2025-05-20,active,rokuronijev bromid,1,feitelijke_start,True,ja,nee,nee
 M03AC09,HU,2024-06-01,inactive,rocuronium bromide,2,feitelijke_start,True,ja,ja,nee
 M03AC09,IT,2026-05-08,active,ROCURONIO BROMURO,1,verwachte_start,False,nee,nee,nee
 M03AC09,MY,2026-09-02,resolved,ROCURONIUM BROMIDE,1,verwachte_start,False,nee,nee,nee
@@ -5970,7 +5975,7 @@ M05BA08,LV,2024-06-01,langlopend,Acidum zoledronicum,2,feitelijke_start,True,ja,
 M05BA08,NO,2026-02-23,resolved,"zoledronsyre, zoledronsyremonohydrat",2,feitelijke_start,True,ja,nee,nee
 M05BA08,RO,2026-09-17,active,ACIDUM ZOLEDRONICUM,2,meldingsdatum,False,nee,nee,nee
 M05BA08,SI,2019-01-31,active,acidum zoledronicum,3,feitelijke_start,True,ja,ja,nee
-M05BA08,SK,2021-09-30,discontinued,Kyselina zoledrónová,3,feitelijke_start,True,ja,ja,nee
+M05BA08,SK,2021-09-30,discontinued,Kyselina zoledrónová,5,feitelijke_start,True,ja,ja,nee
 M05BB03,EE,2023-01-02,inactive,Alendronic acid+Colecalciferol,1,feitelijke_start,True,ja,ja,nee
 M05BB03,ES,2023-10-03,langlopend,"COLECALCIFEROL, ALENDRONICO ACIDO",2,meldingsdatum,True,nee,ja,nee
 M05BB03,HU,2017-10-15,inactive,alendronic acid;cholecalciferol,1,feitelijke_start,True,ja,ja,nee
@@ -6027,7 +6032,7 @@ N01AH03,HU,2026-02-01,active,sufentanil citrate,1,feitelijke_start,True,ja,nee,n
 N01AH03,NO,2026-07-31,active,sufentanilsitrat,1,feitelijke_start,True,ja,nee,nee
 N01AH03,SE,2025-03-01,active,sufentanilcitrat,3,verwachte_start,False,nee,nee,nee
 N01AH03,SK,2024-07-15,inactive,Sufentanil,1,feitelijke_start,True,ja,ja,nee
-N01AH03,US,2022-05-03,active,sufentanilcitrat,2,publicatiedatum,False,nee,ja,nee
+N01AH03,US,2022-05-03,active,SUFENTANIL CITRATE,2,publicatiedatum,False,nee,ja,nee
 N01AH06,AU,2026-07-14,resolved,remifentanil hydrochloride,3,verwachte_start,False,nee,nee,nee
 N01AH06,BE,2026-11-03,active,Remifentanil,1,feitelijke_start,True,ja,nee,nee
 N01AH06,ES,2026-11-11,active,REMIFENTANILO HIDROCLORURO,1,meldingsdatum,True,nee,nee,nee
@@ -6150,7 +6155,6 @@ N02AA03,FI,2026-04-01,active,HYDROMORPHONE HYDROCHLORIDE,2,feitelijke_start,True
 N02AA03,SE,2025-08-18,active,hydromorfonhydroklorid,2,verwachte_start,False,nee,nee,nee
 N02AA03,US,2017-10-31,active,HYDROMORPHONE HYDROCHLORIDE,14,publicatiedatum,False,nee,ja,nee
 N02AA05,AU,2025-07-01,discontinued,oxycodone,2,verwachte_start,False,nee,nee,nee
-N02AA05,FI,2026-10-01,active,Oxycodonum INN hýdróklóríð,1,feitelijke_start,True,ja,nee,nee
 N02AA05,IS,2024-03-01,resolved,Oxycodonum INN hýdróklóríð,20,verwachte_start,True,nee,ja,nee
 N02AA05,IT,2026-12-21,upcoming,OSSICODONE CLORIDRATO,2,verwachte_start,False,nee,nee,ja
 N02AA05,JP,2024-03-11,active,オキシコドン塩酸塩水和物,1,registratiedatum,False,nee,ja,nee
@@ -6204,9 +6208,9 @@ N02AE01,IT,2023-01-31,langlopend,BUPRENORFINA CLORIDRATO,2,verwachte_start,False
 N02AE01,NO,2023-04-01,resolved,buprenorfinhydroklorid,9,feitelijke_start,True,ja,ja,nee
 N02AE01,SE,2026-09-30,active,buprenorfin,3,verwachte_start,False,nee,nee,nee
 N02AJ06,DK,2026-11-01,active,"Codein, paracetamol (codeinphosphathemihydrat, paracetamol) ",1,verwachte_start,False,nee,nee,nee
-N02AJ06,FI,2026-10-22,active,"Paracetamolum INN, Codeine phosphate hemihydrate",2,feitelijke_start,True,ja,nee,nee
+N02AJ06,FI,2026-10-30,active,"Paracetamolum INN, Codeine phosphate hemihydrate",1,feitelijke_start,True,ja,nee,nee
 N02AJ06,IS,2025-03-28,resolved,"Paracetamolum INN, Codeine phosphate hemihydrate",17,verwachte_start,True,nee,nee,nee
-N02AJ06,NO,2025-12-15,resolved,"kodeinfosfatsesquihydrat, paracetamol",8,feitelijke_start,True,ja,nee,nee
+N02AJ06,NO,2025-12-15,resolved,"kodeinfosfatsesquihydrat, paracetamol",12,feitelijke_start,True,ja,nee,nee
 N02AJ13,HR,2024-02-14,active,deksketoprofentrometamol,1,feitelijke_start,True,ja,ja,nee
 N02AJ13,IT,2027-01-05,upcoming,PARACETAMOLO + TRAMADOLO CLORIDRATO,1,verwachte_start,False,nee,nee,ja
 N02AJ13,JP,2025-02-10,active,トラマドール塩酸塩・アセトアミノフェン,8,registratiedatum,False,nee,nee,nee
@@ -6231,7 +6235,6 @@ N02AX02,SK,2020-02-01,discontinued,Tramadol,16,feitelijke_start,True,ja,ja,nee
 N02AX06,AU,2026-11-05,active,tapentadol hydrochloride,1,verwachte_start,False,nee,nee,nee
 N02AX06,NO,2025-12-29,resolved,tapentadolhydroklorid,2,feitelijke_start,True,ja,nee,nee
 N02AX06,SE,2026-02-19,active,tapentadolmaleathemihydrat,4,verwachte_start,False,nee,nee,nee
-N02AX06,SK,2026-08-31,active,Tapentadol,3,feitelijke_start,True,ja,nee,nee
 N02BA01,BE,2024-10-01,active,Acetylsalicylic Acid,1,feitelijke_start,True,ja,ja,nee
 N02BA01,ES,2025-12-02,active,ACETILSALICILATO LISINA,1,meldingsdatum,True,nee,nee,nee
 N02BA01,HU,2013-12-01,inactive,acetylsalicylic acid,3,feitelijke_start,True,ja,ja,nee
@@ -6254,7 +6257,7 @@ N02BE01,AU,2026-11-02,active,paracetamol,1,verwachte_start,False,nee,nee,nee
 N02BE01,BE,2026-09-11,active,Paracetamol,4,feitelijke_start,True,ja,nee,nee
 N02BE01,EE,2026-04-06,active,Paracetamol,1,feitelijke_start,True,ja,nee,nee
 N02BE01,ES,2025-07-21,langlopend,PARACETAMOL,2,meldingsdatum,True,nee,nee,nee
-N02BE01,FI,2026-09-07,active,Paracetamolum INN,3,feitelijke_start,True,ja,nee,nee
+N02BE01,FI,2026-09-07,active,Paracetamolum INN,4,feitelijke_start,True,ja,nee,nee
 N02BE01,GR,2026-09-07,active,PARACETAMOL,2,feitelijke_start,True,ja,nee,nee
 N02BE01,HR,2022-06-09,inactive,paracetamol,2,feitelijke_start,True,ja,ja,nee
 N02BE01,HU,2014-10-15,inactive,paracetamol,6,feitelijke_start,True,ja,ja,nee
@@ -6266,7 +6269,7 @@ N02BE01,LV,2017-01-10,langlopend,Paracetamolum,4,feitelijke_start,True,ja,ja,nee
 N02BE01,MY,2026-09-07,discontinued,Paracetamol,1,verwachte_start,False,nee,nee,nee
 N02BE01,NO,2025-12-15,resolved,paracetamol,3,feitelijke_start,True,ja,nee,nee
 N02BE01,RO,2024-09-27,active,PARACETAMOLUM,8,meldingsdatum,False,nee,ja,nee
-N02BE01,SE,2023-07-01,active,paracetamol,4,verwachte_start,False,nee,ja,nee
+N02BE01,SE,2023-07-01,active,paracetamol,5,verwachte_start,False,nee,ja,nee
 N02BE01,SI,2026-01-28,active,paracetamolum,1,feitelijke_start,True,ja,nee,nee
 N02BE01,SK,2019-06-30,discontinued,Paracetamol,6,feitelijke_start,True,ja,ja,nee
 N02BE51,BA,2027-11-01,discontinued,"askorbinska kiselina, paracetamol",1,onbekend,,nee,nee,ja
@@ -6317,7 +6320,7 @@ N02BF02,NO,2025-05-19,resolved,pregabalin,9,feitelijke_start,True,ja,nee,nee
 N02BF02,RO,2020-09-24,inactive,PREGABALINUM,8,meldingsdatum,False,nee,ja,nee
 N02BF02,SE,2023-08-11,active,pregabalin,18,verwachte_start,False,nee,ja,nee
 N02BF02,SI,2026-11-23,active,pregabalin,1,feitelijke_start,True,ja,nee,nee
-N02BF02,SK,2019-10-28,inactive,Pregabalín,15,feitelijke_start,True,ja,ja,nee
+N02BF02,SK,2019-10-28,inactive,Pregabalín,14,feitelijke_start,True,ja,ja,nee
 N02BG09,IS,2026-06-19,resolved,Methoxyflurane,1,verwachte_start,True,nee,nee,nee
 N02BG10,SE,2026-04-24,active,Cannabis sativa (cannabis) blad och blomma; tjockt extrakt; ,1,verwachte_start,False,nee,nee,nee
 N02CA52,JP,2025-08-21,active,エルゴタミン酒石酸塩・無水カフェイン配合剤,2,registratiedatum,False,nee,nee,nee
@@ -6378,7 +6381,6 @@ N02CC07,US,2026-02-24,discontinued,Frovatriptan (frovatriptansuccinat monohydrat
 N02CC08,IT,2026-06-22,active,LASMIDITAN,2,verwachte_start,False,nee,nee,nee
 N02CC51,AT,2026-06-01,active,"NATRIUM NAPROXENAT, SUMATRIPTAN SUCCINAT",1,feitelijke_start,True,ja,nee,nee
 N02CD01,AT,2026-11-09,active,ERENUMAB,1,feitelijke_start,True,ja,nee,nee
-N02CD01,BE,2026-11-05,active,Erenumab,1,feitelijke_start,True,ja,nee,nee
 N02CD01,DK,2026-11-15,active,Erenumab ATC-kode: N02CD01 Forventet periode: Midt november ,1,verwachte_start,False,nee,nee,nee
 N02CD01,IS,2024-09-01,resolved,Erenumabum INN,5,verwachte_start,True,nee,ja,nee
 N02CD01,NO,2025-11-20,resolved,erenumab,2,feitelijke_start,True,ja,nee,nee
@@ -6467,7 +6469,6 @@ N03AX09,US,2026-04-29,discontinued,lamotrigine,1,publicatiedatum,False,nee,nee,n
 N03AX10,NO,2025-12-18,resolved,felbamat,2,feitelijke_start,True,ja,nee,nee
 N03AX11,AT,2026-04-01,active,TOPIRAMAT,4,feitelijke_start,True,ja,nee,nee
 N03AX11,AU,2024-04-30,active,topiramate,18,verwachte_start,False,nee,ja,nee
-N03AX11,CZ,2026-09-09,active,TOPIRAMATE,6,publicatiedatum,False,nee,nee,nee
 N03AX11,EE,2026-08-20,active,Topiramate,2,feitelijke_start,True,ja,nee,nee
 N03AX11,ES,2026-07-27,active,TOPIRAMATO,2,meldingsdatum,True,nee,nee,nee
 N03AX11,FI,2026-07-08,active,topiramate,4,feitelijke_start,True,ja,nee,nee
@@ -6498,7 +6499,7 @@ N03AX14,RO,2024-05-13,discontinued,LEVETIRACETAMUM,4,meldingsdatum,False,nee,ja,
 N03AX14,SE,2022-05-31,active,levetiracetam,7,verwachte_start,False,nee,ja,nee
 N03AX14,SK,2020-03-26,inactive,Levetiracetam,8,feitelijke_start,True,ja,ja,nee
 N03AX15,ES,2026-06-15,active,ZONISAMIDA,1,meldingsdatum,True,nee,nee,nee
-N03AX15,FI,2026-08-25,active,ZONISAMIDE,3,feitelijke_start,True,ja,nee,nee
+N03AX15,FI,2026-08-25,active,ZONISAMIDE,4,feitelijke_start,True,ja,nee,nee
 N03AX15,GR,2026-07-01,active,ZONISAMIDE,2,feitelijke_start,True,ja,nee,nee
 N03AX15,IS,2026-02-19,resolved,Zonisamidum INN,1,verwachte_start,True,nee,nee,nee
 N03AX15,IT,2026-02-06,active,ZONISAMIDE,3,verwachte_start,False,nee,nee,nee
@@ -6670,7 +6671,7 @@ N05AH02,IT,2022-04-20,langlopend,CLOZAPINA,5,verwachte_start,False,nee,ja,nee
 N05AH02,LV,2025-10-01,active,Clozapinum,2,feitelijke_start,True,ja,nee,nee
 N05AH02,SE,2022-01-28,active,klozapin,6,verwachte_start,False,nee,ja,nee
 N05AH02,SK,2025-03-25,inactive,Klozapín,2,feitelijke_start,True,ja,nee,nee
-N05AH03,AT,2026-08-24,active,OLANZAPIN,6,feitelijke_start,True,ja,nee,nee
+N05AH03,AT,2026-09-14,active,OLANZAPIN,5,feitelijke_start,True,ja,nee,nee
 N05AH03,AU,2024-08-31,active,olanzapine,16,verwachte_start,False,nee,ja,nee
 N05AH03,BA,2026-01-01,resolved,olanzapin,3,onbekend,,nee,nee,nee
 N05AH03,BE,2026-10-05,active,Olanzapine,1,feitelijke_start,True,ja,nee,nee
@@ -6682,7 +6683,6 @@ N05AH03,ES,2025-09-17,active,OLANZAPINA,8,meldingsdatum,True,nee,nee,nee
 N05AH03,FI,2025-12-10,active,Olanzapinum INN,9,feitelijke_start,True,ja,nee,nee
 N05AH03,FR,2026-11-12,resolved,olanzapine (pamoate d') monohydraté,1,feitelijke_start,False,ja,nee,nee
 N05AH03,GR,2025-11-17,active,OLANZAPINE,4,feitelijke_start,True,ja,nee,nee
-N05AH03,HR,2026-09-24,active,olanzapin,1,feitelijke_start,True,ja,nee,nee
 N05AH03,HU,2019-12-12,inactive,olanzapine,9,feitelijke_start,True,ja,ja,nee
 N05AH03,IE,2026-05-15,active,Olanzapine,5,verwachte_start,False,nee,nee,nee
 N05AH03,IS,2024-06-12,resolved,Olanzapinum INN,42,verwachte_start,True,nee,ja,nee
@@ -6697,7 +6697,7 @@ N05AH03,SI,2026-06-29,active,olanzapinum,3,feitelijke_start,True,ja,nee,nee
 N05AH03,SK,2019-07-10,discontinued,Olanzapín,13,feitelijke_start,True,ja,ja,nee
 N05AH04,AT,2024-07-09,active,QUETIAPIN FUMARAT,21,feitelijke_start,True,ja,ja,nee
 N05AH04,AU,2026-05-04,active,quetiapine fumarate,10,verwachte_start,False,nee,nee,nee
-N05AH04,BE,2024-06-07,active,Quetiapine,19,feitelijke_start,True,ja,ja,nee
+N05AH04,BE,2024-06-07,active,Quetiapine,21,feitelijke_start,True,ja,ja,nee
 N05AH04,CZ,2025-05-23,active,QUETIAPINE FUMARATE,55,publicatiedatum,False,nee,nee,nee
 N05AH04,DE,2024-07-23,active,Quetiapinfumarat (Ph.Eur.),42,feitelijke_start,True,ja,ja,nee
 N05AH04,DK,2024-12-15,langlopend,Quetiapin fumarat ATC-kode: N05AH04 Forventet periode: Midt ,7,verwachte_start,False,nee,ja,nee
@@ -6722,7 +6722,6 @@ N05AL02,JP,2026-08-27,active,スルピリド,3,registratiedatum,False,nee,nee,ne
 N05AL03,CZ,2026-08-11,active,TIAPRIDE HYDROCHLORIDE,1,publicatiedatum,False,nee,nee,nee
 N05AL03,HU,2026-11-05,active,tiapride,1,feitelijke_start,True,ja,nee,nee
 N05AL03,SK,2020-07-02,discontinued,Tiaprid,2,feitelijke_start,True,ja,ja,nee
-N05AL05,AU,2026-04-29,resolved,amisulpride,1,verwachte_start,False,nee,nee,nee
 N05AL05,BE,2026-07-01,active,Amisulpride,2,feitelijke_start,True,ja,nee,nee
 N05AL05,CZ,2026-11-19,active,AMISULPRIDE,8,publicatiedatum,False,nee,nee,nee
 N05AL05,DE,2026-09-07,active,Amisulprid,1,feitelijke_start,True,ja,nee,nee
@@ -6744,7 +6743,7 @@ N05AX08,BE,2024-02-19,active,Risperidone,5,feitelijke_start,True,ja,ja,nee
 N05AX08,CZ,2025-03-14,active,RISPERIDONE,2,publicatiedatum,False,nee,nee,nee
 N05AX08,DE,2024-09-05,active,Risperidon,9,feitelijke_start,True,ja,ja,nee
 N05AX08,DK,2025-01-01,langlopend,Risperidon ATC-kode: N05AX08 Forventet periode: Start januar,4,verwachte_start,False,nee,nee,nee
-N05AX08,ES,2024-08-09,active,RISPERIDONA,13,meldingsdatum,True,nee,ja,nee
+N05AX08,ES,2024-08-09,active,RISPERIDONA,14,meldingsdatum,True,nee,ja,nee
 N05AX08,FI,2024-11-28,active,risperidone,6,feitelijke_start,True,ja,ja,nee
 N05AX08,FR,2025-05-12,active,rispéridone,2,feitelijke_start,False,ja,nee,nee
 N05AX08,HR,2023-03-07,inactive,risperidon,5,feitelijke_start,True,ja,ja,nee
@@ -6784,7 +6783,7 @@ N05AX13,CZ,2026-10-13,active,PALIPERIDONE,1,publicatiedatum,False,nee,nee,nee
 N05AX13,DE,2025-12-09,active,Paliperidonpalmitat,6,feitelijke_start,True,ja,nee,nee
 N05AX13,DK,2025-11-01,active,Paliperidon (paliperidonpalmitat) ATC-kode: N05AX13 Forvente,2,verwachte_start,False,nee,nee,nee
 N05AX13,EE,2026-11-16,active,Paliperidone,1,feitelijke_start,True,ja,nee,nee
-N05AX13,ES,2026-01-08,active,PALIPERIDONA PALMITATO,5,meldingsdatum,True,nee,nee,nee
+N05AX13,ES,2026-01-08,active,PALIPERIDONA PALMITATO,6,meldingsdatum,True,nee,nee,nee
 N05AX13,FI,2025-12-09,active,paliperidonpalmitat,4,feitelijke_start,True,ja,nee,nee
 N05AX13,FR,2024-07-23,active,palipéridone,3,feitelijke_start,False,ja,ja,nee
 N05AX13,GR,2026-11-11,active,PALIPERIDONE,2,feitelijke_start,True,ja,nee,nee
@@ -6965,7 +6964,6 @@ N06AA06,NO,2026-01-15,resolved,trimipraminmaleat,1,feitelijke_start,True,ja,nee,
 N06AA07,IE,2023-08-01,active,Lofepramine hydrochloride,1,verwachte_start,False,nee,ja,nee
 N06AA09,DE,2026-03-26,active,Amitriptylinhydrochlorid,3,feitelijke_start,True,ja,nee,nee
 N06AA09,HR,2026-10-01,active,amitriptilinklorid,1,feitelijke_start,True,ja,nee,nee
-N06AA09,IE,2026-02-25,active,Amitriptyline hydrochloride,1,verwachte_start,False,nee,nee,nee
 N06AA09,IS,2025-02-14,resolved,Amitriptylinum INN hýdróklóríð,2,verwachte_start,True,nee,nee,nee
 N06AA09,IT,2026-10-21,active,AMITRIPTILINA,1,verwachte_start,False,nee,nee,nee
 N06AA09,JP,2024-10-04,active,アミトリプチリン塩酸塩,2,registratiedatum,False,nee,ja,nee
@@ -6992,7 +6990,6 @@ N06AB03,RO,2017-11-23,inactive,FLUOXETINUM,2,meldingsdatum,False,nee,ja,nee
 N06AB03,SE,2024-02-29,active,fluoxetinhydroklorid,7,verwachte_start,False,nee,ja,nee
 N06AB03,SI,2026-03-26,active,fluoxetinum,1,feitelijke_start,True,ja,nee,nee
 N06AB03,SK,2023-11-02,active,Fluoxetín,4,feitelijke_start,True,ja,ja,nee
-N06AB04,AT,2026-11-11,active,CITALOPRAM HYDROBROMID,1,feitelijke_start,True,ja,nee,nee
 N06AB04,BE,2026-10-30,active,Citalopram,1,feitelijke_start,True,ja,nee,nee
 N06AB04,ES,2026-06-26,active,CITALOPRAM HIDROBROMURO,4,meldingsdatum,True,nee,nee,nee
 N06AB04,HU,2023-04-01,active,citalopram,4,feitelijke_start,True,ja,ja,nee
@@ -7065,7 +7062,7 @@ N06AX03,NO,2026-01-09,resolved,mianserinhydroklorid,2,feitelijke_start,True,ja,n
 N06AX05,CZ,2025-12-30,active,TRAZODONE HYDROCHLORIDE,3,publicatiedatum,False,nee,nee,nee
 N06AX05,IT,2026-03-15,active,TRAZODONE CLORIDRATO,1,verwachte_start,False,nee,nee,nee
 N06AX05,SK,2023-09-01,discontinued,Trazodón,1,feitelijke_start,True,ja,ja,nee
-N06AX11,AT,2026-07-07,active,MIRTAZAPIN,3,feitelijke_start,True,ja,nee,nee
+N06AX11,AT,2026-07-07,active,MIRTAZAPIN,1,feitelijke_start,True,ja,nee,nee
 N06AX11,AU,2026-09-28,active,mirtazapine,4,verwachte_start,False,nee,nee,nee
 N06AX11,BE,2026-06-20,active,Mirtazapine,4,feitelijke_start,True,ja,nee,nee
 N06AX11,FI,2026-07-21,active,Mirtazapinum INN,5,feitelijke_start,True,ja,nee,nee
@@ -7125,7 +7122,7 @@ N06AX21,HU,2018-03-09,inactive,duloxetine,9,feitelijke_start,True,ja,ja,nee
 N06AX21,IE,2025-12-17,active,Duloxetine,6,verwachte_start,False,nee,nee,nee
 N06AX21,IS,2024-07-15,resolved,Duloxetinum INN hýdróklóríð,5,verwachte_start,True,nee,ja,nee
 N06AX21,IT,2024-09-30,langlopend,DULOXETINA + DULOXETINA CLORIDRATO,17,verwachte_start,False,nee,ja,nee
-N06AX21,JP,2023-09-06,active,デュロキセチン塩酸塩,9,registratiedatum,False,nee,ja,nee
+N06AX21,JP,2023-09-06,active,デュロキセチン塩酸塩,11,registratiedatum,False,nee,ja,nee
 N06AX21,LV,2019-12-30,langlopend,Duloxetinum,3,feitelijke_start,True,ja,ja,nee
 N06AX21,MY,2026-03-27,resolved,Duloxetine Hydrochloride,2,verwachte_start,False,nee,nee,nee
 N06AX21,NO,2023-09-15,resolved,duloksetinhydroklorid,1,feitelijke_start,True,ja,ja,nee
@@ -7143,10 +7140,10 @@ N06AX26,BE,2026-04-01,active,Vortioxetine,2,feitelijke_start,True,ja,nee,nee
 N06AX26,IS,2025-06-25,resolved,Vortioxetinum INN brómíð,1,verwachte_start,True,nee,nee,nee
 N06AX26,IT,2026-09-22,active,VORTIOXETINA BROMIDRATO,1,verwachte_start,False,nee,nee,nee
 N06AX27,NO,2024-08-26,resolved,esketaminhydroklorid,2,feitelijke_start,True,ja,ja,nee
-N06BA01,US,2022-10-12,active,"DEXTROAMPHETAMINE SACCHARATE, AMPHETAMINE ASPARTATE MONOHYDR",18,publicatiedatum,False,nee,ja,nee
+N06BA01,US,2022-10-12,active,"AMPHETAMINE ASPARTATE MONOHYDRATE, AMPHETAMINE SULFATE, DEXT",18,publicatiedatum,False,nee,ja,nee
 N06BA02,IS,2024-10-12,resolved,Dexamfetaminum INN súlfat,1,verwachte_start,True,nee,ja,nee
 N06BA02,NO,2026-04-12,resolved,deksamfetaminsulfat,7,feitelijke_start,True,ja,nee,nee
-N06BA02,SE,2026-10-07,active,dexamfetaminsulfat,2,verwachte_start,False,nee,nee,nee
+N06BA02,SE,2026-10-07,active,dexamfetaminsulfat,1,verwachte_start,False,nee,nee,nee
 N06BA04,AU,2025-04-18,active,methylphenidate hydrochloride,10,verwachte_start,False,nee,nee,nee
 N06BA04,BE,2025-01-21,active,Methylphenidate Hydrochloride,2,feitelijke_start,True,ja,nee,nee
 N06BA04,CZ,2024-12-12,active,METHYLPHENIDATE HYDROCHLORIDE,6,publicatiedatum,False,nee,ja,nee
@@ -7186,7 +7183,6 @@ N06BA12,IS,2026-01-21,resolved,lisdexamfetaminum INN dimesylate,9,verwachte_star
 N06BA12,NO,2024-05-15,resolved,lisdeksamfetamindimesilat,23,feitelijke_start,True,ja,ja,nee
 N06BA12,SE,2026-12-02,upcoming,lisdexamfetamindimesilat,2,verwachte_start,False,nee,nee,ja
 N06BA12,US,2023-07-14,active,LISDEXAMFETAMINE DIMESYLATE,20,publicatiedatum,False,nee,ja,nee
-N06BA14,FI,2026-09-04,active,Sunosi 150 mg,1,feitelijke_start,True,ja,nee,nee
 N06BC01,BE,2022-11-01,active,Caffeine,1,feitelijke_start,True,ja,ja,nee
 N06BC01,IT,2027-01-10,upcoming,CAFFEINE,1,verwachte_start,False,nee,nee,ja
 N06BX01,JP,2025-09-30,active,エダラボン,3,registratiedatum,False,nee,nee,nee
@@ -7221,7 +7217,7 @@ N06DA03,AT,2026-09-08,active,RIVASTIGMIN,4,feitelijke_start,True,ja,nee,nee
 N06DA03,BA,2025-12-15,active,rivastigmin,1,onbekend,,nee,nee,nee
 N06DA03,BE,2026-06-17,active,Rivastigmine,1,feitelijke_start,True,ja,nee,nee
 N06DA03,DK,2026-04-25,active,Rivastigmin (rivastigminhydrogentartrat) ATC-kode: N06DA03 F,2,verwachte_start,False,nee,nee,nee
-N06DA03,ES,2026-04-29,active,RIVASTIGMINA HIDROGENO TARTRATO,2,meldingsdatum,True,nee,nee,nee
+N06DA03,ES,2026-04-29,active,RIVASTIGMINA HIDROGENO TARTRATO,3,meldingsdatum,True,nee,nee,nee
 N06DA03,FI,2026-05-27,active,RIVASTIGMINA,3,feitelijke_start,True,ja,nee,nee
 N06DA03,GR,2026-11-02,active,RIVASTIGMINE HYDROGEN TARTRATE,1,feitelijke_start,True,ja,nee,nee
 N06DA03,IS,2025-01-14,resolved,Rivastigminum INN tartrat,11,verwachte_start,True,nee,nee,nee
@@ -7233,7 +7229,7 @@ N06DA03,SE,2026-05-04,active,rivastigmin,6,verwachte_start,False,nee,nee,nee
 N06DA03,SK,2021-02-19,discontinued,Rivastigmín,3,feitelijke_start,True,ja,ja,nee
 N06DA03,US,2026-09-18,discontinued,RIVASTIGMINE,1,publicatiedatum,False,nee,nee,nee
 N06DA04,AT,2026-01-20,active,GALANTAMIN HYDROBROMID,3,feitelijke_start,True,ja,nee,nee
-N06DA04,AU,2024-10-29,active,galantamine hydrobromide,8,verwachte_start,False,nee,ja,nee
+N06DA04,AU,2024-10-29,active,galantamine hydrobromide,9,verwachte_start,False,nee,ja,nee
 N06DA04,DE,2024-10-02,active,Galantaminhydrobromid,15,feitelijke_start,True,ja,ja,nee
 N06DA04,ES,2025-01-17,active,GALANTAMINA HIDROBROMURO,13,meldingsdatum,True,nee,nee,nee
 N06DA04,FI,2024-06-20,active,Galantaminhydrobromid,10,feitelijke_start,True,ja,ja,nee
@@ -7266,7 +7262,6 @@ N06DX02,LV,2019-12-30,langlopend,Ginkgonis extractum siccum raffinatum et quanti
 N06DX02,RO,2026-03-06,active,GINKGO BILOBA,2,meldingsdatum,False,nee,nee,nee
 N06DX02,SK,2019-05-01,discontinued,Ginkgo biloba,2,feitelijke_start,True,ja,ja,nee
 N07AA01,AT,2026-04-07,active,NEOSTIGMIN METILSULFAT,1,feitelijke_start,True,ja,nee,nee
-N07AA01,CZ,2026-02-03,active,NEOSTIGMINE BROMIDE,1,publicatiedatum,False,nee,nee,nee
 N07AA01,JP,2024-04-01,active,ピリドスチグミン臭化物,3,registratiedatum,False,nee,ja,nee
 N07AA01,RO,2026-10-30,active,NEOSTIGMINI BROMIDUM,1,meldingsdatum,False,nee,nee,nee
 N07AA01,US,2026-01-12,discontinued,NEOSTIGMINE METHYLSULFATE,1,publicatiedatum,False,nee,nee,nee
@@ -7321,7 +7316,7 @@ N07BC05,AT,2026-09-02,active,LEVOMETHADONHYDROCHLORID,2,feitelijke_start,True,ja
 N07BC05,DE,2026-11-03,active,Levomethadonhydrochlorid,1,feitelijke_start,True,ja,nee,nee
 N07BC05,FI,2026-09-28,active,levometadonhydroklorid,1,feitelijke_start,True,ja,nee,nee
 N07BC05,NO,2026-02-20,resolved,levometadonhydroklorid,3,feitelijke_start,True,ja,nee,nee
-N07BC05,SE,2026-01-05,active,levometadonhydroklorid,1,verwachte_start,False,nee,nee,nee
+N07BC05,SE,2026-01-05,active,levometadonhydroklorid,3,verwachte_start,False,nee,nee,nee
 N07BC51,CZ,2026-02-20,active,BUPRENORPHINE HYDROCHLORIDE + NALOXONE HYDROCHLORIDE DIHYDRA,1,publicatiedatum,False,nee,nee,nee
 N07BC51,DK,2026-01-01,active,"Buprenorphin, naloxon (buprenorphinhydrochlorid, naloxonhydr",3,verwachte_start,False,nee,nee,nee
 N07BC51,EE,2025-09-29,inactive,Buprenorphine+Naloxone,1,feitelijke_start,True,ja,nee,nee
@@ -7388,7 +7383,7 @@ P01AB01,BA,2026-08-06,discontinued,metronidazol,1,onbekend,,nee,nee,nee
 P01AB01,IS,2024-06-17,resolved,Metronidazolum INN,4,verwachte_start,True,nee,ja,nee
 P01AB01,IT,2026-09-14,resolved,METRONIDAZOLO,1,verwachte_start,False,nee,nee,nee
 P01AB01,JP,2026-11-04,active,メトロニダゾール,1,registratiedatum,False,nee,nee,nee
-P01AB01,NO,2026-05-18,active,"benzoylmetronidazol-slett, metronidazolbenzoat",2,feitelijke_start,True,ja,nee,nee
+P01AB01,NO,2026-05-18,active,"benzoylmetronidazol-slett, metronidazolbenzoat",4,feitelijke_start,True,ja,nee,nee
 P01AB01,SE,2026-12-22,upcoming,metronidazol,1,verwachte_start,False,nee,nee,ja
 P01AB01,SK,2019-12-01,inactive,Metronidazol,1,feitelijke_start,True,ja,ja,nee
 P01AB02,BA,2026-02-17,active,tinidazol,1,onbekend,,nee,nee,nee
@@ -7438,7 +7433,7 @@ P02CF01,IS,2025-04-07,resolved,Ivermectin,1,verwachte_start,True,nee,nee,nee
 P02CF01,LV,2026-11-17,active,Ivermectinum,1,feitelijke_start,True,ja,nee,nee
 P02CF01,SK,2024-07-12,discontinued,Ivermektín,1,feitelijke_start,True,ja,ja,nee
 P02CF01,US,2026-09-29,discontinued,IVERMECTIN,1,publicatiedatum,False,nee,nee,nee
-P02CX01,FI,2026-11-26,upcoming,Pyrvin 100 mg,1,feitelijke_start,True,ja,nee,ja
+P02CX01,FI,2026-11-26,active,Pyrvin 100 mg,1,feitelijke_start,True,ja,nee,nee
 P03AA54,IS,2026-01-01,resolved,"Disulfiramum INN, Benzylis benzoas",1,verwachte_start,True,nee,nee,nee
 P03AC04,AU,2026-09-07,active,permethrin,1,verwachte_start,False,nee,nee,nee
 P03AC04,IE,2026-11-16,active,Permethrin,1,verwachte_start,False,nee,nee,nee
@@ -7464,9 +7459,9 @@ R01AC02,NO,2025-12-30,resolved,levokabastinhydroklorid,1,feitelijke_start,True,j
 R01AC03,IE,2026-09-29,active,Azelastine hydrochloride,1,verwachte_start,False,nee,nee,nee
 R01AC03,IT,2027-01-01,upcoming,AZELASTINA CLORIDRATO,1,verwachte_start,False,nee,nee,ja
 R01AC06,JP,2024-03-04,active,アゼラスチン塩酸塩,4,registratiedatum,False,nee,ja,nee
-R01AD01,AU,2026-03-01,discontinued,beclometasone dipropionate,1,verwachte_start,False,nee,nee,nee
+R01AD01,AU,2026-03-01,discontinued,beclometasone dipropionate,2,verwachte_start,False,nee,nee,nee
 R01AD01,ES,2025-09-18,langlopend,BECLOMETASONA DIPROPIONATO,1,meldingsdatum,True,nee,nee,nee
-R01AD01,JP,2025-09-17,active,ベクロメタゾンプロピオン酸エステル,5,registratiedatum,False,nee,nee,nee
+R01AD01,JP,2025-09-17,active,ベクロメタゾンプロピオン酸エステル,4,registratiedatum,False,nee,nee,nee
 R01AD01,RO,2025-12-16,discontinued,BECLOMETASONUM,1,meldingsdatum,False,nee,nee,nee
 R01AD01,SK,2021-07-29,discontinued,Beklometazón,2,feitelijke_start,True,ja,ja,nee
 R01AD05,LV,2020-02-28,langlopend,Budesonidum,6,feitelijke_start,True,ja,ja,nee
@@ -7504,7 +7499,7 @@ R01BA52,JP,2026-04-10,active,フェキソフェナジン塩酸塩・塩酸プソ
 R02AA01,RO,2018-02-21,inactive,AMBAZONUM,6,meldingsdatum,False,nee,ja,nee
 R02AA02,AT,2026-08-24,active,DEQUALINIUM CHLORID,2,feitelijke_start,True,ja,nee,nee
 R02AA02,JP,2026-09-04,active,デカリニウム塩化物,1,registratiedatum,False,nee,nee,nee
-R02AA03,IS,2026-10-06,active,"Amylmetacresolum INN, Dichlorobenzylalcohol",1,verwachte_start,True,nee,nee,nee
+R02AA03,IS,2026-10-06,active,"Amylmetacresolum INN, Dichlorobenzylalcohol",2,verwachte_start,True,nee,nee,nee
 R02AA05,SK,2020-07-10,discontinued,Chlórhexidín,1,feitelijke_start,True,ja,ja,nee
 R02AA06,SK,2021-11-08,discontinued,Cetylpyridín,1,feitelijke_start,True,ja,ja,nee
 R02AA15,SE,2024-06-20,active,"povidon, joderad",1,verwachte_start,False,nee,ja,nee
@@ -7524,6 +7519,7 @@ R03AC02,AU,2022-12-30,discontinued,salbutamol sulfate,3,verwachte_start,False,ne
 R03AC02,DE,2025-08-01,active,Salbutamolsulfat,3,feitelijke_start,True,ja,nee,nee
 R03AC02,DK,2025-06-15,active,Salbutamol (salbutamolsulfat) ATC-kode: R03AC02 Forventet pe,1,verwachte_start,False,nee,nee,nee
 R03AC02,IS,2024-05-10,resolved,Salbutamolum INN súlfat,7,verwachte_start,True,nee,ja,nee
+R03AC02,JP,2026-11-25,active,プロカテロール塩酸塩水和物,1,registratiedatum,False,nee,nee,nee
 R03AC02,MY,2026-10-01,active,Salbutamol Sulphate,1,verwachte_start,False,nee,nee,nee
 R03AC02,NO,2026-01-06,active,salbutamolsulfat,5,feitelijke_start,True,ja,nee,nee
 R03AC02,NZ,2025-07-02,active,Salbutamol,2,onbekend,,nee,nee,nee
@@ -7566,7 +7562,7 @@ R03AK07,IS,2024-09-06,resolved,"Budesonidum INN, Formoterolum INN",11,verwachte_
 R03AK07,IT,2026-07-01,active,BUDESONIDE + FORMOTEROLO FUMARATO DIIDRATO,1,verwachte_start,False,nee,nee,nee
 R03AK07,JP,2026-03-02,active,ブデソニド・ホルモテロールフマル酸塩水和物,1,registratiedatum,False,nee,nee,nee
 R03AK07,SI,2018-12-31,inactive,formoterolum et alia medicamenta ad morbos obstructi pulmoni,2,feitelijke_start,True,ja,ja,nee
-R03AK07,SK,2020-09-23,inactive,Formoterol a budezonid,7,feitelijke_start,True,ja,ja,nee
+R03AK07,SK,2020-09-23,inactive,Formoterol a budezonid,6,feitelijke_start,True,ja,ja,nee
 R03AK08,DE,2026-11-23,active,Beclometasondipropionat (Ph.Eur.); Formoterolfumarat-Dihydra,1,feitelijke_start,True,ja,nee,nee
 R03AK08,EE,2026-10-28,active,Formoterol+Beclometasone,1,feitelijke_start,True,ja,nee,nee
 R03AK08,GR,2026-10-20,active,"BECLOMETASONE DIPROPIONATE, FORMOTEROL FUMARATE DIHYDRATE",1,feitelijke_start,True,ja,nee,nee
@@ -7582,6 +7578,7 @@ R03AK11,IS,2024-09-20,resolved,"Fluticasonum INN própíónat, Formoterolum INN 
 R03AK14,BE,2026-11-19,active,"Indacaterol , Mometasone Furoate",1,feitelijke_start,True,ja,nee,nee
 R03AK14,SK,2024-05-15,discontinued,Indakaterol a mometazón,1,feitelijke_start,True,ja,ja,nee
 R03AL01,SK,2024-06-30,discontinued,Fenoterol a ipratrópium-bromid,1,feitelijke_start,True,ja,ja,nee
+R03AL02,NZ,2026-01-16,active,Salbutamol 2.5 mg with ipratropium bromide 0.5 mg per vial,1,onbekend,,nee,nee,nee
 R03AL02,SE,2026-12-21,upcoming,"ipratropiumbromid (monohydrat), salbutamolsulfat",1,verwachte_start,False,nee,nee,ja
 R03AL03,BE,2026-11-17,active,"Umeclidinium, Vilanterol",1,feitelijke_start,True,ja,nee,nee
 R03AL03,IS,2025-11-03,resolved,"Vilanterolum INN trífenatat, Umeclidinii bromidum INN",1,verwachte_start,True,nee,nee,nee
@@ -7608,7 +7605,6 @@ R03BA02,JP,2025-09-08,active,ブデソニド,2,registratiedatum,False,nee,nee,ne
 R03BA02,SI,2021-03-17,active,budezonidum,1,feitelijke_start,True,ja,ja,nee
 R03BA02,SK,2024-06-18,discontinued,Budezonid,3,feitelijke_start,True,ja,ja,nee
 R03BA05,CZ,2025-08-08,active,FLUTICASONE PROPIONATE,2,publicatiedatum,False,nee,nee,nee
-R03BA05,IE,2026-06-02,active,"SALMETEROL XINAFOATE, Fluticasone propionate",1,verwachte_start,False,nee,nee,nee
 R03BA05,IS,2024-05-01,resolved,Fluticasonum INN própíónat,12,verwachte_start,True,nee,ja,nee
 R03BA05,JP,2024-06-10,active,フルチカゾンプロピオン酸エステル,3,registratiedatum,False,nee,ja,nee
 R03BA05,NO,2026-04-07,resolved,flutikasonpropionat,6,feitelijke_start,True,ja,nee,nee
@@ -7637,7 +7633,7 @@ R03BB07,NO,2026-12-07,upcoming,umeklidiniumbromid,1,feitelijke_start,True,ja,nee
 R03BC01,IE,2026-07-22,active,Sodium cromoglicate,1,verwachte_start,False,nee,nee,nee
 R03BC01,JP,2025-09-12,active,クロモグリク酸ナトリウム,4,registratiedatum,False,nee,nee,nee
 R03BC01,SK,2020-06-01,inactive,Kyselina kromoglyková,1,feitelijke_start,True,ja,ja,nee
-R03BC01,US,2023-11-03,active,CROMOLYN SODIUM,5,publicatiedatum,False,nee,ja,nee
+R03BC01,US,2023-11-03,active,クロモグリク酸ナトリウム,5,publicatiedatum,False,nee,ja,nee
 R03CA02,BE,2020-03-26,active,Ephedrine Hydrochloride,2,feitelijke_start,True,ja,ja,nee
 R03CC02,BE,2026-11-02,active,Salbutamol,1,feitelijke_start,True,ja,nee,nee
 R03CC03,GR,2026-11-03,active,TERBUTALINE SULPHATE,1,feitelijke_start,True,ja,nee,nee
@@ -7706,7 +7702,7 @@ R05CB01,HU,2018-09-04,inactive,acetylcysteine,7,feitelijke_start,True,ja,ja,nee
 R05CB01,IE,2023-02-01,active,Acetylcysteine,1,verwachte_start,False,nee,ja,nee
 R05CB01,IS,2025-12-09,resolved,Acetylcysteinum INN,4,verwachte_start,True,nee,nee,nee
 R05CB01,IT,2026-07-29,resolved,ACETILCISTEINA,2,verwachte_start,False,nee,nee,nee
-R05CB01,NO,2026-08-25,active,acetylcystein,1,feitelijke_start,True,ja,nee,nee
+R05CB01,NO,2026-08-25,resolved,acetylcystein,1,feitelijke_start,True,ja,nee,nee
 R05CB01,RO,2019-06-25,discontinued,ACETYLCYSTEINUM,1,meldingsdatum,False,nee,ja,nee
 R05CB01,SE,2026-02-13,active,acetylcystein,3,verwachte_start,False,nee,nee,nee
 R05CB01,SK,2024-12-18,inactive,Acetylcysteín,1,feitelijke_start,True,ja,ja,nee
@@ -7756,7 +7752,6 @@ R05FB02,SK,2026-04-30,active,Antitusiká a expektoranciá,2,feitelijke_start,Tru
 R06AA02,AT,2024-07-24,active,DIPHENHYDRAMIN HYDROCHLORID,1,feitelijke_start,True,ja,ja,nee
 R06AA02,GR,2026-09-14,active,DIMENHYDRINATE,1,feitelijke_start,True,ja,nee,nee
 R06AA02,IS,2024-10-14,resolved,Diphenhydraminum INN hýdróklóríð,2,verwachte_start,True,nee,ja,nee
-R06AA02,SE,2026-09-15,active,difenhydraminhydroklorid,1,verwachte_start,False,nee,nee,nee
 R06AA02,SK,2026-09-30,active,Difenhydramín,1,feitelijke_start,True,ja,nee,nee
 R06AA09,NO,2026-09-28,resolved,doksylaminhydrogensuksinat,1,feitelijke_start,True,ja,nee,nee
 R06AA11,LV,2026-10-28,discontinued,Dimenhydrinatum,1,feitelijke_start,True,ja,nee,nee
@@ -7771,6 +7766,7 @@ R06AB02,MY,2025-11-10,active,1) Pseudoephedrine Hydrochloride 2) Dexchlorphenira
 R06AB04,GR,2026-10-27,active,CHLORPHENAMINE MALEATE,1,feitelijke_start,True,ja,nee,nee
 R06AB04,JP,2025-05-30,active,クロルフェニラミンマレイン酸塩,1,registratiedatum,False,nee,nee,nee
 R06AB04,RO,2026-06-25,active,CHLORPHENAMINUM,1,meldingsdatum,False,nee,nee,nee
+R06AB54,BE,2026-11-24,active,"Chlorphenamine Maleate, Phenylephrine Hydrochloride",1,feitelijke_start,True,ja,nee,nee
 R06AC03,BA,2026-03-04,resolved,hloropiramin,3,onbekend,,nee,nee,nee
 R06AD01,NO,2025-11-21,resolved,alimemazinhemitartrat,2,feitelijke_start,True,ja,nee,nee
 R06AD02,DE,2025-07-15,active,Promethazinhydrochlorid,1,feitelijke_start,True,ja,nee,nee
@@ -7806,10 +7802,11 @@ R06AX13,BE,2026-09-28,active,Loratadine,1,feitelijke_start,True,ja,nee,nee
 R06AX13,DK,2026-09-01,active,Loratadin ATC-kode: R06AX13 Forventet periode: Start septemb,2,verwachte_start,False,nee,nee,nee
 R06AX13,HU,2015-08-01,inactive,loratadine,1,feitelijke_start,True,ja,ja,nee
 R06AX13,JP,2025-12-04,active,ロラタジン,4,registratiedatum,False,nee,nee,nee
-R06AX13,NZ,2026-10-27,active,Loratadine,1,onbekend,,nee,nee,nee
+R06AX13,NZ,2026-10-27,resolved,Loratadine,1,onbekend,,nee,nee,nee
 R06AX13,RO,2023-09-14,inactive,LORATADINUM,2,meldingsdatum,False,nee,ja,nee
 R06AX13,SE,2025-09-01,active,loratadin,3,verwachte_start,False,nee,nee,nee
 R06AX13,SK,2020-12-01,discontinued,Loratadín,3,feitelijke_start,True,ja,ja,nee
+R06AX17,IE,2026-11-23,active,KETOTIFEN FUMARATE,1,verwachte_start,False,nee,nee,nee
 R06AX17,JP,2025-04-16,active,ケトチフェンフマル酸塩,5,registratiedatum,False,nee,nee,nee
 R06AX21,JP,2025-09-01,active,エピナスチン塩酸塩,12,registratiedatum,False,nee,nee,nee
 R06AX22,BE,2026-04-15,active,Ebastine,4,feitelijke_start,True,ja,nee,nee
@@ -8034,7 +8031,7 @@ S01EE03,SK,2023-10-31,inactive,Bimatoprost,3,feitelijke_start,True,ja,ja,nee
 S01EE04,BE,2024-11-04,active,Travoprost,2,feitelijke_start,True,ja,ja,nee
 S01EE04,DE,2026-09-07,active,Travoprost,1,feitelijke_start,True,ja,nee,nee
 S01EE04,ES,2025-07-23,active,TRAVOPROST,2,meldingsdatum,True,nee,nee,nee
-S01EE04,FI,2026-07-15,active,Travoprostinum INN,2,feitelijke_start,True,ja,nee,nee
+S01EE04,FI,2026-07-15,active,TRAVOPROST,2,feitelijke_start,True,ja,nee,nee
 S01EE04,IS,2024-11-13,resolved,Travoprostinum INN,9,verwachte_start,True,nee,ja,nee
 S01EE04,IT,2023-12-15,langlopend,TRAVOPROST,3,verwachte_start,False,nee,ja,nee
 S01EE04,SE,2026-07-04,active,travoprost,1,verwachte_start,False,nee,nee,nee
@@ -8147,7 +8144,7 @@ S01XA08,IT,2026-09-07,active,ACETILCISTEINA,1,verwachte_start,False,nee,nee,nee
 S01XA18,AT,2026-06-17,active,CICLOSPORIN,2,feitelijke_start,True,ja,nee,nee
 S01XA18,AU,2027-01-23,upcoming,ciclosporin,1,verwachte_start,False,nee,nee,ja
 S01XA18,DK,2026-10-01,active,Ciclosporin ATC-kode: S01XA18 Forventet periode: Start oktob,1,verwachte_start,False,nee,nee,nee
-S01XA18,ES,2026-10-29,active,CICLOSPORINA,1,meldingsdatum,True,nee,nee,nee
+S01XA18,ES,2026-11-25,active,CICLOSPORINA,1,meldingsdatum,True,nee,nee,nee
 S01XA18,FI,2026-02-16,active,ciklosporin,1,feitelijke_start,True,ja,nee,nee
 S01XA18,FR,2026-05-07,active,ciclosporine,2,feitelijke_start,False,ja,nee,nee
 S01XA18,HU,2026-07-31,active,ciclosporin,1,feitelijke_start,True,ja,nee,nee
@@ -8200,6 +8197,7 @@ V03AB01,DE,2026-10-08,active,Natriumthiosulfat,1,feitelijke_start,True,ja,nee,ne
 V03AB01,JP,2025-01-15,active,エタノール,4,registratiedatum,False,nee,nee,nee
 V03AB02,AU,2024-10-16,active,pentetic acid,1,verwachte_start,False,nee,ja,nee
 V03AB04,IT,2026-12-31,upcoming,PRALIDOXIMA METILSOLFATO,1,verwachte_start,False,nee,nee,ja
+V03AB06,AU,2027-01-01,upcoming,sodium thiosulfate pentahydrate,1,verwachte_start,False,nee,nee,ja
 V03AB06,BE,2022-09-13,active,Sodium Thiosulfate Pentahydrate,1,feitelijke_start,True,ja,ja,nee
 V03AB06,ES,2026-10-16,active,TIOSULFATO SODIO,1,meldingsdatum,True,nee,nee,nee
 V03AB06,IE,2026-11-06,active,Sodium thiosulfate,1,verwachte_start,False,nee,nee,nee
@@ -8257,7 +8255,7 @@ V03AC03,AT,2024-04-16,resolved,DEFERASIROX,2,feitelijke_start,True,ja,ja,nee
 V03AC03,AU,2026-02-12,active,deferasirox,8,verwachte_start,False,nee,nee,nee
 V03AC03,BE,2026-11-13,active,Deferasirox,1,feitelijke_start,True,ja,nee,nee
 V03AC03,EE,2024-10-31,inactive,Deferasirox,1,feitelijke_start,True,ja,ja,nee
-V03AC03,ES,2026-04-24,active,DEFERASIROX,2,meldingsdatum,True,nee,nee,nee
+V03AC03,ES,2026-04-24,active,DEFERASIROX,3,meldingsdatum,True,nee,nee,nee
 V03AC03,HR,2026-01-02,active,deferasiroks,1,feitelijke_start,True,ja,nee,nee
 V03AC03,HU,2026-10-12,active,deferasirox,1,feitelijke_start,True,ja,nee,nee
 V03AC03,IE,2026-10-15,active,Deferasirox,1,verwachte_start,False,nee,nee,nee
@@ -8356,7 +8354,7 @@ V08AA01,SK,2026-02-18,active,Kyselina amidotrizoová,1,feitelijke_start,True,ja,
 V08AB01,AU,2026-02-16,discontinued,amidotrizoate meglumine,3,verwachte_start,False,nee,nee,nee
 V08AB01,LV,2026-02-17,active,"Natrii amidotrizoas, Meglumini amidotrizoas",1,feitelijke_start,True,ja,nee,nee
 V08AB02,BE,2026-11-12,active,Iohexol,1,feitelijke_start,True,ja,nee,nee
-V08AB02,DE,2026-11-02,active,Iohexol,2,feitelijke_start,True,ja,nee,nee
+V08AB02,DE,2026-11-02,resolved,Iohexol,2,feitelijke_start,True,ja,nee,nee
 V08AB02,ES,2026-11-17,active,IOHEXOL,2,meldingsdatum,True,nee,nee,nee
 V08AB02,FI,2026-09-17,active,イオヘキソール,3,feitelijke_start,True,ja,nee,nee
 V08AB02,IE,2026-09-18,active,Iohexol,2,verwachte_start,False,nee,nee,nee
@@ -8400,12 +8398,13 @@ V08AB11,SI,2021-12-01,active,iobitridolum,2,feitelijke_start,True,ja,ja,nee
 V08BA01,CZ,2026-04-09,active,BARIUM SULFATE,2,publicatiedatum,False,nee,nee,nee
 V08BA01,ES,2024-07-26,langlopend,BARIO SULFATO,1,meldingsdatum,True,nee,ja,nee
 V08BA01,HU,2012-01-01,inactive,barium sulfate,3,feitelijke_start,True,ja,ja,nee
-V08BA01,JP,2024-03-04,active,硫酸バリウム,6,registratiedatum,False,nee,ja,nee
+V08BA01,JP,2025-03-21,active,クロラムフェニコール・フラジオマイシン配合剤,1,registratiedatum,False,nee,nee,nee
 V08BA01,SK,2024-02-21,inactive,Síran bárnatý so suspendujúcimi látkami,3,feitelijke_start,True,ja,ja,nee
 V08BA02,AU,2013-10-01,active,barium sulfate,1,verwachte_start,False,nee,ja,nee
+V08BA02,JP,2024-03-04,active,硫酸バリウム,5,registratiedatum,False,nee,ja,nee
 V08CA02,AU,2026-07-24,resolved,gadoteric acid,2,verwachte_start,False,nee,nee,nee
 V08CA02,BE,2026-06-17,active,"Tetraxetan, Gadolinium Oxide, Gadoteric Acid",2,feitelijke_start,True,ja,nee,nee
-V08CA02,FI,2026-11-26,upcoming,ACIDO GADOTERICO,1,feitelijke_start,True,ja,nee,ja
+V08CA02,FI,2026-11-26,active,ACIDO GADOTERICO,1,feitelijke_start,True,ja,nee,nee
 V08CA02,IS,2024-08-29,resolved,Acidum gadotericum INN,3,verwachte_start,True,nee,ja,nee
 V08CA02,IT,2023-04-04,active,ACIDO GADOTERICO,9,verwachte_start,False,nee,ja,nee
 V08CA02,NO,2023-09-21,discontinued,gadoteratmeglumin,2,feitelijke_start,True,ja,ja,nee
@@ -8414,7 +8413,7 @@ V08CA02,SK,2025-05-31,inactive,Kyselina gadoterová,2,feitelijke_start,True,ja,n
 V08CA02,US,2026-05-21,discontinued,GADOTERATE MEGLUMINE,2,publicatiedatum,False,nee,nee,nee
 V08CA03,RO,2018-11-22,discontinued,GADODIAMIDUM,1,meldingsdatum,False,nee,ja,nee
 V08CA03,SI,2018-02-27,inactive,gadodiamidum,1,feitelijke_start,True,ja,ja,nee
-V08CA04,BE,2026-10-16,active,Gadoteridol,1,feitelijke_start,True,ja,nee,nee
+V08CA04,BE,2026-10-16,active,Gadoteridol,2,feitelijke_start,True,ja,nee,nee
 V08CA04,HU,2020-04-29,inactive,gadoteridol,4,feitelijke_start,True,ja,ja,nee
 V08CA08,HU,2017-02-24,inactive,gadobenate dimeglumine,3,feitelijke_start,True,ja,ja,nee
 V08CA09,AU,2026-06-29,resolved,gadobutrol,1,verwachte_start,False,nee,nee,nee

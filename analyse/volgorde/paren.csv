@@ -46,10 +46,7 @@ A01AB17,METRONIDAZOLUM,RO,IE,2025-11-13,2026-09-29,320,nee,nee,nee
 A01AC02,DEXAMETHASONE SODIUM PHOSPHATE,US,AU,2019-02-08,2026-10-15,2806,nee,nee,ja
 A01AC03,HIDROCORTISONA HEMISUCCINATO,ES,FR,2026-03-24,2026-06-30,98,nee,nee,nee
 A01AC03,HIDROCORTISONA HEMISUCCINATO,ES,US,2026-03-24,2026-07-23,121,nee,nee,nee
-A01AC03,HIDROCORTISONA HEMISUCCINATO,ES,NZ,2026-03-24,2026-10-07,197,nee,nee,nee
 A01AC03,hydrocortisone (hydrogénosuccinate d'),FR,US,2026-06-30,2026-07-23,23,nee,nee,nee
-A01AC03,hydrocortisone (hydrogénosuccinate d'),FR,NZ,2026-06-30,2026-10-07,99,nee,nee,nee
-A01AC03,HYDROCORTISONE ACETATE,US,NZ,2026-07-23,2026-10-07,76,nee,nee,nee
 A01AD11,KETOPROFENE SALE DI LISINA,IT,SK,2025-10-31,2026-11-12,377,nee,nee,nee
 A02AD01,"aluminium oxide, hydrated;magnesium hydroxide",HU,DK,2022-03-28,2025-01-15,1024,nee,nee,ja
 A02AD01,"aluminium oxide, hydrated;magnesium hydroxide",HU,NO,2022-03-28,2025-08-28,1249,ja,ja,ja
@@ -64,7 +61,6 @@ A02BA03,Famotidín,SK,LV,2019-12-10,2026-01-01,2214,ja,ja,ja
 A02BA03,Famotidín,SK,HU,2019-12-10,2026-01-06,2219,ja,ja,ja
 A02BA03,Famotidín,SK,SI,2019-12-10,2026-01-30,2243,ja,ja,ja
 A02BA03,Famotidín,SK,NO,2019-12-10,2026-06-22,2386,ja,ja,ja
-A02BA03,Famotidín,SK,IE,2019-12-10,2026-09-08,2464,nee,nee,ja
 A02BA03,Famotidín,SK,DE,2019-12-10,2026-10-29,2515,ja,ja,ja
 A02BA03,Famotidín,SK,IT,2019-12-10,2026-11-01,2518,nee,nee,ja
 A02BA03,FAMOTIDINUM,RO,JP,2024-02-29,2025-04-16,412,nee,nee,ja
@@ -73,7 +69,6 @@ A02BA03,FAMOTIDINUM,RO,LV,2024-02-29,2026-01-01,672,nee,nee,ja
 A02BA03,FAMOTIDINUM,RO,HU,2024-02-29,2026-01-06,677,nee,nee,ja
 A02BA03,FAMOTIDINUM,RO,SI,2024-02-29,2026-01-30,701,nee,nee,ja
 A02BA03,FAMOTIDINUM,RO,NO,2024-02-29,2026-06-22,844,nee,nee,ja
-A02BA03,FAMOTIDINUM,RO,IE,2024-02-29,2026-09-08,922,nee,nee,ja
 A02BA03,FAMOTIDINUM,RO,DE,2024-02-29,2026-10-29,973,nee,nee,ja
 A02BA03,FAMOTIDINUM,RO,IT,2024-02-29,2026-11-01,976,nee,nee,ja
 A02BA03,ファモチジン,JP,CA,2025-04-16,2025-04-29,13,nee,nee,nee
@@ -81,36 +76,28 @@ A02BA03,ファモチジン,JP,LV,2025-04-16,2026-01-01,260,nee,nee,nee
 A02BA03,ファモチジン,JP,HU,2025-04-16,2026-01-06,265,nee,nee,nee
 A02BA03,ファモチジン,JP,SI,2025-04-16,2026-01-30,289,nee,nee,nee
 A02BA03,ファモチジン,JP,NO,2025-04-16,2026-06-22,432,nee,nee,nee
-A02BA03,ファモチジン,JP,IE,2025-04-16,2026-09-08,510,nee,nee,nee
 A02BA03,ファモチジン,JP,DE,2025-04-16,2026-10-29,561,nee,nee,nee
 A02BA03,ファモチジン,JP,IT,2025-04-16,2026-11-01,564,nee,nee,nee
 A02BA03,Famotidine Injection,CA,LV,2025-04-29,2026-01-01,247,nee,nee,nee
 A02BA03,Famotidine Injection,CA,HU,2025-04-29,2026-01-06,252,nee,nee,nee
 A02BA03,Famotidine Injection,CA,SI,2025-04-29,2026-01-30,276,nee,nee,nee
 A02BA03,Famotidine Injection,CA,NO,2025-04-29,2026-06-22,419,nee,nee,nee
-A02BA03,Famotidine Injection,CA,IE,2025-04-29,2026-09-08,497,nee,nee,nee
 A02BA03,Famotidine Injection,CA,DE,2025-04-29,2026-10-29,548,nee,nee,nee
 A02BA03,Famotidine Injection,CA,IT,2025-04-29,2026-11-01,551,nee,nee,nee
 A02BA03,Famotidinum,LV,HU,2026-01-01,2026-01-06,5,ja,ja,nee
 A02BA03,Famotidinum,LV,SI,2026-01-01,2026-01-30,29,ja,ja,nee
 A02BA03,Famotidinum,LV,NO,2026-01-01,2026-06-22,172,ja,ja,nee
-A02BA03,Famotidinum,LV,IE,2026-01-01,2026-09-08,250,nee,nee,nee
 A02BA03,Famotidinum,LV,DE,2026-01-01,2026-10-29,301,ja,ja,nee
 A02BA03,Famotidinum,LV,IT,2026-01-01,2026-11-01,304,nee,nee,nee
 A02BA03,famotidine,HU,SI,2026-01-06,2026-01-30,24,ja,ja,nee
 A02BA03,famotidine,HU,NO,2026-01-06,2026-06-22,167,ja,ja,nee
-A02BA03,famotidine,HU,IE,2026-01-06,2026-09-08,245,nee,nee,nee
 A02BA03,famotidine,HU,DE,2026-01-06,2026-10-29,296,ja,ja,nee
 A02BA03,famotidine,HU,IT,2026-01-06,2026-11-01,299,nee,nee,nee
 A02BA03,famotidinum,SI,NO,2026-01-30,2026-06-22,143,ja,ja,nee
-A02BA03,famotidinum,SI,IE,2026-01-30,2026-09-08,221,nee,nee,nee
 A02BA03,famotidinum,SI,DE,2026-01-30,2026-10-29,272,ja,ja,nee
 A02BA03,famotidinum,SI,IT,2026-01-30,2026-11-01,275,nee,nee,nee
-A02BA03,famotidin,NO,IE,2026-06-22,2026-09-08,78,nee,nee,nee
 A02BA03,famotidin,NO,DE,2026-06-22,2026-10-29,129,ja,ja,nee
 A02BA03,famotidin,NO,IT,2026-06-22,2026-11-01,132,nee,nee,nee
-A02BA03,Famotidine,IE,DE,2026-09-08,2026-10-29,51,nee,nee,nee
-A02BA03,Famotidine,IE,IT,2026-09-08,2026-11-01,54,nee,nee,nee
 A02BA03,Famotidin,DE,IT,2026-10-29,2026-11-01,3,nee,nee,nee
 A02BB01,misoprostol,NO,IS,2025-09-01,2025-12-15,105,ja,nee,nee
 A02BB01,misoprostol,NO,GR,2025-09-01,2026-10-22,416,ja,ja,nee
@@ -174,7 +161,7 @@ A02BC01,オメプラゾール,JP,SE,2025-04-16,2026-03-01,319,nee,nee,nee
 A02BC01,オメプラゾール,JP,IE,2025-04-16,2026-11-26,589,nee,nee,nee
 A02BC01,omeprazol,SE,IE,2026-03-01,2026-11-26,270,nee,nee,nee
 A02BC02,pantoprazole,HU,LV,2014-02-19,2017-01-06,1052,ja,ja,ja
-A02BC02,pantoprazole,HU,SK,2014-02-19,2019-07-26,1983,ja,ja,ja
+A02BC02,pantoprazole,HU,SK,2014-02-19,2019-09-30,2049,ja,ja,ja
 A02BC02,pantoprazole,HU,NO,2014-02-19,2023-09-19,3499,ja,ja,ja
 A02BC02,pantoprazole,HU,BE,2014-02-19,2024-01-03,3605,ja,ja,ja
 A02BC02,pantoprazole,HU,IT,2014-02-19,2024-04-05,3698,nee,nee,ja
@@ -185,7 +172,7 @@ A02BC02,pantoprazole,HU,SE,2014-02-19,2026-02-05,4369,nee,nee,ja
 A02BC02,pantoprazole,HU,FI,2014-02-19,2026-07-06,4520,ja,ja,ja
 A02BC02,pantoprazole,HU,RO,2014-02-19,2026-08-26,4571,nee,nee,ja
 A02BC02,pantoprazole,HU,AU,2014-02-19,2026-10-08,4614,nee,nee,ja
-A02BC02,Pantoprazolum,LV,SK,2017-01-06,2019-07-26,931,ja,ja,ja
+A02BC02,Pantoprazolum,LV,SK,2017-01-06,2019-09-30,997,ja,ja,ja
 A02BC02,Pantoprazolum,LV,NO,2017-01-06,2023-09-19,2447,ja,ja,ja
 A02BC02,Pantoprazolum,LV,BE,2017-01-06,2024-01-03,2553,ja,ja,ja
 A02BC02,Pantoprazolum,LV,IT,2017-01-06,2024-04-05,2646,nee,nee,ja
@@ -196,16 +183,16 @@ A02BC02,Pantoprazolum,LV,SE,2017-01-06,2026-02-05,3317,nee,nee,ja
 A02BC02,Pantoprazolum,LV,FI,2017-01-06,2026-07-06,3468,ja,ja,ja
 A02BC02,Pantoprazolum,LV,RO,2017-01-06,2026-08-26,3519,nee,nee,ja
 A02BC02,Pantoprazolum,LV,AU,2017-01-06,2026-10-08,3562,nee,nee,ja
-A02BC02,Pantoprazol,SK,NO,2019-07-26,2023-09-19,1516,ja,ja,ja
-A02BC02,Pantoprazol,SK,BE,2019-07-26,2024-01-03,1622,ja,ja,ja
-A02BC02,Pantoprazol,SK,IT,2019-07-26,2024-04-05,1715,nee,nee,ja
-A02BC02,Pantoprazol,SK,AT,2019-07-26,2024-09-02,1865,ja,ja,ja
-A02BC02,Pantoprazol,SK,DE,2019-07-26,2026-02-01,2382,ja,ja,ja
-A02BC02,Pantoprazol,SK,SI,2019-07-26,2026-02-01,2382,ja,ja,ja
-A02BC02,Pantoprazol,SK,SE,2019-07-26,2026-02-05,2386,nee,nee,ja
-A02BC02,Pantoprazol,SK,FI,2019-07-26,2026-07-06,2537,ja,ja,ja
-A02BC02,Pantoprazol,SK,RO,2019-07-26,2026-08-26,2588,nee,nee,ja
-A02BC02,Pantoprazol,SK,AU,2019-07-26,2026-10-08,2631,nee,nee,ja
+A02BC02,Pantoprazol,SK,NO,2019-09-30,2023-09-19,1450,ja,ja,ja
+A02BC02,Pantoprazol,SK,BE,2019-09-30,2024-01-03,1556,ja,ja,ja
+A02BC02,Pantoprazol,SK,IT,2019-09-30,2024-04-05,1649,nee,nee,ja
+A02BC02,Pantoprazol,SK,AT,2019-09-30,2024-09-02,1799,ja,ja,ja
+A02BC02,Pantoprazol,SK,DE,2019-09-30,2026-02-01,2316,ja,ja,ja
+A02BC02,Pantoprazol,SK,SI,2019-09-30,2026-02-01,2316,ja,ja,ja
+A02BC02,Pantoprazol,SK,SE,2019-09-30,2026-02-05,2320,nee,nee,ja
+A02BC02,Pantoprazol,SK,FI,2019-09-30,2026-07-06,2471,ja,ja,ja
+A02BC02,Pantoprazol,SK,RO,2019-09-30,2026-08-26,2522,nee,nee,ja
+A02BC02,Pantoprazol,SK,AU,2019-09-30,2026-10-08,2565,nee,nee,ja
 A02BC02,pantoprazolnatriumsesquihydrat,NO,BE,2023-09-19,2024-01-03,106,ja,ja,ja
 A02BC02,pantoprazolnatriumsesquihydrat,NO,IT,2023-09-19,2024-04-05,199,nee,nee,ja
 A02BC02,pantoprazolnatriumsesquihydrat,NO,AT,2023-09-19,2024-09-02,349,ja,ja,ja
@@ -948,7 +935,6 @@ A05AA02,ursodeoxycholic acid,HU,LV,2015-01-12,2023-03-17,2986,ja,ja,ja
 A05AA02,ursodeoxycholic acid,HU,RO,2015-01-12,2023-09-01,3154,nee,nee,ja
 A05AA02,ursodeoxycholic acid,HU,SI,2015-01-12,2024-01-31,3306,ja,ja,ja
 A05AA02,ursodeoxycholic acid,HU,IS,2015-01-12,2025-01-15,3656,ja,nee,ja
-A05AA02,ursodeoxycholic acid,HU,AT,2015-01-12,2025-09-02,3886,ja,ja,ja
 A05AA02,ursodeoxycholic acid,HU,NO,2015-01-12,2025-10-20,3934,ja,ja,ja
 A05AA02,ursodeoxycholic acid,HU,DK,2015-01-12,2025-11-01,3946,nee,nee,ja
 A05AA02,ursodeoxycholic acid,HU,MY,2015-01-12,2025-12-22,3997,nee,nee,ja
@@ -961,7 +947,6 @@ A05AA02,ACIDO URSODESOSSICOLICO ESTERE SOLFORICO SALE SODICO,IT,LV,2019-01-31,20
 A05AA02,ACIDO URSODESOSSICOLICO ESTERE SOLFORICO SALE SODICO,IT,RO,2019-01-31,2023-09-01,1674,nee,nee,ja
 A05AA02,ACIDO URSODESOSSICOLICO ESTERE SOLFORICO SALE SODICO,IT,SI,2019-01-31,2024-01-31,1826,nee,nee,ja
 A05AA02,ACIDO URSODESOSSICOLICO ESTERE SOLFORICO SALE SODICO,IT,IS,2019-01-31,2025-01-15,2176,nee,nee,ja
-A05AA02,ACIDO URSODESOSSICOLICO ESTERE SOLFORICO SALE SODICO,IT,AT,2019-01-31,2025-09-02,2406,nee,nee,ja
 A05AA02,ACIDO URSODESOSSICOLICO ESTERE SOLFORICO SALE SODICO,IT,NO,2019-01-31,2025-10-20,2454,nee,nee,ja
 A05AA02,ACIDO URSODESOSSICOLICO ESTERE SOLFORICO SALE SODICO,IT,DK,2019-01-31,2025-11-01,2466,nee,nee,ja
 A05AA02,ACIDO URSODESOSSICOLICO ESTERE SOLFORICO SALE SODICO,IT,MY,2019-01-31,2025-12-22,2517,nee,nee,ja
@@ -973,7 +958,6 @@ A05AA02,Kyselina ursodeoxycholová,SK,LV,2019-06-26,2023-03-17,1360,ja,ja,ja
 A05AA02,Kyselina ursodeoxycholová,SK,RO,2019-06-26,2023-09-01,1528,nee,nee,ja
 A05AA02,Kyselina ursodeoxycholová,SK,SI,2019-06-26,2024-01-31,1680,ja,ja,ja
 A05AA02,Kyselina ursodeoxycholová,SK,IS,2019-06-26,2025-01-15,2030,ja,nee,ja
-A05AA02,Kyselina ursodeoxycholová,SK,AT,2019-06-26,2025-09-02,2260,ja,ja,ja
 A05AA02,Kyselina ursodeoxycholová,SK,NO,2019-06-26,2025-10-20,2308,ja,ja,ja
 A05AA02,Kyselina ursodeoxycholová,SK,DK,2019-06-26,2025-11-01,2320,nee,nee,ja
 A05AA02,Kyselina ursodeoxycholová,SK,MY,2019-06-26,2025-12-22,2371,nee,nee,ja
@@ -984,7 +968,6 @@ A05AA02,Kyselina ursodeoxycholová,SK,SE,2019-06-26,2027-01-01,2746,nee,nee,ja
 A05AA02,Acidum ursodeoxycholicum,LV,RO,2023-03-17,2023-09-01,168,nee,nee,ja
 A05AA02,Acidum ursodeoxycholicum,LV,SI,2023-03-17,2024-01-31,320,ja,ja,ja
 A05AA02,Acidum ursodeoxycholicum,LV,IS,2023-03-17,2025-01-15,670,ja,nee,ja
-A05AA02,Acidum ursodeoxycholicum,LV,AT,2023-03-17,2025-09-02,900,ja,ja,ja
 A05AA02,Acidum ursodeoxycholicum,LV,NO,2023-03-17,2025-10-20,948,ja,ja,ja
 A05AA02,Acidum ursodeoxycholicum,LV,DK,2023-03-17,2025-11-01,960,nee,nee,ja
 A05AA02,Acidum ursodeoxycholicum,LV,MY,2023-03-17,2025-12-22,1011,nee,nee,ja
@@ -994,7 +977,6 @@ A05AA02,Acidum ursodeoxycholicum,LV,IE,2023-03-17,2026-11-10,1334,nee,nee,ja
 A05AA02,Acidum ursodeoxycholicum,LV,SE,2023-03-17,2027-01-01,1386,nee,nee,ja
 A05AA02,ACIDUM URSODEOXYCHOLICUM,RO,SI,2023-09-01,2024-01-31,152,nee,nee,ja
 A05AA02,ACIDUM URSODEOXYCHOLICUM,RO,IS,2023-09-01,2025-01-15,502,nee,nee,ja
-A05AA02,ACIDUM URSODEOXYCHOLICUM,RO,AT,2023-09-01,2025-09-02,732,nee,nee,ja
 A05AA02,ACIDUM URSODEOXYCHOLICUM,RO,NO,2023-09-01,2025-10-20,780,nee,nee,ja
 A05AA02,ACIDUM URSODEOXYCHOLICUM,RO,DK,2023-09-01,2025-11-01,792,nee,nee,ja
 A05AA02,ACIDUM URSODEOXYCHOLICUM,RO,MY,2023-09-01,2025-12-22,843,nee,nee,ja
@@ -1003,7 +985,6 @@ A05AA02,ACIDUM URSODEOXYCHOLICUM,RO,ES,2023-09-01,2026-10-06,1131,nee,nee,ja
 A05AA02,ACIDUM URSODEOXYCHOLICUM,RO,IE,2023-09-01,2026-11-10,1166,nee,nee,ja
 A05AA02,ACIDUM URSODEOXYCHOLICUM,RO,SE,2023-09-01,2027-01-01,1218,nee,nee,ja
 A05AA02,acidum ursodeoxycholicum,SI,IS,2024-01-31,2025-01-15,350,ja,nee,ja
-A05AA02,acidum ursodeoxycholicum,SI,AT,2024-01-31,2025-09-02,580,ja,ja,ja
 A05AA02,acidum ursodeoxycholicum,SI,NO,2024-01-31,2025-10-20,628,ja,ja,ja
 A05AA02,acidum ursodeoxycholicum,SI,DK,2024-01-31,2025-11-01,640,nee,nee,ja
 A05AA02,acidum ursodeoxycholicum,SI,MY,2024-01-31,2025-12-22,691,nee,nee,ja
@@ -1011,7 +992,6 @@ A05AA02,acidum ursodeoxycholicum,SI,US,2024-01-31,2026-04-06,796,nee,nee,ja
 A05AA02,acidum ursodeoxycholicum,SI,ES,2024-01-31,2026-10-06,979,ja,nee,ja
 A05AA02,acidum ursodeoxycholicum,SI,IE,2024-01-31,2026-11-10,1014,nee,nee,ja
 A05AA02,acidum ursodeoxycholicum,SI,SE,2024-01-31,2027-01-01,1066,nee,nee,ja
-A05AA02,Ursodeoxycholic acid,IS,AT,2025-01-15,2025-09-02,230,ja,nee,nee
 A05AA02,Ursodeoxycholic acid,IS,NO,2025-01-15,2025-10-20,278,ja,nee,nee
 A05AA02,Ursodeoxycholic acid,IS,DK,2025-01-15,2025-11-01,290,nee,nee,nee
 A05AA02,Ursodeoxycholic acid,IS,MY,2025-01-15,2025-12-22,341,nee,nee,nee
@@ -1019,13 +999,6 @@ A05AA02,Ursodeoxycholic acid,IS,US,2025-01-15,2026-04-06,446,nee,nee,nee
 A05AA02,Ursodeoxycholic acid,IS,ES,2025-01-15,2026-10-06,629,ja,nee,nee
 A05AA02,Ursodeoxycholic acid,IS,IE,2025-01-15,2026-11-10,664,nee,nee,nee
 A05AA02,Ursodeoxycholic acid,IS,SE,2025-01-15,2027-01-01,716,nee,nee,nee
-A05AA02,URSODEOXYCHOLSÄURE,AT,NO,2025-09-02,2025-10-20,48,ja,ja,nee
-A05AA02,URSODEOXYCHOLSÄURE,AT,DK,2025-09-02,2025-11-01,60,nee,nee,nee
-A05AA02,URSODEOXYCHOLSÄURE,AT,MY,2025-09-02,2025-12-22,111,nee,nee,nee
-A05AA02,URSODEOXYCHOLSÄURE,AT,US,2025-09-02,2026-04-06,216,nee,nee,nee
-A05AA02,URSODEOXYCHOLSÄURE,AT,ES,2025-09-02,2026-10-06,399,ja,nee,nee
-A05AA02,URSODEOXYCHOLSÄURE,AT,IE,2025-09-02,2026-11-10,434,nee,nee,nee
-A05AA02,URSODEOXYCHOLSÄURE,AT,SE,2025-09-02,2027-01-01,486,nee,nee,nee
 A05AA02,ursodeoksykolsyre,NO,DK,2025-10-20,2025-11-01,12,nee,nee,nee
 A05AA02,ursodeoksykolsyre,NO,MY,2025-10-20,2025-12-22,63,nee,nee,nee
 A05AA02,ursodeoksykolsyre,NO,US,2025-10-20,2026-04-06,168,nee,nee,nee
@@ -1255,7 +1228,6 @@ A07DA03,Loperamidi hydrochloridum,LV,NO,2016-11-04,2026-03-16,3419,ja,ja,ja
 A07DA03,Loperamidi hydrochloridum,LV,ES,2016-11-04,2026-04-21,3455,ja,nee,ja
 A07DA03,Loperamidi hydrochloridum,LV,IT,2016-11-04,2026-08-05,3561,nee,nee,ja
 A07DA03,Loperamidi hydrochloridum,LV,JP,2016-11-04,2026-08-27,3583,nee,nee,ja
-A07DA03,Loperamidi hydrochloridum,LV,AT,2016-11-04,2026-10-19,3636,ja,ja,ja
 A07DA03,LOPERAMIDUM,RO,HU,2021-03-31,2023-05-01,761,nee,nee,ja
 A07DA03,LOPERAMIDUM,RO,SE,2021-03-31,2024-09-25,1274,nee,nee,ja
 A07DA03,LOPERAMIDUM,RO,IS,2021-03-31,2024-11-30,1340,nee,nee,ja
@@ -1264,7 +1236,6 @@ A07DA03,LOPERAMIDUM,RO,NO,2021-03-31,2026-03-16,1811,nee,nee,ja
 A07DA03,LOPERAMIDUM,RO,ES,2021-03-31,2026-04-21,1847,nee,nee,ja
 A07DA03,LOPERAMIDUM,RO,IT,2021-03-31,2026-08-05,1953,nee,nee,ja
 A07DA03,LOPERAMIDUM,RO,JP,2021-03-31,2026-08-27,1975,nee,nee,ja
-A07DA03,LOPERAMIDUM,RO,AT,2021-03-31,2026-10-19,2028,nee,nee,ja
 A07DA03,loperamide,HU,SE,2023-05-01,2024-09-25,513,nee,nee,ja
 A07DA03,loperamide,HU,IS,2023-05-01,2024-11-30,579,ja,nee,ja
 A07DA03,loperamide,HU,SK,2023-05-01,2025-07-29,820,ja,ja,ja
@@ -1272,35 +1243,27 @@ A07DA03,loperamide,HU,NO,2023-05-01,2026-03-16,1050,ja,ja,ja
 A07DA03,loperamide,HU,ES,2023-05-01,2026-04-21,1086,ja,nee,ja
 A07DA03,loperamide,HU,IT,2023-05-01,2026-08-05,1192,nee,nee,ja
 A07DA03,loperamide,HU,JP,2023-05-01,2026-08-27,1214,nee,nee,ja
-A07DA03,loperamide,HU,AT,2023-05-01,2026-10-19,1267,ja,ja,ja
 A07DA03,loperamidhydroklorid,SE,IS,2024-09-25,2024-11-30,66,nee,nee,ja
 A07DA03,loperamidhydroklorid,SE,SK,2024-09-25,2025-07-29,307,nee,nee,ja
 A07DA03,loperamidhydroklorid,SE,NO,2024-09-25,2026-03-16,537,nee,nee,ja
 A07DA03,loperamidhydroklorid,SE,ES,2024-09-25,2026-04-21,573,nee,nee,ja
 A07DA03,loperamidhydroklorid,SE,IT,2024-09-25,2026-08-05,679,nee,nee,ja
 A07DA03,loperamidhydroklorid,SE,JP,2024-09-25,2026-08-27,701,nee,nee,ja
-A07DA03,loperamidhydroklorid,SE,AT,2024-09-25,2026-10-19,754,nee,nee,ja
 A07DA03,Loperamidum INN hýdróklóríð,IS,SK,2024-11-30,2025-07-29,241,ja,nee,ja
 A07DA03,Loperamidum INN hýdróklóríð,IS,NO,2024-11-30,2026-03-16,471,ja,nee,ja
 A07DA03,Loperamidum INN hýdróklóríð,IS,ES,2024-11-30,2026-04-21,507,ja,nee,ja
 A07DA03,Loperamidum INN hýdróklóríð,IS,IT,2024-11-30,2026-08-05,613,nee,nee,ja
 A07DA03,Loperamidum INN hýdróklóríð,IS,JP,2024-11-30,2026-08-27,635,nee,nee,ja
-A07DA03,Loperamidum INN hýdróklóríð,IS,AT,2024-11-30,2026-10-19,688,ja,nee,ja
 A07DA03,Loperamid,SK,NO,2025-07-29,2026-03-16,230,ja,ja,nee
 A07DA03,Loperamid,SK,ES,2025-07-29,2026-04-21,266,ja,nee,nee
 A07DA03,Loperamid,SK,IT,2025-07-29,2026-08-05,372,nee,nee,nee
 A07DA03,Loperamid,SK,JP,2025-07-29,2026-08-27,394,nee,nee,nee
-A07DA03,Loperamid,SK,AT,2025-07-29,2026-10-19,447,ja,ja,nee
 A07DA03,loperamidhydroklorid,NO,ES,2026-03-16,2026-04-21,36,ja,nee,nee
 A07DA03,loperamidhydroklorid,NO,IT,2026-03-16,2026-08-05,142,nee,nee,nee
 A07DA03,loperamidhydroklorid,NO,JP,2026-03-16,2026-08-27,164,nee,nee,nee
-A07DA03,loperamidhydroklorid,NO,AT,2026-03-16,2026-10-19,217,ja,ja,nee
 A07DA03,LOPERAMIDA HIDROCLORURO,ES,IT,2026-04-21,2026-08-05,106,nee,nee,nee
 A07DA03,LOPERAMIDA HIDROCLORURO,ES,JP,2026-04-21,2026-08-27,128,nee,nee,nee
-A07DA03,LOPERAMIDA HIDROCLORURO,ES,AT,2026-04-21,2026-10-19,181,ja,nee,nee
 A07DA03,LOPERAMIDE CLORIDRATO,IT,JP,2026-08-05,2026-08-27,22,nee,nee,nee
-A07DA03,LOPERAMIDE CLORIDRATO,IT,AT,2026-08-05,2026-10-19,75,nee,nee,nee
-A07DA03,ロペラミド塩酸塩,JP,AT,2026-08-27,2026-10-19,53,nee,nee,nee
 A07DA53,loperamide hydrochloride;dimeticone,HU,SE,2023-05-02,2026-11-23,1301,nee,nee,ja
 A07EA04,BETAMETHASONE SODIUM PHOSPHATE,IE,GR,2026-04-29,2026-11-03,188,nee,nee,nee
 A07EA06,BUDESONID,AT,LV,2021-06-15,2022-06-14,364,ja,ja,ja
@@ -3439,10 +3402,10 @@ B01AE07,DABIGATRANUM ETEXILATUM,RO,DE,2026-06-30,2026-08-06,37,nee,nee,nee
 B01AE07,DABIGATRANUM ETEXILATUM,RO,AU,2026-06-30,2026-08-17,48,nee,nee,nee
 B01AE07,DABIGATRANUM ETEXILATUM,RO,GR,2026-06-30,2026-10-06,98,nee,nee,nee
 B01AE07,DABIGATRANUM ETEXILATUM,RO,DK,2026-06-30,2026-11-25,148,nee,nee,nee
-B01AE07,Dabigatran-etexilát,FI,DE,2026-07-03,2026-08-06,34,ja,ja,nee
-B01AE07,Dabigatran-etexilát,FI,AU,2026-07-03,2026-08-17,45,nee,nee,nee
-B01AE07,Dabigatran-etexilát,FI,GR,2026-07-03,2026-10-06,95,ja,ja,nee
-B01AE07,Dabigatran-etexilát,FI,DK,2026-07-03,2026-11-25,145,nee,nee,nee
+B01AE07,DABIGATRAN ETEXILATO MESILATO,FI,DE,2026-07-03,2026-08-06,34,ja,ja,nee
+B01AE07,DABIGATRAN ETEXILATO MESILATO,FI,AU,2026-07-03,2026-08-17,45,nee,nee,nee
+B01AE07,DABIGATRAN ETEXILATO MESILATO,FI,GR,2026-07-03,2026-10-06,95,ja,ja,nee
+B01AE07,DABIGATRAN ETEXILATO MESILATO,FI,DK,2026-07-03,2026-11-25,145,nee,nee,nee
 B01AE07,Dabigatranetexilatmesilat,DE,AU,2026-08-06,2026-08-17,11,nee,nee,nee
 B01AE07,Dabigatranetexilatmesilat,DE,GR,2026-08-06,2026-10-06,61,ja,ja,nee
 B01AE07,Dabigatranetexilatmesilat,DE,DK,2026-08-06,2026-11-25,111,nee,nee,nee
@@ -3468,6 +3431,7 @@ B01AF01,Rivaroxabán,SK,FI,2022-01-13,2026-10-01,1722,ja,ja,ja
 B01AF01,Rivaroxabán,SK,FR,2022-01-13,2026-10-19,1740,nee,ja,ja
 B01AF01,Rivaroxabán,SK,ES,2022-01-13,2026-10-27,1748,ja,nee,ja
 B01AF01,Rivaroxabán,SK,SE,2022-01-13,2026-10-30,1751,nee,nee,ja
+B01AF01,Rivaroxabán,SK,DK,2022-01-13,2026-11-01,1753,nee,nee,ja
 B01AF01,Rivaroxabanum,LV,IS,2024-05-29,2024-09-18,112,ja,nee,ja
 B01AF01,Rivaroxabanum,LV,HU,2024-05-29,2024-09-25,119,ja,ja,ja
 B01AF01,Rivaroxabanum,LV,IT,2024-05-29,2024-12-27,212,nee,nee,ja
@@ -3486,6 +3450,7 @@ B01AF01,Rivaroxabanum,LV,FI,2024-05-29,2026-10-01,855,ja,ja,ja
 B01AF01,Rivaroxabanum,LV,FR,2024-05-29,2026-10-19,873,nee,ja,ja
 B01AF01,Rivaroxabanum,LV,ES,2024-05-29,2026-10-27,881,ja,nee,ja
 B01AF01,Rivaroxabanum,LV,SE,2024-05-29,2026-10-30,884,nee,nee,ja
+B01AF01,Rivaroxabanum,LV,DK,2024-05-29,2026-11-01,886,nee,nee,ja
 B01AF01,Rivaroxabanum INN,IS,HU,2024-09-18,2024-09-25,7,ja,nee,ja
 B01AF01,Rivaroxabanum INN,IS,IT,2024-09-18,2024-12-27,100,nee,nee,ja
 B01AF01,Rivaroxabanum INN,IS,HR,2024-09-18,2025-07-31,316,ja,nee,ja
@@ -3503,6 +3468,7 @@ B01AF01,Rivaroxabanum INN,IS,FI,2024-09-18,2026-10-01,743,ja,nee,ja
 B01AF01,Rivaroxabanum INN,IS,FR,2024-09-18,2026-10-19,761,nee,nee,ja
 B01AF01,Rivaroxabanum INN,IS,ES,2024-09-18,2026-10-27,769,ja,nee,ja
 B01AF01,Rivaroxabanum INN,IS,SE,2024-09-18,2026-10-30,772,nee,nee,ja
+B01AF01,Rivaroxabanum INN,IS,DK,2024-09-18,2026-11-01,774,nee,nee,ja
 B01AF01,rivaroxaban,HU,IT,2024-09-25,2024-12-27,93,nee,nee,ja
 B01AF01,rivaroxaban,HU,HR,2024-09-25,2025-07-31,309,ja,ja,ja
 B01AF01,rivaroxaban,HU,BE,2024-09-25,2025-11-19,420,ja,ja,ja
@@ -3519,6 +3485,7 @@ B01AF01,rivaroxaban,HU,FI,2024-09-25,2026-10-01,736,ja,ja,ja
 B01AF01,rivaroxaban,HU,FR,2024-09-25,2026-10-19,754,nee,ja,ja
 B01AF01,rivaroxaban,HU,ES,2024-09-25,2026-10-27,762,ja,nee,ja
 B01AF01,rivaroxaban,HU,SE,2024-09-25,2026-10-30,765,nee,nee,ja
+B01AF01,rivaroxaban,HU,DK,2024-09-25,2026-11-01,767,nee,nee,ja
 B01AF01,RIVAROXABAN,IT,HR,2024-12-27,2025-07-31,216,nee,nee,ja
 B01AF01,RIVAROXABAN,IT,BE,2024-12-27,2025-11-19,327,nee,nee,ja
 B01AF01,RIVAROXABAN,IT,NO,2024-12-27,2026-01-21,390,nee,nee,ja
@@ -3534,6 +3501,7 @@ B01AF01,RIVAROXABAN,IT,FI,2024-12-27,2026-10-01,643,nee,nee,ja
 B01AF01,RIVAROXABAN,IT,FR,2024-12-27,2026-10-19,661,nee,nee,ja
 B01AF01,RIVAROXABAN,IT,ES,2024-12-27,2026-10-27,669,nee,nee,ja
 B01AF01,RIVAROXABAN,IT,SE,2024-12-27,2026-10-30,672,nee,nee,ja
+B01AF01,RIVAROXABAN,IT,DK,2024-12-27,2026-11-01,674,nee,nee,ja
 B01AF01,rivaroksaban,HR,BE,2025-07-31,2025-11-19,111,ja,ja,nee
 B01AF01,rivaroksaban,HR,NO,2025-07-31,2026-01-21,174,ja,ja,nee
 B01AF01,rivaroksaban,HR,AT,2025-07-31,2026-03-16,228,ja,ja,nee
@@ -3548,6 +3516,7 @@ B01AF01,rivaroksaban,HR,FI,2025-07-31,2026-10-01,427,ja,ja,nee
 B01AF01,rivaroksaban,HR,FR,2025-07-31,2026-10-19,445,nee,ja,nee
 B01AF01,rivaroksaban,HR,ES,2025-07-31,2026-10-27,453,ja,nee,nee
 B01AF01,rivaroksaban,HR,SE,2025-07-31,2026-10-30,456,nee,nee,nee
+B01AF01,rivaroksaban,HR,DK,2025-07-31,2026-11-01,458,nee,nee,nee
 B01AF01,Rivaroxaban,BE,NO,2025-11-19,2026-01-21,63,ja,ja,nee
 B01AF01,Rivaroxaban,BE,AT,2025-11-19,2026-03-16,117,ja,ja,nee
 B01AF01,Rivaroxaban,BE,DE,2025-11-19,2026-06-15,208,ja,ja,nee
@@ -3561,6 +3530,7 @@ B01AF01,Rivaroxaban,BE,FI,2025-11-19,2026-10-01,316,ja,ja,nee
 B01AF01,Rivaroxaban,BE,FR,2025-11-19,2026-10-19,334,nee,ja,nee
 B01AF01,Rivaroxaban,BE,ES,2025-11-19,2026-10-27,342,ja,nee,nee
 B01AF01,Rivaroxaban,BE,SE,2025-11-19,2026-10-30,345,nee,nee,nee
+B01AF01,Rivaroxaban,BE,DK,2025-11-19,2026-11-01,347,nee,nee,nee
 B01AF01,rivaroksaban,NO,AT,2026-01-21,2026-03-16,54,ja,ja,nee
 B01AF01,rivaroksaban,NO,DE,2026-01-21,2026-06-15,145,ja,ja,nee
 B01AF01,rivaroksaban,NO,SI,2026-01-21,2026-06-15,145,ja,ja,nee
@@ -3573,6 +3543,7 @@ B01AF01,rivaroksaban,NO,FI,2026-01-21,2026-10-01,253,ja,ja,nee
 B01AF01,rivaroksaban,NO,FR,2026-01-21,2026-10-19,271,nee,ja,nee
 B01AF01,rivaroksaban,NO,ES,2026-01-21,2026-10-27,279,ja,nee,nee
 B01AF01,rivaroksaban,NO,SE,2026-01-21,2026-10-30,282,nee,nee,nee
+B01AF01,rivaroksaban,NO,DK,2026-01-21,2026-11-01,284,nee,nee,nee
 B01AF01,RIVAROXABAN,AT,DE,2026-03-16,2026-06-15,91,ja,ja,nee
 B01AF01,RIVAROXABAN,AT,SI,2026-03-16,2026-06-15,91,ja,ja,nee
 B01AF01,RIVAROXABAN,AT,JP,2026-03-16,2026-08-05,142,nee,nee,nee
@@ -3584,6 +3555,7 @@ B01AF01,RIVAROXABAN,AT,FI,2026-03-16,2026-10-01,199,ja,ja,nee
 B01AF01,RIVAROXABAN,AT,FR,2026-03-16,2026-10-19,217,nee,ja,nee
 B01AF01,RIVAROXABAN,AT,ES,2026-03-16,2026-10-27,225,ja,nee,nee
 B01AF01,RIVAROXABAN,AT,SE,2026-03-16,2026-10-30,228,nee,nee,nee
+B01AF01,RIVAROXABAN,AT,DK,2026-03-16,2026-11-01,230,nee,nee,nee
 B01AF01,Rivaroxaban,DE,SI,2026-06-15,2026-06-15,0,ja,ja,nee
 B01AF01,Rivaroxaban,DE,JP,2026-06-15,2026-08-05,51,nee,nee,nee
 B01AF01,Rivaroxaban,DE,IE,2026-06-15,2026-08-10,56,nee,nee,nee
@@ -3594,6 +3566,7 @@ B01AF01,Rivaroxaban,DE,FI,2026-06-15,2026-10-01,108,ja,ja,nee
 B01AF01,Rivaroxaban,DE,FR,2026-06-15,2026-10-19,126,nee,ja,nee
 B01AF01,Rivaroxaban,DE,ES,2026-06-15,2026-10-27,134,ja,nee,nee
 B01AF01,Rivaroxaban,DE,SE,2026-06-15,2026-10-30,137,nee,nee,nee
+B01AF01,Rivaroxaban,DE,DK,2026-06-15,2026-11-01,139,nee,nee,nee
 B01AF01,rivaroxabanum,SI,JP,2026-06-15,2026-08-05,51,nee,nee,nee
 B01AF01,rivaroxabanum,SI,IE,2026-06-15,2026-08-10,56,nee,nee,nee
 B01AF01,rivaroxabanum,SI,AU,2026-06-15,2026-08-14,60,nee,nee,nee
@@ -3603,6 +3576,7 @@ B01AF01,rivaroxabanum,SI,FI,2026-06-15,2026-10-01,108,ja,ja,nee
 B01AF01,rivaroxabanum,SI,FR,2026-06-15,2026-10-19,126,nee,ja,nee
 B01AF01,rivaroxabanum,SI,ES,2026-06-15,2026-10-27,134,ja,nee,nee
 B01AF01,rivaroxabanum,SI,SE,2026-06-15,2026-10-30,137,nee,nee,nee
+B01AF01,rivaroxabanum,SI,DK,2026-06-15,2026-11-01,139,nee,nee,nee
 B01AF01,リバーロキサバン,JP,IE,2026-08-05,2026-08-10,5,nee,nee,nee
 B01AF01,リバーロキサバン,JP,AU,2026-08-05,2026-08-14,9,nee,nee,nee
 B01AF01,リバーロキサバン,JP,US,2026-08-05,2026-09-18,44,nee,nee,nee
@@ -3611,6 +3585,7 @@ B01AF01,リバーロキサバン,JP,FI,2026-08-05,2026-10-01,57,nee,nee,nee
 B01AF01,リバーロキサバン,JP,FR,2026-08-05,2026-10-19,75,nee,nee,nee
 B01AF01,リバーロキサバン,JP,ES,2026-08-05,2026-10-27,83,nee,nee,nee
 B01AF01,リバーロキサバン,JP,SE,2026-08-05,2026-10-30,86,nee,nee,nee
+B01AF01,リバーロキサバン,JP,DK,2026-08-05,2026-11-01,88,nee,nee,nee
 B01AF01,Rivaroxaban,IE,AU,2026-08-10,2026-08-14,4,nee,nee,nee
 B01AF01,Rivaroxaban,IE,US,2026-08-10,2026-09-18,39,nee,nee,nee
 B01AF01,Rivaroxaban,IE,EE,2026-08-10,2026-09-28,49,nee,nee,nee
@@ -3618,27 +3593,35 @@ B01AF01,Rivaroxaban,IE,FI,2026-08-10,2026-10-01,52,nee,nee,nee
 B01AF01,Rivaroxaban,IE,FR,2026-08-10,2026-10-19,70,nee,nee,nee
 B01AF01,Rivaroxaban,IE,ES,2026-08-10,2026-10-27,78,nee,nee,nee
 B01AF01,Rivaroxaban,IE,SE,2026-08-10,2026-10-30,81,nee,nee,nee
+B01AF01,Rivaroxaban,IE,DK,2026-08-10,2026-11-01,83,nee,nee,nee
 B01AF01,rivaroxaban,AU,US,2026-08-14,2026-09-18,35,nee,nee,nee
 B01AF01,rivaroxaban,AU,EE,2026-08-14,2026-09-28,45,nee,nee,nee
 B01AF01,rivaroxaban,AU,FI,2026-08-14,2026-10-01,48,nee,nee,nee
 B01AF01,rivaroxaban,AU,FR,2026-08-14,2026-10-19,66,nee,nee,nee
 B01AF01,rivaroxaban,AU,ES,2026-08-14,2026-10-27,74,nee,nee,nee
 B01AF01,rivaroxaban,AU,SE,2026-08-14,2026-10-30,77,nee,nee,nee
+B01AF01,rivaroxaban,AU,DK,2026-08-14,2026-11-01,79,nee,nee,nee
 B01AF01,RIVAROXABAN,US,EE,2026-09-18,2026-09-28,10,nee,nee,nee
 B01AF01,RIVAROXABAN,US,FI,2026-09-18,2026-10-01,13,nee,nee,nee
 B01AF01,RIVAROXABAN,US,FR,2026-09-18,2026-10-19,31,nee,nee,nee
 B01AF01,RIVAROXABAN,US,ES,2026-09-18,2026-10-27,39,nee,nee,nee
 B01AF01,RIVAROXABAN,US,SE,2026-09-18,2026-10-30,42,nee,nee,nee
+B01AF01,RIVAROXABAN,US,DK,2026-09-18,2026-11-01,44,nee,nee,nee
 B01AF01,Rivaroxaban,EE,FI,2026-09-28,2026-10-01,3,ja,ja,nee
 B01AF01,Rivaroxaban,EE,FR,2026-09-28,2026-10-19,21,nee,ja,nee
 B01AF01,Rivaroxaban,EE,ES,2026-09-28,2026-10-27,29,ja,nee,nee
 B01AF01,Rivaroxaban,EE,SE,2026-09-28,2026-10-30,32,nee,nee,nee
+B01AF01,Rivaroxaban,EE,DK,2026-09-28,2026-11-01,34,nee,nee,nee
 B01AF01,RIVAROXABAN,FI,FR,2026-10-01,2026-10-19,18,nee,ja,nee
 B01AF01,RIVAROXABAN,FI,ES,2026-10-01,2026-10-27,26,ja,nee,nee
 B01AF01,RIVAROXABAN,FI,SE,2026-10-01,2026-10-30,29,nee,nee,nee
+B01AF01,RIVAROXABAN,FI,DK,2026-10-01,2026-11-01,31,nee,nee,nee
 B01AF01,rivaroxaban,FR,ES,2026-10-19,2026-10-27,8,nee,nee,nee
 B01AF01,rivaroxaban,FR,SE,2026-10-19,2026-10-30,11,nee,nee,nee
+B01AF01,rivaroxaban,FR,DK,2026-10-19,2026-11-01,13,nee,nee,nee
 B01AF01,RIVAROXABAN,ES,SE,2026-10-27,2026-10-30,3,nee,nee,nee
+B01AF01,RIVAROXABAN,ES,DK,2026-10-27,2026-11-01,5,nee,nee,nee
+B01AF01,rivaroxaban,SE,DK,2026-10-30,2026-11-01,2,nee,nee,nee
 B01AF02,Apixabanum,LV,SK,2023-03-31,2024-02-12,318,ja,ja,ja
 B01AF02,Apixabanum,LV,BE,2023-03-31,2024-02-14,320,ja,ja,ja
 B01AF02,Apixabanum,LV,IS,2023-03-31,2025-01-10,651,ja,nee,ja
@@ -4061,10 +4044,10 @@ B03BA03,ヒドロキソコバラミン酢酸塩,JP,NO,2024-03-07,2025-12-30,663,
 B03BA03,ヒドロキソコバラミン酢酸塩,JP,AU,2024-03-07,2026-02-13,708,nee,nee,ja
 B03BA03,ヒドロキソコバラミン酢酸塩,JP,IS,2024-03-07,2026-04-23,777,nee,nee,ja
 B03BA03,ヒドロキソコバラミン酢酸塩,JP,FR,2024-03-07,2026-05-12,796,nee,nee,ja
-B03BA03,HYDROXOCOBALAMIN ACETATE,US,NO,2024-11-04,2025-12-30,421,nee,nee,ja
-B03BA03,HYDROXOCOBALAMIN ACETATE,US,AU,2024-11-04,2026-02-13,466,nee,nee,ja
-B03BA03,HYDROXOCOBALAMIN ACETATE,US,IS,2024-11-04,2026-04-23,535,nee,nee,ja
-B03BA03,HYDROXOCOBALAMIN ACETATE,US,FR,2024-11-04,2026-05-12,554,nee,nee,ja
+B03BA03,HYDROXOCOBALAMIN,US,NO,2024-11-04,2025-12-30,421,nee,nee,ja
+B03BA03,HYDROXOCOBALAMIN,US,AU,2024-11-04,2026-02-13,466,nee,nee,ja
+B03BA03,HYDROXOCOBALAMIN,US,IS,2024-11-04,2026-04-23,535,nee,nee,ja
+B03BA03,HYDROXOCOBALAMIN,US,FR,2024-11-04,2026-05-12,554,nee,nee,ja
 B03BA03,hydroksokobalaminklorid,NO,AU,2025-12-30,2026-02-13,45,nee,nee,nee
 B03BA03,hydroksokobalaminklorid,NO,IS,2025-12-30,2026-04-23,114,ja,nee,nee
 B03BA03,hydroksokobalaminklorid,NO,FR,2025-12-30,2026-05-12,133,nee,ja,nee
@@ -4376,7 +4359,6 @@ B05BA10,Kombinácie,SK,IT,2019-04-26,2026-07-03,2625,nee,nee,ja
 B05BA10,Kombinácie,SK,HU,2019-04-26,2026-10-07,2721,ja,ja,ja
 B05BA10,Kombinácie,SK,AT,2019-04-26,2026-10-22,2736,ja,ja,ja
 B05BA10,Kombinácie,SK,SE,2019-04-26,2026-11-16,2761,nee,nee,ja
-B05BA10,Kombinácie,SK,ES,2019-04-26,2026-11-17,2762,ja,nee,ja
 B05BA10,"LEUCINE, LYSINE ACETATE, ISOLEUCINE, VALINE, HISTIDINE, PHEN",US,IS,2020-12-08,2024-09-12,1374,nee,nee,ja
 B05BA10,"LEUCINE, LYSINE ACETATE, ISOLEUCINE, VALINE, HISTIDINE, PHEN",US,HR,2020-12-08,2025-01-27,1511,nee,nee,ja
 B05BA10,"LEUCINE, LYSINE ACETATE, ISOLEUCINE, VALINE, HISTIDINE, PHEN",US,NO,2020-12-08,2025-11-05,1793,nee,nee,ja
@@ -4384,14 +4366,12 @@ B05BA10,"LEUCINE, LYSINE ACETATE, ISOLEUCINE, VALINE, HISTIDINE, PHEN",US,IT,202
 B05BA10,"LEUCINE, LYSINE ACETATE, ISOLEUCINE, VALINE, HISTIDINE, PHEN",US,HU,2020-12-08,2026-10-07,2129,nee,nee,ja
 B05BA10,"LEUCINE, LYSINE ACETATE, ISOLEUCINE, VALINE, HISTIDINE, PHEN",US,AT,2020-12-08,2026-10-22,2144,nee,nee,ja
 B05BA10,"LEUCINE, LYSINE ACETATE, ISOLEUCINE, VALINE, HISTIDINE, PHEN",US,SE,2020-12-08,2026-11-16,2169,nee,nee,ja
-B05BA10,"LEUCINE, LYSINE ACETATE, ISOLEUCINE, VALINE, HISTIDINE, PHEN",US,ES,2020-12-08,2026-11-17,2170,nee,nee,ja
 B05BA10,Blanda,IS,HR,2024-09-12,2025-01-27,137,ja,nee,ja
 B05BA10,Blanda,IS,NO,2024-09-12,2025-11-05,419,ja,nee,ja
 B05BA10,Blanda,IS,IT,2024-09-12,2026-07-03,659,nee,nee,ja
 B05BA10,Blanda,IS,HU,2024-09-12,2026-10-07,755,ja,nee,ja
 B05BA10,Blanda,IS,AT,2024-09-12,2026-10-22,770,ja,nee,ja
 B05BA10,Blanda,IS,SE,2024-09-12,2026-11-16,795,nee,nee,ja
-B05BA10,Blanda,IS,ES,2024-09-12,2026-11-17,796,ja,nee,ja
 B05BA10,"arginin
 glicin
 histidin
@@ -4427,28 +4407,16 @@ izoleucin
 leucin
 lizinacetat
 metioni",HR,SE,2025-01-27,2026-11-16,658,nee,nee,nee
-B05BA10,"arginin
-glicin
-histidin
-izoleucin
-leucin
-lizinacetat
-metioni",HR,ES,2025-01-27,2026-11-17,659,ja,nee,nee
 B05BA10,"alanin, arginin, fenylalanin, fiskeolje, rik på omega-3-syre",NO,IT,2025-11-05,2026-07-03,240,nee,nee,nee
 B05BA10,"alanin, arginin, fenylalanin, fiskeolje, rik på omega-3-syre",NO,HU,2025-11-05,2026-10-07,336,ja,ja,nee
 B05BA10,"alanin, arginin, fenylalanin, fiskeolje, rik på omega-3-syre",NO,AT,2025-11-05,2026-10-22,351,ja,ja,nee
 B05BA10,"alanin, arginin, fenylalanin, fiskeolje, rik på omega-3-syre",NO,SE,2025-11-05,2026-11-16,376,nee,nee,nee
-B05BA10,"alanin, arginin, fenylalanin, fiskeolje, rik på omega-3-syre",NO,ES,2025-11-05,2026-11-17,377,ja,nee,nee
 B05BA10,AMINOACIDI/ELETTROLITI/GLUCOSIO (DESTROSIO)/CALCIO,IT,HU,2026-07-03,2026-10-07,96,nee,nee,nee
 B05BA10,AMINOACIDI/ELETTROLITI/GLUCOSIO (DESTROSIO)/CALCIO,IT,AT,2026-07-03,2026-10-22,111,nee,nee,nee
 B05BA10,AMINOACIDI/ELETTROLITI/GLUCOSIO (DESTROSIO)/CALCIO,IT,SE,2026-07-03,2026-11-16,136,nee,nee,nee
-B05BA10,AMINOACIDI/ELETTROLITI/GLUCOSIO (DESTROSIO)/CALCIO,IT,ES,2026-07-03,2026-11-17,137,nee,nee,nee
 B05BA10,amino acids;electrolits;glucose;lipids,HU,AT,2026-10-07,2026-10-22,15,ja,ja,nee
 B05BA10,amino acids;electrolits;glucose;lipids,HU,SE,2026-10-07,2026-11-16,40,nee,nee,nee
-B05BA10,amino acids;electrolits;glucose;lipids,HU,ES,2026-10-07,2026-11-17,41,ja,nee,nee
 B05BA10,"L-CYSTEIN, HISTIDIN, LEUCIN, ASPARAGINSÄURE, ARGININ, ISOLEU",AT,SE,2026-10-22,2026-11-16,25,nee,nee,nee
-B05BA10,"L-CYSTEIN, HISTIDIN, LEUCIN, ASPARAGINSÄURE, ARGININ, ISOLEU",AT,ES,2026-10-22,2026-11-17,26,ja,nee,nee
-B05BA10,"alanin, arginin, fenylalanin, fiskolja, rik på omega-3-syror",SE,ES,2026-11-16,2026-11-17,1,nee,nee,nee
 B05BB01,electrolyta,SI,HU,2010-05-01,2015-12-03,2042,ja,ja,ja
 B05BB01,electrolyta,SI,SK,2010-05-01,2021-04-03,3990,ja,ja,ja
 B05BB01,electrolyta,SI,IT,2010-05-01,2022-05-20,4402,nee,nee,ja
@@ -4720,9 +4688,9 @@ B06AC02,ICATIBANTO ACETATO,ES,FI,2026-06-22,2026-06-30,8,ja,nee,nee
 B06AC02,ICATIBANTO ACETATO,ES,NO,2026-06-22,2026-10-06,106,ja,nee,nee
 B06AC02,ICATIBANTO ACETATO,ES,AT,2026-06-22,2026-10-12,112,ja,nee,nee
 B06AC02,ICATIBANTO ACETATO,ES,IE,2026-06-22,2026-10-15,115,nee,nee,nee
-B06AC02,ikatibantacetat,FI,NO,2026-06-30,2026-10-06,98,ja,ja,nee
-B06AC02,ikatibantacetat,FI,AT,2026-06-30,2026-10-12,104,ja,ja,nee
-B06AC02,ikatibantacetat,FI,IE,2026-06-30,2026-10-15,107,nee,nee,nee
+B06AC02,ICATIBANTO ACETATO,FI,NO,2026-06-30,2026-10-06,98,ja,ja,nee
+B06AC02,ICATIBANTO ACETATO,FI,AT,2026-06-30,2026-10-12,104,ja,ja,nee
+B06AC02,ICATIBANTO ACETATO,FI,IE,2026-06-30,2026-10-15,107,nee,nee,nee
 B06AC02,ikatibantacetat,NO,AT,2026-10-06,2026-10-12,6,ja,ja,nee
 B06AC02,ikatibantacetat,NO,IE,2026-10-06,2026-10-15,9,nee,nee,nee
 B06AC02,ICATIBANT-ACETAT,AT,IE,2026-10-12,2026-10-15,3,nee,nee,nee
@@ -4817,7 +4785,6 @@ C01CA03,Norepinephrinum,LV,HU,2022-06-01,2024-01-08,586,ja,ja,ja
 C01CA03,Norepinephrinum,LV,SE,2022-06-01,2025-11-28,1276,nee,nee,ja
 C01CA03,Norepinephrinum,LV,SI,2022-06-01,2026-01-01,1310,ja,ja,ja
 C01CA03,Norepinephrinum,LV,IE,2022-06-01,2026-05-04,1433,nee,nee,ja
-C01CA03,Norepinephrinum,LV,NZ,2022-06-01,2026-07-09,1499,nee,nee,ja
 C01CA03,Norepinephrinum,LV,FI,2022-06-01,2026-08-26,1547,ja,ja,ja
 C01CA03,Norepinephrinum,LV,BE,2022-06-01,2026-09-24,1576,ja,ja,ja
 C01CA03,Norepinephrinum,LV,IT,2022-06-01,2026-11-12,1625,nee,nee,ja
@@ -4828,7 +4795,6 @@ C01CA03,Norepinefrín (Noradrenalín),SK,HU,2023-01-11,2024-01-08,362,ja,ja,ja
 C01CA03,Norepinefrín (Noradrenalín),SK,SE,2023-01-11,2025-11-28,1052,nee,nee,ja
 C01CA03,Norepinefrín (Noradrenalín),SK,SI,2023-01-11,2026-01-01,1086,ja,ja,ja
 C01CA03,Norepinefrín (Noradrenalín),SK,IE,2023-01-11,2026-05-04,1209,nee,nee,ja
-C01CA03,Norepinefrín (Noradrenalín),SK,NZ,2023-01-11,2026-07-09,1275,nee,nee,ja
 C01CA03,Norepinefrín (Noradrenalín),SK,FI,2023-01-11,2026-08-26,1323,ja,ja,ja
 C01CA03,Norepinefrín (Noradrenalín),SK,BE,2023-01-11,2026-09-24,1352,ja,ja,ja
 C01CA03,Norepinefrín (Noradrenalín),SK,IT,2023-01-11,2026-11-12,1401,nee,nee,ja
@@ -4844,8 +4810,6 @@ C01CA03,"noradrenalintartarat
 C01CA03,"noradrenalintartarat
 (norepinefrintartarat)",HR,IE,2023-06-01,2026-05-04,1068,nee,nee,ja
 C01CA03,"noradrenalintartarat
-(norepinefrintartarat)",HR,NZ,2023-06-01,2026-07-09,1134,nee,nee,ja
-C01CA03,"noradrenalintartarat
 (norepinefrintartarat)",HR,FI,2023-06-01,2026-08-26,1182,ja,ja,ja
 C01CA03,"noradrenalintartarat
 (norepinefrintartarat)",HR,BE,2023-06-01,2026-09-24,1211,ja,ja,ja
@@ -4857,7 +4821,6 @@ C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),IS,HU,2023-08-15,20
 C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),IS,SE,2023-08-15,2025-11-28,836,nee,nee,ja
 C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),IS,SI,2023-08-15,2026-01-01,870,ja,nee,ja
 C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),IS,IE,2023-08-15,2026-05-04,993,nee,nee,ja
-C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),IS,NZ,2023-08-15,2026-07-09,1059,nee,nee,ja
 C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),IS,FI,2023-08-15,2026-08-26,1107,ja,nee,ja
 C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),IS,BE,2023-08-15,2026-09-24,1136,ja,nee,ja
 C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),IS,IT,2023-08-15,2026-11-12,1185,nee,nee,ja
@@ -4865,33 +4828,25 @@ C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),IS,AU,2023-08-15,20
 C01CA03,noradrenaline tartrate,HU,SE,2024-01-08,2025-11-28,690,nee,nee,ja
 C01CA03,noradrenaline tartrate,HU,SI,2024-01-08,2026-01-01,724,ja,ja,ja
 C01CA03,noradrenaline tartrate,HU,IE,2024-01-08,2026-05-04,847,nee,nee,ja
-C01CA03,noradrenaline tartrate,HU,NZ,2024-01-08,2026-07-09,913,nee,nee,ja
 C01CA03,noradrenaline tartrate,HU,FI,2024-01-08,2026-08-26,961,ja,ja,ja
 C01CA03,noradrenaline tartrate,HU,BE,2024-01-08,2026-09-24,990,ja,ja,ja
 C01CA03,noradrenaline tartrate,HU,IT,2024-01-08,2026-11-12,1039,nee,nee,ja
 C01CA03,noradrenaline tartrate,HU,AU,2024-01-08,2026-11-30,1057,nee,nee,ja
 C01CA03,noradrenalintartrat (monohydrat),SE,SI,2025-11-28,2026-01-01,34,nee,nee,nee
 C01CA03,noradrenalintartrat (monohydrat),SE,IE,2025-11-28,2026-05-04,157,nee,nee,nee
-C01CA03,noradrenalintartrat (monohydrat),SE,NZ,2025-11-28,2026-07-09,223,nee,nee,nee
 C01CA03,noradrenalintartrat (monohydrat),SE,FI,2025-11-28,2026-08-26,271,nee,nee,nee
 C01CA03,noradrenalintartrat (monohydrat),SE,BE,2025-11-28,2026-09-24,300,nee,nee,nee
 C01CA03,noradrenalintartrat (monohydrat),SE,IT,2025-11-28,2026-11-12,349,nee,nee,nee
 C01CA03,noradrenalintartrat (monohydrat),SE,AU,2025-11-28,2026-11-30,367,nee,nee,nee
 C01CA03,norepinephrinum,SI,IE,2026-01-01,2026-05-04,123,nee,nee,nee
-C01CA03,norepinephrinum,SI,NZ,2026-01-01,2026-07-09,189,nee,nee,nee
 C01CA03,norepinephrinum,SI,FI,2026-01-01,2026-08-26,237,ja,ja,nee
 C01CA03,norepinephrinum,SI,BE,2026-01-01,2026-09-24,266,ja,ja,nee
 C01CA03,norepinephrinum,SI,IT,2026-01-01,2026-11-12,315,nee,nee,nee
 C01CA03,norepinephrinum,SI,AU,2026-01-01,2026-11-30,333,nee,nee,nee
-C01CA03,Noradrenaline acid tartrate,IE,NZ,2026-05-04,2026-07-09,66,nee,nee,nee
 C01CA03,Noradrenaline acid tartrate,IE,FI,2026-05-04,2026-08-26,114,nee,nee,nee
 C01CA03,Noradrenaline acid tartrate,IE,BE,2026-05-04,2026-09-24,143,nee,nee,nee
 C01CA03,Noradrenaline acid tartrate,IE,IT,2026-05-04,2026-11-12,192,nee,nee,nee
 C01CA03,Noradrenaline acid tartrate,IE,AU,2026-05-04,2026-11-30,210,nee,nee,nee
-C01CA03,Noradrenaline,NZ,FI,2026-07-09,2026-08-26,48,nee,nee,nee
-C01CA03,Noradrenaline,NZ,BE,2026-07-09,2026-09-24,77,nee,nee,nee
-C01CA03,Noradrenaline,NZ,IT,2026-07-09,2026-11-12,126,nee,nee,nee
-C01CA03,Noradrenaline,NZ,AU,2026-07-09,2026-11-30,144,nee,nee,nee
 C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),FI,BE,2026-08-26,2026-09-24,29,ja,ja,nee
 C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),FI,IT,2026-08-26,2026-11-12,78,nee,nee,nee
 C01CA03,Noradrenalinum tartrat (norepinephrinum INN tartrat),FI,AU,2026-08-26,2026-11-30,96,nee,nee,nee
@@ -5577,6 +5532,8 @@ C02DB02,HYDRALAZINE HYDROCHLORIDE,US,AU,2020-04-07,2025-08-08,1949,nee,nee,ja
 C02DB02,HYDRALAZINE HYDROCHLORIDE,US,NZ,2020-04-07,2026-05-04,2218,nee,nee,ja
 C02DB02,hydralazine hydrochloride,AU,NZ,2025-08-08,2026-05-04,269,nee,nee,nee
 C02DC01,MINOXIDIL,ES,IE,2026-04-28,2026-10-26,181,nee,nee,nee
+C02DC01,MINOXIDIL,ES,DE,2026-04-28,2026-11-26,212,ja,nee,nee
+C02DC01,Minoxidil,IE,DE,2026-10-26,2026-11-26,31,nee,nee,nee
 C02KX01,Bosentanum,LV,SK,2017-03-16,2020-02-01,1052,ja,ja,ja
 C02KX01,Bosentanum,LV,IT,2017-03-16,2022-05-31,1902,nee,nee,ja
 C02KX01,Bosentanum,LV,HU,2017-03-16,2024-02-29,2541,ja,ja,ja
@@ -5586,7 +5543,6 @@ C02KX01,Bosentanum,LV,JP,2017-03-16,2026-01-06,3218,nee,nee,ja
 C02KX01,Bosentanum,LV,RO,2017-03-16,2026-01-22,3234,nee,nee,ja
 C02KX01,Bosentanum,LV,FR,2017-03-16,2026-03-17,3288,nee,ja,ja
 C02KX01,Bosentanum,LV,FI,2017-03-16,2026-08-19,3443,ja,ja,ja
-C02KX01,Bosentanum,LV,AT,2017-03-16,2026-09-14,3469,ja,ja,ja
 C02KX01,Bosentanum,LV,AU,2017-03-16,2026-10-29,3514,nee,nee,ja
 C02KX01,Bosentán,SK,IT,2020-02-01,2022-05-31,850,nee,nee,ja
 C02KX01,Bosentán,SK,HU,2020-02-01,2024-02-29,1489,ja,ja,ja
@@ -5596,7 +5552,6 @@ C02KX01,Bosentán,SK,JP,2020-02-01,2026-01-06,2166,nee,nee,ja
 C02KX01,Bosentán,SK,RO,2020-02-01,2026-01-22,2182,nee,nee,ja
 C02KX01,Bosentán,SK,FR,2020-02-01,2026-03-17,2236,nee,ja,ja
 C02KX01,Bosentán,SK,FI,2020-02-01,2026-08-19,2391,ja,ja,ja
-C02KX01,Bosentán,SK,AT,2020-02-01,2026-09-14,2417,ja,ja,ja
 C02KX01,Bosentán,SK,AU,2020-02-01,2026-10-29,2462,nee,nee,ja
 C02KX01,BOSENTAN,IT,HU,2022-05-31,2024-02-29,639,nee,nee,ja
 C02KX01,BOSENTAN,IT,NO,2022-05-31,2025-04-02,1037,nee,nee,ja
@@ -5605,7 +5560,6 @@ C02KX01,BOSENTAN,IT,JP,2022-05-31,2026-01-06,1316,nee,nee,ja
 C02KX01,BOSENTAN,IT,RO,2022-05-31,2026-01-22,1332,nee,nee,ja
 C02KX01,BOSENTAN,IT,FR,2022-05-31,2026-03-17,1386,nee,nee,ja
 C02KX01,BOSENTAN,IT,FI,2022-05-31,2026-08-19,1541,nee,nee,ja
-C02KX01,BOSENTAN,IT,AT,2022-05-31,2026-09-14,1567,nee,nee,ja
 C02KX01,BOSENTAN,IT,AU,2022-05-31,2026-10-29,1612,nee,nee,ja
 C02KX01,bosentan monohydrate,HU,NO,2024-02-29,2025-04-02,398,ja,ja,ja
 C02KX01,bosentan monohydrate,HU,HR,2024-02-29,2025-05-20,446,ja,ja,ja
@@ -5613,36 +5567,28 @@ C02KX01,bosentan monohydrate,HU,JP,2024-02-29,2026-01-06,677,nee,nee,ja
 C02KX01,bosentan monohydrate,HU,RO,2024-02-29,2026-01-22,693,nee,nee,ja
 C02KX01,bosentan monohydrate,HU,FR,2024-02-29,2026-03-17,747,nee,ja,ja
 C02KX01,bosentan monohydrate,HU,FI,2024-02-29,2026-08-19,902,ja,ja,ja
-C02KX01,bosentan monohydrate,HU,AT,2024-02-29,2026-09-14,928,ja,ja,ja
 C02KX01,bosentan monohydrate,HU,AU,2024-02-29,2026-10-29,973,nee,nee,ja
 C02KX01,bosentanmonohydrat,NO,HR,2025-04-02,2025-05-20,48,ja,ja,nee
 C02KX01,bosentanmonohydrat,NO,JP,2025-04-02,2026-01-06,279,nee,nee,nee
 C02KX01,bosentanmonohydrat,NO,RO,2025-04-02,2026-01-22,295,nee,nee,nee
 C02KX01,bosentanmonohydrat,NO,FR,2025-04-02,2026-03-17,349,nee,ja,nee
 C02KX01,bosentanmonohydrat,NO,FI,2025-04-02,2026-08-19,504,ja,ja,nee
-C02KX01,bosentanmonohydrat,NO,AT,2025-04-02,2026-09-14,530,ja,ja,nee
 C02KX01,bosentanmonohydrat,NO,AU,2025-04-02,2026-10-29,575,nee,nee,nee
 C02KX01,bosentan hidrat,HR,JP,2025-05-20,2026-01-06,231,nee,nee,nee
 C02KX01,bosentan hidrat,HR,RO,2025-05-20,2026-01-22,247,nee,nee,nee
 C02KX01,bosentan hidrat,HR,FR,2025-05-20,2026-03-17,301,nee,ja,nee
 C02KX01,bosentan hidrat,HR,FI,2025-05-20,2026-08-19,456,ja,ja,nee
-C02KX01,bosentan hidrat,HR,AT,2025-05-20,2026-09-14,482,ja,ja,nee
 C02KX01,bosentan hidrat,HR,AU,2025-05-20,2026-10-29,527,nee,nee,nee
 C02KX01,ベラプロストナトリウム,JP,RO,2026-01-06,2026-01-22,16,nee,nee,nee
 C02KX01,ベラプロストナトリウム,JP,FR,2026-01-06,2026-03-17,70,nee,nee,nee
 C02KX01,ベラプロストナトリウム,JP,FI,2026-01-06,2026-08-19,225,nee,nee,nee
-C02KX01,ベラプロストナトリウム,JP,AT,2026-01-06,2026-09-14,251,nee,nee,nee
 C02KX01,ベラプロストナトリウム,JP,AU,2026-01-06,2026-10-29,296,nee,nee,nee
 C02KX01,BOSENTANUM,RO,FR,2026-01-22,2026-03-17,54,nee,nee,nee
 C02KX01,BOSENTANUM,RO,FI,2026-01-22,2026-08-19,209,nee,nee,nee
-C02KX01,BOSENTANUM,RO,AT,2026-01-22,2026-09-14,235,nee,nee,nee
 C02KX01,BOSENTANUM,RO,AU,2026-01-22,2026-10-29,280,nee,nee,nee
 C02KX01,bosentan monohydraté,FR,FI,2026-03-17,2026-08-19,155,nee,ja,nee
-C02KX01,bosentan monohydraté,FR,AT,2026-03-17,2026-09-14,181,nee,ja,nee
 C02KX01,bosentan monohydraté,FR,AU,2026-03-17,2026-10-29,226,nee,nee,nee
-C02KX01,BOSENTAN,FI,AT,2026-08-19,2026-09-14,26,ja,ja,nee
 C02KX01,BOSENTAN,FI,AU,2026-08-19,2026-10-29,71,nee,nee,nee
-C02KX01,BOSENTAN MONOHYDRAT,AT,AU,2026-09-14,2026-10-29,45,nee,nee,nee
 C02KX02,Ambrisentán,SK,IS,2019-08-13,2025-08-01,2180,ja,nee,ja
 C02KX02,Ambrisentán,SK,SE,2019-08-13,2025-10-16,2256,nee,nee,ja
 C02KX02,Ambrisentán,SK,AU,2019-08-13,2026-01-08,2340,nee,nee,ja
@@ -6098,6 +6044,7 @@ C07AB02,Metoprolol,SK,IT,2020-01-13,2026-08-31,2422,nee,nee,ja
 C07AB02,Metoprolol,SK,US,2020-01-13,2026-08-31,2422,nee,nee,ja
 C07AB02,Metoprolol,SK,FR,2020-01-13,2026-09-29,2451,nee,ja,ja
 C07AB02,Metoprolol,SK,AU,2020-01-13,2026-11-09,2492,nee,nee,ja
+C07AB02,Metoprolol,SK,BE,2020-01-13,2026-11-20,2503,ja,ja,ja
 C07AB02,Metoprolol,SK,MY,2020-01-13,2027-01-30,2574,nee,nee,ja
 C07AB02,Metoprololi succinas,LV,ES,2020-02-26,2024-06-17,1573,ja,nee,ja
 C07AB02,Metoprololi succinas,LV,IS,2020-02-26,2024-10-15,1693,ja,nee,ja
@@ -6114,6 +6061,7 @@ C07AB02,Metoprololi succinas,LV,IT,2020-02-26,2026-08-31,2378,nee,nee,ja
 C07AB02,Metoprololi succinas,LV,US,2020-02-26,2026-08-31,2378,nee,nee,ja
 C07AB02,Metoprololi succinas,LV,FR,2020-02-26,2026-09-29,2407,nee,ja,ja
 C07AB02,Metoprololi succinas,LV,AU,2020-02-26,2026-11-09,2448,nee,nee,ja
+C07AB02,Metoprololi succinas,LV,BE,2020-02-26,2026-11-20,2459,ja,ja,ja
 C07AB02,Metoprololi succinas,LV,MY,2020-02-26,2027-01-30,2530,nee,nee,ja
 C07AB02,METOPROLOL TARTRATO,ES,IS,2024-06-17,2024-10-15,120,ja,nee,ja
 C07AB02,METOPROLOL TARTRATO,ES,RO,2024-06-17,2024-12-20,186,nee,nee,ja
@@ -6129,6 +6077,7 @@ C07AB02,METOPROLOL TARTRATO,ES,IT,2024-06-17,2026-08-31,805,nee,nee,ja
 C07AB02,METOPROLOL TARTRATO,ES,US,2024-06-17,2026-08-31,805,nee,nee,ja
 C07AB02,METOPROLOL TARTRATO,ES,FR,2024-06-17,2026-09-29,834,nee,nee,ja
 C07AB02,METOPROLOL TARTRATO,ES,AU,2024-06-17,2026-11-09,875,nee,nee,ja
+C07AB02,METOPROLOL TARTRATO,ES,BE,2024-06-17,2026-11-20,886,ja,nee,ja
 C07AB02,METOPROLOL TARTRATO,ES,MY,2024-06-17,2027-01-30,957,nee,nee,ja
 C07AB02,Metoprololum INN súkkínat,IS,RO,2024-10-15,2024-12-20,66,nee,nee,ja
 C07AB02,Metoprololum INN súkkínat,IS,SE,2024-10-15,2025-03-13,149,nee,nee,ja
@@ -6143,6 +6092,7 @@ C07AB02,Metoprololum INN súkkínat,IS,IT,2024-10-15,2026-08-31,685,nee,nee,ja
 C07AB02,Metoprololum INN súkkínat,IS,US,2024-10-15,2026-08-31,685,nee,nee,ja
 C07AB02,Metoprololum INN súkkínat,IS,FR,2024-10-15,2026-09-29,714,nee,nee,ja
 C07AB02,Metoprololum INN súkkínat,IS,AU,2024-10-15,2026-11-09,755,nee,nee,ja
+C07AB02,Metoprololum INN súkkínat,IS,BE,2024-10-15,2026-11-20,766,ja,nee,ja
 C07AB02,Metoprololum INN súkkínat,IS,MY,2024-10-15,2027-01-30,837,nee,nee,ja
 C07AB02,METOPROLOLUM,RO,SE,2024-12-20,2025-03-13,83,nee,nee,ja
 C07AB02,METOPROLOLUM,RO,EE,2024-12-20,2025-05-19,150,nee,nee,ja
@@ -6156,6 +6106,7 @@ C07AB02,METOPROLOLUM,RO,IT,2024-12-20,2026-08-31,619,nee,nee,ja
 C07AB02,METOPROLOLUM,RO,US,2024-12-20,2026-08-31,619,nee,nee,ja
 C07AB02,METOPROLOLUM,RO,FR,2024-12-20,2026-09-29,648,nee,nee,ja
 C07AB02,METOPROLOLUM,RO,AU,2024-12-20,2026-11-09,689,nee,nee,ja
+C07AB02,METOPROLOLUM,RO,BE,2024-12-20,2026-11-20,700,nee,nee,ja
 C07AB02,METOPROLOLUM,RO,MY,2024-12-20,2027-01-30,771,nee,nee,ja
 C07AB02,metoprololsuccinat,SE,EE,2025-03-13,2025-05-19,67,nee,nee,nee
 C07AB02,metoprololsuccinat,SE,HU,2025-03-13,2025-10-17,218,nee,nee,nee
@@ -6168,6 +6119,7 @@ C07AB02,metoprololsuccinat,SE,IT,2025-03-13,2026-08-31,536,nee,nee,nee
 C07AB02,metoprololsuccinat,SE,US,2025-03-13,2026-08-31,536,nee,nee,nee
 C07AB02,metoprololsuccinat,SE,FR,2025-03-13,2026-09-29,565,nee,nee,nee
 C07AB02,metoprololsuccinat,SE,AU,2025-03-13,2026-11-09,606,nee,nee,nee
+C07AB02,metoprololsuccinat,SE,BE,2025-03-13,2026-11-20,617,nee,nee,nee
 C07AB02,metoprololsuccinat,SE,MY,2025-03-13,2027-01-30,688,nee,nee,nee
 C07AB02,Metoprolol,EE,HU,2025-05-19,2025-10-17,151,ja,ja,nee
 C07AB02,Metoprolol,EE,NO,2025-05-19,2025-11-03,168,ja,ja,nee
@@ -6179,6 +6131,7 @@ C07AB02,Metoprolol,EE,IT,2025-05-19,2026-08-31,469,nee,nee,nee
 C07AB02,Metoprolol,EE,US,2025-05-19,2026-08-31,469,nee,nee,nee
 C07AB02,Metoprolol,EE,FR,2025-05-19,2026-09-29,498,nee,ja,nee
 C07AB02,Metoprolol,EE,AU,2025-05-19,2026-11-09,539,nee,nee,nee
+C07AB02,Metoprolol,EE,BE,2025-05-19,2026-11-20,550,ja,ja,nee
 C07AB02,Metoprolol,EE,MY,2025-05-19,2027-01-30,621,nee,nee,nee
 C07AB02,metoprolol,HU,NO,2025-10-17,2025-11-03,17,ja,ja,nee
 C07AB02,metoprolol,HU,GR,2025-10-17,2025-12-05,49,ja,ja,nee
@@ -6189,6 +6142,7 @@ C07AB02,metoprolol,HU,IT,2025-10-17,2026-08-31,318,nee,nee,nee
 C07AB02,metoprolol,HU,US,2025-10-17,2026-08-31,318,nee,nee,nee
 C07AB02,metoprolol,HU,FR,2025-10-17,2026-09-29,347,nee,ja,nee
 C07AB02,metoprolol,HU,AU,2025-10-17,2026-11-09,388,nee,nee,nee
+C07AB02,metoprolol,HU,BE,2025-10-17,2026-11-20,399,ja,ja,nee
 C07AB02,metoprolol,HU,MY,2025-10-17,2027-01-30,470,nee,nee,nee
 C07AB02,metoprololsuksinat,NO,GR,2025-11-03,2025-12-05,32,ja,ja,nee
 C07AB02,metoprololsuksinat,NO,BA,2025-11-03,2026-02-17,106,nee,nee,nee
@@ -6198,6 +6152,7 @@ C07AB02,metoprololsuksinat,NO,IT,2025-11-03,2026-08-31,301,nee,nee,nee
 C07AB02,metoprololsuksinat,NO,US,2025-11-03,2026-08-31,301,nee,nee,nee
 C07AB02,metoprololsuksinat,NO,FR,2025-11-03,2026-09-29,330,nee,ja,nee
 C07AB02,metoprololsuksinat,NO,AU,2025-11-03,2026-11-09,371,nee,nee,nee
+C07AB02,metoprololsuksinat,NO,BE,2025-11-03,2026-11-20,382,ja,ja,nee
 C07AB02,metoprololsuksinat,NO,MY,2025-11-03,2027-01-30,453,nee,nee,nee
 C07AB02,METOPROLOL SUCCINATE,GR,BA,2025-12-05,2026-02-17,74,nee,nee,nee
 C07AB02,METOPROLOL SUCCINATE,GR,DE,2025-12-05,2026-05-07,153,ja,ja,nee
@@ -6206,6 +6161,7 @@ C07AB02,METOPROLOL SUCCINATE,GR,IT,2025-12-05,2026-08-31,269,nee,nee,nee
 C07AB02,METOPROLOL SUCCINATE,GR,US,2025-12-05,2026-08-31,269,nee,nee,nee
 C07AB02,METOPROLOL SUCCINATE,GR,FR,2025-12-05,2026-09-29,298,nee,ja,nee
 C07AB02,METOPROLOL SUCCINATE,GR,AU,2025-12-05,2026-11-09,339,nee,nee,nee
+C07AB02,METOPROLOL SUCCINATE,GR,BE,2025-12-05,2026-11-20,350,ja,ja,nee
 C07AB02,METOPROLOL SUCCINATE,GR,MY,2025-12-05,2027-01-30,421,nee,nee,nee
 C07AB02,metoprolol,BA,DE,2026-02-17,2026-05-07,79,nee,nee,nee
 C07AB02,metoprolol,BA,DK,2026-02-17,2026-07-15,148,nee,nee,nee
@@ -6213,28 +6169,36 @@ C07AB02,metoprolol,BA,IT,2026-02-17,2026-08-31,195,nee,nee,nee
 C07AB02,metoprolol,BA,US,2026-02-17,2026-08-31,195,nee,nee,nee
 C07AB02,metoprolol,BA,FR,2026-02-17,2026-09-29,224,nee,nee,nee
 C07AB02,metoprolol,BA,AU,2026-02-17,2026-11-09,265,nee,nee,nee
+C07AB02,metoprolol,BA,BE,2026-02-17,2026-11-20,276,nee,nee,nee
 C07AB02,metoprolol,BA,MY,2026-02-17,2027-01-30,347,nee,nee,nee
 C07AB02,Metoprololsuccinat (Ph.Eur.),DE,DK,2026-05-07,2026-07-15,69,nee,nee,nee
 C07AB02,Metoprololsuccinat (Ph.Eur.),DE,IT,2026-05-07,2026-08-31,116,nee,nee,nee
 C07AB02,Metoprololsuccinat (Ph.Eur.),DE,US,2026-05-07,2026-08-31,116,nee,nee,nee
 C07AB02,Metoprololsuccinat (Ph.Eur.),DE,FR,2026-05-07,2026-09-29,145,nee,ja,nee
 C07AB02,Metoprololsuccinat (Ph.Eur.),DE,AU,2026-05-07,2026-11-09,186,nee,nee,nee
+C07AB02,Metoprololsuccinat (Ph.Eur.),DE,BE,2026-05-07,2026-11-20,197,ja,ja,nee
 C07AB02,Metoprololsuccinat (Ph.Eur.),DE,MY,2026-05-07,2027-01-30,268,nee,nee,nee
 C07AB02,Metoprolol (Metoprololtartrat) ATC-kode: C07AB02 Forventet p,DK,IT,2026-07-15,2026-08-31,47,nee,nee,nee
 C07AB02,Metoprolol (Metoprololtartrat) ATC-kode: C07AB02 Forventet p,DK,US,2026-07-15,2026-08-31,47,nee,nee,nee
 C07AB02,Metoprolol (Metoprololtartrat) ATC-kode: C07AB02 Forventet p,DK,FR,2026-07-15,2026-09-29,76,nee,nee,nee
 C07AB02,Metoprolol (Metoprololtartrat) ATC-kode: C07AB02 Forventet p,DK,AU,2026-07-15,2026-11-09,117,nee,nee,nee
+C07AB02,Metoprolol (Metoprololtartrat) ATC-kode: C07AB02 Forventet p,DK,BE,2026-07-15,2026-11-20,128,nee,nee,nee
 C07AB02,Metoprolol (Metoprololtartrat) ATC-kode: C07AB02 Forventet p,DK,MY,2026-07-15,2027-01-30,199,nee,nee,nee
 C07AB02,METOPROLOLO TARTRATO,IT,US,2026-08-31,2026-08-31,0,nee,nee,nee
 C07AB02,METOPROLOLO TARTRATO,IT,FR,2026-08-31,2026-09-29,29,nee,nee,nee
 C07AB02,METOPROLOLO TARTRATO,IT,AU,2026-08-31,2026-11-09,70,nee,nee,nee
+C07AB02,METOPROLOLO TARTRATO,IT,BE,2026-08-31,2026-11-20,81,nee,nee,nee
 C07AB02,METOPROLOLO TARTRATO,IT,MY,2026-08-31,2027-01-30,152,nee,nee,nee
 C07AB02,METOPROLOL SUCCINATE,US,FR,2026-08-31,2026-09-29,29,nee,nee,nee
 C07AB02,METOPROLOL SUCCINATE,US,AU,2026-08-31,2026-11-09,70,nee,nee,nee
+C07AB02,METOPROLOL SUCCINATE,US,BE,2026-08-31,2026-11-20,81,nee,nee,nee
 C07AB02,METOPROLOL SUCCINATE,US,MY,2026-08-31,2027-01-30,152,nee,nee,nee
 C07AB02,métoprolol (tartrate de),FR,AU,2026-09-29,2026-11-09,41,nee,nee,nee
+C07AB02,métoprolol (tartrate de),FR,BE,2026-09-29,2026-11-20,52,nee,ja,nee
 C07AB02,métoprolol (tartrate de),FR,MY,2026-09-29,2027-01-30,123,nee,nee,nee
+C07AB02,metoprolol succinate,AU,BE,2026-11-09,2026-11-20,11,nee,nee,nee
 C07AB02,metoprolol succinate,AU,MY,2026-11-09,2027-01-30,82,nee,nee,nee
+C07AB02,Metoprolol Succinate,BE,MY,2026-11-20,2027-01-30,71,nee,nee,nee
 C07AB03,アテノロール,JP,NO,2024-03-11,2025-06-02,448,nee,nee,ja
 C07AB03,アテノロール,JP,IS,2024-03-11,2025-12-19,648,nee,nee,ja
 C07AB03,アテノロール,JP,IT,2024-03-11,2026-04-08,758,nee,nee,ja
@@ -6724,11 +6688,11 @@ C08CA06,Nimodipín,SK,RO,2025-07-01,2026-07-28,392,nee,nee,nee
 C08CA06,Nimodipín,SK,CZ,2025-07-01,2026-09-11,437,nee,nee,nee
 C08CA06,Nimodipín,SK,ES,2025-07-01,2026-10-30,486,ja,nee,nee
 C08CA06,Nimodipín,SK,GR,2025-07-01,2026-11-29,516,ja,ja,nee
-C08CA06,NIMODIPINE,FI,LV,2026-01-09,2026-02-13,35,ja,ja,nee
-C08CA06,NIMODIPINE,FI,RO,2026-01-09,2026-07-28,200,nee,nee,nee
-C08CA06,NIMODIPINE,FI,CZ,2026-01-09,2026-09-11,245,nee,nee,nee
-C08CA06,NIMODIPINE,FI,ES,2026-01-09,2026-10-30,294,ja,nee,nee
-C08CA06,NIMODIPINE,FI,GR,2026-01-09,2026-11-29,324,ja,ja,nee
+C08CA06,NIMODIPINO,FI,LV,2026-01-09,2026-02-13,35,ja,ja,nee
+C08CA06,NIMODIPINO,FI,RO,2026-01-09,2026-07-28,200,nee,nee,nee
+C08CA06,NIMODIPINO,FI,CZ,2026-01-09,2026-09-11,245,nee,nee,nee
+C08CA06,NIMODIPINO,FI,ES,2026-01-09,2026-10-30,294,ja,nee,nee
+C08CA06,NIMODIPINO,FI,GR,2026-01-09,2026-11-29,324,ja,ja,nee
 C08CA06,Nimodipinum,LV,RO,2026-02-13,2026-07-28,165,nee,nee,nee
 C08CA06,Nimodipinum,LV,CZ,2026-02-13,2026-09-11,210,nee,nee,nee
 C08CA06,Nimodipinum,LV,ES,2026-02-13,2026-10-30,259,ja,nee,nee
@@ -6921,12 +6885,12 @@ C09AA02,enalaprilmaleat,SE,NO,2025-04-08,2025-11-26,232,nee,nee,nee
 C09AA02,enalaprilmaleat,SE,BA,2025-04-08,2026-02-17,315,nee,nee,nee
 C09AA02,enalaprilmaleat,SE,ES,2025-04-08,2026-05-18,405,nee,nee,nee
 C09AA02,enalaprilmaleat,SE,AU,2025-04-08,2026-07-29,477,nee,nee,nee
-C09AA02,enalaprilmaleat,FI,IS,2025-04-25,2025-06-06,42,ja,nee,nee
-C09AA02,enalaprilmaleat,FI,SI,2025-04-25,2025-10-01,159,ja,ja,nee
-C09AA02,enalaprilmaleat,FI,NO,2025-04-25,2025-11-26,215,ja,ja,nee
-C09AA02,enalaprilmaleat,FI,BA,2025-04-25,2026-02-17,298,nee,nee,nee
-C09AA02,enalaprilmaleat,FI,ES,2025-04-25,2026-05-18,388,ja,nee,nee
-C09AA02,enalaprilmaleat,FI,AU,2025-04-25,2026-07-29,460,nee,nee,nee
+C09AA02,ENALAPRIL MALEATO,FI,IS,2025-04-25,2025-06-06,42,ja,nee,nee
+C09AA02,ENALAPRIL MALEATO,FI,SI,2025-04-25,2025-10-01,159,ja,ja,nee
+C09AA02,ENALAPRIL MALEATO,FI,NO,2025-04-25,2025-11-26,215,ja,ja,nee
+C09AA02,ENALAPRIL MALEATO,FI,BA,2025-04-25,2026-02-17,298,nee,nee,nee
+C09AA02,ENALAPRIL MALEATO,FI,ES,2025-04-25,2026-05-18,388,ja,nee,nee
+C09AA02,ENALAPRIL MALEATO,FI,AU,2025-04-25,2026-07-29,460,nee,nee,nee
 C09AA02,Enalaprilum INN maleat,IS,SI,2025-06-06,2025-10-01,117,ja,nee,nee
 C09AA02,Enalaprilum INN maleat,IS,NO,2025-06-06,2025-11-26,173,ja,nee,nee
 C09AA02,Enalaprilum INN maleat,IS,BA,2025-06-06,2026-02-17,256,nee,nee,nee
@@ -7684,7 +7648,7 @@ C09DA03,Hydrochlorothiazid; Valsartan,DE,IS,2018-07-01,2025-03-25,2459,ja,nee,ja
 C09DA03,Hydrochlorothiazid; Valsartan,DE,JP,2018-07-01,2025-06-06,2532,nee,nee,ja
 C09DA03,Hydrochlorothiazid; Valsartan,DE,IT,2018-07-01,2025-07-14,2570,nee,nee,ja
 C09DA03,Hydrochlorothiazid; Valsartan,DE,BA,2018-07-01,2026-02-17,2788,nee,nee,ja
-C09DA03,Hydrochlorothiazid; Valsartan,DE,ES,2018-07-01,2026-05-29,2889,ja,nee,ja
+C09DA03,Hydrochlorothiazid; Valsartan,DE,ES,2018-07-01,2026-08-24,2976,ja,nee,ja
 C09DA03,Hydrochlorothiazid; Valsartan,DE,FI,2018-07-01,2026-09-22,3005,ja,ja,ja
 C09DA03,Hydrochlorothiazid; Valsartan,DE,CZ,2018-07-01,2026-10-21,3034,nee,nee,ja
 C09DA03,Hydrochlorothiazid; Valsartan,DE,BE,2018-07-01,2026-10-30,3043,ja,ja,ja
@@ -7695,7 +7659,7 @@ C09DA03,Valsartan a diuretiká,SK,IS,2022-07-31,2025-03-25,968,ja,nee,ja
 C09DA03,Valsartan a diuretiká,SK,JP,2022-07-31,2025-06-06,1041,nee,nee,ja
 C09DA03,Valsartan a diuretiká,SK,IT,2022-07-31,2025-07-14,1079,nee,nee,ja
 C09DA03,Valsartan a diuretiká,SK,BA,2022-07-31,2026-02-17,1297,nee,nee,ja
-C09DA03,Valsartan a diuretiká,SK,ES,2022-07-31,2026-05-29,1398,ja,nee,ja
+C09DA03,Valsartan a diuretiká,SK,ES,2022-07-31,2026-08-24,1485,ja,nee,ja
 C09DA03,Valsartan a diuretiká,SK,FI,2022-07-31,2026-09-22,1514,ja,ja,ja
 C09DA03,Valsartan a diuretiká,SK,CZ,2022-07-31,2026-10-21,1543,nee,nee,ja
 C09DA03,Valsartan a diuretiká,SK,BE,2022-07-31,2026-10-30,1552,ja,ja,ja
@@ -7705,7 +7669,7 @@ C09DA03,valsartan;hydrochlorothiazide,HU,IS,2025-01-20,2025-03-25,64,ja,nee,nee
 C09DA03,valsartan;hydrochlorothiazide,HU,JP,2025-01-20,2025-06-06,137,nee,nee,nee
 C09DA03,valsartan;hydrochlorothiazide,HU,IT,2025-01-20,2025-07-14,175,nee,nee,nee
 C09DA03,valsartan;hydrochlorothiazide,HU,BA,2025-01-20,2026-02-17,393,nee,nee,nee
-C09DA03,valsartan;hydrochlorothiazide,HU,ES,2025-01-20,2026-05-29,494,ja,nee,nee
+C09DA03,valsartan;hydrochlorothiazide,HU,ES,2025-01-20,2026-08-24,581,ja,nee,nee
 C09DA03,valsartan;hydrochlorothiazide,HU,FI,2025-01-20,2026-09-22,610,ja,ja,nee
 C09DA03,valsartan;hydrochlorothiazide,HU,CZ,2025-01-20,2026-10-21,639,nee,nee,nee
 C09DA03,valsartan;hydrochlorothiazide,HU,BE,2025-01-20,2026-10-30,648,ja,ja,nee
@@ -7714,7 +7678,7 @@ C09DA03,valsartan;hydrochlorothiazide,HU,SE,2025-01-20,2026-11-25,674,nee,nee,ne
 C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,JP,2025-03-25,2025-06-06,73,nee,nee,nee
 C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,IT,2025-03-25,2025-07-14,111,nee,nee,nee
 C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,BA,2025-03-25,2026-02-17,329,nee,nee,nee
-C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,ES,2025-03-25,2026-05-29,430,ja,nee,nee
+C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,ES,2025-03-25,2026-08-24,517,ja,nee,nee
 C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,FI,2025-03-25,2026-09-22,546,ja,nee,nee
 C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,CZ,2025-03-25,2026-10-21,575,nee,nee,nee
 C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,BE,2025-03-25,2026-10-30,584,ja,nee,nee
@@ -7722,30 +7686,30 @@ C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,AT,2025-03-25,2026-11-09,594,j
 C09DA03,"Valsartanum INN, Hydrochlorothiazide",IS,SE,2025-03-25,2026-11-25,610,nee,nee,nee
 C09DA03,ロサルタンカリウム・ヒドロクロロチアジド,JP,IT,2025-06-06,2025-07-14,38,nee,nee,nee
 C09DA03,ロサルタンカリウム・ヒドロクロロチアジド,JP,BA,2025-06-06,2026-02-17,256,nee,nee,nee
-C09DA03,ロサルタンカリウム・ヒドロクロロチアジド,JP,ES,2025-06-06,2026-05-29,357,nee,nee,nee
+C09DA03,ロサルタンカリウム・ヒドロクロロチアジド,JP,ES,2025-06-06,2026-08-24,444,nee,nee,nee
 C09DA03,ロサルタンカリウム・ヒドロクロロチアジド,JP,FI,2025-06-06,2026-09-22,473,nee,nee,nee
 C09DA03,ロサルタンカリウム・ヒドロクロロチアジド,JP,CZ,2025-06-06,2026-10-21,502,nee,nee,nee
 C09DA03,ロサルタンカリウム・ヒドロクロロチアジド,JP,BE,2025-06-06,2026-10-30,511,nee,nee,nee
 C09DA03,ロサルタンカリウム・ヒドロクロロチアジド,JP,AT,2025-06-06,2026-11-09,521,nee,nee,nee
 C09DA03,ロサルタンカリウム・ヒドロクロロチアジド,JP,SE,2025-06-06,2026-11-25,537,nee,nee,nee
 C09DA03,IDROCLOROTIAZIDE + VALSARTAN,IT,BA,2025-07-14,2026-02-17,218,nee,nee,nee
-C09DA03,IDROCLOROTIAZIDE + VALSARTAN,IT,ES,2025-07-14,2026-05-29,319,nee,nee,nee
+C09DA03,IDROCLOROTIAZIDE + VALSARTAN,IT,ES,2025-07-14,2026-08-24,406,nee,nee,nee
 C09DA03,IDROCLOROTIAZIDE + VALSARTAN,IT,FI,2025-07-14,2026-09-22,435,nee,nee,nee
 C09DA03,IDROCLOROTIAZIDE + VALSARTAN,IT,CZ,2025-07-14,2026-10-21,464,nee,nee,nee
 C09DA03,IDROCLOROTIAZIDE + VALSARTAN,IT,BE,2025-07-14,2026-10-30,473,nee,nee,nee
 C09DA03,IDROCLOROTIAZIDE + VALSARTAN,IT,AT,2025-07-14,2026-11-09,483,nee,nee,nee
 C09DA03,IDROCLOROTIAZIDE + VALSARTAN,IT,SE,2025-07-14,2026-11-25,499,nee,nee,nee
-C09DA03,"hidrohlorotiazid, valsartan",BA,ES,2026-02-17,2026-05-29,101,nee,nee,nee
+C09DA03,"hidrohlorotiazid, valsartan",BA,ES,2026-02-17,2026-08-24,188,nee,nee,nee
 C09DA03,"hidrohlorotiazid, valsartan",BA,FI,2026-02-17,2026-09-22,217,nee,nee,nee
 C09DA03,"hidrohlorotiazid, valsartan",BA,CZ,2026-02-17,2026-10-21,246,nee,nee,nee
 C09DA03,"hidrohlorotiazid, valsartan",BA,BE,2026-02-17,2026-10-30,255,nee,nee,nee
 C09DA03,"hidrohlorotiazid, valsartan",BA,AT,2026-02-17,2026-11-09,265,nee,nee,nee
 C09DA03,"hidrohlorotiazid, valsartan",BA,SE,2026-02-17,2026-11-25,281,nee,nee,nee
-C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,FI,2026-05-29,2026-09-22,116,ja,nee,nee
-C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,CZ,2026-05-29,2026-10-21,145,nee,nee,nee
-C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,BE,2026-05-29,2026-10-30,154,ja,nee,nee
-C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,AT,2026-05-29,2026-11-09,164,ja,nee,nee
-C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,SE,2026-05-29,2026-11-25,180,nee,nee,nee
+C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,FI,2026-08-24,2026-09-22,29,ja,nee,nee
+C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,CZ,2026-08-24,2026-10-21,58,nee,nee,nee
+C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,BE,2026-08-24,2026-10-30,67,ja,nee,nee
+C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,AT,2026-08-24,2026-11-09,77,ja,nee,nee
+C09DA03,"VALSARTAN, HIDROCLOROTIAZIDA",ES,SE,2026-08-24,2026-11-25,93,nee,nee,nee
 C09DA03,IDROCLOROTIAZIDE + VALSARTAN,FI,CZ,2026-09-22,2026-10-21,29,nee,nee,nee
 C09DA03,IDROCLOROTIAZIDE + VALSARTAN,FI,BE,2026-09-22,2026-10-30,38,ja,ja,nee
 C09DA03,IDROCLOROTIAZIDE + VALSARTAN,FI,AT,2026-09-22,2026-11-09,48,ja,ja,nee
@@ -7793,7 +7757,7 @@ C09DA06,CANDESARTAN CILEXETIL + HYDROCHLOROTHIAZIDE,CZ,FI,2026-10-01,2026-11-30,
 C09DA06,CANDESARTAN CILEXETIL + HYDROCHLOROTHIAZIDE,CZ,SE,2026-10-01,2027-01-25,116,nee,nee,nee
 C09DA06,"Candesartan Cilexetil, Hydrochlorothiazide",BE,FI,2026-11-10,2026-11-30,20,ja,ja,nee
 C09DA06,"Candesartan Cilexetil, Hydrochlorothiazide",BE,SE,2026-11-10,2027-01-25,76,nee,nee,nee
-C09DA06,CANDESARTAN CILEXETIL + HYDROCHLOROTHIAZIDE,FI,SE,2026-11-30,2027-01-25,56,nee,nee,nee
+C09DA06,"CANDESARTAN CILEXETILO, HIDROCLOROTIAZIDA",FI,SE,2026-11-30,2027-01-25,56,nee,nee,nee
 C09DA07,Telmisartan a diuretiká,SK,IT,2019-04-30,2023-06-26,1518,nee,nee,ja
 C09DA07,Telmisartan a diuretiká,SK,JP,2019-04-30,2025-11-25,2401,nee,nee,ja
 C09DA07,Telmisartan a diuretiká,SK,ES,2019-04-30,2026-03-18,2514,ja,nee,ja
@@ -8252,7 +8216,7 @@ C10AA07,Rosuvastatinum,LV,SK,2018-12-28,2020-05-01,490,ja,ja,ja
 C10AA07,Rosuvastatinum,LV,DE,2018-12-28,2023-03-06,1529,ja,ja,ja
 C10AA07,Rosuvastatinum,LV,IT,2018-12-28,2023-04-30,1584,nee,nee,ja
 C10AA07,Rosuvastatinum,LV,HU,2018-12-28,2023-12-21,1819,ja,ja,ja
-C10AA07,Rosuvastatinum,LV,JP,2018-12-28,2024-10-29,2132,nee,nee,ja
+C10AA07,Rosuvastatinum,LV,JP,2018-12-28,2025-03-11,2265,nee,nee,ja
 C10AA07,Rosuvastatinum,LV,RO,2018-12-28,2025-08-19,2426,nee,nee,ja
 C10AA07,Rosuvastatinum,LV,BE,2018-12-28,2025-11-26,2525,ja,ja,ja
 C10AA07,Rosuvastatinum,LV,GR,2018-12-28,2025-12-12,2541,ja,ja,ja
@@ -8267,7 +8231,7 @@ C10AA07,Rosuvastatinum,LV,FI,2018-12-28,2026-11-26,2890,ja,ja,ja
 C10AA07,Rosuvastatín,SK,DE,2020-05-01,2023-03-06,1039,ja,ja,ja
 C10AA07,Rosuvastatín,SK,IT,2020-05-01,2023-04-30,1094,nee,nee,ja
 C10AA07,Rosuvastatín,SK,HU,2020-05-01,2023-12-21,1329,ja,ja,ja
-C10AA07,Rosuvastatín,SK,JP,2020-05-01,2024-10-29,1642,nee,nee,ja
+C10AA07,Rosuvastatín,SK,JP,2020-05-01,2025-03-11,1775,nee,nee,ja
 C10AA07,Rosuvastatín,SK,RO,2020-05-01,2025-08-19,1936,nee,nee,ja
 C10AA07,Rosuvastatín,SK,BE,2020-05-01,2025-11-26,2035,ja,ja,ja
 C10AA07,Rosuvastatín,SK,GR,2020-05-01,2025-12-12,2051,ja,ja,ja
@@ -8281,7 +8245,7 @@ C10AA07,Rosuvastatín,SK,AT,2020-05-01,2026-11-16,2390,ja,ja,ja
 C10AA07,Rosuvastatín,SK,FI,2020-05-01,2026-11-26,2400,ja,ja,ja
 C10AA07,Rosuvastatin-Hemicalcium,DE,IT,2023-03-06,2023-04-30,55,nee,nee,ja
 C10AA07,Rosuvastatin-Hemicalcium,DE,HU,2023-03-06,2023-12-21,290,ja,ja,ja
-C10AA07,Rosuvastatin-Hemicalcium,DE,JP,2023-03-06,2024-10-29,603,nee,nee,ja
+C10AA07,Rosuvastatin-Hemicalcium,DE,JP,2023-03-06,2025-03-11,736,nee,nee,ja
 C10AA07,Rosuvastatin-Hemicalcium,DE,RO,2023-03-06,2025-08-19,897,nee,nee,ja
 C10AA07,Rosuvastatin-Hemicalcium,DE,BE,2023-03-06,2025-11-26,996,ja,ja,ja
 C10AA07,Rosuvastatin-Hemicalcium,DE,GR,2023-03-06,2025-12-12,1012,ja,ja,ja
@@ -8294,7 +8258,7 @@ C10AA07,Rosuvastatin-Hemicalcium,DE,AU,2023-03-06,2026-09-22,1296,nee,nee,ja
 C10AA07,Rosuvastatin-Hemicalcium,DE,AT,2023-03-06,2026-11-16,1351,ja,ja,ja
 C10AA07,Rosuvastatin-Hemicalcium,DE,FI,2023-03-06,2026-11-26,1361,ja,ja,ja
 C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,HU,2023-04-30,2023-12-21,235,nee,nee,ja
-C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,JP,2023-04-30,2024-10-29,548,nee,nee,ja
+C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,JP,2023-04-30,2025-03-11,681,nee,nee,ja
 C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,RO,2023-04-30,2025-08-19,842,nee,nee,ja
 C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,BE,2023-04-30,2025-11-26,941,nee,nee,ja
 C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,GR,2023-04-30,2025-12-12,957,nee,nee,ja
@@ -8306,7 +8270,7 @@ C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,ES,2023-04-30,2026-05-26,1122,nee,nee,ja
 C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,AU,2023-04-30,2026-09-22,1241,nee,nee,ja
 C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,AT,2023-04-30,2026-11-16,1296,nee,nee,ja
 C10AA07,ROSUVASTATINA SALE DI CALCIO,IT,FI,2023-04-30,2026-11-26,1306,nee,nee,ja
-C10AA07,rosuvastatin,HU,JP,2023-12-21,2024-10-29,313,nee,nee,ja
+C10AA07,rosuvastatin,HU,JP,2023-12-21,2025-03-11,446,nee,nee,ja
 C10AA07,rosuvastatin,HU,RO,2023-12-21,2025-08-19,607,nee,nee,ja
 C10AA07,rosuvastatin,HU,BE,2023-12-21,2025-11-26,706,ja,ja,ja
 C10AA07,rosuvastatin,HU,GR,2023-12-21,2025-12-12,722,ja,ja,ja
@@ -8318,17 +8282,17 @@ C10AA07,rosuvastatin,HU,ES,2023-12-21,2026-05-26,887,ja,nee,ja
 C10AA07,rosuvastatin,HU,AU,2023-12-21,2026-09-22,1006,nee,nee,ja
 C10AA07,rosuvastatin,HU,AT,2023-12-21,2026-11-16,1061,ja,ja,ja
 C10AA07,rosuvastatin,HU,FI,2023-12-21,2026-11-26,1071,ja,ja,ja
-C10AA07,ロスバスタチンカルシウム,JP,RO,2024-10-29,2025-08-19,294,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,BE,2024-10-29,2025-11-26,393,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,GR,2024-10-29,2025-12-12,409,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,IE,2024-10-29,2026-01-09,437,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,BA,2024-10-29,2026-02-17,476,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,NO,2024-10-29,2026-02-19,478,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,SE,2024-10-29,2026-05-22,570,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,ES,2024-10-29,2026-05-26,574,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,AU,2024-10-29,2026-09-22,693,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,AT,2024-10-29,2026-11-16,748,nee,nee,ja
-C10AA07,ロスバスタチンカルシウム,JP,FI,2024-10-29,2026-11-26,758,nee,nee,ja
+C10AA07,ロスバスタチンカルシウム,JP,RO,2025-03-11,2025-08-19,161,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,BE,2025-03-11,2025-11-26,260,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,GR,2025-03-11,2025-12-12,276,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,IE,2025-03-11,2026-01-09,304,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,BA,2025-03-11,2026-02-17,343,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,NO,2025-03-11,2026-02-19,345,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,SE,2025-03-11,2026-05-22,437,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,ES,2025-03-11,2026-05-26,441,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,AU,2025-03-11,2026-09-22,560,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,AT,2025-03-11,2026-11-16,615,nee,nee,nee
+C10AA07,ロスバスタチンカルシウム,JP,FI,2025-03-11,2026-11-26,625,nee,nee,nee
 C10AA07,ROSUVASTATINUM,RO,BE,2025-08-19,2025-11-26,99,nee,nee,nee
 C10AA07,ROSUVASTATINUM,RO,GR,2025-08-19,2025-12-12,115,nee,nee,nee
 C10AA07,ROSUVASTATINUM,RO,IE,2025-08-19,2026-01-09,143,nee,nee,nee
@@ -8540,18 +8504,13 @@ C10AX14,ALIROCUMAB,AT,SE,2026-11-10,2026-11-18,8,nee,nee,nee
 C10AX15,bempedoinsyre,NO,FR,2026-07-14,2026-07-24,10,nee,ja,nee
 C10AX15,bempedoinsyre,NO,CZ,2026-07-14,2026-09-03,51,nee,nee,nee
 C10AX15,bempedoinsyre,NO,IS,2026-07-14,2026-09-15,63,ja,nee,nee
-C10AX15,bempedoinsyre,NO,BE,2026-07-14,2026-10-26,104,ja,ja,nee
 C10AX15,bempedoinsyre,NO,IT,2026-07-14,2026-11-27,136,nee,nee,nee
 C10AX15,bempédoïque (acide),FR,CZ,2026-07-24,2026-09-03,41,nee,nee,nee
 C10AX15,bempédoïque (acide),FR,IS,2026-07-24,2026-09-15,53,nee,nee,nee
-C10AX15,bempédoïque (acide),FR,BE,2026-07-24,2026-10-26,94,nee,ja,nee
 C10AX15,bempédoïque (acide),FR,IT,2026-07-24,2026-11-27,126,nee,nee,nee
 C10AX15,BEMPEDOIC ACID,CZ,IS,2026-09-03,2026-09-15,12,nee,nee,nee
-C10AX15,BEMPEDOIC ACID,CZ,BE,2026-09-03,2026-10-26,53,nee,nee,nee
 C10AX15,BEMPEDOIC ACID,CZ,IT,2026-09-03,2026-11-27,85,nee,nee,nee
-C10AX15,Acidum bempedoicum INN,IS,BE,2026-09-15,2026-10-26,41,ja,nee,nee
 C10AX15,Acidum bempedoicum INN,IS,IT,2026-09-15,2026-11-27,73,nee,nee,nee
-C10AX15,Bempedoic Acid,BE,IT,2026-10-26,2026-11-27,32,nee,nee,nee
 C10AX16,Inclisiranum,LV,SK,2023-09-01,2024-01-31,152,ja,ja,ja
 C10AX16,Inclisiranum,LV,IS,2023-09-01,2025-12-04,825,ja,nee,ja
 C10AX16,Inklisiran,SK,IS,2024-01-31,2025-12-04,673,ja,nee,ja
@@ -8776,7 +8735,6 @@ D01AC20,isoconazole;diflucortolone,HU,SE,2020-03-10,2026-08-28,2362,nee,nee,ja
 D01AC20,"Miconazolum INN nítrat, Hydrocortisonum INN",IS,NO,2024-09-09,2025-11-17,434,ja,nee,ja
 D01AC20,"Miconazolum INN nítrat, Hydrocortisonum INN",IS,SE,2024-09-09,2026-08-28,718,nee,nee,ja
 D01AC20,"hydrokortison, mikonazolnitrat",NO,SE,2025-11-17,2026-08-28,284,nee,nee,nee
-D01AC60,bifonazole;urea,HU,SK,2023-09-01,2026-11-02,1158,ja,ja,ja
 D01AE14,Ciklopirox,SK,ES,2020-04-30,2026-08-24,2307,ja,nee,ja
 D01AE14,Ciklopirox,SK,CZ,2020-04-30,2026-10-20,2364,nee,nee,ja
 D01AE14,CICLOPIROX OLAMINA,ES,CZ,2026-08-24,2026-10-20,57,nee,nee,nee
@@ -8800,22 +8758,22 @@ D01AE16,amorolfine,HU,IE,2014-04-18,2026-03-05,4339,nee,nee,ja
 D01AE16,amorolfine,HU,JP,2014-04-18,2026-06-01,4427,nee,nee,ja
 D01AE16,amorolfine,HU,EE,2014-04-18,2026-06-29,4455,ja,ja,ja
 D01AE16,amorolfine,HU,IT,2014-04-18,2026-07-24,4480,nee,nee,ja
-D01AE16,amorolfine,HU,LV,2014-04-18,2026-09-29,4547,ja,ja,ja
+D01AE16,amorolfine,HU,LV,2014-04-18,2026-11-26,4605,ja,ja,ja
 D01AE16,Amorolfinum INN hýdróklóríð,IS,IE,2025-11-13,2026-03-05,112,nee,nee,nee
 D01AE16,Amorolfinum INN hýdróklóríð,IS,JP,2025-11-13,2026-06-01,200,nee,nee,nee
 D01AE16,Amorolfinum INN hýdróklóríð,IS,EE,2025-11-13,2026-06-29,228,ja,nee,nee
 D01AE16,Amorolfinum INN hýdróklóríð,IS,IT,2025-11-13,2026-07-24,253,nee,nee,nee
-D01AE16,Amorolfinum INN hýdróklóríð,IS,LV,2025-11-13,2026-09-29,320,ja,nee,nee
+D01AE16,Amorolfinum INN hýdróklóríð,IS,LV,2025-11-13,2026-11-26,378,ja,nee,nee
 D01AE16,Amorolfine hydrochloride,IE,JP,2026-03-05,2026-06-01,88,nee,nee,nee
 D01AE16,Amorolfine hydrochloride,IE,EE,2026-03-05,2026-06-29,116,nee,nee,nee
 D01AE16,Amorolfine hydrochloride,IE,IT,2026-03-05,2026-07-24,141,nee,nee,nee
-D01AE16,Amorolfine hydrochloride,IE,LV,2026-03-05,2026-09-29,208,nee,nee,nee
+D01AE16,Amorolfine hydrochloride,IE,LV,2026-03-05,2026-11-26,266,nee,nee,nee
 D01AE16,アモロルフィン塩酸塩,JP,EE,2026-06-01,2026-06-29,28,nee,nee,nee
 D01AE16,アモロルフィン塩酸塩,JP,IT,2026-06-01,2026-07-24,53,nee,nee,nee
-D01AE16,アモロルフィン塩酸塩,JP,LV,2026-06-01,2026-09-29,120,nee,nee,nee
+D01AE16,アモロルフィン塩酸塩,JP,LV,2026-06-01,2026-11-26,178,nee,nee,nee
 D01AE16,Amorolfine,EE,IT,2026-06-29,2026-07-24,25,nee,nee,nee
-D01AE16,Amorolfine,EE,LV,2026-06-29,2026-09-29,92,ja,ja,nee
-D01AE16,AMOROLFINA CLORIDRATO,IT,LV,2026-07-24,2026-09-29,67,nee,nee,nee
+D01AE16,Amorolfine,EE,LV,2026-06-29,2026-11-26,150,ja,ja,nee
+D01AE16,AMOROLFINA CLORIDRATO,IT,LV,2026-07-24,2026-11-26,125,nee,nee,nee
 D01BA02,Terbinafinum,LV,SK,2017-10-02,2023-11-16,2236,ja,ja,ja
 D01BA02,Terbinafinum,LV,EE,2017-10-02,2024-01-24,2305,ja,ja,ja
 D01BA02,Terbinafinum,LV,HU,2017-10-02,2025-04-30,2767,ja,ja,ja
@@ -8885,6 +8843,7 @@ D01BA02,テルビナフィン塩酸塩,FI,BA,2026-11-19,2026-12-31,42,nee,nee,ne
 D02AE01,Močovina,SK,JP,2022-12-07,2024-12-06,730,nee,nee,ja
 D02AE01,Močovina,SK,NO,2022-12-07,2026-01-26,1146,ja,ja,ja
 D02AE01,尿素,JP,NO,2024-12-06,2026-01-26,416,nee,nee,ja
+D02AE51,"Močovina, kombinácie",SK,SE,2021-05-10,2026-11-24,2024,nee,nee,ja
 D03AX03,DEXPANTHENOL,AT,JP,2023-03-06,2025-06-11,828,nee,nee,ja
 D03AX03,DEXPANTHENOL,AT,FI,2023-03-06,2026-10-13,1317,ja,ja,ja
 D03AX03,パンテノール,JP,FI,2025-06-11,2026-10-13,489,nee,nee,nee
@@ -8954,7 +8913,10 @@ D06AX04,Neomycin sulphate,MY,GR,2026-07-01,2026-09-23,84,nee,nee,nee
 D06AX09,Mupirocinum INN,IS,DK,2025-08-13,2026-01-15,155,nee,nee,nee
 D06BA01,"Sulfadiazín, strieborná soľ",SK,GR,2021-09-20,2026-09-30,1836,ja,ja,ja
 D06BA01,"Sulfadiazín, strieborná soľ",SK,NZ,2021-09-20,2026-10-08,1844,nee,nee,ja
+D06BA01,"Sulfadiazín, strieborná soľ",SK,ES,2021-09-20,2026-11-25,1892,ja,nee,ja
 D06BA01,SULFADIAZINE SILVER,GR,NZ,2026-09-30,2026-10-08,8,nee,nee,nee
+D06BA01,SULFADIAZINE SILVER,GR,ES,2026-09-30,2026-11-25,56,ja,nee,nee
+D06BA01,Sulfadiazine silver 1%,NZ,ES,2026-10-08,2026-11-25,48,nee,nee,nee
 D06BB03,Aciklovir,SK,IT,2023-02-18,2025-10-25,980,nee,nee,ja
 D06BB03,Aciklovir,SK,DE,2023-02-18,2026-02-16,1094,ja,ja,ja
 D06BB03,Aciklovir,SK,IE,2023-02-18,2026-05-13,1180,nee,nee,ja
@@ -9007,23 +8969,29 @@ D06BX01,METRONIDAZOLE,GR,NO,2024-05-13,2026-04-30,717,ja,ja,ja
 D06BX01,METRONIDAZOLE,GR,IS,2024-05-13,2026-11-03,904,ja,nee,ja
 D06BX01,metronidazol,NO,IS,2026-04-30,2026-11-03,187,ja,nee,nee
 D07AA02,Hydrocortisonum INN,IS,NO,2024-04-15,2025-11-18,582,ja,nee,ja
-D07AA02,Hydrocortisonum INN,IS,FI,2024-04-15,2026-12-09,968,ja,nee,ja
-D07AA02,hydrokortison,NO,FI,2025-11-18,2026-12-09,386,ja,ja,nee
+D07AA02,Hydrocortisonum INN,IS,FI,2024-04-15,2026-11-25,954,ja,nee,ja
+D07AA02,hydrokortison,NO,FI,2025-11-18,2026-11-25,372,ja,ja,nee
 D07AB02,Hydrokortizónbutyrát,SK,HU,2020-01-21,2020-03-10,49,ja,ja,ja
 D07AB02,Hydrokortizónbutyrát,SK,IS,2020-01-21,2025-05-14,1940,ja,nee,ja
 D07AB02,Hydrokortizónbutyrát,SK,DK,2020-01-21,2025-08-01,2019,nee,nee,ja
 D07AB02,Hydrokortizónbutyrát,SK,NO,2020-01-21,2025-11-20,2130,ja,ja,ja
 D07AB02,Hydrokortizónbutyrát,SK,FI,2020-01-21,2026-10-19,2463,ja,ja,ja
+D07AB02,Hydrokortizónbutyrát,SK,BE,2020-01-21,2026-11-25,2500,ja,ja,ja
 D07AB02,hydrocortisone butyrate,HU,IS,2020-03-10,2025-05-14,1891,ja,nee,ja
 D07AB02,hydrocortisone butyrate,HU,DK,2020-03-10,2025-08-01,1970,nee,nee,ja
 D07AB02,hydrocortisone butyrate,HU,NO,2020-03-10,2025-11-20,2081,ja,ja,ja
 D07AB02,hydrocortisone butyrate,HU,FI,2020-03-10,2026-10-19,2414,ja,ja,ja
+D07AB02,hydrocortisone butyrate,HU,BE,2020-03-10,2026-11-25,2451,ja,ja,ja
 D07AB02,Hydrocortisonum INN bútýrat,IS,DK,2025-05-14,2025-08-01,79,nee,nee,nee
 D07AB02,Hydrocortisonum INN bútýrat,IS,NO,2025-05-14,2025-11-20,190,ja,nee,nee
 D07AB02,Hydrocortisonum INN bútýrat,IS,FI,2025-05-14,2026-10-19,523,ja,nee,nee
+D07AB02,Hydrocortisonum INN bútýrat,IS,BE,2025-05-14,2026-11-25,560,ja,nee,nee
 D07AB02,Hydrocortisonbutyrat ATC-kode: D07AB02 Forventet periode: St,DK,NO,2025-08-01,2025-11-20,111,nee,nee,nee
 D07AB02,Hydrocortisonbutyrat ATC-kode: D07AB02 Forventet periode: St,DK,FI,2025-08-01,2026-10-19,444,nee,nee,nee
+D07AB02,Hydrocortisonbutyrat ATC-kode: D07AB02 Forventet periode: St,DK,BE,2025-08-01,2026-11-25,481,nee,nee,nee
 D07AB02,hydrokortisonbutyrat,NO,FI,2025-11-20,2026-10-19,333,ja,ja,nee
+D07AB02,hydrokortisonbutyrat,NO,BE,2025-11-20,2026-11-25,370,ja,ja,nee
+D07AB02,Hydrocortisonum INN bútýrat,FI,BE,2026-10-19,2026-11-25,37,ja,ja,nee
 D07AB08,desonid,NO,FI,2026-01-29,2026-07-16,168,ja,ja,nee
 D07AB10,アルクロメタゾンプロピオン酸エステル,JP,BA,2025-05-16,2025-07-01,46,nee,nee,nee
 D07AC01,ベタメタゾン酪酸エステルプロピオン酸エステル,JP,SK,2024-12-02,2025-03-31,119,nee,nee,ja
@@ -9152,9 +9120,13 @@ D08AC02,klorhexidindiglukonat,SE,IE,2026-04-01,2026-07-07,97,nee,nee,nee
 D08AC52,"Chlóhexidín, kombinácie",SK,IT,2024-11-26,2026-02-01,432,nee,nee,ja
 D08AC52,"Chlóhexidín, kombinácie",SK,ES,2024-11-26,2026-05-21,541,ja,nee,ja
 D08AC52,"Chlóhexidín, kombinácie",SK,SE,2024-11-26,2026-06-12,563,nee,nee,ja
+D08AC52,"Chlóhexidín, kombinácie",SK,NZ,2024-11-26,2026-10-19,692,nee,nee,ja
 D08AC52,CETRIMIDE + CLOREXIDINA GLUCONATO,IT,ES,2026-02-01,2026-05-21,109,nee,nee,nee
 D08AC52,CETRIMIDE + CLOREXIDINA GLUCONATO,IT,SE,2026-02-01,2026-06-12,131,nee,nee,nee
+D08AC52,CETRIMIDE + CLOREXIDINA GLUCONATO,IT,NZ,2026-02-01,2026-10-19,260,nee,nee,nee
 D08AC52,"CLORHEXIDINA DIGLUCONATO, ETANOL (70%)",ES,SE,2026-05-21,2026-06-12,22,nee,nee,nee
+D08AC52,"CLORHEXIDINA DIGLUCONATO, ETANOL (70%)",ES,NZ,2026-05-21,2026-10-19,151,nee,nee,nee
+D08AC52,"isopropylalkohol, klorhexidindiglukonat",SE,NZ,2026-06-12,2026-10-19,129,nee,nee,nee
 D08AF01,NITROFURAL,ES,JP,2025-09-25,2026-04-06,193,nee,nee,nee
 D08AG02,Jódovaný povidón,SK,IS,2019-06-07,2022-07-01,1120,ja,nee,ja
 D08AG02,Jódovaný povidón,SK,JP,2019-06-07,2024-03-11,1739,nee,nee,ja
@@ -10671,6 +10643,8 @@ G04BE10,Avanafil,SK,BE,2020-12-30,2026-06-25,2003,ja,ja,ja
 G04BE10,Avanafil,SK,DK,2020-12-30,2026-07-01,2009,nee,nee,ja
 G04BE10,Avanafil,BE,DK,2026-06-25,2026-07-01,6,nee,nee,nee
 G04BE30,"aviptadil, fentolaminmesilat",SE,NO,2026-12-28,2027-01-09,12,nee,nee,nee
+G04BE30,"aviptadil, fentolaminmesilat",SE,DK,2026-12-28,2027-03-15,77,nee,nee,nee
+G04BE30,"aviptadil, fentolaminmesilat",NO,DK,2027-01-09,2027-03-15,65,nee,nee,nee
 G04BX14,dapoksetinklorid,HR,IT,2018-06-11,2026-07-15,2956,nee,nee,ja
 G04BX14,dapoksetinklorid,HR,GR,2018-06-11,2026-09-30,3033,ja,ja,ja
 G04BX14,dapoksetinklorid,HR,AU,2018-06-11,2026-11-02,3066,nee,nee,ja
@@ -10945,14 +10919,14 @@ H01BA02,desmopressin acetate,AU,ES,2020-07-20,2026-02-05,2026,nee,nee,ja
 H01BA02,desmopressin acetate,AU,MY,2020-07-20,2026-02-05,2026,nee,nee,ja
 H01BA02,desmopressin acetate,AU,FI,2020-07-20,2026-05-20,2130,nee,nee,ja
 H01BA02,desmopressin acetate,AU,FR,2020-07-20,2026-05-31,2141,nee,nee,ja
-H01BA02,Desmopressinum INN acetat,US,SK,2021-03-12,2021-04-20,39,nee,nee,ja
-H01BA02,Desmopressinum INN acetat,US,IS,2021-03-12,2024-10-07,1305,nee,nee,ja
-H01BA02,Desmopressinum INN acetat,US,IT,2021-03-12,2024-10-16,1314,nee,nee,ja
-H01BA02,Desmopressinum INN acetat,US,SE,2021-03-12,2025-09-02,1635,nee,nee,ja
-H01BA02,Desmopressinum INN acetat,US,ES,2021-03-12,2026-02-05,1791,nee,nee,ja
-H01BA02,Desmopressinum INN acetat,US,MY,2021-03-12,2026-02-05,1791,nee,nee,ja
-H01BA02,Desmopressinum INN acetat,US,FI,2021-03-12,2026-05-20,1895,nee,nee,ja
-H01BA02,Desmopressinum INN acetat,US,FR,2021-03-12,2026-05-31,1906,nee,nee,ja
+H01BA02,DESMOPRESSIN ACETATE TRIHYDRATE,US,SK,2021-03-12,2021-04-20,39,nee,nee,ja
+H01BA02,DESMOPRESSIN ACETATE TRIHYDRATE,US,IS,2021-03-12,2024-10-07,1305,nee,nee,ja
+H01BA02,DESMOPRESSIN ACETATE TRIHYDRATE,US,IT,2021-03-12,2024-10-16,1314,nee,nee,ja
+H01BA02,DESMOPRESSIN ACETATE TRIHYDRATE,US,SE,2021-03-12,2025-09-02,1635,nee,nee,ja
+H01BA02,DESMOPRESSIN ACETATE TRIHYDRATE,US,ES,2021-03-12,2026-02-05,1791,nee,nee,ja
+H01BA02,DESMOPRESSIN ACETATE TRIHYDRATE,US,MY,2021-03-12,2026-02-05,1791,nee,nee,ja
+H01BA02,DESMOPRESSIN ACETATE TRIHYDRATE,US,FI,2021-03-12,2026-05-20,1895,nee,nee,ja
+H01BA02,DESMOPRESSIN ACETATE TRIHYDRATE,US,FR,2021-03-12,2026-05-31,1906,nee,nee,ja
 H01BA02,Dezmopresín,SK,IS,2021-04-20,2024-10-07,1266,ja,nee,ja
 H01BA02,Dezmopresín,SK,IT,2021-04-20,2024-10-16,1275,nee,nee,ja
 H01BA02,Dezmopresín,SK,SE,2021-04-20,2025-09-02,1596,nee,nee,ja
@@ -11394,21 +11368,28 @@ H02AB06,TRIAMCINOLONE HEXACETONIDE,US,LV,2021-05-04,2025-11-10,1651,nee,nee,ja
 H02AB06,TRIAMCINOLONE HEXACETONIDE,US,HU,2021-05-04,2025-11-13,1654,nee,nee,ja
 H02AB06,TRIAMCINOLONE HEXACETONIDE,US,SE,2021-05-04,2025-11-17,1658,nee,nee,ja
 H02AB06,TRIAMCINOLONE HEXACETONIDE,US,IS,2021-05-04,2026-07-24,1907,nee,nee,ja
+H02AB06,TRIAMCINOLONE HEXACETONIDE,US,DE,2021-05-04,2026-11-20,2026,nee,nee,ja
 H02AB06,prednisolon,NO,JP,2023-01-01,2024-10-16,654,nee,nee,ja
 H02AB06,prednisolon,NO,LV,2023-01-01,2025-11-10,1044,ja,ja,ja
 H02AB06,prednisolon,NO,HU,2023-01-01,2025-11-13,1047,ja,ja,ja
 H02AB06,prednisolon,NO,SE,2023-01-01,2025-11-17,1051,nee,nee,ja
 H02AB06,prednisolon,NO,IS,2023-01-01,2026-07-24,1300,ja,nee,ja
+H02AB06,prednisolon,NO,DE,2023-01-01,2026-11-20,1419,ja,ja,ja
 H02AB06,プレドニゾロンコハク酸エステルナトリウム,JP,LV,2024-10-16,2025-11-10,390,nee,nee,ja
 H02AB06,プレドニゾロンコハク酸エステルナトリウム,JP,HU,2024-10-16,2025-11-13,393,nee,nee,ja
 H02AB06,プレドニゾロンコハク酸エステルナトリウム,JP,SE,2024-10-16,2025-11-17,397,nee,nee,ja
 H02AB06,プレドニゾロンコハク酸エステルナトリウム,JP,IS,2024-10-16,2026-07-24,646,nee,nee,ja
+H02AB06,プレドニゾロンコハク酸エステルナトリウム,JP,DE,2024-10-16,2026-11-20,765,nee,nee,ja
 H02AB06,"Acidum salicylicum, Prednisolonum",LV,HU,2025-11-10,2025-11-13,3,ja,ja,nee
 H02AB06,"Acidum salicylicum, Prednisolonum",LV,SE,2025-11-10,2025-11-17,7,nee,nee,nee
 H02AB06,"Acidum salicylicum, Prednisolonum",LV,IS,2025-11-10,2026-07-24,256,ja,nee,nee
+H02AB06,"Acidum salicylicum, Prednisolonum",LV,DE,2025-11-10,2026-11-20,375,ja,ja,nee
 H02AB06,prednisolone,HU,SE,2025-11-13,2025-11-17,4,nee,nee,nee
 H02AB06,prednisolone,HU,IS,2025-11-13,2026-07-24,253,ja,nee,nee
+H02AB06,prednisolone,HU,DE,2025-11-13,2026-11-20,372,ja,ja,nee
 H02AB06,prednisolonnatriumsuccinat,SE,IS,2025-11-17,2026-07-24,249,nee,nee,nee
+H02AB06,prednisolonnatriumsuccinat,SE,DE,2025-11-17,2026-11-20,368,nee,nee,nee
+H02AB06,Prednisolone,IS,DE,2026-07-24,2026-11-20,119,ja,nee,nee
 H02AB07,PREDNISONUM,RO,HR,2016-11-24,2026-10-19,3616,nee,nee,ja
 H02AB07,PREDNISONUM,RO,IT,2016-11-24,2026-11-01,3629,nee,nee,ja
 H02AB07,prednizon,HR,IT,2026-10-19,2026-11-01,13,nee,nee,nee
@@ -12042,7 +12023,10 @@ J01CA04,Amoxicillinum INN tríhýdrat,IS,BE,2024-11-06,2026-07-30,631,ja,nee,ja
 J01CA04,amoxicillin trihydrate,AU,BE,2025-12-15,2026-07-30,227,nee,nee,nee
 J01CA08,PIVMECILLINA CLORIDRATO,IT,IS,2022-09-16,2024-12-17,823,nee,nee,ja
 J01CA08,PIVMECILLINA CLORIDRATO,IT,NO,2022-09-16,2025-06-30,1018,nee,nee,ja
+J01CA08,PIVMECILLINA CLORIDRATO,IT,SE,2022-09-16,2027-01-15,1582,nee,nee,ja
 J01CA08,Pivmecillinamum INN hýdróklóríð,IS,NO,2024-12-17,2025-06-30,195,ja,nee,ja
+J01CA08,Pivmecillinamum INN hýdróklóríð,IS,SE,2024-12-17,2027-01-15,759,nee,nee,ja
+J01CA08,pivmecillinamhydroklorid,NO,SE,2025-06-30,2027-01-15,564,nee,nee,nee
 J01CA11,Mecillinam ATC-kode: J01CA11 Forventet periode: Slut novembe,DK,NO,2020-11-25,2021-02-08,75,nee,nee,ja
 J01CE01,PENICILLINA G POTASSICA,IT,US,2021-05-25,2023-04-26,701,nee,nee,ja
 J01CE01,PENICILLINA G POTASSICA,IT,AU,2021-05-25,2023-07-26,792,nee,nee,ja
@@ -13035,7 +13019,7 @@ J01FA10,Azithromycin dihydrate,IE,FI,2026-07-27,2026-09-24,59,nee,nee,nee
 J01FA10,Azithromycin dihydrate,IE,HU,2026-07-27,2026-09-24,59,nee,nee,nee
 J01FA10,AZITHROMYCIN DIHYDRATE,CZ,FI,2026-08-04,2026-09-24,51,nee,nee,nee
 J01FA10,AZITHROMYCIN DIHYDRATE,CZ,HU,2026-08-04,2026-09-24,51,nee,nee,nee
-J01FA10,Azithromycinum INN mónóhýdrat,FI,HU,2026-09-24,2026-09-24,0,ja,ja,nee
+J01FA10,AZITROMICINA DIHIDRATO,FI,HU,2026-09-24,2026-09-24,0,ja,ja,nee
 J01FF01,クリンダマイシンリン酸エステル,JP,IS,2024-12-04,2025-04-22,139,nee,nee,ja
 J01FF01,クリンダマイシンリン酸エステル,JP,RO,2024-12-04,2025-07-21,229,nee,nee,ja
 J01FF01,クリンダマイシンリン酸エステル,JP,US,2024-12-04,2026-02-25,448,nee,nee,ja
@@ -14624,9 +14608,9 @@ J05AB14,valganciklovirhydroklorid,NO,FI,2026-05-01,2026-06-12,42,ja,ja,nee
 J05AB14,valganciklovirhydroklorid,NO,ES,2026-05-01,2026-07-31,91,ja,nee,nee
 J05AB14,valganciklovirhydroklorid,NO,AT,2026-05-01,2026-08-06,97,ja,ja,nee
 J05AB14,valganciklovirhydroklorid,NO,DE,2026-05-01,2026-09-17,139,ja,ja,nee
-J05AB14,VALGANCICLOVIR HYDROCHLORID,FI,ES,2026-06-12,2026-07-31,49,ja,nee,nee
-J05AB14,VALGANCICLOVIR HYDROCHLORID,FI,AT,2026-06-12,2026-08-06,55,ja,ja,nee
-J05AB14,VALGANCICLOVIR HYDROCHLORID,FI,DE,2026-06-12,2026-09-17,97,ja,ja,nee
+J05AB14,VALGANCICLOVIR HIDROCLORURO,FI,ES,2026-06-12,2026-07-31,49,ja,nee,nee
+J05AB14,VALGANCICLOVIR HIDROCLORURO,FI,AT,2026-06-12,2026-08-06,55,ja,ja,nee
+J05AB14,VALGANCICLOVIR HIDROCLORURO,FI,DE,2026-06-12,2026-09-17,97,ja,ja,nee
 J05AB14,VALGANCICLOVIR HIDROCLORURO,ES,AT,2026-07-31,2026-08-06,6,ja,nee,nee
 J05AB14,VALGANCICLOVIR HIDROCLORURO,ES,DE,2026-07-31,2026-09-17,48,ja,nee,nee
 J05AB14,VALGANCICLOVIR HYDROCHLORID,AT,DE,2026-08-06,2026-09-17,42,ja,ja,nee
@@ -15588,7 +15572,7 @@ J07BK03,Recombinant varicella zoster virus surface glycoprotein E,IS,IT,2026-06-
 J07BM02,vakcina (virális),HU,SI,2020-03-01,2020-07-31,152,ja,ja,ja
 J07BM02,vakcina (virális),HU,SK,2020-03-01,2024-03-12,1472,ja,ja,ja
 J07BM02,"vaccina papilomaviris humanis stirpis 16, 18",SI,SK,2020-07-31,2024-03-12,1320,ja,ja,ja
-J07BN01,COVID-19 mRNA vaccine (nucleoside modified),LV,SK,2025-06-20,2025-08-15,56,ja,ja,nee
+J07BN01,COVID-19 mRNA vaccine (nucleoside modified),LV,SK,2025-08-14,2025-08-15,1,ja,ja,nee
 J07BP01,"Chikungunya Virus, Strain delta5nsP3, Live, Attenuated",BE,DK,2026-02-01,2026-12-25,327,nee,nee,nee
 J07BP01,"Chikungunya Virus, Strain delta5nsP3, Live, Attenuated",BE,NO,2026-02-01,2026-12-31,333,ja,ja,nee
 J07BP01,"Chikungunya virus, levende svækket ATC-kode: J07BP01 Forvent",DK,NO,2026-12-25,2026-12-31,6,nee,nee,nee
@@ -17245,6 +17229,7 @@ L01CD02,docetaxel,HU,SK,2013-11-18,2026-06-22,4599,ja,ja,ja
 L01CD02,docetaxel,HU,GR,2013-11-18,2026-07-27,4634,ja,ja,ja
 L01CD02,docetaxel,HU,RO,2013-11-18,2026-07-28,4635,nee,nee,ja
 L01CD02,docetaxel,HU,ES,2013-11-18,2026-08-17,4655,ja,nee,ja
+L01CD02,docetaxel,HU,HR,2013-11-18,2026-11-25,4755,ja,ja,ja
 L01CD02,Docetaxelum,LV,SI,2017-03-09,2024-07-31,2701,ja,ja,ja
 L01CD02,Docetaxelum,LV,JP,2017-03-09,2025-01-28,2882,nee,nee,ja
 L01CD02,Docetaxelum,LV,IS,2017-03-09,2025-09-13,3110,ja,nee,ja
@@ -17258,6 +17243,7 @@ L01CD02,Docetaxelum,LV,SK,2017-03-09,2026-06-22,3392,ja,ja,ja
 L01CD02,Docetaxelum,LV,GR,2017-03-09,2026-07-27,3427,ja,ja,ja
 L01CD02,Docetaxelum,LV,RO,2017-03-09,2026-07-28,3428,nee,nee,ja
 L01CD02,Docetaxelum,LV,ES,2017-03-09,2026-08-17,3448,ja,nee,ja
+L01CD02,Docetaxelum,LV,HR,2017-03-09,2026-11-25,3548,ja,ja,ja
 L01CD02,docetaxelum,SI,JP,2024-07-31,2025-01-28,181,nee,nee,ja
 L01CD02,docetaxelum,SI,IS,2024-07-31,2025-09-13,409,ja,nee,ja
 L01CD02,docetaxelum,SI,IT,2024-07-31,2025-10-03,429,nee,nee,ja
@@ -17270,6 +17256,7 @@ L01CD02,docetaxelum,SI,SK,2024-07-31,2026-06-22,691,ja,ja,ja
 L01CD02,docetaxelum,SI,GR,2024-07-31,2026-07-27,726,ja,ja,ja
 L01CD02,docetaxelum,SI,RO,2024-07-31,2026-07-28,727,nee,nee,ja
 L01CD02,docetaxelum,SI,ES,2024-07-31,2026-08-17,747,ja,nee,ja
+L01CD02,docetaxelum,SI,HR,2024-07-31,2026-11-25,847,ja,ja,ja
 L01CD02,ドセタキセル,JP,IS,2025-01-28,2025-09-13,228,nee,nee,nee
 L01CD02,ドセタキセル,JP,IT,2025-01-28,2025-10-03,248,nee,nee,nee
 L01CD02,ドセタキセル,JP,US,2025-01-28,2026-02-20,388,nee,nee,nee
@@ -17281,6 +17268,7 @@ L01CD02,ドセタキセル,JP,SK,2025-01-28,2026-06-22,510,nee,nee,nee
 L01CD02,ドセタキセル,JP,GR,2025-01-28,2026-07-27,545,nee,nee,nee
 L01CD02,ドセタキセル,JP,RO,2025-01-28,2026-07-28,546,nee,nee,nee
 L01CD02,ドセタキセル,JP,ES,2025-01-28,2026-08-17,566,nee,nee,nee
+L01CD02,ドセタキセル,JP,HR,2025-01-28,2026-11-25,666,nee,nee,nee
 L01CD02,Docetaxelum INN,IS,IT,2025-09-13,2025-10-03,20,nee,nee,nee
 L01CD02,Docetaxelum INN,IS,US,2025-09-13,2026-02-20,160,nee,nee,nee
 L01CD02,Docetaxelum INN,IS,SE,2025-09-13,2026-03-15,183,nee,nee,nee
@@ -17291,6 +17279,7 @@ L01CD02,Docetaxelum INN,IS,SK,2025-09-13,2026-06-22,282,ja,nee,nee
 L01CD02,Docetaxelum INN,IS,GR,2025-09-13,2026-07-27,317,ja,nee,nee
 L01CD02,Docetaxelum INN,IS,RO,2025-09-13,2026-07-28,318,nee,nee,nee
 L01CD02,Docetaxelum INN,IS,ES,2025-09-13,2026-08-17,338,ja,nee,nee
+L01CD02,Docetaxelum INN,IS,HR,2025-09-13,2026-11-25,438,ja,nee,nee
 L01CD02,DOCETAXEL,IT,US,2025-10-03,2026-02-20,140,nee,nee,nee
 L01CD02,DOCETAXEL,IT,SE,2025-10-03,2026-03-15,163,nee,nee,nee
 L01CD02,DOCETAXEL,IT,BE,2025-10-03,2026-05-22,231,nee,nee,nee
@@ -17300,6 +17289,7 @@ L01CD02,DOCETAXEL,IT,SK,2025-10-03,2026-06-22,262,nee,nee,nee
 L01CD02,DOCETAXEL,IT,GR,2025-10-03,2026-07-27,297,nee,nee,nee
 L01CD02,DOCETAXEL,IT,RO,2025-10-03,2026-07-28,298,nee,nee,nee
 L01CD02,DOCETAXEL,IT,ES,2025-10-03,2026-08-17,318,nee,nee,nee
+L01CD02,DOCETAXEL,IT,HR,2025-10-03,2026-11-25,418,nee,nee,nee
 L01CD02,DOCETAXEL,US,SE,2026-02-20,2026-03-15,23,nee,nee,nee
 L01CD02,DOCETAXEL,US,BE,2026-02-20,2026-05-22,91,nee,nee,nee
 L01CD02,DOCETAXEL,US,FI,2026-02-20,2026-05-25,94,nee,nee,nee
@@ -17308,6 +17298,7 @@ L01CD02,DOCETAXEL,US,SK,2026-02-20,2026-06-22,122,nee,nee,nee
 L01CD02,DOCETAXEL,US,GR,2026-02-20,2026-07-27,157,nee,nee,nee
 L01CD02,DOCETAXEL,US,RO,2026-02-20,2026-07-28,158,nee,nee,nee
 L01CD02,DOCETAXEL,US,ES,2026-02-20,2026-08-17,178,nee,nee,nee
+L01CD02,DOCETAXEL,US,HR,2026-02-20,2026-11-25,278,nee,nee,nee
 L01CD02,docetaxel (vattenfri),SE,BE,2026-03-15,2026-05-22,68,nee,nee,nee
 L01CD02,docetaxel (vattenfri),SE,FI,2026-03-15,2026-05-25,71,nee,nee,nee
 L01CD02,docetaxel (vattenfri),SE,AU,2026-03-15,2026-06-08,85,nee,nee,nee
@@ -17315,27 +17306,35 @@ L01CD02,docetaxel (vattenfri),SE,SK,2026-03-15,2026-06-22,99,nee,nee,nee
 L01CD02,docetaxel (vattenfri),SE,GR,2026-03-15,2026-07-27,134,nee,nee,nee
 L01CD02,docetaxel (vattenfri),SE,RO,2026-03-15,2026-07-28,135,nee,nee,nee
 L01CD02,docetaxel (vattenfri),SE,ES,2026-03-15,2026-08-17,155,nee,nee,nee
+L01CD02,docetaxel (vattenfri),SE,HR,2026-03-15,2026-11-25,255,nee,nee,nee
 L01CD02,Docetaxel,BE,FI,2026-05-22,2026-05-25,3,ja,ja,nee
 L01CD02,Docetaxel,BE,AU,2026-05-22,2026-06-08,17,nee,nee,nee
 L01CD02,Docetaxel,BE,SK,2026-05-22,2026-06-22,31,ja,ja,nee
 L01CD02,Docetaxel,BE,GR,2026-05-22,2026-07-27,66,ja,ja,nee
 L01CD02,Docetaxel,BE,RO,2026-05-22,2026-07-28,67,nee,nee,nee
 L01CD02,Docetaxel,BE,ES,2026-05-22,2026-08-17,87,ja,nee,nee
+L01CD02,Docetaxel,BE,HR,2026-05-22,2026-11-25,187,ja,ja,nee
 L01CD02,DOCETAXEL,FI,AU,2026-05-25,2026-06-08,14,nee,nee,nee
 L01CD02,DOCETAXEL,FI,SK,2026-05-25,2026-06-22,28,ja,ja,nee
 L01CD02,DOCETAXEL,FI,GR,2026-05-25,2026-07-27,63,ja,ja,nee
 L01CD02,DOCETAXEL,FI,RO,2026-05-25,2026-07-28,64,nee,nee,nee
 L01CD02,DOCETAXEL,FI,ES,2026-05-25,2026-08-17,84,ja,nee,nee
+L01CD02,DOCETAXEL,FI,HR,2026-05-25,2026-11-25,184,ja,ja,nee
 L01CD02,docetaxel,AU,SK,2026-06-08,2026-06-22,14,nee,nee,nee
 L01CD02,docetaxel,AU,GR,2026-06-08,2026-07-27,49,nee,nee,nee
 L01CD02,docetaxel,AU,RO,2026-06-08,2026-07-28,50,nee,nee,nee
 L01CD02,docetaxel,AU,ES,2026-06-08,2026-08-17,70,nee,nee,nee
+L01CD02,docetaxel,AU,HR,2026-06-08,2026-11-25,170,nee,nee,nee
 L01CD02,Docetaxel,SK,GR,2026-06-22,2026-07-27,35,ja,ja,nee
 L01CD02,Docetaxel,SK,RO,2026-06-22,2026-07-28,36,nee,nee,nee
 L01CD02,Docetaxel,SK,ES,2026-06-22,2026-08-17,56,ja,nee,nee
+L01CD02,Docetaxel,SK,HR,2026-06-22,2026-11-25,156,ja,ja,nee
 L01CD02,DOCETAXEL,GR,RO,2026-07-27,2026-07-28,1,nee,nee,nee
 L01CD02,DOCETAXEL,GR,ES,2026-07-27,2026-08-17,21,ja,nee,nee
+L01CD02,DOCETAXEL,GR,HR,2026-07-27,2026-11-25,121,ja,ja,nee
 L01CD02,DOCETAXELUM,RO,ES,2026-07-28,2026-08-17,20,nee,nee,nee
+L01CD02,DOCETAXELUM,RO,HR,2026-07-28,2026-11-25,120,nee,nee,nee
+L01CD02,DOCETAXEL,ES,HR,2026-08-17,2026-11-25,100,ja,nee,nee
 L01CD04,Kabazitaxel,SK,NO,2023-01-26,2024-01-09,348,ja,ja,ja
 L01CD04,Kabazitaxel,SK,SI,2023-01-26,2024-04-30,460,ja,ja,ja
 L01CD04,Kabazitaxel,SK,HR,2023-01-26,2025-02-04,740,ja,ja,ja
@@ -17906,23 +17905,17 @@ L01EA04,BOSUTINIB DIHYDRAT,AT,IE,2026-07-20,2026-11-30,133,nee,nee,nee
 L01EB01,Gefitinibum,LV,HR,2019-09-01,2022-01-18,870,ja,ja,ja
 L01EB01,Gefitinibum,LV,JP,2019-09-01,2023-11-06,1527,nee,nee,ja
 L01EB01,Gefitinibum,LV,RO,2019-09-01,2024-07-24,1788,nee,nee,ja
-L01EB01,Gefitinibum,LV,MY,2019-09-01,2025-12-01,2283,nee,nee,ja
 L01EB01,Gefitinibum,LV,IT,2019-09-01,2026-03-20,2392,nee,nee,ja
 L01EB01,Gefitinibum,LV,AU,2019-09-01,2026-04-01,2404,nee,nee,ja
 L01EB01,gefitinib,HR,JP,2022-01-18,2023-11-06,657,nee,nee,ja
 L01EB01,gefitinib,HR,RO,2022-01-18,2024-07-24,918,nee,nee,ja
-L01EB01,gefitinib,HR,MY,2022-01-18,2025-12-01,1413,nee,nee,ja
 L01EB01,gefitinib,HR,IT,2022-01-18,2026-03-20,1522,nee,nee,ja
 L01EB01,gefitinib,HR,AU,2022-01-18,2026-04-01,1534,nee,nee,ja
 L01EB01,ゲフィチニブ,JP,RO,2023-11-06,2024-07-24,261,nee,nee,ja
-L01EB01,ゲフィチニブ,JP,MY,2023-11-06,2025-12-01,756,nee,nee,ja
 L01EB01,ゲフィチニブ,JP,IT,2023-11-06,2026-03-20,865,nee,nee,ja
 L01EB01,ゲフィチニブ,JP,AU,2023-11-06,2026-04-01,877,nee,nee,ja
-L01EB01,GEFITINIBUM,RO,MY,2024-07-24,2025-12-01,495,nee,nee,ja
 L01EB01,GEFITINIBUM,RO,IT,2024-07-24,2026-03-20,604,nee,nee,ja
 L01EB01,GEFITINIBUM,RO,AU,2024-07-24,2026-04-01,616,nee,nee,ja
-L01EB01,Gefitinib,MY,IT,2025-12-01,2026-03-20,109,nee,nee,nee
-L01EB01,Gefitinib,MY,AU,2025-12-01,2026-04-01,121,nee,nee,nee
 L01EB01,GEFITINIB,IT,AU,2026-03-20,2026-04-01,12,nee,nee,nee
 L01EB02,Erlotinibum,LV,BE,2016-06-01,2022-02-14,2084,ja,ja,ja
 L01EB02,Erlotinibum,LV,HU,2016-06-01,2023-07-23,2608,ja,ja,ja
@@ -17968,7 +17961,7 @@ L01EB02,erlotinibhydroklorid,NO,ES,2026-02-01,2026-11-13,285,ja,nee,nee
 L01EB02,erlotinibhydroklorid,NO,IT,2026-02-01,2027-01-01,334,nee,nee,nee
 L01EB02,Erlotinib hydrochloride,IE,ES,2026-11-02,2026-11-13,11,nee,nee,nee
 L01EB02,Erlotinib hydrochloride,IE,IT,2026-11-02,2027-01-01,60,nee,nee,nee
-L01EB02,ERLOTINIB HIDROCLORURO,ES,IT,2026-11-13,2027-01-01,49,nee,nee,nee
+L01EB02,ERLOTINIB,ES,IT,2026-11-13,2027-01-01,49,nee,nee,nee
 L01EB07,Dakomitinib,SK,US,2023-10-31,2026-06-08,951,nee,nee,ja
 L01EC02,Dabrafenibum,LV,IS,2020-03-06,2024-10-11,1680,ja,nee,ja
 L01EC02,Dabrafenibum,LV,NO,2020-03-06,2026-03-26,2211,ja,ja,ja
@@ -18243,7 +18236,7 @@ L01EX09,NINTEDANIB,IT,FI,2026-09-17,2026-10-30,43,nee,nee,nee
 L01EX09,NINTEDANIB,IT,SE,2026-09-17,2026-11-20,64,nee,nee,nee
 L01EX09,NINTEDANIBUM,RO,FI,2026-09-28,2026-10-30,32,nee,nee,nee
 L01EX09,NINTEDANIBUM,RO,SE,2026-09-28,2026-11-20,53,nee,nee,nee
-L01EX09,Nintedanibum INN,FI,SE,2026-10-30,2026-11-20,21,nee,nee,nee
+L01EX09,NINTEDANIB ESILATO,FI,SE,2026-10-30,2026-11-20,21,nee,nee,nee
 L01EX22,Selperkatinib,SK,HU,2022-08-31,2026-04-30,1338,ja,ja,ja
 L01EX22,Selperkatinib,SK,JP,2022-08-31,2026-06-25,1394,nee,nee,ja
 L01EX22,Selperkatinib,SK,IT,2022-08-31,2026-06-30,1399,nee,nee,ja
@@ -18281,7 +18274,7 @@ L01FA01,RITUXIMAB,IT,FI,2025-11-26,2026-10-09,317,nee,nee,nee
 L01FA01,RITUXIMAB,IT,IS,2025-11-26,2026-11-20,359,nee,nee,nee
 L01FA01,Rituximab,EE,FI,2026-10-09,2026-10-09,0,ja,ja,nee
 L01FA01,Rituximab,EE,IS,2026-10-09,2026-11-20,42,ja,nee,nee
-L01FA01,Rituximab,FI,IS,2026-10-09,2026-11-20,42,ja,nee,nee
+L01FA01,RITUXIMAB,FI,IS,2026-10-09,2026-11-20,42,ja,nee,nee
 L01FC01,Daratumumab,SK,IT,2026-08-04,2027-06-30,330,nee,nee,nee
 L01FD01,Trastuzumab,SK,HU,2022-03-25,2022-08-31,159,ja,ja,ja
 L01FD01,Trastuzumab,SK,SI,2022-03-25,2024-01-19,665,ja,ja,ja
@@ -19292,6 +19285,7 @@ L03AA02,filgrastim,HU,JP,2017-10-06,2026-06-12,3171,nee,nee,ja
 L03AA02,filgrastim,HU,IT,2017-10-06,2026-08-27,3247,nee,nee,ja
 L03AA02,filgrastim,HU,BE,2017-10-06,2026-08-28,3248,ja,ja,ja
 L03AA02,filgrastim,HU,ES,2017-10-06,2026-10-21,3302,ja,nee,ja
+L03AA02,filgrastim,HU,DE,2017-10-06,2026-11-24,3336,ja,ja,ja
 L03AA02,filgrastim,HU,FI,2017-10-06,2026-11-27,3339,ja,ja,ja
 L03AA02,filgrastim,HU,SE,2017-10-06,2026-12-17,3359,nee,nee,ja
 L03AA02,Filgrastim,SK,LV,2019-10-09,2025-12-01,2245,ja,ja,ja
@@ -19301,6 +19295,7 @@ L03AA02,Filgrastim,SK,JP,2019-10-09,2026-06-12,2438,nee,nee,ja
 L03AA02,Filgrastim,SK,IT,2019-10-09,2026-08-27,2514,nee,nee,ja
 L03AA02,Filgrastim,SK,BE,2019-10-09,2026-08-28,2515,ja,ja,ja
 L03AA02,Filgrastim,SK,ES,2019-10-09,2026-10-21,2569,ja,nee,ja
+L03AA02,Filgrastim,SK,DE,2019-10-09,2026-11-24,2603,ja,ja,ja
 L03AA02,Filgrastim,SK,FI,2019-10-09,2026-11-27,2606,ja,ja,ja
 L03AA02,Filgrastim,SK,SE,2019-10-09,2026-12-17,2626,nee,nee,ja
 L03AA02,Filgrastimum,LV,IS,2025-12-01,2026-03-31,120,ja,nee,nee
@@ -19309,6 +19304,7 @@ L03AA02,Filgrastimum,LV,JP,2025-12-01,2026-06-12,193,nee,nee,nee
 L03AA02,Filgrastimum,LV,IT,2025-12-01,2026-08-27,269,nee,nee,nee
 L03AA02,Filgrastimum,LV,BE,2025-12-01,2026-08-28,270,ja,ja,nee
 L03AA02,Filgrastimum,LV,ES,2025-12-01,2026-10-21,324,ja,nee,nee
+L03AA02,Filgrastimum,LV,DE,2025-12-01,2026-11-24,358,ja,ja,nee
 L03AA02,Filgrastimum,LV,FI,2025-12-01,2026-11-27,361,ja,ja,nee
 L03AA02,Filgrastimum,LV,SE,2025-12-01,2026-12-17,381,nee,nee,nee
 L03AA02,Filgrastimum INN,IS,CZ,2026-03-31,2026-05-07,37,nee,nee,nee
@@ -19316,28 +19312,36 @@ L03AA02,Filgrastimum INN,IS,JP,2026-03-31,2026-06-12,73,nee,nee,nee
 L03AA02,Filgrastimum INN,IS,IT,2026-03-31,2026-08-27,149,nee,nee,nee
 L03AA02,Filgrastimum INN,IS,BE,2026-03-31,2026-08-28,150,ja,nee,nee
 L03AA02,Filgrastimum INN,IS,ES,2026-03-31,2026-10-21,204,ja,nee,nee
+L03AA02,Filgrastimum INN,IS,DE,2026-03-31,2026-11-24,238,ja,nee,nee
 L03AA02,Filgrastimum INN,IS,FI,2026-03-31,2026-11-27,241,ja,nee,nee
 L03AA02,Filgrastimum INN,IS,SE,2026-03-31,2026-12-17,261,nee,nee,nee
 L03AA02,FILGRASTIM,CZ,JP,2026-05-07,2026-06-12,36,nee,nee,nee
 L03AA02,FILGRASTIM,CZ,IT,2026-05-07,2026-08-27,112,nee,nee,nee
 L03AA02,FILGRASTIM,CZ,BE,2026-05-07,2026-08-28,113,nee,nee,nee
 L03AA02,FILGRASTIM,CZ,ES,2026-05-07,2026-10-21,167,nee,nee,nee
+L03AA02,FILGRASTIM,CZ,DE,2026-05-07,2026-11-24,201,nee,nee,nee
 L03AA02,FILGRASTIM,CZ,FI,2026-05-07,2026-11-27,204,nee,nee,nee
 L03AA02,FILGRASTIM,CZ,SE,2026-05-07,2026-12-17,224,nee,nee,nee
 L03AA02,フィルグラスチム（遺伝子組換え）,JP,IT,2026-06-12,2026-08-27,76,nee,nee,nee
 L03AA02,フィルグラスチム（遺伝子組換え）,JP,BE,2026-06-12,2026-08-28,77,nee,nee,nee
 L03AA02,フィルグラスチム（遺伝子組換え）,JP,ES,2026-06-12,2026-10-21,131,nee,nee,nee
+L03AA02,フィルグラスチム（遺伝子組換え）,JP,DE,2026-06-12,2026-11-24,165,nee,nee,nee
 L03AA02,フィルグラスチム（遺伝子組換え）,JP,FI,2026-06-12,2026-11-27,168,nee,nee,nee
 L03AA02,フィルグラスチム（遺伝子組換え）,JP,SE,2026-06-12,2026-12-17,188,nee,nee,nee
 L03AA02,FILGRASTIM,IT,BE,2026-08-27,2026-08-28,1,nee,nee,nee
 L03AA02,FILGRASTIM,IT,ES,2026-08-27,2026-10-21,55,nee,nee,nee
+L03AA02,FILGRASTIM,IT,DE,2026-08-27,2026-11-24,89,nee,nee,nee
 L03AA02,FILGRASTIM,IT,FI,2026-08-27,2026-11-27,92,nee,nee,nee
 L03AA02,FILGRASTIM,IT,SE,2026-08-27,2026-12-17,112,nee,nee,nee
 L03AA02,Filgrastim,BE,ES,2026-08-28,2026-10-21,54,ja,nee,nee
+L03AA02,Filgrastim,BE,DE,2026-08-28,2026-11-24,88,ja,ja,nee
 L03AA02,Filgrastim,BE,FI,2026-08-28,2026-11-27,91,ja,ja,nee
 L03AA02,Filgrastim,BE,SE,2026-08-28,2026-12-17,111,nee,nee,nee
+L03AA02,FILGRASTIM,ES,DE,2026-10-21,2026-11-24,34,ja,nee,nee
 L03AA02,FILGRASTIM,ES,FI,2026-10-21,2026-11-27,37,ja,nee,nee
 L03AA02,FILGRASTIM,ES,SE,2026-10-21,2026-12-17,57,nee,nee,nee
+L03AA02,Filgrastim,DE,FI,2026-11-24,2026-11-27,3,ja,ja,nee
+L03AA02,Filgrastim,DE,SE,2026-11-24,2026-12-17,23,nee,nee,nee
 L03AA02,FILGRASTIM,FI,SE,2026-11-27,2026-12-17,20,nee,nee,nee
 L03AA13,Pegfilgrastimum,LV,SK,2021-07-01,2023-04-30,668,ja,ja,ja
 L03AA13,Pegfilgrastimum,LV,HU,2021-07-01,2024-01-03,916,ja,ja,ja
@@ -19557,27 +19561,35 @@ L04AA06,Kyselina mykofenolová,SK,SE,2019-10-18,2026-04-13,2369,nee,nee,ja
 L04AA06,Kyselina mykofenolová,SK,IT,2019-10-18,2026-04-24,2380,nee,nee,ja
 L04AA06,Kyselina mykofenolová,SK,AU,2019-10-18,2026-08-17,2495,nee,nee,ja
 L04AA06,Kyselina mykofenolová,SK,IE,2019-10-18,2026-11-02,2572,nee,nee,ja
+L04AA06,Kyselina mykofenolová,SK,US,2019-10-18,2026-11-24,2594,nee,nee,ja
 L04AA06,mykofenolatmofetilhydroklorid,NO,IS,2022-02-14,2024-08-01,899,ja,nee,ja
 L04AA06,mykofenolatmofetilhydroklorid,NO,ES,2022-02-14,2026-03-23,1498,ja,nee,ja
 L04AA06,mykofenolatmofetilhydroklorid,NO,SE,2022-02-14,2026-04-13,1519,nee,nee,ja
 L04AA06,mykofenolatmofetilhydroklorid,NO,IT,2022-02-14,2026-04-24,1530,nee,nee,ja
 L04AA06,mykofenolatmofetilhydroklorid,NO,AU,2022-02-14,2026-08-17,1645,nee,nee,ja
 L04AA06,mykofenolatmofetilhydroklorid,NO,IE,2022-02-14,2026-11-02,1722,nee,nee,ja
+L04AA06,mykofenolatmofetilhydroklorid,NO,US,2022-02-14,2026-11-24,1744,nee,nee,ja
 L04AA06,Mycophenolatum INN natríum,IS,ES,2024-08-01,2026-03-23,599,ja,nee,ja
 L04AA06,Mycophenolatum INN natríum,IS,SE,2024-08-01,2026-04-13,620,nee,nee,ja
 L04AA06,Mycophenolatum INN natríum,IS,IT,2024-08-01,2026-04-24,631,nee,nee,ja
 L04AA06,Mycophenolatum INN natríum,IS,AU,2024-08-01,2026-08-17,746,nee,nee,ja
 L04AA06,Mycophenolatum INN natríum,IS,IE,2024-08-01,2026-11-02,823,nee,nee,ja
+L04AA06,Mycophenolatum INN natríum,IS,US,2024-08-01,2026-11-24,845,nee,nee,ja
 L04AA06,MICOFENOLATO DE MOFETILO,ES,SE,2026-03-23,2026-04-13,21,nee,nee,nee
 L04AA06,MICOFENOLATO DE MOFETILO,ES,IT,2026-03-23,2026-04-24,32,nee,nee,nee
 L04AA06,MICOFENOLATO DE MOFETILO,ES,AU,2026-03-23,2026-08-17,147,nee,nee,nee
 L04AA06,MICOFENOLATO DE MOFETILO,ES,IE,2026-03-23,2026-11-02,224,nee,nee,nee
+L04AA06,MICOFENOLATO DE MOFETILO,ES,US,2026-03-23,2026-11-24,246,nee,nee,nee
 L04AA06,mykofenolatmofetil,SE,IT,2026-04-13,2026-04-24,11,nee,nee,nee
 L04AA06,mykofenolatmofetil,SE,AU,2026-04-13,2026-08-17,126,nee,nee,nee
 L04AA06,mykofenolatmofetil,SE,IE,2026-04-13,2026-11-02,203,nee,nee,nee
+L04AA06,mykofenolatmofetil,SE,US,2026-04-13,2026-11-24,225,nee,nee,nee
 L04AA06,ACIDO MICOFENOLICO,IT,AU,2026-04-24,2026-08-17,115,nee,nee,nee
 L04AA06,ACIDO MICOFENOLICO,IT,IE,2026-04-24,2026-11-02,192,nee,nee,nee
+L04AA06,ACIDO MICOFENOLICO,IT,US,2026-04-24,2026-11-24,214,nee,nee,nee
 L04AA06,mycophenolate mofetil,AU,IE,2026-08-17,2026-11-02,77,nee,nee,nee
+L04AA06,mycophenolate mofetil,AU,US,2026-08-17,2026-11-24,99,nee,nee,nee
+L04AA06,Mycophenolate mofetil,IE,US,2026-11-02,2026-11-24,22,nee,nee,nee
 L04AA13,leflunomide,HU,MY,2025-05-17,2026-09-11,482,nee,nee,nee
 L04AA24,Abatacept,SK,SE,2026-11-01,2026-11-30,29,nee,nee,nee
 L04AA24,Abatacept,SK,IT,2026-11-01,2027-01-04,64,nee,nee,nee
@@ -19597,6 +19609,7 @@ L04AA32,APREMILAST,IT,GR,2026-06-05,2027-01-08,217,nee,nee,nee
 L04AA32,Apremilast,SK,AT,2026-08-24,2026-09-01,8,ja,ja,nee
 L04AA32,Apremilast,SK,GR,2026-08-24,2027-01-08,137,ja,ja,nee
 L04AA32,APREMILAST,AT,GR,2026-09-01,2027-01-08,129,ja,ja,nee
+L04AA40,Cladribinum INN,IS,FI,2025-08-31,2026-11-25,451,ja,nee,nee
 L04AB01,Etanerceptum,LV,SK,2017-04-12,2022-08-01,1937,ja,ja,ja
 L04AB01,Etanerceptum,LV,JP,2017-04-12,2023-05-12,2221,nee,nee,ja
 L04AB01,Etanerceptum,LV,HU,2017-04-12,2023-11-28,2421,ja,ja,ja
@@ -20150,18 +20163,18 @@ L04AE01,FINGOLIMOD HIDROCLORURO,ES,HU,2024-04-01,2026-07-01,821,ja,nee,ja
 L04AE01,FINGOLIMOD HIDROCLORURO,ES,AT,2024-04-01,2026-08-13,864,ja,nee,ja
 L04AE01,FINGOLIMOD HIDROCLORURO,ES,LV,2024-04-01,2026-08-14,865,ja,nee,ja
 L04AE01,FINGOLIMOD HIDROCLORURO,ES,EE,2024-04-01,2026-10-21,933,ja,nee,ja
-L04AE01,fingolimodhydroklorid,FI,NO,2024-05-31,2025-04-01,305,ja,ja,ja
-L04AE01,fingolimodhydroklorid,FI,RO,2024-05-31,2025-06-30,395,nee,nee,ja
-L04AE01,fingolimodhydroklorid,FI,IS,2024-05-31,2025-10-09,496,ja,nee,ja
-L04AE01,fingolimodhydroklorid,FI,AU,2024-05-31,2025-11-14,532,nee,nee,ja
-L04AE01,fingolimodhydroklorid,FI,IE,2024-05-31,2025-12-19,567,nee,nee,ja
-L04AE01,fingolimodhydroklorid,FI,SK,2024-05-31,2025-12-29,577,ja,ja,ja
-L04AE01,fingolimodhydroklorid,FI,DE,2024-05-31,2026-06-01,731,ja,ja,ja
-L04AE01,fingolimodhydroklorid,FI,IT,2024-05-31,2026-06-05,735,nee,nee,ja
-L04AE01,fingolimodhydroklorid,FI,HU,2024-05-31,2026-07-01,761,ja,ja,ja
-L04AE01,fingolimodhydroklorid,FI,AT,2024-05-31,2026-08-13,804,ja,ja,ja
-L04AE01,fingolimodhydroklorid,FI,LV,2024-05-31,2026-08-14,805,ja,ja,ja
-L04AE01,fingolimodhydroklorid,FI,EE,2024-05-31,2026-10-21,873,ja,ja,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,NO,2024-05-31,2025-04-01,305,ja,ja,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,RO,2024-05-31,2025-06-30,395,nee,nee,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,IS,2024-05-31,2025-10-09,496,ja,nee,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,AU,2024-05-31,2025-11-14,532,nee,nee,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,IE,2024-05-31,2025-12-19,567,nee,nee,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,SK,2024-05-31,2025-12-29,577,ja,ja,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,DE,2024-05-31,2026-06-01,731,ja,ja,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,IT,2024-05-31,2026-06-05,735,nee,nee,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,HU,2024-05-31,2026-07-01,761,ja,ja,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,AT,2024-05-31,2026-08-13,804,ja,ja,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,LV,2024-05-31,2026-08-14,805,ja,ja,ja
+L04AE01,FINGOLIMOD HIDROCLORURO,FI,EE,2024-05-31,2026-10-21,873,ja,ja,ja
 L04AE01,fingolimodhydroklorid,NO,RO,2025-04-01,2025-06-30,90,nee,nee,nee
 L04AE01,fingolimodhydroklorid,NO,IS,2025-04-01,2025-10-09,191,ja,nee,nee
 L04AE01,fingolimodhydroklorid,NO,AU,2025-04-01,2025-11-14,227,nee,nee,nee
@@ -20834,8 +20847,8 @@ M01AE01,ibuprofen,HU,IS,2016-11-11,2024-08-13,2832,ja,nee,ja
 M01AE01,ibuprofen,HU,ES,2016-11-11,2025-11-07,3283,ja,nee,ja
 M01AE01,ibuprofen,HU,NO,2016-11-11,2025-11-10,3286,ja,ja,ja
 M01AE01,ibuprofen,HU,BA,2016-11-11,2026-02-04,3372,nee,nee,ja
-M01AE01,ibuprofen,HU,AT,2016-11-11,2026-07-13,3531,ja,ja,ja
 M01AE01,ibuprofen,HU,SE,2016-11-11,2026-07-15,3533,nee,nee,ja
+M01AE01,ibuprofen,HU,AT,2016-11-11,2026-10-12,3622,ja,ja,ja
 M01AE01,ibuprofen,HU,BE,2016-11-11,2026-11-02,3643,ja,ja,ja
 M01AE01,Ibuprofenum,LV,RO,2019-01-09,2020-07-16,554,nee,nee,ja
 M01AE01,Ibuprofenum,LV,SK,2019-01-09,2021-03-30,811,ja,ja,ja
@@ -20846,8 +20859,8 @@ M01AE01,Ibuprofenum,LV,IS,2019-01-09,2024-08-13,2043,ja,nee,ja
 M01AE01,Ibuprofenum,LV,ES,2019-01-09,2025-11-07,2494,ja,nee,ja
 M01AE01,Ibuprofenum,LV,NO,2019-01-09,2025-11-10,2497,ja,ja,ja
 M01AE01,Ibuprofenum,LV,BA,2019-01-09,2026-02-04,2583,nee,nee,ja
-M01AE01,Ibuprofenum,LV,AT,2019-01-09,2026-07-13,2742,ja,ja,ja
 M01AE01,Ibuprofenum,LV,SE,2019-01-09,2026-07-15,2744,nee,nee,ja
+M01AE01,Ibuprofenum,LV,AT,2019-01-09,2026-10-12,2833,ja,ja,ja
 M01AE01,Ibuprofenum,LV,BE,2019-01-09,2026-11-02,2854,ja,ja,ja
 M01AE01,IBUPROFENUM,RO,SK,2020-07-16,2021-03-30,257,nee,nee,ja
 M01AE01,IBUPROFENUM,RO,IT,2020-07-16,2022-05-09,662,nee,nee,ja
@@ -20857,8 +20870,8 @@ M01AE01,IBUPROFENUM,RO,IS,2020-07-16,2024-08-13,1489,nee,nee,ja
 M01AE01,IBUPROFENUM,RO,ES,2020-07-16,2025-11-07,1940,nee,nee,ja
 M01AE01,IBUPROFENUM,RO,NO,2020-07-16,2025-11-10,1943,nee,nee,ja
 M01AE01,IBUPROFENUM,RO,BA,2020-07-16,2026-02-04,2029,nee,nee,ja
-M01AE01,IBUPROFENUM,RO,AT,2020-07-16,2026-07-13,2188,nee,nee,ja
 M01AE01,IBUPROFENUM,RO,SE,2020-07-16,2026-07-15,2190,nee,nee,ja
+M01AE01,IBUPROFENUM,RO,AT,2020-07-16,2026-10-12,2279,nee,nee,ja
 M01AE01,IBUPROFENUM,RO,BE,2020-07-16,2026-11-02,2300,nee,nee,ja
 M01AE01,Ibuprofén,SK,IT,2021-03-30,2022-05-09,405,nee,nee,ja
 M01AE01,Ibuprofén,SK,JP,2021-03-30,2024-01-11,1017,nee,nee,ja
@@ -20867,8 +20880,8 @@ M01AE01,Ibuprofén,SK,IS,2021-03-30,2024-08-13,1232,ja,nee,ja
 M01AE01,Ibuprofén,SK,ES,2021-03-30,2025-11-07,1683,ja,nee,ja
 M01AE01,Ibuprofén,SK,NO,2021-03-30,2025-11-10,1686,ja,ja,ja
 M01AE01,Ibuprofén,SK,BA,2021-03-30,2026-02-04,1772,nee,nee,ja
-M01AE01,Ibuprofén,SK,AT,2021-03-30,2026-07-13,1931,ja,ja,ja
 M01AE01,Ibuprofén,SK,SE,2021-03-30,2026-07-15,1933,nee,nee,ja
+M01AE01,Ibuprofén,SK,AT,2021-03-30,2026-10-12,2022,ja,ja,ja
 M01AE01,Ibuprofén,SK,BE,2021-03-30,2026-11-02,2043,ja,ja,ja
 M01AE01,IBUPROFENE,IT,JP,2022-05-09,2024-01-11,612,nee,nee,ja
 M01AE01,IBUPROFENE,IT,SI,2022-05-09,2024-08-07,821,nee,nee,ja
@@ -20876,45 +20889,45 @@ M01AE01,IBUPROFENE,IT,IS,2022-05-09,2024-08-13,827,nee,nee,ja
 M01AE01,IBUPROFENE,IT,ES,2022-05-09,2025-11-07,1278,nee,nee,ja
 M01AE01,IBUPROFENE,IT,NO,2022-05-09,2025-11-10,1281,nee,nee,ja
 M01AE01,IBUPROFENE,IT,BA,2022-05-09,2026-02-04,1367,nee,nee,ja
-M01AE01,IBUPROFENE,IT,AT,2022-05-09,2026-07-13,1526,nee,nee,ja
 M01AE01,IBUPROFENE,IT,SE,2022-05-09,2026-07-15,1528,nee,nee,ja
+M01AE01,IBUPROFENE,IT,AT,2022-05-09,2026-10-12,1617,nee,nee,ja
 M01AE01,IBUPROFENE,IT,BE,2022-05-09,2026-11-02,1638,nee,nee,ja
 M01AE01,イブプロフェン,JP,SI,2024-01-11,2024-08-07,209,nee,nee,ja
 M01AE01,イブプロフェン,JP,IS,2024-01-11,2024-08-13,215,nee,nee,ja
 M01AE01,イブプロフェン,JP,ES,2024-01-11,2025-11-07,666,nee,nee,ja
 M01AE01,イブプロフェン,JP,NO,2024-01-11,2025-11-10,669,nee,nee,ja
 M01AE01,イブプロフェン,JP,BA,2024-01-11,2026-02-04,755,nee,nee,ja
-M01AE01,イブプロフェン,JP,AT,2024-01-11,2026-07-13,914,nee,nee,ja
 M01AE01,イブプロフェン,JP,SE,2024-01-11,2026-07-15,916,nee,nee,ja
+M01AE01,イブプロフェン,JP,AT,2024-01-11,2026-10-12,1005,nee,nee,ja
 M01AE01,イブプロフェン,JP,BE,2024-01-11,2026-11-02,1026,nee,nee,ja
 M01AE01,ibuprofenum,SI,IS,2024-08-07,2024-08-13,6,ja,nee,ja
 M01AE01,ibuprofenum,SI,ES,2024-08-07,2025-11-07,457,ja,nee,ja
 M01AE01,ibuprofenum,SI,NO,2024-08-07,2025-11-10,460,ja,ja,ja
 M01AE01,ibuprofenum,SI,BA,2024-08-07,2026-02-04,546,nee,nee,ja
-M01AE01,ibuprofenum,SI,AT,2024-08-07,2026-07-13,705,ja,ja,ja
 M01AE01,ibuprofenum,SI,SE,2024-08-07,2026-07-15,707,nee,nee,ja
+M01AE01,ibuprofenum,SI,AT,2024-08-07,2026-10-12,796,ja,ja,ja
 M01AE01,ibuprofenum,SI,BE,2024-08-07,2026-11-02,817,ja,ja,ja
 M01AE01,Ibuprofenum INN,IS,ES,2024-08-13,2025-11-07,451,ja,nee,ja
 M01AE01,Ibuprofenum INN,IS,NO,2024-08-13,2025-11-10,454,ja,nee,ja
 M01AE01,Ibuprofenum INN,IS,BA,2024-08-13,2026-02-04,540,nee,nee,ja
-M01AE01,Ibuprofenum INN,IS,AT,2024-08-13,2026-07-13,699,ja,nee,ja
 M01AE01,Ibuprofenum INN,IS,SE,2024-08-13,2026-07-15,701,nee,nee,ja
+M01AE01,Ibuprofenum INN,IS,AT,2024-08-13,2026-10-12,790,ja,nee,ja
 M01AE01,Ibuprofenum INN,IS,BE,2024-08-13,2026-11-02,811,ja,nee,ja
 M01AE01,IBUPROFENO,ES,NO,2025-11-07,2025-11-10,3,ja,nee,nee
 M01AE01,IBUPROFENO,ES,BA,2025-11-07,2026-02-04,89,nee,nee,nee
-M01AE01,IBUPROFENO,ES,AT,2025-11-07,2026-07-13,248,ja,nee,nee
 M01AE01,IBUPROFENO,ES,SE,2025-11-07,2026-07-15,250,nee,nee,nee
+M01AE01,IBUPROFENO,ES,AT,2025-11-07,2026-10-12,339,ja,nee,nee
 M01AE01,IBUPROFENO,ES,BE,2025-11-07,2026-11-02,360,ja,nee,nee
 M01AE01,ibuprofen,NO,BA,2025-11-10,2026-02-04,86,nee,nee,nee
-M01AE01,ibuprofen,NO,AT,2025-11-10,2026-07-13,245,ja,ja,nee
 M01AE01,ibuprofen,NO,SE,2025-11-10,2026-07-15,247,nee,nee,nee
+M01AE01,ibuprofen,NO,AT,2025-11-10,2026-10-12,336,ja,ja,nee
 M01AE01,ibuprofen,NO,BE,2025-11-10,2026-11-02,357,ja,ja,nee
-M01AE01,ibuprofen,BA,AT,2026-02-04,2026-07-13,159,nee,nee,nee
 M01AE01,ibuprofen,BA,SE,2026-02-04,2026-07-15,161,nee,nee,nee
+M01AE01,ibuprofen,BA,AT,2026-02-04,2026-10-12,250,nee,nee,nee
 M01AE01,ibuprofen,BA,BE,2026-02-04,2026-11-02,271,nee,nee,nee
-M01AE01,IBUPROFEN LYSIN,AT,SE,2026-07-13,2026-07-15,2,nee,nee,nee
-M01AE01,IBUPROFEN LYSIN,AT,BE,2026-07-13,2026-11-02,112,ja,ja,nee
+M01AE01,ibuprofen,SE,AT,2026-07-15,2026-10-12,89,nee,nee,nee
 M01AE01,ibuprofen,SE,BE,2026-07-15,2026-11-02,110,nee,nee,nee
+M01AE01,IBUPROFEN LYSIN,AT,BE,2026-10-12,2026-11-02,21,ja,ja,nee
 M01AE02,naproxen,HU,LV,2013-10-01,2019-12-30,2281,ja,ja,ja
 M01AE02,naproxen,HU,SK,2013-10-01,2020-03-02,2344,ja,ja,ja
 M01AE02,naproxen,HU,DK,2013-10-01,2024-02-01,3775,nee,nee,ja
@@ -21303,7 +21316,7 @@ M03AC06,Pipecuronii bromidum,LV,HU,2021-06-30,2026-02-10,1686,ja,ja,ja
 M03AC09,ROCURONIUM BROMIDE,US,SK,2023-02-15,2024-03-01,380,nee,nee,ja
 M03AC09,ROCURONIUM BROMIDE,US,HU,2023-02-15,2024-06-01,472,nee,nee,ja
 M03AC09,ROCURONIUM BROMIDE,US,SI,2023-02-15,2025-04-10,785,nee,nee,ja
-M03AC09,ROCURONIUM BROMIDE,US,HR,2023-02-15,2025-05-15,820,nee,nee,ja
+M03AC09,ROCURONIUM BROMIDE,US,HR,2023-02-15,2025-05-20,825,nee,nee,ja
 M03AC09,ROCURONIUM BROMIDE,US,NO,2023-02-15,2025-12-05,1024,nee,nee,ja
 M03AC09,ROCURONIUM BROMIDE,US,RO,2023-02-15,2025-12-22,1041,nee,nee,ja
 M03AC09,ROCURONIUM BROMIDE,US,IT,2023-02-15,2026-05-08,1178,nee,nee,ja
@@ -21314,7 +21327,7 @@ M03AC09,ROCURONIUM BROMIDE,US,ES,2023-02-15,2026-11-16,1370,nee,nee,ja
 M03AC09,ROCURONIUM BROMIDE,US,SE,2023-02-15,2026-11-18,1372,nee,nee,ja
 M03AC09,Rokuróniumbromid,SK,HU,2024-03-01,2024-06-01,92,ja,ja,ja
 M03AC09,Rokuróniumbromid,SK,SI,2024-03-01,2025-04-10,405,ja,ja,ja
-M03AC09,Rokuróniumbromid,SK,HR,2024-03-01,2025-05-15,440,ja,ja,ja
+M03AC09,Rokuróniumbromid,SK,HR,2024-03-01,2025-05-20,445,ja,ja,ja
 M03AC09,Rokuróniumbromid,SK,NO,2024-03-01,2025-12-05,644,ja,ja,ja
 M03AC09,Rokuróniumbromid,SK,RO,2024-03-01,2025-12-22,661,nee,nee,ja
 M03AC09,Rokuróniumbromid,SK,IT,2024-03-01,2026-05-08,798,nee,nee,ja
@@ -21324,7 +21337,7 @@ M03AC09,Rokuróniumbromid,SK,BE,2024-03-01,2026-11-03,977,ja,ja,ja
 M03AC09,Rokuróniumbromid,SK,ES,2024-03-01,2026-11-16,990,ja,nee,ja
 M03AC09,Rokuróniumbromid,SK,SE,2024-03-01,2026-11-18,992,nee,nee,ja
 M03AC09,rocuronium bromide,HU,SI,2024-06-01,2025-04-10,313,ja,ja,ja
-M03AC09,rocuronium bromide,HU,HR,2024-06-01,2025-05-15,348,ja,ja,ja
+M03AC09,rocuronium bromide,HU,HR,2024-06-01,2025-05-20,353,ja,ja,ja
 M03AC09,rocuronium bromide,HU,NO,2024-06-01,2025-12-05,552,ja,ja,ja
 M03AC09,rocuronium bromide,HU,RO,2024-06-01,2025-12-22,569,nee,nee,ja
 M03AC09,rocuronium bromide,HU,IT,2024-06-01,2026-05-08,706,nee,nee,ja
@@ -21333,7 +21346,7 @@ M03AC09,rocuronium bromide,HU,MY,2024-06-01,2026-09-02,823,nee,nee,ja
 M03AC09,rocuronium bromide,HU,BE,2024-06-01,2026-11-03,885,ja,ja,ja
 M03AC09,rocuronium bromide,HU,ES,2024-06-01,2026-11-16,898,ja,nee,ja
 M03AC09,rocuronium bromide,HU,SE,2024-06-01,2026-11-18,900,nee,nee,ja
-M03AC09,rocuronii bromidum,SI,HR,2025-04-10,2025-05-15,35,ja,ja,nee
+M03AC09,rocuronii bromidum,SI,HR,2025-04-10,2025-05-20,40,ja,ja,nee
 M03AC09,rocuronii bromidum,SI,NO,2025-04-10,2025-12-05,239,ja,ja,nee
 M03AC09,rocuronii bromidum,SI,RO,2025-04-10,2025-12-22,256,nee,nee,nee
 M03AC09,rocuronii bromidum,SI,IT,2025-04-10,2026-05-08,393,nee,nee,nee
@@ -21342,14 +21355,14 @@ M03AC09,rocuronii bromidum,SI,MY,2025-04-10,2026-09-02,510,nee,nee,nee
 M03AC09,rocuronii bromidum,SI,BE,2025-04-10,2026-11-03,572,ja,ja,nee
 M03AC09,rocuronii bromidum,SI,ES,2025-04-10,2026-11-16,585,ja,nee,nee
 M03AC09,rocuronii bromidum,SI,SE,2025-04-10,2026-11-18,587,nee,nee,nee
-M03AC09,rokuronijev bromid,HR,NO,2025-05-15,2025-12-05,204,ja,ja,nee
-M03AC09,rokuronijev bromid,HR,RO,2025-05-15,2025-12-22,221,nee,nee,nee
-M03AC09,rokuronijev bromid,HR,IT,2025-05-15,2026-05-08,358,nee,nee,nee
-M03AC09,rokuronijev bromid,HR,AU,2025-05-15,2026-08-26,468,nee,nee,nee
-M03AC09,rokuronijev bromid,HR,MY,2025-05-15,2026-09-02,475,nee,nee,nee
-M03AC09,rokuronijev bromid,HR,BE,2025-05-15,2026-11-03,537,ja,ja,nee
-M03AC09,rokuronijev bromid,HR,ES,2025-05-15,2026-11-16,550,ja,nee,nee
-M03AC09,rokuronijev bromid,HR,SE,2025-05-15,2026-11-18,552,nee,nee,nee
+M03AC09,rokuronijev bromid,HR,NO,2025-05-20,2025-12-05,199,ja,ja,nee
+M03AC09,rokuronijev bromid,HR,RO,2025-05-20,2025-12-22,216,nee,nee,nee
+M03AC09,rokuronijev bromid,HR,IT,2025-05-20,2026-05-08,353,nee,nee,nee
+M03AC09,rokuronijev bromid,HR,AU,2025-05-20,2026-08-26,463,nee,nee,nee
+M03AC09,rokuronijev bromid,HR,MY,2025-05-20,2026-09-02,470,nee,nee,nee
+M03AC09,rokuronijev bromid,HR,BE,2025-05-20,2026-11-03,532,ja,ja,nee
+M03AC09,rokuronijev bromid,HR,ES,2025-05-20,2026-11-16,545,ja,nee,nee
+M03AC09,rokuronijev bromid,HR,SE,2025-05-20,2026-11-18,547,nee,nee,nee
 M03AC09,rokuroniumbromid,NO,RO,2025-12-05,2025-12-22,17,nee,nee,nee
 M03AC09,rokuroniumbromid,NO,IT,2025-12-05,2026-05-08,154,nee,nee,nee
 M03AC09,rokuroniumbromid,NO,AU,2025-12-05,2026-08-26,264,nee,nee,nee
@@ -22017,15 +22030,15 @@ N01AH02,ALFENTANIL + N.D.,IT,CZ,2024-09-13,2026-08-07,693,nee,nee,ja
 N01AH02,alfentanilhydrokloridhydrat,SE,FI,2024-11-30,2025-03-01,91,nee,nee,ja
 N01AH02,alfentanilhydrokloridhydrat,SE,CZ,2024-11-30,2026-08-07,615,nee,nee,ja
 N01AH02,ALFENTANIL HYDROCHLORID,FI,CZ,2025-03-01,2026-08-07,524,nee,nee,nee
-N01AH03,sufentanilcitrat,US,SK,2022-05-03,2024-07-15,804,nee,nee,ja
-N01AH03,sufentanilcitrat,US,SE,2022-05-03,2025-03-01,1033,nee,nee,ja
-N01AH03,sufentanilcitrat,US,FI,2022-05-03,2025-06-03,1127,nee,nee,ja
-N01AH03,sufentanilcitrat,US,AT,2022-05-03,2025-09-23,1239,nee,nee,ja
-N01AH03,sufentanilcitrat,US,DE,2022-05-03,2025-10-27,1273,nee,nee,ja
-N01AH03,sufentanilcitrat,US,HR,2022-05-03,2026-01-27,1365,nee,nee,ja
-N01AH03,sufentanilcitrat,US,HU,2022-05-03,2026-02-01,1370,nee,nee,ja
-N01AH03,sufentanilcitrat,US,DK,2022-05-03,2026-07-25,1544,nee,nee,ja
-N01AH03,sufentanilcitrat,US,NO,2022-05-03,2026-07-31,1550,nee,nee,ja
+N01AH03,SUFENTANIL CITRATE,US,SK,2022-05-03,2024-07-15,804,nee,nee,ja
+N01AH03,SUFENTANIL CITRATE,US,SE,2022-05-03,2025-03-01,1033,nee,nee,ja
+N01AH03,SUFENTANIL CITRATE,US,FI,2022-05-03,2025-06-03,1127,nee,nee,ja
+N01AH03,SUFENTANIL CITRATE,US,AT,2022-05-03,2025-09-23,1239,nee,nee,ja
+N01AH03,SUFENTANIL CITRATE,US,DE,2022-05-03,2025-10-27,1273,nee,nee,ja
+N01AH03,SUFENTANIL CITRATE,US,HR,2022-05-03,2026-01-27,1365,nee,nee,ja
+N01AH03,SUFENTANIL CITRATE,US,HU,2022-05-03,2026-02-01,1370,nee,nee,ja
+N01AH03,SUFENTANIL CITRATE,US,DK,2022-05-03,2026-07-25,1544,nee,nee,ja
+N01AH03,SUFENTANIL CITRATE,US,NO,2022-05-03,2026-07-31,1550,nee,nee,ja
 N01AH03,Sufentanil,SK,SE,2024-07-15,2025-03-01,229,nee,nee,ja
 N01AH03,Sufentanil,SK,FI,2024-07-15,2025-06-03,323,ja,ja,ja
 N01AH03,Sufentanil,SK,AT,2024-07-15,2025-09-23,435,ja,ja,ja
@@ -22443,7 +22456,6 @@ N02AA05,oxycodonum,SI,AU,2022-09-15,2025-07-01,1020,nee,nee,ja
 N02AA05,oxycodonum,SI,NO,2022-09-15,2025-10-14,1125,ja,ja,ja
 N02AA05,oxycodonum,SI,MY,2022-09-15,2026-01-22,1225,nee,nee,ja
 N02AA05,oxycodonum,SI,SK,2022-09-15,2026-09-15,1461,ja,ja,ja
-N02AA05,oxycodonum,SI,FI,2022-09-15,2026-10-01,1477,ja,ja,ja
 N02AA05,oxycodonum,SI,IT,2022-09-15,2026-12-21,1558,nee,nee,ja
 N02AA05,Oxycodonum INN hýdróklóríð,IS,JP,2024-03-01,2024-03-11,10,nee,nee,ja
 N02AA05,Oxycodonum INN hýdróklóríð,IS,SE,2024-03-01,2024-10-16,229,nee,nee,ja
@@ -22451,36 +22463,28 @@ N02AA05,Oxycodonum INN hýdróklóríð,IS,AU,2024-03-01,2025-07-01,487,nee,nee,
 N02AA05,Oxycodonum INN hýdróklóríð,IS,NO,2024-03-01,2025-10-14,592,ja,nee,ja
 N02AA05,Oxycodonum INN hýdróklóríð,IS,MY,2024-03-01,2026-01-22,692,nee,nee,ja
 N02AA05,Oxycodonum INN hýdróklóríð,IS,SK,2024-03-01,2026-09-15,928,ja,nee,ja
-N02AA05,Oxycodonum INN hýdróklóríð,IS,FI,2024-03-01,2026-10-01,944,ja,nee,ja
 N02AA05,Oxycodonum INN hýdróklóríð,IS,IT,2024-03-01,2026-12-21,1025,nee,nee,ja
 N02AA05,オキシコドン塩酸塩水和物,JP,SE,2024-03-11,2024-10-16,219,nee,nee,ja
 N02AA05,オキシコドン塩酸塩水和物,JP,AU,2024-03-11,2025-07-01,477,nee,nee,ja
 N02AA05,オキシコドン塩酸塩水和物,JP,NO,2024-03-11,2025-10-14,582,nee,nee,ja
 N02AA05,オキシコドン塩酸塩水和物,JP,MY,2024-03-11,2026-01-22,682,nee,nee,ja
 N02AA05,オキシコドン塩酸塩水和物,JP,SK,2024-03-11,2026-09-15,918,nee,nee,ja
-N02AA05,オキシコドン塩酸塩水和物,JP,FI,2024-03-11,2026-10-01,934,nee,nee,ja
 N02AA05,オキシコドン塩酸塩水和物,JP,IT,2024-03-11,2026-12-21,1015,nee,nee,ja
 N02AA05,oxikodonhydroklorid,SE,AU,2024-10-16,2025-07-01,258,nee,nee,ja
 N02AA05,oxikodonhydroklorid,SE,NO,2024-10-16,2025-10-14,363,nee,nee,ja
 N02AA05,oxikodonhydroklorid,SE,MY,2024-10-16,2026-01-22,463,nee,nee,ja
 N02AA05,oxikodonhydroklorid,SE,SK,2024-10-16,2026-09-15,699,nee,nee,ja
-N02AA05,oxikodonhydroklorid,SE,FI,2024-10-16,2026-10-01,715,nee,nee,ja
 N02AA05,oxikodonhydroklorid,SE,IT,2024-10-16,2026-12-21,796,nee,nee,ja
 N02AA05,oxycodone,AU,NO,2025-07-01,2025-10-14,105,nee,nee,nee
 N02AA05,oxycodone,AU,MY,2025-07-01,2026-01-22,205,nee,nee,nee
 N02AA05,oxycodone,AU,SK,2025-07-01,2026-09-15,441,nee,nee,nee
-N02AA05,oxycodone,AU,FI,2025-07-01,2026-10-01,457,nee,nee,nee
 N02AA05,oxycodone,AU,IT,2025-07-01,2026-12-21,538,nee,nee,nee
 N02AA05,oksykodonhydroklorid,NO,MY,2025-10-14,2026-01-22,100,nee,nee,nee
 N02AA05,oksykodonhydroklorid,NO,SK,2025-10-14,2026-09-15,336,ja,ja,nee
-N02AA05,oksykodonhydroklorid,NO,FI,2025-10-14,2026-10-01,352,ja,ja,nee
 N02AA05,oksykodonhydroklorid,NO,IT,2025-10-14,2026-12-21,433,nee,nee,nee
 N02AA05,Oxycodone Hydrochloride,MY,SK,2026-01-22,2026-09-15,236,nee,nee,nee
-N02AA05,Oxycodone Hydrochloride,MY,FI,2026-01-22,2026-10-01,252,nee,nee,nee
 N02AA05,Oxycodone Hydrochloride,MY,IT,2026-01-22,2026-12-21,333,nee,nee,nee
-N02AA05,Oxykodón,SK,FI,2026-09-15,2026-10-01,16,ja,ja,nee
 N02AA05,Oxykodón,SK,IT,2026-09-15,2026-12-21,97,nee,nee,nee
-N02AA05,Oxycodonum INN hýdróklóríð,FI,IT,2026-10-01,2026-12-21,81,nee,nee,nee
 N02AA08,Dihydrokodeín,SK,CZ,2021-04-01,2026-06-18,1904,nee,nee,ja
 N02AA08,Dihydrokodeín,SK,DE,2021-04-01,2026-07-31,1947,ja,ja,ja
 N02AA08,Dihydrokodeín,SK,AT,2021-04-01,2026-08-13,1960,ja,ja,ja
@@ -22668,11 +22672,11 @@ N02AE01,BUPRENORFINA,ES,FI,2026-07-08,2026-09-09,63,ja,nee,nee
 N02AE01,BUPRENORFINA,ES,SE,2026-07-08,2026-09-30,84,nee,nee,nee
 N02AE01,buprenorfin,FI,SE,2026-09-09,2026-09-30,21,nee,nee,nee
 N02AJ06,"Paracetamolum INN, Codeine phosphate hemihydrate",IS,NO,2025-03-28,2025-12-15,262,ja,nee,nee
-N02AJ06,"Paracetamolum INN, Codeine phosphate hemihydrate",IS,FI,2025-03-28,2026-10-22,573,ja,nee,nee
+N02AJ06,"Paracetamolum INN, Codeine phosphate hemihydrate",IS,FI,2025-03-28,2026-10-30,581,ja,nee,nee
 N02AJ06,"Paracetamolum INN, Codeine phosphate hemihydrate",IS,DK,2025-03-28,2026-11-01,583,nee,nee,nee
-N02AJ06,"kodeinfosfatsesquihydrat, paracetamol",NO,FI,2025-12-15,2026-10-22,311,ja,ja,nee
+N02AJ06,"kodeinfosfatsesquihydrat, paracetamol",NO,FI,2025-12-15,2026-10-30,319,ja,ja,nee
 N02AJ06,"kodeinfosfatsesquihydrat, paracetamol",NO,DK,2025-12-15,2026-11-01,321,nee,nee,nee
-N02AJ06,"Paracetamolum INN, Codeine phosphate hemihydrate",FI,DK,2026-10-22,2026-11-01,10,nee,nee,nee
+N02AJ06,"Paracetamolum INN, Codeine phosphate hemihydrate",FI,DK,2026-10-30,2026-11-01,2,nee,nee,nee
 N02AJ13,Tramadol a paracetamol,SK,LV,2019-06-28,2019-12-30,185,ja,ja,ja
 N02AJ13,Tramadol a paracetamol,SK,HR,2019-06-28,2024-02-14,1692,ja,ja,ja
 N02AJ13,Tramadol a paracetamol,SK,RO,2019-06-28,2024-04-25,1763,nee,nee,ja
@@ -22786,11 +22790,8 @@ N02AX02,tramadol hydrochloride,AU,AT,2026-10-01,2026-10-05,4,nee,nee,nee
 N02AX02,tramadol hydrochloride,AU,BE,2026-10-01,2026-10-27,26,nee,nee,nee
 N02AX02,TRAMADOLHYDROCHLORID,AT,BE,2026-10-05,2026-10-27,22,ja,ja,nee
 N02AX06,tapentadolhydroklorid,NO,SE,2025-12-29,2026-02-19,52,nee,nee,nee
-N02AX06,tapentadolhydroklorid,NO,SK,2025-12-29,2026-08-31,245,ja,ja,nee
 N02AX06,tapentadolhydroklorid,NO,AU,2025-12-29,2026-11-05,311,nee,nee,nee
-N02AX06,tapentadolmaleathemihydrat,SE,SK,2026-02-19,2026-08-31,193,nee,nee,nee
 N02AX06,tapentadolmaleathemihydrat,SE,AU,2026-02-19,2026-11-05,259,nee,nee,nee
-N02AX06,Tapentadol,SK,AU,2026-08-31,2026-11-05,66,nee,nee,nee
 N02BA01,acetylsalicylic acid,HU,SI,2013-12-01,2020-12-02,2558,ja,ja,ja
 N02BA01,acetylsalicylic acid,HU,IT,2013-12-01,2022-09-07,3202,nee,nee,ja
 N02BA01,acetylsalicylic acid,HU,JP,2013-12-01,2023-06-01,3469,nee,nee,ja
@@ -23676,22 +23677,16 @@ N02CC07,Frovatriptan (frovatriptansuccinat monohydrate) ATC-kode: N0,US,IT,2026-
 N02CC07,Frovatriptan (frovatriptansuccinat monohydrate) ATC-kode: N0,DK,IT,2026-05-15,2026-10-01,139,nee,nee,nee
 N02CD01,Erenumabum INN,IS,RO,2024-09-01,2025-01-29,150,nee,nee,ja
 N02CD01,Erenumabum INN,IS,NO,2024-09-01,2025-11-20,445,ja,nee,ja
-N02CD01,Erenumabum INN,IS,BE,2024-09-01,2026-11-05,795,ja,nee,ja
 N02CD01,Erenumabum INN,IS,AT,2024-09-01,2026-11-09,799,ja,nee,ja
 N02CD01,Erenumabum INN,IS,SI,2024-09-01,2026-11-10,800,ja,nee,ja
 N02CD01,Erenumabum INN,IS,DK,2024-09-01,2026-11-15,805,nee,nee,ja
 N02CD01,ERENUMABUM,RO,NO,2025-01-29,2025-11-20,295,nee,nee,nee
-N02CD01,ERENUMABUM,RO,BE,2025-01-29,2026-11-05,645,nee,nee,nee
 N02CD01,ERENUMABUM,RO,AT,2025-01-29,2026-11-09,649,nee,nee,nee
 N02CD01,ERENUMABUM,RO,SI,2025-01-29,2026-11-10,650,nee,nee,nee
 N02CD01,ERENUMABUM,RO,DK,2025-01-29,2026-11-15,655,nee,nee,nee
-N02CD01,erenumab,NO,BE,2025-11-20,2026-11-05,350,ja,ja,nee
 N02CD01,erenumab,NO,AT,2025-11-20,2026-11-09,354,ja,ja,nee
 N02CD01,erenumab,NO,SI,2025-11-20,2026-11-10,355,ja,ja,nee
 N02CD01,erenumab,NO,DK,2025-11-20,2026-11-15,360,nee,nee,nee
-N02CD01,Erenumab,BE,AT,2026-11-05,2026-11-09,4,ja,ja,nee
-N02CD01,Erenumab,BE,SI,2026-11-05,2026-11-10,5,ja,ja,nee
-N02CD01,Erenumab,BE,DK,2026-11-05,2026-11-15,10,nee,nee,nee
 N02CD01,ERENUMAB,AT,SI,2026-11-09,2026-11-10,1,ja,ja,nee
 N02CD01,ERENUMAB,AT,DK,2026-11-09,2026-11-15,6,nee,nee,nee
 N02CD01,Erenumabum INN,SI,DK,2026-11-10,2026-11-15,5,nee,nee,nee
@@ -24027,7 +24022,6 @@ N03AX11,Topiramát,SK,FI,2023-03-21,2026-07-08,1205,ja,ja,ja
 N03AX11,Topiramát,SK,HU,2023-03-21,2026-07-23,1220,ja,ja,ja
 N03AX11,Topiramát,SK,ES,2023-03-21,2026-07-27,1224,ja,nee,ja
 N03AX11,Topiramát,SK,EE,2023-03-21,2026-08-20,1248,ja,ja,ja
-N03AX11,Topiramát,SK,CZ,2023-03-21,2026-09-09,1268,nee,nee,ja
 N03AX11,Topiramát,SK,MY,2023-03-21,2026-09-09,1268,nee,nee,ja
 N03AX11,Topiramát,SK,SE,2023-03-21,2026-09-30,1289,nee,nee,ja
 N03AX11,Topiramát,SK,GR,2023-03-21,2026-12-10,1360,ja,ja,ja
@@ -24038,7 +24032,6 @@ N03AX11,topiramate,AU,FI,2024-04-30,2026-07-08,799,nee,nee,ja
 N03AX11,topiramate,AU,HU,2024-04-30,2026-07-23,814,nee,nee,ja
 N03AX11,topiramate,AU,ES,2024-04-30,2026-07-27,818,nee,nee,ja
 N03AX11,topiramate,AU,EE,2024-04-30,2026-08-20,842,nee,nee,ja
-N03AX11,topiramate,AU,CZ,2024-04-30,2026-09-09,862,nee,nee,ja
 N03AX11,topiramate,AU,MY,2024-04-30,2026-09-09,862,nee,nee,ja
 N03AX11,topiramate,AU,SE,2024-04-30,2026-09-30,883,nee,nee,ja
 N03AX11,topiramate,AU,GR,2024-04-30,2026-12-10,954,nee,nee,ja
@@ -24048,7 +24041,6 @@ N03AX11,TOPIRAMATO,IT,FI,2025-07-28,2026-07-08,345,nee,nee,nee
 N03AX11,TOPIRAMATO,IT,HU,2025-07-28,2026-07-23,360,nee,nee,nee
 N03AX11,TOPIRAMATO,IT,ES,2025-07-28,2026-07-27,364,nee,nee,nee
 N03AX11,TOPIRAMATO,IT,EE,2025-07-28,2026-08-20,388,nee,nee,nee
-N03AX11,TOPIRAMATO,IT,CZ,2025-07-28,2026-09-09,408,nee,nee,nee
 N03AX11,TOPIRAMATO,IT,MY,2025-07-28,2026-09-09,408,nee,nee,nee
 N03AX11,TOPIRAMATO,IT,SE,2025-07-28,2026-09-30,429,nee,nee,nee
 N03AX11,TOPIRAMATO,IT,GR,2025-07-28,2026-12-10,500,nee,nee,nee
@@ -24057,7 +24049,6 @@ N03AX11,Topiramatum INN,IS,FI,2025-09-10,2026-07-08,301,ja,nee,nee
 N03AX11,Topiramatum INN,IS,HU,2025-09-10,2026-07-23,316,ja,nee,nee
 N03AX11,Topiramatum INN,IS,ES,2025-09-10,2026-07-27,320,ja,nee,nee
 N03AX11,Topiramatum INN,IS,EE,2025-09-10,2026-08-20,344,ja,nee,nee
-N03AX11,Topiramatum INN,IS,CZ,2025-09-10,2026-09-09,364,nee,nee,nee
 N03AX11,Topiramatum INN,IS,MY,2025-09-10,2026-09-09,364,nee,nee,nee
 N03AX11,Topiramatum INN,IS,SE,2025-09-10,2026-09-30,385,nee,nee,nee
 N03AX11,Topiramatum INN,IS,GR,2025-09-10,2026-12-10,456,ja,nee,nee
@@ -24065,35 +24056,27 @@ N03AX11,TOPIRAMAT,AT,FI,2026-04-01,2026-07-08,98,ja,ja,nee
 N03AX11,TOPIRAMAT,AT,HU,2026-04-01,2026-07-23,113,ja,ja,nee
 N03AX11,TOPIRAMAT,AT,ES,2026-04-01,2026-07-27,117,ja,nee,nee
 N03AX11,TOPIRAMAT,AT,EE,2026-04-01,2026-08-20,141,ja,ja,nee
-N03AX11,TOPIRAMAT,AT,CZ,2026-04-01,2026-09-09,161,nee,nee,nee
 N03AX11,TOPIRAMAT,AT,MY,2026-04-01,2026-09-09,161,nee,nee,nee
 N03AX11,TOPIRAMAT,AT,SE,2026-04-01,2026-09-30,182,nee,nee,nee
 N03AX11,TOPIRAMAT,AT,GR,2026-04-01,2026-12-10,253,ja,ja,nee
 N03AX11,topiramate,FI,HU,2026-07-08,2026-07-23,15,ja,ja,nee
 N03AX11,topiramate,FI,ES,2026-07-08,2026-07-27,19,ja,nee,nee
 N03AX11,topiramate,FI,EE,2026-07-08,2026-08-20,43,ja,ja,nee
-N03AX11,topiramate,FI,CZ,2026-07-08,2026-09-09,63,nee,nee,nee
 N03AX11,topiramate,FI,MY,2026-07-08,2026-09-09,63,nee,nee,nee
 N03AX11,topiramate,FI,SE,2026-07-08,2026-09-30,84,nee,nee,nee
 N03AX11,topiramate,FI,GR,2026-07-08,2026-12-10,155,ja,ja,nee
 N03AX11,topiramate,HU,ES,2026-07-23,2026-07-27,4,ja,nee,nee
 N03AX11,topiramate,HU,EE,2026-07-23,2026-08-20,28,ja,ja,nee
-N03AX11,topiramate,HU,CZ,2026-07-23,2026-09-09,48,nee,nee,nee
 N03AX11,topiramate,HU,MY,2026-07-23,2026-09-09,48,nee,nee,nee
 N03AX11,topiramate,HU,SE,2026-07-23,2026-09-30,69,nee,nee,nee
 N03AX11,topiramate,HU,GR,2026-07-23,2026-12-10,140,ja,ja,nee
 N03AX11,TOPIRAMATO,ES,EE,2026-07-27,2026-08-20,24,ja,nee,nee
-N03AX11,TOPIRAMATO,ES,CZ,2026-07-27,2026-09-09,44,nee,nee,nee
 N03AX11,TOPIRAMATO,ES,MY,2026-07-27,2026-09-09,44,nee,nee,nee
 N03AX11,TOPIRAMATO,ES,SE,2026-07-27,2026-09-30,65,nee,nee,nee
 N03AX11,TOPIRAMATO,ES,GR,2026-07-27,2026-12-10,136,ja,nee,nee
-N03AX11,Topiramate,EE,CZ,2026-08-20,2026-09-09,20,nee,nee,nee
 N03AX11,Topiramate,EE,MY,2026-08-20,2026-09-09,20,nee,nee,nee
 N03AX11,Topiramate,EE,SE,2026-08-20,2026-09-30,41,nee,nee,nee
 N03AX11,Topiramate,EE,GR,2026-08-20,2026-12-10,112,ja,ja,nee
-N03AX11,TOPIRAMATE,CZ,MY,2026-09-09,2026-09-09,0,nee,nee,nee
-N03AX11,TOPIRAMATE,CZ,SE,2026-09-09,2026-09-30,21,nee,nee,nee
-N03AX11,TOPIRAMATE,CZ,GR,2026-09-09,2026-12-10,92,nee,nee,nee
 N03AX11,TOPIRAMATE,MY,SE,2026-09-09,2026-09-30,21,nee,nee,nee
 N03AX11,TOPIRAMATE,MY,GR,2026-09-09,2026-12-10,92,nee,nee,nee
 N03AX11,topiramat,SE,GR,2026-09-30,2026-12-10,71,nee,nee,nee
@@ -24805,8 +24788,7 @@ N05AH03,Olanzapinum,LV,DE,2017-03-27,2026-04-01,3292,ja,ja,ja
 N05AH03,Olanzapinum,LV,DK,2017-03-27,2026-04-25,3316,nee,nee,ja
 N05AH03,Olanzapinum,LV,IE,2017-03-27,2026-05-15,3336,nee,nee,ja
 N05AH03,Olanzapinum,LV,SI,2017-03-27,2026-06-29,3381,ja,ja,ja
-N05AH03,Olanzapinum,LV,AT,2017-03-27,2026-08-24,3437,ja,ja,ja
-N05AH03,Olanzapinum,LV,HR,2017-03-27,2026-09-24,3468,ja,ja,ja
+N05AH03,Olanzapinum,LV,AT,2017-03-27,2026-09-14,3458,ja,ja,ja
 N05AH03,Olanzapinum,LV,BE,2017-03-27,2026-10-05,3479,ja,ja,ja
 N05AH03,Olanzapinum,LV,FR,2017-03-27,2026-11-12,3517,nee,ja,ja
 N05AH03,Olanzapín,SK,HU,2019-07-10,2019-12-12,155,ja,ja,ja
@@ -24828,8 +24810,7 @@ N05AH03,Olanzapín,SK,DE,2019-07-10,2026-04-01,2457,ja,ja,ja
 N05AH03,Olanzapín,SK,DK,2019-07-10,2026-04-25,2481,nee,nee,ja
 N05AH03,Olanzapín,SK,IE,2019-07-10,2026-05-15,2501,nee,nee,ja
 N05AH03,Olanzapín,SK,SI,2019-07-10,2026-06-29,2546,ja,ja,ja
-N05AH03,Olanzapín,SK,AT,2019-07-10,2026-08-24,2602,ja,ja,ja
-N05AH03,Olanzapín,SK,HR,2019-07-10,2026-09-24,2633,ja,ja,ja
+N05AH03,Olanzapín,SK,AT,2019-07-10,2026-09-14,2623,ja,ja,ja
 N05AH03,Olanzapín,SK,BE,2019-07-10,2026-10-05,2644,ja,ja,ja
 N05AH03,Olanzapín,SK,FR,2019-07-10,2026-11-12,2682,nee,ja,ja
 N05AH03,olanzapine,HU,IT,2019-12-12,2022-07-15,946,nee,nee,ja
@@ -24850,8 +24831,7 @@ N05AH03,olanzapine,HU,DE,2019-12-12,2026-04-01,2302,ja,ja,ja
 N05AH03,olanzapine,HU,DK,2019-12-12,2026-04-25,2326,nee,nee,ja
 N05AH03,olanzapine,HU,IE,2019-12-12,2026-05-15,2346,nee,nee,ja
 N05AH03,olanzapine,HU,SI,2019-12-12,2026-06-29,2391,ja,ja,ja
-N05AH03,olanzapine,HU,AT,2019-12-12,2026-08-24,2447,ja,ja,ja
-N05AH03,olanzapine,HU,HR,2019-12-12,2026-09-24,2478,ja,ja,ja
+N05AH03,olanzapine,HU,AT,2019-12-12,2026-09-14,2468,ja,ja,ja
 N05AH03,olanzapine,HU,BE,2019-12-12,2026-10-05,2489,ja,ja,ja
 N05AH03,olanzapine,HU,FR,2019-12-12,2026-11-12,2527,nee,ja,ja
 N05AH03,OLANZAPINA,IT,IS,2022-07-15,2024-06-12,698,nee,nee,ja
@@ -24871,8 +24851,7 @@ N05AH03,OLANZAPINA,IT,DE,2022-07-15,2026-04-01,1356,nee,nee,ja
 N05AH03,OLANZAPINA,IT,DK,2022-07-15,2026-04-25,1380,nee,nee,ja
 N05AH03,OLANZAPINA,IT,IE,2022-07-15,2026-05-15,1400,nee,nee,ja
 N05AH03,OLANZAPINA,IT,SI,2022-07-15,2026-06-29,1445,nee,nee,ja
-N05AH03,OLANZAPINA,IT,AT,2022-07-15,2026-08-24,1501,nee,nee,ja
-N05AH03,OLANZAPINA,IT,HR,2022-07-15,2026-09-24,1532,nee,nee,ja
+N05AH03,OLANZAPINA,IT,AT,2022-07-15,2026-09-14,1522,nee,nee,ja
 N05AH03,OLANZAPINA,IT,BE,2022-07-15,2026-10-05,1543,nee,nee,ja
 N05AH03,OLANZAPINA,IT,FR,2022-07-15,2026-11-12,1581,nee,nee,ja
 N05AH03,Olanzapinum INN,IS,AU,2024-06-12,2024-08-31,80,nee,nee,ja
@@ -24891,8 +24870,7 @@ N05AH03,Olanzapinum INN,IS,DE,2024-06-12,2026-04-01,658,ja,nee,ja
 N05AH03,Olanzapinum INN,IS,DK,2024-06-12,2026-04-25,682,nee,nee,ja
 N05AH03,Olanzapinum INN,IS,IE,2024-06-12,2026-05-15,702,nee,nee,ja
 N05AH03,Olanzapinum INN,IS,SI,2024-06-12,2026-06-29,747,ja,nee,ja
-N05AH03,Olanzapinum INN,IS,AT,2024-06-12,2026-08-24,803,ja,nee,ja
-N05AH03,Olanzapinum INN,IS,HR,2024-06-12,2026-09-24,834,ja,nee,ja
+N05AH03,Olanzapinum INN,IS,AT,2024-06-12,2026-09-14,824,ja,nee,ja
 N05AH03,Olanzapinum INN,IS,BE,2024-06-12,2026-10-05,845,ja,nee,ja
 N05AH03,Olanzapinum INN,IS,FR,2024-06-12,2026-11-12,883,nee,nee,ja
 N05AH03,olanzapine,AU,CZ,2024-08-31,2025-03-12,193,nee,nee,ja
@@ -24910,8 +24888,7 @@ N05AH03,olanzapine,AU,DE,2024-08-31,2026-04-01,578,nee,nee,ja
 N05AH03,olanzapine,AU,DK,2024-08-31,2026-04-25,602,nee,nee,ja
 N05AH03,olanzapine,AU,IE,2024-08-31,2026-05-15,622,nee,nee,ja
 N05AH03,olanzapine,AU,SI,2024-08-31,2026-06-29,667,nee,nee,ja
-N05AH03,olanzapine,AU,AT,2024-08-31,2026-08-24,723,nee,nee,ja
-N05AH03,olanzapine,AU,HR,2024-08-31,2026-09-24,754,nee,nee,ja
+N05AH03,olanzapine,AU,AT,2024-08-31,2026-09-14,744,nee,nee,ja
 N05AH03,olanzapine,AU,BE,2024-08-31,2026-10-05,765,nee,nee,ja
 N05AH03,olanzapine,AU,FR,2024-08-31,2026-11-12,803,nee,nee,ja
 N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,NO,2025-03-12,2025-03-18,6,nee,nee,nee
@@ -24928,8 +24905,7 @@ N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,DE,2025-03-12,2026-04-01,385,nee,nee,
 N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,DK,2025-03-12,2026-04-25,409,nee,nee,nee
 N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,IE,2025-03-12,2026-05-15,429,nee,nee,nee
 N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,SI,2025-03-12,2026-06-29,474,nee,nee,nee
-N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,AT,2025-03-12,2026-08-24,530,nee,nee,nee
-N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,HR,2025-03-12,2026-09-24,561,nee,nee,nee
+N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,AT,2025-03-12,2026-09-14,551,nee,nee,nee
 N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,BE,2025-03-12,2026-10-05,572,nee,nee,nee
 N05AH03,OLANZAPINE EMBONATE MONOHYDRATE,CZ,FR,2025-03-12,2026-11-12,610,nee,nee,nee
 N05AH03,olanzapinembonatmonohydrat,NO,SE,2025-03-18,2025-09-01,167,nee,nee,nee
@@ -24945,8 +24921,7 @@ N05AH03,olanzapinembonatmonohydrat,NO,DE,2025-03-18,2026-04-01,379,ja,ja,nee
 N05AH03,olanzapinembonatmonohydrat,NO,DK,2025-03-18,2026-04-25,403,nee,nee,nee
 N05AH03,olanzapinembonatmonohydrat,NO,IE,2025-03-18,2026-05-15,423,nee,nee,nee
 N05AH03,olanzapinembonatmonohydrat,NO,SI,2025-03-18,2026-06-29,468,ja,ja,nee
-N05AH03,olanzapinembonatmonohydrat,NO,AT,2025-03-18,2026-08-24,524,ja,ja,nee
-N05AH03,olanzapinembonatmonohydrat,NO,HR,2025-03-18,2026-09-24,555,ja,ja,nee
+N05AH03,olanzapinembonatmonohydrat,NO,AT,2025-03-18,2026-09-14,545,ja,ja,nee
 N05AH03,olanzapinembonatmonohydrat,NO,BE,2025-03-18,2026-10-05,566,ja,ja,nee
 N05AH03,olanzapinembonatmonohydrat,NO,FR,2025-03-18,2026-11-12,604,nee,ja,nee
 N05AH03,olanzapin,SE,ES,2025-09-01,2025-09-17,16,nee,nee,nee
@@ -24961,8 +24936,7 @@ N05AH03,olanzapin,SE,DE,2025-09-01,2026-04-01,212,nee,nee,nee
 N05AH03,olanzapin,SE,DK,2025-09-01,2026-04-25,236,nee,nee,nee
 N05AH03,olanzapin,SE,IE,2025-09-01,2026-05-15,256,nee,nee,nee
 N05AH03,olanzapin,SE,SI,2025-09-01,2026-06-29,301,nee,nee,nee
-N05AH03,olanzapin,SE,AT,2025-09-01,2026-08-24,357,nee,nee,nee
-N05AH03,olanzapin,SE,HR,2025-09-01,2026-09-24,388,nee,nee,nee
+N05AH03,olanzapin,SE,AT,2025-09-01,2026-09-14,378,nee,nee,nee
 N05AH03,olanzapin,SE,BE,2025-09-01,2026-10-05,399,nee,nee,nee
 N05AH03,olanzapin,SE,FR,2025-09-01,2026-11-12,437,nee,nee,nee
 N05AH03,OLANZAPINA,ES,EE,2025-09-17,2025-09-29,12,ja,nee,nee
@@ -24976,8 +24950,7 @@ N05AH03,OLANZAPINA,ES,DE,2025-09-17,2026-04-01,196,ja,nee,nee
 N05AH03,OLANZAPINA,ES,DK,2025-09-17,2026-04-25,220,nee,nee,nee
 N05AH03,OLANZAPINA,ES,IE,2025-09-17,2026-05-15,240,nee,nee,nee
 N05AH03,OLANZAPINA,ES,SI,2025-09-17,2026-06-29,285,ja,nee,nee
-N05AH03,OLANZAPINA,ES,AT,2025-09-17,2026-08-24,341,ja,nee,nee
-N05AH03,OLANZAPINA,ES,HR,2025-09-17,2026-09-24,372,ja,nee,nee
+N05AH03,OLANZAPINA,ES,AT,2025-09-17,2026-09-14,362,ja,nee,nee
 N05AH03,OLANZAPINA,ES,BE,2025-09-17,2026-10-05,383,ja,nee,nee
 N05AH03,OLANZAPINA,ES,FR,2025-09-17,2026-11-12,421,nee,nee,nee
 N05AH03,Olanzapine,EE,GR,2025-09-29,2025-11-17,49,ja,ja,nee
@@ -24990,8 +24963,7 @@ N05AH03,Olanzapine,EE,DE,2025-09-29,2026-04-01,184,ja,ja,nee
 N05AH03,Olanzapine,EE,DK,2025-09-29,2026-04-25,208,nee,nee,nee
 N05AH03,Olanzapine,EE,IE,2025-09-29,2026-05-15,228,nee,nee,nee
 N05AH03,Olanzapine,EE,SI,2025-09-29,2026-06-29,273,ja,ja,nee
-N05AH03,Olanzapine,EE,AT,2025-09-29,2026-08-24,329,ja,ja,nee
-N05AH03,Olanzapine,EE,HR,2025-09-29,2026-09-24,360,ja,ja,nee
+N05AH03,Olanzapine,EE,AT,2025-09-29,2026-09-14,350,ja,ja,nee
 N05AH03,Olanzapine,EE,BE,2025-09-29,2026-10-05,371,ja,ja,nee
 N05AH03,Olanzapine,EE,FR,2025-09-29,2026-11-12,409,nee,ja,nee
 N05AH03,OLANZAPINE,GR,JP,2025-11-17,2025-12-04,17,nee,nee,nee
@@ -25003,8 +24975,7 @@ N05AH03,OLANZAPINE,GR,DE,2025-11-17,2026-04-01,135,ja,ja,nee
 N05AH03,OLANZAPINE,GR,DK,2025-11-17,2026-04-25,159,nee,nee,nee
 N05AH03,OLANZAPINE,GR,IE,2025-11-17,2026-05-15,179,nee,nee,nee
 N05AH03,OLANZAPINE,GR,SI,2025-11-17,2026-06-29,224,ja,ja,nee
-N05AH03,OLANZAPINE,GR,AT,2025-11-17,2026-08-24,280,ja,ja,nee
-N05AH03,OLANZAPINE,GR,HR,2025-11-17,2026-09-24,311,ja,ja,nee
+N05AH03,OLANZAPINE,GR,AT,2025-11-17,2026-09-14,301,ja,ja,nee
 N05AH03,OLANZAPINE,GR,BE,2025-11-17,2026-10-05,322,ja,ja,nee
 N05AH03,OLANZAPINE,GR,FR,2025-11-17,2026-11-12,360,nee,ja,nee
 N05AH03,オランザピン,JP,FI,2025-12-04,2025-12-10,6,nee,nee,nee
@@ -25015,8 +24986,7 @@ N05AH03,オランザピン,JP,DE,2025-12-04,2026-04-01,118,nee,nee,nee
 N05AH03,オランザピン,JP,DK,2025-12-04,2026-04-25,142,nee,nee,nee
 N05AH03,オランザピン,JP,IE,2025-12-04,2026-05-15,162,nee,nee,nee
 N05AH03,オランザピン,JP,SI,2025-12-04,2026-06-29,207,nee,nee,nee
-N05AH03,オランザピン,JP,AT,2025-12-04,2026-08-24,263,nee,nee,nee
-N05AH03,オランザピン,JP,HR,2025-12-04,2026-09-24,294,nee,nee,nee
+N05AH03,オランザピン,JP,AT,2025-12-04,2026-09-14,284,nee,nee,nee
 N05AH03,オランザピン,JP,BE,2025-12-04,2026-10-05,305,nee,nee,nee
 N05AH03,オランザピン,JP,FR,2025-12-04,2026-11-12,343,nee,nee,nee
 N05AH03,Olanzapinum INN,FI,BA,2025-12-10,2026-01-01,22,nee,nee,nee
@@ -25026,8 +24996,7 @@ N05AH03,Olanzapinum INN,FI,DE,2025-12-10,2026-04-01,112,ja,ja,nee
 N05AH03,Olanzapinum INN,FI,DK,2025-12-10,2026-04-25,136,nee,nee,nee
 N05AH03,Olanzapinum INN,FI,IE,2025-12-10,2026-05-15,156,nee,nee,nee
 N05AH03,Olanzapinum INN,FI,SI,2025-12-10,2026-06-29,201,ja,ja,nee
-N05AH03,Olanzapinum INN,FI,AT,2025-12-10,2026-08-24,257,ja,ja,nee
-N05AH03,Olanzapinum INN,FI,HR,2025-12-10,2026-09-24,288,ja,ja,nee
+N05AH03,Olanzapinum INN,FI,AT,2025-12-10,2026-09-14,278,ja,ja,nee
 N05AH03,Olanzapinum INN,FI,BE,2025-12-10,2026-10-05,299,ja,ja,nee
 N05AH03,Olanzapinum INN,FI,FR,2025-12-10,2026-11-12,337,nee,ja,nee
 N05AH03,olanzapin,BA,NZ,2026-01-01,2026-01-19,18,nee,nee,nee
@@ -25036,8 +25005,7 @@ N05AH03,olanzapin,BA,DE,2026-01-01,2026-04-01,90,nee,nee,nee
 N05AH03,olanzapin,BA,DK,2026-01-01,2026-04-25,114,nee,nee,nee
 N05AH03,olanzapin,BA,IE,2026-01-01,2026-05-15,134,nee,nee,nee
 N05AH03,olanzapin,BA,SI,2026-01-01,2026-06-29,179,nee,nee,nee
-N05AH03,olanzapin,BA,AT,2026-01-01,2026-08-24,235,nee,nee,nee
-N05AH03,olanzapin,BA,HR,2026-01-01,2026-09-24,266,nee,nee,nee
+N05AH03,olanzapin,BA,AT,2026-01-01,2026-09-14,256,nee,nee,nee
 N05AH03,olanzapin,BA,BE,2026-01-01,2026-10-05,277,nee,nee,nee
 N05AH03,olanzapin,BA,FR,2026-01-01,2026-11-12,315,nee,nee,nee
 N05AH03,Olanzapine,NZ,RO,2026-01-19,2026-02-09,21,nee,nee,nee
@@ -25045,45 +25013,36 @@ N05AH03,Olanzapine,NZ,DE,2026-01-19,2026-04-01,72,nee,nee,nee
 N05AH03,Olanzapine,NZ,DK,2026-01-19,2026-04-25,96,nee,nee,nee
 N05AH03,Olanzapine,NZ,IE,2026-01-19,2026-05-15,116,nee,nee,nee
 N05AH03,Olanzapine,NZ,SI,2026-01-19,2026-06-29,161,nee,nee,nee
-N05AH03,Olanzapine,NZ,AT,2026-01-19,2026-08-24,217,nee,nee,nee
-N05AH03,Olanzapine,NZ,HR,2026-01-19,2026-09-24,248,nee,nee,nee
+N05AH03,Olanzapine,NZ,AT,2026-01-19,2026-09-14,238,nee,nee,nee
 N05AH03,Olanzapine,NZ,BE,2026-01-19,2026-10-05,259,nee,nee,nee
 N05AH03,Olanzapine,NZ,FR,2026-01-19,2026-11-12,297,nee,nee,nee
 N05AH03,OLANZAPINUM,RO,DE,2026-02-09,2026-04-01,51,nee,nee,nee
 N05AH03,OLANZAPINUM,RO,DK,2026-02-09,2026-04-25,75,nee,nee,nee
 N05AH03,OLANZAPINUM,RO,IE,2026-02-09,2026-05-15,95,nee,nee,nee
 N05AH03,OLANZAPINUM,RO,SI,2026-02-09,2026-06-29,140,nee,nee,nee
-N05AH03,OLANZAPINUM,RO,AT,2026-02-09,2026-08-24,196,nee,nee,nee
-N05AH03,OLANZAPINUM,RO,HR,2026-02-09,2026-09-24,227,nee,nee,nee
+N05AH03,OLANZAPINUM,RO,AT,2026-02-09,2026-09-14,217,nee,nee,nee
 N05AH03,OLANZAPINUM,RO,BE,2026-02-09,2026-10-05,238,nee,nee,nee
 N05AH03,OLANZAPINUM,RO,FR,2026-02-09,2026-11-12,276,nee,nee,nee
 N05AH03,Olanzapin,DE,DK,2026-04-01,2026-04-25,24,nee,nee,nee
 N05AH03,Olanzapin,DE,IE,2026-04-01,2026-05-15,44,nee,nee,nee
 N05AH03,Olanzapin,DE,SI,2026-04-01,2026-06-29,89,ja,ja,nee
-N05AH03,Olanzapin,DE,AT,2026-04-01,2026-08-24,145,ja,ja,nee
-N05AH03,Olanzapin,DE,HR,2026-04-01,2026-09-24,176,ja,ja,nee
+N05AH03,Olanzapin,DE,AT,2026-04-01,2026-09-14,166,ja,ja,nee
 N05AH03,Olanzapin,DE,BE,2026-04-01,2026-10-05,187,ja,ja,nee
 N05AH03,Olanzapin,DE,FR,2026-04-01,2026-11-12,225,nee,ja,nee
 N05AH03,Olanzapin ATC-kode: N05AH03 Forventet periode: Slut april 20,DK,IE,2026-04-25,2026-05-15,20,nee,nee,nee
 N05AH03,Olanzapin ATC-kode: N05AH03 Forventet periode: Slut april 20,DK,SI,2026-04-25,2026-06-29,65,nee,nee,nee
-N05AH03,Olanzapin ATC-kode: N05AH03 Forventet periode: Slut april 20,DK,AT,2026-04-25,2026-08-24,121,nee,nee,nee
-N05AH03,Olanzapin ATC-kode: N05AH03 Forventet periode: Slut april 20,DK,HR,2026-04-25,2026-09-24,152,nee,nee,nee
+N05AH03,Olanzapin ATC-kode: N05AH03 Forventet periode: Slut april 20,DK,AT,2026-04-25,2026-09-14,142,nee,nee,nee
 N05AH03,Olanzapin ATC-kode: N05AH03 Forventet periode: Slut april 20,DK,BE,2026-04-25,2026-10-05,163,nee,nee,nee
 N05AH03,Olanzapin ATC-kode: N05AH03 Forventet periode: Slut april 20,DK,FR,2026-04-25,2026-11-12,201,nee,nee,nee
 N05AH03,Olanzapine,IE,SI,2026-05-15,2026-06-29,45,nee,nee,nee
-N05AH03,Olanzapine,IE,AT,2026-05-15,2026-08-24,101,nee,nee,nee
-N05AH03,Olanzapine,IE,HR,2026-05-15,2026-09-24,132,nee,nee,nee
+N05AH03,Olanzapine,IE,AT,2026-05-15,2026-09-14,122,nee,nee,nee
 N05AH03,Olanzapine,IE,BE,2026-05-15,2026-10-05,143,nee,nee,nee
 N05AH03,Olanzapine,IE,FR,2026-05-15,2026-11-12,181,nee,nee,nee
-N05AH03,olanzapinum,SI,AT,2026-06-29,2026-08-24,56,ja,ja,nee
-N05AH03,olanzapinum,SI,HR,2026-06-29,2026-09-24,87,ja,ja,nee
+N05AH03,olanzapinum,SI,AT,2026-06-29,2026-09-14,77,ja,ja,nee
 N05AH03,olanzapinum,SI,BE,2026-06-29,2026-10-05,98,ja,ja,nee
 N05AH03,olanzapinum,SI,FR,2026-06-29,2026-11-12,136,nee,ja,nee
-N05AH03,OLANZAPIN,AT,HR,2026-08-24,2026-09-24,31,ja,ja,nee
-N05AH03,OLANZAPIN,AT,BE,2026-08-24,2026-10-05,42,ja,ja,nee
-N05AH03,OLANZAPIN,AT,FR,2026-08-24,2026-11-12,80,nee,ja,nee
-N05AH03,olanzapin,HR,BE,2026-09-24,2026-10-05,11,ja,ja,nee
-N05AH03,olanzapin,HR,FR,2026-09-24,2026-11-12,49,nee,ja,nee
+N05AH03,OLANZAPIN,AT,BE,2026-09-14,2026-10-05,21,ja,ja,nee
+N05AH03,OLANZAPIN,AT,FR,2026-09-14,2026-11-12,59,nee,ja,nee
 N05AH03,Olanzapine,BE,FR,2026-10-05,2026-11-12,38,nee,ja,nee
 N05AH04,quetiapine,HU,HR,2016-03-31,2016-12-20,264,ja,ja,ja
 N05AH04,quetiapine,HU,RO,2016-03-31,2019-01-07,1012,nee,nee,ja
@@ -25323,7 +25282,6 @@ N05AL05,Amisulpridum,LV,SK,2020-01-01,2022-03-20,809,ja,ja,ja
 N05AL05,Amisulpridum,LV,RO,2020-01-01,2025-10-02,2101,nee,nee,ja
 N05AL05,Amisulpridum,LV,DK,2020-01-01,2025-12-15,2175,nee,nee,ja
 N05AL05,Amisulpridum,LV,NO,2020-01-01,2026-01-12,2203,ja,ja,ja
-N05AL05,Amisulpridum,LV,AU,2020-01-01,2026-04-29,2310,nee,nee,ja
 N05AL05,Amisulpridum,LV,BE,2020-01-01,2026-07-01,2373,ja,ja,ja
 N05AL05,Amisulpridum,LV,HU,2020-01-01,2026-08-06,2409,ja,ja,ja
 N05AL05,Amisulpridum,LV,IT,2020-01-01,2026-08-31,2434,nee,nee,ja
@@ -25332,7 +25290,6 @@ N05AL05,Amisulpridum,LV,CZ,2020-01-01,2026-11-19,2514,nee,nee,ja
 N05AL05,Amisulprid,SK,RO,2022-03-20,2025-10-02,1292,nee,nee,ja
 N05AL05,Amisulprid,SK,DK,2022-03-20,2025-12-15,1366,nee,nee,ja
 N05AL05,Amisulprid,SK,NO,2022-03-20,2026-01-12,1394,ja,ja,ja
-N05AL05,Amisulprid,SK,AU,2022-03-20,2026-04-29,1501,nee,nee,ja
 N05AL05,Amisulprid,SK,BE,2022-03-20,2026-07-01,1564,ja,ja,ja
 N05AL05,Amisulprid,SK,HU,2022-03-20,2026-08-06,1600,ja,ja,ja
 N05AL05,Amisulprid,SK,IT,2022-03-20,2026-08-31,1625,nee,nee,ja
@@ -25340,30 +25297,22 @@ N05AL05,Amisulprid,SK,DE,2022-03-20,2026-09-07,1632,ja,ja,ja
 N05AL05,Amisulprid,SK,CZ,2022-03-20,2026-11-19,1705,nee,nee,ja
 N05AL05,AMISULPRIDUM,RO,DK,2025-10-02,2025-12-15,74,nee,nee,nee
 N05AL05,AMISULPRIDUM,RO,NO,2025-10-02,2026-01-12,102,nee,nee,nee
-N05AL05,AMISULPRIDUM,RO,AU,2025-10-02,2026-04-29,209,nee,nee,nee
 N05AL05,AMISULPRIDUM,RO,BE,2025-10-02,2026-07-01,272,nee,nee,nee
 N05AL05,AMISULPRIDUM,RO,HU,2025-10-02,2026-08-06,308,nee,nee,nee
 N05AL05,AMISULPRIDUM,RO,IT,2025-10-02,2026-08-31,333,nee,nee,nee
 N05AL05,AMISULPRIDUM,RO,DE,2025-10-02,2026-09-07,340,nee,nee,nee
 N05AL05,AMISULPRIDUM,RO,CZ,2025-10-02,2026-11-19,413,nee,nee,nee
 N05AL05,Amisulprid ATC-kode: N05AL05 Forventet periode: Fra midt dec,DK,NO,2025-12-15,2026-01-12,28,nee,nee,nee
-N05AL05,Amisulprid ATC-kode: N05AL05 Forventet periode: Fra midt dec,DK,AU,2025-12-15,2026-04-29,135,nee,nee,nee
 N05AL05,Amisulprid ATC-kode: N05AL05 Forventet periode: Fra midt dec,DK,BE,2025-12-15,2026-07-01,198,nee,nee,nee
 N05AL05,Amisulprid ATC-kode: N05AL05 Forventet periode: Fra midt dec,DK,HU,2025-12-15,2026-08-06,234,nee,nee,nee
 N05AL05,Amisulprid ATC-kode: N05AL05 Forventet periode: Fra midt dec,DK,IT,2025-12-15,2026-08-31,259,nee,nee,nee
 N05AL05,Amisulprid ATC-kode: N05AL05 Forventet periode: Fra midt dec,DK,DE,2025-12-15,2026-09-07,266,nee,nee,nee
 N05AL05,Amisulprid ATC-kode: N05AL05 Forventet periode: Fra midt dec,DK,CZ,2025-12-15,2026-11-19,339,nee,nee,nee
-N05AL05,amisulprid,NO,AU,2026-01-12,2026-04-29,107,nee,nee,nee
 N05AL05,amisulprid,NO,BE,2026-01-12,2026-07-01,170,ja,ja,nee
 N05AL05,amisulprid,NO,HU,2026-01-12,2026-08-06,206,ja,ja,nee
 N05AL05,amisulprid,NO,IT,2026-01-12,2026-08-31,231,nee,nee,nee
 N05AL05,amisulprid,NO,DE,2026-01-12,2026-09-07,238,ja,ja,nee
 N05AL05,amisulprid,NO,CZ,2026-01-12,2026-11-19,311,nee,nee,nee
-N05AL05,amisulpride,AU,BE,2026-04-29,2026-07-01,63,nee,nee,nee
-N05AL05,amisulpride,AU,HU,2026-04-29,2026-08-06,99,nee,nee,nee
-N05AL05,amisulpride,AU,IT,2026-04-29,2026-08-31,124,nee,nee,nee
-N05AL05,amisulpride,AU,DE,2026-04-29,2026-09-07,131,nee,nee,nee
-N05AL05,amisulpride,AU,CZ,2026-04-29,2026-11-19,204,nee,nee,nee
 N05AL05,Amisulpride,BE,HU,2026-07-01,2026-08-06,36,ja,ja,nee
 N05AL05,Amisulpride,BE,IT,2026-07-01,2026-08-31,61,nee,nee,nee
 N05AL05,Amisulpride,BE,DE,2026-07-01,2026-09-07,68,ja,ja,nee
@@ -26609,22 +26558,16 @@ N06AA06,トリミプラミンマレイン酸塩,JP,IT,2025-12-01,2026-05-14,164,
 N06AA06,trimipraminmaleat,NO,IT,2026-01-15,2026-05-14,119,nee,nee,nee
 N06AA09,アミトリプチリン塩酸塩,JP,IS,2024-10-04,2025-02-14,133,nee,nee,ja
 N06AA09,アミトリプチリン塩酸塩,JP,NO,2024-10-04,2025-09-15,346,nee,nee,ja
-N06AA09,アミトリプチリン塩酸塩,JP,IE,2024-10-04,2026-02-25,509,nee,nee,ja
 N06AA09,アミトリプチリン塩酸塩,JP,DE,2024-10-04,2026-03-26,538,nee,nee,ja
 N06AA09,アミトリプチリン塩酸塩,JP,HR,2024-10-04,2026-10-01,727,nee,nee,ja
 N06AA09,アミトリプチリン塩酸塩,JP,IT,2024-10-04,2026-10-21,747,nee,nee,ja
 N06AA09,Amitriptylinum INN hýdróklóríð,IS,NO,2025-02-14,2025-09-15,213,ja,nee,nee
-N06AA09,Amitriptylinum INN hýdróklóríð,IS,IE,2025-02-14,2026-02-25,376,nee,nee,nee
 N06AA09,Amitriptylinum INN hýdróklóríð,IS,DE,2025-02-14,2026-03-26,405,ja,nee,nee
 N06AA09,Amitriptylinum INN hýdróklóríð,IS,HR,2025-02-14,2026-10-01,594,ja,nee,nee
 N06AA09,Amitriptylinum INN hýdróklóríð,IS,IT,2025-02-14,2026-10-21,614,nee,nee,nee
-N06AA09,amitriptylinhydroklorid,NO,IE,2025-09-15,2026-02-25,163,nee,nee,nee
 N06AA09,amitriptylinhydroklorid,NO,DE,2025-09-15,2026-03-26,192,ja,ja,nee
 N06AA09,amitriptylinhydroklorid,NO,HR,2025-09-15,2026-10-01,381,ja,ja,nee
 N06AA09,amitriptylinhydroklorid,NO,IT,2025-09-15,2026-10-21,401,nee,nee,nee
-N06AA09,Amitriptyline hydrochloride,IE,DE,2026-02-25,2026-03-26,29,nee,nee,nee
-N06AA09,Amitriptyline hydrochloride,IE,HR,2026-02-25,2026-10-01,218,nee,nee,nee
-N06AA09,Amitriptyline hydrochloride,IE,IT,2026-02-25,2026-10-21,238,nee,nee,nee
 N06AA09,Amitriptylinhydrochlorid,DE,HR,2026-03-26,2026-10-01,189,ja,ja,nee
 N06AA09,Amitriptylinhydrochlorid,DE,IT,2026-03-26,2026-10-21,209,nee,nee,nee
 N06AA09,amitriptilinklorid,HR,IT,2026-10-01,2026-10-21,20,nee,nee,nee
@@ -26745,7 +26688,6 @@ N06AB04,CITALOPRAM BROMIDRATO,IT,ES,2023-01-31,2026-06-26,1242,nee,nee,ja
 N06AB04,CITALOPRAM BROMIDRATO,IT,IE,2023-01-31,2026-09-01,1309,nee,nee,ja
 N06AB04,CITALOPRAM BROMIDRATO,IT,SE,2023-01-31,2026-10-01,1339,nee,nee,ja
 N06AB04,CITALOPRAM BROMIDRATO,IT,BE,2023-01-31,2026-10-30,1368,nee,nee,ja
-N06AB04,CITALOPRAM BROMIDRATO,IT,AT,2023-01-31,2026-11-11,1380,nee,nee,ja
 N06AB04,citalopram,HU,IS,2023-04-01,2025-08-29,881,ja,nee,ja
 N06AB04,citalopram,HU,SK,2023-04-01,2026-04-01,1096,ja,ja,ja
 N06AB04,citalopram,HU,NO,2023-04-01,2026-06-15,1171,ja,ja,ja
@@ -26753,35 +26695,27 @@ N06AB04,citalopram,HU,ES,2023-04-01,2026-06-26,1182,ja,nee,ja
 N06AB04,citalopram,HU,IE,2023-04-01,2026-09-01,1249,nee,nee,ja
 N06AB04,citalopram,HU,SE,2023-04-01,2026-10-01,1279,nee,nee,ja
 N06AB04,citalopram,HU,BE,2023-04-01,2026-10-30,1308,ja,ja,ja
-N06AB04,citalopram,HU,AT,2023-04-01,2026-11-11,1320,ja,ja,ja
 N06AB04,Citalopram hydrobromide,IS,SK,2025-08-29,2026-04-01,215,ja,nee,nee
 N06AB04,Citalopram hydrobromide,IS,NO,2025-08-29,2026-06-15,290,ja,nee,nee
 N06AB04,Citalopram hydrobromide,IS,ES,2025-08-29,2026-06-26,301,ja,nee,nee
 N06AB04,Citalopram hydrobromide,IS,IE,2025-08-29,2026-09-01,368,nee,nee,nee
 N06AB04,Citalopram hydrobromide,IS,SE,2025-08-29,2026-10-01,398,nee,nee,nee
 N06AB04,Citalopram hydrobromide,IS,BE,2025-08-29,2026-10-30,427,ja,nee,nee
-N06AB04,Citalopram hydrobromide,IS,AT,2025-08-29,2026-11-11,439,ja,nee,nee
 N06AB04,Citalopram,SK,NO,2026-04-01,2026-06-15,75,ja,ja,nee
 N06AB04,Citalopram,SK,ES,2026-04-01,2026-06-26,86,ja,nee,nee
 N06AB04,Citalopram,SK,IE,2026-04-01,2026-09-01,153,nee,nee,nee
 N06AB04,Citalopram,SK,SE,2026-04-01,2026-10-01,183,nee,nee,nee
 N06AB04,Citalopram,SK,BE,2026-04-01,2026-10-30,212,ja,ja,nee
-N06AB04,Citalopram,SK,AT,2026-04-01,2026-11-11,224,ja,ja,nee
 N06AB04,citalopramhydrobromid,NO,ES,2026-06-15,2026-06-26,11,ja,nee,nee
 N06AB04,citalopramhydrobromid,NO,IE,2026-06-15,2026-09-01,78,nee,nee,nee
 N06AB04,citalopramhydrobromid,NO,SE,2026-06-15,2026-10-01,108,nee,nee,nee
 N06AB04,citalopramhydrobromid,NO,BE,2026-06-15,2026-10-30,137,ja,ja,nee
-N06AB04,citalopramhydrobromid,NO,AT,2026-06-15,2026-11-11,149,ja,ja,nee
 N06AB04,CITALOPRAM HIDROBROMURO,ES,IE,2026-06-26,2026-09-01,67,nee,nee,nee
 N06AB04,CITALOPRAM HIDROBROMURO,ES,SE,2026-06-26,2026-10-01,97,nee,nee,nee
 N06AB04,CITALOPRAM HIDROBROMURO,ES,BE,2026-06-26,2026-10-30,126,ja,nee,nee
-N06AB04,CITALOPRAM HIDROBROMURO,ES,AT,2026-06-26,2026-11-11,138,ja,nee,nee
 N06AB04,Citalopram,IE,SE,2026-09-01,2026-10-01,30,nee,nee,nee
 N06AB04,Citalopram,IE,BE,2026-09-01,2026-10-30,59,nee,nee,nee
-N06AB04,Citalopram,IE,AT,2026-09-01,2026-11-11,71,nee,nee,nee
 N06AB04,citalopramhydrobromid,SE,BE,2026-10-01,2026-10-30,29,nee,nee,nee
-N06AB04,citalopramhydrobromid,SE,AT,2026-10-01,2026-11-11,41,nee,nee,nee
-N06AB04,Citalopram,BE,AT,2026-10-30,2026-11-11,12,ja,ja,nee
 N06AB05,paroxetinum,SI,IT,2018-10-01,2022-10-24,1484,nee,nee,ja
 N06AB05,paroxetinum,SI,SK,2018-10-01,2022-11-08,1499,ja,ja,ja
 N06AB05,paroxetinum,SI,JP,2018-10-01,2023-11-06,1862,nee,nee,ja
@@ -28305,14 +28239,10 @@ N06DX02,Ginkgonis extractum siccum raffinatum et quantificatum,LV,HU,2019-12-30,
 N06DX02,Ginkgonis extractum siccum raffinatum et quantificatum,LV,RO,2019-12-30,2026-03-06,2258,nee,nee,ja
 N06DX02,"ginkgo dry extract, refined and quantified",HU,RO,2021-04-01,2026-03-06,1800,nee,nee,ja
 N07AA01,ピリドスチグミン臭化物,JP,US,2024-04-01,2026-01-12,651,nee,nee,ja
-N07AA01,ピリドスチグミン臭化物,JP,CZ,2024-04-01,2026-02-03,673,nee,nee,ja
 N07AA01,ピリドスチグミン臭化物,JP,AT,2024-04-01,2026-04-07,736,nee,nee,ja
 N07AA01,ピリドスチグミン臭化物,JP,RO,2024-04-01,2026-10-30,942,nee,nee,ja
-N07AA01,NEOSTIGMINE METHYLSULFATE,US,CZ,2026-01-12,2026-02-03,22,nee,nee,nee
 N07AA01,NEOSTIGMINE METHYLSULFATE,US,AT,2026-01-12,2026-04-07,85,nee,nee,nee
 N07AA01,NEOSTIGMINE METHYLSULFATE,US,RO,2026-01-12,2026-10-30,291,nee,nee,nee
-N07AA01,NEOSTIGMINE BROMIDE,CZ,AT,2026-02-03,2026-04-07,63,nee,nee,nee
-N07AA01,NEOSTIGMINE BROMIDE,CZ,RO,2026-02-03,2026-10-30,269,nee,nee,nee
 N07AA01,NEOSTIGMIN METILSULFAT,AT,RO,2026-04-07,2026-10-30,206,nee,nee,nee
 N07AA03,Distigmín,SK,DE,2024-06-18,2025-01-30,226,ja,ja,ja
 N07AA03,Distigmín,SK,CZ,2024-06-18,2025-07-11,388,nee,nee,ja
@@ -28901,6 +28831,7 @@ R03AC02,Salbutamol,SK,NZ,2021-05-10,2025-07-02,1514,nee,nee,ja
 R03AC02,Salbutamol,SK,DE,2021-05-10,2025-08-01,1544,ja,ja,ja
 R03AC02,Salbutamol,SK,NO,2021-05-10,2026-01-06,1702,ja,ja,ja
 R03AC02,Salbutamol,SK,MY,2021-05-10,2026-10-01,1970,nee,nee,ja
+R03AC02,Salbutamol,SK,JP,2021-05-10,2026-11-25,2025,nee,nee,ja
 R03AC02,ALBUTEROL SULFATE,US,AU,2022-10-25,2022-12-30,66,nee,nee,ja
 R03AC02,ALBUTEROL SULFATE,US,RO,2022-10-25,2024-02-16,479,nee,nee,ja
 R03AC02,ALBUTEROL SULFATE,US,IS,2022-10-25,2024-05-10,563,nee,nee,ja
@@ -28910,6 +28841,7 @@ R03AC02,ALBUTEROL SULFATE,US,NZ,2022-10-25,2025-07-02,981,nee,nee,ja
 R03AC02,ALBUTEROL SULFATE,US,DE,2022-10-25,2025-08-01,1011,nee,nee,ja
 R03AC02,ALBUTEROL SULFATE,US,NO,2022-10-25,2026-01-06,1169,nee,nee,ja
 R03AC02,ALBUTEROL SULFATE,US,MY,2022-10-25,2026-10-01,1437,nee,nee,ja
+R03AC02,ALBUTEROL SULFATE,US,JP,2022-10-25,2026-11-25,1492,nee,nee,ja
 R03AC02,salbutamol sulfate,AU,RO,2022-12-30,2024-02-16,413,nee,nee,ja
 R03AC02,salbutamol sulfate,AU,IS,2022-12-30,2024-05-10,497,nee,nee,ja
 R03AC02,salbutamol sulfate,AU,SE,2022-12-30,2024-07-01,549,nee,nee,ja
@@ -28918,6 +28850,7 @@ R03AC02,salbutamol sulfate,AU,NZ,2022-12-30,2025-07-02,915,nee,nee,ja
 R03AC02,salbutamol sulfate,AU,DE,2022-12-30,2025-08-01,945,nee,nee,ja
 R03AC02,salbutamol sulfate,AU,NO,2022-12-30,2026-01-06,1103,nee,nee,ja
 R03AC02,salbutamol sulfate,AU,MY,2022-12-30,2026-10-01,1371,nee,nee,ja
+R03AC02,salbutamol sulfate,AU,JP,2022-12-30,2026-11-25,1426,nee,nee,ja
 R03AC02,COMBINATII (IPRATROPII BROMIDUM+SALBUTAMOLUM),RO,IS,2024-02-16,2024-05-10,84,nee,nee,ja
 R03AC02,COMBINATII (IPRATROPII BROMIDUM+SALBUTAMOLUM),RO,SE,2024-02-16,2024-07-01,136,nee,nee,ja
 R03AC02,COMBINATII (IPRATROPII BROMIDUM+SALBUTAMOLUM),RO,DK,2024-02-16,2025-06-15,485,nee,nee,ja
@@ -28925,27 +28858,35 @@ R03AC02,COMBINATII (IPRATROPII BROMIDUM+SALBUTAMOLUM),RO,NZ,2024-02-16,2025-07-0
 R03AC02,COMBINATII (IPRATROPII BROMIDUM+SALBUTAMOLUM),RO,DE,2024-02-16,2025-08-01,532,nee,nee,ja
 R03AC02,COMBINATII (IPRATROPII BROMIDUM+SALBUTAMOLUM),RO,NO,2024-02-16,2026-01-06,690,nee,nee,ja
 R03AC02,COMBINATII (IPRATROPII BROMIDUM+SALBUTAMOLUM),RO,MY,2024-02-16,2026-10-01,958,nee,nee,ja
+R03AC02,COMBINATII (IPRATROPII BROMIDUM+SALBUTAMOLUM),RO,JP,2024-02-16,2026-11-25,1013,nee,nee,ja
 R03AC02,Salbutamolum INN súlfat,IS,SE,2024-05-10,2024-07-01,52,nee,nee,ja
 R03AC02,Salbutamolum INN súlfat,IS,DK,2024-05-10,2025-06-15,401,nee,nee,ja
 R03AC02,Salbutamolum INN súlfat,IS,NZ,2024-05-10,2025-07-02,418,nee,nee,ja
 R03AC02,Salbutamolum INN súlfat,IS,DE,2024-05-10,2025-08-01,448,ja,nee,ja
 R03AC02,Salbutamolum INN súlfat,IS,NO,2024-05-10,2026-01-06,606,ja,nee,ja
 R03AC02,Salbutamolum INN súlfat,IS,MY,2024-05-10,2026-10-01,874,nee,nee,ja
+R03AC02,Salbutamolum INN súlfat,IS,JP,2024-05-10,2026-11-25,929,nee,nee,ja
 R03AC02,salbutamolsulfat,SE,DK,2024-07-01,2025-06-15,349,nee,nee,ja
 R03AC02,salbutamolsulfat,SE,NZ,2024-07-01,2025-07-02,366,nee,nee,ja
 R03AC02,salbutamolsulfat,SE,DE,2024-07-01,2025-08-01,396,nee,nee,ja
 R03AC02,salbutamolsulfat,SE,NO,2024-07-01,2026-01-06,554,nee,nee,ja
 R03AC02,salbutamolsulfat,SE,MY,2024-07-01,2026-10-01,822,nee,nee,ja
+R03AC02,salbutamolsulfat,SE,JP,2024-07-01,2026-11-25,877,nee,nee,ja
 R03AC02,Salbutamol (salbutamolsulfat) ATC-kode: R03AC02 Forventet pe,DK,NZ,2025-06-15,2025-07-02,17,nee,nee,nee
 R03AC02,Salbutamol (salbutamolsulfat) ATC-kode: R03AC02 Forventet pe,DK,DE,2025-06-15,2025-08-01,47,nee,nee,nee
 R03AC02,Salbutamol (salbutamolsulfat) ATC-kode: R03AC02 Forventet pe,DK,NO,2025-06-15,2026-01-06,205,nee,nee,nee
 R03AC02,Salbutamol (salbutamolsulfat) ATC-kode: R03AC02 Forventet pe,DK,MY,2025-06-15,2026-10-01,473,nee,nee,nee
+R03AC02,Salbutamol (salbutamolsulfat) ATC-kode: R03AC02 Forventet pe,DK,JP,2025-06-15,2026-11-25,528,nee,nee,nee
 R03AC02,Salbutamol,NZ,DE,2025-07-02,2025-08-01,30,nee,nee,nee
 R03AC02,Salbutamol,NZ,NO,2025-07-02,2026-01-06,188,nee,nee,nee
 R03AC02,Salbutamol,NZ,MY,2025-07-02,2026-10-01,456,nee,nee,nee
+R03AC02,Salbutamol,NZ,JP,2025-07-02,2026-11-25,511,nee,nee,nee
 R03AC02,Salbutamolsulfat,DE,NO,2025-08-01,2026-01-06,158,ja,ja,nee
 R03AC02,Salbutamolsulfat,DE,MY,2025-08-01,2026-10-01,426,nee,nee,nee
+R03AC02,Salbutamolsulfat,DE,JP,2025-08-01,2026-11-25,481,nee,nee,nee
 R03AC02,salbutamolsulfat,NO,MY,2026-01-06,2026-10-01,268,nee,nee,nee
+R03AC02,salbutamolsulfat,NO,JP,2026-01-06,2026-11-25,323,nee,nee,nee
+R03AC02,Salbutamol Sulphate,MY,JP,2026-10-01,2026-11-25,55,nee,nee,nee
 R03AC12,"salmeterolksinafoat
 flutikazonpropionat",HR,ES,2023-03-15,2026-09-23,1288,ja,nee,ja
 R03AC12,"salmeterolksinafoat
@@ -29050,6 +28991,7 @@ R03AK10,"flutikasonfuroat, vilanteroltrifenatat",NO,BE,2026-03-05,2026-08-06,154
 R03AK10,"flutikasonfuroat, vilanteroltrifenatat",NO,IT,2026-03-05,2026-11-13,253,nee,nee,nee
 R03AK10,"Fluticasone Furoate, Vilanterol",BE,IT,2026-08-06,2026-11-13,99,nee,nee,nee
 R03AK14,Indakaterol a mometazón,SK,BE,2024-05-15,2026-11-19,918,ja,ja,ja
+R03AL02,Salbutamol 2.5 mg with ipratropium bromide 0.5 mg per vial,NZ,SE,2026-01-16,2026-12-21,339,nee,nee,nee
 R03AL03,"Vilanterolum INN trífenatat, Umeclidinii bromidum INN",IS,NO,2025-11-03,2026-01-05,63,ja,nee,nee
 R03AL03,"Vilanterolum INN trífenatat, Umeclidinii bromidum INN",IS,BE,2025-11-03,2026-11-17,379,ja,nee,nee
 R03AL03,"umeklidiniumbromid, vilanteroltrifenatat",NO,BE,2026-01-05,2026-11-17,316,ja,ja,nee
@@ -29109,28 +29051,21 @@ R03BA05,Flutikazón,SK,SE,2021-06-21,2024-10-22,1219,nee,nee,ja
 R03BA05,Flutikazón,SK,CZ,2021-06-21,2025-08-08,1509,nee,nee,ja
 R03BA05,Flutikazón,SK,RO,2021-06-21,2026-01-14,1668,nee,nee,ja
 R03BA05,Flutikazón,SK,NO,2021-06-21,2026-04-07,1751,ja,ja,ja
-R03BA05,Flutikazón,SK,IE,2021-06-21,2026-06-02,1807,nee,nee,ja
 R03BA05,Fluticasonum INN própíónat,IS,JP,2024-05-01,2024-06-10,40,nee,nee,ja
 R03BA05,Fluticasonum INN própíónat,IS,SE,2024-05-01,2024-10-22,174,nee,nee,ja
 R03BA05,Fluticasonum INN própíónat,IS,CZ,2024-05-01,2025-08-08,464,nee,nee,ja
 R03BA05,Fluticasonum INN própíónat,IS,RO,2024-05-01,2026-01-14,623,nee,nee,ja
 R03BA05,Fluticasonum INN própíónat,IS,NO,2024-05-01,2026-04-07,706,ja,nee,ja
-R03BA05,Fluticasonum INN própíónat,IS,IE,2024-05-01,2026-06-02,762,nee,nee,ja
 R03BA05,フルチカゾンプロピオン酸エステル,JP,SE,2024-06-10,2024-10-22,134,nee,nee,ja
 R03BA05,フルチカゾンプロピオン酸エステル,JP,CZ,2024-06-10,2025-08-08,424,nee,nee,ja
 R03BA05,フルチカゾンプロピオン酸エステル,JP,RO,2024-06-10,2026-01-14,583,nee,nee,ja
 R03BA05,フルチカゾンプロピオン酸エステル,JP,NO,2024-06-10,2026-04-07,666,nee,nee,ja
-R03BA05,フルチカゾンプロピオン酸エステル,JP,IE,2024-06-10,2026-06-02,722,nee,nee,ja
 R03BA05,flutikasonpropionat,SE,CZ,2024-10-22,2025-08-08,290,nee,nee,ja
 R03BA05,flutikasonpropionat,SE,RO,2024-10-22,2026-01-14,449,nee,nee,ja
 R03BA05,flutikasonpropionat,SE,NO,2024-10-22,2026-04-07,532,nee,nee,ja
-R03BA05,flutikasonpropionat,SE,IE,2024-10-22,2026-06-02,588,nee,nee,ja
 R03BA05,FLUTICASONE PROPIONATE,CZ,RO,2025-08-08,2026-01-14,159,nee,nee,nee
 R03BA05,FLUTICASONE PROPIONATE,CZ,NO,2025-08-08,2026-04-07,242,nee,nee,nee
-R03BA05,FLUTICASONE PROPIONATE,CZ,IE,2025-08-08,2026-06-02,298,nee,nee,nee
 R03BA05,COMBINATII (AZELASTINUM+FLUTICASONUM),RO,NO,2026-01-14,2026-04-07,83,nee,nee,nee
-R03BA05,COMBINATII (AZELASTINUM+FLUTICASONUM),RO,IE,2026-01-14,2026-06-02,139,nee,nee,nee
-R03BA05,flutikasonpropionat,NO,IE,2026-04-07,2026-06-02,56,nee,nee,nee
 R03BA07,Mometazón,SK,NO,2021-02-01,2025-11-06,1739,ja,ja,ja
 R03BA07,Mometazón,SK,DK,2021-02-01,2026-03-15,1868,nee,nee,ja
 R03BA07,Mometazón,SK,IT,2021-02-01,2026-06-30,1975,nee,nee,ja
@@ -29174,8 +29109,8 @@ R03BB04,TIOTROPIUM BROMIDE MONOHYDRATE,FI,AU,2026-08-31,2026-09-01,1,nee,nee,nee
 R03BC01,Kyselina kromoglyková,SK,US,2020-06-01,2023-11-03,1250,nee,nee,ja
 R03BC01,Kyselina kromoglyková,SK,JP,2020-06-01,2025-09-12,1929,nee,nee,ja
 R03BC01,Kyselina kromoglyková,SK,IE,2020-06-01,2026-07-22,2242,nee,nee,ja
-R03BC01,CROMOLYN SODIUM,US,JP,2023-11-03,2025-09-12,679,nee,nee,ja
-R03BC01,CROMOLYN SODIUM,US,IE,2023-11-03,2026-07-22,992,nee,nee,ja
+R03BC01,クロモグリク酸ナトリウム,US,JP,2023-11-03,2025-09-12,679,nee,nee,ja
+R03BC01,クロモグリク酸ナトリウム,US,IE,2023-11-03,2026-07-22,992,nee,nee,ja
 R03BC01,クロモグリク酸ナトリウム,JP,IE,2025-09-12,2026-07-22,313,nee,nee,nee
 R03CC03,terbutalinsulfat,NO,MY,2025-06-20,2026-05-01,315,nee,nee,nee
 R03CC03,terbutalinsulfat,NO,GR,2025-06-20,2026-11-03,501,ja,ja,nee
@@ -29523,14 +29458,10 @@ R05DA09,DESTROMETORFANO BROMIDRATO,IT,DK,2025-04-07,2026-02-15,314,nee,nee,nee
 R05FB02,Antitusiká a expektoranciá,FI,SK,2024-10-11,2026-04-30,566,ja,ja,ja
 R06AA02,DIPHENHYDRAMIN HYDROCHLORID,AT,IS,2024-07-24,2024-10-14,82,ja,nee,ja
 R06AA02,DIPHENHYDRAMIN HYDROCHLORID,AT,GR,2024-07-24,2026-09-14,782,ja,ja,ja
-R06AA02,DIPHENHYDRAMIN HYDROCHLORID,AT,SE,2024-07-24,2026-09-15,783,nee,nee,ja
 R06AA02,DIPHENHYDRAMIN HYDROCHLORID,AT,SK,2024-07-24,2026-09-30,798,ja,ja,ja
 R06AA02,Diphenhydraminum INN hýdróklóríð,IS,GR,2024-10-14,2026-09-14,700,ja,nee,ja
-R06AA02,Diphenhydraminum INN hýdróklóríð,IS,SE,2024-10-14,2026-09-15,701,nee,nee,ja
 R06AA02,Diphenhydraminum INN hýdróklóríð,IS,SK,2024-10-14,2026-09-30,716,ja,nee,ja
-R06AA02,DIMENHYDRINATE,GR,SE,2026-09-14,2026-09-15,1,nee,nee,nee
 R06AA02,DIMENHYDRINATE,GR,SK,2026-09-14,2026-09-30,16,ja,ja,nee
-R06AA02,difenhydraminhydroklorid,SE,SK,2026-09-15,2026-09-30,15,nee,nee,nee
 R06AA59,"Pyridoxinum INN hýdróklóríð, Doxylaminii INN hýdrógen súkkín",IS,US,2024-09-16,2026-01-12,483,nee,nee,ja
 R06AA59,"Pyridoxinum INN hýdróklóríð, Doxylaminii INN hýdrógen súkkín",IS,NO,2024-09-16,2026-10-26,770,ja,nee,ja
 R06AA59,"Pyridoxinum INN hýdróklóríð, Doxylaminii INN hýdrógen súkkín",IS,SK,2024-09-16,2026-11-02,777,ja,nee,ja
@@ -29656,6 +29587,7 @@ R06AX13,loratadin,BA,NZ,2026-02-17,2026-10-27,252,nee,nee,nee
 R06AX13,Loratadin ATC-kode: R06AX13 Forventet periode: Start septemb,DK,BE,2026-09-01,2026-09-28,27,nee,nee,nee
 R06AX13,Loratadin ATC-kode: R06AX13 Forventet periode: Start septemb,DK,NZ,2026-09-01,2026-10-27,56,nee,nee,nee
 R06AX13,Loratadine,BE,NZ,2026-09-28,2026-10-27,29,nee,nee,nee
+R06AX17,ケトチフェンフマル酸塩,JP,IE,2025-04-16,2026-11-23,586,nee,nee,nee
 R06AX22,Ebastinum,LV,SE,2018-08-13,2025-06-23,2506,nee,nee,ja
 R06AX22,Ebastinum,LV,NO,2018-08-13,2026-02-13,2741,ja,ja,ja
 R06AX22,Ebastinum,LV,ES,2018-08-13,2026-03-10,2766,ja,nee,ja
@@ -30334,7 +30266,7 @@ S01EE04,travoprost,SE,FI,2026-07-04,2026-07-15,11,nee,nee,nee
 S01EE04,travoprost,SE,DE,2026-07-04,2026-09-07,65,nee,nee,nee
 S01EE04,TRAVOPROST,US,FI,2026-07-07,2026-07-15,8,nee,nee,nee
 S01EE04,TRAVOPROST,US,DE,2026-07-07,2026-09-07,62,nee,nee,nee
-S01EE04,Travoprostinum INN,FI,DE,2026-07-15,2026-09-07,54,ja,ja,nee
+S01EE04,TRAVOPROST,FI,DE,2026-07-15,2026-09-07,54,ja,ja,nee
 S01EE05,Tafluprostum,LV,RO,2019-09-27,2024-05-23,1700,nee,nee,ja
 S01EE05,Tafluprostum,LV,SK,2019-09-27,2024-10-14,1844,ja,ja,ja
 S01EE05,Tafluprostum,LV,JP,2019-09-27,2026-06-03,2441,nee,nee,ja
@@ -30587,7 +30519,7 @@ S01XA18,CICLOSPORINA,IT,AT,2025-07-30,2026-06-17,322,nee,nee,nee
 S01XA18,CICLOSPORINA,IT,HU,2025-07-30,2026-07-31,366,nee,nee,nee
 S01XA18,CICLOSPORINA,IT,DK,2025-07-30,2026-10-01,428,nee,nee,nee
 S01XA18,CICLOSPORINA,IT,IE,2025-07-30,2026-10-05,432,nee,nee,nee
-S01XA18,CICLOSPORINA,IT,ES,2025-07-30,2026-10-29,456,nee,nee,nee
+S01XA18,CICLOSPORINA,IT,ES,2025-07-30,2026-11-25,483,nee,nee,nee
 S01XA18,CICLOSPORINA,IT,AU,2025-07-30,2027-01-23,542,nee,nee,nee
 S01XA18,ciklosporin,FI,SE,2026-02-16,2026-03-01,13,nee,nee,nee
 S01XA18,ciklosporin,FI,NO,2026-02-16,2026-04-15,58,ja,ja,nee
@@ -30596,7 +30528,7 @@ S01XA18,ciklosporin,FI,AT,2026-02-16,2026-06-17,121,ja,ja,nee
 S01XA18,ciklosporin,FI,HU,2026-02-16,2026-07-31,165,ja,ja,nee
 S01XA18,ciklosporin,FI,DK,2026-02-16,2026-10-01,227,nee,nee,nee
 S01XA18,ciklosporin,FI,IE,2026-02-16,2026-10-05,231,nee,nee,nee
-S01XA18,ciklosporin,FI,ES,2026-02-16,2026-10-29,255,ja,nee,nee
+S01XA18,ciklosporin,FI,ES,2026-02-16,2026-11-25,282,ja,nee,nee
 S01XA18,ciklosporin,FI,AU,2026-02-16,2027-01-23,341,nee,nee,nee
 S01XA18,ciklosporin,SE,NO,2026-03-01,2026-04-15,45,nee,nee,nee
 S01XA18,ciklosporin,SE,FR,2026-03-01,2026-05-07,67,nee,nee,nee
@@ -30604,36 +30536,36 @@ S01XA18,ciklosporin,SE,AT,2026-03-01,2026-06-17,108,nee,nee,nee
 S01XA18,ciklosporin,SE,HU,2026-03-01,2026-07-31,152,nee,nee,nee
 S01XA18,ciklosporin,SE,DK,2026-03-01,2026-10-01,214,nee,nee,nee
 S01XA18,ciklosporin,SE,IE,2026-03-01,2026-10-05,218,nee,nee,nee
-S01XA18,ciklosporin,SE,ES,2026-03-01,2026-10-29,242,nee,nee,nee
+S01XA18,ciklosporin,SE,ES,2026-03-01,2026-11-25,269,nee,nee,nee
 S01XA18,ciklosporin,SE,AU,2026-03-01,2027-01-23,328,nee,nee,nee
 S01XA18,ciklosporin,NO,FR,2026-04-15,2026-05-07,22,nee,ja,nee
 S01XA18,ciklosporin,NO,AT,2026-04-15,2026-06-17,63,ja,ja,nee
 S01XA18,ciklosporin,NO,HU,2026-04-15,2026-07-31,107,ja,ja,nee
 S01XA18,ciklosporin,NO,DK,2026-04-15,2026-10-01,169,nee,nee,nee
 S01XA18,ciklosporin,NO,IE,2026-04-15,2026-10-05,173,nee,nee,nee
-S01XA18,ciklosporin,NO,ES,2026-04-15,2026-10-29,197,ja,nee,nee
+S01XA18,ciklosporin,NO,ES,2026-04-15,2026-11-25,224,ja,nee,nee
 S01XA18,ciklosporin,NO,AU,2026-04-15,2027-01-23,283,nee,nee,nee
 S01XA18,ciclosporine,FR,AT,2026-05-07,2026-06-17,41,nee,ja,nee
 S01XA18,ciclosporine,FR,HU,2026-05-07,2026-07-31,85,nee,ja,nee
 S01XA18,ciclosporine,FR,DK,2026-05-07,2026-10-01,147,nee,nee,nee
 S01XA18,ciclosporine,FR,IE,2026-05-07,2026-10-05,151,nee,nee,nee
-S01XA18,ciclosporine,FR,ES,2026-05-07,2026-10-29,175,nee,nee,nee
+S01XA18,ciclosporine,FR,ES,2026-05-07,2026-11-25,202,nee,nee,nee
 S01XA18,ciclosporine,FR,AU,2026-05-07,2027-01-23,261,nee,nee,nee
 S01XA18,CICLOSPORIN,AT,HU,2026-06-17,2026-07-31,44,ja,ja,nee
 S01XA18,CICLOSPORIN,AT,DK,2026-06-17,2026-10-01,106,nee,nee,nee
 S01XA18,CICLOSPORIN,AT,IE,2026-06-17,2026-10-05,110,nee,nee,nee
-S01XA18,CICLOSPORIN,AT,ES,2026-06-17,2026-10-29,134,ja,nee,nee
+S01XA18,CICLOSPORIN,AT,ES,2026-06-17,2026-11-25,161,ja,nee,nee
 S01XA18,CICLOSPORIN,AT,AU,2026-06-17,2027-01-23,220,nee,nee,nee
 S01XA18,ciclosporin,HU,DK,2026-07-31,2026-10-01,62,nee,nee,nee
 S01XA18,ciclosporin,HU,IE,2026-07-31,2026-10-05,66,nee,nee,nee
-S01XA18,ciclosporin,HU,ES,2026-07-31,2026-10-29,90,ja,nee,nee
+S01XA18,ciclosporin,HU,ES,2026-07-31,2026-11-25,117,ja,nee,nee
 S01XA18,ciclosporin,HU,AU,2026-07-31,2027-01-23,176,nee,nee,nee
 S01XA18,Ciclosporin ATC-kode: S01XA18 Forventet periode: Start oktob,DK,IE,2026-10-01,2026-10-05,4,nee,nee,nee
-S01XA18,Ciclosporin ATC-kode: S01XA18 Forventet periode: Start oktob,DK,ES,2026-10-01,2026-10-29,28,nee,nee,nee
+S01XA18,Ciclosporin ATC-kode: S01XA18 Forventet periode: Start oktob,DK,ES,2026-10-01,2026-11-25,55,nee,nee,nee
 S01XA18,Ciclosporin ATC-kode: S01XA18 Forventet periode: Start oktob,DK,AU,2026-10-01,2027-01-23,114,nee,nee,nee
-S01XA18,Ciclosporin,IE,ES,2026-10-05,2026-10-29,24,nee,nee,nee
+S01XA18,Ciclosporin,IE,ES,2026-10-05,2026-11-25,51,nee,nee,nee
 S01XA18,Ciclosporin,IE,AU,2026-10-05,2027-01-23,110,nee,nee,nee
-S01XA18,CICLOSPORINA,ES,AU,2026-10-29,2027-01-23,86,nee,nee,nee
+S01XA18,CICLOSPORINA,ES,AU,2026-11-25,2027-01-23,59,nee,nee,nee
 S01XA20,karbomer,NO,IS,2024-06-24,2024-09-04,72,ja,nee,ja
 S01XA20,karbomer,NO,SE,2024-06-24,2025-01-01,191,nee,nee,ja
 S01XA20,karbomer,NO,DK,2024-06-24,2025-12-01,525,nee,nee,ja
@@ -30709,12 +30641,17 @@ V03AB06,Sodium Thiosulfate Pentahydrate,BE,NO,2022-09-13,2026-10-12,1490,ja,ja,j
 V03AB06,Sodium Thiosulfate Pentahydrate,BE,SE,2022-09-13,2026-10-12,1490,nee,nee,ja
 V03AB06,Sodium Thiosulfate Pentahydrate,BE,ES,2022-09-13,2026-10-16,1494,ja,nee,ja
 V03AB06,Sodium Thiosulfate Pentahydrate,BE,IE,2022-09-13,2026-11-06,1515,nee,nee,ja
+V03AB06,Sodium Thiosulfate Pentahydrate,BE,AU,2022-09-13,2027-01-01,1571,nee,nee,ja
 V03AB06,natriumtiosulfat,NO,SE,2026-10-12,2026-10-12,0,nee,nee,nee
 V03AB06,natriumtiosulfat,NO,ES,2026-10-12,2026-10-16,4,ja,nee,nee
 V03AB06,natriumtiosulfat,NO,IE,2026-10-12,2026-11-06,25,nee,nee,nee
+V03AB06,natriumtiosulfat,NO,AU,2026-10-12,2027-01-01,81,nee,nee,nee
 V03AB06,natriumtiosulfat (vattenfri),SE,ES,2026-10-12,2026-10-16,4,nee,nee,nee
 V03AB06,natriumtiosulfat (vattenfri),SE,IE,2026-10-12,2026-11-06,25,nee,nee,nee
+V03AB06,natriumtiosulfat (vattenfri),SE,AU,2026-10-12,2027-01-01,81,nee,nee,nee
 V03AB06,TIOSULFATO SODIO,ES,IE,2026-10-16,2026-11-06,21,nee,nee,nee
+V03AB06,TIOSULFATO SODIO,ES,AU,2026-10-16,2027-01-01,77,nee,nee,nee
+V03AB06,Sodium thiosulfate,IE,AU,2026-11-06,2027-01-01,56,nee,nee,nee
 V03AB14,Protamín,SK,HU,2021-11-30,2024-07-22,965,ja,ja,ja
 V03AB14,Protamín,SK,IS,2021-11-30,2024-08-21,995,ja,nee,ja
 V03AB14,Protamín,SK,BE,2021-11-30,2026-11-27,1823,ja,ja,ja
@@ -31284,15 +31221,16 @@ V08AB11,IOBITRIDOLO,IT,HU,2023-04-12,2026-05-20,1134,nee,nee,ja
 V08AB11,IOBITRIDOLO,IT,BE,2023-04-12,2026-08-07,1213,nee,nee,ja
 V08AB11,iobitridol,HU,BE,2026-05-20,2026-08-07,79,ja,ja,nee
 V08BA01,barium sulfate,HU,SK,2012-01-01,2024-02-21,4434,ja,ja,ja
-V08BA01,barium sulfate,HU,JP,2012-01-01,2024-03-04,4446,nee,nee,ja
 V08BA01,barium sulfate,HU,ES,2012-01-01,2024-07-26,4590,ja,nee,ja
+V08BA01,barium sulfate,HU,JP,2012-01-01,2025-03-21,4828,nee,nee,ja
 V08BA01,barium sulfate,HU,CZ,2012-01-01,2026-04-09,5212,nee,nee,ja
-V08BA01,Síran bárnatý so suspendujúcimi látkami,SK,JP,2024-02-21,2024-03-04,12,nee,nee,ja
 V08BA01,Síran bárnatý so suspendujúcimi látkami,SK,ES,2024-02-21,2024-07-26,156,ja,nee,ja
+V08BA01,Síran bárnatý so suspendujúcimi látkami,SK,JP,2024-02-21,2025-03-21,394,nee,nee,ja
 V08BA01,Síran bárnatý so suspendujúcimi látkami,SK,CZ,2024-02-21,2026-04-09,778,nee,nee,ja
-V08BA01,硫酸バリウム,JP,ES,2024-03-04,2024-07-26,144,nee,nee,ja
-V08BA01,硫酸バリウム,JP,CZ,2024-03-04,2026-04-09,766,nee,nee,ja
+V08BA01,BARIO SULFATO,ES,JP,2024-07-26,2025-03-21,238,nee,nee,ja
 V08BA01,BARIO SULFATO,ES,CZ,2024-07-26,2026-04-09,622,nee,nee,ja
+V08BA01,クロラムフェニコール・フラジオマイシン配合剤,JP,CZ,2025-03-21,2026-04-09,384,nee,nee,nee
+V08BA02,barium sulfate,AU,JP,2013-10-01,2024-03-04,3807,nee,nee,ja
 V08CA02,acidum gadotericum,SI,IT,2021-12-01,2023-04-04,489,nee,nee,ja
 V08CA02,acidum gadotericum,SI,NO,2021-12-01,2023-09-21,659,ja,ja,ja
 V08CA02,acidum gadotericum,SI,IS,2021-12-01,2024-08-29,1002,ja,nee,ja
